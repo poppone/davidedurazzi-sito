@@ -30,7 +30,7 @@ img,iframe{max-width:100%}
 /* Barra in alto */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.8rem}
-.logo{white-space:nowrap;flex:none;font:800 1.05rem/1 var(--sans);font-stretch:112%;text-decoration:none;letter-spacing:-.01em}
+.logo{display:inline-flex;align-items:center;gap:.6rem;white-space:nowrap;flex:none;font:800 1.05rem/1 var(--sans);font-stretch:112%;text-decoration:none;letter-spacing:-.01em}
 .top nav{display:flex;gap:1.1rem;overflow-x:auto;scrollbar-width:none}
 .top nav a{text-decoration:none;font-weight:500;color:var(--muted);white-space:nowrap;padding:.4rem 0}
 .top nav a:hover{color:var(--ink)}
@@ -131,3 +131,29 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.1rem}
 .fonti{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
 .fonti h2{font:700 1.1rem var(--sans);margin:0 0 .6rem}
 .fonti ul{margin:0;padding-left:1.1rem}
+
+/* Commenti */
+.commenti{margin-top:3rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
+.commenti h2{font:800 1.6rem/1.1 var(--sans);font-stretch:112%;margin:0 0 1rem}
+.commento{padding:1rem 0;border-bottom:1px solid var(--line)}
+.commento p{margin:.3rem 0 0;white-space:pre-line}
+.autore{font-weight:700}
+.quando{font-weight:400;color:var(--muted);font-size:.88rem;margin-left:.4rem}
+.risposta{margin:.8rem 0 0 1rem;padding:.7rem .9rem;border-left:4px solid var(--tesi);background:var(--paper);border-radius:0 10px 10px 0}
+.risposta.ai{border-left-color:var(--muted)}
+.etichetta{font-weight:600;font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.1rem .5rem;margin-left:.3rem}
+.form-commento{display:grid;gap:.8rem;margin-top:1.8rem;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1.2rem}
+.form-commento h3{margin:0;font:800 1.2rem var(--sans)}
+.form-commento label{display:grid;gap:.3rem;font-weight:600;font-size:.92rem}
+.form-commento input,.form-commento textarea{font:400 1rem var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.65rem .75rem;width:100%}
+.form-commento textarea{min-height:7rem;resize:vertical}
+.form-commento .nota{margin:0;color:var(--muted);font-size:.85rem}
+.esito-commento{margin:0;font-size:.92rem;color:var(--muted)}
+.trappola{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.logo img{width:34px;height:34px;border-radius:50%}
+.hero-logo{display:block;width:clamp(96px,14vw,132px);height:auto;margin:0 0 1.2rem}
+.legale{max-width:720px;margin:0 auto;padding:clamp(2rem,6vw,4rem) 0}
+.legale h1{font:800 clamp(2rem,6vw,3rem)/1.05 var(--sans);letter-spacing:-.03em;margin:0 0 1.5rem}
+.legale h2{font:700 1.2rem var(--sans);margin:2rem 0 .5rem}
+.legale p,.legale li{font:400 1.05rem/1.65 var(--serif)}
