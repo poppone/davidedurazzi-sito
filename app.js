@@ -134,6 +134,32 @@
     else { p.hidden = true; }
   }
 
+  function commenti(slug) {
+    var lista = $("listaCommenti"), form = $("formCommento"), inizio = Date.now();
+    fetch("/api/commenti?slug=" + encodeURIComponent(slug)).then(function (r) { return r.json(); }).then(function (j) {
+      var c = j.commenti || [];
+      lista.innerHTML = c.length ? c.map(function (x) {
+        var r = x.risposta;
+        return '<div class="commento"><div class="autore">' + esc(x.nome) + ' <span class="quando">' + esc(data(x.data)) + '</span></div><p>' + esc(x.testo) + '</p>' +
+          (r ? '<div class="risposta' + (r.ai ? ' ai' : '') + '"><div class="autore">' + esc(r.autore) +
+            (r.ai ? ' <span class="etichetta">risposta automatica</span>' : '') + '</div><p>' + esc(r.testo) + '</p></div>' : '') + '</div>';
+      }).join("") : '<p class="meta">Ancora nessun commento. Inizia tu.</p>';
+    }).catch(function () { lista.innerHTML = '<p class="meta">I commenti non si sono caricati.</p>'; });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var esito = form.querySelector(".esito-commento"), bottone = form.querySelector("button");
+      bottone.disabled = true; esito.textContent = "Invio in corso.";
+      fetch("/api/commenti", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug: slug, nome: form.nome.value, testo: form.testo.value, sito: form.sito.value, t: inizio })
+      }).then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.errore); return j; }); })
+        .then(function (j) { form.reset(); esito.textContent = j.messaggio || "Grazie!"; })
+        .catch(function (err) { esito.textContent = err.message || "Invio non riuscito. Riprova."; })
+        .then(function () { bottone.disabled = false; });
+    });
+  }
+
   function articolo() {
     var slug = new URLSearchParams(location.search).get("slug");
     caricaArticoli().then(function (tutti) {
@@ -152,7 +178,15 @@
         (fonti.length ? '<div class="fonti"><h2>Fonti</h2><ul>' + fonti.map(function (f) {
           return '<li><a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome || f.url) + "</a></li>";
         }).join("") + "</ul></div>" : "") +
-        '<div class="acts" style="margin-top:2rem"><a class="btn pieno" href="/#diretta"><span class="dot" aria-hidden="true"></span>Ne parliamo in diretta</a></div>';
+        '<div class="acts" style="margin-top:2rem"><a class="btn pieno" href="/#diretta"><span class="dot" aria-hidden="true"></span>Ne parliamo in diretta</a></div>' +
+        '<section class="commenti" id="commenti"><h2>Commenti</h2><div id="listaCommenti"><p class="meta">Caricamento dei commenti.</p></div>' +
+        '<form class="form-commento" id="formCommento"><h3>Dì la tua</h3>' +
+        '<label>Nome<input name="nome" maxlength="40" autocomplete="nickname" required></label>' +
+        '<label>Commento<textarea name="testo" maxlength="1500" required></textarea></label>' +
+        '<label class="trappola" aria-hidden="true">Sito<input name="sito" tabindex="-1" autocomplete="off"></label>' +
+        '<p class="nota">I commenti vengono letti prima della pubblicazione. Alle domande pratiche può rispondere la Redazione AI, ed è sempre indicato.</p>' +
+        '<button class="btn pieno" type="submit">Invia commento</button><p class="esito-commento" role="status"></p></form></section>';
+      commenti(a.slug);
     }).catch(function () {
       $("art").innerHTML = '<p class="som">L\u2019articolo non si è caricato. Ricarica la pagina.</p>';
     });
