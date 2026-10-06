@@ -12,8 +12,8 @@ function autorizzato(req) {
 async function contesto(req, slug) {
   const base = "https://" + req.headers.host;
   const [articoli, cfg] = await Promise.all([
-    fetch(base + "/content/articoli.json").then((r) => r.json()).catch(() => []),
-    fetch(base + "/config.js").then((r) => r.text()).catch(() => "")
+    fetch(base + "/content/articoli.json", { signal: AbortSignal.timeout(5000) }).then((r) => r.json()).catch(() => []),
+    fetch(base + "/config.js", { signal: AbortSignal.timeout(5000) }).then((r) => r.text()).catch(() => "")
   ]);
   const a = articoli.find((x) => x.slug === slug) || {};
   const campo = (k) => ((cfg.match(new RegExp(k + ':\\s*"([^"]*)"')) || [])[1] || "");
@@ -94,7 +94,7 @@ module.exports = async (req, res) => {
         await salvaCommento(c);
       } catch (e) {
         console.error(e);
-        esito = "approvato (agente non disponibile)";
+        esito = "approvato, ma l'agente non ha risposto (" + e.message + ")";
       }
       return res.status(200).json({ ok: true, esito });
     }
