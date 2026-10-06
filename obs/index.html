@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Grafiche OBS — Davide Durazzi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+/*
+  Uso in OBS: Fonte "Browser" con URL https://www.davidedurazzi.it/obs?scena=NOME
+  Scene: intro, principale, titolo, pausa, chiusura
+  Formato verticale: aggiungi &formato=verticale e imposta la fonte a 1080x1920
+  Altri parametri: &min=5 (conto alla rovescia intro), &tema=Testo, &sotto=Testo, &durata=10 (secondi del titolo, 0 = fisso)
+*/
+:root{--ink:#10162B;--bg:#EEF1F5;--tesi:#2F55E4;--anti:#E85A16;--live:#E5263B;--muted:#9AA3BC;
+  --u:calc(100vw/1920)}
+body.verticale{--u:calc(100vw/1080)}
+html,body{margin:0;width:100vw;height:100vh;overflow:hidden;background:transparent;font-family:"Archivo",system-ui,sans-serif;color:#fff}
+*{box-sizing:border-box}
+.scena{position:absolute;inset:0;display:none}
+.scena.attiva{display:block}
+.pieno{background:var(--ink)}
+
+/* Elementi comuni */
+.marchio{display:flex;align-items:center;gap:calc(18*var(--u));font-weight:800;font-stretch:112%;font-size:calc(38*var(--u))}
+.marchio img{width:calc(84*var(--u));height:calc(84*var(--u));border-radius:50%;box-shadow:0 0 0 calc(4*var(--u)) rgba(255,255,255,.12)}
+.strisce{position:absolute;left:0;right:0;height:calc(14*var(--u));display:flex}
+.strisce i{flex:1;background:var(--tesi)} .strisce i+i{background:var(--anti)}
+.grande{font-weight:900;font-stretch:125%;letter-spacing:-.04em;line-height:.86;margin:0}
+.grande span{display:block}
+.grande span+span{color:transparent;-webkit-text-stroke:calc(3*var(--u)) #fff}
+.etichetta{font-weight:700;font-size:calc(30*var(--u));color:var(--muted);letter-spacing:.02em}
+.punto{display:inline-block;width:calc(18*var(--u));height:calc(18*var(--u));border-radius:50%;background:var(--live);animation:pulsa 1.6s infinite}
+@keyframes pulsa{50%{opacity:.3}}
+@keyframes entra{from{opacity:0;transform:translateY(calc(40*var(--u)))}to{opacity:1;transform:none}}
+@keyframes scorri{from{transform:translateX(-100%)}to{transform:translateX(0)}}
+.anima>*{animation:entra .9s cubic-bezier(.2,.8,.2,1) both}
+.anima>*:nth-child(2){animation-delay:.12s}.anima>*:nth-child(3){animation-delay:.24s}.anima>*:nth-child(4){animation-delay:.36s}
+
+/* INTRO */
+#intro .contenuto{position:absolute;left:calc(140*var(--u));top:calc(110*var(--u));right:calc(140*var(--u))}
+#intro .grande{font-size:calc(180*var(--u));margin:calc(50*var(--u)) 0 calc(40*var(--u))}
+#intro .conta{font-weight:900;font-stretch:125%;font-size:calc(100*var(--u));color:#fff;line-height:1}
+#intro .temi{margin-top:calc(40*var(--u));display:grid;gap:calc(16*var(--u));max-width:calc(1300*var(--u))}
+#intro .tema{display:flex;gap:calc(22*var(--u));align-items:baseline;font-size:calc(40*var(--u));font-weight:700;line-height:1.2}
+#intro .tema b{color:var(--anti);font-stretch:125%;font-size:calc(44*var(--u))}
+#intro .riga{display:flex;align-items:flex-end;gap:calc(60*var(--u))}
+
+/* PRINCIPALE (sopra la webcam, sfondo trasparente) */
+#principale .alto{position:absolute;top:calc(44*var(--u));left:calc(48*var(--u));right:calc(48*var(--u));display:flex;justify-content:space-between;align-items:center}
+#principale .chip{background:rgba(16,22,43,.82);backdrop-filter:blur(8px);border-radius:999px;padding:calc(10*var(--u)) calc(30*var(--u)) calc(10*var(--u)) calc(10*var(--u))}
+#principale .rec{display:flex;align-items:center;gap:calc(14*var(--u));background:rgba(16,22,43,.82);border-radius:999px;padding:calc(18*var(--u)) calc(30*var(--u));font-weight:800;font-size:calc(28*var(--u))}
+#principale .basso{position:absolute;left:calc(48*var(--u));right:calc(48*var(--u));bottom:calc(48*var(--u));display:flex;align-items:stretch;border-radius:calc(18*var(--u));overflow:hidden;box-shadow:0 calc(14*var(--u)) calc(40*var(--u)) rgba(0,0,0,.35)}
+#principale .basso .etic{background:var(--tesi);padding:calc(24*var(--u)) calc(34*var(--u));font-weight:900;font-stretch:112%;font-size:calc(30*var(--u));display:flex;align-items:center;white-space:nowrap}
+#principale .basso .testo{flex:1;background:rgba(16,22,43,.9);padding:calc(24*var(--u)) calc(34*var(--u));font-weight:700;font-size:calc(38*var(--u));display:flex;align-items:center;line-height:1.15}
+#principale .basso .sito{background:#fff;color:var(--ink);padding:calc(24*var(--u)) calc(34*var(--u));font-weight:800;font-size:calc(28*var(--u));display:flex;align-items:center;white-space:nowrap}
+
+/* TITOLO (sottopancia animato, trasparente) */
+#titolo .terzo{position:absolute;left:calc(80*var(--u));bottom:calc(110*var(--u));max-width:calc(1300*var(--u))}
+#titolo .nome{display:inline-flex;align-items:center;gap:calc(18*var(--u));background:var(--ink);padding:calc(18*var(--u)) calc(34*var(--u)) calc(18*var(--u)) calc(18*var(--u));border-radius:calc(16*var(--u)) calc(16*var(--u)) calc(16*var(--u)) 0;font-weight:900;font-stretch:112%;font-size:calc(52*var(--u));overflow:hidden}
+#titolo .nome img{width:calc(64*var(--u));height:calc(64*var(--u));border-radius:50%}
+#titolo .sotto{display:block;width:fit-content;max-width:100%;background:var(--anti);padding:calc(16*var(--u)) calc(30*var(--u));border-radius:0 0 calc(16*var(--u)) calc(16*var(--u));font-weight:700;font-size:calc(36*var(--u));line-height:1.2}
+#titolo .terzo>*{clip-path:inset(0 100% 0 0);animation:apri .7s cubic-bezier(.2,.8,.2,1) forwards}
+#titolo .terzo>.sotto{animation-delay:.25s}
+#titolo .terzo.esce>*{animation:chiudi .5s cubic-bezier(.6,0,.8,.2) forwards}
+@keyframes apri{to{clip-path:inset(0 0 0 0)}}
+@keyframes chiudi{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 0 100%)}}
+
+/* PAUSA e CHIUSURA */
+#pausa .contenuto,#chiusura .contenuto{position:absolute;left:calc(140*var(--u));right:calc(140*var(--u));top:50%;transform:translateY(-50%)}
+#pausa .grande{font-size:calc(200*var(--u));margin:calc(40*var(--u)) 0}
+#pausa .sotto{font-size:calc(44*var(--u));font-weight:700;color:var(--muted)}
+#chiusura .grande{font-size:calc(180*var(--u));margin:calc(40*var(--u)) 0 calc(50*var(--u))}
+#chiusura .social{display:flex;flex-wrap:wrap;gap:calc(20*var(--u))}
+#chiusura .social span{background:rgba(255,255,255,.08);border-radius:999px;padding:calc(16*var(--u)) calc(30*var(--u));font-weight:700;font-size:calc(34*var(--u))}
+#chiusura .prossima{margin-top:calc(46*var(--u));font-size:calc(38*var(--u));font-weight:700}
+#chiusura .prossima b{color:var(--anti)}
+.logo-grande{width:calc(150*var(--u));height:calc(150*var(--u));border-radius:50%}
+
+/* VERTICALE 1080x1920: margini più ampi e zone sicure per Reels/TikTok */
+body.verticale #intro .contenuto{left:calc(80*var(--u));right:calc(80*var(--u));top:calc(260*var(--u))}
+body.verticale #intro .grande{font-size:calc(200*var(--u))}
+body.verticale #intro .riga{flex-direction:column;align-items:flex-start;gap:calc(20*var(--u))}
+body.verticale #intro .tema{font-size:calc(42*var(--u))}
+body.verticale #principale .alto{top:calc(150*var(--u));left:calc(60*var(--u));right:calc(60*var(--u))}
+body.verticale #principale .basso{flex-wrap:wrap;left:calc(60*var(--u));right:calc(140*var(--u));bottom:calc(430*var(--u))}
+body.verticale #principale .basso .etic{width:100%}
+body.verticale #principale .basso .sito{display:none}
+body.verticale #titolo .terzo{left:calc(60*var(--u));right:calc(140*var(--u));bottom:calc(560*var(--u))}
+body.verticale #pausa .contenuto,body.verticale #chiusura .contenuto{left:calc(80*var(--u));right:calc(80*var(--u))}
+body.verticale #pausa .grande{font-size:calc(170*var(--u))}
+body.verticale #chiusura .grande{font-size:calc(150*var(--u))}
+</style>
+</head>
+<body>
+
+<section class="scena pieno" id="intro">
+  <div class="strisce" style="top:0"><i></i><i></i></div>
+  <div class="contenuto anima">
+    <div class="marchio"><img src="/assets/logo-192.png" alt="">Davide Durazzi</div>
+    <h1 class="grande"><span>Si parte</span><span>tra poco</span></h1>
+    <div class="riga"><div class="conta" id="conta">5:00</div><div class="etichetta">L'attualità, senza copione</div></div>
+    <div class="temi" id="temi"></div>
+  </div>
+  <div class="strisce" style="bottom:0"><i></i><i></i></div>
+</section>
+
+<section class="scena" id="principale">
+  <div class="alto anima">
+    <div class="marchio chip"><img src="/assets/logo-192.png" alt="">Davide Durazzi</div>
+    <div class="rec"><span class="punto"></span>In onda</div>
+  </div>
+  <div class="basso anima">
+    <div class="etic" id="pEtic">Oggi</div>
+    <div class="testo" id="pTema">L'attualità, senza copione</div>
+    <div class="sito">davidedurazzi.it</div>
+  </div>
+</section>
+
+<section class="scena" id="titolo">
+  <div class="terzo" id="terzo">
+    <div class="nome"><img src="/assets/logo-192.png" alt=""><span id="tNome">Davide Durazzi</span></div>
+    <div class="sotto" id="tSotto">L'attualità, senza copione</div>
+  </div>
+</section>
+
+<section class="scena pieno" id="pausa">
+  <div class="strisce" style="top:0"><i></i><i></i></div>
+  <div class="contenuto anima">
+    <img class="logo-grande" src="/assets/logo-192.png" alt="">
+    <h1 class="grande"><span>Torniamo</span><span>subito</span></h1>
+    <div class="sotto">Intanto scrivi in chat: tu da che parte stai?</div>
+  </div>
+  <div class="strisce" style="bottom:0"><i></i><i></i></div>
+</section>
+
+<section class="scena pieno" id="chiusura">
+  <div class="strisce" style="top:0"><i></i><i></i></div>
+  <div class="contenuto anima">
+    <div class="marchio"><img src="/assets/logo-192.png" alt="">Davide Durazzi</div>
+    <h1 class="grande"><span>Grazie</span><span>di esserci</span></h1>
+    <div class="social" id="social"><span>davidedurazzi.it</span></div>
+    <div class="prossima" id="prossima"></div>
+  </div>
+  <div class="strisce" style="bottom:0"><i></i><i></i></div>
+</section>
+
+<script src="/config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var q = new URLSearchParams(location.search);
+  var S = window.SITE || {};
+  var scena = q.get("scena") || "principale";
+  if (q.get("formato") === "verticale") document.body.classList.add("verticale");
+  var el = document.getElementById(scena) || document.getElementById("principale");
+  el.classList.add("attiva");
+  var $ = function (id) { return document.getElementById(id); };
+  var nomeSez = function (id) { var s = (S.sezioni || []).filter(function (x) { return x.id === id; })[0]; return s ? s.nome : ""; };
+
+  // Temi: dal parametro &tema=, altrimenti dagli ultimi articoli pubblicati
+  fetch("/content/articoli.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (a) {
+    a = a.filter(function (x) { return x.pubblicato; }).sort(function (x, y) { return (y.data || "").localeCompare(x.data || ""); });
+    var ultimi = a.length ? a.filter(function (x) { return x.data === a[0].data; }).slice(0, 3) : [];
+    $("temi").innerHTML = ultimi.map(function (x, i) {
+      return '<div class="tema"><b>' + (i + 1) + '</b><span></span></div>';
+    }).join("");
+    [].forEach.call($("temi").children, function (n, i) { n.querySelector("span").textContent = ultimi[i].titolo; });
+    if (!q.get("tema") && ultimi[0]) {
+      $("pTema").textContent = ultimi[0].titolo;
+      $("pEtic").textContent = nomeSez(ultimi[0].sezione) || "Oggi";
+      if (!q.get("sotto")) $("tSotto").textContent = ultimi[0].titolo;
+    }
+  }).catch(function () {});
+
+  if (q.get("tema")) { $("pTema").textContent = q.get("tema"); $("tSotto").textContent = q.get("tema"); }
+  if (q.get("etichetta")) $("pEtic").textContent = q.get("etichetta");
+  if (q.get("nome")) $("tNome").textContent = q.get("nome");
+  if (q.get("sotto")) $("tSotto").textContent = q.get("sotto");
+
+  // Conto alla rovescia dell'intro
+  if (scena === "intro") {
+    var fine = Date.now() + (parseFloat(q.get("min")) || 5) * 60000;
+    var tick = function () {
+      var s = Math.max(0, Math.round((fine - Date.now()) / 1000));
+      $("conta").textContent = s ? Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0") : "Si parte!";
+    };
+    tick(); setInterval(tick, 1000);
+  }
+
+  // Titolo: esce da solo dopo &durata= secondi (0 = resta fisso)
+  if (scena === "titolo") {
+    var durata = q.has("durata") ? parseFloat(q.get("durata")) : 10;
+    if (durata > 0) setTimeout(function () { $("terzo").classList.add("esce"); }, durata * 1000);
+  }
+
+  // Chiusura: social e prossima diretta da config.js
+  if (scena === "chiusura") {
+    var soc = [];
+    if (S.twitch) soc.push("twitch.tv/" + S.twitch);
+    if (S.instagram) soc.push("@" + S.instagram);
+    if (S.youtubeUrl) soc.push(S.youtubeUrl.replace(/^https?:\/\/(www\.)?/, ""));
+    soc.push("davidedurazzi.it");
+    $("social").innerHTML = "";
+    soc.forEach(function (t) { var s = document.createElement("span"); s.textContent = t; $("social").appendChild(s); });
+    if (S.orariLive) { $("prossima").innerHTML = "<b>Prossima diretta</b> "; $("prossima").appendChild(document.createTextNode(S.orariLive.replace(/^Le dirette:\s*/i, ""))); }
+  }
+})();
+</script>
+</body>
+</html>
