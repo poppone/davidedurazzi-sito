@@ -1,1 +1,79 @@
-[]
+[
+  {
+    "slug": "rai-sospeso-per-dieci-giorni-sigfrido-ranucci-la-replica-del-legale-20261006",
+    "titolo": "Rai, sospeso per dieci giorni Sigfrido Ranucci: la replica del legale",
+    "sezione": "politica",
+    "rubrica": "",
+    "data": "2026-10-06",
+    "sommario": "La Rai ha deciso una sospensione di dieci giorni per Sigfrido Ranucci in seguito ad alcune contestazioni disciplinari. La difesa annuncia ricorso, mentre si registrano diverse reazioni nel mondo politico e mediatico.",
+    "testo": [
+      "La televisione di Stato ha fermato per dieci giorni Sigfrido Ranucci. La misura, secondo quanto riportato da diverse fonti d'informazione tra cui l'AGI e Il Sole 24 Ore, poggia su specifiche contestazioni di carattere disciplinare, che includono il contenuto di messaggi di posta elettronica aziendale, la gestione degli accessi in azienda e segnalazioni di presunte denigrazioni.",
+      "La decisione ha immediatamente scatenato il dibattito pubblico. Da un lato, l'avvocato del giornalista ha annunciato che il provvedimento verrà impugnato, con l'attesa di una pronuncia sul possibile reintegro. Dall'altro, si registrano prese di posizione come quella di Corsini, che, secondo quanto riferito dall'ANSA, ha dichiarato di sperare in un suo mancato ritorno alla trasmissione Report.",
+      "Intanto, Il Fatto Quotidiano legge la vicenda come una mossa legata agli equilibri politici e ai vertici aziendali, arrivata proprio alla vigilia di scadenze importanti per il programma. Restano però da chiarire con esattezza tutti i passaggi formali e le motivazioni dettagliate che hanno portato l'azienda a questa sanzione disciplinare."
+    ],
+    "fonti": [
+      {
+        "nome": "Il Sole 24 Ore: Rai sospende Sigfrido Ranucci per 10 giorni. La replica: «Impugneremo»",
+        "url": "https://www.ilsole24ore.com/art/rai-sospende-sigfrido-ranucci-10-giorni-AJcJ9rZB"
+      },
+      {
+        "nome": "AGI: La Rai sospende Sigfrido Ranucci per 10 giorni. Il legale \"faremo ricorso\"",
+        "url": "https://www.agi.it/cronaca/news/2026-10-05/rai-provvedimento-disciplinare-ranucci-39395692/"
+      },
+      {
+        "nome": "ANSA: Ranucci sospeso per 10 giorni dalla Rai, il legale: 'Faremo ricorso'",
+        "url": "https://www.ansa.it/sito/notizie/politica/2026/10/05/ranucci-sospeso-per-10-giorni-dalla-rai-il-legale-faremo-ricorso_2fef0e65-81ef-4744-85b5-1894f6d936a7.html"
+      },
+      {
+        "nome": "Il Fatto Quotidiano: La testa di Ranucci è stata chiesta e ottenuta dal governo: chi finge di non sapere, è complice",
+        "url": "https://www.ilfattoquotidiano.it/2026/10/05/ranucci-sospeso-rai-corsini-governo-meloni/8528261/"
+      }
+    ],
+    "pubblicato": true
+  },
+  {
+    "slug": "meloni-registra-la-sua-voce-come-marchio-ue-contro-i-deepfake-20261006",
+    "titolo": "Meloni registra la sua voce come marchio Ue contro i deepfake",
+    "sezione": "politica",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-06",
+    "sommario": "La presidente del Consiglio ha depositato un audio all'ufficio marchi europeo per difendersi dalle imitazioni create con l'intelligenza artificiale. Una mossa che accende i riflettori sui rischi di frodi e propaganda politica.",
+    "testo": [
+      "La presidente del Consiglio Giorgia Meloni ha avviato la registrazione della propria voce presso l'Ufficio dell'Unione europea per la proprietà intellettuale. Come riferito da Il Sole 24 Ore, si tratta di una traccia audio di quattro secondi in cui la premier pronuncia le parole «Io sono Giorgia Meloni», pensata per tutelarsi contro i falsi generati online.",
+      "Il problema dei deepfake tocca da vicino la sicurezza di tutti. Secondo quanto riporta l'ANSA, infatti, per riprodurre la voce di una persona sono sufficienti appena tre secondi di registrazione autentica e un costo di circa trenta euro. Queste alterazioni digitali vengono impiegate sia per finalità di manipolazione politica, sia per compiere vere e proprie frodi finanziarie.",
+      "Resta ora da verificare l'effettiva tenuta di questa tutela legale e quale impatto concreto potrà avere nel fermare i falsi sul web. Inoltre, rimane da comprendere se e come strumenti simili potranno essere estesi per proteggere anche i comuni cittadini dall'uso improprio della propria identità vocale."
+    ],
+    "fonti": [
+      {
+        "nome": "ANSA: Deepfake audio, per realizzarli servono tre secondi di voce vera e 30 euro",
+        "url": "https://www.ansa.it/canale_tecnologia/notizie/cybersecurity/2026/10/05/deepfake-audio-per-realizzarli-servono-tre-secondi-di-voce-vera-e-30-euro_5898ae45-4e2d-4c10-b91e-f985e1a6ea47.html"
+      },
+      {
+        "nome": "Il Sole 24 Ore: «Io sono Giorgia Meloni»: la premier registra la sua voce all’ufficio marchi contro i fake",
+        "url": "https://www.ilsole24ore.com/art/io-sono-giorgia-meloni-premier-registra-sua-voce-all-ufficio-marchi-contro-fake-AJ9kGfZB"
+      },
+      {
+        "nome": "ANSA: Il voto a maggio più vicino, e Meloni tutela la sua voce dai deepfake",
+        "url": "https://www.ansa.it/sito/notizie/politica/2026/10/05/il-voto-a-maggio-piu-vicino-e-meloni-tutela-la-sua-voce-dai-deepfake_166e0661-729d-445b-b106-17c3ea8888c6.html"
+      }
+    ],
+    "domanda": "La registrazione della propria voce come marchio all'Unione europea può considerarsi uno strumento efficace per proteggere i cittadini dai deepfake?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "La semplicità tecnica ed economica nella clonazione vocale rende necessaria una tutela formale: basterebbero tre secondi di audio e circa trenta euro per creare un falso, stando a quanto riferito dall'ANSA.",
+        "Tale riconoscimento fornisce una protezione contro minacce diffuse come la disinformazione politica e i tentativi di truffa.",
+        "Registrare la voce presso l'Ufficio dell'Unione europea per la proprietà intellettuale crea un punto di riferimento legale per frenare usi illeciti del timbro vocale."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Il marchio nasce per finalità commerciali e non costituisce uno strumento nato per impedire la circolazione di file audio manipolati sulla rete.",
+        "La facilità e il basso costo con cui si generano falsi audio, uniti alla rapidità del fenomeno, limitano l'efficacia protettiva della proprietà intellettuale.",
+        "I deepfake rappresentano un problema per la sicurezza collettiva e l'informazione che necessita di interventi normativi e tecnologici generali anziché di tutele individuali."
+      ]
+    },
+    "pubblicato": true
+  }
+]
