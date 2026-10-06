@@ -1,0 +1,129 @@
+// POST /api/admin  (header x-admin-password) — moderazione commenti e risposte
+const crypto = require("crypto");
+const { db, leggiCommento, salvaCommento, gemini, leggiCorpo } = require("./_lib");
+
+function autorizzato(req) {
+  const atteso = process.env.ADMIN_PASSWORD || "";
+  const dato = String(req.headers["x-admin-password"] || "");
+  if (atteso.length < 8 || dato.length !== atteso.length) return false;
+  return crypto.timingSafeEqual(Buffer.from(dato), Buffer.from(atteso));
+}
+
+async function contesto(req, slug) {
+  const base = "https://" + req.headers.host;
+  const [articoli, cfg] = await Promise.all([
+    fetch(base + "/content/articoli.json").then((r) => r.json()).catch(() => []),
+    fetch(base + "/config.js").then((r) => r.text()).catch(() => "")
+  ]);
+  const a = articoli.find((x) => x.slug === slug) || {};
+  const campo = (k) => ((cfg.match(new RegExp(k + ':\\s*"([^"]*)"')) || [])[1] || "");
+  return {
+    articolo: a,
+    orari: campo("orariLive"),
+    twitch: campo("twitch"),
+    youtube: campo("youtubeUrl"),
+    modulo: campo("modulTemi"),
+    email: campo("email")
+  };
+}
+
+const SISTEMA = `Lavori per il sito davidedurazzi.it di Davide Durazzi (attualità, dirette su Twitch, Il Contraddittorio).
+Ricevi un commento di un lettore e devi classificarlo e preparare una risposta. Rispondi SOLO con JSON:
+{"tipo":"pratica"|"discussione"|"ignora","risposta":"..."}
+
+- "pratica": domanda di servizio a cui si risponde SOLO con le informazioni fornite (fonti dell'articolo, orari e canali delle dirette, come proporre un tema, cosa dice l'articolo).
+  Scrivi una risposta breve (1-3 frasi), cortese e precisa. Sarà pubblicata automaticamente e firmata "Redazione AI":
+  non fingere di essere Davide, non esprimere opinioni, non inventare nulla. Se l'informazione non c'è, il tipo è "discussione".
+- "discussione": opinioni, critiche, dibattito, esperienze personali, domande su cosa pensa Davide, tutto il resto.
+  Scrivi una BOZZA che Davide leggerà e correggerà prima di pubblicarla col suo nome: prima persona, italiano diretto e informale ma rispettoso,
+  2-4 frasi, riconosci il punto del lettore, puoi rilanciare con una domanda o invitarlo in diretta. Mai fatti inventati,
+  mai schierarti con partiti o candidati, mai attacchi personali.
+- "ignora": insulti, spam, messaggi senza contenuto. "risposta" vuota.`;
+
+async function agente(req, c) {
+  const ctx = await contesto(req, c.slug);
+  const a = ctx.articolo;
+  const info = [
+    "ARTICOLO: " + (a.titolo || "sconosciuto"),
+    a.sommario ? "SOMMARIO: " + a.sommario : "",
+    a.domanda ? "DOMANDA DEL CONTRADDITTORIO: " + a.domanda : "",
+    (a.fonti || []).length ? "FONTI: " + a.fonti.map((f) => f.nome + " (" + f.url + ")").join("; ") : "",
+    ctx.orari ? "DIRETTE: " + ctx.orari + " su twitch.tv/" + ctx.twitch : "",
+    ctx.youtube ? "YOUTUBE: " + ctx.youtube : "",
+    "PROPORRE UN TEMA: " + (ctx.modulo || (ctx.email ? "scrivere a " + ctx.email : "sezione Piazza Aperta del sito"))
+  ].filter(Boolean).join("\n");
+  return gemini(SISTEMA, info + "\n\nCOMMENTO DI " + c.nome + ":\n" + c.testo);
+}
+
+module.exports = async (req, res) => {
+  if (req.method !== "POST") return res.status(405).json({ errore: "Metodo non consentito" });
+  if (!autorizzato(req)) return res.status(401).json({ errore: "Password errata" });
+  try {
+    const b = await leggiCorpo(req);
+    const id = String(b.id || "");
+
+    if (b.azione === "elenco") {
+      const [attesa, bozze] = await db(["LRANGE", "attesa", "0", "99"], ["LRANGE", "bozze", "0", "99"]);
+      const tutti = [...new Set([...(attesa || []), ...(bozze || [])])];
+      const valori = tutti.length ? await db(...tutti.map((x) => ["GET", "c:" + x])) : [];
+      const commenti = valori.filter(Boolean).map((v) => JSON.parse(v));
+      return res.status(200).json({
+        attesa: commenti.filter((c) => c.stato === "attesa"),
+        bozze: commenti.filter((c) => c.stato === "approvato" && c.bozza)
+      });
+    }
+
+    const c = await leggiCommento(id);
+    if (!c) return res.status(404).json({ errore: "Commento non trovato" });
+
+    if (b.azione === "approva") {
+      c.stato = "approvato";
+      await salvaCommento(c);
+      await db(["LREM", "attesa", "0", id], ["RPUSH", "art:" + c.slug, id]);
+      let esito = "approvato";
+      try {
+        const r = await agente(req, c);
+        if (r.tipo === "pratica" && r.risposta) {
+          c.risposta = { testo: r.risposta, autore: "Redazione AI", ai: true, data: new Date().toISOString() };
+          esito = "risposta automatica pubblicata";
+        } else if (r.tipo === "discussione" && r.risposta) {
+          c.bozza = r.risposta;
+          await db(["LPUSH", "bozze", id]);
+          esito = "bozza di risposta pronta";
+        }
+        await salvaCommento(c);
+      } catch (e) {
+        console.error(e);
+        esito = "approvato (agente non disponibile)";
+      }
+      return res.status(200).json({ ok: true, esito });
+    }
+
+    if (b.azione === "rispondi") {
+      const testo = String(b.testo || "").trim();
+      if (testo.length < 2 || testo.length > 2000) return res.status(400).json({ errore: "Risposta non valida" });
+      c.risposta = { testo, autore: "Davide Durazzi", ai: false, data: new Date().toISOString() };
+      delete c.bozza;
+      await salvaCommento(c);
+      await db(["LREM", "bozze", "0", id]);
+      return res.status(200).json({ ok: true, esito: "risposta pubblicata" });
+    }
+
+    if (b.azione === "scarta_bozza") {
+      delete c.bozza;
+      await salvaCommento(c);
+      await db(["LREM", "bozze", "0", id]);
+      return res.status(200).json({ ok: true, esito: "bozza scartata" });
+    }
+
+    if (b.azione === "elimina") {
+      await db(["LREM", "attesa", "0", id], ["LREM", "bozze", "0", id], ["LREM", "art:" + c.slug, "0", id], ["DEL", "c:" + id]);
+      return res.status(200).json({ ok: true, esito: "eliminato" });
+    }
+
+    res.status(400).json({ errore: "Azione sconosciuta" });
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ errore: "Errore del server: " + e.message });
+  }
+};
