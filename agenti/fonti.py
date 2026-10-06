@@ -38,21 +38,20 @@ def raccogli() -> list[dict]:
             notizie.append({
                 "id": f"n{len(notizie) + 1}",
                 "testata": feed["testata"],
+                "area": feed.get("area", "attualita"),
                 "titolo": titolo,
                 "sommario": _pulisci(v.get("summary", ""))[:300],
                 "url": v["link"],
             })
-    # Bilancia: massimo 25 notizie per testata, alternate, così lo Scout le vede tutte
-    per_testata: dict[str, list[dict]] = {}
+    # Bilancia: massimo 15 notizie per testata in ogni area, così ogni Scout le vede tutte
+    gruppi: dict[tuple, list[dict]] = {}
     for n in notizie:
-        per_testata.setdefault(n["testata"], []).append(n)
-    bilanciate = []
-    for i in range(25):
-        for lista in per_testata.values():
-            if i < len(lista):
-                bilanciate.append(lista[i])
+        gruppi.setdefault((n["area"], n["testata"]), []).append(n)
+    bilanciate = [n for lista in gruppi.values() for n in lista[:15]]
     for i, n in enumerate(bilanciate, 1):
         n["id"] = f"n{i}"
-    conteggio = ", ".join(f"{t}: {len(l)}" for t, l in per_testata.items())
-    print(f"[fonti] {len(notizie)} notizie raccolte ({conteggio}), {len(bilanciate)} passate allo Scout")
+    per_area: dict[str, int] = {}
+    for n in bilanciate:
+        per_area[n["area"]] = per_area.get(n["area"], 0) + 1
+    print(f"[fonti] {len(notizie)} notizie raccolte, per area: {per_area}")
     return bilanciate

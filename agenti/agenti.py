@@ -19,21 +19,25 @@ def _fonti_testo(notizie: list[dict]) -> str:
     return "\n".join(f"[{n['id']}] {n['testata']} | {n['titolo']} | {n['sommario']}" for n in notizie)
 
 
-def scout(notizie: list[dict]) -> list[dict]:
-    """Sceglie i temi del giorno."""
-    r = chiedi(REGOLE, f"""Sei lo SCOUT. Dalle notizie qui sotto scegli i {config.NUMERO_TEMI} temi migliori per una diretta di attualità.
-Criteri: impatto sulla vita quotidiana delle persone, potenziale di dibattito, rilevanza politica o di cronaca.
-OBBLIGATORIO: ogni tema deve includere negli "ids" notizie di ALMENO 2 testate diverse (la testata è il secondo campo di ogni riga). Raggruppa tutte le notizie che parlano della stessa storia, anche se i titoli sono diversi. Scarta le storie riportate da una sola testata.
-Almeno un tema deve essere una questione su cui ci si può schierare (dibattito: true).
+def scout(notizie: list[dict], area: str, sezioni: list[str], esclusi: list[str]) -> dict | None:
+    """Sceglie IL tema migliore per un'area del palinsesto."""
+    if not notizie:
+        return None
+    gia = ("\nNon scegliere storie già trattate oggi: " + "; ".join(esclusi)) if esclusi else ""
+    r = chiedi(REGOLE, f"""Sei lo SCOUT. Scegli UN solo tema per una diretta, nell'area: {config.NOMI_AREE.get(area, area)}.
+Criteri: interesse per il pubblico generalista, impatto sulla vita delle persone, potenziale di discussione in chat.
+OBBLIGATORIO: negli "ids" metti notizie di ALMENO 2 testate diverse (la testata è il secondo campo di ogni riga) che parlano della stessa storia.
+Se nessuna storia è coperta da 2 testate, rispondi {{"tema": null}}.{gia}
 
-Sezioni ammesse: {", ".join(config.SEZIONI)}.
+Sezione: scegli tra {", ".join(sezioni)}.
+"divisivo": da 1 a 10, quanto la storia divide le opinioni (serve per scegliere Il Contraddittorio).
 
 Formato:
-{{"temi":[{{"titolo_lavoro":"...","sezione":"...","perche":"una frase","ids":["n1","n7"],"dibattito":true}}]}}
+{{"tema":{{"titolo_lavoro":"...","sezione":"...","perche":"una frase","ids":["n1","n7"],"divisivo":7}}}}
 
 NOTIZIE:
 {_fonti_testo(notizie)}""")
-    return r.get("temi", [])
+    return r.get("tema")
 
 
 def fact_check(tema: dict, per_id: dict) -> list[dict] | None:
@@ -92,7 +96,7 @@ NOTIZIE:
 
     return chiedi(REGOLE, f"""Sei il MODERATORE. Controlla che il confronto sia equilibrato: stessa forza e lunghezza dei due lati,
 domanda neutra, nessun argomento falso o offensivo. Correggi dove serve senza cambiare le posizioni.
-Formato: {{"domanda":"...","tesi":{{"titolo":"Sì","punti":[...]}},"antitesi":{{"titolo":"No","punti":[...]}}}}
+Formato: {{"domanda":"...","tesi":{{"titolo":"Sì","punti":[...]}},"antitesi":{{"titolo":"No","punti":[...]}}
 
 DOMANDA: {q}
 TESI: {json.dumps(tesi, ensure_ascii=False)}

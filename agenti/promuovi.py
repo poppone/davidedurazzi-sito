@@ -20,6 +20,8 @@ def main() -> None:
     for b in approvate:
         pulito = {k: v for k, v in b.items() if k not in INTERNI}
         pulito["pubblicato"] = True
+        if pulito.get("sezione") == "novita":  # vecchia sezione, ora Tecnologia e AI
+            pulito["sezione"] = "tecnologia"
         if pulito["slug"] not in slugs:
             articoli.insert(0, pulito)
     ARTICOLI.write_text(json.dumps(articoli, ensure_ascii=False, indent=2), encoding="utf-8")

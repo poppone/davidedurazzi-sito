@@ -26,12 +26,21 @@ TWITCH = "popponetv"
 GIORNI_MAX = 3  # non pubblica articoli più vecchi di così
 API = "https://graph.instagram.com/" + os.environ.get("IG_API_VERSION", "v25.0")
 TOKEN = os.environ.get("IG_ACCESS_TOKEN", "")
-SEZIONI = {"cronaca": "Cronaca", "politica": "Politica ed elezioni", "quotidiano": "Vita quotidiana", "novita": "Novità"}
+SEZIONI = {
+    "cronaca": "Cronaca", "politica": "Politica ed elezioni", "quotidiano": "Vita quotidiana",
+    "economia": "Economia e soldi", "tecnologia": "Tecnologia e AI", "sport": "Sport",
+    "spettacolo": "Spettacolo e social", "gaming": "Gaming", "motori": "Motori",
+}
 HASHTAG = {
     "cronaca": "#cronaca #notizie #italia",
     "politica": "#politica #elezioni #italia",
     "quotidiano": "#vitaquotidiana #attualità #italia",
-    "novita": "#novità #tecnologia #attualità",
+    "economia": "#economia #soldi #risparmio",
+    "tecnologia": "#tecnologia #intelligenzaartificiale #tech",
+    "sport": "#sport #calcio #italia",
+    "spettacolo": "#spettacolo #tv #social",
+    "gaming": "#gaming #videogiochi #gamer",
+    "motori": "#motori #auto #moto",
 }
 
 

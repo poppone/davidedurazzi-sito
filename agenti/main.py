@@ -33,13 +33,37 @@ def main() -> None:
         return
     per_id = {n["id"]: n for n in notizie}
 
-    temi = agenti.scout(notizie)
-    print(f"[scout] {len(temi)} temi proposti")
+    # Palinsesto del giorno: 1 tema di attualità + 2 aree fisse
+    aree_oggi = ["attualita"] + config.PALINSESTO[OGGI.weekday()]
+    print(f"[palinsesto] oggi: {aree_oggi}")
+    temi, scelti = [], []
+    for area in aree_oggi:
+        if area == "libero":
+            pool, sezioni = notizie, config.SEZIONI
+        elif area == "attualita":
+            pool, sezioni = [n for n in notizie if n["area"] == "attualita"], ["cronaca", "politica"]
+        elif area == "quotidiano":
+            pool, sezioni = [n for n in notizie if n["area"] in ("attualita", "economia")], ["quotidiano"]
+        else:
+            pool, sezioni = [n for n in notizie if n["area"] == area], [area]
+        tema = agenti.scout(pool, area, sezioni, scelti)
+        if not tema:
+            print(f"[scout] nessun tema valido per '{area}'")
+            continue
+        if tema.get("sezione") not in sezioni:
+            tema["sezione"] = sezioni[0]
+        temi.append(tema)
+        scelti.append(tema.get("titolo_lavoro", ""))
 
-    nuove, scaletta, fatto_contraddittorio = [], [], False
+    # Il Contraddittorio va al tema più divisivo del giorno
+    dibattito = max(temi, key=lambda t: t.get("divisivo", 0), default=None)
+
+    nuove, scaletta = [], []
     for tema in temi:
         fonti = agenti.fact_check(tema, per_id)
         if not fonti:
+            if tema is dibattito:
+                dibattito = None
             continue
         art = agenti.redattore(tema, fonti)
         verifica = agenti.critico(art, fonti)
@@ -53,7 +77,7 @@ def main() -> None:
             "scartare": False,
             "slug": slug(art.get("titolo", tema["titolo_lavoro"])),
             "titolo": art.get("titolo", tema["titolo_lavoro"]),
-            "sezione": tema.get("sezione") if tema.get("sezione") in config.SEZIONI else "cronaca",
+            "sezione": tema["sezione"],
             "rubrica": "",
             "data": OGGI.strftime("%Y-%m-%d"),
             "sommario": art.get("sommario", ""),
@@ -62,10 +86,9 @@ def main() -> None:
             "nota_critico": verifica.get("problemi", []),
             "domande_live": art.get("domande_live", []),
         }
-        if tema.get("dibattito") and not fatto_contraddittorio:
+        if tema is dibattito:
             c = agenti.contraddittorio(tema, fonti)
             bozza.update(rubrica="contraddittorio", domanda=c["domanda"], tesi=c["tesi"], antitesi=c["antitesi"])
-            fatto_contraddittorio = True
         nuove.append(bozza)
         scaletta.append(bozza)
 
