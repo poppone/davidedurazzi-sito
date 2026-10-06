@@ -16,7 +16,7 @@ window.SITE = {
   youtubeUrl: "https://www.youtube.com/@PopponeTV",
 
   // Instagram: profilo + link dei post da mostrare (copia l'URL del post)
-  instagram: "davidedurazzi",
+  instagram: "poppone.tech",
   instagramPost: [
     // "https://www.instagram.com/p/XXXXXXXXXXX/",
   ],
