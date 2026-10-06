@@ -9,11 +9,11 @@ window.SITE = {
 
   // Twitch: nome del canale (es. "popponetv")
   twitch: "popponetv",
-  orariLive: "Le dirette: lunedì, mercoledì e venerdì alle 21:00",
+  orariLive: "La diretta: martedì alle 21:30",
 
   // YouTube: ID del canale (inizia con UC..., lo trovi in YouTube Studio > Impostazioni > Canale > Impostazioni avanzate)
-  youtubeChannelId: "https://www.youtube.com/channel/UCNMKJ6Etxs-2SMGGquGnaDg",
-  youtubeUrl: "https://www.youtube.com/@PopponeTV",
+  youtubeChannelId: "https://www.youtube.com/channel/UCbEC2iCWFdT_W3WgdxYl7Hw",
+  youtubeUrl: "https://www.youtube.com/@Notiziein60secondioff",
 
   // Instagram: profilo + link dei post da mostrare (copia l'URL del post)
   instagram: "poppone.tech",
