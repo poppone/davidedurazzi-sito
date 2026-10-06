@@ -46,8 +46,14 @@ async function gemini(sistema, richiesta) {
   if (!chiave) throw new Error("Manca GEMINI_API_KEY");
   const modelli = [process.env.GEMINI_MODEL || "gemini-flash-latest", "gemini-flash-lite-latest", "gemini-2.5-flash"];
   let errore = "";
+  const scadenza = Date.now() + 40000; // tempo totale massimo per l'agente
   for (const m of modelli) {
-    const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/" + m + ":generateContent", {
+    const resto = scadenza - Date.now();
+    if (resto < 4000) { errore += " | tempo esaurito"; break; }
+    let r;
+    try {
+      r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/" + m + ":generateContent", {
+      signal: AbortSignal.timeout(Math.min(18000, resto)),
       method: "POST",
       headers: { "x-goog-api-key": chiave, "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -56,6 +62,7 @@ async function gemini(sistema, richiesta) {
         generationConfig: { responseMimeType: "application/json", temperature: 0.5 }
       })
     });
+    } catch (e) { errore = m + ": " + (e.name === "TimeoutError" ? "nessuna risposta in tempo" : e.message); continue; }
     if (!r.ok) { errore = m + ": HTTP " + r.status; continue; }
     const j = await r.json();
     const parti = (((j.candidates || [])[0] || {}).content || {}).parts || [];
