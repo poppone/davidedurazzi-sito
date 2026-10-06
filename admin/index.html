@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Moderazione commenti</title>
+<link rel="icon" type="image/png" href="/assets/logo-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .mod{max-width:760px;margin:0 auto;padding:1.5rem clamp(1rem,4vw,2rem) 4rem}
+  .mod h1{font:800 2rem/1.1 var(--sans);font-stretch:112%;margin:.5rem 0 1rem}
+  .mod h2{font:800 1.3rem var(--sans);margin:2rem 0 .8rem}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem;margin-bottom:.8rem}
+  .card .chi{font-weight:700}
+  .card .dove{color:var(--muted);font-size:.88rem;margin:.1rem 0 .6rem}
+  .card p{margin:.3rem 0 .8rem;white-space:pre-line}
+  .card textarea,.login input{width:100%;font:400 1rem var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.65rem .75rem}
+  .card textarea{min-height:7rem;margin:.4rem 0 .7rem}
+  .btn.rosso{border-color:var(--anti);color:var(--anti)}
+  .esito{font-size:.92rem;color:var(--muted);margin-top:.5rem}
+  .vuoto{color:var(--muted)}
+  .login{display:grid;gap:.7rem;max-width:360px}
+</style>
+</head>
+<body>
+<main class="mod">
+  <a class="logo" href="/"><img src="/assets/logo-64.png" alt="" width="34" height="34">Davide Durazzi</a>
+  <h1>Moderazione commenti</h1>
+  <div id="app"></div>
+</main>
+<script>
+(function () {
+  "use strict";
+  var app = document.getElementById("app");
+  var pw = sessionStorage.getItem("pw") || "";
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+
+  function api(corpo) {
+    return fetch("/api/admin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-admin-password": pw },
+      body: JSON.stringify(corpo)
+    }).then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.errore || "Errore"); return j; }); });
+  }
+
+  function login(msg) {
+    app.innerHTML = '<form class="login" id="f"><label>Password<input type="password" id="p" autocomplete="current-password" required></label>' +
+      '<button class="btn pieno" type="submit">Entra</button>' + (msg ? '<p class="esito">' + esc(msg) + '</p>' : '') + '</form>';
+    document.getElementById("f").addEventListener("submit", function (e) {
+      e.preventDefault(); pw = document.getElementById("p").value; sessionStorage.setItem("pw", pw); carica();
+    });
+  }
+
+  function carica() {
+    app.innerHTML = '<p class="vuoto">Caricamento.</p>';
+    api({ azione: "elenco" }).then(disegna).catch(function (e) {
+      if (/Password/.test(e.message)) { sessionStorage.removeItem("pw"); login("Password errata."); }
+      else app.innerHTML = '<p class="vuoto">' + esc(e.message) + '</p>';
+    });
+  }
+
+  function link(c) { return '<a href="/articolo?slug=' + encodeURIComponent(c.slug) + '" target="_blank" rel="noopener">articolo</a>'; }
+  function data(d) { return new Date(d).toLocaleString("it-IT", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); }
+
+  function disegna(j) {
+    var h = '<h2>Da approvare (' + j.attesa.length + ')</h2>';
+    h += j.attesa.length ? j.attesa.map(function (c) {
+      return '<div class="card" data-id="' + esc(c.id) + '"><div class="chi">' + esc(c.nome) + '</div><div class="dove">' + data(c.data) + ', ' + link(c) + '</div>' +
+        '<p>' + esc(c.testo) + '</p><div class="acts"><button class="btn pieno" data-az="approva" type="button">Approva</button>' +
+        '<button class="btn rosso" data-az="elimina" type="button">Elimina</button></div><div class="esito"></div></div>';
+    }).join("") : '<p class="vuoto">Nessun commento in attesa.</p>';
+
+    h += '<h2>Risposte da rivedere (' + j.bozze.length + ')</h2>';
+    h += j.bozze.length ? j.bozze.map(function (c) {
+      return '<div class="card" data-id="' + esc(c.id) + '"><div class="chi">' + esc(c.nome) + '</div><div class="dove">' + data(c.data) + ', ' + link(c) + '</div>' +
+        '<p>' + esc(c.testo) + '</p><label class="dove">La tua risposta (bozza dell\u2019AI, modificala come vuoi)</label>' +
+        '<textarea>' + esc(c.bozza) + '</textarea><div class="acts"><button class="btn pieno" data-az="rispondi" type="button">Pubblica col mio nome</button>' +
+        '<button class="btn" data-az="scarta_bozza" type="button">Non rispondere</button></div><div class="esito"></div></div>';
+    }).join("") : '<p class="vuoto">Nessuna bozza da rivedere.</p>';
+
+    h += '<div class="acts" style="margin-top:2rem"><button class="btn" id="agg" type="button">Aggiorna</button></div>';
+    app.innerHTML = h;
+    document.getElementById("agg").addEventListener("click", carica);
+  }
+
+  app.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-az]"); if (!b) return;
+    var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id };
+    if (az === "elimina" && !confirm("Eliminare il commento?")) return;
+    if (az === "rispondi") corpo.testo = card.querySelector("textarea").value;
+    card.querySelectorAll("button").forEach(function (x) { x.disabled = true; });
+    card.querySelector(".esito").textContent = az === "approva" ? "Approvo e preparo la risposta." : "Un attimo.";
+    api(corpo).then(function (r) {
+      card.querySelector(".esito").textContent = "Fatto: " + r.esito + ".";
+      setTimeout(carica, 1200);
+    }).catch(function (err) {
+      card.querySelector(".esito").textContent = err.message;
+      card.querySelectorAll("button").forEach(function (x) { x.disabled = false; });
+    });
+  });
+
+  pw ? carica() : login();
+})();
+</script>
+</body>
+</html>
