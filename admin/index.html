@@ -75,7 +75,9 @@
     var h = '<h2>Da approvare (' + j.attesa.length + ')</h2>';
     h += j.attesa.length ? j.attesa.map(function (c) {
       return '<div class="card" data-id="' + esc(c.id) + '"><div class="chi">' + esc(c.nome) + '</div><div class="dove">' + data(c.data) + ', ' + link(c) + '</div>' +
-        '<p>' + esc(c.testo) + '</p><div class="acts"><button class="btn pieno" data-az="approva" type="button">Approva</button>' +
+        '<p>' + esc(c.testo) + '</p>' +
+        '<label class="dove">La tua risposta (facoltativa: se la lasci vuota risponde l\u2019agente)</label><textarea placeholder="Scrivi qui se vuoi rispondere tu"></textarea>' +
+        '<div class="acts"><button class="btn pieno" data-az="approva" type="button">Approva</button>' +
         '<button class="btn rosso" data-az="elimina" type="button">Elimina</button></div><div class="esito"></div></div>';
     }).join("") : '<p class="vuoto">Nessun commento in attesa.</p>';
 
@@ -87,6 +89,19 @@
         '<button class="btn" data-az="scarta_bozza" type="button">Non rispondere</button></div><div class="esito"></div></div>';
     }).join("") : '<p class="vuoto">Nessuna bozza da rivedere.</p>';
 
+    var pub = j.pubblicati || [];
+    h += '<h2>Commenti pubblicati (' + pub.length + ')</h2>';
+    h += pub.length ? pub.map(function (c) {
+      var r = c.risposta, mia = r && !r.ai;
+      return '<div class="card" data-id="' + esc(c.id) + '"><div class="chi">' + esc(c.nome) + '</div><div class="dove">' + data(c.data) + ', ' + link(c) + '</div>' +
+        '<p>' + esc(c.testo) + '</p>' +
+        (r ? '<div class="dove">Risposta attuale di <b>' + esc(r.autore) + '</b>' + (r.ai ? ' (automatica)' : '') + ':</div><p>' + esc(r.testo) + '</p>' : '<div class="dove">Nessuna risposta.</div>') +
+        '<textarea placeholder="' + (r ? 'Scrivi qui per sostituirla con la tua' : 'Scrivi la tua risposta') + '">' + (mia ? esc(r.testo) : '') + '</textarea>' +
+        '<div class="acts"><button class="btn pieno" data-az="rispondi" type="button">' + (r ? (mia ? 'Aggiorna risposta' : 'Sostituisci con la mia') : 'Rispondi col mio nome') + '</button>' +
+        (r ? '<button class="btn" data-az="togli_risposta" type="button">Togli risposta</button>' : '') +
+        '<button class="btn rosso" data-az="elimina" type="button">Elimina</button></div><div class="esito"></div></div>';
+    }).join("") : '<p class="vuoto">Nessun commento pubblicato.</p>';
+
     h += '<div class="acts" style="margin-top:2rem"><button class="btn" id="agg" type="button">Aggiorna</button></div>';
     app.innerHTML = h;
     document.getElementById("agg").addEventListener("click", carica);
@@ -96,9 +111,10 @@
     var b = e.target.closest("button[data-az]"); if (!b) return;
     var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id };
     if (az === "elimina" && !confirm("Eliminare il commento?")) return;
-    if (az === "rispondi") corpo.testo = card.querySelector("textarea").value;
+    if (az === "rispondi" || az === "approva") corpo.testo = (card.querySelector("textarea") || {}).value || "";
+    if (az === "rispondi" && !corpo.testo.trim()) { card.querySelector(".esito").textContent = "Scrivi prima la risposta."; return; }
     card.querySelectorAll("button").forEach(function (x) { x.disabled = true; });
-    card.querySelector(".esito").textContent = az === "approva" ? "Approvo e preparo la risposta." : "Un attimo.";
+    card.querySelector(".esito").textContent = az === "approva" ? (corpo.testo.trim() ? "Approvo con la tua risposta." : "Approvo e preparo la risposta.") : "Un attimo.";
     api(corpo).then(function (r) {
       card.querySelector(".esito").textContent = "Fatto: " + r.esito + ".";
       setTimeout(carica, 1200);
