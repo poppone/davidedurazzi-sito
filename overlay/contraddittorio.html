@@ -15,6 +15,7 @@
     box-shadow:0 18px 50px rgba(16,22,43,.35);overflow:hidden;transform:translateY(0);transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
   .panel.nascosto{transform:translateY(140%);opacity:0}
   .head{display:flex;align-items:center;gap:14px;padding:22px 30px 0;font-weight:800;font-stretch:112%;font-size:24px}
+  .logo-ov{width:46px;height:46px;border-radius:50%;margin-right:4px}
   .dot{width:14px;height:14px;border-radius:50%;background:var(--live);animation:pulse 1.6s infinite}
   @keyframes pulse{50%{opacity:.35}}
   .stato{margin-left:auto;font-weight:600;font-size:20px;color:var(--muted);font-stretch:100%}
@@ -34,7 +35,7 @@
 </head>
 <body>
 <div class="panel nascosto" id="panel">
-  <div class="head"><span class="dot"></span>Il Contraddittorio<span class="stato" id="stato">Votazione aperta</span></div>
+  <div class="head"><img class="logo-ov" src="/assets/logo-192.png" alt=""><span class="dot"></span>Il Contraddittorio<span class="stato" id="stato">Votazione aperta</span></div>
   <h1 id="domanda">Caricamento della domanda</h1>
   <div class="barra">
     <div class="lato si" id="si">Sì<small id="pSi">0%</small></div>
