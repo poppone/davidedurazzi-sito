@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Il Contraddittorio — overlay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#10162B;--paper:#FFFFFF;--muted:#586079;--tesi:#2F55E4;--anti:#E85A16;--live:#E5263B}
+  html,body{margin:0;background:transparent;overflow:hidden;width:1920px;height:1080px}
+  body{font-family:"Archivo",system-ui,sans-serif;color:var(--ink)}
+  .panel{position:absolute;left:64px;bottom:64px;width:1080px;background:var(--paper);border-radius:22px;
+    box-shadow:0 18px 50px rgba(16,22,43,.35);overflow:hidden;transform:translateY(0);transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s}
+  .panel.nascosto{transform:translateY(140%);opacity:0}
+  .head{display:flex;align-items:center;gap:14px;padding:22px 30px 0;font-weight:800;font-stretch:112%;font-size:24px}
+  .dot{width:14px;height:14px;border-radius:50%;background:var(--live);animation:pulse 1.6s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  .stato{margin-left:auto;font-weight:600;font-size:20px;color:var(--muted);font-stretch:100%}
+  .stato.chiuso{color:var(--anti)}
+  h1{margin:10px 30px 22px;font-weight:900;font-stretch:112%;font-size:40px;line-height:1.08;letter-spacing:-.015em}
+  .barra{display:flex;height:92px;margin:0 30px;border-radius:14px;overflow:hidden;background:#E3E8F0}
+  .lato{display:flex;align-items:center;color:#fff;font-weight:900;font-stretch:125%;font-size:44px;
+    transition:flex-grow .7s cubic-bezier(.2,.8,.2,1);min-width:0;white-space:nowrap;overflow:hidden}
+  .si{background:var(--tesi);padding-left:26px;flex-grow:1}
+  .no{background:var(--anti);justify-content:flex-end;padding-right:26px;flex-grow:1}
+  .lato small{font-size:26px;font-weight:700;font-stretch:100%;margin:0 12px;opacity:.9}
+  .piede{display:flex;justify-content:space-between;align-items:center;padding:16px 30px 22px;font-size:22px;font-weight:600;color:var(--muted)}
+  .piede b{color:var(--ink)}
+  kbd{font-family:inherit;font-weight:800;padding:2px 10px;border-radius:8px;color:#fff}
+  kbd.k-si{background:var(--tesi)} kbd.k-no{background:var(--anti)}
+</style>
+</head>
+<body>
+<div class="panel nascosto" id="panel">
+  <div class="head"><span class="dot"></span>Il Contraddittorio<span class="stato" id="stato">Votazione aperta</span></div>
+  <h1 id="domanda">Caricamento della domanda</h1>
+  <div class="barra">
+    <div class="lato si" id="si">Sì<small id="pSi">0%</small></div>
+    <div class="lato no" id="no"><small id="pNo">0%</small>No</div>
+  </div>
+  <div class="piede">
+    <span>Scrivi <kbd class="k-si">!si</kbd> o <kbd class="k-no">!no</kbd> in chat</span>
+    <span><b id="totale">0</b> voti</span>
+  </div>
+</div>
+<script>
+/*
+  Uso in OBS: Fonte "Browser", URL https://www.davidedurazzi.it/overlay/contraddittorio
+  Larghezza 1920, Altezza 1080.
+  Parametri facoltativi: ?canale=popponetv  ?slug=<articolo>  ?demo=1 (voti finti per provare)
+  Comandi in chat (solo tu e i moderatori): !apri  !chiudi  !reset  !nascondi  !mostra
+*/
+(function () {
+  "use strict";
+  var q = new URLSearchParams(location.search);
+  var canale = (q.get("canale") || "popponetv").toLowerCase();
+  var $ = function (id) { return document.getElementById(id); };
+  var stato = { voti: {}, aperto: true };
+  var chiave = "contraddittorio";
+
+  function salva() { try { localStorage.setItem(chiave, JSON.stringify(stato)); } catch (e) {} }
+  function carica() {
+    try { var s = JSON.parse(localStorage.getItem(chiave)); if (s && s.voti) stato = s; } catch (e) {}
+  }
+
+  function disegna() {
+    var si = 0, no = 0;
+    Object.keys(stato.voti).forEach(function (k) { stato.voti[k] === "si" ? si++ : no++; });
+    var tot = si + no;
+    var pSi = tot ? Math.round(si / tot * 100) : 50;
+    $("si").style.flexGrow = Math.max(pSi, 12);
+    $("no").style.flexGrow = Math.max(100 - pSi, 12);
+    $("pSi").textContent = tot ? pSi + "%" : "";
+    $("pNo").textContent = tot ? (100 - pSi) + "%" : "";
+    $("totale").textContent = tot;
+    $("stato").textContent = stato.aperto ? "Votazione aperta" : "Votazione chiusa";
+    $("stato").className = "stato" + (stato.aperto ? "" : " chiuso");
+  }
+
+  // Domanda: l'ultimo Contraddittorio pubblicato (o quello indicato con ?slug=)
+  fetch("/content/articoli.json", { cache: "no-cache" }).then(function (r) { return r.json(); }).then(function (lista) {
+    var a = lista.filter(function (x) {
+      return x.pubblicato && x.domanda && (q.get("slug") ? x.slug === q.get("slug") : x.rubrica === "contraddittorio");
+    }).sort(function (x, y) { return (y.data || "").localeCompare(x.data || ""); })[0];
+    $("domanda").textContent = a ? a.domanda : "Nessun Contraddittorio pubblicato";
+    if (a) { chiave = "contraddittorio:" + a.slug; carica(); }
+    disegna();
+    $("panel").classList.remove("nascosto");
+  }).catch(function () {
+    $("domanda").textContent = "Domanda non disponibile";
+    $("panel").classList.remove("nascosto");
+  });
+
+  function vota(utente, voto) {
+    if (!stato.aperto || !utente) return;
+    if (stato.voti[utente] === voto) return;
+    stato.voti[utente] = voto; // un voto per persona, vale l'ultimo
+    salva(); disegna();
+  }
+
+  function comando(testo, autorizzato) {
+    var c = testo.trim().toLowerCase().split(/\s+/)[0];
+    if (!autorizzato) return false;
+    if (c === "!apri") stato.aperto = true;
+    else if (c === "!chiudi") stato.aperto = false;
+    else if (c === "!reset") { stato.voti = {}; stato.aperto = true; }
+    else if (c === "!nascondi") { $("panel").classList.add("nascosto"); return true; }
+    else if (c === "!mostra") { $("panel").classList.remove("nascosto"); return true; }
+    else return false;
+    salva(); disegna(); return true;
+  }
+
+  // Chat Twitch in sola lettura (anonima, nessun login necessario)
+  function connetti() {
+    var ws = new WebSocket("wss://irc-ws.chat.twitch.tv:443");
+    ws.onopen = function () {
+      ws.send("CAP REQ :twitch.tv/tags");
+      ws.send("PASS SCHMOOPIIE");
+      ws.send("NICK justinfan" + Math.floor(10000 + Math.random() * 80000));
+      ws.send("JOIN #" + canale);
+    };
+    ws.onmessage = function (ev) {
+      ev.data.split("\r\n").forEach(function (riga) {
+        if (!riga) return;
+        if (riga.indexOf("PING") === 0) { ws.send("PONG :tmi.twitch.tv"); return; }
+        var m = riga.match(/^@(\S+) :[^ ]+ PRIVMSG #[^ ]+ :(.*)$/);
+        if (!m) return;
+        var tag = {};
+        m[1].split(";").forEach(function (t) { var i = t.indexOf("="); tag[t.slice(0, i)] = t.slice(i + 1); });
+        var badge = tag.badges || "";
+        var autorizzato = tag.mod === "1" || badge.indexOf("broadcaster/") !== -1;
+        var testo = m[2];
+        if (comando(testo, autorizzato)) return;
+        var parola = testo.trim().toLowerCase().split(/\s+/)[0];
+        if (parola === "!si" || parola === "!sì") vota(tag["user-id"], "si");
+        else if (parola === "!no") vota(tag["user-id"], "no");
+      });
+    };
+    ws.onclose = function () { setTimeout(connetti, 3000); };
+  }
+
+  if (q.get("demo")) {
+    var n = 0;
+    setInterval(function () { vota("demo" + (n++ % 140), Math.random() < 0.58 ? "si" : "no"); }, 250);
+  } else {
+    connetti();
+  }
+})();
+</script>
+</body>
+</html>
