@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23E5263B%22/></svg>">
+<title>Davide Durazzi — L'attualità, senza copione</title>
+<meta name="description" content="Cronaca, politica, elezioni e problemi di tutti i giorni discussi in diretta su Twitch, YouTube e Instagram.">
+<meta property="og:title" content="Davide Durazzi">
+<meta property="og:description" content="L'attualità, senza copione.">
+</head>
+<body data-page="home">
+<header class="top"><div class="wrap">
+  <a class="logo" href="/">Davide Durazzi</a>
+  <nav aria-label="Sezioni">
+    <a href="/#diretta">Diretta</a><a href="/#contraddittorio">Il Contraddittorio</a><a href="/#articoli">Articoli</a><a href="/#video">Video</a><a href="/#piazza">Piazza Aperta</a>
+  </nav>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1 id="nome"><span>Davide</span><span>Durazzi</span></h1>
+    <div>
+      <p class="claim" id="claim"></p>
+      <p class="intro" id="intro"></p>
+      <div class="acts">
+        <a class="btn pieno" href="#diretta"><span class="dot" aria-hidden="true"></span>Guarda la diretta</a>
+        <a class="btn" id="ytBtn" href="#video">Iscriviti su YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blocco" id="diretta">
+    <div class="testa"><h2>In diretta</h2><p id="orari"></p></div>
+    <div class="live">
+      <div class="player" id="twitchPlayer"></div>
+      <div class="chat" id="twitchChat"></div>
+    </div>
+  </section>
+
+  <section class="blocco" id="contraddittorio">
+    <div class="testa"><h2>Il Contraddittorio</h2><p>Una domanda, le due posizioni più forti, le fonti. Poi ne parliamo in diretta.</p></div>
+    <div id="duello"></div>
+  </section>
+
+  <section class="blocco" id="articoli">
+    <div class="testa"><h2>Articoli</h2></div>
+    <div class="filtri" id="filtri" role="group" aria-label="Filtra per sezione"></div>
+    <ul class="lista" id="lista"></ul>
+  </section>
+
+  <section class="blocco" id="video">
+    <div class="testa"><h2>Video</h2><p>Le puntate intere e i momenti migliori delle dirette.</p></div>
+    <div class="griglia" id="griglia"></div>
+  </section>
+
+  <section class="blocco" id="instagram" hidden>
+    <div class="testa"><h2>Su Instagram</h2></div>
+    <div class="ig" id="ig"></div>
+  </section>
+
+  <section class="blocco" id="piazza">
+    <div class="piazza">
+      <h3>Piazza Aperta</h3>
+      <div>
+        <p>C'è un problema, una notizia o una novità di cui nessuno parla? Proponila: i temi più sentiti diventano puntate.</p>
+        <div class="acts"><a class="btn pieno" id="proponi" href="#">Proponi un tema</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">
+  <strong>Davide Durazzi</strong>
+  <nav id="social" aria-label="Social"></nav>
+  <span class="small">Le fonti sono sempre citate in fondo a ogni articolo.</span>
+</div></footer>
+<script src="/config.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
