@@ -30,6 +30,11 @@ window.SITE = {
     { id: "cronaca", nome: "Cronaca" },
     { id: "politica", nome: "Politica ed elezioni" },
     { id: "quotidiano", nome: "Vita quotidiana" },
-    { id: "novita", nome: "Novità" }
+    { id: "economia", nome: "Economia e soldi" },
+    { id: "tecnologia", nome: "Tecnologia e AI" },
+    { id: "sport", nome: "Sport" },
+    { id: "spettacolo", nome: "Spettacolo e social" },
+    { id: "gaming", nome: "Gaming" },
+    { id: "motori", nome: "Motori" }
   ]
 };
