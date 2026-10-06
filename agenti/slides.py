@@ -6,6 +6,14 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1080, 1350
 M = 96  # margine
 FONT_DIR = Path(__file__).resolve().parent / "fonts"
+LOGO = Path(__file__).resolve().parent.parent / "assets" / "logo-192.png"
+_logo_cache = {}
+
+
+def _logo(lato: int):
+    if lato not in _logo_cache:
+        _logo_cache[lato] = Image.open(LOGO).convert("RGBA").resize((lato, lato), Image.LANCZOS) if LOGO.exists() else None
+    return _logo_cache[lato]
 
 INK = (16, 22, 43)
 BG = (238, 241, 245)
@@ -56,11 +64,17 @@ def _blocco(d, testo, crea_font, size_max, size_min, x, y, larghezza, altezza_ma
     return y + alto
 
 
-def _cornice(d, fondo_scuro: bool, n: int, tot: int, sezione: str = ""):
+def _cornice(img, d, fondo_scuro: bool, n: int, tot: int, sezione: str = ""):
     testo = WHITE if fondo_scuro else INK
     tenue = (170, 178, 200) if fondo_scuro else MUTED
-    d.ellipse((M, M + 6, M + 22, M + 28), fill=LIVE)
-    d.text((M + 36, M), "Davide Durazzi", font=_sans(34, 800, 112), fill=testo)
+    logo = _logo(64)
+    if logo:
+        img.paste(logo, (M, M - 14), logo)
+        x_nome = M + 80
+    else:
+        d.ellipse((M, M + 6, M + 22, M + 28), fill=LIVE)
+        x_nome = M + 36
+    d.text((x_nome, M), "Davide Durazzi", font=_sans(34, 800, 112), fill=testo)
     if sezione:
         f = _sans(30, 600)
         d.text((W - M - d.textlength(sezione, font=f), M + 2), sezione, font=f, fill=tenue)
@@ -83,7 +97,7 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
     # 1. Copertina
     def copertina(n, tot):
         img, d = _nuova(INK)
-        _cornice(d, True, n, tot, sezione)
+        _cornice(img, d, True, n, tot, sezione)
         y = _blocco(d, articolo["titolo"], lambda s: _sans(s, 900, 112), 104, 60, M, 330, W - 2 * M, 640, WHITE, 1.08)
         d.rectangle((M, y + 50, M + 120, y + 60), fill=ANTI if ha_duello else TESI)
         d.text((M, H - M - 110), "Scorri per capire", font=_sans(36, 600), fill=(170, 178, 200))
@@ -93,7 +107,7 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
     # 2. Cosa sta succedendo
     def contesto(n, tot):
         img, d = _nuova(BG)
-        _cornice(d, False, n, tot, sezione)
+        _cornice(img, d, False, n, tot, sezione)
         d.text((M, 230), "Cosa sta succedendo", font=_sans(56, 800, 112), fill=INK)
         y = _blocco(d, articolo.get("sommario", ""), lambda s: _serif(s, 600), 50, 34, M, 340, W - 2 * M, 330, INK, 1.32)
         primo = (articolo.get("testo") or [""])[0]
@@ -105,7 +119,7 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
     if ha_duello:
         def domanda(n, tot):
             img, d = _nuova(BG)
-            _cornice(d, False, n, tot, "Il Contraddittorio")
+            _cornice(img, d, False, n, tot, "Il Contraddittorio")
             d.rectangle((M, 300, M + 120, 312), fill=TESI)
             d.rectangle((M + 120, 300, M + 240, 312), fill=ANTI)
             _blocco(d, articolo.get("domanda", ""), lambda s: _sans(s, 900, 112), 92, 52, M, 380, W - 2 * M, 700, INK, 1.1)
@@ -115,7 +129,7 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
         for lato, colore in (("tesi", TESI), ("antitesi", ANTI)):
             def pagina_lato(n, tot, lato=lato, colore=colore):
                 img, d = _nuova(colore)
-                _cornice(d, True, n, tot, "Il Contraddittorio")
+                _cornice(img, d, True, n, tot, "Il Contraddittorio")
                 d.text((M, 240), articolo[lato]["titolo"], font=_sans(220, 900, 125), fill=WHITE)
                 y = 560
                 spazio = (H - M - 110 - y) // max(1, len(articolo[lato]["punti"]))
@@ -130,7 +144,7 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
         if resto:
             def approfondimento(n, tot):
                 img, d = _nuova(BG)
-                _cornice(d, False, n, tot, sezione)
+                _cornice(img, d, False, n, tot, sezione)
                 d.text((M, 230), "Perché ci riguarda", font=_sans(56, 800, 112), fill=INK)
                 _blocco(d, resto, lambda s: _serif(s, 400), 44, 28, M, 340, W - 2 * M, H - M - 120 - 340, INK, 1.4)
                 return img
@@ -139,7 +153,7 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
     # Ultima: invito alla diretta + fonti
     def chiusura(n, tot):
         img, d = _nuova(INK)
-        _cornice(d, True, n, tot)
+        _cornice(img, d, True, n, tot)
         invito = "Tu da che parte stai?" if ha_duello else "Tu cosa ne pensi?"
         y = _blocco(d, invito, lambda s: _sans(s, 900, 112), 110, 70, M, 300, W - 2 * M, 300, WHITE, 1.05)
         d.text((M, y + 40), "Scrivilo nei commenti.", font=_sans(44, 600), fill=(170, 178, 200))
