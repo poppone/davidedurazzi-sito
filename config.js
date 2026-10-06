@@ -8,7 +8,7 @@ window.SITE = {
     "Ogni giorno prendo una notizia, un problema di tutti i giorni o una novità e la smonto pezzo per pezzo: in diretta, con gli ospiti e con il contraddittorio. Le fonti sono sempre in fondo all'articolo.",
 
   // Twitch: nome del canale (es. "popponetv")
-  twitch: "popponetv",
+  twitch: "DavideDurazzi",
   orariLive: "La diretta: martedì alle 21:30",
 
   // YouTube: ID del canale (inizia con UC..., lo trovi in YouTube Studio > Impostazioni > Canale > Impostazioni avanzate)
