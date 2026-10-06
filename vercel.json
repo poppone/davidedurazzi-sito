@@ -22,7 +22,7 @@
   ],
   "functions": {
     "api/admin.js": {
-      "maxDuration": 30
+      "maxDuration": 60
     }
   }
 }
