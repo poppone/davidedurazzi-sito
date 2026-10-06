@@ -64,12 +64,23 @@ module.exports = async (req, res) => {
 
     if (b.azione === "elenco") {
       const [attesa, bozze] = await db(["LRANGE", "attesa", "0", "99"], ["LRANGE", "bozze", "0", "99"]);
-      const tutti = [...new Set([...(attesa || []), ...(bozze || [])])];
+      // Commenti pubblicati: cerco tutte le liste art:* (sito piccolo, poche chiavi)
+      let cursore = "0", chiavi = [];
+      for (let giro = 0; giro < 10; giro++) {
+        const [res] = await db(["SCAN", cursore, "MATCH", "art:*", "COUNT", "200"]);
+        cursore = String(res[0]); chiavi = chiavi.concat(res[1]);
+        if (cursore === "0") break;
+      }
+      const liste = chiavi.length ? await db(...chiavi.map((k) => ["LRANGE", k, "-30", "-1"])) : [];
+      const pubblicati = liste.flat();
+      const tutti = [...new Set([...(attesa || []), ...(bozze || []), ...pubblicati])];
       const valori = tutti.length ? await db(...tutti.map((x) => ["GET", "c:" + x])) : [];
       const commenti = valori.filter(Boolean).map((v) => JSON.parse(v));
       return res.status(200).json({
         attesa: commenti.filter((c) => c.stato === "attesa"),
-        bozze: commenti.filter((c) => c.stato === "approvato" && c.bozza)
+        bozze: commenti.filter((c) => c.stato === "approvato" && c.bozza),
+        pubblicati: commenti.filter((c) => c.stato === "approvato" && !c.bozza)
+          .sort((x, y) => (y.data || "").localeCompare(x.data || "")).slice(0, 40)
       });
     }
 
@@ -80,6 +91,13 @@ module.exports = async (req, res) => {
       c.stato = "approvato";
       await salvaCommento(c);
       await db(["LREM", "attesa", "0", id], ["RPUSH", "art:" + c.slug, id]);
+      const miaRisposta = String(b.testo || "").trim();
+      if (miaRisposta) {
+        // Davide risponde di persona: niente agente
+        c.risposta = { testo: miaRisposta.slice(0, 2000), autore: "Davide Durazzi", ai: false, data: new Date().toISOString() };
+        await salvaCommento(c);
+        return res.status(200).json({ ok: true, esito: "approvato con la tua risposta" });
+      }
       let esito = "approvato";
       try {
         const r = await agente(req, c);
@@ -107,6 +125,12 @@ module.exports = async (req, res) => {
       await salvaCommento(c);
       await db(["LREM", "bozze", "0", id]);
       return res.status(200).json({ ok: true, esito: "risposta pubblicata" });
+    }
+
+    if (b.azione === "togli_risposta") {
+      delete c.risposta;
+      await salvaCommento(c);
+      return res.status(200).json({ ok: true, esito: "risposta tolta" });
     }
 
     if (b.azione === "scarta_bozza") {
