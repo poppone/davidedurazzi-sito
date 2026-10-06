@@ -1,6 +1,28 @@
 {
   "cleanUrls": true,
   "headers": [
-    { "source": "/content/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] }
-  ]
+    {
+      "source": "/content/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        }
+      ]
+    },
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "api/admin.js": {
+      "maxDuration": 30
+    }
+  }
 }
