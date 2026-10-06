@@ -1,5 +1,55 @@
 [
   {
+    "slug": "gears-of-war-e-day-esclusive-console-20261006",
+    "pubblicato": true,
+    "titolo": "Gears of War: E-Day esce oggi solo su Xbox: le esclusive hanno ancora senso?",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-06",
+    "sommario": "Il prequel della saga arriva oggi su PC e Xbox Series X|S, incluso in Game Pass, ma non su PS5. E la critica si divide.",
+    "testo": [
+      "Gears of War: E-Day è disponibile da oggi su PC e Xbox Series X|S, anche nel catalogo Game Pass Ultimate. Secondo Multiplayer.it non arriverà su PS5, contrariamente a quanto era circolato nei mesi scorsi.",
+      "Il gioco racconta l'Emergence Day, il giorno in cui le Locuste emergono dal sottosuolo e inizia la guerra raccontata nei capitoli precedenti, con Marcus Fenix e Dom Santiago protagonisti.",
+      "Le recensioni non vanno tutte nella stessa direzione: secondo Notebookcheck, una recensione del Guardian circolata in anticipo giudica ripetitiva la campagna, mentre SpazioGames lo considera una delle migliori produzioni del 2026 e Open parla di una campagna da oltre venti ore.",
+      "La scelta di tenerlo lontano da PlayStation riapre una domanda che divide i giocatori: in un'epoca di abbonamenti, PC e giochi multipiattaforma, le esclusive servono ancora?"
+    ],
+    "domanda": "Nel 2026 le esclusive console hanno ancora senso?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Danno un motivo concreto per scegliere una console invece di un'altra",
+        "Spingono gli studi interni a puntare in alto sulla qualità",
+        "Creano identità e community attorno a una piattaforma"
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Tagliano fuori milioni di giocatori e quindi anche vendite",
+        "Con Game Pass e PC la console in sé conta sempre meno",
+        "Molti grandi editori ormai pubblicano ovunque: è una strategia che appartiene al passato"
+      ]
+    },
+    "fonti": [
+      {
+        "nome": "Multiplayer.it: data di uscita ed esclusiva Xbox",
+        "url": "https://multiplayer.it/notizie/gears-of-war-e-day-ha-una-data-di-uscita-annunciata-e-sara-unesclusiva-console-xbox.html"
+      },
+      {
+        "nome": "Notebookcheck: la recensione trapelata",
+        "url": "https://www.notebookcheck.it/3-5-La-recensione-di-Gears-of-War-E-Day-trapela-prima-della-data-di-uscita-e-definisce-la-campagna-ripetitiva.1412972.0.html"
+      },
+      {
+        "nome": "SpazioGames: recensione",
+        "url": "https://www.spaziogames.it/articoli/recensione-gears-of-war-e-day-bentornati-cog"
+      },
+      {
+        "nome": "Open: recensione",
+        "url": "https://www.open.online/2026/10/01/gears-of-war-videogioco-recensione/"
+      }
+    ]
+  },
+  {
     "slug": "rai-sospeso-per-dieci-giorni-sigfrido-ranucci-la-replica-del-legale-20261006",
     "titolo": "Rai, sospeso per dieci giorni Sigfrido Ranucci: la replica del legale",
     "sezione": "politica",
