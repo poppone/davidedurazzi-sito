@@ -1,0 +1,24 @@
+name: Rinnova token Instagram
+on:
+  schedule:
+    - cron: "0 6 1,15 * *"   # il 1 e il 15 di ogni mese (il token dura 60 giorni)
+  workflow_dispatch:
+jobs:
+  rinnova:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Rinnova e salva il token
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          R=$(curl -s "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$IG_ACCESS_TOKEN")
+          NUOVO=$(echo "$R" | python3 -c "import sys,json; print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$NUOVO" ]; then echo "Rinnovo non riuscito. Rigenera il token dal pannello Meta."; exit 1; fi
+          echo "::add-mask::$NUOVO"
+          if [ -n "$GH_TOKEN" ]; then
+            gh secret set IG_ACCESS_TOKEN --body "$NUOVO" --repo "$GITHUB_REPOSITORY"
+            echo "Token rinnovato e salvato."
+          else
+            echo "Token rinnovato, ma senza GH_PAT non posso salvarlo: aggiungilo per il rinnovo automatico."
+          fi
