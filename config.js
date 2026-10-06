@@ -13,7 +13,7 @@ window.SITE = {
 
   // YouTube: ID del canale (inizia con UC..., lo trovi in YouTube Studio > Impostazioni > Canale > Impostazioni avanzate)
   youtubeChannelId: "https://www.youtube.com/channel/UCNMKJ6Etxs-2SMGGquGnaDg",
-  youtubeUrl: "https://www.youtube.com/@davidedurazzi",
+  youtubeUrl: "https://www.youtube.com/@popponetv",
 
   // Instagram: profilo + link dei post da mostrare (copia l'URL del post)
   instagram: "davidedurazzi",
