@@ -1,0 +1,38 @@
+name: Pubblica bozze approvate
+on:
+  push:
+    paths: ["bozze/bozze.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: pubblica
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r agenti/requirements.txt
+      - run: python agenti/promuovi.py
+      - name: Font per le slide
+        run: |
+          mkdir -p agenti/fonts
+          curl -sfL -o agenti/fonts/Archivo.ttf "https://github.com/google/fonts/raw/main/ofl/archivo/Archivo%5Bwdth,wght%5D.ttf"
+          curl -sfL -o agenti/fonts/SourceSerif4.ttf "https://github.com/google/fonts/raw/main/ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf"
+      - run: python agenti/instagram.py genera
+      - name: Aggiorna il sito
+        run: |
+          git config user.name "redazione-ai"
+          git config user.email "actions@users.noreply.github.com"
+          for d in bozze content ig; do [ -e "$d" ] && git add "$d"; done
+          git diff --cached --quiet || (git commit -m "Pubblicati articoli approvati" && git push)
+      - name: Pubblica su Instagram
+        run: python agenti/instagram.py pubblica
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      - name: Registra i post pubblicati
+        run: |
+          [ -e social ] && git add social
+          git diff --cached --quiet || (git commit -m "Pubblicato su Instagram" && git push)
