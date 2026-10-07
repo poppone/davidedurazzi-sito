@@ -1,5 +1,71 @@
 [
   {
+    "slug": "sinner-chiude-la-stagione-2026-stop-per-infortunio-al-ginocchio-20261006",
+    "titolo": "Sinner chiude la stagione 2026: stop per infortunio al ginocchio",
+    "sezione": "sport",
+    "rubrica": "",
+    "data": "2026-10-06",
+    "sommario": "Il tennista Jannik Sinner ha annunciato la fine anticipata del suo 2026 a causa di problemi fisici. Una decisione presa insieme ai medici per salvaguardare il futuro.",
+    "testo": [
+      "Secondo quanto riportato da Sky Sport, la stagione agonistica 2026 di Jannik Sinner si è conclusa in anticipo. L'atleta ha spiegato attraverso i suoi canali social di aver concordato con i medici la necessità di sottoporsi a un trattamento specifico per il ginocchio.",
+      "Per gli appassionati e i tifosi si tratta di una notizia rilevante, che interrompe il percorso del campione e sposta l'attenzione sulla sua salute. Lo stesso Sinner ha sottolineato la priorità di guardare avanti, puntando a una carriera a lungo termine e alla necessità di tornare in piena efficienza.",
+      "Resta ora da capire quali saranno i tempi esatti di recupero e come evolverà il percorso di cura nei prossimi mesi, in vista di un ritorno in campo che lo porti a riacquistare la condizione ottimale."
+    ],
+    "fonti": [
+      {
+        "nome": "ANSA: Sinner \"ho bisogno di un trattamento al ginocchio, devo tornare al 100%\"",
+        "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/06/sinner-ho-bisogno-di-un-trattamento-al-ginocchio-devo-tornare-al-100_7ce1253e-319b-481a-a285-e98a044a68c1.html"
+      },
+      {
+        "nome": "Sky Sport: Sinner, stagione 2026 finita per infortunio: \"Devo pensare a lungo termine\"",
+        "url": "https://sport.sky.it/tennis/2026/10/06/sinner-stagione-finita-infortunio-video"
+      }
+    ],
+    "pubblicato": true
+  },
+  {
+    "slug": "carburanti-stop-allo-sconto-sul-gasolio-e-rincari-alla-pompa-20261006",
+    "titolo": "Carburanti: stop allo sconto sul gasolio e rincari alla pompa",
+    "sezione": "cronaca",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-06",
+    "sommario": "Da oggi il gasolio costa di più a causa dell'aumento delle accise e della fine del beneficio fiscale. I consumatori esprimono forte rabbia per i rincari.",
+    "testo": [
+      "Da oggi le accise sul gasolio sono più alte e non sono scattate le accise mobili. Secondo quanto riporta TGCom24, l'assenza del provvedimento nella Gazzetta Ufficiale ha portato, per la prima volta dallo scorso mese di marzo, a non applicare alcun beneficio fiscale sui carburanti.",
+      "Questa novità si traduce in un incremento di 6,1 centesimi al litro per il diesel. Per gli automobilisti questo rincaro significa spendere circa 3 euro in più ogni volta che si effettua un rifornimento completo, pesando direttamente sulla vita quotidiana e sugli spostamenti.",
+      "Eni ha fatto sapere che il tetto massimo ai prezzi rimarrà attivo, ma l'aumento del costo alla pompa è comunque inevitabile. Nel frattempo, la situazione energetica continua a muoversi anche a livello europeo, con l'annuncio di Ursula von der Leyen riguardo a un imminente dialogo della Commissione con le raffinerie.",
+      "Adesso restano da capire quali saranno le reali ripercussioni a lungo termine per le famiglie e se ci saranno ulteriori interventi istituzionali per calmierare i prezzi dei carburanti nelle prossime settimane."
+    ],
+    "fonti": [
+      {
+        "nome": "ANSA: Da oggi accise sul gasolio più alte. Eni: il tetto resta, ma così aumenta il prezzo alla pompa",
+        "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/10/06/da-oggi-accise-sul-gasolio-piu-alte.-eni-il-tetto-resta-ma-cosi_5d0b1426-cd66-4a50-9d69-8e04bbe77190.html"
+      },
+      {
+        "nome": "TGCom24: Carburanti, stop sconto gasolio: 3 euro in più sul pieno | Eni: \"Price cap resta ma aumenta prezzo alla pompa\" | Von der Leyen: \"Ue avvierà dialogo con le raffinerie\"",
+        "url": "https://www.tgcom24.mediaset.it/economia/caro-carburanti-accise-gasolio-prezzi_117342181-202602k.shtml"
+      }
+    ],
+    "domanda": "È opportuno interrompere l'agevolazione sulle accise del gasolio in questa fase economica complessa?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Si è conclusa la fase del beneficio fiscale eccezionale introdotto a marzo per mitigare l'impatto economico.",
+        "La fine dell'agevolazione riporta l'aliquota al livello pieno, come evidenziato dai dati di ANSA e TGCom24.",
+        "Restano comunque in vigore le disposizioni relative al tetto massimo dei prezzi, secondo quanto comunicato da Eni."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "La rimozione del beneficio in un periodo di difficoltà incide direttamente sul bilancio delle famiglie, con un costo aggiuntivo di circa tre euro a pieno.",
+        "Il rincaro di 6,1 centesimi al litro deriva dal mancato rinnovo del decreto sulle accise mobili.",
+        "Il rincaro del carburante rischia di provocare forti proteste e la reazione contraria delle associazioni dei consumatori."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "gears-of-war-e-day-esclusive-console-20261006",
     "pubblicato": true,
     "titolo": "Gears of War: E-Day esce oggi solo su Xbox: le esclusive hanno ancora senso?",
