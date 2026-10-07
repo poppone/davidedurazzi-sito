@@ -3,19 +3,19 @@
 // ============================================================
 window.SITE = {
   nome: "Davide Durazzi",
-  sottotitolo: "L'attualità, senza copione",
+  sottotitolo: "Tecnologia, AI e Gaming",
   presentazione:
-    "Ogni giorno prendo una notizia, un problema di tutti i giorni o una novità e la smonto pezzo per pezzo: in diretta, con gli ospiti e con il contraddittorio. Le fonti sono sempre in fondo all'articolo.",
+    "Ogni giorno prendo una notizia o una novità su tecnologia, intelligenza artificiale e videogiochi e la smonto pezzo per pezzo: in diretta, con gli ospiti e con il contraddittorio. Le fonti sono sempre in fondo all'articolo.",
 
   // Twitch: nome del canale (es. "popponetv")
   twitch: "DavideDurazzi",
   orariLive: "La diretta: martedì alle 21:30",
 
-  // YouTube: ID del canale (inizia con UC..., lo trovi in YouTube Studio > Impostazioni > Canale > Impostazioni avanzate)
+  // YouTube: ID del canale
   youtubeChannelId: "https://www.youtube.com/channel/UCbEC2iCWFdT_W3WgdxYl7Hw",
   youtubeUrl: "https://www.youtube.com/@Notiziein60secondioff",
 
-  // Instagram: profilo + link dei post da mostrare (copia l'URL del post)
+  // Instagram: profilo + link dei post da mostrare
   instagram: "poppone.tech",
   instagramPost: [
     // "https://www.instagram.com/p/XXXXXXXXXXX/",
@@ -25,11 +25,10 @@ window.SITE = {
   modulTemi: "",
   email: "info@davidedurazzi.it",
 
-  // Sezioni del sito (non rinominare gli id: li usano gli articoli)
+  // Sezioni del sito (gli id coincidono esattamente con agenti/config.py)
   sezioni: [
-    { id: "tecnologia", nome: "Tecnologia e AI" },
-    { id: "spettacolo", nome: "Spettacolo e social" },
+    { id: "tecnologia", nome: "Tecnologia" },
     { id: "gaming", nome: "Gaming" },
-    { id: "motori", nome: "Motori" }
+    { id: "ai", nome: "Intelligenza Artificiale" }
   ]
 };
