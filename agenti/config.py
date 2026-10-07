@@ -26,15 +26,21 @@ PALINSESTO = {
 ORE_NOTIZIE = 30
 
 # Fonti RSS filtrate per Tecnologia, AI e Gaming.
-# "testata" serve al fact-checker: un tema passa solo se ne parlano almeno 2 testate diverse.
 FEED = [
-    # Tecnologia e AI
+    # Tecnologia
     {"area": "tecnologia", "testata": "ANSA", "url": "https://www.ansa.it/sito/notizie/tecnologia/tecnologia_rss.xml"},
     {"area": "tecnologia", "testata": "Wired Italia", "url": "https://www.wired.it/feed/rss"},
     {"area": "tecnologia", "testata": "HDblog", "url": "https://www.hdblog.it/feed/"},
     {"area": "tecnologia", "testata": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/tecnologia.xml"},
-    # Gaming
-    {"area": "gaming", "testata": "Multiplayer.it", "url": "https://multiplayer.it/feed/rss/"},
+    
+    # AI (condivide fonti tecnologiche per far trovare notizie anche all'area AI)
+    {"area": "ai", "testata": "ANSA", "url": "https://www.ansa.it/sito/notizie/tecnologia/tecnologia_rss.xml"},
+    {"area": "ai", "testata": "Wired Italia", "url": "https://www.wired.it/feed/rss"},
+    {"area": "ai", "testata": "HDblog", "url": "https://www.hdblog.it/feed/"},
+    {"area": "ai", "testata": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/tecnologia.xml"},
+
+    # Gaming (corretto l'URL di Multiplayer)
+    {"area": "gaming", "testata": "Multiplayer.it", "url": "https://multiplayer.it/feed/"},
     {"area": "gaming", "testata": "Spaziogames", "url": "https://www.spaziogames.it/feed"},
     {"area": "gaming", "testata": "IGN Italia", "url": "https://it.ign.com/feed.xml"},
 ]
