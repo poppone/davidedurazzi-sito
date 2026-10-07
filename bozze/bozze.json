@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "carburanti-stop-allo-sconto-sul-gasolio-e-rincari-alla-pompa-20261006",
     "titolo": "Carburanti: stop allo sconto sul gasolio e rincari alla pompa",
@@ -49,7 +49,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "sinner-chiude-la-stagione-2026-stop-per-infortunio-al-ginocchio-20261006",
     "titolo": "Sinner chiude la stagione 2026: stop per infortunio al ginocchio",
