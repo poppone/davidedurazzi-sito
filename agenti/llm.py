@@ -39,13 +39,21 @@ def chiedi(sistema: str, richiesta: str, temperatura: float = 0.4) -> dict:
             attesa = config.PAUSA_TRA_CHIAMATE - (time.time() - _ultima)
             if attesa > 0:
                 time.sleep(attesa)
-            r = requests.post(
-                URL.format(model=modello),
-                headers={"x-goog-api-key": config.GEMINI_API_KEY, "Content-Type": "application/json"},
-                json=corpo,
-                timeout=180,
-            )
-            _ultima = time.time()
+            
+            try:
+                r = requests.post(
+                    URL.format(model=modello),
+                    headers={"x-goog-api-key": config.GEMINI_API_KEY, "Content-Type": "application/json"},
+                    json=corpo,
+                    timeout=180,
+                )
+                _ultima = time.time()
+            except (requests.exceptions.Timeout, requests.exceptions.RequestException) as e:
+                ultimo_errore = f"{modello}: Errore di rete/Timeout - {e}"
+                print(f"[llm] {ultimo_errore}, tentativo {tentativo+1}/3")
+                time.sleep(15 * (tentativo + 1))
+                continue
+
             if r.status_code == 200:
                 parti = r.json().get("candidates", [{}])[0].get("content", {}).get("parts", [])
                 testo = "".join(p.get("text", "") for p in parti if not p.get("thought")).strip()
@@ -56,6 +64,7 @@ def chiedi(sistema: str, richiesta: str, temperatura: float = 0.4) -> dict:
                     ultimo_errore = f"{modello}: JSON non valido"
                     print(f"[llm] {ultimo_errore}, riprovo")
                     continue
+            
             ultimo_errore = f"{modello}: HTTP {r.status_code} {r.text[:400]}"
             print(f"[llm] {ultimo_errore}")
             if r.status_code == 429 and ("PerDay" in r.text or "limit: 0" in r.text):
@@ -64,4 +73,6 @@ def chiedi(sistema: str, richiesta: str, temperatura: float = 0.4) -> dict:
             if r.status_code in (400, 403, 404):
                 break  # modello inesistente o chiave senza accesso: passa al successivo
             time.sleep(_attesa_suggerita(r) if r.status_code == 429 else 15 * (tentativo + 1))
+    
     raise RuntimeError(f"Gemini non disponibile. Ultimo errore: {ultimo_errore}")
+    
