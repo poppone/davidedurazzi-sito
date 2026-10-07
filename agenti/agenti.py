@@ -24,7 +24,8 @@ def scout(notizie: list[dict], area: str, sezioni: list[str], esclusi: list[str]
     if not notizie:
         return None
     gia = ("\nNon scegliere storie già trattate oggi: " + "; ".join(esclusi)) if esclusi else ""
-    r = chiedi(REGOLE, f"""Sei lo SCOUT. Scegli UN solo tema per una diretta, nell'area: {config.NOMI_AREE.get(area, area)}.
+    
+    prompt = f"""Sei lo SCOUT. Scegli UN solo tema per una diretta, nell'area: {config.NOMI_AREE.get(area, area)}.
 Criteri: interesse per il pubblico generalista, impatto sulla vita delle persone, potenziale di discussione in chat.
 OBBLIGATORIO: negli "ids" metti notizie di ALMENO 2 testate diverse (la testata è il secondo campo di ogni riga) che parlano della stessa storia.
 Se nessuna storia è coperta da 2 testate, rispondi {{"tema": null}}.{gia}
@@ -36,8 +37,14 @@ Formato:
 {{"tema":{{"titolo_lavoro":"...","sezione":"...","perche":"una frase","ids":["n1","n7"],"divisivo":7}}}}
 
 NOTIZIE:
-{_fonti_testo(notizie)}""")
-    return r.get("tema")
+{_fonti_testo(notizie)}"""
+
+    try:
+        r = chiedi(REGOLE, prompt)
+        return r.get("tema") if isinstance(r, dict) else None
+    except Exception as e:
+        print(f"[scout] Errore durante la chiamata LLM: {e}")
+        return None
 
 
 def fact_check(tema: dict, per_id: dict) -> list[dict] | None:
@@ -54,18 +61,21 @@ def redattore(tema: dict, fonti: list[dict], problemi: list[str] | None = None) 
     correzioni = ""
     if problemi:
         correzioni = "\nUna bozza precedente aveva questi problemi, evitali:\n- " + "\n- ".join(problemi)
-    return chiedi(REGOLE, f"""Sei il REDATTORE. Scrivi un articolo breve sul tema "{tema['titolo_lavoro']}".
+    
+    prompt = f"""Sei il REDATTORE. Scrivi un articolo breve sul tema "{tema['titolo_lavoro']}".
 Struttura: cosa è successo, perché conta per le persone, cosa resta da capire.{correzioni}
 
 Formato:
 {{"titolo":"max 90 caratteri","sommario":"1-2 frasi","testo":["3-5 paragrafi brevi"],"domande_live":["3 domande da porre al pubblico in diretta"]}}
 
 NOTIZIE:
-{_fonti_testo(fonti)}""")
+{_fonti_testo(fonti)}"""
+
+    return chiedi(REGOLE, prompt)
 
 
 def critico(articolo: dict, fonti: list[dict]) -> dict:
-    return chiedi(REGOLE, f"""Sei il CRITICO / FACT-CHECKER. Confronta l'articolo con le notizie.
+    prompt = f"""Sei il CRITICO / FACT-CHECKER. Confronta l'articolo con le notizie.
 Segnala: affermazioni non presenti nelle fonti, cifre o nomi sbagliati, toni di parte, frasi copiate, accuse non attribuite.
 
 Formato: {{"ok":true,"problemi":["..."]}}
@@ -74,26 +84,36 @@ ARTICOLO:
 {json.dumps(articolo, ensure_ascii=False)}
 
 NOTIZIE:
-{_fonti_testo(fonti)}""", temperatura=0.1)
+{_fonti_testo(fonti)}"""
+
+    return chiedi(REGOLE, prompt, temperatura=0.1)
 
 
 def contraddittorio(tema: dict, fonti: list[dict]) -> dict:
     """Moderatore pone la domanda, due agenti si schierano, il moderatore bilancia."""
     base = _fonti_testo(fonti)
-    q = chiedi(REGOLE, f"""Sei il MODERATORE. Formula UNA domanda secca e neutra (risposta Sì/No) sul tema "{tema['titolo_lavoro']}",
+    
+    # 1. Domanda del moderatore
+    res_mod = chiedi(REGOLE, f"""Sei il MODERATORE. Formula UNA domanda secca e neutra (risposta Sì/No) sul tema "{tema['titolo_lavoro']}",
 che divida davvero le opinioni e riguardi la vita delle persone. Formato: {{"domanda":"..."}}
 
 NOTIZIE:
-{base}""")["domanda"]
+{base}""")
+    q = res_mod.get("domanda", "") if isinstance(res_mod, dict) else ""
 
-    lato = lambda pos: chiedi(REGOLE, f"""Sei l'agente che sostiene il {pos} alla domanda: "{q}".
+    # 2. Tesi e Antitesi
+    def lato(pos: str):
+        return chiedi(REGOLE, f"""Sei l'agente che sostiene il {pos} alla domanda: "{q}".
 Porta i 3 argomenti più forti e onesti per questa posizione, basati sui fatti delle notizie o su ragionamenti generali chiari.
 Niente attacchi a persone, niente dati inventati. Formato: {{"titolo":"{pos}","punti":["...","...","..."]}}
 
 NOTIZIE:
 {base}""", temperatura=0.7)
-    tesi, antitesi = lato("Sì"), lato("No")
 
+    tesi = lato("Sì")
+    antitesi = lato("No")
+
+    # 3. Bilanciamento
     return chiedi(REGOLE, f"""Sei il MODERATORE. Controlla che il confronto sia equilibrato: stessa forza e lunghezza dei due lati,
 domanda neutra, nessun argomento falso o offensivo. Correggi dove serve senza cambiare le posizioni.
 Formato: {{"domanda":"...","tesi":{{"titolo":"Sì","punti":[...]}},"antitesi":{{"titolo":"No","punti":[...]}}
