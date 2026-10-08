@@ -22,7 +22,9 @@ FB_ID = os.environ.get("FB_PAGE_ID", "")
 FB_TOKEN = os.environ.get("FB_PAGE_TOKEN", "")
 LI_TOKEN = os.environ.get("LI_ACCESS_TOKEN", "")
 FB_API = "https://graph.facebook.com/" + os.environ.get("FB_API_VERSION", "v21.0")
-LI_VERSION = os.environ.get("LI_API_VERSION", "202506")
+# Versioni dell'API LinkedIn da provare in ordine (LinkedIn ritira le piu vecchie dopo circa un anno)
+LI_VERSIONI = [v for v in [os.environ.get("LI_API_VERSION", "")] + ["202609", "202608", "202607", "202606", "202605"] if v]
+_li_ok = [None]
 HASHTAG = {
     "tecnologia": "#tecnologia #tech", "ai": "#intelligenzaartificiale #AI",
     "gaming": "#gaming #videogiochi", "cronaca": "#cronaca #attualità", "politica": "#politica #attualità",
@@ -54,8 +56,14 @@ def facebook(a: dict, immagine_url: str) -> str:
 
 
 def _li(metodo: str, url: str, **kw) -> requests.Response:
-    h = {"Authorization": f"Bearer {LI_TOKEN}", "LinkedIn-Version": LI_VERSION, "X-Restli-Protocol-Version": "2.0.0"}
-    r = requests.request(metodo, url, headers=h, timeout=90, **kw)
+    versioni = [_li_ok[0]] if _li_ok[0] else LI_VERSIONI
+    for v in versioni:
+        h = {"Authorization": f"Bearer {LI_TOKEN}", "LinkedIn-Version": v, "X-Restli-Protocol-Version": "2.0.0"}
+        r = requests.request(metodo, url, headers=h, timeout=90, **kw)
+        if r.status_code == 426:  # versione non piu attiva: provo la successiva
+            continue
+        _li_ok[0] = v
+        break
     if r.status_code >= 400:
         raise RuntimeError(f"LinkedIn {url.split('?')[0]} HTTP {r.status_code} {r.text[:300]}")
     return r
