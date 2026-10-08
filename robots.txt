@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /obs/
+Disallow: /overlay/
+
+Sitemap: https://www.davidedurazzi.it/sitemap.xml

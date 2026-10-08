@@ -12,7 +12,7 @@ window.SITE = {
   orariLive: "La diretta: martedì alle 21:30",
 
   // YouTube: ID del canale
-  youtubeChannelId: "https://www.youtube.com/channel/UCbEC2iCWFdT_W3WgdxYl7Hw",
+  youtubeChannelId: "UCbEC2iCWFdT_W3WgdxYl7Hw",
   youtubeUrl: "https://www.youtube.com/@Notiziein60secondioff",
 
   // Instagram: profilo + link dei post da mostrare

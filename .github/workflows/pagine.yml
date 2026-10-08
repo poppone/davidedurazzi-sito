@@ -1,0 +1,25 @@
+name: Aggiorna pagine statiche
+# Rigenera pagine articolo, home, sitemap.xml e robots.txt quando cambi a mano
+# articoli, configurazione o modelli delle pagine.
+on:
+  push:
+    paths: ["content/articoli.json", "config.js", "articolo.html", "index.html", "agenti/prerender.py"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: pubblica
+jobs:
+  pagine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python agenti/prerender.py
+      - name: Salva le pagine
+        run: |
+          git config user.name "redazione-ai"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A articoli index.html sitemap.xml robots.txt
+          git diff --cached --quiet || (git commit -m "Pagine statiche aggiornate" && git push)

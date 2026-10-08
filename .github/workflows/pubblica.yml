@@ -22,11 +22,12 @@ jobs:
           curl -sfL -o agenti/fonts/Archivo.ttf "https://github.com/google/fonts/raw/main/ofl/archivo/Archivo%5Bwdth,wght%5D.ttf"
           curl -sfL -o agenti/fonts/SourceSerif4.ttf "https://github.com/google/fonts/raw/main/ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf"
       - run: python agenti/instagram.py genera
+      - run: python agenti/prerender.py
       - name: Aggiorna il sito
         run: |
           git config user.name "redazione-ai"
           git config user.email "actions@users.noreply.github.com"
-          for d in bozze content ig; do [ -e "$d" ] && git add "$d"; done
+          for d in bozze content ig articoli index.html sitemap.xml robots.txt; do [ -e "$d" ] && git add "$d"; done
           git diff --cached --quiet || (git commit -m "Pubblicati articoli approvati" && git push)
       - name: Pubblica su Instagram
         run: python agenti/instagram.py pubblica

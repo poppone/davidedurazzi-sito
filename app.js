@@ -17,7 +17,7 @@
   }
   function nomeSezione(id) {
     var s = (S.sezioni || []).filter(function (x) { return x.id === id; })[0];
-    return s ? s.nome : "";
+    return s ? s.nome : String(id || "").charAt(0).toUpperCase() + String(id || "").slice(1);
   }
   function caricaArticoli() {
     return fetch("/content/articoli.json", { cache: "no-cache" })
@@ -35,7 +35,7 @@
     return '<div class="duello"><div class="domanda"><p class="meta">' + esc(nomeSezione(a.sezione)) + ", " + esc(data(a.data)) +
       "</p><h3>" + esc(a.domanda || a.titolo) + '</h3></div><div class="lati">' +
       lato("si", a.tesi) + lato("no", a.antitesi) + "</div>" +
-      (conLink ? '<div class="piede"><a class="btn" href="/articolo?slug=' + encodeURIComponent(a.slug) + '">Leggi l\u2019analisi completa</a></div>' : "") +
+      (conLink ? '<div class="piede"><a class="btn" href="/articoli/' + encodeURIComponent(a.slug) + '">Leggi l\u2019analisi completa</a></div>' : "") +
       "</div>";
   }
 
@@ -73,7 +73,7 @@
     function disegnaLista() {
       var lista = tutti.filter(function (a) { return filtro === "tutte" || a.sezione === filtro; });
       $("lista").innerHTML = lista.length ? lista.map(function (a) {
-        return '<li><a href="/articolo?slug=' + encodeURIComponent(a.slug) + '"><span class="sez">' +
+        return '<li><a href="/articoli/' + encodeURIComponent(a.slug) + '"><span class="sez">' +
           esc(nomeSezione(a.sezione)) + "<br>" + esc(data(a.data)) + "</span><span><h3>" + esc(a.titolo) +
           "</h3>" + (a.sommario ? "<p>" + esc(a.sommario) + "</p>" : "") + "</span></a></li>";
       }).join("") : '<li class="vuoto">Ancora nessun articolo in questa sezione.</li>';
@@ -161,7 +161,9 @@
   }
 
   function articolo() {
-    var slug = new URLSearchParams(location.search).get("slug");
+    var slug = document.body.dataset.slug || new URLSearchParams(location.search).get("slug");
+    // Pagina già generata (articoli/<slug>.html): resta solo da caricare i commenti
+    if ($("art").dataset.statico) { commenti(slug); return; }
     caricaArticoli().then(function (tutti) {
       var a = tutti.filter(function (x) { return x.slug === slug; })[0];
       if (!a) {

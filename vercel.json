@@ -24,5 +24,19 @@
     "api/admin.js": {
       "maxDuration": 60
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/articolo",
+      "has": [
+        {
+          "type": "query",
+          "key": "slug",
+          "value": "(?<slug>[a-z0-9-]+)"
+        }
+      ],
+      "destination": "/articoli/:slug",
+      "permanent": true
+    }
+  ]
 }
