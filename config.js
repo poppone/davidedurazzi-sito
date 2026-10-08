@@ -16,7 +16,7 @@ window.SITE = {
   youtubeUrl: "https://www.youtube.com/@davidedurazzioff",
 
   // Instagram: profilo + link dei post da mostrare
-  instagram: "poppone.tech",
+  instagram: "davidedurazzi.it",
 
   // LinkedIn: parte finale dell'indirizzo del profilo (linkedin.com/in/...)
   linkedin: "davide-durazzi-36a52665",
