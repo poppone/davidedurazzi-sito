@@ -1,16 +1,5 @@
 [fonti] 75 notizie raccolte, per area: {'tecnologia': 20, 'gaming': 30}
 [palinsesto] oggi: ['attualita', 'tecnologia', 'ai']
-[scout] nessun tema valido per 'tecnologia'
-[llm] gemini-flash-latest: HTTP 503 {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
-    "status": "UNAVAILABLE"
-  }
-}
-
-[scout] nessun tema valido per 'ai'
-[palinsesto] ripiego su 'gaming'
 [llm] gemini-flash-latest: HTTP 503 {
   "error": {
     "code": 503,
@@ -23,5 +12,8 @@
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20,
+[scout] nessun tema valido per 'tecnologia'
+[scout] nessun tema valido per 'ai'
+[palinsesto] ripiego su 'gaming'
 [scout] nessun tema valido per 'gaming'
 Nessun tema ha superato il fact-check oggi.
