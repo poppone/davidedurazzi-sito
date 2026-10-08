@@ -37,23 +37,40 @@ def main() -> None:
     aree_oggi = ["attualita"] + config.PALINSESTO[OGGI.weekday()]
     print(f"[palinsesto] oggi: {aree_oggi}")
     temi, scelti = [], []
-    for area in aree_oggi:
+
+    def prova(area: str) -> bool:
         if area == "libero":
             pool, sezioni = notizie, config.SEZIONI
         elif area == "attualita":
             pool, sezioni = [n for n in notizie if n["area"] == "attualita"], ["cronaca", "politica"]
         elif area == "quotidiano":
             pool, sezioni = [n for n in notizie if n["area"] in ("attualita", "economia")], ["quotidiano"]
+        elif area == "ai":
+            # i feed AI coincidono con quelli tecnologia (le notizie duplicate vengono scartate): uso entrambe
+            pool, sezioni = [n for n in notizie if n["area"] in ("ai", "tecnologia")], ["ai"]
         else:
             pool, sezioni = [n for n in notizie if n["area"] == area], [area]
         tema = agenti.scout(pool, area, sezioni, scelti)
         if not tema:
             print(f"[scout] nessun tema valido per '{area}'")
-            continue
+            return False
         if tema.get("sezione") not in sezioni:
             tema["sezione"] = sezioni[0]
         temi.append(tema)
         scelti.append(tema.get("titolo_lavoro", ""))
+        return True
+
+    riusciti = [prova(a) for a in aree_oggi if a != "attualita" or any(n["area"] == "attualita" for n in notizie)]
+    # Se un'area di oggi non ha storie coperte da 2 testate, ripiego sulle altre aree (max 2 temi totali)
+    if sum(riusciti) < 2:
+        provate = set(aree_oggi)
+        for area in ["gaming", "tecnologia", "ai"]:
+            if len(temi) >= 2:
+                break
+            if area in provate:
+                continue
+            print(f"[palinsesto] ripiego su '{area}'")
+            prova(area)
 
     # Il Contraddittorio va al tema più divisivo del giorno
     dibattito = max(temi, key=lambda t: t.get("divisivo", 0), default=None)
