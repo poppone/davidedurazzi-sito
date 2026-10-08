@@ -1,6 +1,7 @@
 // POST /api/admin  (header x-admin-password) — moderazione commenti e risposte
 const crypto = require("crypto");
 const { db, leggiCommento, salvaCommento, gemini, leggiCorpo } = require("./_lib");
+const { leggiJson, aggiornaJson } = require("./_github");
 
 function autorizzato(req) {
   const atteso = process.env.ADMIN_PASSWORD || "";
@@ -82,6 +83,48 @@ module.exports = async (req, res) => {
         pubblicati: commenti.filter((c) => c.stato === "approvato" && !c.bozza)
           .sort((x, y) => (y.data || "").localeCompare(x.data || "")).slice(0, 40)
       });
+    }
+
+    // ---- Articoli e bozze (via GitHub: ogni modifica fa partire i workflow del sito) ----
+    const slug = String(b.slug || "");
+    const riassunto = (a) => ({ slug: a.slug, titolo: a.titolo, sezione: a.sezione, data: a.data, sommario: a.sommario, pubblicato: !!a.pubblicato });
+
+    if (b.azione === "contenuti") {
+      const [art, boz] = await Promise.all([leggiJson("content/articoli.json"), leggiJson("bozze/bozze.json")]);
+      return res.status(200).json({
+        articoli: art.dati.map(riassunto).sort((x, y) => (y.data || "").localeCompare(x.data || "")),
+        bozze: boz.dati.filter((x) => !x.scartare && !x.approvato).map((x) => Object.assign(riassunto(x), { nota: x.nota_critico || "", domanda: x.domanda || "" })),
+        inCoda: boz.dati.filter((x) => x.approvato).map((x) => x.titolo)
+      });
+    }
+
+    if (b.azione === "togli_articolo" || b.azione === "ripubblica_articolo") {
+      const su = b.azione === "ripubblica_articolo";
+      let trovato = false;
+      await aggiornaJson("content/articoli.json", (su ? "Ripubblica" : "Togli dal sito") + ": " + slug, (lista) => {
+        const a = lista.find((x) => x.slug === slug);
+        if (!a) return null;
+        trovato = true;
+        if (!!a.pubblicato === su) return null;
+        a.pubblicato = su;
+        return lista;
+      });
+      if (!trovato) return res.status(404).json({ errore: "Articolo non trovato" });
+      return res.status(200).json({ ok: true, esito: su ? "ripubblicato (online tra un minuto)" : "tolto dal sito (sparisce tra un minuto)" });
+    }
+
+    if (b.azione === "approva_bozza" || b.azione === "scarta_bozza_articolo") {
+      const approva = b.azione === "approva_bozza";
+      let trovato = false;
+      await aggiornaJson("bozze/bozze.json", (approva ? "Approva bozza: " : "Scarta bozza: ") + slug, (lista) => {
+        const x = lista.find((y) => y.slug === slug);
+        if (!x) return null;
+        trovato = true;
+        if (approva) x.approvato = true; else x.scartare = true;
+        return lista;
+      });
+      if (!trovato) return res.status(404).json({ errore: "Bozza non trovata" });
+      return res.status(200).json({ ok: true, esito: approva ? "approvata: sito e Instagram partono in automatico (qualche minuto)" : "bozza scartata" });
     }
 
     const c = await leggiCommento(id);

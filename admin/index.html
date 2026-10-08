@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Moderazione commenti</title>
+<title>Pannello admin</title>
 <link rel="icon" type="image/png" href="/assets/logo-64.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
 <body>
 <main class="mod">
   <a class="logo" href="/"><img src="/assets/logo-64.png" alt="" width="34" height="34">Davide Durazzi</a>
-  <h1>Moderazione commenti</h1>
+  <h1>Pannello admin</h1>
   <div id="app"></div>
 </main>
 <script>
@@ -62,7 +62,8 @@
 
   function carica() {
     app.innerHTML = '<p class="vuoto">Caricamento.</p>';
-    api({ azione: "elenco" }).then(disegna).catch(function (e) {
+    var contenuti = api({ azione: "contenuti" }).catch(function (e) { return { errore: e.message }; });
+    api({ azione: "elenco" }).then(function (j) { return contenuti.then(function (c) { disegna(j, c); }); }).catch(function (e) {
       if (/Password/.test(e.message)) { sessionStorage.removeItem("pw"); login("Password errata."); }
       else app.innerHTML = '<p class="vuoto">' + esc(e.message) + '</p>';
     });
@@ -71,8 +72,29 @@
   function link(c) { return '<a href="/articolo?slug=' + encodeURIComponent(c.slug) + '" target="_blank" rel="noopener">articolo</a>'; }
   function data(d) { return new Date(d).toLocaleString("it-IT", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); }
 
-  function disegna(j) {
-    var h = '<h2>Da approvare (' + j.attesa.length + ')</h2>';
+  function sezContenuti(c) {
+    if (!c || c.errore) return '<h2>Articoli e bozze</h2><p class="vuoto">' + esc((c && c.errore) || "Non disponibili") + '</p>';
+    var h = '<h2>Bozze da approvare (' + c.bozze.length + ')</h2>';
+    h += c.bozze.length ? c.bozze.map(function (x) {
+      return '<div class="card" data-slug="' + esc(x.slug) + '"><div class="chi">' + esc(x.titolo) + '</div><div class="dove">' + esc(x.sezione || "") + ' \u00b7 ' + esc(x.data || "") + '</div>' +
+        '<p>' + esc(x.sommario || "") + '</p>' + (x.domanda ? '<div class="dove">Contraddittorio: ' + esc(x.domanda) + '</div>' : '') + (x.nota ? '<div class="dove">Nota del Critico: ' + esc(x.nota) + '</div>' : '') +
+        '<div class="acts"><button class="btn pieno" data-az="approva_bozza" type="button">Approva e pubblica (sito + Instagram)</button>' +
+        '<button class="btn rosso" data-az="scarta_bozza_articolo" type="button">Scarta</button></div><div class="esito"></div></div>';
+    }).join("") : '<p class="vuoto">Nessuna bozza in attesa.</p>';
+    if (c.inCoda && c.inCoda.length) h += '<p class="esito">In pubblicazione: ' + c.inCoda.map(esc).join(", ") + '</p>';
+    h += '<h2>Articoli (' + c.articoli.length + ')</h2>';
+    h += c.articoli.length ? c.articoli.map(function (x) {
+      return '<div class="card" data-slug="' + esc(x.slug) + '"><div class="chi">' + esc(x.titolo) + (x.pubblicato ? '' : ' <span class="dove">(tolto dal sito)</span>') + '</div>' +
+        '<div class="dove">' + esc(x.sezione || "") + ' \u00b7 ' + esc(x.data || "") + (x.pubblicato ? ' \u00b7 <a href="/articoli/' + encodeURIComponent(x.slug) + '" target="_blank" rel="noopener">apri</a>' : '') + '</div>' +
+        '<div class="acts">' + (x.pubblicato
+          ? '<button class="btn rosso" data-az="togli_articolo" type="button">Togli dal sito</button>'
+          : '<button class="btn pieno" data-az="ripubblica_articolo" type="button">Ripubblica</button>') + '</div><div class="esito"></div></div>';
+    }).join("") : '<p class="vuoto">Nessun articolo.</p>';
+    return h;
+  }
+
+  function disegna(j, cont) {
+    var h = sezContenuti(cont) + '<h1 style="margin-top:3rem;font-size:1.5rem">Commenti</h1><h2>Da approvare (' + j.attesa.length + ')</h2>';
     h += j.attesa.length ? j.attesa.map(function (c) {
       return '<div class="card" data-id="' + esc(c.id) + '"><div class="chi">' + esc(c.nome) + '</div><div class="dove">' + data(c.data) + ', ' + link(c) + '</div>' +
         '<p>' + esc(c.testo) + '</p>' +
@@ -110,6 +132,11 @@
   app.addEventListener("click", function (e) {
     var b = e.target.closest("button[data-az]"); if (!b) return;
     var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id };
+    if (card.dataset.slug) {
+      corpo.slug = card.dataset.slug;
+      var conf = { togli_articolo: "Togliere l\u2019articolo dal sito?", scarta_bozza_articolo: "Scartare la bozza?", approva_bozza: "Approvare? Va online sul sito e su Instagram." }[az];
+      if (conf && !confirm(conf)) return;
+    }
     if (az === "elimina" && !confirm("Eliminare il commento?")) return;
     if (az === "rispondi" || az === "approva") corpo.testo = (card.querySelector("textarea") || {}).value || "";
     if (az === "rispondi" && !corpo.testo.trim()) { card.querySelector(".esito").textContent = "Scrivi prima la risposta."; return; }
