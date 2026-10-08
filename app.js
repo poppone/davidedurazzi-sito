@@ -39,6 +39,67 @@
       "</div>";
   }
 
+  // ---- Voto del Contraddittorio ----
+  function iniziaVoti(box, slug) {
+    if (!box || !slug || box.querySelector(".voto")) return;
+    var d = document.createElement("div"); d.className = "voto";
+    d.innerHTML = '<p class="q">Tu da che parte stai?</p><div class="vbtn"><button type="button" class="vsi" data-v="si">S\u00ec</button><button type="button" class="vno" data-v="no">No</button></div>' +
+      '<div class="barra" aria-hidden="true"><span class="b si" style="width:50%"></span><span class="b no" style="width:50%"></span></div><p class="esv" role="status"></p>';
+    var lati = box.querySelector(".lati"); if (lati) lati.after(d); else box.appendChild(d);
+    var chiave = "voto:" + slug, mio = "";
+    try { mio = localStorage.getItem(chiave) || ""; } catch (e) {}
+    function mostra(j) {
+      var t = j.si + j.no, ps = t ? Math.round(j.si / t * 100) : 50;
+      d.querySelector(".b.si").style.width = ps + "%"; d.querySelector(".b.no").style.width = (100 - ps) + "%";
+      d.querySelector(".esv").innerHTML = t ? "<span>S\u00ec " + ps + "%</span><span>" + t + (t === 1 ? " voto" : " voti") + "</span><span>No " + (100 - ps) + "%</span>" : "Sii il primo a votare.";
+    }
+    function blocca(v) {
+      [].forEach.call(d.querySelectorAll("button"), function (b) { b.disabled = true; if (b.dataset.v === v) b.classList.add("mia"); });
+    }
+    if (mio) blocca(mio);
+    fetch("/api/voto?slug=" + encodeURIComponent(slug)).then(function (r) { return r.json(); }).then(mostra).catch(function () {
+      d.querySelector(".esv").textContent = "";
+    });
+    d.addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-v]"); if (!b || b.disabled) return;
+      var v = b.dataset.v; blocca(v);
+      fetch("/api/voto", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ slug: slug, scelta: v }) })
+        .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+        .then(function (j) { try { localStorage.setItem(chiave, v); } catch (e) {} mostra(j); })
+        .catch(function () { [].forEach.call(d.querySelectorAll("button"), function (x) { x.disabled = false; x.classList.remove("mia"); }); d.querySelector(".esv").textContent = "Voto non riuscito, riprova."; });
+    });
+  }
+
+  // ---- Effetti: comparsa allo scroll e inclinazione 3D delle card ----
+  var io = "IntersectionObserver" in window ? new IntersectionObserver(function (en) {
+    en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } });
+  }, { threshold: .08 }) : null;
+  function rivela(el) { if (!io) return; el.classList.add("rv"); io.observe(el); }
+  function inclina(cont) {
+    if (!matchMedia("(hover:hover)").matches || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    cont.addEventListener("pointermove", function (e) {
+      var a = e.target.closest("a"); if (!a || !cont.contains(a)) return;
+      var r = a.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      a.style.setProperty("--ry", ((x - .5) * 8).toFixed(2) + "deg"); a.style.setProperty("--rx", ((.5 - y) * 8).toFixed(2) + "deg");
+      a.style.setProperty("--mx", (x * 100) + "%"); a.style.setProperty("--my", (y * 100) + "%");
+    });
+    cont.addEventListener("pointerout", function (e) {
+      var a = e.target.closest("a"); if (!a) return;
+      a.style.setProperty("--rx", "0deg"); a.style.setProperty("--ry", "0deg");
+    });
+  }
+
+  // ---- Barra social fissa su mobile ----
+  (function () {
+    var l = [];
+    if (S.twitch) l.push('<a class="tw" href="https://www.twitch.tv/' + esc(S.twitch) + '" target="_blank" rel="noopener">Twitch</a>');
+    if (safeUrl(S.youtubeUrl)) l.push('<a href="' + esc(S.youtubeUrl) + '" target="_blank" rel="noopener">YouTube</a>');
+    if (S.instagram) l.push('<a href="https://www.instagram.com/' + esc(S.instagram) + '/" target="_blank" rel="noopener">Instagram</a>');
+    if (!l.length) return;
+    var n = document.createElement("nav"); n.className = "barra-mobile"; n.setAttribute("aria-label", "Seguimi"); n.innerHTML = l.join("");
+    document.body.appendChild(n);
+  })();
+
   // Social nel footer
   var social = [];
   if (S.twitch) social.push(["Twitch", "https://www.twitch.tv/" + S.twitch]);
@@ -59,6 +120,47 @@
     $("orari").textContent = S.orariLive || "";
     if (safeUrl(S.youtubeUrl)) { $("ytBtn").href = S.youtubeUrl; $("ytBtn").target = "_blank"; $("ytBtn").rel = "noopener"; }
 
+
+    // Stato in alto: live / countdown alla prossima diretta (default martedì 21:30, ora italiana)
+    function prossima() {
+      var gg = S.giornoLive == null ? 2 : S.giornoLive, hm = String(S.oraLive || "21:30").split(":");
+      var adesso = new Date(), parti = {};
+      new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(adesso).forEach(function (p) { parti[p.type] = p.value; });
+      var romaAdesso = Date.UTC(+parti.year, +parti.month - 1, +parti.day, +parti.hour % 24, +parti.minute);
+      var dow = new Date(Date.UTC(+parti.year, +parti.month - 1, +parti.day)).getUTCDay();
+      var add = (gg - dow + 7) % 7;
+      var t = Date.UTC(+parti.year, +parti.month - 1, +parti.day + add, +hm[0], +hm[1] || 0);
+      if (t <= romaAdesso) t += 7 * 864e5;
+      return t - romaAdesso; // millisecondi mancanti
+    }
+    var stato = $("stato"), st = $("statoTesto");
+    function aggStato() {
+      if (stato.classList.contains("live")) return;
+      var m = Math.floor(prossima() / 6e4), g = Math.floor(m / 1440), o = Math.floor(m % 1440 / 60), mi = m % 60;
+      st.textContent = "Prossima diretta tra " + (g ? g + (g === 1 ? " giorno " : " giorni ") : "") + (g || o ? o + " h " : "") + mi + " min";
+    }
+    aggStato(); setInterval(aggStato, 30000);
+    var pt = $("twitchPlayer");
+    if (pt && "MutationObserver" in window) new MutationObserver(function () {
+      var on = pt.classList.contains("online");
+      stato.classList.toggle("live", on);
+      if (on) st.textContent = "IN DIRETTA ORA"; else aggStato();
+    }).observe(pt, { attributes: true, attributeFilter: ["class"] });
+
+    // Newsletter
+    var fnl = $("formNl"), nlInizio = Date.now();
+    if (fnl) fnl.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var es = $("esitoNl"), bt = fnl.querySelector("button"), em = fnl.email.value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { es.textContent = "Controlla l\u2019email."; return; }
+      bt.disabled = true; es.textContent = "Un attimo.";
+      fetch("/api/iscrizione", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: em, sito: fnl.sito.value, t: nlInizio }) })
+        .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.errore); return j; }); })
+        .then(function (j) { fnl.reset(); es.textContent = j.messaggio || "Fatto!"; })
+        .catch(function (err) { es.textContent = err.message || "Iscrizione non riuscita."; })
+        .then(function () { bt.disabled = false; });
+    });
+
     // Twitch: il parametro parent deve coincidere col dominio che ospita il sito.
     // Finché il canale è offline si vede una locandina con il prossimo orario;
     // il player prende il posto della locandina appena parte la diretta.
@@ -72,7 +174,7 @@
       if (locandina) locandina.querySelector(".acts").appendChild(tw);
       $("twitchChat").innerHTML = '<iframe title="Chat Twitch" src="https://www.twitch.tv/embed/' +
         canale + "/chat?parent=" + encodeURIComponent(host) +
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "&darkpopout" : "") + '"></iframe>';
+        "&darkpopout" + '"></iframe>';
       // Rileva online/offline con l'API ufficiale del player
       var sc = document.createElement("script");
       sc.src = "https://player.twitch.tv/js/embed/v1.js";
@@ -96,7 +198,10 @@
           esc(nomeSezione(a.sezione)) + "<br>" + esc(data(a.data)) + "</span><span><h3>" + esc(a.titolo) +
           "</h3>" + (a.sommario ? "<p>" + esc(a.sommario) + "</p>" : "") + "</span></a></li>";
       }).join("") : '<li class="vuoto">Ancora nessun articolo in questa sezione.</li>';
+      [].forEach.call($("lista").children, rivela);
     }
+    inclina($("lista"));
+    [].forEach.call($("lista").children, rivela);
     var sez = [{ id: "tutte", nome: "Tutte" }].concat(S.sezioni || []);
     $("filtri").innerHTML = sez.map(function (s) {
       return '<button type="button" data-sez="' + esc(s.id) + '" aria-pressed="' + (s.id === filtro) + '">' + esc(s.nome) + "</button>";
@@ -111,6 +216,7 @@
       tutti = a; disegnaLista();
       var c = a.filter(function (x) { return x.rubrica === "contraddittorio" && x.tesi && x.antitesi; })[0];
       $("duello").innerHTML = c ? duello(c, true) : '<p class="vuoto">Il primo Contraddittorio arriva a breve.</p>';
+      if (c) iniziaVoti($("duello").querySelector(".duello"), c.slug);
     }).catch(function () {
       $("lista").innerHTML = '<li class="vuoto">Gli articoli non si sono caricati. Ricarica la pagina.</li>';
       $("duello").innerHTML = "";
@@ -181,8 +287,13 @@
 
   function articolo() {
     var slug = document.body.dataset.slug || new URLSearchParams(location.search).get("slug");
+    var pb = document.createElement("div"); pb.className = "progress"; document.body.appendChild(pb);
+    addEventListener("scroll", function () {
+      var h = document.documentElement.scrollHeight - innerHeight;
+      pb.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%";
+    }, { passive: true });
     // Pagina già generata (articoli/<slug>.html): resta solo da caricare i commenti
-    if ($("art").dataset.statico) { commenti(slug); return; }
+    if ($("art").dataset.statico) { iniziaVoti($("art").querySelector(".duello"), slug); commenti(slug); return; }
     caricaArticoli().then(function (tutti) {
       var a = tutti.filter(function (x) { return x.slug === slug; })[0];
       if (!a) {
@@ -207,6 +318,7 @@
         '<label class="trappola" aria-hidden="true">Sito<input name="sito" tabindex="-1" autocomplete="off"></label>' +
         '<p class="nota">I commenti vengono letti prima della pubblicazione. Alle domande pratiche può rispondere la Redazione AI, ed è sempre indicato.</p>' +
         '<button class="btn pieno" type="submit">Invia commento</button><p class="esito-commento" role="status"></p></form></section>';
+      iniziaVoti($("art").querySelector(".duello"), a.slug);
       commenti(a.slug);
     }).catch(function () {
       $("art").innerHTML = '<p class="som">L\u2019articolo non si è caricato. Ricarica la pagina.</p>';

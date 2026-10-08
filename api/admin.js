@@ -85,6 +85,11 @@ module.exports = async (req, res) => {
       });
     }
 
+    if (b.azione === "iscritti") {
+      const [lista] = await db(["SMEMBERS", "iscritti"]);
+      return res.status(200).json({ iscritti: (lista || []).sort() });
+    }
+
     // ---- Articoli e bozze (via GitHub: ogni modifica fa partire i workflow del sito) ----
     const slug = String(b.slug || "");
     const riassunto = (a) => ({ slug: a.slug, titolo: a.titolo, sezione: a.sezione, data: a.data, sommario: a.sommario, pubblicato: !!a.pubblicato });

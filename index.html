@@ -25,8 +25,10 @@
     <a href="/#diretta">Diretta</a><a href="/#contraddittorio">Il Contraddittorio</a><a href="/#articoli">Articoli</a><a href="/#video">Video</a><a href="/#piazza">Piazza Aperta</a>
   </nav>
 </div></header>
-<main class="wrap">
-  <section class="hero">
+<section class="stage" id="stage">
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="wrap hero">
+    <div class="stato" id="stato" role="status"><span class="dot" aria-hidden="true"></span><span id="statoTesto">Prossima diretta</span></div>
     <h1 id="nome"><span>Davide</span><span>Durazzi</span></h1>
     <div>
       <img class="hero-logo" src="/assets/logo-192.png" alt="Il logo di Davide Durazzi" width="132" height="132">
@@ -37,7 +39,9 @@
         <a class="btn" id="ytBtn" href="#video">Iscriviti su YouTube</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<main class="wrap">
 
   <section class="blocco" id="diretta">
     <div class="testa"><h2>In diretta</h2><p id="orari"><!--PR:orari-->La diretta: martedì alle 21:30<!--/PR:orari--></p></div>
@@ -73,6 +77,23 @@
     <div class="ig" id="ig"></div>
   </section>
 
+  <section class="blocco" id="newsletter">
+    <div class="nl">
+      <div>
+        <h3>Resta nel giro</h3>
+        <p>Una email quando c'è qualcosa che vale la pena: il tema della diretta, il Contraddittorio della settimana, le fonti. Zero spam, ti cancelli quando vuoi.</p>
+      </div>
+      <form id="formNl" novalidate>
+        <label class="sr" for="nlEmail">La tua email</label>
+        <input id="nlEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="la.tua@email.it" required>
+        <label class="trappola" aria-hidden="true">Sito<input name="sito" tabindex="-1" autocomplete="off"></label>
+        <button class="btn pieno" type="submit">Iscriviti</button>
+        <p class="nota">Usiamo l'email solo per questa newsletter. <a href="/privacy">Privacy</a></p>
+        <p class="esito-nl" id="esitoNl" role="status"></p>
+      </form>
+    </div>
+  </section>
+
   <section class="blocco" id="piazza">
     <div class="piazza">
       <h3>Piazza Aperta</h3>
@@ -89,6 +110,7 @@
   <span class="small">Le fonti sono sempre citate in fondo a ogni articolo. <a href="/privacy">Privacy</a></span>
 </div></footer>
 <script src="/config.js"></script>
+<script src="/fx.js" defer></script>
 <script src="/app.js"></script>
 </body>
 </html>

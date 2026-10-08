@@ -124,9 +124,17 @@
         '<button class="btn rosso" data-az="elimina" type="button">Elimina</button></div><div class="esito"></div></div>';
     }).join("") : '<p class="vuoto">Nessun commento pubblicato.</p>';
 
+    h += '<h2>Newsletter</h2><div class="acts"><button class="btn" id="nlBtn" type="button">Mostra iscritti</button></div><textarea id="nlLista" readonly hidden style="width:100%;min-height:8rem;margin-top:.7rem"></textarea>';
     h += '<div class="acts" style="margin-top:2rem"><button class="btn" id="agg" type="button">Aggiorna</button></div>';
     app.innerHTML = h;
     document.getElementById("agg").addEventListener("click", carica);
+    document.getElementById("nlBtn").addEventListener("click", function () {
+      api({ azione: "iscritti" }).then(function (r) {
+        var t = document.getElementById("nlLista"); t.hidden = false;
+        t.value = r.iscritti.length ? r.iscritti.join("\n") : "Nessun iscritto per ora.";
+        this.textContent = r.iscritti.length + " iscritti";
+      }.bind(this)).catch(function (e) { alert(e.message); });
+    });
   }
 
   app.addEventListener("click", function (e) {
