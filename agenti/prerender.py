@@ -101,6 +101,8 @@ def html_social(cfg) -> str:
         voci.append(("YouTube", cfg["youtubeUrl"]))
     if cfg.get("instagram"):
         voci.append(("Instagram", f"https://www.instagram.com/{cfg['instagram']}/"))
+    if cfg.get("linkedin"):
+        voci.append(("LinkedIn", f"https://www.linkedin.com/in/{cfg['linkedin']}/"))
     if cfg.get("email"):
         voci.append(("Scrivimi", f"mailto:{cfg['email']}"))
     return "".join(f'<a href="{e(u)}"' + ("" if u.startswith("mailto:") else ' target="_blank" rel="noopener"')

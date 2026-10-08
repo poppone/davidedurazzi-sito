@@ -42,7 +42,12 @@
   <section class="blocco" id="diretta">
     <div class="testa"><h2>In diretta</h2><p id="orari"><!--PR:orari-->La diretta: martedì alle 21:30<!--/PR:orari--></p></div>
     <div class="live">
-      <div class="player" id="twitchPlayer"></div>
+      <div class="player" id="twitchPlayer">
+        <div class="locandina" id="locandina" style="background-image:url(/assets/offline.jpg)">
+          <div class="acts"></div>
+        </div>
+        <div id="twitchPlayerApi"></div>
+      </div>
       <div class="chat" id="twitchChat"></div>
     </div>
   </section>
@@ -80,7 +85,7 @@
 </main>
 <footer><div class="wrap">
   <strong>Davide Durazzi</strong>
-  <nav id="social" aria-label="Social"><!--PR:social--><a href="https://www.twitch.tv/DavideDurazzi" target="_blank" rel="noopener">Twitch</a><a href="https://www.youtube.com/@Notiziein60secondioff" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/poppone.tech/" target="_blank" rel="noopener">Instagram</a><a href="mailto:info@davidedurazzi.it">Scrivimi</a><!--/PR:social--></nav>
+  <nav id="social" aria-label="Social"><!--PR:social--><a href="https://www.twitch.tv/DavideDurazzi" target="_blank" rel="noopener">Twitch</a><a href="https://www.youtube.com/@Notiziein60secondioff" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/poppone.tech/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/davide-durazzi-36a52665/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:info@davidedurazzi.it">Scrivimi</a><!--/PR:social--></nav>
   <span class="small">Le fonti sono sempre citate in fondo a ogni articolo. <a href="/privacy">Privacy</a></span>
 </div></footer>
 <script src="/config.js"></script>

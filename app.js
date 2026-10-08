@@ -44,6 +44,7 @@
   if (S.twitch) social.push(["Twitch", "https://www.twitch.tv/" + S.twitch]);
   if (safeUrl(S.youtubeUrl)) social.push(["YouTube", S.youtubeUrl]);
   if (S.instagram) social.push(["Instagram", "https://www.instagram.com/" + S.instagram + "/"]);
+  if (S.linkedin) social.push(["LinkedIn", "https://www.linkedin.com/in/" + S.linkedin + "/"]);
   if (S.email) social.push(["Scrivimi", "mailto:" + S.email]);
   $("social").innerHTML = social.map(function (s) {
     return '<a href="' + esc(s[1]) + '"' + (s[1].indexOf("mailto:") ? ' target="_blank" rel="noopener"' : "") + ">" + s[0] + "</a>";
@@ -58,14 +59,32 @@
     $("orari").textContent = S.orariLive || "";
     if (safeUrl(S.youtubeUrl)) { $("ytBtn").href = S.youtubeUrl; $("ytBtn").target = "_blank"; $("ytBtn").rel = "noopener"; }
 
-    // Twitch: il parametro parent deve coincidere col dominio che ospita il sito
+    // Twitch: il parametro parent deve coincidere col dominio che ospita il sito.
+    // Finché il canale è offline si vede una locandina con il prossimo orario;
+    // il player prende il posto della locandina appena parte la diretta.
     if (S.twitch) {
       var host = location.hostname;
-      $("twitchPlayer").innerHTML = '<iframe title="Diretta Twitch" allowfullscreen src="https://player.twitch.tv/?channel=' +
-        encodeURIComponent(S.twitch) + "&parent=" + encodeURIComponent(host) + '&muted=true&autoplay=false"></iframe>';
+      var canale = encodeURIComponent(S.twitch);
+      var locandina = $("locandina");
+      var tw = document.createElement("a");
+      tw.className = "btn pieno"; tw.href = "https://www.twitch.tv/" + canale; tw.target = "_blank"; tw.rel = "noopener";
+      tw.textContent = "Apri il canale su Twitch";
+      if (locandina) locandina.querySelector(".acts").appendChild(tw);
       $("twitchChat").innerHTML = '<iframe title="Chat Twitch" src="https://www.twitch.tv/embed/' +
-        encodeURIComponent(S.twitch) + "/chat?parent=" + encodeURIComponent(host) +
+        canale + "/chat?parent=" + encodeURIComponent(host) +
         (matchMedia("(prefers-color-scheme: dark)").matches ? "&darkpopout" : "") + '"></iframe>';
+      // Rileva online/offline con l'API ufficiale del player
+      var sc = document.createElement("script");
+      sc.src = "https://player.twitch.tv/js/embed/v1.js";
+      sc.onload = function () {
+        try {
+          var pl = new Twitch.Player("twitchPlayerApi", { channel: S.twitch, parent: [host], width: "100%", height: "100%", autoplay: false, muted: true });
+          pl.addEventListener(Twitch.Player.ONLINE, function () { $("twitchPlayer").classList.add("online"); });
+          pl.addEventListener(Twitch.Player.OFFLINE, function () { $("twitchPlayer").classList.remove("online"); });
+        } catch (e) { /* resta la locandina */ }
+      };
+      sc.onerror = function () { /* resta la locandina con il link al canale */ };
+      document.body.appendChild(sc);
     }
 
     // Articoli + Contraddittorio
@@ -105,7 +124,7 @@
           return '<button class="video" type="button" data-id="' + esc(x.id) + '"><div class="thumb"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/' +
             esc(x.id) + '/hqdefault.jpg"><span class="play">Guarda</span></div><h3>' + esc(x.titolo) + '</h3><p class="meta">' + esc(data(x.data)) + "</p></button>";
         }).join("") : '<p class="vuoto">Nessun video ancora pubblicato.</p>';
-      }).catch(function () { $("griglia").innerHTML = '<p class="vuoto">I video non si sono caricati.</p>'; });
+      }).catch(function () { $("griglia").innerHTML = '<p class="vuoto">I video arrivano presto. Intanto seguimi su YouTube.</p>'; });
       $("griglia").addEventListener("click", function (e) {
         var b = e.target.closest(".video"); if (!b || b.dataset.on) return;
         b.dataset.on = "1";

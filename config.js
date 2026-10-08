@@ -17,6 +17,9 @@ window.SITE = {
 
   // Instagram: profilo + link dei post da mostrare
   instagram: "poppone.tech",
+
+  // LinkedIn: parte finale dell'indirizzo del profilo (linkedin.com/in/...)
+  linkedin: "davide-durazzi-36a52665",
   instagramPost: [
     // "https://www.instagram.com/p/XXXXXXXXXXX/",
   ],

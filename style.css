@@ -62,6 +62,11 @@ section.blocco{padding:clamp(2.2rem,6vw,4rem) 0;border-top:2px solid var(--ink)}
 @media (min-width:980px){.live{grid-template-columns:1fr 340px}}
 .player{position:relative;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden}
 .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.locandina{position:absolute;inset:0;z-index:2;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:clamp(.8rem,3vw,1.6rem)}
+.locandina .acts{margin:0}
+.player.online .locandina{display:none}
+#twitchPlayerApi{position:absolute;inset:0}
+#twitchPlayerApi iframe{width:100%;height:100%}
 .chat{display:none;border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:420px}
 .chat iframe{width:100%;height:100%;border:0}
 @media (min-width:980px){.chat{display:block}}
@@ -157,3 +162,5 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.1rem}
 .legale h1{font:800 clamp(2rem,6vw,3rem)/1.05 var(--sans);letter-spacing:-.03em;margin:0 0 1.5rem}
 .legale h2{font:700 1.2rem var(--sans);margin:2rem 0 .5rem}
 .legale p,.legale li{font:400 1.05rem/1.65 var(--serif)}
+.locandina .btn{background:var(--live);border-color:var(--live);color:#fff}
+.locandina{padding-bottom:clamp(1.2rem,3.5vw,2rem)}
