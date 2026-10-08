@@ -50,13 +50,13 @@
 /*
   Uso in OBS: Fonte "Browser", URL https://www.davidedurazzi.it/overlay/contraddittorio
   Larghezza 1920, Altezza 1080.
-  Parametri facoltativi: ?canale=popponetv  ?slug=<articolo>  ?demo=1 (voti finti per provare)
+  Parametri facoltativi: ?canale=davidedurazzi  ?slug=<articolo>  ?demo=1 (voti finti per provare)
   Comandi in chat (solo tu e i moderatori): !apri  !chiudi  !reset  !nascondi  !mostra
 */
 (function () {
   "use strict";
   var q = new URLSearchParams(location.search);
-  var canale = (q.get("canale") || "popponetv").toLowerCase();
+  var canale = (q.get("canale") || "davidedurazzi").toLowerCase();
   var $ = function (id) { return document.getElementById(id); };
   var stato = { voti: {}, aperto: true };
   var chiave = "contraddittorio";

@@ -22,7 +22,7 @@ REGISTRO = RADICE / "social" / "instagram.json"
 CARTELLA_IG = RADICE / "ig"
 
 SITO = "https://www.davidedurazzi.it"  # con www: Instagram non segue i redirect
-TWITCH = "popponetv"
+TWITCH = "davidedurazzi"
 GIORNI_MAX = 3  # non pubblica articoli più vecchi di così
 API = "https://graph.instagram.com/" + os.environ.get("IG_API_VERSION", "v25.0")
 TOKEN = os.environ.get("IG_ACCESS_TOKEN", "")
