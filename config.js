@@ -12,8 +12,8 @@ window.SITE = {
   orariLive: "La diretta: martedì alle 21:30",
 
   // YouTube: ID del canale
-  youtubeChannelId: "UCbEC2iCWFdT_W3WgdxYl7Hw",
-  youtubeUrl: "https://www.youtube.com/@Notiziein60secondioff",
+  youtubeChannelId: "UCNMKJ6Etxs-2SMGGquGnaDg",
+  youtubeUrl: "https://www.youtube.com/@davidedurazzioff",
 
   // Instagram: profilo + link dei post da mostrare
   instagram: "poppone.tech",
