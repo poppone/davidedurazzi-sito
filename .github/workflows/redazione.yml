@@ -28,7 +28,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           PYTHONUNBUFFERED: "1"  # Stampa i log in tempo reale nella console di GitHub
-        run: python agenti/main.py
+        run: |
+          mkdir -p bozze
+          python agenti/main.py 2>&1 | tee bozze/ultimo-log.txt
 
       - name: Salva le bozze
         run: |
