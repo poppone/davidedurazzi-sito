@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/assets/logo-64.png">
+<title>Post per YouTube Community</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#10162B;--mut:#5b6280;--blu:#2F55E4;--org:#E85A16;--line:#dfe3f0}
+@media (prefers-color-scheme:dark){:root{--bg:#0b1020;--card:#151c33;--ink:#eef1fb;--mut:#9aa3c4;--line:#273056}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Archivo,system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 60px}h1{font-size:1.5rem;margin:0 0 4px}.sub{color:var(--mut);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
+.card.fatto{opacity:.55}.card img{width:100%;max-width:360px;border-radius:10px;display:block;margin-bottom:12px}
+h2{font-size:1.05rem;margin:0 0 8px}textarea{width:100%;min-height:150px;border:1px solid var(--line);border-radius:10px;padding:10px;background:transparent;color:inherit;font:inherit}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+button,a.b{border:0;border-radius:999px;padding:10px 16px;font:700 .9rem Archivo,sans-serif;cursor:pointer;background:var(--blu);color:#fff;text-decoration:none}
+button.s,a.s{background:transparent;color:var(--ink);border:1px solid var(--line)}
+a.o{background:var(--org)}
+</style>
+</head>
+<body>
+<main>
+<h1>Post per YouTube Community</h1>
+<p class="sub">Copia il testo, scarica l'immagine, poi incolla tutto in YouTube Studio. Segna "Fatto" quando hai pubblicato.</p>
+<p><a class="b o" href="https://studio.youtube.com/channel/UCNMKJ6Etxs-2SMGGquGnaDg/community" target="_blank" rel="noopener">Apri Community in Studio</a></p>
+<div id="lista"></div>
+</main>
+<script>
+(function(){
+  var K="dd_community_fatti", lista=document.getElementById("lista");
+  function get(){try{return JSON.parse(localStorage.getItem(K)||"{}")}catch(e){return {}}}
+  function set(o){try{localStorage.setItem(K,JSON.stringify(o))}catch(e){}}
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+  fetch("/content/community.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
+    if(!d.length){lista.appendChild(el("p","sub","Nessun post pronto: appena un articolo viene pubblicato, compare qui."));return}
+    var fatti=get();
+    d.forEach(function(p){
+      var c=el("div","card"+(fatti[p.slug]?" fatto":""));
+      var im=el("img");im.src=p.img;im.alt="";im.loading="lazy";c.appendChild(im);
+      c.appendChild(el("h2",null,p.titolo));
+      var ta=el("textarea");ta.value=p.testo;c.appendChild(ta);
+      var r=el("div","row");
+      var b1=el("button",null,"Copia testo");b1.onclick=function(){ta.select();(navigator.clipboard?navigator.clipboard.writeText(ta.value):Promise.reject()).then(function(){b1.textContent="Copiato"}).catch(function(){document.execCommand("copy");b1.textContent="Copiato"})};
+      var b2=el("a","b s","Scarica immagine");b2.href=p.img;b2.target="_blank";b2.rel="noopener";b2.download=p.slug+".jpg";
+      var b3=el("button","s",fatti[p.slug]?"Da rifare":"Fatto");b3.onclick=function(){var f=get();if(f[p.slug])delete f[p.slug];else f[p.slug]=1;set(f);location.reload()};
+      r.appendChild(b1);r.appendChild(b2);r.appendChild(b3);c.appendChild(r);lista.appendChild(c);
+    });
+  }).catch(function(){lista.appendChild(el("p","sub","Impossibile caricare i post."))});
+})();
+</script>
+</body>
+</html>

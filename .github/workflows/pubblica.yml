@@ -41,5 +41,5 @@ jobs:
           LI_ACCESS_TOKEN: ${{ secrets.LI_ACCESS_TOKEN }}
       - name: Registra i post pubblicati
         run: |
-          [ -e social ] && git add social
+          [ -e social ] && git add social; [ -e content/community.json ] && git add content/community.json
           git diff --cached --quiet || (git commit -m "Pubblicato sui social" && git push)

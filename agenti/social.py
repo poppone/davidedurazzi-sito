@@ -86,7 +86,24 @@ def linkedin(a: dict, immagine_url: str) -> str:
     return r.headers.get("x-restli-id", "")
 
 
+COMMUNITY = RADICE / "content" / "community.json"
+
+
+def community() -> None:
+    """YouTube non ha API per la scheda Community: prepara testo e immagine da incollare a mano.
+    Scrive content/community.json (letto da /community.html). Conserva lo stato 'fatto' impostato dal browser."""
+    vecchio = {c["slug"]: c for c in _leggi(COMMUNITY, [])}
+    righe = []
+    for a in sorted(da_pubblicare({}), key=lambda x: x.get("data", ""), reverse=True):
+        t = testo(a, "youtube").replace("Vota Sì o No e dì la tua nei commenti sul sito.", "Dì la tua nei commenti.")
+        righe.append({"slug": a["slug"], "titolo": a["titolo"], "data": a.get("data", ""), "testo": t,
+                      "img": f"{SITO}/ig/{a['slug']}/1.jpg"})
+    COMMUNITY.write_text(json.dumps(righe, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"[social] community: {len(righe)} post pronti per YouTube")
+
+
 def pubblica() -> None:
+    community()
     reti = {"facebook": bool(FB_ID and FB_TOKEN), "linkedin": bool(LI_TOKEN)}
     for n, ok in reti.items():
         if not ok:
