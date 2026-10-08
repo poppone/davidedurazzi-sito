@@ -36,14 +36,14 @@ img,iframe{max-width:100%}
 .top nav a:hover{color:var(--ink)}
 
 /* Apertura */
-.hero{padding:clamp(2.5rem,8vw,6rem) 0 clamp(2rem,5vw,3.5rem);display:grid;gap:clamp(1.5rem,4vw,3rem);align-items:end}
+.hero{padding:clamp(1.4rem,5vw,3.6rem) 0 clamp(1.4rem,4vw,2.4rem);display:grid;gap:clamp(1rem,3vw,2.2rem);align-items:end}
 @media (min-width:900px){.hero{grid-template-columns:1.5fr 1fr}}
-.hero h1{margin:0;font:900 clamp(3.4rem,13vw,10rem)/.84 var(--sans);font-stretch:125%;letter-spacing:-.045em}
+.hero h1{margin:0;font:900 clamp(3rem,11vw,8rem)/.84 var(--sans);font-stretch:125%;letter-spacing:-.045em}
 .hero h1 span{display:block}
 .hero h1 span:last-child{color:transparent;-webkit-text-stroke:2px var(--ink)}
 @supports not (-webkit-text-stroke:2px black){.hero h1 span:last-child{color:var(--ink)}}
 .claim{font:600 clamp(1.3rem,2.6vw,1.75rem)/1.2 var(--sans);margin:0 0 .8rem;letter-spacing:-.01em}
-.intro{margin:0 0 1.4rem;color:var(--muted);max-width:44ch}
+.intro{margin:0 0 1.1rem;color:var(--muted);max-width:44ch}
 .acts{display:flex;flex-wrap:wrap;gap:.6rem}
 .btn{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.65rem 1.1rem;border-radius:999px;border:1.5px solid var(--ink);font:600 .97rem/1 var(--sans);text-decoration:none;color:var(--ink);background:transparent;cursor:pointer}
 .btn:hover{background:color-mix(in srgb,var(--ink) 8%,transparent)}
@@ -52,7 +52,7 @@ img,iframe{max-width:100%}
 .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--live);flex:none}
 
 /* Sezioni */
-section.blocco{padding:clamp(2.2rem,6vw,4rem) 0;border-top:2px solid var(--ink)}
+section.blocco{padding:clamp(1.8rem,5vw,3.2rem) 0;border-top:2px solid var(--ink)}
 .testa{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.6rem 1.5rem;margin-bottom:1.5rem}
 .testa h2{margin:0;font:800 clamp(1.8rem,4.5vw,3rem)/1 var(--sans);font-stretch:112%;letter-spacing:-.03em}
 .testa p{margin:0;color:var(--muted);max-width:52ch}
@@ -157,7 +157,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.1rem}
 .trappola{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
 .logo img{width:34px;height:34px;border-radius:50%}
-.hero-logo{display:block;width:clamp(96px,14vw,132px);height:auto;margin:0 0 1.2rem}
+.hero-logo{display:block;width:clamp(72px,11vw,112px);height:auto;margin:0 0 .8rem}
 .legale{max-width:720px;margin:0 auto;padding:clamp(2rem,6vw,4rem) 0}
 .legale h1{font:800 clamp(2rem,6vw,3rem)/1.05 var(--sans);letter-spacing:-.03em;margin:0 0 1.5rem}
 .legale h2{font:700 1.2rem var(--sans);margin:2rem 0 .5rem}
