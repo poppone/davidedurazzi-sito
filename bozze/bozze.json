@@ -1,1 +1,83 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "cyberpunk-2077-diventa-un-film-live-action-con-paramount-20261009",
+    "titolo": "Cyberpunk 2077 diventa un film live action con Paramount",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-09",
+    "sommario": "Il celebre videogioco di CD Projekt RED si prepara a sbarcare sul grande schermo grazie a un progetto cinematografico di Paramount Pictures.",
+    "testo": [
+      "Night City si sposta dai monitor delle console al grande schermo. Secondo quanto riportato da Spaziogames, l'universo di Cyberpunk 2077 diventerà presto un film live action grazie all'impegno di Paramount Pictures, che sta lavorando allo sviluppo del progetto basato sull'opera di CD Projekt RED.",
+      "Le novità non si fermano qui: come evidenziato da IGN Italia, dietro questo accordo per la realizzazione della pellicola c'è la produzione affidata a Lorenzo di Bonaventura.",
+      "Per il pubblico e gli appassionati del franchise, questa mossa rappresenta l'opportunità di vedere le atmosfere distopiche del videogioco tradotte in un'esperienza cinematografica dal vivo.",
+      "Ci sono però diversi aspetti che al momento rimangono da chiarire, a partire dai tempi di produzione e da chi farà parte del cast che interpreterà i ruoli principali."
+    ],
+    "fonti": [
+      {
+        "nome": "Spaziogames: Cyberpunk 2077 diventa un film: Paramount porta Night City al cinema",
+        "url": "https://www.spaziogames.it/notizie/cyberpunk-2077-diventa-un-film-live-action-paramount-porta-night-city-al-cinema"
+      },
+      {
+        "nome": "IGN Italia: Paramount è al lavoro sul film live action di Cyberpunk 2077",
+        "url": "https://it.ign.com/cinematv/228501/paramount-e-al-lavoro-sul-film-live-action-di-cyberpunk-2077"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Secondo voi, quale attore sarebbe perfetto per interpretare V nel film?",
+      "Siete contenti di vedere Cyberpunk 2077 al cinema o temete una delusione?",
+      "Quale storia vorreste che raccontasse questa pellicola?"
+    ]
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "intelligenza-artificiale-e-matematica-tra-scoperte-e-polemiche-20261009",
+    "titolo": "Intelligenza artificiale e matematica: tra scoperte e polemiche",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-09",
+    "sommario": "OpenAI pubblica centinaia di ricerche matematiche, ma la comunità scientifica si divide. L'Association for Human Mathematics chiede di fermare i rapporti.",
+    "testo": [
+      "OpenAI ha reso noto un archivio su GitHub contenente oltre 700 documenti scientifici di matematica. In questo spazio digitale vengono condivisi i risultati ottenuti dai modelli di intelligenza artificiale nella risoluzione di complessi problemi logici, sfruttando il linguaggio Lean.",
+      "Questa novità tecnologica ha però acceso il dibattito tra gli esperti. Da una parte ci sono i progressi computazionali, dall'altra le tensioni etiche e metodologiche generate dall'uso di questi strumenti digitali nella ricerca pura.",
+      "La situazione ha spinto l'Association for Human Mathematics a muoversi formalmente. Secondo quanto riportato, l'associazione ha infatti invitato a interrompere le collaborazioni con OpenAI a causa delle divisioni nate attorno alle dimostrazioni matematiche automatizzate.",
+      "Per i cittadini e gli appassionati di tecnologia, questa vicenda tocca un tema cruciale: il confine tra il lavoro umano e quello automatizzato in campi complessi come la scienza e la ricerca."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: OpenAI, i problemi risolti dall'AI accendono la polemica nella comunità scientifica",
+        "url": "https://www.hdblog.it/tecnologia/articoli/n673202/ai-risolve-problemi-matematica-polemiche/"
+      },
+      {
+        "nome": "Il Sole 24 Ore: OpenAI pubblica oltre 700 paper matematici su GitHub con formalizzazioni Lean",
+        "url": "https://www.ilsole24ore.com/art/openai-sceglie-trasparenza-e-condivide-oltre-700-paper-matematica-AJdbyIeB"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Pensate che l'intelligenza artificiale possa sostituire il ragionamento matematico umano?",
+      "Le associazioni scientifiche fanno bene a interrompere i rapporti con le aziende tecnologiche?",
+      "Fino a che punto vi fidereste di una dimostrazione matematica creata da un computer?"
+    ],
+    "domanda": "L'intelligenza artificiale dovrebbe fermarsi nello sviluppo di dimostrazioni matematiche per evitare polemiche nella comunità scientifica?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "La pubblicazione massiccia di paper e formalizzazioni matematiche da parte dell'intelligenza artificiale rischia di dividere la comunità di ricerca.",
+        "Viene segnalato l'invito a interrompere le collaborazioni con OpenAI a causa delle frizioni nate intorno alle dimostrazioni prodotte dai modelli.",
+        "Uno stop temporaneo a questo tipo di sviluppo servirebbe a evitare ulteriori tensioni e a preservare il dialogo tra studiosi."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Fermare la ricerca significherebbe rinunciare a un valido aiuto nella risoluzione di problemi complessi, evidenziato dalla produzione di numerosi paper e formalizzazioni online.",
+        "L'innovazione tecnologica è sempre stata un motore per il progresso scientifico e bloccarla per paura del dibattito potrebbe frenare la crescita della disciplina.",
+        "Il confronto e le opinioni divergenti appartengono alla storia della comunità scientifica, che possiede già gli strumenti per metabolizzare le novità senza bloccare l'innovazione."
+      ]
+    }
+  }
+]
