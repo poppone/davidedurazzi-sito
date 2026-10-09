@@ -4,13 +4,16 @@ const crypto = require("crypto");
 const DB_URL = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
 const DB_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
 
+const PREFISSO = "dd:";
+
 // Esegue comandi Redis via REST (Upstash). Accetta più comandi in un colpo solo.
 async function db(...comandi) {
   if (!DB_URL || !DB_TOKEN) throw new Error("Database non configurato");
   const r = await fetch(DB_URL + "/pipeline", {
     method: "POST",
     headers: { Authorization: "Bearer " + DB_TOKEN, "Content-Type": "application/json" },
-    body: JSON.stringify(comandi)
+    // Prefisso su ogni chiave: il database può essere condiviso con altri progetti
+    body: JSON.stringify(comandi.map((c) => [c[0], PREFISSO + c[1], ...c.slice(2)]))
   });
   if (!r.ok) throw new Error("Database: HTTP " + r.status);
   const out = await r.json();
