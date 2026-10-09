@@ -1,0 +1,12 @@
+{
+  "_nota": "Numeri del media kit. Aggiorna i valori a mano; un canale con valore null non viene mostrato. Le statistiche del sito arrivano da sole da /api/mediakit.",
+  "aggiornato": "2026-10-09",
+  "canali": [
+    { "id": "youtube", "nome": "YouTube", "url": "https://www.youtube.com/@davidedurazzioff", "valore": 793, "etichetta": "iscritti", "extra": "45.746 visualizzazioni e 93 video pubblicati negli ultimi 30 giorni" },
+    { "id": "instagram", "nome": "Instagram", "url": "https://www.instagram.com/davidedurazzi.it/", "valore": null, "etichetta": "follower", "extra": "" },
+    { "id": "twitch", "nome": "Twitch", "url": "https://www.twitch.tv/DavideDurazzi", "valore": null, "etichetta": "follower", "extra": "Diretta ogni martedì alle 21:30" },
+    { "id": "facebook", "nome": "Facebook", "url": "", "valore": null, "etichetta": "follower", "extra": "" },
+    { "id": "linkedin", "nome": "LinkedIn", "url": "https://www.linkedin.com/in/davide-durazzi-36a52665/", "valore": null, "etichetta": "collegamenti", "extra": "" },
+    { "id": "x", "nome": "X", "url": "https://x.com/PopponeTV", "valore": null, "etichetta": "follower", "extra": "" }
+  ]
+}
