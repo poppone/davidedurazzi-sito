@@ -316,3 +316,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .gioco-visual span:nth-child(1){margin-right:55%}.gioco-visual span:nth-child(2){margin-right:40%}.gioco-visual span:nth-child(3){margin-right:25%}.gioco-visual span:nth-child(4){margin-right:10%}
 .gioco-visual span:nth-child(5){border-color:var(--anti);color:var(--anti)}
 .gioco:hover .gioco-visual span{transform:translateX(6px)}
+
+/* ===== Offerte ===== */
+.offerte-box{min-height:120px;padding:1rem;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+.nota-aff{margin:.7rem 0 0;color:var(--muted);font-size:.85rem}
