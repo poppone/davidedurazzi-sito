@@ -352,3 +352,20 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .acquisto h2{margin:0;font:700 1.1rem var(--sans)}
 .acquisto .btn{max-width:100%;white-space:normal;line-height:1.25}
 .acquisto .nota-aff{margin:0}
+
+/* ===== La mia app (Ricordati) ===== */
+.app{display:grid;gap:1.6rem;align-items:center;padding:clamp(1.2rem,3vw,2rem);border:1px solid rgba(123,151,255,.25);border-radius:18px;background:linear-gradient(135deg,rgba(232,90,22,.14),rgba(47,85,228,.16)),var(--paper)}
+@media (min-width:820px){.app{grid-template-columns:1.2fr 1fr}}
+.app h2{margin:0 0 .6rem;font:900 clamp(2rem,5vw,3.2rem)/1 var(--sans);font-stretch:125%}
+.app-testo p{max-width:56ch}
+.app-testo .meta{margin:0 0 1rem}
+.app-demo{display:grid;gap:.6rem;justify-items:center;max-width:320px;width:100%;justify-self:center;padding:1.2rem;border:1px solid var(--line);border-radius:28px;background:rgba(7,11,24,.55)}
+.app-scrivi{width:100%;padding:.75rem 1rem;border-radius:12px;border:1.5px solid var(--tesi);font:500 1rem/1.3 var(--sans);background:var(--bg)}
+.app-scrivi::after{content:"";display:inline-block;width:2px;height:1.05em;margin-left:2px;vertical-align:text-bottom;background:var(--ink);animation:cursore 1s steps(1) infinite}
+@keyframes cursore{50%{opacity:0}}
+.app-freccia{color:var(--anti);font-size:1.4rem;line-height:1}
+.app-card{width:100%;display:grid;gap:.2rem;padding:.85rem 1rem;border-radius:14px;background:var(--paper);border:1px solid var(--line)}
+.app-card strong{font:800 1.1rem/1.2 var(--sans)}
+.app-card span{color:var(--muted);font-size:.92rem}
+.app-card .app-sveglia{color:var(--anti);font-weight:600}
+@media (prefers-reduced-motion:reduce){.app-scrivi::after{animation:none}}
