@@ -5,6 +5,16 @@ const DB_URL = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL
 const DB_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
 
 const PREFISSO = "dd:";
+function prefissa(c) {
+  const cmd = String(c[0]).toUpperCase();
+  if (cmd === "SCAN") { // [SCAN, cursore, MATCH, pattern, ...]: il prefisso va sul pattern
+    const a = c.slice();
+    const i = a.findIndex((x, n) => n > 0 && String(x).toUpperCase() === "MATCH");
+    if (i > 0) a[i + 1] = PREFISSO + a[i + 1];
+    return a;
+  }
+  return [c[0], PREFISSO + c[1], ...c.slice(2)];
+}
 
 // Esegue comandi Redis via REST (Upstash). Accetta più comandi in un colpo solo.
 async function db(...comandi) {
@@ -13,11 +23,17 @@ async function db(...comandi) {
     method: "POST",
     headers: { Authorization: "Bearer " + DB_TOKEN, "Content-Type": "application/json" },
     // Prefisso su ogni chiave: il database può essere condiviso con altri progetti
-    body: JSON.stringify(comandi.map((c) => [c[0], PREFISSO + c[1], ...c.slice(2)]))
+    body: JSON.stringify(comandi.map(prefissa))
   });
   if (!r.ok) throw new Error("Database: HTTP " + r.status);
   const out = await r.json();
-  return out.map((x) => x.result);
+  return out.map((x, i) => {
+    // SCAN restituisce [cursore, chiavi]: togliamo il prefisso dalle chiavi
+    if (String(comandi[i][0]).toUpperCase() === "SCAN" && x.result && Array.isArray(x.result[1])) {
+      return [x.result[0], x.result[1].map((k) => (k.startsWith(PREFISSO) ? k.slice(PREFISSO.length) : k))];
+    }
+    return x.result;
+  });
 }
 
 async function leggiCommento(id) {
