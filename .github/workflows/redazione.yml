@@ -11,7 +11,7 @@ permissions:
 jobs:
   redazione:
     runs-on: ubuntu-latest
-    timeout-minutes: 15    # Blocco automatico se il job si incastra per più di 15 minuti
+    timeout-minutes: 40    # Blocco automatico se il job si incastra per più di 15 minuti
 
     steps:
       - uses: actions/checkout@v4

@@ -11,6 +11,7 @@ import config
 URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 _ultima = 0.0
 _esauriti: set[str] = set()
+_gemini_ko = [False]  # dopo un fallimento completo di Gemini, le chiamate successive vanno dirette su Groq
 
 
 def _modelli() -> list[str]:
@@ -63,12 +64,15 @@ def _groq(sistema: str, richiesta: str, temperatura: float) -> dict:
 
 def chiedi(sistema: str, richiesta: str, temperatura: float = 0.4) -> dict:
     """Prova Gemini; se fallisce e c'e la chiave Groq, usa Groq."""
+    if config.GROQ_API_KEY and _gemini_ko[0]:
+        return _groq(sistema, richiesta, temperatura)
     try:
         return _gemini(sistema, richiesta, temperatura)
     except RuntimeError as e:
         if not config.GROQ_API_KEY:
             raise
-        print(f"[llm] {e} -> uso Groq")
+        _gemini_ko[0] = True
+        print(f"[llm] {e} -> uso Groq per il resto del giro")
         return _groq(sistema, richiesta, temperatura)
 
 
