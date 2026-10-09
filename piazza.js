@@ -1,4 +1,10 @@
 (function () {
+  // Contatore visite anonimo (nessun cookie): vedi /api/visite
+  try {
+    if (!/^(localhost|127\.)/.test(location.hostname) && navigator.sendBeacon) {
+      navigator.sendBeacon("/api/visite", new Blob([JSON.stringify({ p: location.pathname })], { type: "application/json" }));
+    }
+  } catch (e) {}
   var $ = function (s) { return document.querySelector(s); };
   var io = null, caricato = Date.now();
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }

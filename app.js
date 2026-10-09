@@ -3,6 +3,12 @@
   var S = window.SITE || {};
   var $ = function (id) { return document.getElementById(id); };
   var page = document.body.dataset.page;
+  // Contatore visite anonimo (nessun cookie): vedi /api/visite
+  try {
+    if (!/^(localhost|127\.)/.test(location.hostname) && navigator.sendBeacon) {
+      navigator.sendBeacon("/api/visite", new Blob([JSON.stringify({ p: location.pathname })], { type: "application/json" }));
+    }
+  } catch (e) {}
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
