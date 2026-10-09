@@ -224,6 +224,7 @@ def main():
     oggi = datetime.now(timezone.utc).date().isoformat()
     voci = [f"  <url><loc>{SITO}/</loc><lastmod>{(articoli[0].get('data') if articoli else oggi)}</lastmod></url>"]
     voci += [f"  <url><loc>{SITO}{link(a)}</loc><lastmod>{e(a.get('data') or oggi)}</lastmod></url>" for a in articoli]
+    voci.append(f"  <url><loc>{SITO}/piazza</loc></url>")
     voci.append(f"  <url><loc>{SITO}/privacy</loc></url>")
     (RADICE / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
