@@ -17,6 +17,8 @@ window.SITE = {
 
   // Instagram: profilo + link dei post da mostrare
   instagram: "davidedurazzi.it",
+  // X (Twitter): username senza @
+  x: "PopponeTV",
 
   // LinkedIn: parte finale dell'indirizzo del profilo (linkedin.com/in/...)
   linkedin: "davide-durazzi-36a52665",

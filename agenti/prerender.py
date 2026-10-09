@@ -101,6 +101,8 @@ def html_social(cfg) -> str:
         voci.append(("YouTube", cfg["youtubeUrl"]))
     if cfg.get("instagram"):
         voci.append(("Instagram", f"https://www.instagram.com/{cfg['instagram']}/"))
+    if cfg.get("x"):
+        voci.append(("X", f"https://x.com/{cfg['x']}"))
     if cfg.get("linkedin"):
         voci.append(("LinkedIn", f"https://www.linkedin.com/in/{cfg['linkedin']}/"))
     if cfg.get("email"):

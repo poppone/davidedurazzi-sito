@@ -3,6 +3,7 @@
 Uso: python agenti/social.py pubblica
 Secret richiesti (se mancano, la rete corrispondente viene saltata):
   FB_PAGE_ID, FB_PAGE_TOKEN   -> pagina Facebook (token di pagina)
+  X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_SECRET -> X (permesso Read and write)
   LI_ACCESS_TOKEN             -> LinkedIn, scope openid + profile + w_member_social (dura 60 giorni)
 """
 import json
@@ -21,6 +22,7 @@ REGISTRO = RADICE / "social" / "social.json"
 FB_ID = os.environ.get("FB_PAGE_ID", "")
 FB_TOKEN = os.environ.get("FB_PAGE_TOKEN", "")
 LI_TOKEN = os.environ.get("LI_ACCESS_TOKEN", "")
+X_CHIAVI = [os.environ.get(k, "") for k in ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET")]
 FB_API = "https://graph.facebook.com/" + os.environ.get("FB_API_VERSION", "v21.0")
 # Versioni dell'API LinkedIn da provare in ordine (LinkedIn ritira le piu vecchie dopo circa un anno)
 LI_VERSIONI = [v for v in [os.environ.get("LI_API_VERSION", "")] + ["202609", "202608", "202607", "202606", "202605"] if v]
@@ -41,6 +43,26 @@ def testo(a: dict, rete: str) -> str:
         parti.append("Ne parliamo in diretta su Twitch: twitch.tv/davidedurazzi")
     parti.append(HASHTAG.get(a.get("sezione"), "#attualità") + " #davidedurazzi")
     return "\n\n".join(p for p in parti if p)[:2900]
+
+
+def testo_x(a: dict) -> str:
+    """Post per X: max 280 caratteri, il link conta sempre 23."""
+    link = f"{SITO}/articoli/{a['slug']}"
+    tag = HASHTAG.get(a.get("sezione"), "#attualità").split()[0]
+    fisso = f"\n\n{link}\n{tag}"
+    titolo = a["titolo"]
+    spazio = 280 - 23 - len(f"\n\n\n{tag}")
+    if len(titolo) > spazio:
+        titolo = titolo[:spazio - 1].rstrip() + "\u2026"
+    return titolo + fisso
+
+
+def x(a: dict) -> str:
+    from requests_oauthlib import OAuth1
+    r = requests.post("https://api.x.com/2/tweets", auth=OAuth1(*X_CHIAVI), json={"text": testo_x(a)}, timeout=60)
+    if r.status_code >= 400:
+        raise RuntimeError(f"X HTTP {r.status_code} {r.text[:300]}")
+    return r.json().get("data", {}).get("id", "")
 
 
 def da_pubblicare(registro: dict) -> list[dict]:
@@ -97,14 +119,14 @@ def community() -> None:
     for a in sorted(da_pubblicare({}), key=lambda x: x.get("data", ""), reverse=True):
         t = testo(a, "youtube").replace("Vota Sì o No e dì la tua nei commenti sul sito.", "Dì la tua nei commenti.")
         righe.append({"slug": a["slug"], "titolo": a["titolo"], "data": a.get("data", ""), "testo": t,
-                      "img": f"{SITO}/ig/{a['slug']}/1.jpg"})
+                      "testo_x": testo_x(a), "img": f"{SITO}/ig/{a['slug']}/1.jpg"})
     COMMUNITY.write_text(json.dumps(righe, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"[social] community: {len(righe)} post pronti per YouTube")
 
 
 def pubblica() -> None:
     community()
-    reti = {"facebook": bool(FB_ID and FB_TOKEN), "linkedin": bool(LI_TOKEN)}
+    reti = {"facebook": bool(FB_ID and FB_TOKEN), "linkedin": bool(LI_TOKEN), "x": all(X_CHIAVI)}
     for n, ok in reti.items():
         if not ok:
             print(f"[social] {n}: segreti mancanti, salto.")
@@ -123,7 +145,7 @@ def pubblica() -> None:
             continue
         for rete in mancanti:
             try:
-                pid = facebook(a, img) if rete == "facebook" else linkedin(a, img)
+                pid = facebook(a, img) if rete == "facebook" else x(a) if rete == "x" else linkedin(a, img)
             except Exception as e:  # una rete in errore non blocca le altre
                 print(f"[social] errore {rete} su '{a['slug']}': {e}")
                 continue
