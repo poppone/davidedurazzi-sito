@@ -304,3 +304,15 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .fascia-tr span:nth-child(3n){color:var(--tesi);-webkit-text-stroke:0}
 .sezione-titolo,main section>h2{position:relative}
 @media (prefers-reduced-motion:reduce){.logo-wrap::before,.logo-wrap::after{animation:none}.stage .hero>*{transform:none!important}}
+
+/* ===== Il gioco ===== */
+.gioco{display:grid;gap:1.6rem;align-items:center;padding:clamp(1.2rem,3vw,2rem);border:1px solid rgba(123,151,255,.25);border-radius:18px;background:linear-gradient(135deg,rgba(47,85,228,.18),rgba(232,90,22,.14)),var(--paper)}
+@media (min-width:820px){.gioco{grid-template-columns:1.2fr 1fr}}
+.gioco-tag{margin:0 0 .4rem;color:var(--anti);font:700 .8rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase}
+.gioco h2{margin:0 0 .6rem;font:900 clamp(2rem,5vw,3.2rem)/1 var(--sans);font-stretch:125%}
+.gioco p{max-width:52ch}
+.gioco-visual{display:flex;flex-direction:column;gap:.5rem}
+.gioco-visual span{display:block;padding:.6rem 1rem;border:1px solid var(--line);border-radius:10px;background:rgba(7,11,24,.5);font:700 .95rem/1 var(--sans);transition:transform .3s}
+.gioco-visual span:nth-child(1){margin-right:55%}.gioco-visual span:nth-child(2){margin-right:40%}.gioco-visual span:nth-child(3){margin-right:25%}.gioco-visual span:nth-child(4){margin-right:10%}
+.gioco-visual span:nth-child(5){border-color:var(--anti);color:var(--anti)}
+.gioco:hover .gioco-visual span{transform:translateX(6px)}
