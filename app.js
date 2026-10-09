@@ -52,6 +52,7 @@
       var t = j.si + j.no, ps = t ? Math.round(j.si / t * 100) : 50;
       d.querySelector(".b.si").style.width = ps + "%"; d.querySelector(".b.no").style.width = (100 - ps) + "%";
       d.querySelector(".esv").innerHTML = t ? "<span>S\u00ec " + ps + "%</span><span>" + t + (t === 1 ? " voto" : " voti") + "</span><span>No " + (100 - ps) + "%</span>" : "Sii il primo a votare.";
+      if (t && window.ddConta) window.ddConta(d);
     }
     function blocca(v) {
       [].forEach.call(d.querySelectorAll("button"), function (b) { b.disabled = true; if (b.dataset.v === v) b.classList.add("mia"); });
@@ -111,6 +112,7 @@
     return '<a href="' + esc(s[1]) + '"' + (s[1].indexOf("mailto:") ? ' target="_blank" rel="noopener"' : "") + ">" + s[0] + "</a>";
   }).join("");
 
+  var an = document.createElement("script"); an.src = "/anim.js"; an.defer = true; document.body.appendChild(an);
   if (page === "home") home();
   if (page === "articolo") articolo();
 
