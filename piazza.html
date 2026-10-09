@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/piazza.css">
+<link rel="icon" type="image/png" href="/assets/logo-64.png">
+<link rel="apple-touch-icon" href="/assets/logo-192.png">
+<title>Piazza Aperta — Davide Durazzi</title>
+<meta name="description" content="La community di Davide Durazzi: discuti con gli altri e scegli i temi delle prossime dirette.">
+</head>
+<body data-page="piazza">
+<header class="top"><div class="wrap">
+  <a class="logo" href="/"><img src="/assets/logo-64.png" alt="" width="34" height="34">Davide Durazzi</a>
+  <nav aria-label="Sezioni">
+    <a href="/#diretta">Diretta</a><a href="/#contraddittorio">Il Contraddittorio</a><a href="/#articoli">Articoli</a><a href="/#video">Video</a><a href="/#gioco">Il Sistema</a><a href="/#offerte">Offerte</a><a href="/piazza">Piazza Aperta</a>
+  </nav>
+</div></header>
+<main class="wrap pz">
+  <h1>Piazza Aperta</h1>
+  <p class="intro">Qui parli con gli altri e decidi di cosa parleremo in diretta. Serve un account gratuito per scrivere e votare; leggere è libero.</p>
+
+  <div id="barra" class="pz-barra"></div>
+
+  <div id="accesso" class="pz-box" hidden>
+    <div class="pz-tabs" role="tablist">
+      <button type="button" data-t="entra" aria-pressed="true">Entra</button>
+      <button type="button" data-t="reg" aria-pressed="false">Crea account</button>
+    </div>
+    <form id="fEntra" class="pz-form" autocomplete="on">
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="btn pieno" type="submit">Entra</button>
+    </form>
+    <form id="fReg" class="pz-form" autocomplete="on" hidden>
+      <label>Nome pubblico<input name="nome" autocomplete="nickname" minlength="3" maxlength="24" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Password (min. 8 caratteri)<input name="password" type="password" autocomplete="new-password" minlength="8" required></label>
+      <label class="trappola" aria-hidden="true">Sito<input name="sito" tabindex="-1" autocomplete="off"></label>
+      <label class="pz-chk"><input type="checkbox" name="privacy" required> Ho letto l'<a href="/privacy" target="_blank">informativa privacy</a> (obbligatorio)</label>
+      <label class="pz-chk"><input type="checkbox" name="news"> Voglio ricevere novità e avvisi sulle dirette via email (facoltativo)</label>
+      <button class="btn pieno" type="submit">Crea account</button>
+    </form>
+    <p class="nota" id="esitoAcc" role="status"></p>
+  </div>
+
+  <section class="pz-sez">
+    <h2>Temi per le prossime dirette</h2>
+    <form id="fTema" class="pz-riga" hidden>
+      <input name="titolo" placeholder="Proponi un tema (es. Il salario minimo funziona?)" minlength="8" maxlength="140" required>
+      <button class="btn pieno" type="submit">Proponi</button>
+    </form>
+    <ol id="temi" class="pz-temi"></ol>
+  </section>
+
+  <section class="pz-sez">
+    <h2>Discussioni</h2>
+    <form id="fPost" class="pz-form" hidden>
+      <label class="sr" for="tPost">Scrivi un messaggio</label>
+      <textarea id="tPost" name="testo" maxlength="1000" placeholder="Cosa ne pensi?" required></textarea>
+      <input type="hidden" name="rif">
+      <div class="pz-riga"><span class="small" id="rispA"></span><button class="btn pieno" type="submit">Pubblica</button></div>
+    </form>
+    <p class="nota" id="esitoPost" role="status"></p>
+    <ul id="posts" class="pz-posts"></ul>
+  </section>
+  <p class="small">Siate rispettosi: i messaggi offensivi vengono nascosti. Con 3 segnalazioni un messaggio sparisce in attesa di revisione.</p>
+</main>
+<footer><div class="wrap"><strong>Davide Durazzi</strong><span class="small"><a href="/privacy">Privacy</a> · <a href="/">Home</a></span></div></footer>
+<script src="/piazza.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
