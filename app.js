@@ -256,11 +256,7 @@
       document.body.appendChild(s);
     }
 
-    // Piazza Aperta
-    var p = $("proponi");
-    if (safeUrl(S.modulTemi)) { p.href = S.modulTemi; p.target = "_blank"; p.rel = "noopener"; }
-    else if (S.email) { p.href = "mailto:" + S.email + "?subject=" + encodeURIComponent("Proposta per Piazza Aperta"); }
-    else { p.hidden = true; }
+    // Piazza Aperta: il pulsante porta a /piazza (community con account)
   }
 
   function commenti(slug) {
