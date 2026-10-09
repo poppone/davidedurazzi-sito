@@ -45,8 +45,8 @@
   invia($("#fEntra"), "entra", entrato);
   invia($("#fReg"), "registrati", entrato);
 
-  invia($("#fTema"), "proponi", function (j, f) { f.reset(); temi(); });
-  invia($("#fPost"), "scrivi", function (j, f) { f.reset(); f.rif.value = ""; $("#rispA").textContent = ""; $("#esitoPost").textContent = ""; posts(); });
+  invia($("#fTema"), "proponi", function (j, f) { f.reset(); if (j.messaggio) alert(j.messaggio); temi(); });
+  invia($("#fPost"), "scrivi", function (j, f) { f.reset(); f.rif.value = ""; $("#rispA").textContent = ""; $("#esitoPost").textContent = j.messaggio || ""; posts(); });
 
   function temi() {
     api("temi").then(function (j) {

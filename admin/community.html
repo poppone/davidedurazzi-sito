@@ -8,16 +8,33 @@
 <link rel="icon" type="image/png" href="/assets/logo-64.png">
 <link rel="stylesheet" href="/style.css">
 <style>
-  .mod{max-width:760px;margin:0 auto;padding:1.5rem clamp(1rem,4vw,2rem) 4rem}
+  .mod{max-width:820px;margin:0 auto;padding:1.5rem clamp(1rem,4vw,2rem) 4rem}
   .mod h1{font:800 2rem/1.1 var(--sans);margin:.5rem 0 1rem}
-  .mod h2{font:800 1.3rem var(--sans);margin:2rem 0 .8rem}
+  .mod h2{font:800 1.2rem var(--sans);margin:0 0 .8rem;display:flex;align-items:center;gap:.6rem}
+  .sez{margin:2rem 0}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.6rem;margin:1rem 0}
+  .stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:.7rem .9rem}
+  .stat b{display:block;font:800 1.7rem var(--sans)}
+  .stat span{color:var(--muted);font-size:.85rem}
+  .stat.alert{border-color:var(--anti)}
+  .opzioni{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;justify-content:space-between;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem}
+  .opzioni label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+  .opzioni small{display:block;color:var(--muted)}
   .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem;margin-bottom:.6rem}
-  .card.off{opacity:.5}
-  .card .dove{color:var(--muted);font-size:.88rem}
-  .card p{margin:.3rem 0 .6rem;white-space:pre-line;overflow-wrap:anywhere}
+  .card .top2{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+  .card .dove{color:var(--muted);font-size:.85rem}
+  .card p{margin:.4rem 0 .7rem;white-space:pre-line;overflow-wrap:anywhere}
+  .badge{font:700 .72rem var(--sans);border-radius:999px;padding:.15rem .6rem;border:1px solid var(--line);color:var(--muted)}
+  .badge.on{border-color:#2e9b5b;color:#2e9b5b}
+  .badge.att{border-color:#e0a000;color:#e0a000}
+  .badge.off{border-color:var(--anti);color:var(--anti)}
+  .acts{display:flex;gap:.5rem;flex-wrap:wrap}
+  .acts .btn{min-height:38px;padding:.4rem .9rem;font-size:.88rem}
+  .btn.rosso{border-color:var(--anti);color:var(--anti)}
   .vuoto,.esito{color:var(--muted)}
+  .conta{background:var(--ink);color:var(--bg);border-radius:999px;font-size:.8rem;padding:.1rem .6rem}
   .login{display:grid;gap:.7rem;max-width:360px}
-  .login input,.mod textarea{width:100%;font:400 1rem var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.65rem .75rem}
+  .login input{width:100%;font:400 1rem var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.65rem .75rem}
 </style>
 </head>
 <body>
@@ -28,7 +45,7 @@
 </main>
 <script>
 (function () {
-  var app = document.getElementById("app"), pw = sessionStorage.getItem("pw") || "";
+  var app = document.getElementById("app"), pw = sessionStorage.getItem("pw") || "", dati = null;
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function api(a, corpo) {
     return fetch("/api/community?a=" + a, { method: "POST", headers: { "Content-Type": "application/json", "x-admin-password": pw }, body: JSON.stringify(corpo || {}) })
@@ -39,27 +56,63 @@
     document.getElementById("f").onsubmit = function (e) { e.preventDefault(); pw = document.getElementById("p").value; sessionStorage.setItem("pw", pw); carica(); };
   }
   function carica() {
-    api("admin-elenco").then(disegna).catch(function (e) {
+    api("admin-elenco").then(function (j) { dati = j; disegna(); }).catch(function (e) {
       if (/Password/.test(e.message)) { sessionStorage.removeItem("pw"); login("Password errata."); } else app.innerHTML = '<p class="vuoto">' + esc(e.message) + '</p>';
     });
   }
-  function disegna(j) {
-    var h = '<p>Iscritti: <b>' + j.utenti + '</b> <button class="btn" id="csv" type="button">Scarica contatti (CSV)</button></p>';
-    h += '<h2>Temi proposti (' + j.temi.length + ')</h2>';
-    var temi = j.temi.slice().sort(function (a, b) { return b.voti - a.voti; });
-    h += temi.length ? temi.map(function (t) {
-      return '<div class="card' + (t.nascosto ? " off" : "") + '"><b>▲ ' + t.voti + '</b> ' + esc(t.titolo) + '<div class="dove">di ' + esc(t.nome) + '</div>' +
-        '<button class="btn" data-tipo="tema" data-id="' + t.id + '" data-n="' + (t.nascosto ? 0 : 1) + '" type="button">' + (t.nascosto ? "Mostra" : "Nascondi") + '</button></div>';
-    }).join("") : '<p class="vuoto">Nessun tema.</p>';
-    h += '<h2>Messaggi (' + j.posts.length + ')</h2>';
-    h += j.posts.length ? j.posts.map(function (p) {
-      return '<div class="card' + (p.nascosto ? " off" : "") + '"><b>' + esc(p.nome) + '</b> <span class="dove">' + new Date(p.data).toLocaleString("it-IT") + (p.segn ? " · " + p.segn + " segnalazioni" : "") + '</span><p>' + esc(p.testo) + '</p>' +
-        '<button class="btn" data-tipo="post" data-id="' + p.id + '" data-n="' + (p.nascosto ? 0 : 1) + '" type="button">' + (p.nascosto ? "Mostra" : "Nascondi") + '</button></div>';
-    }).join("") : '<p class="vuoto">Nessun messaggio.</p>';
+  function stato(o) {
+    if (o.attesa) return ["att", "In attesa"];
+    if (o.nascosto) return ["off", o.segn >= 3 ? "Nascosto (segnalato)" : "Nascosto"];
+    return ["on", "Pubblicato"];
+  }
+  function card(tipo, o) {
+    var st = stato(o), tema = tipo === "tema";
+    var b = '<div class="acts">';
+    if (o.attesa || o.nascosto) b += '<button class="btn pieno" data-az="pubblica" type="button">Pubblica</button>';
+    else b += '<button class="btn" data-az="nascondi" type="button">Nascondi</button>';
+    b += '<button class="btn rosso" data-az="elimina" type="button">Elimina</button></div>';
+    return '<div class="card" data-tipo="' + tipo + '" data-id="' + o.id + '"><div class="top2"><span class="badge">' + (tema ? "TEMA · ▲ " + o.voti : "MESSAGGIO") + '</span><b>' + esc(o.nome) + '</b>' +
+      '<span class="badge ' + st[0] + '">' + st[1] + '</span>' + (o.segn ? '<span class="badge off">' + o.segn + ' segnalazioni</span>' : '') +
+      '<span class="dove">' + new Date(o.data).toLocaleString("it-IT", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) + '</span></div>' +
+      '<p>' + esc(tema ? o.titolo : o.testo) + '</p>' + b + '</div>';
+  }
+  function sezione(titolo, lista, tipoVuoto) {
+    return '<div class="sez"><h2>' + titolo + ' <span class="conta">' + lista.length + '</span></h2>' +
+      (lista.length ? lista.map(function (x) { return card(x.t, x.o); }).join("") : '<p class="vuoto">' + tipoVuoto + '</p>') + '</div>';
+  }
+  function disegna() {
+    var tutti = dati.temi.map(function (o) { return { t: "tema", o: o }; }).concat(dati.posts.map(function (o) { return { t: "post", o: o }; }));
+    tutti.sort(function (a, b) { return new Date(b.o.data) - new Date(a.o.data); });
+    var daRivedere = tutti.filter(function (x) { return x.o.attesa || (x.o.nascosto && x.o.segn); });
+    var nascosti = tutti.filter(function (x) { return x.o.nascosto && !x.o.attesa && !x.o.segn; });
+    var pubblici = tutti.filter(function (x) { return !x.o.nascosto && !x.o.attesa; });
+    var temiPub = pubblici.filter(function (x) { return x.t === "tema"; }).sort(function (a, b) { return b.o.voti - a.o.voti; });
+    var postPub = pubblici.filter(function (x) { return x.t === "post"; });
+
+    var h = '<div class="stats"><div class="stat"><b>' + dati.utenti + '</b><span>Iscritti</span></div>' +
+      '<div class="stat"><b>' + dati.temi.length + '</b><span>Temi</span></div>' +
+      '<div class="stat"><b>' + dati.posts.length + '</b><span>Messaggi</span></div>' +
+      '<div class="stat' + (daRivedere.length ? " alert" : "") + '"><b>' + daRivedere.length + '</b><span>Da rivedere</span></div></div>';
+    h += '<div class="opzioni"><label><input type="checkbox" id="mod"' + (dati.moderazione ? " checked" : "") + '><span><b>Approva prima di pubblicare</b>' +
+      '<small>' + (dati.moderazione ? "Attivo: i nuovi messaggi e temi aspettano il tuo OK." : "Spento: i nuovi messaggi escono subito (puoi nasconderli dopo).") + '</small></span></label>' +
+      '<button class="btn" id="csv" type="button">Scarica contatti (CSV)</button></div>';
+    h += sezione("Da rivedere", daRivedere, "Niente da rivedere. 🎉");
+    h += sezione("Temi per le dirette (pubblicati)", temiPub, "Nessun tema pubblicato.");
+    h += sezione("Messaggi pubblicati", postPub, "Nessun messaggio pubblicato.");
+    if (nascosti.length) h += sezione("Nascosti", nascosti, "");
     app.innerHTML = h;
-    app.querySelectorAll("button[data-id]").forEach(function (b) {
-      b.onclick = function () { api("admin-nascondi", { tipo: b.dataset.tipo, id: b.dataset.id, nascondi: b.dataset.n === "1" }).then(carica).catch(function (e) { alert(e.message); }); };
+
+    app.querySelectorAll(".card .btn").forEach(function (b) {
+      b.onclick = function () {
+        var c = b.closest(".card"), az = b.dataset.az, corpo = { tipo: c.dataset.tipo, id: c.dataset.id };
+        if (az === "elimina" && !confirm("Eliminare definitivamente? Non si può annullare.")) return;
+        b.disabled = true;
+        api("admin-" + az, corpo).then(carica).catch(function (e) { alert(e.message); b.disabled = false; });
+      };
     });
+    document.getElementById("mod").onchange = function (e) {
+      api("admin-moderazione", { attiva: e.target.checked }).then(carica).catch(function (er) { alert(er.message); });
+    };
     document.getElementById("csv").onclick = function () {
       api("admin-contatti").then(function (r) {
         var righe = ["nome,email,data"].concat(r.contatti.map(function (c) { return [c.nome, c.email, c.data].map(function (x) { return '"' + String(x).replace(/"/g, '""') + '"'; }).join(","); }));

@@ -62,8 +62,8 @@ module.exports = async (req, res) => {
       if (!adminOk(req)) return err(res, 401, "Password errata");
       if (a === "admin-elenco") {
         const [posts, temi] = await Promise.all([carica("p:", "piazza", 100), carica("t:", "temi", 100)]);
-        const [n] = await db(["SCARD", "utenti"]);
-        return res.json({ utenti: n, posts, temi });
+        const [n, mod] = await db(["SCARD", "utenti"], ["GET", "cfg:mod"]);
+        return res.json({ utenti: n, posts, temi, moderazione: mod === "1" });
       }
       if (a === "admin-nascondi") {
         const k = b.tipo === "tema" ? "t:" : "p:";
@@ -72,6 +72,23 @@ module.exports = async (req, res) => {
         const o = JSON.parse(v); o.nascosto = !!b.nascondi;
         await db(["SET", k + b.id, JSON.stringify(o)]);
         return res.json({ ok: true });
+      }
+      if (a === "admin-pubblica") {
+        const k = b.tipo === "tema" ? "t:" : "p:";
+        const [v] = await db(["GET", k + b.id]);
+        if (!v) return err(res, 404, "Non trovato");
+        const o = JSON.parse(v); o.nascosto = false; o.attesa = false; o.segn = 0;
+        await db(["SET", k + b.id, JSON.stringify(o)], ["DEL", "sg:" + b.id]);
+        return res.json({ ok: true });
+      }
+      if (a === "admin-elimina") {
+        const tema = b.tipo === "tema";
+        await db(["DEL", (tema ? "t:" : "p:") + b.id], ["LREM", tema ? "temi" : "piazza", "0", String(b.id)], ["DEL", "tv:" + b.id], ["DEL", "sg:" + b.id]);
+        return res.json({ ok: true });
+      }
+      if (a === "admin-moderazione") {
+        await db(b.attiva ? ["SET", "cfg:mod", "1"] : ["DEL", "cfg:mod"]);
+        return res.json({ ok: true, moderazione: !!b.attiva });
       }
       if (a === "admin-contatti") {
         const [ids] = await db(["SMEMBERS", "utenti"]);
@@ -159,8 +176,10 @@ module.exports = async (req, res) => {
       if ((testo.match(/https?:\/\//g) || []).length > 1) return err(res, 400, "Massimo un link per messaggio");
       if (!(await limite("w:" + u.id, 6, 600))) return err(res, 429, "Vai piano: riprova tra qualche minuto");
       const p = { id: nuovoId(), uid: u.id, nome: u.nome, testo, rif: /^[a-z0-9]{6,20}$/.test(b.rif || "") ? b.rif : null, data: new Date().toISOString(), segn: 0 };
+      const [mod] = await db(["GET", "cfg:mod"]);
+      if (mod === "1") { p.nascosto = true; p.attesa = true; }
       await db(["SET", "p:" + p.id, JSON.stringify(p)], ["LPUSH", "piazza", p.id]);
-      return res.json({ ok: true, id: p.id });
+      return res.json({ ok: true, id: p.id, messaggio: p.attesa ? "Grazie! Il messaggio sarà visibile dopo l'approvazione." : "" });
     }
     if (a === "segnala") {
       const [v] = await db(["GET", "p:" + b.id]);
@@ -177,8 +196,10 @@ module.exports = async (req, res) => {
       if (titolo.length < 8 || titolo.length > 140) return err(res, 400, "Il tema deve avere tra 8 e 140 caratteri");
       if (!(await limite("pt:" + u.id, 3, 86400))) return err(res, 429, "Massimo 3 proposte al giorno");
       const t = { id: nuovoId(), uid: u.id, nome: u.nome, titolo, data: new Date().toISOString(), voti: 1 };
+      const [mod] = await db(["GET", "cfg:mod"]);
+      if (mod === "1") { t.nascosto = true; t.attesa = true; }
       await db(["SET", "t:" + t.id, JSON.stringify(t)], ["LPUSH", "temi", t.id], ["SADD", "tv:" + t.id, u.id]);
-      return res.json({ ok: true });
+      return res.json({ ok: true, messaggio: t.attesa ? "Grazie! Il tema sarà visibile dopo l'approvazione." : "" });
     }
     if (a === "vota") {
       const [v] = await db(["GET", "t:" + b.id]);
