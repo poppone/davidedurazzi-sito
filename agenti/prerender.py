@@ -105,10 +105,32 @@ def html_social(cfg) -> str:
         voci.append(("X", f"https://x.com/{cfg['x']}"))
     if cfg.get("linkedin"):
         voci.append(("LinkedIn", f"https://www.linkedin.com/in/{cfg['linkedin']}/"))
+    if url_ok(cfg.get("donazioni")):
+        voci.append(("Sostienimi", cfg["donazioni"]))
     if cfg.get("email"):
         voci.append(("Scrivimi", f"mailto:{cfg['email']}"))
     return "".join(f'<a href="{e(u)}"' + ("" if u.startswith("mailto:") else ' target="_blank" rel="noopener"')
                    + f">{n}</a>" for n, u in voci)
+
+
+def html_acquisto(cfg, a) -> str:
+    """Box "Dove comprarlo" con link affiliato, solo se l'articolo indica un gioco o un prodotto."""
+    from urllib.parse import quote_plus
+    x = a.get("acquisto") or {}
+    nome = str(x.get("nome") or "").strip()
+    if not nome:
+        return ""
+    if x.get("tipo") == "gioco" and cfg.get("instantGaming"):
+        url = f"https://www.instant-gaming.com/it/ricerca/?query={quote_plus(nome)}&igr={quote_plus(cfg['instantGaming'])}"
+        dove = "Instant Gaming"
+    elif x.get("tipo") == "prodotto" and cfg.get("amazonTag"):
+        url = f"https://www.amazon.it/s?k={quote_plus(nome)}&tag={quote_plus(cfg['amazonTag'])}"
+        dove = "Amazon"
+    else:
+        return ""
+    return ('<div class="acquisto"><h2>Dove comprarlo</h2>'
+            f'<a class="btn" href="{e(url)}" target="_blank" rel="sponsored noopener">Cerca {e(nome)} su {dove}</a>'
+            '<p class="nota-aff">Link affiliato: se compri da qui ricevo una piccola commissione, a te non costa nulla.</p></div>')
 
 
 def pagina_articolo(cfg, a, modello: str) -> str:
@@ -155,7 +177,7 @@ def pagina_articolo(cfg, a, modello: str) -> str:
         f'<a class="back" href="/#articoli">Torna agli articoli</a>'
         f'<p class="meta">{e(nome_sezione(cfg, a.get("sezione")))}, '
         f'<time datetime="{e(a.get("data"))}">{e(data_it(a.get("data")))}</time></p>'
-        f'<h1>{e(a.get("titolo"))}</h1>{som}{duello}<div class="corpo">{corpo}</div>{blocco_fonti}'
+        f'<h1>{e(a.get("titolo"))}</h1>{som}{duello}<div class="corpo">{corpo}</div>{blocco_fonti}{html_acquisto(cfg, a)}'
         '<div class="acts" style="margin-top:2rem"><a class="btn pieno" href="/#diretta">'
         '<span class="dot" aria-hidden="true"></span>Ne parliamo in diretta</a></div>'
         '<section class="commenti" id="commenti"><h2>Commenti</h2><div id="listaCommenti">'

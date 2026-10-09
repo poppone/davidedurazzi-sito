@@ -30,6 +30,13 @@ window.SITE = {
   modulTemi: "",
   email: "info@davidedurazzi.it",
 
+  // Affiliazioni: link "Dove comprarlo" in fondo agli articoli (lascia "" per spegnerle)
+  instantGaming: "poppone",   // codice igr di Instant Gaming, per i giochi
+  amazonTag: "",              // tag Amazon Affiliati (es. "davidedurazzi-21"), per i prodotti tech
+
+  // Donazioni: link alla tua pagina Ko-fi o PayPal.me (lascia "" per nasconderle)
+  donazioni: "",
+
   // Sezioni del sito (gli id coincidono esattamente con agenti/config.py)
   sezioni: [
     { id: "tecnologia", nome: "Tecnologia" },

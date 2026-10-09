@@ -66,7 +66,9 @@ def redattore(tema: dict, fonti: list[dict], problemi: list[str] | None = None) 
 Struttura: cosa è successo, perché conta per le persone, cosa resta da capire.{correzioni}
 
 Formato:
-{{"titolo":"max 90 caratteri","sommario":"1-2 frasi","testo":["3-5 paragrafi brevi"],"domande_live":["3 domande da porre al pubblico in diretta"]}}
+{{"titolo":"max 90 caratteri","sommario":"1-2 frasi","testo":["3-5 paragrafi brevi"],"domande_live":["3 domande da porre al pubblico in diretta"],"acquisto":{{"tipo":"gioco|prodotto|nessuno","nome":"..."}}}}
+
+Campo "acquisto": se l'articolo parla soprattutto di UN videogioco preciso metti tipo "gioco" e il nome esatto del gioco; se parla di UN prodotto tech preciso che si compra (telefono, cuffie, console, accessorio) metti tipo "prodotto" e nome e modello esatti. In tutti gli altri casi (aziende, leggi, servizi, notizie generali) metti tipo "nessuno" e nome vuoto. Mai inventare nomi che non sono nelle notizie.
 
 NOTIZIE:
 {_fonti_testo(fonti)}"""

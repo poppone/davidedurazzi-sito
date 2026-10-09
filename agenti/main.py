@@ -17,6 +17,14 @@ BOZZE = RADICE / "bozze" / "bozze.json"
 OGGI = datetime.now(ZoneInfo("Europe/Rome"))
 
 
+
+def acquisto_pulito(x) -> dict | None:
+    """Tiene solo {"tipo": "gioco"|"prodotto", "nome": "..."}; tutto il resto diventa None."""
+    if not isinstance(x, dict):
+        return None
+    tipo, nome = str(x.get("tipo", "")).strip(), str(x.get("nome", "")).strip()[:80]
+    return {"tipo": tipo, "nome": nome} if tipo in ("gioco", "prodotto") and nome else None
+
 def slug(t: str) -> str:
     t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")[:70] + "-" + OGGI.strftime("%Y%m%d")
@@ -102,6 +110,7 @@ def main() -> None:
             "fonti": [{"nome": f"{f['testata']}: {f['titolo']}", "url": f["url"]} for f in fonti],
             "nota_critico": verifica.get("problemi", []),
             "domande_live": art.get("domande_live", []),
+            "acquisto": acquisto_pulito(art.get("acquisto")),
         }
         if tema is dibattito:
             c = agenti.contraddittorio(tema, fonti)

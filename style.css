@@ -346,3 +346,9 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .mk-regole strong{font-family:var(--sans)}
 .mk-mail{display:grid;gap:.8rem;min-width:0}
 .mk-indirizzo{font:800 clamp(1.2rem,3.4vw,1.7rem)/1.2 var(--sans);overflow-wrap:anywhere;user-select:all}
+
+/* ===== Dove comprarlo (link affiliato) ===== */
+.acquisto{margin-top:2rem;padding:1.1rem 1.2rem;border:1px solid var(--line);border-radius:16px;background:var(--paper);display:grid;gap:.7rem;justify-items:start}
+.acquisto h2{margin:0;font:700 1.1rem var(--sans)}
+.acquisto .btn{max-width:100%;white-space:normal;line-height:1.25}
+.acquisto .nota-aff{margin:0}

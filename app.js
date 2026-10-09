@@ -115,6 +115,7 @@
   if (S.instagram) social.push(["Instagram", "https://www.instagram.com/" + S.instagram + "/"]);
   if (S.x) social.push(["X", "https://x.com/" + S.x]);
   if (S.linkedin) social.push(["LinkedIn", "https://www.linkedin.com/in/" + S.linkedin + "/"]);
+  if (safeUrl(S.donazioni)) social.push(["Sostienimi", S.donazioni]);
   if (S.email) social.push(["Scrivimi", "mailto:" + S.email]);
   $("social").innerHTML = social.map(function (s) {
     return '<a href="' + esc(s[1]) + '"' + (s[1].indexOf("mailto:") ? ' target="_blank" rel="noopener"' : "") + ">" + s[0] + "</a>";
@@ -291,6 +292,16 @@
     });
   }
 
+  // Box "Dove comprarlo": link affiliato solo se l'articolo indica un gioco o un prodotto
+  function acquisto(a) {
+    var x = a.acquisto || {}, nome = String(x.nome || "").trim(), url = "", dove = "";
+    if (!nome) return "";
+    if (x.tipo === "gioco" && S.instantGaming) { url = "https://www.instant-gaming.com/it/ricerca/?query=" + encodeURIComponent(nome) + "&igr=" + encodeURIComponent(S.instantGaming); dove = "Instant Gaming"; }
+    else if (x.tipo === "prodotto" && S.amazonTag) { url = "https://www.amazon.it/s?k=" + encodeURIComponent(nome) + "&tag=" + encodeURIComponent(S.amazonTag); dove = "Amazon"; }
+    else return "";
+    return '<div class="acquisto"><h2>Dove comprarlo</h2><a class="btn" href="' + esc(url) + '" target="_blank" rel="sponsored noopener">Cerca ' + esc(nome) + " su " + dove + "</a>" +
+      '<p class="nota-aff">Link affiliato: se compri da qui ricevo una piccola commissione, a te non costa nulla.</p></div>';
+  }
   function articolo() {
     var slug = document.body.dataset.slug || new URLSearchParams(location.search).get("slug");
     var pb = document.createElement("div"); pb.className = "progress"; document.body.appendChild(pb);
@@ -315,7 +326,7 @@
         '<div class="corpo">' + (a.testo || []).map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") + "</div>" +
         (fonti.length ? '<div class="fonti"><h2>Fonti</h2><ul>' + fonti.map(function (f) {
           return '<li><a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome || f.url) + "</a></li>";
-        }).join("") + "</ul></div>" : "") +
+        }).join("") + "</ul></div>" : "") + acquisto(a) +
         '<div class="acts" style="margin-top:2rem"><a class="btn pieno" href="/#diretta"><span class="dot" aria-hidden="true"></span>Ne parliamo in diretta</a></div>' +
         '<section class="commenti" id="commenti"><h2>Commenti</h2><div id="listaCommenti"><p class="meta">Caricamento dei commenti.</p></div>' +
         '<form class="form-commento" id="formCommento"><h3>Dì la tua</h3>' +
