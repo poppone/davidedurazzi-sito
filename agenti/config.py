@@ -8,6 +8,10 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 # Usati in ordine se il modello principale non risponde o ha finito la quota gratuita
 MODELLI_RISERVA = ["gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.5-flash-lite"]
 
+# Riserva gratuita Groq (opzionale): secret GROQ_API_KEY. Modelli provati in ordine.
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+GROQ_MODELLI = [m for m in [os.environ.get("GROQ_MODEL", ""), "llama-3.3-70b-versatile", "llama-3.1-8b-instant"] if m]
+
 # Pausa tra una chiamata e l'altra (secondi) per stare nei limiti del free tier
 PAUSA_TRA_CHIAMATE = 7
 

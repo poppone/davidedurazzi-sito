@@ -1,4 +1,5 @@
-"""Chiamata a Gemini via REST, con risposta JSON, gestione dei limiti e modelli di riserva."""
+"""Chiamata a Gemini via REST, con risposta JSON, gestione dei limiti e modelli di riserva.
+Se Gemini non risponde, ripiega su Groq (gratuito) quando e impostata GROQ_API_KEY."""
 import json
 import re
 import time
@@ -23,7 +24,55 @@ def _attesa_suggerita(r: requests.Response) -> float:
     return float(m.group(1)) + 2 if m else 20.0
 
 
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+
+
+def _groq(sistema: str, richiesta: str, temperatura: float) -> dict:
+    """Riserva gratuita: Groq (API compatibile OpenAI). Prova i modelli in ordine."""
+    ultimo = ""
+    for modello in config.GROQ_MODELLI:
+        for tentativo in range(2):
+            try:
+                r = requests.post(
+                    GROQ_URL,
+                    headers={"Authorization": f"Bearer {config.GROQ_API_KEY}", "Content-Type": "application/json"},
+                    json={"model": modello, "temperature": temperatura, "response_format": {"type": "json_object"},
+                          "messages": [{"role": "system", "content": sistema + "\nRispondi solo con un oggetto JSON valido, in italiano."},
+                                       {"role": "user", "content": richiesta}]},
+                    timeout=120,
+                )
+            except requests.exceptions.RequestException as e:
+                ultimo = f"{modello}: rete {e}"
+                time.sleep(10)
+                continue
+            if r.status_code == 200:
+                try:
+                    return json.loads(r.json()["choices"][0]["message"]["content"])
+                except (KeyError, IndexError, json.JSONDecodeError):
+                    ultimo = f"{modello}: JSON non valido"
+                    continue
+            ultimo = f"{modello}: HTTP {r.status_code} {r.text[:300]}"
+            print(f"[llm] groq {ultimo}")
+            if r.status_code == 429:
+                time.sleep(min(30, 8 * (tentativo + 1)))
+                continue
+            break
+        time.sleep(3)
+    raise RuntimeError(f"Groq non disponibile. Ultimo errore: {ultimo}")
+
+
 def chiedi(sistema: str, richiesta: str, temperatura: float = 0.4) -> dict:
+    """Prova Gemini; se fallisce e c'e la chiave Groq, usa Groq."""
+    try:
+        return _gemini(sistema, richiesta, temperatura)
+    except RuntimeError as e:
+        if not config.GROQ_API_KEY:
+            raise
+        print(f"[llm] {e} -> uso Groq")
+        return _groq(sistema, richiesta, temperatura)
+
+
+def _gemini(sistema: str, richiesta: str, temperatura: float = 0.4) -> dict:
     global _ultima
     if not config.GEMINI_API_KEY:
         raise RuntimeError("Manca GEMINI_API_KEY (secret del repository).")
