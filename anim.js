@@ -78,3 +78,32 @@
     });
   }
 })();
+
+// ---- Impatto visivo: anello attorno al logo, fascia scorrevole, parallasse hero ----
+(function () {
+  "use strict";
+  var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var logo = document.querySelector(".hero-logo");
+  if (logo && !logo.parentNode.classList.contains("logo-wrap")) {
+    var w = document.createElement("span"); w.className = "logo-wrap";
+    logo.parentNode.insertBefore(w, logo); w.appendChild(logo);
+  }
+  var st = document.getElementById("stage");
+  if (!st) return;
+  var f = document.createElement("div"); f.className = "fascia"; f.setAttribute("aria-hidden", "true");
+  var parole = ["Tecnologia", "Intelligenza Artificiale", "Gaming", "Il Contraddittorio", "Attualità", "Senza copione"];
+  var html = ""; for (var k = 0; k < 4; k++) html += parole.map(function (x) { return "<span>" + x + "</span>"; }).join("");
+  f.innerHTML = '<div class="fascia-tr">' + html + "</div>";
+  st.after(f);
+  if (reduce) return;
+  var tr = f.firstChild, hero = st.querySelector(".hero"), ticking = false;
+  function aggiorna() {
+    ticking = false;
+    var y = window.scrollY, h = st.offsetHeight;
+    if (y < h) hero.style.transform = "translateY(" + (y * .18).toFixed(1) + "px)";
+    hero.style.opacity = y < h ? Math.max(.25, 1 - y / (h * 1.3)).toFixed(2) : .25;
+    tr.style.transform = "translateX(" + (-y * .6).toFixed(0) + "px)";
+  }
+  addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(aggiorna); } }, { passive: true });
+  aggiorna();
+})();
