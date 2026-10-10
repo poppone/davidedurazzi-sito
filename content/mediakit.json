@@ -5,7 +5,7 @@
     { "id": "tiktok", "nome": "TikTok", "url": "https://www.tiktok.com/@popponetv", "valore": 9918, "etichetta": "follower", "extra": "" },
     { "id": "youtube", "nome": "YouTube", "url": "https://www.youtube.com/@davidedurazzioff", "valore": 793, "etichetta": "iscritti", "extra": "46.747 visualizzazioni e 95 video pubblicati negli ultimi 30 giorni" },
     { "id": "instagram", "nome": "Instagram", "url": "https://www.instagram.com/davidedurazzi.it/", "valore": 690, "etichetta": "follower", "extra": "" },
-    { "id": "facebook", "nome": "Facebook", "url": "", "valore": 514, "etichetta": "follower", "extra": "" },
+    { "id": "facebook", "nome": "Facebook", "url": "https://www.facebook.com/share/1Dcj9Y33r6/", "valore": 514, "etichetta": "follower", "extra": "" },
     { "id": "linkedin", "nome": "LinkedIn", "url": "https://www.linkedin.com/in/davide-durazzi-36a52665/", "valore": 176, "etichetta": "collegamenti", "extra": "" },
     { "id": "twitch", "nome": "Twitch", "url": "https://www.twitch.tv/DavideDurazzi", "valore": 58, "etichetta": "follower", "extra": "Diretta ogni martedì alle 21:30" },
     { "id": "x", "nome": "X", "url": "https://x.com/PopponeTV", "valore": null, "etichetta": "follower", "extra": "" }
