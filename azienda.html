@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/png" href="/assets/logo-64.png">
+<link rel="apple-touch-icon" href="/assets/logo-192.png">
+<title>L'azienda — Davide Durazzi</title>
+<meta name="description" content="Un'azienda con un solo umano e una squadra di agenti AI: chi sono, cosa fanno, quanto costano e quanto rendono. Tutto allo scoperto.">
+<link rel="canonical" href="https://www.davidedurazzi.it/azienda">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.davidedurazzi.it/azienda">
+<meta property="og:title" content="L'azienda di un solo umano — Davide Durazzi">
+<meta property="og:description" content="Un umano, una squadra di agenti AI, i conti aperti.">
+<meta property="og:image" content="https://www.davidedurazzi.it/assets/logo-512.png">
+</head>
+<body data-page="azienda">
+<header class="top"><div class="wrap">
+  <a class="logo" href="/"><img src="/assets/logo-64.png" alt="" width="34" height="34">Davide Durazzi</a>
+  <nav aria-label="Sezioni">
+    <a href="/#diretta">Diretta</a><a href="/#contraddittorio">Il Contraddittorio</a><a href="/#articoli">Articoli</a><a href="/#video">Video</a><a href="/#gioco">Il Sistema</a><a href="/#app">Ricordati</a><a href="/#offerte">Offerte</a><a href="/piazza">Piazza Aperta</a>
+  </nav>
+</div></header>
+
+<main class="wrap az">
+  <section class="mk-apertura">
+    <p class="mk-tag">L'azienda · <span id="azData">ottobre 2026</span></p>
+    <h1>Un'azienda con un solo umano. Io.</h1>
+    <p class="mk-lead">Di giorno lavoro tra le auto. Dalle 4 alle 7 del mattino, prima di svegliare i ragazzi, ho messo in piedi una squadra di agenti di intelligenza artificiale: scrivono, montano video, pubblicano, vendono, fanno i conti. Qui trovi chi sono, cosa fanno e, ogni settimana, quanto costano e quanto rendono. Anche quando i conti sono in rosso.</p>
+  </section>
+
+  <section class="blocco" id="umano">
+    <div class="testa"><h2>L'umano</h2></div>
+    <div class="az-umano" id="azUmano"><div><strong>Davide Durazzi</strong><span>Fondatore e unico dipendente umano</span></div><p>Decide cosa fare, approva tutto quello che esce, ci mette la faccia.</p></div>
+  </section>
+
+  <section class="blocco" id="squadra">
+    <div class="testa"><h2>La squadra</h2><p>Ogni agente fa un lavoro solo. Nessuno pubblica niente di importante senza che io lo approvi.</p></div>
+    <div id="azReparti"><p class="meta">Caricamento della squadra.</p></div>
+  </section>
+
+  <section class="blocco" id="prodotti">
+    <div class="testa"><h2>Cosa costruisce</h2><p>I prodotti dell'azienda, anche quelli ancora in cantiere.</p></div>
+    <ul class="mk-formati" id="azProdotti"></ul>
+  </section>
+
+  <section class="blocco" id="bilancio">
+    <div class="testa"><h2>I conti, allo scoperto</h2><p>Costi e entrate di ogni settimana, in euro. Aggiornati ogni lunedì.</p></div>
+    <div class="az-tab"><table><thead><tr><th scope="col">Settimana dal</th><th scope="col">Costi</th><th scope="col">Entrate</th><th scope="col">Risultato</th></tr></thead><tbody id="azBilancio"></tbody></table></div>
+    <p class="meta" id="azNota"></p>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <strong>Davide Durazzi</strong>
+  <nav id="social" aria-label="Social"></nav>
+  <span class="small"><a href="/azienda">L'azienda</a> · <a href="/media-kit">Collabora</a> · <a href="/privacy">Privacy</a></span>
+</div></footer>
+<script src="/config.js"></script>
+<script src="/app.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var euro = function (n) { return typeof n === "number" ? new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR" }).format(n) : "in arrivo"; };
+  var STATI = { "attivo": "Attivo", "in prova": "In prova", "fermo": "Fermo", "pubblicato": "Pubblicato", "in costruzione": "In costruzione", "in progetto": "In progetto" };
+  var pill = function (s) { return '<span class="az-stato az-' + esc(String(s).replace(/\s+/g, "-")) + '">' + esc(STATI[s] || s) + "</span>"; };
+  fetch("/content/azienda.json").then(function (r) { return r.json(); }).then(function (j) {
+    if (j.aggiornato) { var d = new Date(j.aggiornato + "T12:00:00"); if (!isNaN(d)) $("azData").textContent = "aggiornata al " + d.toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" }); }
+    if (j.umano) $("azUmano").innerHTML = "<div><strong>" + esc(j.umano.nome) + "</strong><span>" + esc(j.umano.ruolo) + "</span></div><p>" + esc(j.umano.compiti) + "</p>";
+    var n = 0;
+    var html = (j.reparti || []).map(function (rep) {
+      n += (rep.agenti || []).length;
+      return '<div class="az-reparto"><h3>' + esc(rep.nome) + '</h3><ul class="az-agenti">' + (rep.agenti || []).map(function (a) {
+        return '<li><div class="az-riga"><strong>' + esc(a.nome) + "</strong>" + pill(a.stato) + "</div><p>" + esc(a.ruolo) + '</p><span class="az-turno">' + esc(a.turno) + "</span></li>";
+      }).join("") + "</ul></div>";
+    }).join("");
+    $("azReparti").innerHTML = '<p class="az-conta"><strong>' + n + "</strong> agenti al lavoro, divisi in " + (j.reparti || []).length + " reparti, per 1 umano.</p>" + html;
+    $("azProdotti").innerHTML = (j.prodotti || []).map(function (p) {
+      var link = /^https?:\/\//.test(p.link || "") ? '<a class="btn" href="' + esc(p.link) + '" target="_blank" rel="noopener">Provalo</a>' : "";
+      return '<li><div class="az-riga"><h3>' + esc(p.nome) + "</h3>" + pill(p.stato) + "</div><p>" + esc(p.cosa) + "</p>" + link + "</li>";
+    }).join("");
+    var righe = j.bilancio || [];
+    $("azBilancio").innerHTML = righe.map(function (b) {
+      var d = new Date(b.settimana + "T12:00:00");
+      var ris = typeof b.costi === "number" && typeof b.entrate === "number" ? b.entrate - b.costi : null;
+      return "<tr><td>" + esc(isNaN(d) ? b.settimana : d.toLocaleDateString("it-IT", { day: "numeric", month: "short", year: "numeric" })) + "</td><td>" + euro(b.costi) + "</td><td>" + euro(b.entrate) + '</td><td class="' + (ris == null ? "" : ris < 0 ? "az-neg" : "az-pos") + '">' + euro(ris) + "</td></tr>";
+    }).join("");
+    var ultima = righe[righe.length - 1];
+    $("azNota").textContent = ultima && ultima.nota ? ultima.nota : "";
+  }).catch(function () { $("azReparti").innerHTML = '<p class="meta">La squadra non si è caricata. Ricarica la pagina.</p>'; });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

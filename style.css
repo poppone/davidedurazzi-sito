@@ -371,3 +371,33 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 @media (prefers-reduced-motion:reduce){.app-scrivi::after{animation:none}}
 .mk-num.mk-tot{grid-column:1/-1;border-color:rgba(123,151,255,.6);background:linear-gradient(160deg,rgba(47,85,228,.22),rgba(232,90,22,.12)),var(--paper)}
 .mk-num.mk-tot .mk-v{font-size:clamp(2.8rem,8vw,4.2rem)}
+
+/* ===== L'azienda ===== */
+.az-umano{display:grid;gap:.6rem;padding:1.2rem;border:1px solid rgba(123,151,255,.6);border-radius:16px;background:linear-gradient(160deg,rgba(47,85,228,.22),rgba(232,90,22,.12)),var(--paper);max-width:720px}
+.az-umano div{display:flex;flex-wrap:wrap;gap:.3rem 1rem;align-items:baseline}
+.az-umano strong{font:900 1.6rem/1.1 var(--sans);font-stretch:118%}
+.az-umano span{color:var(--anti);font-weight:600}
+.az-umano p{margin:0;color:var(--muted)}
+.az-conta{margin:0 0 1.4rem;font-size:1.1rem}
+.az-conta strong{font:900 2rem/1 var(--sans);color:var(--tesi)}
+.az-reparto{margin-bottom:1.8rem}
+.az-reparto h3{margin:0 0 .7rem;font:800 1.1rem var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--anti)}
+.az-agenti{list-style:none;margin:0;padding:0;display:grid;gap:.8rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr))}
+.az-agenti li{display:grid;gap:.35rem;align-content:start;padding:1rem;border:1px solid var(--line);border-radius:14px;background:var(--paper);min-width:0}
+.az-agenti p,.az #azProdotti p{margin:0;color:var(--muted)}
+.az-riga{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.4rem .8rem}
+.az-riga h3{margin:0}
+.az-turno{font-size:.85rem;color:var(--muted)}
+.az-stato{font:700 .75rem/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;border-radius:999px;padding:.35rem .6rem;border:1px solid var(--line)}
+.az-attivo,.az-pubblicato{color:#4FD39A;border-color:rgba(79,211,154,.45)}
+.az-in-prova,.az-in-costruzione{color:var(--anti);border-color:rgba(255,138,76,.45)}
+.az-fermo,.az-in-progetto{color:var(--muted)}
+#azProdotti .btn{align-self:flex-start}
+.az-tab{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+.az-tab table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:440px}
+.az-tab th,.az-tab td{padding:.8rem 1rem;text-align:left;border-bottom:1px solid var(--line)}
+.az-tab th{font-size:.85rem;color:var(--muted);font-weight:600}
+.az-tab tr:last-child td{border-bottom:0}
+.az-neg{color:var(--live)}
+.az-pos{color:#4FD39A}
+#bilancio .meta{margin-top:.8rem}

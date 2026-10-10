@@ -1,0 +1,142 @@
+{
+  "_nota": "Pagina /azienda. Agenti: aggiungi, togli o cambia stato (attivo, in prova, fermo). Bilancio: una riga per settimana, importi in euro; null = non ancora inserito.",
+  "aggiornato": "2026-10-10",
+  "umano": {
+    "nome": "Davide Durazzi",
+    "ruolo": "Fondatore e unico dipendente umano",
+    "compiti": "Decide cosa fare, approva tutto quello che esce, ci mette la faccia. Lo fa dalle 4 alle 7 del mattino, prima di svegliare i ragazzi e andare al lavoro."
+  },
+  "reparti": [
+    {
+      "nome": "Redazione",
+      "agenti": [
+        {
+          "nome": "Scout",
+          "ruolo": "Cerca le notizie del giorno sulle testate italiane, area per area",
+          "stato": "attivo",
+          "turno": "Ogni mattina"
+        },
+        {
+          "nome": "Fact-checker",
+          "ruolo": "Scarta ogni notizia che non trova su almeno due testate diverse",
+          "stato": "attivo",
+          "turno": "Ogni mattina"
+        },
+        {
+          "nome": "Redattore",
+          "ruolo": "Scrive la bozza dell'articolo con le fonti in fondo",
+          "stato": "attivo",
+          "turno": "Ogni mattina"
+        },
+        {
+          "nome": "Critico",
+          "ruolo": "Rilegge la bozza e la rimanda indietro se trova errori o toni di parte",
+          "stato": "attivo",
+          "turno": "Ogni mattina"
+        },
+        {
+          "nome": "Il Contraddittorio",
+          "ruolo": "Tre agenti: un moderatore sceglie la domanda, due sostengono il Sì e il No",
+          "stato": "attivo",
+          "turno": "Ogni mattina"
+        },
+        {
+          "nome": "Redazione AI commenti",
+          "ruolo": "Risponde alle domande pratiche dei lettori, sempre firmandosi come AI",
+          "stato": "attivo",
+          "turno": "A ogni commento approvato"
+        }
+      ]
+    },
+    {
+      "nome": "Video",
+      "agenti": [
+        {
+          "nome": "Samaritan · Gaming",
+          "ruolo": "Sceglie la notizia, scrive, dà la voce, monta e pubblica gli Short gaming",
+          "stato": "attivo",
+          "turno": "4 Short al giorno"
+        },
+        {
+          "nome": "Samaritan · Notizie",
+          "ruolo": "Il telegiornale in 60 secondi sul canale Notizie in 60 secondi",
+          "stato": "attivo",
+          "turno": "2 Short al giorno"
+        },
+        {
+          "nome": "Samaritan · Animali",
+          "ruolo": "Video per TikTok che portano al negozio ZampaViva",
+          "stato": "in prova",
+          "turno": "In avvio"
+        }
+      ]
+    },
+    {
+      "nome": "Distribuzione",
+      "agenti": [
+        {
+          "nome": "Social",
+          "ruolo": "Trasforma ogni articolo approvato in carosello e post per Instagram, Facebook e LinkedIn",
+          "stato": "attivo",
+          "turno": "A ogni articolo approvato"
+        }
+      ]
+    },
+    {
+      "nome": "Commerciale",
+      "agenti": [
+        {
+          "nome": "ZampaViva",
+          "ruolo": "Negozio online di accessori per cani e gatti, spedizioni dal fornitore",
+          "stato": "in prova",
+          "turno": "Sempre aperto"
+        }
+      ]
+    },
+    {
+      "nome": "Amministrazione",
+      "agenti": [
+        {
+          "nome": "Analista",
+          "ruolo": "Ogni lunedì raccoglie i numeri di canali, sito e negozio e dice cosa spingere e cosa spegnere",
+          "stato": "attivo",
+          "turno": "Lunedì alle 8:55"
+        }
+      ]
+    }
+  ],
+  "prodotti": [
+    {
+      "nome": "Ricordati",
+      "cosa": "App Android: scrivi un promemoria come lo diresti a voce e lei imposta tutto",
+      "stato": "pubblicato",
+      "link": "https://play.google.com/store/apps/details?id=it.durazzi.ricordati"
+    },
+    {
+      "nome": "Il Sistema",
+      "cosa": "Videogioco di satira politica italiana",
+      "stato": "pubblicato",
+      "link": "https://durazzidev.itch.io/il-sistema"
+    },
+    {
+      "nome": "Il Contraddittorio per tutti",
+      "cosa": "Incolli una notizia o un messaggio e ottieni le due posizioni più forti, con le fonti",
+      "stato": "in costruzione",
+      "link": ""
+    },
+    {
+      "nome": "Il passaporto dell'auto usata",
+      "cosa": "La storia di un'auto usata in una pagina chiara, ricostruita dai documenti",
+      "stato": "in progetto",
+      "link": ""
+    }
+  ],
+  "bilancio": [
+    {
+      "settimana": "2026-10-12",
+      "costi": null,
+      "entrate": null,
+      "nota": "Il primo bilancio settimanale esce lunedì 12 ottobre."
+    }
+  ]
+}
