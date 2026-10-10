@@ -102,7 +102,8 @@
     if (S.twitch) l.push('<a class="tw" href="https://www.twitch.tv/' + esc(S.twitch) + '" target="_blank" rel="noopener">Twitch</a>');
     if (safeUrl(S.youtubeUrl)) l.push('<a href="' + esc(S.youtubeUrl) + '" target="_blank" rel="noopener">YouTube</a>');
     if (S.instagram) l.push('<a href="https://www.instagram.com/' + esc(S.instagram) + '/" target="_blank" rel="noopener">Instagram</a>');
-    if (S.x) l.push('<a href="https://x.com/' + esc(S.x) + '" target="_blank" rel="noopener">X</a>');
+    if (S.tiktok) l.push('<a href="https://www.tiktok.com/@' + esc(S.tiktok) + '" target="_blank" rel="noopener">TikTok</a>');
+    else if (S.x) l.push('<a href="https://x.com/' + esc(S.x) + '" target="_blank" rel="noopener">X</a>');
     if (!l.length) return;
     var n = document.createElement("nav"); n.className = "barra-mobile"; n.setAttribute("aria-label", "Seguimi"); n.innerHTML = l.join("");
     document.body.appendChild(n);
@@ -113,6 +114,7 @@
   if (S.twitch) social.push(["Twitch", "https://www.twitch.tv/" + S.twitch]);
   if (safeUrl(S.youtubeUrl)) social.push(["YouTube", S.youtubeUrl]);
   if (S.instagram) social.push(["Instagram", "https://www.instagram.com/" + S.instagram + "/"]);
+  if (S.tiktok) social.push(["TikTok", "https://www.tiktok.com/@" + S.tiktok]);
   if (S.x) social.push(["X", "https://x.com/" + S.x]);
   if (S.linkedin) social.push(["LinkedIn", "https://www.linkedin.com/in/" + S.linkedin + "/"]);
   if (safeUrl(S.donazioni)) social.push(["Sostienimi", S.donazioni]);

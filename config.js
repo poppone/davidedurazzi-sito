@@ -17,6 +17,8 @@ window.SITE = {
 
   // Instagram: profilo + link dei post da mostrare
   instagram: "davidedurazzi.it",
+  // TikTok: username senza @
+  tiktok: "davidedurazzi",
   // X (Twitter): username senza @
   x: "PopponeTV",
 
