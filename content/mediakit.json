@@ -2,7 +2,7 @@
   "_nota": "Numeri del media kit. Aggiorna i valori a mano; un canale con valore null non viene mostrato. In cima la pagina mostra da sola la somma dei follower. Le statistiche del sito arrivano da /api/mediakit.",
   "aggiornato": "2026-10-10",
   "canali": [
-    { "id": "tiktok", "nome": "TikTok", "url": "https://www.tiktok.com/@popponetv", "valore": 9918, "etichetta": "follower", "extra": "" },
+    { "id": "tiktok", "nome": "TikTok", "url": "https://www.tiktok.com/@davidedurazzi", "valore": 9918, "etichetta": "follower", "extra": "" },
     { "id": "youtube", "nome": "YouTube", "url": "https://www.youtube.com/@davidedurazzioff", "valore": 793, "etichetta": "iscritti", "extra": "46.747 visualizzazioni e 95 video pubblicati negli ultimi 30 giorni" },
     { "id": "instagram", "nome": "Instagram", "url": "https://www.instagram.com/davidedurazzi.it/", "valore": 690, "etichetta": "follower", "extra": "" },
     { "id": "facebook", "nome": "Facebook", "url": "https://www.facebook.com/share/1Dcj9Y33r6/", "valore": 514, "etichetta": "follower", "extra": "" },
