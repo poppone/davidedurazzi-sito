@@ -409,3 +409,9 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .cpt-attenzione{margin:0;padding:1rem 1.2rem;border-radius:14px;border:1px solid var(--live);background:rgba(229,38,59,.12);font-weight:600}
 #cptRisultato .piede ul,#cptRisultato .lato ul{margin:.4rem 0 0;padding-left:1.1rem}
 .cpt-dopo{margin:0}
+
+/* Sostienimi (Ko-fi) */
+.top .sostieni{flex:none;display:inline-flex;align-items:center;gap:.35rem;min-height:38px;padding:.45rem .95rem;border-radius:999px;background:var(--anti);color:#1a0c02;font:700 .9rem/1 var(--sans);text-decoration:none;white-space:nowrap;transition:transform .15s,box-shadow .2s}
+.top .sostieni:hover{transform:translateY(-2px);box-shadow:0 6px 22px -6px rgba(255,138,76,.65)}
+@media(max-width:700px){.top .wrap{gap:.6rem}.top .sostieni{padding:.4rem .75rem;font-size:.85rem}.barra-mobile a{font-size:.8rem}}
+.barra-mobile a.ko{background:var(--anti);color:#1a0c02}

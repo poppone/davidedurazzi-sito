@@ -104,9 +104,20 @@
     if (S.instagram) l.push('<a href="https://www.instagram.com/' + esc(S.instagram) + '/" target="_blank" rel="noopener">Instagram</a>');
     if (S.tiktok) l.push('<a href="https://www.tiktok.com/@' + esc(S.tiktok) + '" target="_blank" rel="noopener">TikTok</a>');
     else if (S.x) l.push('<a href="https://x.com/' + esc(S.x) + '" target="_blank" rel="noopener">X</a>');
+    if (safeUrl(S.donazioni)) l.push('<a class="ko" href="' + esc(S.donazioni) + '" target="_blank" rel="noopener">&#9749; Sostieni</a>');
     if (!l.length) return;
     var n = document.createElement("nav"); n.className = "barra-mobile"; n.setAttribute("aria-label", "Seguimi"); n.innerHTML = l.join("");
     document.body.appendChild(n);
+  })();
+
+  // Pulsante "Sostienimi" ben visibile nell'header
+  (function () {
+    if (!safeUrl(S.donazioni)) return;
+    var w = document.querySelector(".top .wrap");
+    if (!w) return;
+    var a = document.createElement("a"); a.className = "sostieni"; a.href = S.donazioni;
+    a.target = "_blank"; a.rel = "noopener"; a.innerHTML = "&#9749; Sostienimi";
+    w.appendChild(a);
   })();
 
   // Social nel footer
