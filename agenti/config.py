@@ -27,7 +27,7 @@ PALINSESTO = {
 }
 
 # Finestra temporale delle notizie (ore)
-ORE_NOTIZIE = 30
+ORE_NOTIZIE = 48
 
 # Fonti RSS filtrate per Tecnologia, AI e Gaming.
 FEED = [
@@ -36,12 +36,14 @@ FEED = [
     {"area": "tecnologia", "testata": "Wired Italia", "url": "https://www.wired.it/feed/rss"},
     {"area": "tecnologia", "testata": "HDblog", "url": "https://www.hdblog.it/feed/"},
     {"area": "tecnologia", "testata": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/tecnologia.xml"},
+    {"area": "tecnologia", "testata": "Punto Informatico", "url": "https://www.punto-informatico.it/feed/"},
     
     # AI (condivide fonti tecnologiche per far trovare notizie anche all'area AI)
     {"area": "ai", "testata": "ANSA", "url": "https://www.ansa.it/sito/notizie/tecnologia/tecnologia_rss.xml"},
     {"area": "ai", "testata": "Wired Italia", "url": "https://www.wired.it/feed/rss"},
     {"area": "ai", "testata": "HDblog", "url": "https://www.hdblog.it/feed/"},
     {"area": "ai", "testata": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/tecnologia.xml"},
+    {"area": "ai", "testata": "Punto Informatico", "url": "https://www.punto-informatico.it/feed/"},
 
     # Gaming (corretto l'URL di Multiplayer)
     {"area": "gaming", "testata": "Multiplayer.it", "url": "https://multiplayer.it/feed/"},
