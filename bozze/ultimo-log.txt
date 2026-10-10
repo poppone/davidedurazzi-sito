@@ -1,5 +1,6 @@
-[fonti] 75 notizie raccolte, per area: {'tecnologia': 20, 'gaming': 30}
-[palinsesto] oggi: ['attualita', 'gaming', 'tecnologia']
+[fonti] 64 notizie raccolte, per area: {'tecnologia': 16, 'gaming': 30}
+[palinsesto] oggi: ['attualita', 'ai', 'gaming']
+[scout] nessun tema valido per 'ai'
 [llm] gemini-flash-latest: HTTP 503 {
   "error": {
     "code": 503,
@@ -8,20 +9,7 @@
   }
 }
 
-[llm] gemini-flash-latest: HTTP 503 {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
-    "status": "UNAVAILABLE"
-  }
-}
-
-[llm] gemini-flash-latest: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20,
+[scout] nessun tema valido per 'gaming'
+[palinsesto] ripiego su 'tecnologia'
 [scout] nessun tema valido per 'tecnologia'
-[palinsesto] ripiego su 'ai'
-[critico] riscrivo 'Cyberpunk 2077 sbarca al cinema: Paramount annuncia il film live action'
-[critico] riscrivo 'Intelligenza artificiale e matematica: tra scoperte e polemiche'
-Fatto: 2 bozze pronte da approvare.
+Nessun tema ha superato il fact-check oggi.
