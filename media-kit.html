@@ -37,7 +37,7 @@
   <section class="blocco" id="numeri">
     <div class="testa"><h2>I numeri</h2><p>Canali e sito, tutti in italiano. Le statistiche del sito si aggiornano da sole.</p></div>
     <div class="mk-numeri" id="mkNumeri">
-      <div class="mk-num mk-tot"><span class="mk-v">12.149</span><span class="mk-l">follower sommati su tutti i canali</span><span class="mk-x">TikTok, YouTube, Instagram, Facebook, LinkedIn e Twitch</span></div>
+      <div class="mk-num mk-tot"><span class="mk-v">12.149</span><span class="mk-l">follower, iscritti e collegamenti sommati su tutti i canali</span><span class="mk-x">TikTok, YouTube, Instagram, Facebook, LinkedIn e Twitch</span></div>
     </div>
     <p class="meta" id="mkNotaSito"></p>
   </section>
@@ -111,7 +111,7 @@
     });
     if (conNumero.length > 1) {
       var totale = conNumero.reduce(function (s, c) { return s + c.valore; }, 0);
-      h.unshift(tile(fmt(totale), "follower sommati su tutti i canali", conNumero.map(function (c) { return c.nome; }).join(", ")).replace('class="mk-num"', 'class="mk-num mk-tot"'));
+      h.unshift(tile(fmt(totale), "follower, iscritti e collegamenti sommati su tutti i canali", conNumero.map(function (c) { return c.nome; }).join(", ")).replace('class="mk-num"', 'class="mk-num mk-tot"'));
     }
     if (sito && sito.visite30 > 0) {
       h.push(tile(fmt(sito.visite30), "visite al sito in 30 giorni", sito.unici_media_giorno ? fmt(sito.unici_media_giorno) + " visitatori unici al giorno in media" : ""));
