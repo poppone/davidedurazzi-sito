@@ -134,9 +134,9 @@
   "bilancio": [
     {
       "settimana": "2026-10-05",
-      "costi": 2.79,
+      "costi": 23.56,
       "entrate": 0,
-      "nota": "Costi: Shopify circa 12 € al mese e dominio 1 € l'anno, divisi per settimana. Tutti gli agenti girano su piani gratuiti. Entrate: ancora nessuna vendita; le commissioni dei link affiliati partono da questa settimana."
+      "nota": "Costi: Claude 90 € al mese (è lo strumento con cui costruisco gli agenti), Shopify circa 12 € al mese e dominio 1 € l'anno, divisi per settimana. Gli agenti girano su piani gratuiti. Entrate: ancora nessuna vendita; le commissioni dei link affiliati partono da questa settimana."
     }
   ]
 }
