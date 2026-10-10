@@ -28,7 +28,7 @@ jobs:
           git config user.name "redazione-ai"
           git config user.email "actions@users.noreply.github.com"
           for d in bozze content ig articoli index.html sitemap.xml robots.txt; do [ -e "$d" ] && git add "$d"; done
-          git diff --cached --quiet || (git commit -m "Pubblicati articoli approvati" && git push)
+          git diff --cached --quiet || (git commit -m "Pubblicati articoli approvati" && git pull --rebase -X theirs && git push)
       - name: Pubblica su Instagram
         run: python agenti/instagram.py pubblica
         env:
@@ -46,4 +46,4 @@ jobs:
       - name: Registra i post pubblicati
         run: |
           [ -e social ] && git add social; [ -e content/community.json ] && git add content/community.json
-          git diff --cached --quiet || (git commit -m "Pubblicato sui social" && git push)
+          git diff --cached --quiet || (git commit -m "Pubblicato sui social" && git pull --rebase -X theirs && git push)
