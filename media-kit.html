@@ -37,7 +37,7 @@
   <section class="blocco" id="numeri">
     <div class="testa"><h2>I numeri</h2><p>Canali e sito, tutti in italiano. Le statistiche del sito si aggiornano da sole.</p></div>
     <div class="mk-numeri" id="mkNumeri">
-      <div class="mk-num"><span class="mk-v">793</span><span class="mk-l">iscritti su YouTube</span></div>
+      <div class="mk-num mk-tot"><span class="mk-v">12.149</span><span class="mk-l">follower sommati su tutti i canali</span><span class="mk-x">TikTok, YouTube, Instagram, Facebook, LinkedIn e Twitch</span></div>
     </div>
     <p class="meta" id="mkNotaSito"></p>
   </section>
@@ -105,9 +105,14 @@
   };
   var canali = [], sito = null;
   function disegna() {
-    var h = canali.filter(function (c) { return typeof c.valore === "number"; }).map(function (c) {
+    var conNumero = canali.filter(function (c) { return typeof c.valore === "number"; });
+    var h = conNumero.map(function (c) {
       return tile(fmt(c.valore), c.etichetta + " su " + c.nome, c.extra, /^https?:\/\//.test(c.url) ? c.url : "");
     });
+    if (conNumero.length > 1) {
+      var totale = conNumero.reduce(function (s, c) { return s + c.valore; }, 0);
+      h.unshift(tile(fmt(totale), "follower sommati su tutti i canali", conNumero.map(function (c) { return c.nome; }).join(", ")).replace('class="mk-num"', 'class="mk-num mk-tot"'));
+    }
     if (sito && sito.visite30 > 0) {
       h.push(tile(fmt(sito.visite30), "visite al sito in 30 giorni", sito.unici_media_giorno ? fmt(sito.unici_media_giorno) + " visitatori unici al giorno in media" : ""));
       if (sito.newsletter >= 50) h.push(tile(fmt(sito.newsletter), "iscritti alla newsletter", ""));

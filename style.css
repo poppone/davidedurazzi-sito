@@ -369,3 +369,5 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .app-card span{color:var(--muted);font-size:.92rem}
 .app-card .app-sveglia{color:var(--anti);font-weight:600}
 @media (prefers-reduced-motion:reduce){.app-scrivi::after{animation:none}}
+.mk-num.mk-tot{grid-column:1/-1;border-color:rgba(123,151,255,.6);background:linear-gradient(160deg,rgba(47,85,228,.22),rgba(232,90,22,.12)),var(--paper)}
+.mk-num.mk-tot .mk-v{font-size:clamp(2.8rem,8vw,4.2rem)}
