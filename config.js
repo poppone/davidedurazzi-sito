@@ -37,7 +37,7 @@ window.SITE = {
   amazonTag: "",              // tag Amazon Affiliati (es. "davidedurazzi-21"), per i prodotti tech
 
   // Donazioni: link alla tua pagina Ko-fi o PayPal.me (lascia "" per nasconderle)
-  donazioni: "",
+  donazioni: "https://ko-fi.com/davidedurazzi",
 
   // Sezioni del sito (gli id coincidono esattamente con agenti/config.py)
   sezioni: [
