@@ -1,14 +1,6 @@
-[fonti] 64 notizie raccolte, per area: {'tecnologia': 16, 'gaming': 30}
+[fonti] 53 notizie raccolte, per area: {'tecnologia': 15, 'gaming': 28}
 [palinsesto] oggi: ['attualita', 'ai', 'gaming']
 [scout] nessun tema valido per 'ai'
-[llm] gemini-flash-latest: HTTP 503 {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
-    "status": "UNAVAILABLE"
-  }
-}
-
 [scout] nessun tema valido per 'gaming'
 [palinsesto] ripiego su 'tecnologia'
 [scout] nessun tema valido per 'tecnologia'
