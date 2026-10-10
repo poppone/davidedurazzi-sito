@@ -1,7 +1,9 @@
-[fonti] 53 notizie raccolte, per area: {'tecnologia': 15, 'gaming': 28}
-[palinsesto] oggi: ['attualita', 'ai', 'gaming']
-[scout] nessun tema valido per 'ai'
+[fonti] 50 notizie raccolte, per area: {'tecnologia': 15, 'gaming': 25}
+[palinsesto] oggi: ['gaming', 'tecnologia', 'ai']
+[scout] risposta senza tema per 'gaming': {'tema': None}
 [scout] nessun tema valido per 'gaming'
-[palinsesto] ripiego su 'tecnologia'
+[scout] risposta senza tema per 'tecnologia': {'tema': None}
 [scout] nessun tema valido per 'tecnologia'
+[scout] risposta senza tema per 'ai': {'tema': None}
+[scout] nessun tema valido per 'ai'
 Nessun tema ha superato il fact-check oggi.
