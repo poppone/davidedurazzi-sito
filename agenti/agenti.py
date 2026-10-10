@@ -41,7 +41,10 @@ NOTIZIE:
 
     try:
         r = chiedi(REGOLE, prompt)
-        return r.get("tema") if isinstance(r, dict) else None
+        tema = r.get("tema") if isinstance(r, dict) else None
+        if not tema:
+            print(f"[scout] risposta senza tema per '{area}': {str(r)[:200]}")
+        return tema
     except Exception as e:
         print(f"[scout] Errore durante la chiamata LLM: {e}")
         return None

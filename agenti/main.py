@@ -1,4 +1,5 @@
 """Redazione del mattino: notizie -> temi -> articoli -> Contraddittorio -> bozze da approvare."""
+import os
 import json
 import re
 import sys
@@ -42,7 +43,8 @@ def main() -> None:
     per_id = {n["id"]: n for n in notizie}
 
     # Palinsesto del giorno: 1 tema di attualità + 2 aree fisse
-    aree_oggi = ["attualita"] + config.PALINSESTO[OGGI.weekday()]
+    forzate = [a.strip() for a in os.environ.get("AREE", "").split(",") if a.strip()]
+    aree_oggi = forzate or (["attualita"] + config.PALINSESTO[OGGI.weekday()])
     print(f"[palinsesto] oggi: {aree_oggi}")
     temi, scelti = [], []
 
