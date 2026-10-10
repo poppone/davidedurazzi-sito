@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/png" href="/assets/logo-64.png">
+<link rel="apple-touch-icon" href="/assets/logo-192.png">
+<title>Il Contraddittorio per tutti — Davide Durazzi</title>
+<meta name="description" content="Incolla una notizia, un post o un messaggio: ottieni le due posizioni più forti e cosa controllare prima di farti un'opinione. Gratis.">
+<link rel="canonical" href="https://www.davidedurazzi.it/contraddittorio-per-tutti">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.davidedurazzi.it/contraddittorio-per-tutti">
+<meta property="og:title" content="Il Contraddittorio per tutti">
+<meta property="og:description" content="Incolla una notizia: ti do il Sì, il No e cosa controllare.">
+<meta property="og:image" content="https://www.davidedurazzi.it/assets/logo-512.png">
+</head>
+<body data-page="cpt">
+<header class="top"><div class="wrap">
+  <a class="logo" href="/"><img src="/assets/logo-64.png" alt="" width="34" height="34">Davide Durazzi</a>
+  <nav aria-label="Sezioni">
+    <a href="/#diretta">Diretta</a><a href="/#contraddittorio">Il Contraddittorio</a><a href="/#articoli">Articoli</a><a href="/#video">Video</a><a href="/#gioco">Il Sistema</a><a href="/#app">Ricordati</a><a href="/#offerte">Offerte</a><a href="/piazza">Piazza Aperta</a>
+  </nav>
+</div></header>
+
+<main class="wrap cpt">
+  <section class="mk-apertura">
+    <p class="mk-tag">Un prodotto dell'<a href="/azienda">azienda</a> · gratis</p>
+    <h1>Il Contraddittorio per tutti</h1>
+    <p class="mk-lead">Incolla una notizia, un post o un messaggio che ti è arrivato su WhatsApp. Ti restituisco la domanda vera, le due posizioni più forti e cosa controllare prima di farti un'opinione. Poi decidi tu.</p>
+  </section>
+
+  <section class="blocco" id="prova">
+    <form class="form-commento cpt-form" id="cptForm" novalidate>
+      <label for="cptTesto">Il testo da analizzare</label>
+      <textarea id="cptTesto" name="testo" maxlength="4000" required placeholder="Incolla qui una notizia, un post, un messaggio..."></textarea>
+      <label class="trappola" aria-hidden="true">Sito<input name="sito" tabindex="-1" autocomplete="off"></label>
+      <div class="cpt-riga"><span class="small" id="cptConta">0 / 4.000</span><button class="btn pieno" type="submit" id="cptVai">Fammi vedere le due posizioni</button></div>
+      <p class="nota">Il testo non viene salvato. Le posizioni le scrive un'intelligenza artificiale sulla base di quello che incolli: non verifica i fatti, per questo ti dice cosa controllare.</p>
+      <p class="esito-commento" id="cptEsito" role="status"></p>
+    </form>
+    <div id="cptRisultato" hidden></div>
+  </section>
+
+  <section class="blocco" id="come">
+    <div class="testa"><h2>Come funziona</h2></div>
+    <div class="mk-cosa">
+      <div><h3>Trova la domanda</h3><p>Ogni notizia nasconde una questione su cui le persone non sono d'accordo. Il primo passo è scriverla chiara, come una domanda a cui si risponde Sì o No.</p></div>
+      <div><h3>Il meglio di tutte e due</h3><p>Il Sì e il No nella loro versione più forte, con lo stesso spazio. Niente caricature dell'altra parte.</p></div>
+      <div><h3>Cosa controllare</h3><p>Le affermazioni da verificare prima di crederci, e dove si possono controllare. Se sembra una truffa o una catena, te lo dice.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <strong>Davide Durazzi</strong>
+  <nav id="social" aria-label="Social"></nav>
+  <span class="small"><a href="/azienda">L'azienda</a> · <a href="/media-kit">Collabora</a> · <a href="/privacy">Privacy</a></span>
+</div></footer>
+<script src="/config.js"></script>
+<script src="/app.js"></script>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var t = $("cptTesto");
+  t.addEventListener("input", function () { $("cptConta").textContent = new Intl.NumberFormat("it-IT").format(t.value.length) + " / 4.000"; });
+  var lato = function (cls, nome, l) {
+    return '<div class="lato ' + cls + '"><h4>' + nome + "</h4>" + (l.titolo ? "<p><strong>" + esc(l.titolo) + "</strong></p>" : "") +
+      "<ul>" + (l.punti || []).map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul></div>";
+  };
+  $("cptForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var testo = t.value.trim();
+    if (testo.length < 40) { $("cptEsito").textContent = "Incolla un testo un po' più lungo: almeno un paio di frasi."; return; }
+    var bt = $("cptVai"); bt.disabled = true; bt.textContent = "Sto ragionando...";
+    $("cptEsito").textContent = ""; $("cptRisultato").hidden = true;
+    fetch("/api/analizza", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ testo: testo, sito: e.target.sito.value }) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.errore || "Errore"); return j; }); })
+      .then(function (j) {
+        var h = "";
+        if (j.attenzione) h += '<p class="cpt-attenzione">' + esc(j.attenzione) + "</p>";
+        if (j.valido) {
+          h += '<div class="duello"><div class="domanda"><p class="meta">La domanda</p><h3>' + esc(j.domanda) + '</h3></div><div class="lati">' +
+            lato("si", "Sì", j.tesi || {}) + lato("no", "No", j.antitesi || {}) + "</div>";
+          if ((j.da_verificare || []).length) h += '<div class="piede"><p><strong>Prima di farti un\'opinione, controlla:</strong></p><ul>' + j.da_verificare.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div>";
+          h += "</div>";
+          h += '<p class="meta cpt-dopo">Ti è servito? Il Contraddittorio del giorno, con le fonti verificate, lo trovi <a href="/#contraddittorio">in home</a>. E il martedì alle 21:30 ne parliamo <a href="/#diretta">in diretta</a>.</p>';
+        }
+        $("cptRisultato").innerHTML = h; $("cptRisultato").hidden = false;
+        $("cptRisultato").scrollIntoView({ behavior: "smooth", block: "start" });
+      })
+      .catch(function (err) { $("cptEsito").textContent = err.message || "Qualcosa non ha funzionato. Riprova."; })
+      .then(function () { bt.disabled = false; bt.textContent = "Fammi vedere le due posizioni"; });
+  });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

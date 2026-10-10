@@ -401,3 +401,11 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .az-neg{color:var(--live)}
 .az-pos{color:#4FD39A}
 #bilancio .meta{margin-top:.8rem}
+
+/* ===== Il Contraddittorio per tutti ===== */
+.cpt-form textarea{min-height:11rem}
+.cpt-riga{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.6rem}
+#cptRisultato{margin-top:1.6rem;display:grid;gap:1rem}
+.cpt-attenzione{margin:0;padding:1rem 1.2rem;border-radius:14px;border:1px solid var(--live);background:rgba(229,38,59,.12);font-weight:600}
+#cptRisultato .piede ul,#cptRisultato .lato ul{margin:.4rem 0 0;padding-left:1.1rem}
+.cpt-dopo{margin:0}

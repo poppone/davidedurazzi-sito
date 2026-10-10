@@ -121,8 +121,8 @@
     {
       "nome": "Il Contraddittorio per tutti",
       "cosa": "Incolli una notizia o un messaggio e ottieni le due posizioni più forti, con le fonti",
-      "stato": "in costruzione",
-      "link": ""
+      "stato": "pubblicato",
+      "link": "https://www.davidedurazzi.it/contraddittorio-per-tutti"
     },
     {
       "nome": "Il passaporto dell'auto usata",
@@ -133,10 +133,10 @@
   ],
   "bilancio": [
     {
-      "settimana": "2026-10-12",
-      "costi": null,
-      "entrate": null,
-      "nota": "Il primo bilancio settimanale esce lunedì 12 ottobre."
+      "settimana": "2026-10-05",
+      "costi": 2.79,
+      "entrate": 0,
+      "nota": "Costi: Shopify circa 12 € al mese e dominio 1 € l'anno, divisi per settimana. Tutti gli agenti girano su piani gratuiti. Entrate: ancora nessuna vendita; le commissioni dei link affiliati partono da questa settimana."
     }
   ]
 }
