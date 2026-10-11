@@ -1,5 +1,50 @@
 [
   {
+    "slug": "ace-combat-8-da-record-vendute-un-milione-di-copie-a-tempo-di-record-20261011",
+    "titolo": "Ace Combat 8 da record: vendute un milione di copie a tempo di record",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-11",
+    "sommario": "Il nuovo capitolo della serie di aerei tocca quota un milione di copie a livello globale. Bandai Namco conferma che si tratta del risultato più veloce di sempre per il franchise.",
+    "testo": [
+      "Ace Combat 8: Wings of Theve ha tagliato il traguardo di un milione di copie vendute in tutto il mondo. L'editore Bandai Namco ha confermato che nessun altro episodio della serie era mai riuscito a raggiungere questa cifra con la medesima rapidità, ringraziando apertamente i giocatori per il supporto ricevuto.",
+      "Il risultato arriva subito dopo il debutto del videogioco, che ha aperto i battenti in accesso anticipato il 29 settembre 2026 prima di rendere disponibile il lancio globale il 2 ottobre. Per la community e per chi segue il genere, numeri simili confermano una forte attenzione verso le simulazioni di combattimento aereo, capaci ancora di attirare una platea vasta.",
+      "Resta ora da capire se il ritmo di vendite rimarrà altrettanto sostenuto nei prossimi mesi e in che modo l'editore intenderà supportare il gioco alla luce di questo debutto storico."
+    ],
+    "fonti": [
+      {
+        "nome": "IGN Italia: Ace Combat 8: Wings of Theve ha venduto un milione di copie in tempo record",
+        "url": "https://it.ign.com/ace-combat-8-wings-of-theve/228509/ace-combat-8-wings-of-theve-ha-venduto-un-milione-di-copie-in-tempo-record"
+      },
+      {
+        "nome": "Gamereactor: Ace Combat 8 vola alto: un milione di copie vendute in tempo record",
+        "url": "https://www.gamereactor.it/ace-combat-8-wings-of-theve-vendite-record-milione-copie/"
+      }
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Ace Combat 8: Wings of Theve"
+    },
+    "domanda": "Pensate di acquistare Ace Combat 8 dopo il record di vendite annunciato per questo capitolo?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Il traguardo di un milione di copie vendute a livello globale a tempo di record dimostra un entusiasmo senza precedenti da parte del pubblico.",
+        "L'enorme risposta della community fin dal debutto garantisce un titolo molto vivo, frequentato e supportato dagli sviluppatori nel tempo.",
+        "Essere diventato il capitolo più rapido della saga a raggiungere queste cifre rappresenta una rassicurazione concreta sulla bontà e sull'attrattiva del gioco."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "I grandi numeri di vendita iniziali non sono una garanzia automatica di qualità del titolo, ma riflettono spesso solo l'attesa e il forte interesse promozionale.",
+        "Conviene attendere recensioni approfondite e impressioni sul lungo periodo dopo il debutto, anziché farsi trascinare dall'entusiasmo commerciale del momento.",
+        "Il genere del combattimento aereo rimane un'esperienza specifica che non per forza incontra i gusti di ogni giocatore, indipendentemente dai primati commerciali raggiunti."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "intelligenza-artificiale-e-matematica-tra-scoperte-e-polemiche-20261009",
     "titolo": "Intelligenza artificiale e matematica: tra scoperte e polemiche",
     "sezione": "ai",
