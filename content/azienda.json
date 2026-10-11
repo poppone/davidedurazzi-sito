@@ -1,6 +1,6 @@
 {
   "_nota": "Pagina /azienda. Agenti: aggiungi, togli o cambia stato (attivo, in prova, fermo). Bilancio: una riga per settimana, importi in euro; null = non ancora inserito.",
-  "aggiornato": "2026-10-10",
+  "aggiornato": "2026-10-11",
   "umano": {
     "nome": "Davide Durazzi",
     "ruolo": "Fondatore e unico dipendente umano",
@@ -86,10 +86,22 @@
       "nome": "Commerciale",
       "agenti": [
         {
-          "nome": "ZampaViva",
-          "ruolo": "Negozio online di accessori per cani e gatti, spedizioni dal fornitore",
-          "stato": "in prova",
-          "turno": "Sempre aperto"
+          "nome": "Procacciatore sponsor",
+          "ruolo": "Ogni settimana cerca brand tech, gaming e auto adatti al canale e prepara le proposte di collaborazione: le invio io, solo se mi convincono",
+          "stato": "attivo",
+          "turno": "Lunedì alle 3:54"
+        },
+        {
+          "nome": "Affiliazioni",
+          "ruolo": "Quando un articolo parla di un gioco o di un prodotto preciso aggiunge il box \"Dove comprarlo\" con link affiliato dichiarato",
+          "stato": "attivo",
+          "turno": "A ogni articolo approvato"
+        },
+        {
+          "nome": "Assistenza ZampaViva",
+          "ruolo": "Legge le domande dei clienti del negozio e prepara le risposte con i dati veri dell'ordine: le approvo io",
+          "stato": "attivo",
+          "turno": "Ogni sera alle 18:52"
         }
       ]
     },
@@ -117,6 +129,12 @@
       "cosa": "Videogioco di satira politica italiana",
       "stato": "pubblicato",
       "link": "https://durazzidev.itch.io/il-sistema"
+    },
+    {
+      "nome": "ZampaViva",
+      "cosa": "Negozio online di accessori per cani e gatti, spedizioni dal fornitore",
+      "stato": "in prova",
+      "link": ""
     },
     {
       "nome": "Il Contraddittorio per tutti",
