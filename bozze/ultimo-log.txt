@@ -1,13 +1,14 @@
 [fonti] 80 notizie raccolte, per area: {'tecnologia': 30, 'gaming': 30}
-[palinsesto] oggi: ['attualita', 'libero', 'tecnologia']
-[scout] risposta senza tema per 'libero': {'tema': None}
-[scout] nessun tema valido per 'libero'
-[scout] risposta senza tema per 'tecnologia': {'tema': None}
-[scout] nessun tema valido per 'tecnologia'
-[palinsesto] ripiego su 'gaming'
+[palinsesto] oggi: ['gaming', 'tecnologia', 'ai']
 [scout] risposta senza tema per 'gaming': {'tema': None}
+[diagnosi] 0 coppie di titoli simili tra testate diverse
 [scout] nessun tema valido per 'gaming'
-[palinsesto] ripiego su 'ai'
+[scout] risposta senza tema per 'tecnologia': {'tema': None}
+[diagnosi] 1 coppie di titoli simili tra testate diverse
+[diagnosi]  HDblog: Google Maps con Gemini: ecco come potremo sfruttarlo al massimo || Punto Informatico: Gemini Agent di Google: l’AI autonoma con email e agenda (gemini, google)
+[scout] nessun tema valido per 'tecnologia'
 [scout] risposta senza tema per 'ai': {'tema': None}
+[diagnosi] 1 coppie di titoli simili tra testate diverse
+[diagnosi]  HDblog: Google Maps con Gemini: ecco come potremo sfruttarlo al massimo || Punto Informatico: Gemini Agent di Google: l’AI autonoma con email e agenda (gemini, google)
 [scout] nessun tema valido per 'ai'
 Nessun tema ha superato il fact-check oggi.
