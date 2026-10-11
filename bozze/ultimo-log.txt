@@ -1,35 +1,9 @@
-[fonti] 185 notizie raccolte, per area: {'tecnologia': 55, 'gaming': 60}
-[palinsesto] oggi: ['gaming', 'tecnologia', 'ai']
-[llm] gemini-flash-latest: HTTP 503 {
+[fonti] 186 notizie raccolte, per area: {'tecnologia': 55, 'ai': 1, 'gaming': 60}
+[palinsesto] oggi: ['tecnologia', 'ai']
+[llm] gemini-flash-latest: HTTP 429 {
   "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
-    "status": "UNAVAILABLE"
-  }
-}
-
-[scout] risposta senza tema per 'tecnologia': {'tema': None}
-[diagnosi] 1 coppie di titoli simili tra testate diverse
-[diagnosi]  HDblog: Google Maps con Gemini: ecco come potremo sfruttarlo al massimo || Punto Informatico: Gemini Agent di Google: l’AI autonoma con email e agenda (gemini, google)
-[scout] nessun tema valido per 'tecnologia'
-[scout] risposta senza tema per 'ai': {'tema': None}
-[diagnosi] 1 coppie di titoli simili tra testate diverse
-[diagnosi]  HDblog: Google Maps con Gemini: ecco come potremo sfruttarlo al massimo || Punto Informatico: Gemini Agent di Google: l’AI autonoma con email e agenda (gemini, google)
-[scout] nessun tema valido per 'ai'
-[llm] gemini-flash-latest: HTTP 503 {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
-    "status": "UNAVAILABLE"
-  }
-}
-
-[llm] gemini-flash-latest: HTTP 503 {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
-    "status": "UNAVAILABLE"
-  }
-}
-
-Fatto: 1 bozze pronte da approvare.
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20,
+[palinsesto] ripiego su 'gaming'
+[critico] riscrivo 'GTA 6 nel caos: minacce di leak e novità per l'esplorazione'
+Fatto: 3 bozze pronte da approvare.
