@@ -37,6 +37,8 @@ FEED = [
     {"area": "tecnologia", "testata": "HDblog", "url": "https://www.hdblog.it/feed/"},
     {"area": "tecnologia", "testata": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/tecnologia.xml"},
     {"area": "tecnologia", "testata": "Punto Informatico", "url": "https://www.punto-informatico.it/feed/"},
+    {"area": "tecnologia", "testata": "Tom's Hardware", "url": "https://www.tomshw.it/feed/"},
+    {"area": "tecnologia", "testata": "TuttoTech", "url": "https://www.tuttotech.net/feed/"},
     
     # AI (condivide fonti tecnologiche per far trovare notizie anche all'area AI)
     {"area": "ai", "testata": "ANSA", "url": "https://www.ansa.it/sito/notizie/tecnologia/tecnologia_rss.xml"},
@@ -44,11 +46,14 @@ FEED = [
     {"area": "ai", "testata": "HDblog", "url": "https://www.hdblog.it/feed/"},
     {"area": "ai", "testata": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/tecnologia.xml"},
     {"area": "ai", "testata": "Punto Informatico", "url": "https://www.punto-informatico.it/feed/"},
+    {"area": "ai", "testata": "Tom's Hardware", "url": "https://www.tomshw.it/feed/"},
 
     # Gaming (corretto l'URL di Multiplayer)
     {"area": "gaming", "testata": "Multiplayer.it", "url": "https://multiplayer.it/feed/"},
     {"area": "gaming", "testata": "Spaziogames", "url": "https://www.spaziogames.it/feed"},
     {"area": "gaming", "testata": "IGN Italia", "url": "https://it.ign.com/feed.xml"},
+    {"area": "gaming", "testata": "Everyeye", "url": "https://www.everyeye.it/feed_news_rss.asp"},
+    {"area": "gaming", "testata": "Gamereactor", "url": "https://www.gamereactor.it/rss/rss.php?texttype=4"},
 ]
 MIN_TESTATE = 2
 
