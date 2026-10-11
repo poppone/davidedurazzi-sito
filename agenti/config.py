@@ -56,9 +56,10 @@ FEED = [
     {"area": "gaming", "testata": "Gamereactor", "url": "https://www.gamereactor.it/rss/rss.php?texttype=4"},
 ]
 MIN_TESTATE = 2
-# Aree dove basta UNA testata (sempre citata, fatti attribuiti "secondo X").
-# Attualità, politica e cronaca restano a MIN_TESTATE.
-AREE_FONTE_UNICA = {"tecnologia", "ai", "gaming"}
+# Il sito parla SOLO di tecnologia, AI e gaming: attualità, politica e cronaca non si pubblicano mai.
+AREE_AMMESSE = {"tecnologia", "ai", "gaming", "libero"}
+# Aree dove basta UNA testata (sempre citata, fatti attribuiti "secondo X")
+AREE_FONTE_UNICA = {"tecnologia", "ai", "gaming", "libero"}
 # Bozze da preparare ogni mattina (una per area del palinsesto, con ripiego sulle altre)
 TEMI_AL_GIORNO = 3
 

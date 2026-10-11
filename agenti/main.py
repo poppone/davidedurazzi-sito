@@ -42,9 +42,9 @@ def main() -> None:
         return
     per_id = {n["id"]: n for n in notizie}
 
-    # Palinsesto del giorno: 1 tema di attualità + 2 aree fisse
+    # Palinsesto del giorno: solo tecnologia, AI e gaming (niente attualità né politica)
     forzate = [a.strip() for a in os.environ.get("AREE", "").split(",") if a.strip()]
-    aree_oggi = forzate or (["attualita"] + config.PALINSESTO[OGGI.weekday()])
+    aree_oggi = [a for a in (forzate or config.PALINSESTO[OGGI.weekday()]) if a in config.AREE_AMMESSE]
     print(f"[palinsesto] oggi: {aree_oggi}")
     temi = []
     gia_pubblicati = [a.get("titolo", "") for a in leggi(RADICE / "content" / "articoli.json")][-10:]
@@ -52,11 +52,7 @@ def main() -> None:
 
     def prova(area: str) -> bool:
         if area == "libero":
-            pool, sezioni = notizie, config.SEZIONI
-        elif area == "attualita":
-            pool, sezioni = [n for n in notizie if n["area"] == "attualita"], ["cronaca", "politica"]
-        elif area == "quotidiano":
-            pool, sezioni = [n for n in notizie if n["area"] in ("attualita", "economia")], ["quotidiano"]
+            pool, sezioni = [n for n in notizie if n["area"] in config.SEZIONI], config.SEZIONI
         elif area == "ai":
             # i feed AI coincidono con quelli tecnologia (le notizie duplicate vengono scartate): uso entrambe
             pool, sezioni = [n for n in notizie if n["area"] in ("ai", "tecnologia")], ["ai"]
@@ -73,7 +69,7 @@ def main() -> None:
         scelti.append(tema.get("titolo_lavoro", ""))
         return True
 
-    riusciti = [prova(a) for a in aree_oggi if a != "attualita" or any(n["area"] == "attualita" for n in notizie)]
+    riusciti = [prova(a) for a in aree_oggi]
     # Se un'area di oggi non ha storie coperte da 2 testate, ripiego sulle altre aree (fino a TEMI_AL_GIORNO)
     if sum(riusciti) < config.TEMI_AL_GIORNO:
         provate = set(aree_oggi)
