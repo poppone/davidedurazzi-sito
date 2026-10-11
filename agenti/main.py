@@ -42,7 +42,7 @@ def main() -> None:
         return
     per_id = {n["id"]: n for n in notizie}
 
-    # Palinsesto del giorno: solo tecnologia, AI e gaming (niente attualità né politica)
+    # Palinsesto del giorno: solo tecnologia, AI, gaming e motori (niente attualità né politica)
     forzate = [a.strip() for a in os.environ.get("AREE", "").split(",") if a.strip()]
     aree_oggi = [a for a in (forzate or config.PALINSESTO[OGGI.weekday()]) if a in config.AREE_AMMESSE]
     print(f"[palinsesto] oggi: {aree_oggi}")
@@ -75,7 +75,7 @@ def main() -> None:
     # Se un'area di oggi non ha storie coperte da 2 testate, ripiego sulle altre aree (fino a TEMI_AL_GIORNO)
     if sum(riusciti) < config.TEMI_AL_GIORNO:
         provate = set(aree_oggi)
-        for area in ["gaming", "tecnologia", "ai"]:
+        for area in ["gaming", "tecnologia", "ai", "motori"]:
             if len(temi) >= config.TEMI_AL_GIORNO:
                 break
             if area in provate:

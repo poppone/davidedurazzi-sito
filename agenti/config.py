@@ -17,13 +17,13 @@ PAUSA_TRA_CHIAMATE = 7
 
 # Palinsesto settimanale (0 = lunedì ... 6 = domenica).
 PALINSESTO = {
-    0: ["tecnologia", "ai"],
-    1: ["gaming", "tecnologia"],
-    2: ["ai", "gaming"],
-    3: ["tecnologia", "ai"],
-    4: ["gaming", "tecnologia"],
-    5: ["ai", "gaming"],
-    6: ["libero", "tecnologia"],
+    0: ["tecnologia", "motori"],
+    1: ["gaming", "ai"],
+    2: ["motori", "tecnologia"],
+    3: ["ai", "gaming"],
+    4: ["motori", "gaming"],
+    5: ["tecnologia", "ai"],
+    6: ["libero", "motori"],
 }
 
 # Finestra temporale delle notizie (ore)
@@ -54,21 +54,27 @@ FEED = [
     {"area": "gaming", "testata": "IGN Italia", "url": "https://it.ign.com/feed.xml"},
     {"area": "gaming", "testata": "Everyeye", "url": "https://www.everyeye.it/feed_news_rss.asp"},
     {"area": "gaming", "testata": "Gamereactor", "url": "https://www.gamereactor.it/rss/rss.php?texttype=4"},
+
+    # Motori: tecnologia per l'auto (feed non verificati al 11/10: se uno non risponde viene saltato, controllare i log)
+    {"area": "motori", "testata": "HDmotori", "url": "https://www.hdmotori.it/feed/"},
+    {"area": "motori", "testata": "Motor1 Italia", "url": "https://it.motor1.com/rss/news/all/"},
+    {"area": "motori", "testata": "InsideEVs Italia", "url": "https://insideevs.it/rss/news/all/"},
 ]
 MIN_TESTATE = 2
-# Il sito parla SOLO di tecnologia, AI e gaming: attualità, politica e cronaca non si pubblicano mai.
-AREE_AMMESSE = {"tecnologia", "ai", "gaming", "libero"}
+# Il sito parla SOLO di tecnologia, AI, gaming e motori: attualità, politica e cronaca non si pubblicano mai.
+AREE_AMMESSE = {"tecnologia", "ai", "gaming", "motori", "libero"}
 # Aree dove basta UNA testata (sempre citata, fatti attribuiti "secondo X")
-AREE_FONTE_UNICA = {"tecnologia", "ai", "gaming", "libero"}
+AREE_FONTE_UNICA = {"tecnologia", "ai", "gaming", "motori", "libero"}
 # Bozze da preparare ogni mattina (una per area del palinsesto, con ripiego sulle altre)
 TEMI_AL_GIORNO = 3
 
 # Sezioni del sito (devono coincidere con quelle in config.js)
-SEZIONI = ["tecnologia", "gaming", "ai"]
+SEZIONI = ["tecnologia", "gaming", "ai", "motori"]
 
 NOMI_AREE = {
     "tecnologia": "tecnologia, dispositivi e innovazione",
     "ai": "intelligenza artificiale, modelli di linguaggio e algoritmi",
     "gaming": "videogiochi, console e settore gaming",
-    "libero": "qualsiasi tema tra tecnologia, ai e gaming",
+    "motori": "tecnologia per l'auto: auto elettriche e ibride, novità e prove di modelli, infotainment, guida assistita, accessori e gadget per l'auto (niente incidenti, cronaca stradale o politica)",
+    "libero": "qualsiasi tema tra tecnologia, ai, gaming e motori",
 }

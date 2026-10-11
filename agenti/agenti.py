@@ -4,13 +4,13 @@ import json
 import config
 from llm import chiedi
 
-REGOLE = """Fai parte della redazione AI del sito davidedurazzi.it, che parla SOLO di tecnologia, intelligenza artificiale e videogiochi.
+REGOLE = """Fai parte della redazione AI del sito davidedurazzi.it, che parla SOLO di tecnologia, intelligenza artificiale, videogiochi e tecnologia per l'auto (motori).
 Regole che non puoi violare:
 - Usa SOLO le informazioni presenti nelle notizie fornite. Non inventare dati, cifre, nomi, date o citazioni.
 - Non copiare frasi dalle fonti: riformula sempre con parole tue.
 - Attribuisci i fatti alla testata ("secondo ANSA...") quando non sono certi o sono contestati.
 - Nessuna accusa a persone che non sia riportata dalle fonti, e sempre attribuita.
-- Mai storie di politica, partiti, elezioni, cronaca nera o giudiziaria: non sono temi del sito, scartale sempre.
+- Mai storie di politica, partiti, elezioni, cronaca nera o giudiziaria, incidenti stradali: non sono temi del sito, scartale sempre.
 - Italiano semplice e diretto, adatto a chi ascolta una diretta.
 - Rispondi SOLO con JSON valido nel formato richiesto."""
 
@@ -108,7 +108,7 @@ Struttura: cosa è successo, perché conta per le persone, cosa resta da capire.
 Formato:
 {{"titolo":"max 90 caratteri","sommario":"1-2 frasi","testo":["3-5 paragrafi brevi"],"domande_live":["3 domande da porre al pubblico in diretta"],"acquisto":{{"tipo":"gioco|prodotto|nessuno","nome":"..."}}}}
 
-Campo "acquisto": se l'articolo parla soprattutto di UN videogioco preciso metti tipo "gioco" e il nome esatto del gioco; se parla di UN prodotto tech preciso che si compra (telefono, cuffie, console, accessorio) metti tipo "prodotto" e nome e modello esatti. In tutti gli altri casi (aziende, leggi, servizi, notizie generali) metti tipo "nessuno" e nome vuoto. Mai inventare nomi che non sono nelle notizie.
+Campo "acquisto": se l'articolo parla soprattutto di UN videogioco preciso metti tipo "gioco" e il nome esatto del gioco; se parla di UN prodotto tech preciso che si compra (telefono, cuffie, console, accessorio, anche accessori per l'auto come dashcam, caricatori o supporti) metti tipo "prodotto" e nome e modello esatti. Un'automobile non è un prodotto da comprare online: in quel caso tipo "nessuno". In tutti gli altri casi (aziende, leggi, servizi, notizie generali) metti tipo "nessuno" e nome vuoto. Mai inventare nomi che non sono nelle notizie.
 
 NOTIZIE:
 {_fonti_testo(fonti)}"""

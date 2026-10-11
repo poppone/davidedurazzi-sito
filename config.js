@@ -43,6 +43,7 @@ window.SITE = {
   sezioni: [
     { id: "tecnologia", nome: "Tecnologia" },
     { id: "gaming", nome: "Gaming" },
-    { id: "ai", nome: "Intelligenza Artificiale" }
+    { id: "ai", nome: "Intelligenza Artificiale" },
+    { id: "motori", nome: "Motori" }
   ]
 };
