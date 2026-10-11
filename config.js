@@ -34,7 +34,7 @@ window.SITE = {
 
   // Affiliazioni: link "Dove comprarlo" in fondo agli articoli (lascia "" per spegnerle)
   instantGaming: "poppone",   // codice igr di Instant Gaming, per i giochi
-  amazonTag: "",              // tag Amazon Affiliati (es. "davidedurazzi-21"), per i prodotti tech
+  amazonTag: "davidedurazzi-21",            // tag Amazon Affiliati (es. "davidedurazzi-21"), per i prodotti tech
 
   // Donazioni: link alla tua pagina Ko-fi o PayPal.me (lascia "" per nasconderle)
   donazioni: "https://ko-fi.com/davidedurazzi",
