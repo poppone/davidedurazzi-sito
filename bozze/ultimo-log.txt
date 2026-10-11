@@ -1,8 +1,13 @@
-[fonti] 80 notizie raccolte, per area: {'tecnologia': 30, 'gaming': 30}
+[fonti] 185 notizie raccolte, per area: {'tecnologia': 55, 'gaming': 60}
 [palinsesto] oggi: ['gaming', 'tecnologia', 'ai']
-[scout] risposta senza tema per 'gaming': {'tema': None}
-[diagnosi] 0 coppie di titoli simili tra testate diverse
-[scout] nessun tema valido per 'gaming'
+[llm] gemini-flash-latest: HTTP 503 {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
 [scout] risposta senza tema per 'tecnologia': {'tema': None}
 [diagnosi] 1 coppie di titoli simili tra testate diverse
 [diagnosi]  HDblog: Google Maps con Gemini: ecco come potremo sfruttarlo al massimo || Punto Informatico: Gemini Agent di Google: l’AI autonoma con email e agenda (gemini, google)
@@ -11,4 +16,20 @@
 [diagnosi] 1 coppie di titoli simili tra testate diverse
 [diagnosi]  HDblog: Google Maps con Gemini: ecco come potremo sfruttarlo al massimo || Punto Informatico: Gemini Agent di Google: l’AI autonoma con email e agenda (gemini, google)
 [scout] nessun tema valido per 'ai'
-Nessun tema ha superato il fact-check oggi.
+[llm] gemini-flash-latest: HTTP 503 {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+[llm] gemini-flash-latest: HTTP 503 {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+Fatto: 1 bozze pronte da approvare.
