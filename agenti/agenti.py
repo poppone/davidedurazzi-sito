@@ -44,10 +44,32 @@ NOTIZIE:
         tema = r.get("tema") if isinstance(r, dict) else None
         if not tema:
             print(f"[scout] risposta senza tema per '{area}': {str(r)[:200]}")
+            _diagnosi_sovrapposizioni(notizie)
         return tema
     except Exception as e:
         print(f"[scout] Errore durante la chiamata LLM: {e}")
         return None
+
+
+def _parole(titolo: str) -> set[str]:
+    import re
+    return {p for p in re.findall(r"[a-z0-9àèéìòù]{5,}", titolo.lower())}
+
+
+def _diagnosi_sovrapposizioni(notizie: list[dict]) -> None:
+    """Solo per il log: titoli di testate diverse che condividono parole significative."""
+    coppie = []
+    for i, x in enumerate(notizie):
+        for y in notizie[i + 1:]:
+            if x["testata"] == y["testata"]:
+                continue
+            comuni = _parole(x["titolo"]) & _parole(y["titolo"])
+            if len(comuni) >= 2:
+                coppie.append((len(comuni), x, y, sorted(comuni)))
+    coppie.sort(key=lambda c: -c[0])
+    print(f"[diagnosi] {len(coppie)} coppie di titoli simili tra testate diverse")
+    for n, x, y, c in coppie[:4]:
+        print(f"[diagnosi]  {x['testata']}: {x['titolo'][:70]} || {y['testata']}: {y['titolo'][:70]} ({', '.join(c)})")
 
 
 def fact_check(tema: dict, per_id: dict) -> list[dict] | None:
