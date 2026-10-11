@@ -251,6 +251,7 @@ def main():
     voci.append(f"  <url><loc>{SITO}/piazza</loc></url>")
     voci.append(f"  <url><loc>{SITO}/media-kit</loc></url>")
     voci.append(f"  <url><loc>{SITO}/azienda</loc></url>")
+    voci.append(f"  <url><loc>{SITO}/consigli</loc></url>")
     voci.append(f"  <url><loc>{SITO}/contraddittorio-per-tutti</loc></url>")
     voci.append(f"  <url><loc>{SITO}/privacy</loc></url>")
     (RADICE / "sitemap.xml").write_text(

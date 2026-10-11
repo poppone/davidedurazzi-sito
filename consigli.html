@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" type="image/png" href="/assets/logo-64.png">
+<link rel="apple-touch-icon" href="/assets/logo-192.png">
+<title>I miei consigli — Davide Durazzi</title>
+<meta name="description" content="Accessori per l'auto, setup per dirette e gaming che consiglio, con link affiliati dichiarati. Più i giochi in offerta e il controllo delle auto usate.">
+<link rel="canonical" href="https://www.davidedurazzi.it/consigli">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.davidedurazzi.it/consigli">
+<meta property="og:title" content="I miei consigli — Davide Durazzi">
+<meta property="og:description" content="Auto, dirette e gaming: le cose che consiglio.">
+<meta property="og:image" content="https://www.davidedurazzi.it/assets/logo-512.png">
+</head>
+<body data-page="consigli">
+<header class="top"><div class="wrap">
+  <a class="logo" href="/"><img src="/assets/logo-64.png" alt="" width="34" height="34">Davide Durazzi</a>
+  <nav aria-label="Sezioni">
+    <a href="/#diretta">Diretta</a><a href="/#contraddittorio">Il Contraddittorio</a><a href="/#articoli">Articoli</a><a href="/#video">Video</a><a href="/#gioco">Il Sistema</a><a href="/#app">Ricordati</a><a href="/#offerte">Offerte</a><a href="/piazza">Piazza Aperta</a>
+  </nav>
+</div></header>
+
+<main class="wrap cs">
+  <section class="cs-apertura">
+    <img class="cs-foto" src="/assets/logo-192.png" alt="" width="88" height="88">
+    <h1>I miei consigli</h1>
+    <p class="mk-lead">Auto, dirette e gaming: le cose che consiglio a chi mi segue. Tocca e trovi il prodotto, scegli tu quale comprare.</p>
+    <div class="cs-veloci">
+      <a class="btn pieno" href="/#articoli">Ultimi articoli</a>
+      <a class="btn" id="csKofi" href="https://ko-fi.com/davidedurazzi" target="_blank" rel="noopener">&#9749; Offrimi un caffè</a>
+    </div>
+    <p class="cs-nota">Alcuni link sono affiliati: se compri da qui ricevo una piccola commissione, a te non costa nulla in più. In qualità di Affiliato Amazon io ricevo un guadagno dagli acquisti idonei.</p>
+  </section>
+  <div id="csGruppi"><p class="meta">Caricamento.</p></div>
+</main>
+
+<footer><div class="wrap">
+  <strong>Davide Durazzi</strong>
+  <nav id="social" aria-label="Social"></nav>
+  <span class="small"><a href="/azienda">L'azienda</a> · <a href="/consigli">Consigli</a> · <a href="/media-kit">Collabora</a> · <a href="/privacy">Privacy</a></span>
+</div></footer>
+<script src="/config.js"></script>
+<script src="/app.js"></script>
+<script>
+(function () {
+  var S = window.SITE || {};
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var ok = function (u) { return /^https:\/\//.test(u || ""); };
+  if (ok(S.donazioni)) document.getElementById("csKofi").href = S.donazioni;
+  function link(v) {
+    if (ok(v.url)) return { url: v.url, dove: v.dove || "" };
+    if (v.amazon && S.amazonTag) return { url: "https://www.amazon.it/s?k=" + encodeURIComponent(v.amazon) + "&tag=" + encodeURIComponent(S.amazonTag), dove: "Amazon" };
+    return null;
+  }
+  fetch("/content/consigli.json").then(function (r) { return r.json(); }).then(function (j) {
+    var html = (j.gruppi || []).filter(function (g) { return g.attivo !== false; }).map(function (g) {
+      var voci = (g.voci || []).map(function (v) {
+        var l = link(v); if (!l) return "";
+        return '<li><a class="cs-voce" href="' + esc(l.url) + '" target="_blank" rel="sponsored noopener"><span class="cs-nome">' + esc(v.nome) + '</span>' +
+          (v.perche ? '<span class="cs-perche">' + esc(v.perche) + '</span>' : "") +
+          (l.dove ? '<span class="cs-dove">Vedi su ' + esc(l.dove) + ' &rarr;</span>' : "") + "</a></li>";
+      }).join("");
+      if (!voci) return "";
+      return '<section class="blocco cs-gruppo" id="' + esc(g.id) + '"><div class="testa"><h2>' + esc(g.titolo) + "</h2>" + (g.intro ? "<p>" + esc(g.intro) + "</p>" : "") + '</div><ul class="cs-lista">' + voci + "</ul></section>";
+    }).join("");
+    document.getElementById("csGruppi").innerHTML = html || '<p class="meta">Nessun consiglio al momento.</p>';
+  }).catch(function () { document.getElementById("csGruppi").innerHTML = '<p class="meta">Non si è caricato. Ricarica la pagina.</p>'; });
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

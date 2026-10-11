@@ -1,0 +1,48 @@
+{
+  "_nota": "Pagina /consigli (link in bio). Per ogni voce: 'amazon' = testo da cercare su Amazon (usa il tag di config.js), oppure 'url' = link diretto. Gruppi con 'attivo': false non si vedono. Quando hai prodotti tuoi veri, metti nome e modello esatti in 'amazon' e scrivi nel 'perche' perché li usi.",
+  "aggiornato": "2026-10-11",
+  "gruppi": [
+    {
+      "id": "auto",
+      "titolo": "Per l'auto",
+      "intro": "Le cose che rendono la guida più comoda e più sicura, senza spendere una fortuna.",
+      "voci": [
+        { "nome": "Adattatore CarPlay / Android Auto wireless", "perche": "Niente più cavo: il telefono si collega da solo appena sali.", "amazon": "adattatore carplay android auto wireless" },
+        { "nome": "Dashcam anteriore", "perche": "Una prova in più in caso di incidente o contestazione.", "amazon": "dashcam auto anteriore" },
+        { "nome": "Caricatore USB-C da auto", "perche": "Ricarica veloce anche per due telefoni insieme.", "amazon": "caricatore auto usb c ricarica rapida" },
+        { "nome": "Supporto magnetico per telefono", "perche": "Navigatore sempre a vista, una mano sola per agganciarlo.", "amazon": "supporto magnetico telefono auto" },
+        { "nome": "Compressore portatile per gomme", "perche": "Pressione giusta in due minuti, senza cercare il benzinaio.", "amazon": "compressore portatile pneumatici auto" }
+      ]
+    },
+    {
+      "id": "usato",
+      "titolo": "Compri un'auto usata?",
+      "intro": "Prima di firmare controlla la storia dell'auto: chilometri, incidenti, proprietari.",
+      "attivo": false,
+      "voci": [
+        { "nome": "Report sullo storico con carVertical", "perche": "Inserisci la targa o il telaio e vedi cosa ti stanno vendendo davvero.", "url": "" }
+      ]
+    },
+    {
+      "id": "setup",
+      "titolo": "Scrivania e dirette",
+      "intro": "Quello che serve per registrare video e fare dirette fatte bene.",
+      "voci": [
+        { "nome": "Microfono USB per streaming", "perche": "La voce conta più del video: è il primo acquisto da fare.", "amazon": "microfono usb streaming" },
+        { "nome": "Braccio per microfono", "perche": "Microfono vicino alla bocca e scrivania libera.", "amazon": "braccio microfono scrivania" },
+        { "nome": "Luce LED da scrivania", "perche": "Luce morbida sul viso, anche alle 5 del mattino.", "amazon": "luce led video streaming scrivania" },
+        { "nome": "Hub USB-C", "perche": "Un solo cavo per collegare tutto al portatile.", "amazon": "hub usb c" }
+      ]
+    },
+    {
+      "id": "gaming",
+      "titolo": "Gaming",
+      "intro": "Giochi a prezzo scontato e l'essenziale per giocare comodi.",
+      "voci": [
+        { "nome": "Giochi in offerta su Instant Gaming", "perche": "Chiavi digitali PC e console scontate, consegna immediata.", "url": "https://www.instant-gaming.com/it/?igr=poppone", "dove": "Instant Gaming" },
+        { "nome": "Cuffie gaming", "perche": "Senti i passi prima di vederli, e la chat ti sente bene.", "amazon": "cuffie gaming microfono" },
+        { "nome": "Controller per PC", "perche": "Per i giochi d'azione e di guida è un altro mondo.", "amazon": "controller pc wireless" }
+      ]
+    }
+  ]
+}

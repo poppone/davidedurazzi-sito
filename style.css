@@ -415,3 +415,19 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .top .sostieni:hover{transform:translateY(-2px);box-shadow:0 6px 22px -6px rgba(255,138,76,.65)}
 @media(max-width:700px){.top .wrap{gap:.6rem}.top .sostieni{padding:.4rem .75rem;font-size:.85rem}.barra-mobile a{font-size:.8rem}}
 .barra-mobile a.ko{background:var(--anti);color:#1a0c02}
+
+/* ===== I miei consigli (link in bio) ===== */
+.cs{max-width:760px}
+.cs-apertura{display:grid;justify-items:center;text-align:center;padding:clamp(1.8rem,5vw,3.2rem) 0 1rem}
+.cs-foto{width:88px;height:88px;border-radius:50%;border:2px solid rgba(123,151,255,.6);margin-bottom:.9rem}
+.cs-apertura h1{margin:0 0 .6rem;font:900 clamp(2.2rem,7vw,3.6rem)/.95 var(--sans);font-stretch:118%;letter-spacing:-.035em}
+.cs-apertura .mk-lead{margin-inline:auto}
+.cs-veloci{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:1rem}
+.cs-nota{margin:0;max-width:56ch;color:var(--muted);font-size:.85rem;line-height:1.5}
+.cs-gruppo .testa{text-align:left}
+.cs-lista{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.cs-voce{display:grid;gap:.25rem;padding:1rem 1.1rem;border:1px solid var(--line);border-radius:16px;background:var(--paper);text-decoration:none;color:inherit;transition:transform .15s,border-color .2s}
+.cs-voce:hover,.cs-voce:focus-visible{transform:translateY(-2px);border-color:rgba(123,151,255,.7)}
+.cs-nome{font:800 1.08rem/1.25 var(--sans)}
+.cs-perche{color:var(--muted);font-size:.95rem}
+.cs-dove{font:700 .85rem/1 var(--sans);color:var(--anti);margin-top:.2rem}
