@@ -43,11 +43,21 @@ jobs:
         run: |
           git config user.name "redazione-ai"
           git config user.email "actions@users.noreply.github.com"
-          git add bozze
-          git diff --cached --quiet && exit 0
-          git commit -m "Bozze del $(date +%d/%m/%Y)"
+          # Copio da parte quello che ha prodotto la redazione
+          mkdir -p /tmp/out && cp bozze/ultimo-log.txt /tmp/out/ 2>/dev/null || true
+          cp bozze/scaletta-*.md /tmp/out/ 2>/dev/null || true
+          cp bozze/nuove.json /tmp/out/nuove.json 2>/dev/null || echo "[]" > /tmp/out/nuove.json
+          # Riparto dall'ultima versione online (con le approvazioni di Davide) e AGGIUNGO le bozze nuove
           for i in 1 2 3 4; do
-            git pull --rebase -X theirs && git push && exit 0
+            git fetch -q origin main && git reset -q --hard origin/main
+            python agenti/unisci_bozze.py /tmp/out/nuove.json
+            cp /tmp/out/ultimo-log.txt bozze/ 2>/dev/null || true
+            cp /tmp/out/scaletta-*.md bozze/ 2>/dev/null || true
+            rm -f bozze/nuove.json
+            git add bozze
+            git diff --cached --quiet && exit 0
+            git commit -q -m "Bozze del $(date +%d/%m/%Y)"
+            git push && exit 0
             sleep 5
           done
           exit 1

@@ -46,7 +46,7 @@ def main() -> None:
     forzate = [a.strip() for a in os.environ.get("AREE", "").split(",") if a.strip()]
     aree_oggi = [a for a in (forzate or config.PALINSESTO[OGGI.weekday()]) if a in config.AREE_AMMESSE]
     print(f"[palinsesto] oggi: {aree_oggi}")
-    temi = []
+    temi, usati = [], set()
     gia_pubblicati = [a.get("titolo", "") for a in leggi(RADICE / "content" / "articoli.json")][-10:]
     scelti = [t for t in gia_pubblicati if t]
 
@@ -58,6 +58,7 @@ def main() -> None:
             pool, sezioni = [n for n in notizie if n["area"] in ("ai", "tecnologia")], ["ai"]
         else:
             pool, sezioni = [n for n in notizie if n["area"] == area], [area]
+        pool = [n for n in pool if n["id"] not in usati]  # una storia non va scritta due volte
         tema = agenti.scout(pool, area, sezioni, scelti)
         if not tema:
             print(f"[scout] nessun tema valido per '{area}'")
@@ -65,6 +66,7 @@ def main() -> None:
         if tema.get("sezione") not in sezioni:
             tema["sezione"] = sezioni[0]
         tema["_area"] = area
+        usati.update(tema.get("ids", []))
         temi.append(tema)
         scelti.append(tema.get("titolo_lavoro", ""))
         return True
@@ -128,6 +130,7 @@ def main() -> None:
     esistenti = [b for b in nuove if b["slug"] not in slugs] + esistenti
     BOZZE.parent.mkdir(exist_ok=True)
     BOZZE.write_text(json.dumps(esistenti, ensure_ascii=False, indent=2), encoding="utf-8")
+    (RADICE / "bozze" / "nuove.json").write_text(json.dumps(nuove, ensure_ascii=False, indent=2), encoding="utf-8")
 
     righe = [f"# Scaletta del {OGGI.strftime('%d/%m/%Y')}\n"]
     for i, b in enumerate(scaletta, 1):
