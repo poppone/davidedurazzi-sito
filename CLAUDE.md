@@ -22,7 +22,7 @@ Rispondi sempre in italiano. Davide preferisce risposte dirette e pratiche.
 
 ## Redazione AI (cartella `agenti/`, Python 3.12 su GitHub Actions)
 - `.github/workflows/redazione.yml` — ogni giorno alle 05:00 UTC: `agenti/main.py`.
-  Palinsesto in `agenti/config.py` (`PALINSESTO`): 1 tema di attualità + 2 aree del giorno; Scout per area → fact-check (min 2 testate) → Redattore → Critico → Il Contraddittorio (tema più "divisivo"). Output: `bozze/bozze.json` + `bozze/scaletta-AAAA-MM-GG.md`.
+  Palinsesto in `agenti/config.py` (`PALINSESTO`): 1 tema di attualità + 2 aree del giorno; Scout per area → fact-check (min 2 testate per attualità/politica, 1 testata citata per tecnologia/AI/gaming; 3 bozze al giorno) → Redattore → Critico → Il Contraddittorio (tema più "divisivo"). Output: `bozze/bozze.json` + `bozze/scaletta-AAAA-MM-GG.md`.
 - `.github/workflows/pubblica.yml` — su push di `bozze/bozze.json`: `promuovi.py` sposta le bozze con `"approvato": true` in `content/articoli.json`; `instagram.py genera` crea il carosello (`slides.py`, Pillow) in `ig/<slug>/`; `instagram.py pubblica` pubblica via Instagram API with Instagram Login (secret `IG_ACCESS_TOKEN`), registro in `social/instagram.json`.
 - `.github/workflows/token-instagram.yml` — rinnovo token il 1 e il 15 del mese (secret `GH_PAT`).
 - `.vercelignore` esclude agenti, bozze, social, .github.

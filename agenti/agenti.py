@@ -19,16 +19,27 @@ def _fonti_testo(notizie: list[dict]) -> str:
     return "\n".join(f"[{n['id']}] {n['testata']} | {n['titolo']} | {n['sommario']}" for n in notizie)
 
 
+def minimo_testate(area: str | None) -> int:
+    """Quante testate diverse servono per pubblicare: 1 per tech/AI/gaming, 2 per il resto."""
+    return 1 if area in config.AREE_FONTE_UNICA else config.MIN_TESTATE
+
+
 def scout(notizie: list[dict], area: str, sezioni: list[str], esclusi: list[str]) -> dict | None:
     """Sceglie IL tema migliore per un'area del palinsesto."""
     if not notizie:
         return None
-    gia = ("\nNon scegliere storie già trattate oggi: " + "; ".join(esclusi)) if esclusi else ""
+    gia = ("\nNon scegliere storie già trattate (oggi o nei giorni scorsi): " + "; ".join(esclusi)) if esclusi else ""
+    if minimo_testate(area) <= 1:
+        regola_fonti = ('Negli "ids" metti le notizie che parlano della storia scelta: ne basta una, '
+                        'ma se più testate ne parlano mettile tutte. Preferisci storie concrete (uscite, annunci, dati) '
+                        'a offerte e promozioni. Rispondi {"tema": null} solo se non c\'è nessuna notizia adatta.')
+    else:
+        regola_fonti = ('OBBLIGATORIO: negli "ids" metti notizie di ALMENO 2 testate diverse (la testata è il secondo campo '
+                        'di ogni riga) che parlano della stessa storia.\nSe nessuna storia è coperta da 2 testate, rispondi {"tema": null}.')
     
     prompt = f"""Sei lo SCOUT. Scegli UN solo tema per una diretta, nell'area: {config.NOMI_AREE.get(area, area)}.
 Criteri: interesse per il pubblico generalista, impatto sulla vita delle persone, potenziale di discussione in chat.
-OBBLIGATORIO: negli "ids" metti notizie di ALMENO 2 testate diverse (la testata è il secondo campo di ogni riga) che parlano della stessa storia.
-Se nessuna storia è coperta da 2 testate, rispondi {{"tema": null}}.{gia}
+{regola_fonti}{gia}
 
 Sezione: scegli tra {", ".join(sezioni)}.
 "divisivo": da 1 a 10, quanto la storia divide le opinioni (serve per scegliere Il Contraddittorio).
@@ -72,11 +83,12 @@ def _diagnosi_sovrapposizioni(notizie: list[dict]) -> None:
         print(f"[diagnosi]  {x['testata']}: {x['titolo'][:70]} || {y['testata']}: {y['titolo'][:70]} ({', '.join(c)})")
 
 
-def fact_check(tema: dict, per_id: dict) -> list[dict] | None:
-    """Controllo deterministico: il tema passa solo con almeno MIN_TESTATE testate diverse."""
+def fact_check(tema: dict, per_id: dict, minimo: int | None = None) -> list[dict] | None:
+    """Controllo deterministico: il tema passa solo con abbastanza testate diverse."""
+    minimo = config.MIN_TESTATE if minimo is None else minimo
     fonti = [per_id[i] for i in tema.get("ids", []) if i in per_id]
     testate = {f["testata"] for f in fonti}
-    if len(testate) < config.MIN_TESTATE:
+    if not fonti or len(testate) < minimo:
         print(f"[fact-check] scartato '{tema.get('titolo_lavoro')}': testate {sorted(testate)}")
         return None
     return fonti
@@ -86,9 +98,12 @@ def redattore(tema: dict, fonti: list[dict], problemi: list[str] | None = None) 
     correzioni = ""
     if problemi:
         correzioni = "\nUna bozza precedente aveva questi problemi, evitali:\n- " + "\n- ".join(problemi)
+    testate = sorted({f["testata"] for f in fonti})
+    una_fonte = (f'\nHai una sola fonte: attribuisci i fatti principali a lei ("secondo {testate[0]}") e non presentarli come certi.'
+                 if len(testate) == 1 else "")
     
     prompt = f"""Sei il REDATTORE. Scrivi un articolo breve sul tema "{tema['titolo_lavoro']}".
-Struttura: cosa è successo, perché conta per le persone, cosa resta da capire.{correzioni}
+Struttura: cosa è successo, perché conta per le persone, cosa resta da capire.{correzioni}{una_fonte}
 
 Formato:
 {{"titolo":"max 90 caratteri","sommario":"1-2 frasi","testo":["3-5 paragrafi brevi"],"domande_live":["3 domande da porre al pubblico in diretta"],"acquisto":{{"tipo":"gioco|prodotto|nessuno","nome":"..."}}}}

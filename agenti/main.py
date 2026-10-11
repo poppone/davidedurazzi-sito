@@ -46,7 +46,9 @@ def main() -> None:
     forzate = [a.strip() for a in os.environ.get("AREE", "").split(",") if a.strip()]
     aree_oggi = forzate or (["attualita"] + config.PALINSESTO[OGGI.weekday()])
     print(f"[palinsesto] oggi: {aree_oggi}")
-    temi, scelti = [], []
+    temi = []
+    gia_pubblicati = [a.get("titolo", "") for a in leggi(RADICE / "content" / "articoli.json")][-10:]
+    scelti = [t for t in gia_pubblicati if t]
 
     def prova(area: str) -> bool:
         if area == "libero":
@@ -66,16 +68,17 @@ def main() -> None:
             return False
         if tema.get("sezione") not in sezioni:
             tema["sezione"] = sezioni[0]
+        tema["_area"] = area
         temi.append(tema)
         scelti.append(tema.get("titolo_lavoro", ""))
         return True
 
     riusciti = [prova(a) for a in aree_oggi if a != "attualita" or any(n["area"] == "attualita" for n in notizie)]
-    # Se un'area di oggi non ha storie coperte da 2 testate, ripiego sulle altre aree (max 2 temi totali)
-    if sum(riusciti) < 2:
+    # Se un'area di oggi non ha storie coperte da 2 testate, ripiego sulle altre aree (fino a TEMI_AL_GIORNO)
+    if sum(riusciti) < config.TEMI_AL_GIORNO:
         provate = set(aree_oggi)
         for area in ["gaming", "tecnologia", "ai"]:
-            if len(temi) >= 2:
+            if len(temi) >= config.TEMI_AL_GIORNO:
                 break
             if area in provate:
                 continue
@@ -87,7 +90,7 @@ def main() -> None:
 
     nuove, scaletta = [], []
     for tema in temi:
-        fonti = agenti.fact_check(tema, per_id)
+        fonti = agenti.fact_check(tema, per_id, agenti.minimo_testate(tema.get("_area")))
         if not fonti:
             if tema is dibattito:
                 dibattito = None
