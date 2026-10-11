@@ -53,16 +53,11 @@
       "intro": "Quello che serve per registrare video e fare dirette fatte bene.",
       "voci": [
         {
-          "nome": "Il mio microfono: kit TONOR per PC",
-          "perche": "È quello che uso io per le dirette e i video. La voce conta più del video: è il primo acquisto da fare.",
+          "nome": "Il mio microfono: kit TONOR per PC con braccio",
+          "perche": "È quello che uso io per le dirette e i video, braccio compreso: microfono vicino alla bocca e scrivania libera.",
           "url": "https://www.amazon.it/dp/B0G2MXG2W1?tag=davidedurazzi-21",
           "dove": "Amazon",
           "mio": true
-        },
-        {
-          "nome": "Braccio per microfono",
-          "perche": "Microfono vicino alla bocca e scrivania libera.",
-          "amazon": "braccio microfono scrivania"
         },
         {
           "nome": "Luce LED da scrivania",
