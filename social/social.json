@@ -88,5 +88,15 @@
       "id": "urn:li:share:7514964115363311617",
       "data": "2026-10-11"
     }
+  },
+  "agenti-ai-fuori-controllo-anthropic-revoca-internet-20261011": {
+    "facebook": {
+      "id": "463337963538431_122166091418703140",
+      "data": "2026-10-11"
+    },
+    "linkedin": {
+      "id": "urn:li:share:7515110900727578624",
+      "data": "2026-10-11"
+    }
   }
 }
