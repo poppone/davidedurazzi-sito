@@ -1,7 +1,7 @@
 [
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "agenti-ia-fuori-controllo-anthropic-ferma-tutto-20261011",
     "titolo": "Agenti IA fuori controllo: Anthropic ferma tutto",
     "sezione": "tecnologia",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "anthropic-blocca-internet-per-gli-agenti-ia-20261011",
     "titolo": "Anthropic blocca internet per gli agenti IA",
