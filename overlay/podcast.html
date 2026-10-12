@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Scena podcast — Davide Durazzi</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#10162B;--ink2:#1B2340;--paper:#FFFFFF;--muted:#9AA3BD;--tesi:#2F55E4;--anti:#E85A16;--live:#E5263B}
+  html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:transparent}
+  body{font-family:"Archivo",system-ui,sans-serif;color:var(--paper)}
+  /* Sfondo con due "finestre" trasparenti: webcam e schermo si vedono sotto */
+  #bg{position:absolute;inset:0}
+  .slot{position:absolute;border-radius:22px;box-shadow:0 0 0 4px var(--tesi),0 20px 60px rgba(0,0,0,.45);transition:all .5s cubic-bezier(.2,.8,.2,1)}
+  .slot.cam{box-shadow:0 0 0 4px var(--anti),0 20px 60px rgba(0,0,0,.45)}
+  .tag{position:absolute;top:-17px;left:22px;padding:4px 14px;border-radius:999px;font-weight:800;font-size:18px;letter-spacing:.08em;text-transform:uppercase;background:var(--tesi)}
+  .cam .tag{background:var(--anti)}
+  .top{position:absolute;left:48px;right:48px;top:28px;height:64px;display:flex;align-items:center;gap:18px}
+  .top img{width:58px;height:58px;border-radius:50%}
+  .brand{font-weight:900;font-stretch:115%;font-size:30px;letter-spacing:-.01em}
+  .serie{font-weight:600;font-size:24px;color:var(--muted)}
+  .rec{margin-left:auto;display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.1em}
+  .rec i{width:14px;height:14px;border-radius:50%;background:var(--live);animation:p 1.6s infinite}
+  @keyframes p{50%{opacity:.3}}
+  .lower{position:absolute;left:48px;right:48px;bottom:40px;height:120px;display:flex;align-items:stretch;border-radius:20px;overflow:hidden;
+    background:var(--paper);color:var(--ink);box-shadow:0 18px 50px rgba(0,0,0,.4);transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .5s}
+  .lower.via{transform:translateY(180%);opacity:0}
+  .num{width:120px;display:flex;align-items:center;justify-content:center;background:var(--tesi);color:#fff;font-weight:900;font-stretch:125%;font-size:64px}
+  .testo{display:flex;flex-direction:column;justify-content:center;padding:0 34px}
+  .testo small{font-weight:700;font-size:20px;color:#586079;letter-spacing:.06em;text-transform:uppercase}
+  .testo b{font-weight:900;font-stretch:110%;font-size:46px;line-height:1.05;letter-spacing:-.015em}
+  .nome{margin-left:auto;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;padding:0 34px;border-left:2px solid #E3E8F0}
+  .nome b{font-weight:900;font-size:30px} .nome span{font-size:20px;color:#586079;font-weight:600}
+</style>
+</head>
+<body>
+<canvas id="bg" width="1920" height="1080"></canvas>
+<div class="top">
+  <img src="/assets/logo-192.png" alt="">
+  <span class="brand">DAVIDE DURAZZI</span><span class="serie" id="serie">L'azienda di un solo umano</span>
+  <span class="rec"><i></i>REC</span>
+</div>
+<div class="slot scr" id="scr"><span class="tag">Schermo</span></div>
+<div class="slot cam" id="cam"><span class="tag">Davide</span></div>
+<div class="lower" id="lower">
+  <div class="num" id="num">1</div>
+  <div class="testo"><small id="sotto">Domanda</small><b id="dom"></b></div>
+  <div class="nome"><b>Davide Durazzi</b><span>davidedurazzi.it</span></div>
+</div>
+<script>
+/*
+  SCENA PODCAST per OBS — fonte "Browser", 1920x1080.
+  Metti questa fonte SOPRA la webcam e la cattura schermo: le finestre sono trasparenti.
+
+  URL: https://www.davidedurazzi.it/overlay/podcast  (larghezza 1920, altezza 1080)
+  Layout (scegli con l'indirizzo, aggiungendo # alla fine):
+    podcast.html#faccia     -> webcam grande al centro
+    podcast.html#schermo    -> schermo grande + webcam a destra
+    podcast.html#faccia-3   -> layout + domanda 3 già visibile
+  Tasti (tasto destro sulla fonte -> Interagisci):
+    1-6 = domanda   0 = nascondi domanda   F = faccia   S = schermo
+*/
+var DOMANDE = [
+  "Cosa sto facendo?",
+  "Chi lavora per me?",
+  "Com'è andata questa settimana?",
+  "E il negozio?",
+  "Perché ho cancellato 27 video?",
+  "Qual è la sfida?"
+];
+var L = {
+  faccia:  {cam:[288,128,1344,756], scr:null},
+  schermo: {scr:[48,128,1376,774], cam:[1456,128,416,416]}
+};
+var stato = {layout:"faccia", d:0};
+var cv = document.getElementById("bg"), cx = cv.getContext("2d");
+
+function box(el, r){
+  if(!r){el.style.display="none";return null}
+  el.style.display="block";
+  el.style.left=r[0]+"px";el.style.top=r[1]+"px";el.style.width=r[2]+"px";el.style.height=r[3]+"px";
+  return r;
+}
+function rr(x,y,w,h,r){cx.beginPath();cx.moveTo(x+r,y);cx.arcTo(x+w,y,x+w,y+h,r);cx.arcTo(x+w,y+h,x,y+h,r);cx.arcTo(x,y+h,x,y,r);cx.arcTo(x,y,x+w,y,r);cx.closePath()}
+function sfondo(holes){
+  var g = cx.createLinearGradient(0,0,1920,1080);
+  g.addColorStop(0,"#10162B"); g.addColorStop(1,"#1B2340");
+  cx.globalCompositeOperation="source-over"; cx.clearRect(0,0,1920,1080);
+  cx.fillStyle=g; cx.fillRect(0,0,1920,1080);
+  // accenti grafici
+  cx.fillStyle="rgba(47,85,228,.18)"; cx.beginPath(); cx.arc(1820,980,420,0,7); cx.fill();
+  cx.fillStyle="rgba(232,90,22,.14)"; cx.beginPath(); cx.arc(80,1040,300,0,7); cx.fill();
+  // fori trasparenti
+  cx.globalCompositeOperation="destination-out"; cx.fillStyle="#000";
+  holes.forEach(function(h){ if(h){ rr(h[0],h[1],h[2],h[3],22); cx.fill(); } });
+  cx.globalCompositeOperation="source-over";
+}
+function render(){
+  var l = L[stato.layout];
+  sfondo([box(document.getElementById("cam"), l.cam), box(document.getElementById("scr"), l.scr)]);
+  var low = document.getElementById("lower");
+  if(stato.d>0){
+    document.getElementById("num").textContent = stato.d;
+    document.getElementById("dom").textContent = DOMANDE[stato.d-1];
+    low.classList.remove("via");
+  } else low.classList.add("via");
+}
+function daIndirizzo(){
+  var s = (location.hash||"").replace("#","") || new URLSearchParams(location.search).get("layout") || "faccia";
+  var p = s.split("-");
+  if(L[p[0]]) stato.layout = p[0];
+  var n = parseInt(p[1]||new URLSearchParams(location.search).get("d")||"0",10);
+  if(n>=0 && n<=DOMANDE.length) stato.d = n;
+  render();
+}
+document.addEventListener("keydown", function(e){
+  var k = e.key.toLowerCase();
+  if(k>="0" && k<="9" && +k<=DOMANDE.length) stato.d = +k;
+  else if(k==="f") stato.layout="faccia";
+  else if(k==="s") stato.layout="schermo";
+  else return;
+  render();
+});
+window.addEventListener("hashchange", daIndirizzo);
+daIndirizzo();
+</script>
+</body>
+</html>
