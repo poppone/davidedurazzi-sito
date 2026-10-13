@@ -318,6 +318,19 @@
       "dettagli": "Samaritan animali ha fatto 4 video in tutto (ultimo 10/10) perché parte solo dal PC. La PR #1 lo fa partire ogni mattina su GitHub, con link tracciato utm_source=tiktok e codice BENVENUTO10 in didascalia. Prima di unirla servono i secrets nel repo samaritan-animali: GROQ_API_KEY, PEXELS_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID (stessi valori del .env), facoltativo BLOB_READ_WRITE_TOKEN.",
       "link": "https://github.com/poppone/samaritan-animali/pull/1",
       "azione": "Unire la PR #1 di samaritan-animali dopo che Davide ha messo i secrets."
+    },
+    {
+      "id": "2026-10-13-23",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "volte": 1,
+      "origine": "direttore",
+      "titolo": "Copia pubblica degli Short di Samaritan notizie, per il rilancio su TikTok e Instagram",
+      "dettagli": "Serve al permesso fisso del 13/10: Metricool vuole il video a un indirizzo pubblico. Prima di unire la PR #2 va messo il secret BLOB_READ_WRITE_TOKEN nel repo samaritan-notizie (stesso valore di samaritan_v2). 753 test verdi.",
+      "link": "https://github.com/poppone/samaritan-notizie/pull/2",
+      "azione": "Unire la PR #2 di samaritan-notizie dopo che Davide ha messo il secret BLOB_READ_WRITE_TOKEN."
     }
   ]
 }
