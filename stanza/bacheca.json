@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-13",
+  "aggiornato": "2026-10-13T06:14:33Z",
   "stati": [
     "da fare",
     "in corso",
@@ -261,6 +261,31 @@
       "volte": 1,
       "deciso": "2026-10-13",
       "esito": "14 Pin programmati su Metricool."
+    },
+    {
+      "id": "2026-10-13-20",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da fare",
+      "volte": 1,
+      "origine": "crescita-zampaviva",
+      "titolo": "Mettere l'italiano come lingua principale di ZampaViva",
+      "dettagli": "Oggi la lingua principale del negozio è l'inglese e l'italiano è secondaria. I link senza /it/ (Pin, bio, video) aprono la versione inglese: testi dei prodotti in italiano ma pulsanti, carrello e checkout in inglese. In 30 giorni: 51 visite, 1 carrello, 1 checkout, 0 ordini. Con l'italiano principale tutti i link già usciti diventano italiani senza toccarli.",
+      "link": "https://admin.shopify.com/store/zampavivaoff/settings/languages",
+      "azione": "Da Shopify, Impostazioni > Lingue: impostare Italiano come lingua predefinita. Da qui non si può fare."
+    },
+    {
+      "id": "2026-10-13-21",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "tipo": "pubblicazione",
+      "volte": 1,
+      "origine": "crescita-zampaviva",
+      "titolo": "Pubblicare rimborsi, spedizioni, termini e contatti su ZampaViva",
+      "dettagli": "Su Shopify c'è solo l'informativa privacy. Mancano diritto di recesso (obbligatorio per chi vende online in Italia), spedizioni, termini e contatti. Bozze pronte in stanza/zampaviva-politiche.md: le parti tra [quadre] (spese di reso, tempi di consegna, Partita IVA) vanno confermate prima.",
+      "link": "https://github.com/poppone/davidedurazzi-sito/blob/main/stanza/zampaviva-politiche.md",
+      "azione": "Pubblicare su Shopify le 4 politiche di stanza/zampaviva-politiche.md con le parti tra [quadre] confermate da Davide."
     }
   ]
 }
