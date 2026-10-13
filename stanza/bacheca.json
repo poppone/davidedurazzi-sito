@@ -208,7 +208,7 @@
     },
     {
       "per": "davide",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "spesa",
       "titolo": "Creare il codice sconto BENVENUTO10 per ZampaViva",
       "dettagli": "Oggi ZampaViva non ha nessuno sconto attivo e zero ordini. Un codice da dire nei video dà una ragione per comprare subito e ci fa capire da dove arriva chi compra. Costo: 10% sul primo ordine (circa 2-3 € su un prodotto da 25 €).",
@@ -217,7 +217,8 @@
       "azione": "Creare su Shopify il codice BENVENUTO10: 10% di sconto, un solo uso per cliente, valido 60 giorni.",
       "da": "direttore",
       "volte": 1,
-      "id": "2026-10-13-16"
+      "id": "2026-10-13-16",
+      "deciso": "2026-10-13T04:56:32.827Z"
     },
     {
       "per": "social",
