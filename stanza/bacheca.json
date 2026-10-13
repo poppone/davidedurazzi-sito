@@ -358,6 +358,19 @@
       "origine": "controllo incrociato",
       "titolo": "Didascalia TikTok con \\n scritto per esteso",
       "dettagli": "In didascalia_tiktok dello Short YhBgD6euibg compare il testo letterale \\n invece dell'a capo. Va sostituito prima di salvare la voce."
+    },
+    {
+      "id": "2026-10-13-26",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "volte": 1,
+      "origine": "social",
+      "titolo": "Reel e Pin pubblicati direttamente, senza Metricool",
+      "dettagli": "Metricool gratis ha finito le 20 pubblicazioni di ottobre. La PR #3 pubblica i Reel Instagram con il token che il sito ha già e i Pin Pinterest con un nuovo segreto PINTEREST_TOKEN. TikTok resta fermo fino al 1/11.",
+      "link": "https://github.com/poppone/davidedurazzi-sito/pull/3",
+      "azione": "Unire la PR #3; per i Pin, Davide aggiunge il segreto PINTEREST_TOKEN nel repo davidedurazzi-sito."
     }
   ]
 }
