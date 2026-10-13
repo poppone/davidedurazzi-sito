@@ -212,6 +212,23 @@
         "Testo fedele alla descrizione Shopify, niente promesse inventate",
         "Il giorno dopo misura visite e ordini arrivati da quel canale"
       ]
+    },
+    {
+      "id": "grafico",
+      "nome": "Grafico",
+      "reparto": "Redazione",
+      "dove": "Dentro Finch (stesso giro giornaliero), regola 6h di direttore.md. Assunto da Davide il 13/10/2026",
+      "produce": "Il controllo grafico di caroselli, copertine, Pin e immagini prodotto ZampaViva; nuove grafiche in bozza su Canva; una proposta a settimana per l'aspetto del sito",
+      "come_leggerlo": "ig/<slug>/*.jpg degli articoli nuovi, immagini dei prodotti attivi su Shopify, le pagine del sito",
+      "pubblica_da_solo": false,
+      "revisore": "critico-stanza",
+      "checklist": [
+        "Testo leggibile da telefono, mai tagliato o sopra il viso",
+        "Colori e font del marchio (ink #10162B, blu #2F55E4, arancio #E85A16; Archivo + Source Serif 4)",
+        "Ogni prodotto ZampaViva ha almeno 3 immagini e il testo alternativo in italiano",
+        "Nessuna immagine di altri creator o senza diritti",
+        "Le grafiche nuove restano bozze finché Davide non le approva"
+      ]
     }
   ],
   "note_revisori": {

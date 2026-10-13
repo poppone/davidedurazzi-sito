@@ -90,6 +90,20 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    Se dopo 14 giorni Pinterest porta meno di 20 visite, proponi di cambiare
    canale invece di insistere.
 
+6h. **Grafico** (agente in `squadra.json`, assunto da Davide il 13/10). Ogni giorno:
+   - guarda le slide in `ig/<slug>/` degli articoli delle ultime 24 ore e le
+     immagini dei Pin di 6d e 6g, con la checklist del Grafico; vota 1-5 e
+     scrivi il voto nel verbale. Sotto 4, segnala cosa non va nel compito
+     del rilancio e, se il difetto viene da `agenti/slides.py`, apri una PR;
+   - controlla 2 prodotti attivi di ZampaViva al giorno, a rotazione: se hanno
+     meno di 3 immagini o il testo alternativo manca o è in inglese, crea un
+     compito "da approvare" di tipo "altro" con la correzione esatta;
+   - quando serve una grafica nuova (Pin, banner, copertina), preparala su
+     Canva come bozza e mettila in bacheca "da approvare" con il link;
+   - una volta a settimana, il lunedì, proponi un miglioramento all'aspetto
+     del sito come PR (mai su main).
+   Il Grafico non pubblica e non spende nulla da solo.
+
 6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
    "post": rilancio del carosello su TikTok (foto), Facebook, Bluesky

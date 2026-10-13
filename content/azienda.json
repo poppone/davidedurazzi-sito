@@ -45,6 +45,12 @@
           "ruolo": "Risponde alle domande pratiche dei lettori, sempre firmandosi come AI",
           "stato": "attivo",
           "turno": "A ogni commento approvato"
+        },
+        {
+          "nome": "Grafico",
+          "ruolo": "Controlla caroselli, copertine e immagini dei prodotti e prepara le grafiche nuove",
+          "stato": "in prova",
+          "turno": "Ogni mattina"
         }
       ]
     },
