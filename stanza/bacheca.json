@@ -305,6 +305,19 @@
       "azione": "Pubblicare su Shopify le 4 politiche di stanza/zampaviva-politiche.md con le parti tra [quadre] confermate da Davide.",
       "deciso": "2026-10-13T07:13:04.260Z",
       "esito": "Davide le ha incollate il 13/10; verificato su Shopify che rimborsi, spedizioni, termini e contatti sono pubblicati in italiano."
+    },
+    {
+      "id": "2026-10-13-22",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "volte": 1,
+      "origine": "crescita-zampaviva",
+      "titolo": "Portare i video ZampaViva in cloud: uno al giorno senza PC",
+      "dettagli": "Samaritan animali ha fatto 4 video in tutto (ultimo 10/10) perché parte solo dal PC. La PR #1 lo fa partire ogni mattina su GitHub, con link tracciato utm_source=tiktok e codice BENVENUTO10 in didascalia. Prima di unirla servono i secrets nel repo samaritan-animali: GROQ_API_KEY, PEXELS_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID (stessi valori del .env), facoltativo BLOB_READ_WRITE_TOKEN.",
+      "link": "https://github.com/poppone/samaritan-animali/pull/1",
+      "azione": "Unire la PR #1 di samaritan-animali dopo che Davide ha messo i secrets."
     }
   ]
 }
