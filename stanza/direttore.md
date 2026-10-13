@@ -100,12 +100,26 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    e la didascalia del post Instagram. L'`azione` dice reti, giorno e ora
    (usa getBestTimeToPostByNetwork).
 
-6e. **Short di Samaritan su TikTok.** Per ogni voce delle ultime 24 ore in
-   `cronologia_trend.json` di poppone/samaritan_v2 con `lingua` "it" e un
-   `video_file_url`, prepara un compito "da approvare" di tipo "video":
-   rilancio su TikTok @davidedurazzi via Metricool con quel file (il link
-   scade dopo 4 giorni), la `didascalia_tiktok` come testo e isAigc vero.
-   Link del compito: lo Short su YouTube.
+6e. **Short di Samaritan su TikTok e Instagram: permesso fisso.** Davide ha
+   dato il permesso fisso il 13/10/2026 (thread della stanza): questi rilanci
+   NON passano dal pannello. Per ogni voce delle ultime 24 ore in
+   `cronologia_trend.json` di poppone/samaritan_v2 (e di
+   poppone/samaritan-notizie, quando avrà `video_file_url`) con `lingua` "it"
+   e un `video_file_url`:
+   - il revisore-argomenti e il revisore-video della stanza la votano (1-5,
+     come in `qualita.json`), guardando titolo, argomento e i dati del video;
+   - **se entrambi danno almeno 4**, programmala subito su Metricool (brand
+     7358624, fuso Europe/Rome) su TikTok @davidedurazzi (isAigc vero) e
+     come Reel Instagram (instagramData type REEL, isAiGenerated vero), con
+     quel file (il link scade dopo 4 giorni) e la `didascalia_tiktok` come
+     testo, all'ora suggerita da getBestTimeToPostByNetwork. Scrivi in
+     bacheca un compito già "fatto" con i `plannerUrl`, così Davide vede
+     cosa è uscito;
+   - **se anche uno solo dà meno di 4**, o il tema tocca politica, cronaca
+     nera, salute o temi sensibili, prepara invece un compito "da approvare"
+     di tipo "video" come prima.
+   Link del compito: lo Short su YouTube. Il permesso vale solo per questi
+   Short: articoli, caroselli, email e spese restano da approvare.
 6f. **Spese in attesa.** Il secondo brand Metricool per il TikTok di
    ZampaViva è a pagamento: proponilo come compito "spesa" solo quando
    ZampaViva ha avuto almeno una vendita, con costo ed entrate del negozio.
