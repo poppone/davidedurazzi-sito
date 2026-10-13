@@ -292,7 +292,7 @@
       "id": "2026-10-13-21",
       "per": "davide",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "pubblicazione",
       "volte": 1,
       "origine": "crescita-zampaviva",
@@ -301,7 +301,7 @@
       "link": "https://github.com/poppone/davidedurazzi-sito/blob/main/stanza/zampaviva-politiche.md",
       "azione": "Pubblicare su Shopify le 4 politiche di stanza/zampaviva-politiche.md con le parti tra [quadre] confermate da Davide.",
       "deciso": "2026-10-13T07:13:04.260Z",
-      "esito": "Approvato da Davide. Il collegamento Shopify non ha il permesso di scrivere le politiche: testi pronti da incollare in /mnt/project-files/zampaviva/politiche-da-incollare.md (Impostazioni > Normative). Scelte prudenti: reso a carico del cliente, consegna entro 30 giorni, niente Partita IVA."
+      "esito": "Davide le ha incollate il 13/10; verificato su Shopify che rimborsi, spedizioni, termini e contatti sono pubblicati in italiano."
     }
   ]
 }
