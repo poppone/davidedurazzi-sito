@@ -116,6 +116,8 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    Pinterest non passano più da Metricool: aggiungi una voce in
    `social/coda.json` (formato in `agenti/coda_social.py`) e fai commit su
    main; il workflow "Coda social" pubblica e scrive l'esito nella voce.
+   Per ogni Reel aggiungi anche una voce gemella `facebook_video` con lo
+   stesso video e la stessa didascalia, per la pagina Facebook.
    Valgono le stesse regole di approvazione: in coda vanno solo i Reel coperti
    dal permesso fisso 6e (voti >= 4/5, didascalia con la nota AI) e i Pin che
    Davide ha approvato. Il giro dopo controlla `stato` ("pubblicato" con

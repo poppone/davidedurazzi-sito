@@ -1,4 +1,4 @@
-"""Coda social: pubblica direttamente i Reel su Instagram e i Pin su Pinterest.
+"""Coda social: pubblica direttamente Reel (Instagram), video (Facebook) e Pin (Pinterest).
 
 Serve finché Metricool è al limite gratuito (20 pubblicazioni al mese).
 Finch aggiunge le voci in social/coda.json, solo per cose già approvate da Davide
@@ -7,6 +7,9 @@ pubblica le voci "da pubblicare" e scrive l'esito nella stessa voce.
 
 Voce Reel:
   {"id": "...", "rete": "instagram_reel", "stato": "da pubblicare",
+   "video_url": "https://...mp4", "didascalia": "..."}
+Voce video Facebook (stessi campi del Reel):
+  {"id": "...", "rete": "facebook_video", "stato": "da pubblicare",
    "video_url": "https://...mp4", "didascalia": "..."}
 Voce Pin:
   {"id": "...", "rete": "pinterest", "stato": "da pubblicare",
@@ -29,6 +32,7 @@ CODA = RADICE / "social" / "coda.json"
 
 IG_API = "https://graph.instagram.com/" + os.environ.get("IG_API_VERSION", "v25.0")
 PIN_API = "https://api.pinterest.com/v5"
+FB_API = "https://graph.facebook.com/" + os.environ.get("FB_API_VERSION", "v21.0")
 NOTA_AI = "Video realizzato con l'AI: voce sintetica e montaggio automatico."
 TENTATIVI_MAX = 3
 
@@ -80,6 +84,15 @@ def pubblica_reel(voce: dict, token: str, attesa: float = 10, giri: int = 60) ->
     return {"post_id": post, "account": utente.get("username")}
 
 
+def pubblica_video_facebook(voce: dict, token: str, pagina: str) -> dict:
+    r = requests.post(f"{FB_API}/{pagina}/videos", timeout=300, data={
+        "file_url": voce["video_url"], "description": didascalia_reel(voce.get("didascalia", "")),
+        "access_token": token})
+    if r.status_code >= 400:
+        raise RuntimeError(f"Facebook: HTTP {r.status_code} {r.text[:300]}")
+    return {"post_id": r.json()["id"]}
+
+
 def pubblica_pin(voce: dict, token: str) -> dict:
     corpo = {
         "board_id": voce["board_id"],
@@ -99,8 +112,11 @@ def pubblica_pin(voce: dict, token: str) -> dict:
 def pubblica(coda: list[dict] | None = None, env=os.environ, **kw) -> list[dict]:
     salva = coda is None
     coda = _leggi() if coda is None else coda
+    pagina = env.get("FB_PAGE_ID", "")
     reti = {
-        "instagram_reel": (pubblica_reel, env.get("IG_ACCESS_TOKEN", "")),
+        "instagram_reel": (lambda v, t: pubblica_reel(v, t, **kw), env.get("IG_ACCESS_TOKEN", "")),
+        "facebook_video": (lambda v, t: pubblica_video_facebook(v, t, pagina),
+                           env.get("FB_PAGE_TOKEN", "") if pagina else ""),
         "pinterest": (pubblica_pin, env.get("PINTEREST_TOKEN", "")),
     }
     for voce in coda:
@@ -111,7 +127,7 @@ def pubblica(coda: list[dict] | None = None, env=os.environ, **kw) -> list[dict]
             print(f"[coda] manca il token per {voce['rete']}: la voce {voce.get('id')} aspetta")
             continue
         try:
-            esito = funzione(voce, token, **kw) if voce["rete"] == "instagram_reel" else funzione(voce, token)
+            esito = funzione(voce, token)
         except (RuntimeError, requests.RequestException, KeyError) as e:
             voce["tentativi"] = voce.get("tentativi", 0) + 1
             voce["errore"] = str(e)[:300]
