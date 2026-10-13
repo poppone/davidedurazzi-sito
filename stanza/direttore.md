@@ -104,6 +104,15 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
      del sito come PR (mai su main).
    Il Grafico non pubblica e non spende nulla da solo.
 
+6m. **Limite Metricool (dal 13/10).** Il piano gratuito permette 20
+   pubblicazioni al mese per tutto il brand, e il 13/10 sono finite (15 Pin
+   ZampaViva programmati in un giorno le hanno consumate). Fino al 31/10 NON
+   programmare nulla su Metricool: le regole 6d, 6e e 6g preparano i compiti
+   ma li lasciano "da approvare" con la nota "in attesa del limite Metricool".
+   Dal 1/11 tieni il conto nel verbale (massimo 20 al mese, ogni rete conta):
+   prima gli Short votati 4/5 su TikTok, poi i rilanci degli articoli, poi i
+   Pin, al massimo 1 Pin ZampaViva al giorno. Mai più programmare in blocco.
+
 6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
    "post": rilancio del carosello su TikTok (foto), Facebook, Bluesky
