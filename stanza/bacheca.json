@@ -164,21 +164,27 @@
       "id": "2026-10-13-11",
       "per": "samaritan-notizie",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "da approvare",
       "titolo": "Capire perché la lavorazione delle 13:00 del 12/10 è fallita",
       "dettagli": "Run 38239595126: nessun video prodotto, ma la memoria è stata salvata. In cronologia c'è anche una voce datata 13/10 slot 18:00 che non può ancora esistere. Controllare le date in cronologia.",
       "origine": "controllo incrociato",
-      "volte": 1
+      "volte": 1,
+      "tipo": "pr",
+      "link": "https://github.com/poppone/samaritan-notizie/pull/1",
+      "azione": "Unire la PR #1 di samaritan-notizie: cronologia scritta solo dopo l'upload, data dell'uscita in ora italiana, controllo doppioni per tema (3 parole in comune negli ultimi 4 giorni). 738 test verdi in locale."
     },
     {
       "id": "2026-10-13-12",
       "per": "samaritan-notizie",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "da approvare",
       "titolo": "Non ripetere lo stesso tema a due giorni di distanza",
       "dettagli": "Pensioni a 64 anni l'11/10 e di nuovo il 13/10 (Manovra). Il controllo doppioni guarda solo i titoli, non il tema.",
       "origine": "revisore-argomenti",
-      "volte": 1
+      "volte": 1,
+      "tipo": "pr",
+      "link": "https://github.com/poppone/samaritan-notizie/pull/1",
+      "azione": "Unire la PR #1 di samaritan-notizie: cronologia scritta solo dopo l'upload, data dell'uscita in ora italiana, controllo doppioni per tema (3 parole in comune negli ultimi 4 giorni). 738 test verdi in locale."
     },
     {
       "id": "2026-10-13-13",
