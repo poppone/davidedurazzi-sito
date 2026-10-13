@@ -179,14 +179,15 @@
       "id": "2026-10-13-12",
       "per": "samaritan-notizie",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "approvato",
       "titolo": "Non ripetere lo stesso tema a due giorni di distanza",
       "dettagli": "Pensioni a 64 anni l'11/10 e di nuovo il 13/10 (Manovra). Il controllo doppioni guarda solo i titoli, non il tema.",
       "origine": "revisore-argomenti",
       "volte": 1,
       "tipo": "pr",
       "link": "https://github.com/poppone/samaritan-notizie/pull/1",
-      "azione": "Unire la PR #1 di samaritan-notizie: cronologia scritta solo dopo l'upload, data dell'uscita in ora italiana, controllo doppioni per tema (3 parole in comune negli ultimi 4 giorni). 738 test verdi in locale."
+      "azione": "Unire la PR #1 di samaritan-notizie: cronologia scritta solo dopo l'upload, data dell'uscita in ora italiana, controllo doppioni per tema (3 parole in comune negli ultimi 4 giorni). 738 test verdi in locale.",
+      "deciso": "2026-10-13T07:12:52.580Z"
     },
     {
       "id": "2026-10-13-13",
