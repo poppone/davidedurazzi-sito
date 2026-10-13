@@ -140,21 +140,25 @@
       "id": "2026-10-13-9",
       "per": "samaritan-gaming",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "da approvare",
       "titolo": "Evitare argomenti a rischio come il leak \"Lucia Fully Naked\" di GTA VI",
       "dettagli": "Il revisore argomenti ha dato 1 su 5 allo Short EN delle 20:00 del 12/10 (p3V5VCPA-iA): titolo a sfondo sessuale su un leak. Rischio per il canale e per gli inserzionisti. Va aggiunto un filtro sugli argomenti espliciti.",
       "origine": "revisore-argomenti",
-      "volte": 1
+      "volte": 1,
+      "tipo": "pr",
+      "link": "https://github.com/poppone/samaritan_v2/pull/84",
+      "azione": "Unire la PR #84 di samaritan_v2: filtro contenuti espliciti su notizie, titolo, script e prima del caricamento (29 test, suite 902 verde in locale)."
     },
     {
       "id": "2026-10-13-10",
       "per": "samaritan-gaming",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "fatto",
       "titolo": "Capire perché l'uscita delle 18:00 del 12/10 è uscita in inglese",
       "dettagli": "Nel palinsesto lo slot delle 18:00 è in italiano, ma in cronologia risulta EN. Verificare orari.py e il profilo del canale.",
       "origine": "controllo incrociato",
-      "volte": 1
+      "volte": 1,
+      "esito": "Non è un bug: il 5/10 la PR #66 (chiesta da Davide) ha messo le 18:00 in inglese (profilo.py:228). Restano vecchi solo README e guida Telegram."
     },
     {
       "id": "2026-10-13-11",
