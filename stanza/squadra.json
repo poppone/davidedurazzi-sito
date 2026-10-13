@@ -54,9 +54,9 @@
       "id": "videomaker",
       "nome": "Videomaker",
       "reparto": "Video",
-      "dove": "DA COMPLETARE: progetto Claude \"Videomaker\" di Davide",
+      "dove": "Progetto Claude \"agente videomaker\" di Davide",
       "produce": "DA COMPLETARE",
-      "come_leggerlo": "DA COMPLETARE",
+      "come_leggerlo": "voci con agente \"videomaker\" in stanza/consegne.json (se vuoto: DA COMPLETARE, segnalarlo nel verbale)",
       "pubblica_da_solo": false,
       "revisore": "samaritan-gaming",
       "checklist": [
