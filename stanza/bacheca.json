@@ -28,7 +28,7 @@
       "id": "2026-10-13-2",
       "per": "social",
       "da": "direttore",
-      "stato": "in corso",
+      "stato": "fatto",
       "titolo": "Rilanciare il carosello \"Tesla dice addio al nome Full Self-Driving in Europa\"",
       "dettagli": "4 immagini già pronte per Instagram. Didascalia: quella del post Instagram, con l'AI dichiarata.",
       "origine": "regola 6d",
@@ -38,9 +38,10 @@
       "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/tesla-dice-addio-al-nome-full-self-driving-in-europa-20261012/1.jpg … 4.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo.",
       "deciso": "2026-10-13T04:21:14.494Z",
       "plannerUrl": [
-        "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=-6871787814341688855"
+        "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=-6871787814341688855",
+        "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=-4433612457429875274"
       ],
-      "esito": "Programmato per oggi alle 13:00 su TikTok e Facebook. Il post su Bluesky è stato bloccato dal controllo di sicurezza: da rifare. Pinterest saltato: manca l'ID della bacheca."
+      "esito": "Programmato per oggi alle 13:00 su TikTok, Facebook e Bluesky. Pinterest in attesa della bacheca."
     },
     {
       "id": "2026-10-13-3",
@@ -94,7 +95,7 @@
       "id": "2026-10-13-6",
       "per": "davide",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "titolo": "Inviare la proposta sponsor a NordVPN",
       "dettagli": "Bozza scritta dal Procacciatore, ferma in Gmail. Destinatario affiliate@nordvpnmedia.com. Inglese, sponsorizzazione dichiarata, link al media kit.",
       "origine": "procacciatore-sponsor",
@@ -103,7 +104,7 @@
       "link": "https://mail.google.com/mail/#drafts",
       "azione": "Inviare così com'è la bozza Gmail indirizzata a affiliate@nordvpnmedia.com.",
       "deciso": "2026-10-13T04:22:07.357Z",
-      "esito": "Invio bloccato dal controllo di sicurezza il 13/10: si riprova al prossimo giro o la invia Davide dalla bozza Gmail."
+      "esito": "La invia Davide a mano dalla bozza Gmail (13/10)."
     },
     {
       "id": "2026-10-13-7",
