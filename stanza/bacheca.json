@@ -310,14 +310,15 @@
       "id": "2026-10-13-22",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "fatto",
       "tipo": "pr",
       "volte": 1,
       "origine": "crescita-zampaviva",
       "titolo": "Portare i video ZampaViva in cloud: uno al giorno senza PC",
       "dettagli": "Samaritan animali ha fatto 4 video in tutto (ultimo 10/10) perché parte solo dal PC. La PR #1 lo fa partire ogni mattina su GitHub, con link tracciato utm_source=tiktok e codice BENVENUTO10 in didascalia. Prima di unirla servono i secrets nel repo samaritan-animali: GROQ_API_KEY, PEXELS_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID (stessi valori del .env), facoltativo BLOB_READ_WRITE_TOKEN.",
       "link": "https://github.com/poppone/samaritan-animali/pull/1",
-      "azione": "Unire la PR #1 di samaritan-animali dopo che Davide ha messo i secrets."
+      "azione": "Unire la PR #1 di samaritan-animali dopo che Davide ha messo i secrets.",
+      "esito": "PR #1 unita da Davide il 13/10 alle 18:41. Primo giro automatico domani alle 07:23; Finch lo controlla nel ciclo delle 7:52."
     },
     {
       "id": "2026-10-13-23",
