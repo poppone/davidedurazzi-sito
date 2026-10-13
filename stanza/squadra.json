@@ -16,6 +16,12 @@
         "La notizia è vera e recente",
         "Il video è uscito nel suo orario",
         "La retention è almeno nella media degli ultimi 30 giorni"
+      ],
+      "revisori_qualita": [
+        "revisore-argomenti",
+        "revisore-testi",
+        "revisore-video",
+        "revisore-trailer"
       ]
     },
     {
@@ -32,6 +38,11 @@
         "Nessuna opinione presentata come fatto",
         "Il titolo corrisponde al contenuto",
         "Il video è uscito nel suo orario"
+      ],
+      "revisori_qualita": [
+        "revisore-argomenti",
+        "revisore-testi",
+        "revisore-video"
       ]
     },
     {
@@ -48,6 +59,10 @@
         "Nessuna promessa che il negozio non mantiene (tempi, resi)",
         "Il gancio nei primi 2 secondi è chiaro",
         "La didascalia porta al negozio"
+      ],
+      "revisori_qualita": [
+        "revisore-testi",
+        "revisore-video"
       ]
     },
     {
@@ -63,6 +78,10 @@
         "Il video è coerente con il brand di Davide",
         "Audio e sottotitoli sono puliti",
         "Il gancio nei primi 2 secondi è chiaro"
+      ],
+      "revisori_qualita": [
+        "revisore-testi",
+        "revisore-video"
       ]
     },
     {
@@ -94,6 +113,10 @@
         "Titolo onesto e sotto i 70 caratteri",
         "Tono neutro su politica e cronaca",
         "Leggibile da telefono: paragrafi brevi"
+      ],
+      "revisori_qualita": [
+        "revisore-argomenti",
+        "revisore-testi"
       ]
     },
     {
@@ -109,6 +132,9 @@
         "Il carosello riassume l'articolo senza aggiungere fatti",
         "La prima slide si capisce senza leggere il resto",
         "Le affiliazioni sono dichiarate"
+      ],
+      "revisori_qualita": [
+        "revisore-testi"
       ]
     },
     {
@@ -176,5 +202,52 @@
     "fact-checker": "Il Direttore applica la regola del Fact-checker della redazione: due testate.",
     "critico-stanza": "Il Direttore rilegge con gli occhi del Critico, oltre al Critico che già gira nella redazione.",
     "direttore": "Il Direttore controlla l'Analista; Davide controlla il Direttore."
-  }
+  },
+  "revisori_qualita": [
+    {
+      "id": "revisore-argomenti",
+      "nome": "Revisore Argomenti",
+      "giudica": "la scelta della notizia o del tema",
+      "checklist": [
+        "Interessa oggi al pubblico del canale (gaming, tech, motori, attualità)",
+        "Non è già stata fatta negli ultimi 7 giorni",
+        "Ha un aggancio forte: uscita, data, prezzo, sorpresa",
+        "Rende meglio di quello che è stato scartato (righe SCARTATO nel log)"
+      ]
+    },
+    {
+      "id": "revisore-testi",
+      "nome": "Revisore Testi",
+      "giudica": "titolo, script, didascalie e articoli",
+      "checklist": [
+        "Le prime due frasi fermano chi scorre",
+        "Titolo chiaro, specifico, onesto",
+        "Niente frasi vuote o ripetute",
+        "Finale che chiude o rilancia",
+        "voto_revisore in cronologia almeno 6"
+      ]
+    },
+    {
+      "id": "revisore-video",
+      "nome": "Revisore Video",
+      "giudica": "montaggio, voce, sottotitoli, ritmo",
+      "checklist": [
+        "Retention dello Short almeno nella media dei 30 giorni (performance.json)",
+        "Voce giusta per la lingua (righe [Samaritan Voice])",
+        "Sottotitoli sincronizzati, nessun errore nel log del montaggio",
+        "Durata e stacchi nella norma del canale"
+      ]
+    },
+    {
+      "id": "revisore-trailer",
+      "nome": "Revisore Trailer",
+      "giudica": "il materiale visivo usato",
+      "checklist": [
+        "Materiale ufficiale del gioco giusto (\"N trailer ufficiali pronti\"), non clip d'archivio Pexels",
+        "Nessun materiale di altri creator",
+        "Il gioco nel video è quello del titolo",
+        "Se mancano trailer ufficiali, il video viene segnalato"
+      ]
+    }
+  ]
 }

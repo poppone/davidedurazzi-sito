@@ -24,6 +24,14 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    agente, mettendoti nei panni del `revisore`. Voto da 1 a 5 per punto, con
    una riga di motivo. Aggiungi i voti in `stanza/qualita.json`:
    `{"data", "agente", "lavoro", "revisore", "punti": [{"punto", "voto", "motivo"}], "media"}`.
+2b. **Revisori di qualità.** Per gli agenti che hanno `revisori_qualita`,
+   giudica ogni lavoro anche con la checklist di ciascun revisore elencato in
+   `revisori_qualita` di `squadra.json` (argomenti, testi, video, trailer),
+   uno alla volta e con i dati veri (log delle run, cronologia_trend.json con
+   `voto_revisore`, performance.json, vidIQ). Registra i voti in
+   `qualita.json` con `revisore` = id del revisore. Ogni settimana scrivi nel
+   verbale quale revisore boccia di più e su cosa: è lì che va la prossima
+   miglioria del codice.
 3. **Correzioni.** Per ogni media sotto 3, o punto a 1, apri un compito in
    `stanza/bacheca.json`:
    `{"id": "AAAA-MM-GG-n", "per": "<id agente>", "da": "<id revisore>", "stato": "da fare", "titolo", "dettagli", "origine": "<lavoro giudicato>", "volte": 1}`.
