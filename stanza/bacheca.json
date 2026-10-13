@@ -291,14 +291,15 @@
       "id": "2026-10-13-21",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "pubblicazione",
       "volte": 1,
       "origine": "crescita-zampaviva",
       "titolo": "Pubblicare rimborsi, spedizioni, termini e contatti su ZampaViva",
       "dettagli": "Su Shopify c'è solo l'informativa privacy. Mancano diritto di recesso (obbligatorio per chi vende online in Italia), spedizioni, termini e contatti. Bozze pronte in stanza/zampaviva-politiche.md: le parti tra [quadre] (spese di reso, tempi di consegna, Partita IVA) vanno confermate prima.",
       "link": "https://github.com/poppone/davidedurazzi-sito/blob/main/stanza/zampaviva-politiche.md",
-      "azione": "Pubblicare su Shopify le 4 politiche di stanza/zampaviva-politiche.md con le parti tra [quadre] confermate da Davide."
+      "azione": "Pubblicare su Shopify le 4 politiche di stanza/zampaviva-politiche.md con le parti tra [quadre] confermate da Davide.",
+      "deciso": "2026-10-13T07:13:04.260Z"
     }
   ]
 }
