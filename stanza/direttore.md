@@ -11,6 +11,11 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    che scrive in `stanza/bacheca.json`. Per ogni compito in "approvato" esegui
    esattamente l'`azione` scritta nel compito e nient'altro (tenendo conto di
    `nota_davide`), poi mettilo in "fatto". I compiti in "scartato" si chiudono.
+   Post e video approvati si pubblicano solo programmandoli su Metricool
+   (createScheduledPost, brand "Davide Durazzi" blogId 7358624, fuso
+   Europe/Rome), dichiarando sempre l'AI dove la rete lo prevede (isAigc su
+   TikTok, isAiGenerated su Instagram, isAiGeneratedContent su YouTube).
+   Metti nel compito il `plannerUrl` che Metricool restituisce.
 
 1. **Raccolta.** Per ogni agente di `squadra.json` leggi cosa ha prodotto
    nelle ultime 24 ore, nel modo scritto in `come_leggerlo`. Se una fonte non
@@ -44,6 +49,18 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    le PR aperte dalla stanza, i video da pubblicare, ogni spesa. Non duplicare
    un compito già presente. Le bozze di articolo restano nella loro sezione
    del pannello.
+6c. **Vendite.** Fai anche il lavoro dell'agente Vendite (vedi `squadra.json`):
+   guarda i numeri di ZampaViva su Shopify, le affiliazioni e le proposte
+   sponsor, e proponi UNA mossa concreta per portare entrate, come compito
+   "da approvare" (tipo "post", "email", "spesa" o "altro"). Il giorno dopo
+   misura se ha funzionato e scrivilo nel verbale.
+6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
+   con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
+   "post": rilancio del carosello su TikTok (foto) e Facebook, con le immagini
+   prese da `https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/<slug>/N.jpg`
+   e la didascalia del post Instagram. L'`azione` dice reti, giorno e ora
+   (usa getBestTimeToPostByNetwork).
+
 7. **Davide.** Una sola reply breve nel thread, leggibile da telefono:
    la prima riga dice quante decisioni lo aspettano su davidedurazzi.it/admin.
    Poi una riga per ciascuna, il voto medio del giorno e l'agente che è migliorato o peggiorato di

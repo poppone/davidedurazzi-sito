@@ -101,8 +101,8 @@
       "nome": "Social",
       "reparto": "Distribuzione",
       "dove": "GitHub poppone/davidedurazzi-sito, workflow pubblica.yml",
-      "produce": "Caroselli e post per Instagram, Facebook, LinkedIn dagli articoli approvati",
-      "come_leggerlo": "social/instagram.json e cartella ig/",
+      "produce": "Caroselli Instagram dagli articoli approvati; li rilancia su TikTok e Facebook via Metricool dopo l'ok di Davide",
+      "come_leggerlo": "social/instagram.json, cartella ig/, post programmati in Metricool (brand 7358624)",
       "pubblica_da_solo": false,
       "revisore": "redattore",
       "checklist": [
@@ -139,6 +139,22 @@
         "I numeri citati sono quelli del media kit",
         "Il contatto viene da una pagina ufficiale del brand",
         "Il brand è adatto al pubblico (tech, auto, gaming)"
+      ]
+    },
+    {
+      "id": "vendite",
+      "nome": "Vendite",
+      "reparto": "Commerciale",
+      "dove": "Dentro il Direttore (stesso giro giornaliero)",
+      "produce": "Una mossa al giorno per portare entrate: ZampaViva, affiliazioni, sponsor",
+      "come_leggerlo": "Shopify (sessioni, ordini, prodotti più visti, carrelli), box affiliati negli articoli, bozze sponsor in Gmail, numeri dei canali",
+      "pubblica_da_solo": false,
+      "revisore": "analista",
+      "checklist": [
+        "La mossa nasce da un numero vero, citato",
+        "Si fa in meno di un'ora o la fa un agente",
+        "Dice quanto può rendere, anche a spanne, e come lo misureremo",
+        "Non ripete una mossa già scartata da Davide"
       ]
     },
     {
