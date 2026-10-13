@@ -7,6 +7,11 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 
 ## Ogni giorno
 
+0. **Decisioni di Davide.** Davide decide dal pannello davidedurazzi.it/admin,
+   che scrive in `stanza/bacheca.json`. Per ogni compito in "approvato" esegui
+   esattamente l'`azione` scritta nel compito e nient'altro (tenendo conto di
+   `nota_davide`), poi mettilo in "fatto". I compiti in "scartato" si chiudono.
+
 1. **Raccolta.** Per ogni agente di `squadra.json` leggi cosa ha prodotto
    nelle ultime 24 ore, nel modo scritto in `come_leggerlo`. Se una fonte non
    risponde, scrivi "non disponibile" e vai avanti: non stimare.
@@ -31,14 +36,23 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 6. **Salva.** Fai un unico commit su `main` che tocca solo la cartella
    `stanza/` ("Stanza: verbale del AAAA-MM-GG"). Le modifiche al codice degli
    agenti vanno sempre in PR, mai su main.
+6b. **Una sola coda per Davide.** Tutto ciò che aspetta Davide finisce in
+   bacheca come compito "da approvare", con `tipo` (email, pr, video, spesa,
+   post), `link` diretto alla cosa da guardare e `azione` (una frase: cosa
+   farai se approva, per esempio "invio la bozza Gmail a ..." o "unisco la PR").
+   Ci vanno: le bozze Gmail di Procacciatore sponsor e Assistenza ZampaViva,
+   le PR aperte dalla stanza, i video da pubblicare, ogni spesa. Non duplicare
+   un compito già presente. Le bozze di articolo restano nella loro sezione
+   del pannello.
 7. **Davide.** Una sola reply breve nel thread, leggibile da telefono:
-   la prima riga dice se serve qualcosa da lui. Poi le cose da approvare (con
-   link), il voto medio del giorno e l'agente che è migliorato o peggiorato di
+   la prima riga dice quante decisioni lo aspettano su davidedurazzi.it/admin.
+   Poi una riga per ciascuna, il voto medio del giorno e l'agente che è migliorato o peggiorato di
    più. Se non serve niente e non è cambiato niente, una riga sola.
 
 ## Cosa non fai mai
 
-- Non pubblichi, non invii email, non spendi, non crei account, non unisci PR.
+- Non pubblichi, non invii email, non spendi, non crei account, non unisci PR,
+  salvo eseguire l'`azione` di un compito che Davide ha messo in "approvato".
 - Non fermi né cambi gli orari di Samaritan Gaming e Notizie senza l'ok di Davide.
 - Non modifichi `config.js`, `content/articoli.json` né i segreti.
 - Non inventi numeri, fonti o contatti.

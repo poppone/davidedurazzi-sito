@@ -28,13 +28,15 @@ Chi tiene in ordine la stanza è il **Direttore**: una routine Claude che gira
 4. **Livellamento**: quello che funziona in un agente (titoli, ritmo, fonti)
    viene proposto agli altri. Il voto medio di ogni agente sta in `qualita.json`,
    così si vede se la qualità sale.
-5. **Davide**: un solo messaggio al giorno con le decisioni da prendere.
+5. **Davide**: tutte le decisioni lo aspettano in un posto solo, il pannello
+   davidedurazzi.it/admin (sezione "Dalla stanza degli agenti"), più un solo
+   messaggio al giorno che dice quante sono.
 
 ## Regole che non si toccano
 
 - **Davide approva ogni uscita nuova**: post, video, articoli, email, spese.
   Il Direttore prepara, propone e apre PR; non pubblica, non invia, non spende,
-  non unisce PR.
+  non unisce PR, finché Davide non approva quel compito dal pannello.
 - Le catene che oggi pubblicano da sole (Samaritan Gaming e Notizie) restano
   come sono finché Davide non decide diversamente: la stanza le controlla e
   propone correzioni, non le ferma.
