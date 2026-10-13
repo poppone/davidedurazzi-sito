@@ -61,6 +61,16 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    e la didascalia del post Instagram. L'`azione` dice reti, giorno e ora
    (usa getBestTimeToPostByNetwork).
 
+6e. **Short di Samaritan su TikTok.** Per ogni voce delle ultime 24 ore in
+   `cronologia_trend.json` di poppone/samaritan_v2 con `lingua` "it" e un
+   `video_file_url`, prepara un compito "da approvare" di tipo "video":
+   rilancio su TikTok @davidedurazzi via Metricool con quel file (il link
+   scade dopo 4 giorni), la `didascalia_tiktok` come testo e isAigc vero.
+   Link del compito: lo Short su YouTube.
+6f. **Spese in attesa.** Il secondo brand Metricool per il TikTok di
+   ZampaViva è a pagamento: proponilo come compito "spesa" solo quando
+   ZampaViva ha avuto almeno una vendita, con costo ed entrate del negozio.
+
 7. **Davide.** Una sola reply breve nel thread, leggibile da telefono:
    la prima riga dice quante decisioni lo aspettano su davidedurazzi.it/admin.
    Poi una riga per ciascuna, il voto medio del giorno e l'agente che è migliorato o peggiorato di
