@@ -78,8 +78,8 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
    "post": rilancio del carosello su TikTok (foto), Facebook, Bluesky
    (davidedurazzi.bsky.social, massimo 4 immagini) e Pinterest (davide1988rm:
-   un Pin con la prima immagine e il link all'articolo sul sito; se Metricool
-   chiede la bacheca Pinterest e non la conosci, scrivilo nell'`azione`), con le immagini
+   un Pin con la prima immagine e il link all'articolo sul sito, nella bacheca
+   "Notizie davidedurazzi.it", boardId 1039979807642687589), con le immagini
    prese da `https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/<slug>/N.jpg`
    e la didascalia del post Instagram. L'`azione` dice reti, giorno e ora
    (usa getBestTimeToPostByNetwork).
