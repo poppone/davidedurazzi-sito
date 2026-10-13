@@ -363,14 +363,15 @@
       "id": "2026-10-13-26",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "fatto",
       "tipo": "pr",
       "volte": 1,
       "origine": "social",
       "titolo": "Reel e Pin pubblicati direttamente, senza Metricool",
       "dettagli": "Metricool gratis ha finito le 20 pubblicazioni di ottobre. La PR #3 pubblica i Reel Instagram con il token che il sito ha già e i Pin Pinterest con un nuovo segreto PINTEREST_TOKEN. TikTok resta fermo fino al 1/11.",
       "link": "https://github.com/poppone/davidedurazzi-sito/pull/3",
-      "azione": "Unire la PR #3; per i Pin, Davide aggiunge il segreto PINTEREST_TOKEN nel repo davidedurazzi-sito."
+      "azione": "Unire la PR #3; per i Pin, Davide aggiunge il segreto PINTEREST_TOKEN nel repo davidedurazzi-sito.",
+      "esito": "PR #3 unita da Davide il 13/10 alle 20:20. Reel attivi; Pin in attesa di PINTEREST_TOKEN."
     }
   ]
 }
