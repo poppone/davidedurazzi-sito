@@ -22,6 +22,7 @@ jobs:
           PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
       - name: Registra l'esito
         run: |
           git config user.name "redazione-ai"

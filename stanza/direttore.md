@@ -112,21 +112,25 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    Dal 1/11 tieni il conto nel verbale (massimo 20 al mese, ogni rete conta):
    prima gli Short votati 4/5 su TikTok, poi i rilanci degli articoli, poi i
    Pin, al massimo 1 Pin ZampaViva al giorno. Mai più programmare in blocco.
-   **Strada diretta (scelta di Davide il 13/10).** Reel Instagram e Pin
-   Pinterest non passano più da Metricool: aggiungi una voce in
-   `social/coda.json` (formato in `agenti/coda_social.py`) e fai commit su
-   main; il workflow "Coda social" pubblica e scrive l'esito nella voce.
-   Per ogni Reel aggiungi anche una voce gemella `facebook_video` con lo
-   stesso video e la stessa didascalia, per la pagina Facebook.
+   **Strada diretta (scelte di Davide il 13/10: "quello che possiamo
+   sganciare da Metricool è meglio").** Metricool serve SOLO per TikTok.
+   Tutto il resto passa da `social/coda.json` (formato in
+   `agenti/coda_social.py`): aggiungi le voci e fai commit su main, il
+   workflow "Coda social" pubblica e scrive l'esito nella voce.
+   | Cosa | Dove va |
+   |---|---|
+   | Short votato >= 4/5 (6e) | coda: `instagram_reel` + `facebook_video`; Metricool: TikTok |
+   | Articolo approvato (6d) | Instagram e Facebook escono già da soli con `pubblica.yml`; coda: `bluesky` (max 4 slide) + `pinterest` (bacheca Notizie); Metricool: TikTok foto |
+   | Pin ZampaViva approvato (6g) | coda: `pinterest` (bacheca ZampaViva) |
    Valgono le stesse regole di approvazione: in coda vanno solo i Reel coperti
-   dal permesso fisso 6e (voti >= 4/5, didascalia con la nota AI) e i Pin che
-   Davide ha approvato. Il giro dopo controlla `stato` ("pubblicato" con
-   `post_id`, oppure "errore" con il motivo) e scrivilo nel verbale.
-   TikTok resta solo su Metricool, dal 1/11.
+   dal permesso fisso 6e (didascalia con la nota AI) e i post che Davide ha
+   approvato. Il giro dopo controlla `stato` ("pubblicato" con `post_id`,
+   oppure "errore" con il motivo) e scrivilo nel verbale. Una voce che
+   aspetta il token resta "da pubblicare": non è un errore.
 
 6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
-   "post": rilancio del carosello su TikTok (foto), Facebook, Bluesky
+   "post": rilancio del carosello su TikTok (foto), Bluesky
    (davidedurazzi.bsky.social, massimo 4 immagini) e Pinterest (davide1988rm:
    un Pin con la prima immagine e il link all'articolo sul sito, nella bacheca
    "Notizie davidedurazzi.it", boardId 1039979807642687589), con le immagini
@@ -143,8 +147,8 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    - il revisore-argomenti e il revisore-video della stanza la votano (1-5,
      come in `qualita.json`), guardando titolo, argomento e i dati del video;
    - **se entrambi danno almeno 4**, programmala subito su Metricool (brand
-     7358624, fuso Europe/Rome) su TikTok @davidedurazzi (isAigc vero) e
-     come Reel Instagram (instagramData type REEL, isAiGenerated vero), con
+     7358624, fuso Europe/Rome) su TikTok @davidedurazzi (isAigc vero), e
+     metti in coda il Reel Instagram e il video Facebook (regola 6m), con
      quel file (il link scade dopo 4 giorni) e la `didascalia_tiktok` come
      testo, all'ora suggerita da getBestTimeToPostByNetwork. Scrivi in
      bacheca un compito già "fatto" con i `plannerUrl`, così Davide vede
