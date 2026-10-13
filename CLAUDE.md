@@ -16,7 +16,7 @@ Rispondi sempre in italiano. Davide preferisce risposte dirette e pratiche.
 - `index.html`, `articolo.html`, `privacy.html`, `app.js`, `style.css` — frontend. Font: Archivo + Source Serif 4. Colori: ink #10162B, blu tesi #2F55E4, arancio antitesi #E85A16, live #E5263B. Light/dark con token CSS.
 - `assets/logo-*.png` — logo di Davide (64/192/512).
 - `overlay/contraddittorio.html` — fonte Browser OBS 1920x1080: sondaggio live !si/!no letto dalla chat Twitch anonima; comandi mod !apri !chiudi !reset !nascondi !mostra; `?demo=1` per test.
-- `admin/index.html` + `api/admin.js` — moderazione commenti (password env `ADMIN_PASSWORD`). All'approvazione l'agente classifica: "pratica" → risposta automatica firmata "Redazione AI" (sempre dichiarata); "discussione" → bozza che Davide pubblica col suo nome; "ignora".
+- `admin/index.html` + `api/admin.js` — moderazione commenti (password env `ADMIN_PASSWORD`). All'approvazione l'agente classifica: "pratica" → risposta automatica firmata "Redazione AI" (sempre dichiarata); "discussione" → bozza che Davide pubblica col suo nome; "ignora". In cima c'è la sezione "Dalla stanza degli agenti": i compiti "da approvare" di `stanza/bacheca.json` (azioni `stanza`, `approva_compito`, `scarta_compito`).
 - `api/commenti.js` — GET commenti approvati / POST nuovo commento in moderazione (honeypot, rate limit su IP anonimizzato).
 - `api/youtube.js` — ultimi video dal feed RSS del canale.
 

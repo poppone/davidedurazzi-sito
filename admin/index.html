@@ -70,7 +70,8 @@
   function carica() {
     app.innerHTML = '<p class="vuoto">Caricamento.</p>';
     var contenuti = api({ azione: "contenuti" }).catch(function (e) { return { errore: e.message }; });
-    api({ azione: "elenco" }).then(function (j) { return contenuti.then(function (c) { disegna(j, c); }); }).catch(function (e) {
+    var stanza = api({ azione: "stanza" }).catch(function (e) { return { errore: e.message }; });
+    api({ azione: "elenco" }).then(function (j) { return Promise.all([contenuti, stanza]).then(function (r) { disegna(j, r[0], r[1]); }); }).catch(function (e) {
       if (/Password/.test(e.message)) { sessionStorage.removeItem("pw"); login("Password errata."); }
       else app.innerHTML = '<p class="vuoto">' + esc(e.message) + '</p>';
     });
@@ -78,6 +79,22 @@
 
   function link(c) { return '<a href="/articolo?slug=' + encodeURIComponent(c.slug) + '" target="_blank" rel="noopener">articolo</a>'; }
   function data(d) { return new Date(d).toLocaleString("it-IT", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }); }
+
+  var TIPI = { email: "Email", pr: "Modifica a un agente", video: "Video", spesa: "Spesa", post: "Post" };
+  function sezStanza(s) {
+    if (!s || s.errore) return '<h2 style="margin-top:0">Dalla stanza degli agenti</h2><p class="vuoto">' + esc((s && s.errore) || "Non disponibile") + '</p>';
+    var h = '<h2 style="margin-top:0">Dalla stanza degli agenti (' + s.compiti.length + ')</h2>';
+    return h + (s.compiti.length ? s.compiti.map(function (x) {
+      var url = /^https?:\/\//.test(x.link || "") ? x.link : "";
+      return '<div class="card" data-compito="' + esc(x.id) + '"><div class="chi">' + esc(x.titolo) + '</div>' +
+        '<div class="dove">' + esc(TIPI[x.tipo] || x.tipo || "Decisione") + ' \u00b7 ' + esc(x.per || "") + (x.da ? ', proposto da ' + esc(x.da) : '') + (url ? ' \u00b7 <a href="' + esc(url) + '" target="_blank" rel="noopener">apri</a>' : '') + '</div>' +
+        (x.dettagli ? '<p>' + esc(x.dettagli) + '</p>' : '') +
+        (x.azione ? '<div class="dove">Se approvi: ' + esc(x.azione) + '</div>' : '') +
+        '<textarea placeholder="Nota per il Direttore (facoltativa)" style="min-height:3rem"></textarea>' +
+        '<div class="acts"><button class="btn pieno" data-az="approva_compito" type="button">Approva</button>' +
+        '<button class="btn rosso" data-az="scarta_compito" type="button">No</button></div><div class="esito"></div></div>';
+    }).join("") : '<p class="vuoto">Niente da decidere.</p>');
+  }
 
   function sezContenuti(c) {
     if (!c || c.errore) return '<h2>Articoli e bozze</h2><p class="vuoto">' + esc((c && c.errore) || "Non disponibili") + '</p>';
@@ -100,8 +117,8 @@
     return h;
   }
 
-  function disegna(j, cont) {
-    var h = '<h2 style="margin-top:0">Visite al sito</h2><div id="visite"><p class="vuoto">Caricamento.</p></div>' + sezContenuti(cont) + '<h1 style="margin-top:3rem;font-size:1.5rem">Commenti</h1><h2>Da approvare (' + j.attesa.length + ')</h2>';
+  function disegna(j, cont, stz) {
+    var h = sezStanza(stz) + '<h2>Visite al sito</h2><div id="visite"><p class="vuoto">Caricamento.</p></div>' + sezContenuti(cont) + '<h1 style="margin-top:3rem;font-size:1.5rem">Commenti</h1><h2>Da approvare (' + j.attesa.length + ')</h2>';
     h += j.attesa.length ? j.attesa.map(function (c) {
       return '<div class="card" data-id="' + esc(c.id) + '"><div class="chi">' + esc(c.nome) + '</div><div class="dove">' + data(c.data) + ', ' + link(c) + '</div>' +
         '<p>' + esc(c.testo) + '</p>' +
@@ -156,13 +173,14 @@
 
   app.addEventListener("click", function (e) {
     var b = e.target.closest("button[data-az]"); if (!b) return;
-    var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id };
+    var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id || card.dataset.compito };
     if (card.dataset.slug) {
       corpo.slug = card.dataset.slug;
       var conf = { togli_articolo: "Togliere l\u2019articolo dal sito?", scarta_bozza_articolo: "Scartare la bozza?", approva_bozza: "Approvare? Va online sul sito e su Instagram." }[az];
       if (conf && !confirm(conf)) return;
     }
     if (az === "elimina" && !confirm("Eliminare il commento?")) return;
+    if (card.dataset.compito) corpo.testo = (card.querySelector("textarea") || {}).value || "";
     if (az === "rispondi" || az === "approva") corpo.testo = (card.querySelector("textarea") || {}).value || "";
     if (az === "rispondi" && !corpo.testo.trim()) { card.querySelector(".esito").textContent = "Scrivi prima la risposta."; return; }
     card.querySelectorAll("button").forEach(function (x) { x.disabled = true; });

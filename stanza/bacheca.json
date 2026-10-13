@@ -1,5 +1,13 @@
 {
   "aggiornato": null,
-  "stati": ["da fare", "in corso", "in revisione", "da approvare", "fatto", "scartato"],
+  "stati": [
+    "da fare",
+    "in corso",
+    "in revisione",
+    "da approvare",
+    "approvato",
+    "fatto",
+    "scartato"
+  ],
   "compiti": []
 }

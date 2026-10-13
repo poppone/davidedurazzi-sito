@@ -132,6 +132,30 @@ module.exports = async (req, res) => {
       return res.status(200).json({ ok: true, esito: approva ? "approvata: sito e Instagram partono in automatico (qualche minuto)" : "bozza scartata" });
     }
 
+    // ---- Stanza degli agenti: le decisioni che il Direttore lascia a Davide (stanza/bacheca.json) ----
+    if (b.azione === "stanza") {
+      const { dati } = await leggiJson("stanza/bacheca.json");
+      return res.status(200).json({ compiti: (dati.compiti || []).filter((x) => x.stato === "da approvare") });
+    }
+
+    if (b.azione === "approva_compito" || b.azione === "scarta_compito") {
+      const approva = b.azione === "approva_compito";
+      const nota = String(b.testo || "").slice(0, 1000);
+      let trovato = false;
+      await aggiornaJson("stanza/bacheca.json", (approva ? "Stanza: approvato " : "Stanza: scartato ") + id, (bach) => {
+        const x = (bach.compiti || []).find((y) => y.id === id);
+        if (!x) return null;
+        trovato = true;
+        if (x.stato !== "da approvare") return null;
+        x.stato = approva ? "approvato" : "scartato";
+        x.deciso = new Date().toISOString();
+        if (nota) x.nota_davide = nota;
+        return bach;
+      });
+      if (!trovato) return res.status(404).json({ errore: "Compito non trovato" });
+      return res.status(200).json({ ok: true, esito: approva ? "approvato: il Direttore lo esegue al prossimo giro" : "scartato" });
+    }
+
     const c = await leggiCommento(id);
     if (!c) return res.status(404).json({ errore: "Commento non trovato" });
 
