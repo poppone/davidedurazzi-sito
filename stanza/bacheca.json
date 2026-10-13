@@ -166,7 +166,7 @@
       "id": "2026-10-13-11",
       "per": "samaritan-notizie",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "titolo": "Capire perché la lavorazione delle 13:00 del 12/10 è fallita",
       "dettagli": "Run 38239595126: nessun video prodotto, ma la memoria è stata salvata. In cronologia c'è anche una voce datata 13/10 slot 18:00 che non può ancora esistere. Controllare le date in cronologia.",
       "origine": "controllo incrociato",
@@ -174,13 +174,14 @@
       "tipo": "pr",
       "link": "https://github.com/poppone/samaritan-notizie/pull/1",
       "azione": "Unire la PR #1 di samaritan-notizie: cronologia scritta solo dopo l'upload, data dell'uscita in ora italiana, controllo doppioni per tema (3 parole in comune negli ultimi 4 giorni). 738 test verdi in locale.",
-      "deciso": "2026-10-13T07:12:47.790Z"
+      "deciso": "2026-10-13T07:12:47.790Z",
+      "esito": "PR #1 di samaritan-notizie unita da Davide il 13/10: cronologia solo dopo l'upload, date in ora italiana, doppioni per tema."
     },
     {
       "id": "2026-10-13-12",
       "per": "samaritan-notizie",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "titolo": "Non ripetere lo stesso tema a due giorni di distanza",
       "dettagli": "Pensioni a 64 anni l'11/10 e di nuovo il 13/10 (Manovra). Il controllo doppioni guarda solo i titoli, non il tema.",
       "origine": "revisore-argomenti",
@@ -188,7 +189,8 @@
       "tipo": "pr",
       "link": "https://github.com/poppone/samaritan-notizie/pull/1",
       "azione": "Unire la PR #1 di samaritan-notizie: cronologia scritta solo dopo l'upload, data dell'uscita in ora italiana, controllo doppioni per tema (3 parole in comune negli ultimi 4 giorni). 738 test verdi in locale.",
-      "deciso": "2026-10-13T07:12:52.580Z"
+      "deciso": "2026-10-13T07:12:52.580Z",
+      "esito": "PR #1 di samaritan-notizie unita da Davide il 13/10: cronologia solo dopo l'upload, date in ora italiana, doppioni per tema."
     },
     {
       "id": "2026-10-13-13",
