@@ -14,14 +14,15 @@
       "id": "2026-10-13-1",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "fatto",
       "titolo": "Unire il revisore di qualità di Samaritan gaming",
       "dettagli": "Ogni copione passa da un secondo modello che dà un voto da 1 a 10: sotto 6 viene riscritto (al massimo due volte). Test verdi (873 passati, CI verde). Meglio unirlo prima dello Short delle 14:00.",
       "origine": "revisori di qualità",
       "volte": 1,
       "tipo": "pr",
       "link": "https://github.com/poppone/samaritan_v2/pull/83",
-      "azione": "Unire la PR #83 su samaritan_v2."
+      "azione": "Unire la PR #83 su samaritan_v2.",
+      "deciso": "2026-10-13"
     },
     {
       "id": "2026-10-13-2",
