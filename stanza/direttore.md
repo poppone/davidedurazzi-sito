@@ -22,13 +22,15 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 1. **Raccolta.** Per ogni agente di `squadra.json` leggi cosa ha prodotto
    nelle ultime 24 ore, nel modo scritto in `come_leggerlo`. Se una fonte non
    risponde, scrivi "non disponibile" e vai avanti: non stimare.
-1b. **Video del videomaker.** Le consegne in `consegne.json` con un link Google
-   Drive (cartella "Videomaker" del Drive di Davide) le scarichi con il connettore
-   Google Drive e le controlli con ffmpeg: durata, silenzi oltre 1,5 secondi
-   (`silencedetect=noise=-35dB:d=1.5`, il difetto che Davide ha già trovato una
-   volta), volume medio, e un fotogramma ogni 30 secondi da guardare. I risultati
-   vanno al revisore-video e al revisore-trailer. Se la consegna ha solo un
-   percorso del PC (C:\...), scrivi nel diario che il video non è visibile.
+1b. **Video del videomaker.** Ogni consegna in `consegne.json` ha una cartella
+   Google Drive (cartella "Videomaker" del Drive di Davide). I video sono troppo
+   grandi per il connettore: il videomaker mette nella stessa cartella
+   `controllo.txt` (durata, silenzi oltre 1,5 secondi da ffmpeg silencedetect,
+   loudness in LUFS) e `provini.jpg` (un fotogramma ogni 30 secondi, piccolo).
+   Leggili con il connettore Google Drive e girali al revisore-video e al
+   revisore-trailer: un silenzio oltre 1,5 secondi o loudness fuori da -16/-12
+   LUFS è un 2 su 5. Se `controllo.txt` manca, scrivi nel diario che il video non
+   è stato controllato e metti un compito "da fare" al videomaker.
 
 2. **Controllo incrociato.** Giudica ogni lavoro con la `checklist` del suo
    agente, mettendoti nei panni del `revisore`. Voto da 1 a 5 per punto, con
