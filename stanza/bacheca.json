@@ -56,14 +56,15 @@
       "id": "2026-10-13-4",
       "per": "social",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "scartato",
       "titolo": "Rilanciare il carosello \"Il ritorno della smart #2: elettrica e con prezzi popolari\"",
       "dettagli": "4 immagini già pronte per Instagram. Didascalia: quella del post Instagram, con l'AI dichiarata.",
       "origine": "regola 6d",
       "volte": 1,
       "tipo": "post",
       "link": "https://www.davidedurazzi.it/articolo.html?slug=il-ritorno-della-smart-2-elettrica-e-con-prezzi-popolari-20261012",
-      "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/il-ritorno-della-smart-2-elettrica-e-con-prezzi-popolari-20261012/1.jpg … 4.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo."
+      "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/il-ritorno-della-smart-2-elettrica-e-con-prezzi-popolari-20261012/1.jpg … 4.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo.",
+      "deciso": "2026-10-13T04:21:41.361Z"
     },
     {
       "id": "2026-10-13-5",
