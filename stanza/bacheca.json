@@ -1,5 +1,5 @@
 {
-  "aggiornato": null,
+  "aggiornato": "2026-10-13",
   "stati": [
     "da fare",
     "in corso",
@@ -9,5 +9,170 @@
     "fatto",
     "scartato"
   ],
-  "compiti": []
+  "compiti": [
+    {
+      "id": "2026-10-13-1",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "titolo": "Unire il revisore di qualità di Samaritan gaming",
+      "dettagli": "Ogni copione passa da un secondo modello che dà un voto da 1 a 10: sotto 6 viene riscritto (al massimo due volte). Test verdi (873 passati, CI verde). Meglio unirlo prima dello Short delle 14:00.",
+      "origine": "revisori di qualità",
+      "volte": 1,
+      "tipo": "pr",
+      "link": "https://github.com/poppone/samaritan_v2/pull/83",
+      "azione": "Unire la PR #83 su samaritan_v2."
+    },
+    {
+      "id": "2026-10-13-2",
+      "per": "social",
+      "da": "direttore",
+      "stato": "da approvare",
+      "titolo": "Rilanciare il carosello \"Tesla dice addio al nome Full Self-Driving in Europa\"",
+      "dettagli": "4 immagini già pronte per Instagram. Didascalia: quella del post Instagram, con l'AI dichiarata.",
+      "origine": "regola 6d",
+      "volte": 1,
+      "tipo": "post",
+      "link": "https://www.davidedurazzi.it/articolo.html?slug=tesla-dice-addio-al-nome-full-self-driving-in-europa-20261012",
+      "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/tesla-dice-addio-al-nome-full-self-driving-in-europa-20261012/1.jpg … 4.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo."
+    },
+    {
+      "id": "2026-10-13-3",
+      "per": "social",
+      "da": "direttore",
+      "stato": "da approvare",
+      "titolo": "Rilanciare il carosello \"Crisi delle console e il ruolo del Game Pass nel mercato\"",
+      "dettagli": "6 immagini già pronte per Instagram. Didascalia: quella del post Instagram, con l'AI dichiarata.",
+      "origine": "regola 6d",
+      "volte": 1,
+      "tipo": "post",
+      "link": "https://www.davidedurazzi.it/articolo.html?slug=crisi-delle-console-e-il-ruolo-del-game-pass-nel-mercato-20261012",
+      "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/crisi-delle-console-e-il-ruolo-del-game-pass-nel-mercato-20261012/1.jpg … 6.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo."
+    },
+    {
+      "id": "2026-10-13-4",
+      "per": "social",
+      "da": "direttore",
+      "stato": "da approvare",
+      "titolo": "Rilanciare il carosello \"Il ritorno della smart #2: elettrica e con prezzi popolari\"",
+      "dettagli": "4 immagini già pronte per Instagram. Didascalia: quella del post Instagram, con l'AI dichiarata.",
+      "origine": "regola 6d",
+      "volte": 1,
+      "tipo": "post",
+      "link": "https://www.davidedurazzi.it/articolo.html?slug=il-ritorno-della-smart-2-elettrica-e-con-prezzi-popolari-20261012",
+      "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/il-ritorno-della-smart-2-elettrica-e-con-prezzi-popolari-20261012/1.jpg … 4.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo."
+    },
+    {
+      "id": "2026-10-13-5",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "titolo": "Inviare la proposta sponsor a carVertical",
+      "dettagli": "Bozza scritta dal Procacciatore, ferma in Gmail. Destinatario affiliate@carvertical.com. Inglese, sponsorizzazione dichiarata, link al media kit.",
+      "origine": "procacciatore-sponsor",
+      "volte": 1,
+      "tipo": "email",
+      "link": "https://mail.google.com/mail/#drafts",
+      "azione": "Inviare così com'è la bozza Gmail indirizzata a affiliate@carvertical.com."
+    },
+    {
+      "id": "2026-10-13-6",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "titolo": "Inviare la proposta sponsor a NordVPN",
+      "dettagli": "Bozza scritta dal Procacciatore, ferma in Gmail. Destinatario affiliate@nordvpnmedia.com. Inglese, sponsorizzazione dichiarata, link al media kit.",
+      "origine": "procacciatore-sponsor",
+      "volte": 1,
+      "tipo": "email",
+      "link": "https://mail.google.com/mail/#drafts",
+      "azione": "Inviare così com'è la bozza Gmail indirizzata a affiliate@nordvpnmedia.com."
+    },
+    {
+      "id": "2026-10-13-7",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "titolo": "Inviare la proposta sponsor a UGREEN",
+      "dettagli": "Bozza scritta dal Procacciatore, ferma in Gmail. Destinatario affiliate@ugreen.com. Inglese, sponsorizzazione dichiarata, link al media kit.",
+      "origine": "procacciatore-sponsor",
+      "volte": 1,
+      "tipo": "email",
+      "link": "https://mail.google.com/mail/#drafts",
+      "azione": "Inviare così com'è la bozza Gmail indirizzata a affiliate@ugreen.com."
+    },
+    {
+      "id": "2026-10-13-8",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "titolo": "Inviare la proposta sponsor a Surfshark",
+      "dettagli": "Bozza scritta dal Procacciatore, ferma in Gmail. Destinatario influencers@surfshark.com. Inglese, sponsorizzazione dichiarata, link al media kit.",
+      "origine": "procacciatore-sponsor",
+      "volte": 1,
+      "tipo": "email",
+      "link": "https://mail.google.com/mail/#drafts",
+      "azione": "Inviare così com'è la bozza Gmail indirizzata a influencers@surfshark.com."
+    },
+    {
+      "id": "2026-10-13-9",
+      "per": "samaritan-gaming",
+      "da": "direttore",
+      "stato": "da fare",
+      "titolo": "Evitare argomenti a rischio come il leak \"Lucia Fully Naked\" di GTA VI",
+      "dettagli": "Il revisore argomenti ha dato 1 su 5 allo Short EN delle 20:00 del 12/10 (p3V5VCPA-iA): titolo a sfondo sessuale su un leak. Rischio per il canale e per gli inserzionisti. Va aggiunto un filtro sugli argomenti espliciti.",
+      "origine": "revisore-argomenti",
+      "volte": 1
+    },
+    {
+      "id": "2026-10-13-10",
+      "per": "samaritan-gaming",
+      "da": "direttore",
+      "stato": "da fare",
+      "titolo": "Capire perché l'uscita delle 18:00 del 12/10 è uscita in inglese",
+      "dettagli": "Nel palinsesto lo slot delle 18:00 è in italiano, ma in cronologia risulta EN. Verificare orari.py e il profilo del canale.",
+      "origine": "controllo incrociato",
+      "volte": 1
+    },
+    {
+      "id": "2026-10-13-11",
+      "per": "samaritan-notizie",
+      "da": "direttore",
+      "stato": "da fare",
+      "titolo": "Capire perché la lavorazione delle 13:00 del 12/10 è fallita",
+      "dettagli": "Run 38239595126: nessun video prodotto, ma la memoria è stata salvata. In cronologia c'è anche una voce datata 13/10 slot 18:00 che non può ancora esistere. Controllare le date in cronologia.",
+      "origine": "controllo incrociato",
+      "volte": 1
+    },
+    {
+      "id": "2026-10-13-12",
+      "per": "samaritan-notizie",
+      "da": "direttore",
+      "stato": "da fare",
+      "titolo": "Non ripetere lo stesso tema a due giorni di distanza",
+      "dettagli": "Pensioni a 64 anni l'11/10 e di nuovo il 13/10 (Manovra). Il controllo doppioni guarda solo i titoli, non il tema.",
+      "origine": "revisore-argomenti",
+      "volte": 1
+    },
+    {
+      "id": "2026-10-13-13",
+      "per": "analista",
+      "da": "direttore",
+      "stato": "da fare",
+      "titolo": "Riattivare l'aggiornamento di performance.json",
+      "dettagli": "I dati di Samaritan gaming si fermano al 9/10: i revisori video non possono confrontare la retention con la mediana a 30 giorni.",
+      "origine": "revisore-video",
+      "volte": 1
+    },
+    {
+      "id": "2026-10-13-14",
+      "per": "vendite",
+      "da": "direttore",
+      "stato": "da fare",
+      "titolo": "Prima vendita ZampaViva: zero ordini, scegliere il prodotto da spingere",
+      "dettagli": "Shopify: 0 ordini. Domani il Direttore propone un video Samaritan animali dedicato al prodotto con più margine, da approvare.",
+      "origine": "regola 6c",
+      "volte": 1
+    }
+  ]
 }

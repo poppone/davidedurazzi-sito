@@ -1,4 +1,128 @@
 {
   "scala": "1 = da rifare, 3 = accettabile, 5 = da prendere a modello",
-  "voti": []
+  "voti": [
+    {
+      "data": "2026-10-13",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short EN 20:00 12/10 GTA VI leak (p3V5VCPA-iA)",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento adatto al brand",
+          "voto": 1,
+          "motivo": "titolo a sfondo sessuale su materiale trapelato"
+        },
+        {
+          "punto": "notizia verificabile",
+          "voto": 2,
+          "motivo": "leak non confermato"
+        }
+      ],
+      "media": 1.5
+    },
+    {
+      "data": "2026-10-13",
+      "agente": "samaritan-gaming",
+      "lavoro": "Uscite del 12/10",
+      "revisore": "revisore-testi",
+      "punti": [
+        {
+          "punto": "lingua giusta per lo slot",
+          "voto": 2,
+          "motivo": "18:00 in inglese invece che in italiano"
+        },
+        {
+          "punto": "voto_revisore in cronologia almeno 6",
+          "voto": 1,
+          "motivo": "il revisore non è ancora attivo (PR #83)"
+        }
+      ],
+      "media": 1.5
+    },
+    {
+      "data": "2026-10-13",
+      "agente": "samaritan-notizie",
+      "lavoro": "Uscite 10-13/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "temi vari",
+          "voto": 2,
+          "motivo": "pensioni ripetute a due giorni"
+        },
+        {
+          "punto": "fonte italiana citata",
+          "voto": 4,
+          "motivo": "temi di attualità reali"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-13",
+      "agente": "samaritan-notizie",
+      "lavoro": "Lavorazione 12/10 13:00",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "video consegnato",
+          "voto": 1,
+          "motivo": "run fallita, nessun file"
+        }
+      ],
+      "media": 1.0
+    },
+    {
+      "data": "2026-10-13",
+      "agente": "redattore",
+      "lavoro": "3 articoli del 12/10",
+      "revisore": "revisore-testi",
+      "punti": [
+        {
+          "punto": "titolo chiaro",
+          "voto": 4,
+          "motivo": "titoli informativi"
+        },
+        {
+          "punto": "carosello completo",
+          "voto": 5,
+          "motivo": "4-6 immagini per articolo"
+        }
+      ],
+      "media": 4.5
+    },
+    {
+      "data": "2026-10-13",
+      "agente": "procacciatore-sponsor",
+      "lavoro": "4 bozze email",
+      "revisore": "revisore-testi",
+      "punti": [
+        {
+          "punto": "dichiarazione sponsor",
+          "voto": 5,
+          "motivo": "presente in tutte"
+        },
+        {
+          "punto": "numeri verificabili",
+          "voto": 3,
+          "motivo": "follower citati senza data: aggiornarli prima dell'invio"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-13",
+      "agente": "analista",
+      "lavoro": "performance.json",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "dati aggiornati",
+          "voto": 1,
+          "motivo": "fermi al 9/10"
+        }
+      ],
+      "media": 1.0
+    }
+  ]
 }

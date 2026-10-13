@@ -64,7 +64,10 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    misura se ha funzionato e scrivilo nel verbale.
 6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
-   "post": rilancio del carosello su TikTok (foto) e Facebook, con le immagini
+   "post": rilancio del carosello su TikTok (foto), Facebook, Bluesky
+   (davidedurazzi.bsky.social, massimo 4 immagini) e Pinterest (davide1988rm:
+   un Pin con la prima immagine e il link all'articolo sul sito; se Metricool
+   chiede la bacheca Pinterest e non la conosci, scrivilo nell'`azione`), con le immagini
    prese da `https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/<slug>/N.jpg`
    e la didascalia del post Instagram. L'`azione` dice reti, giorno e ora
    (usa getBestTimeToPostByNetwork).
