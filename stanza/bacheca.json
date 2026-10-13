@@ -222,7 +222,7 @@
     },
     {
       "per": "social",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "post",
       "titolo": "Primi 2 Pin ZampaViva: tappeto olfattivo e amaca da finestra",
       "dettagli": "Pinterest è il canale gratuito dove gli accessori per animali si cercano di più, e ora è collegato a Metricool. Oggi il negozio ha 48 visite in 30 giorni, tutte dirette: nessuna dai social.",
@@ -231,7 +231,8 @@
       "azione": "Programmare su Metricool, nella bacheca Pinterest 'ZampaViva', domani alle 20:00 il Pin del tappeto olfattivo (https://zampavivaoff.myshopify.com/products/tappeto-olfattivo-anti-noia-per-cani?utm_source=pinterest&utm_medium=pin&utm_campaign=tappeto-olfattivo-anti-noia-per-cani) e alle 20:30 quello dell'amaca da finestra (https://zampavivaoff.myshopify.com/products/amaca-da-finestra-per-gatti-con-ventose?utm_source=pinterest&utm_medium=pin&utm_campaign=amaca-da-finestra-per-gatti-con-ventose), con immagine principale e una frase dalla descrizione Shopify.",
       "da": "direttore",
       "volte": 1,
-      "id": "2026-10-13-17"
+      "id": "2026-10-13-17",
+      "deciso": "2026-10-13T04:56:38.721Z"
     },
     {
       "per": "davide",
