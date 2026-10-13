@@ -1,4 +1,4 @@
-"""Coda social: pubblica direttamente i Reel su Instagram e i Pin su Pinterest.
+"""Coda social: pubblica direttamente Reel (Instagram), video (Facebook), post (Bluesky) e Pin (Pinterest).
 
 Serve finché Metricool è al limite gratuito (20 pubblicazioni al mese).
 Finch aggiunge le voci in social/coda.json, solo per cose già approvate da Davide
@@ -8,6 +8,12 @@ pubblica le voci "da pubblicare" e scrive l'esito nella stessa voce.
 Voce Reel:
   {"id": "...", "rete": "instagram_reel", "stato": "da pubblicare",
    "video_url": "https://...mp4", "didascalia": "..."}
+Voce video Facebook (stessi campi del Reel):
+  {"id": "...", "rete": "facebook_video", "stato": "da pubblicare",
+   "video_url": "https://...mp4", "didascalia": "..."}
+Voce Bluesky (testo max 300 caratteri, max 4 immagini):
+  {"id": "...", "rete": "bluesky", "stato": "da pubblicare",
+   "testo": "...", "immagini": ["https://...jpg"], "alt": "..."}
 Voce Pin:
   {"id": "...", "rete": "pinterest", "stato": "da pubblicare",
    "image_url": "https://...jpg", "titolo": "...", "didascalia": "...",
@@ -29,6 +35,8 @@ CODA = RADICE / "social" / "coda.json"
 
 IG_API = "https://graph.instagram.com/" + os.environ.get("IG_API_VERSION", "v25.0")
 PIN_API = "https://api.pinterest.com/v5"
+BSKY_API = "https://bsky.social/xrpc"
+FB_API = "https://graph.facebook.com/" + os.environ.get("FB_API_VERSION", "v21.0")
 NOTA_AI = "Video realizzato con l'AI: voce sintetica e montaggio automatico."
 TENTATIVI_MAX = 3
 
@@ -80,6 +88,43 @@ def pubblica_reel(voce: dict, token: str, attesa: float = 10, giri: int = 60) ->
     return {"post_id": post, "account": utente.get("username")}
 
 
+def pubblica_video_facebook(voce: dict, token: str, pagina: str) -> dict:
+    r = requests.post(f"{FB_API}/{pagina}/videos", timeout=300, data={
+        "file_url": voce["video_url"], "description": didascalia_reel(voce.get("didascalia", "")),
+        "access_token": token})
+    if r.status_code >= 400:
+        raise RuntimeError(f"Facebook: HTTP {r.status_code} {r.text[:300]}")
+    return {"post_id": r.json()["id"]}
+
+
+def pubblica_bluesky(voce: dict, password: str, handle: str) -> dict:
+    s = requests.post(f"{BSKY_API}/com.atproto.server.createSession", timeout=30,
+                      json={"identifier": handle, "password": password})
+    if s.status_code >= 400:
+        raise RuntimeError(f"Bluesky login: HTTP {s.status_code} {s.text[:200]}")
+    sessione = s.json()
+    auth = {"Authorization": f"Bearer {sessione['accessJwt']}"}
+    immagini = []
+    for url in (voce.get("immagini") or [])[:4]:
+        img = requests.get(url, timeout=60)
+        img.raise_for_status()
+        b = requests.post(f"{BSKY_API}/com.atproto.repo.uploadBlob", data=img.content, timeout=60,
+                          headers={**auth, "Content-Type": img.headers.get("Content-Type", "image/jpeg")})
+        if b.status_code >= 400:
+            raise RuntimeError(f"Bluesky immagine: HTTP {b.status_code} {b.text[:200]}")
+        immagini.append({"alt": (voce.get("alt") or "")[:300], "image": b.json()["blob"]})
+    record = {"$type": "app.bsky.feed.post", "text": (voce.get("testo") or "")[:300],
+              "createdAt": _ora().replace("+00:00", "Z"), "langs": ["it"]}
+    if immagini:
+        record["embed"] = {"$type": "app.bsky.embed.images", "images": immagini}
+    r = requests.post(f"{BSKY_API}/com.atproto.repo.createRecord", headers=auth, timeout=30,
+                      json={"repo": sessione["did"], "collection": "app.bsky.feed.post", "record": record})
+    if r.status_code >= 400:
+        raise RuntimeError(f"Bluesky: HTTP {r.status_code} {r.text[:300]}")
+    uri = r.json()["uri"]
+    return {"post_id": uri, "url": f"https://bsky.app/profile/{handle}/post/{uri.rsplit('/', 1)[-1]}"}
+
+
 def pubblica_pin(voce: dict, token: str) -> dict:
     corpo = {
         "board_id": voce["board_id"],
@@ -99,8 +144,13 @@ def pubblica_pin(voce: dict, token: str) -> dict:
 def pubblica(coda: list[dict] | None = None, env=os.environ, **kw) -> list[dict]:
     salva = coda is None
     coda = _leggi() if coda is None else coda
+    pagina = env.get("FB_PAGE_ID", "")
     reti = {
-        "instagram_reel": (pubblica_reel, env.get("IG_ACCESS_TOKEN", "")),
+        "instagram_reel": (lambda v, t: pubblica_reel(v, t, **kw), env.get("IG_ACCESS_TOKEN", "")),
+        "facebook_video": (lambda v, t: pubblica_video_facebook(v, t, pagina),
+                           env.get("FB_PAGE_TOKEN", "") if pagina else ""),
+        "bluesky": (lambda v, t: pubblica_bluesky(v, t, env.get("BLUESKY_HANDLE", "davidedurazzi.bsky.social")),
+                    env.get("BLUESKY_APP_PASSWORD", "")),
         "pinterest": (pubblica_pin, env.get("PINTEREST_TOKEN", "")),
     }
     for voce in coda:
@@ -111,7 +161,7 @@ def pubblica(coda: list[dict] | None = None, env=os.environ, **kw) -> list[dict]
             print(f"[coda] manca il token per {voce['rete']}: la voce {voce.get('id')} aspetta")
             continue
         try:
-            esito = funzione(voce, token, **kw) if voce["rete"] == "instagram_reel" else funzione(voce, token)
+            esito = funzione(voce, token)
         except (RuntimeError, requests.RequestException, KeyError) as e:
             voce["tentativi"] = voce.get("tentativi", 0) + 1
             voce["errore"] = str(e)[:300]
