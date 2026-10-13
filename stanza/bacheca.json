@@ -324,7 +324,7 @@
       "id": "2026-10-13-23",
       "per": "davide",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "pr",
       "volte": 1,
       "origine": "direttore",
@@ -332,7 +332,8 @@
       "dettagli": "Serve al permesso fisso del 13/10: Metricool vuole il video a un indirizzo pubblico. Prima di unire la PR #2 va messo il secret BLOB_READ_WRITE_TOKEN nel repo samaritan-notizie (stesso valore di samaritan_v2). 753 test verdi.",
       "link": "https://github.com/poppone/samaritan-notizie/pull/2",
       "azione": "Unire la PR #2 di samaritan-notizie dopo che Davide ha messo il secret BLOB_READ_WRITE_TOKEN.",
-      "deciso": "2026-10-13T16:42:38.981Z"
+      "deciso": "2026-10-13T16:42:38.981Z",
+      "esito": "PR #2 unita da Davide il 13/10 alle 18:45. Finch controlla al prossimo Short IT che la voce abbia video_file_url."
     },
     {
       "id": "2026-10-13-24",
