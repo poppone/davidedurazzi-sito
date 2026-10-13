@@ -372,6 +372,18 @@
       "link": "https://github.com/poppone/davidedurazzi-sito/pull/3",
       "azione": "Unire la PR #3; per i Pin, Davide aggiunge il segreto PINTEREST_TOKEN nel repo davidedurazzi-sito.",
       "esito": "PR #3 unita da Davide il 13/10 alle 20:20. Reel attivi; Pin in attesa di PINTEREST_TOKEN."
+    },
+    {
+      "id": "2026-10-13-27",
+      "per": "direttore",
+      "da": "direttore",
+      "stato": "da fare",
+      "tipo": "altro",
+      "volte": 1,
+      "origine": "live",
+      "titolo": "Clip dalla live del 13/10 (circa 2 ore, Twitch + YouTube)",
+      "dettagli": "Davide ha fatto la live dalle 21:46 alle 23:33 circa, con la scaletta in /mnt/project-files/live/scaletta-live-13-10.md. Nel giro del 14/10: leggi i numeri della live su YouTube (vidIQ) e proponi 2-3 momenti da tagliare in Short (minuto di inizio e fine, titolo, perché), come compito 'da approvare' di tipo video.",
+      "azione": "Proporre 2-3 Short dalla live in /admin."
     }
   ]
 }
