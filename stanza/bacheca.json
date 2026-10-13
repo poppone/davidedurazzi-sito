@@ -140,7 +140,7 @@
       "id": "2026-10-13-9",
       "per": "samaritan-gaming",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "titolo": "Evitare argomenti a rischio come il leak \"Lucia Fully Naked\" di GTA VI",
       "dettagli": "Il revisore argomenti ha dato 1 su 5 allo Short EN delle 20:00 del 12/10 (p3V5VCPA-iA): titolo a sfondo sessuale su un leak. Rischio per il canale e per gli inserzionisti. Va aggiunto un filtro sugli argomenti espliciti.",
       "origine": "revisore-argomenti",
@@ -148,7 +148,8 @@
       "tipo": "pr",
       "link": "https://github.com/poppone/samaritan_v2/pull/84",
       "azione": "Unire la PR #84 di samaritan_v2: filtro contenuti espliciti su notizie, titolo, script e prima del caricamento (29 test, suite 902 verde in locale).",
-      "deciso": "2026-10-13T07:12:41.860Z"
+      "deciso": "2026-10-13T07:12:41.860Z",
+      "esito": "PR #84 unita da Davide il 13/10: filtro contenuti espliciti attivo da domani."
     },
     {
       "id": "2026-10-13-10",
