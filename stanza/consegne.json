@@ -5,19 +5,20 @@
       "data": "2026-10-12",
       "agente": "videomaker",
       "titolo": "Ho cancellato 27 video",
-      "video": "C:\\Users\\david\\Videos\\montaggio\\video-finale.mp4",
+      "video": "https://drive.google.com/file/d/1L4aYYbsfWX4PbPcQfrkV2vSzpHoE1S5X/view",
       "piattaforma": "YouTube (@davidedurazzioff)",
       "durata": "4:24",
       "stato": "consegnato a Davide, non pubblicato",
       "extra": {
         "short": [
-          "C:\\Users\\david\\Videos\\montaggio\\short\\short-1-27video.mp4",
-          "C:\\Users\\david\\Videos\\montaggio\\short\\short-2-zero-euro.mp4",
-          "C:\\Users\\david\\Videos\\montaggio\\short\\short-3-sfida.mp4"
+          "https://drive.google.com/file/d/1yy0lwgRpmfeJgnZ1FJyaM2QF-bB12geZ/view",
+          "https://drive.google.com/file/d/1-WXPoHBf6eG8m9dbGkrysUuNX14WnG3p/view",
+          "https://drive.google.com/file/d/1XiBWps_k1CB6AGapyS4mGHt_gBxFxGU9/view"
         ],
-        "miniatura": "C:\\Users\\david\\Videos\\montaggio\\miniatura.png",
-        "descrizione": "C:\\Users\\david\\Videos\\montaggio\\descrizione.txt"
-      }
+        "miniatura": "https://drive.google.com/file/d/1ioYZ8TWxkQDJTxxfWc8HfLxdcaPrDy7E/view",
+        "descrizione": "https://drive.google.com/file/d/1--x2jWAfcnWmm9eH39G7fM_IU68MgDRl/view"
+      },
+      "cartella_drive": "https://drive.google.com/drive/folders/1zqBjBmOlc6iKhZU28fIRWcSojlgEB4ty"
     }
   ]
 }
