@@ -1,4 +1,23 @@
 {
   "nota": "Gli agenti che vivono in altri progetti lasciano qui il loro lavoro: una voce per consegna.",
-  "consegne": []
+  "consegne": [
+    {
+      "data": "2026-10-12",
+      "agente": "videomaker",
+      "titolo": "Ho cancellato 27 video",
+      "video": "C:\\Users\\david\\Videos\\montaggio\\video-finale.mp4",
+      "piattaforma": "YouTube (@davidedurazzioff)",
+      "durata": "4:24",
+      "stato": "consegnato a Davide, non pubblicato",
+      "extra": {
+        "short": [
+          "C:\\Users\\david\\Videos\\montaggio\\short\\short-1-27video.mp4",
+          "C:\\Users\\david\\Videos\\montaggio\\short\\short-2-zero-euro.mp4",
+          "C:\\Users\\david\\Videos\\montaggio\\short\\short-3-sfida.mp4"
+        ],
+        "miniatura": "C:\\Users\\david\\Videos\\montaggio\\miniatura.png",
+        "descrizione": "C:\\Users\\david\\Videos\\montaggio\\descrizione.txt"
+      }
+    }
+  ]
 }
