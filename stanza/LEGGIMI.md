@@ -5,8 +5,8 @@ lavorare dove lavora oggi (GitHub Actions, routine Claude, PC di Davide);
 qui lasciano il risultato, si controllano a vicenda e ricevono le correzioni.
 
 Chi tiene in ordine la stanza è il **Direttore**: una routine Claude che gira
-**una volta al giorno**, alle 6:30 italiane, dopo la redazione del mattino e
-prima che Davide si svegli. Le sue istruzioni sono in `direttore.md`.
+**una volta al giorno**, alle 7:52 italiane, dopo la redazione del mattino
+(che parte alle 7:00). Le sue istruzioni sono in `direttore.md`.
 
 ## I file
 
