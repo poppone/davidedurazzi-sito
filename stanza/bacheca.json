@@ -208,7 +208,7 @@
     },
     {
       "per": "davide",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "spesa",
       "titolo": "Creare il codice sconto BENVENUTO10 per ZampaViva",
       "dettagli": "Oggi ZampaViva non ha nessuno sconto attivo e zero ordini. Un codice da dire nei video dà una ragione per comprare subito e ci fa capire da dove arriva chi compra. Costo: 10% sul primo ordine (circa 2-3 € su un prodotto da 25 €).",
@@ -218,11 +218,12 @@
       "da": "direttore",
       "volte": 1,
       "id": "2026-10-13-16",
-      "deciso": "2026-10-13T04:56:32.827Z"
+      "deciso": "2026-10-13T04:56:32.827Z",
+      "esito": "Codice BENVENUTO10 attivo dal 13/10 al 12/12, 10% su tutto. Il limite di un uso per cliente non si imposta da qui: va messo da Shopify."
     },
     {
       "per": "social",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "post",
       "titolo": "Primi 2 Pin ZampaViva: tappeto olfattivo e amaca da finestra",
       "dettagli": "Pinterest è il canale gratuito dove gli accessori per animali si cercano di più, e ora è collegato a Metricool. Oggi il negozio ha 48 visite in 30 giorni, tutte dirette: nessuna dai social.",
@@ -232,13 +233,18 @@
       "da": "direttore",
       "volte": 1,
       "id": "2026-10-13-17",
-      "deciso": "2026-10-13T04:56:38.721Z"
+      "deciso": "2026-10-13T04:56:38.721Z",
+      "esito": "Pin programmati il 14/10 alle 20:00 e alle 20:30 nella bacheca ZampaViva.",
+      "plannerUrl": [
+        "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=4585604282889490319",
+        "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=-7692546530606167238"
+      ]
     },
     {
       "per": "davide",
       "stato": "da fare",
-      "titolo": "Creare la bacheca Pinterest 'ZampaViva' e controllare il link in bio su TikTok ZampaViva",
-      "dettagli": "La bacheca serve per i Pin dei prodotti. Il link in bio di TikTok ZampaViva deve portare a zampavivaoff.myshopify.com: i link nelle didascalie di TikTok non sono cliccabili.",
+      "titolo": "Controllare il link in bio su TikTok ZampaViva",
+      "dettagli": "La bacheca Pinterest è creata. Il link in bio di TikTok ZampaViva deve portare a zampavivaoff.myshopify.com.",
       "origine": "crescita-zampaviva",
       "da": "direttore",
       "volte": 1,

@@ -77,7 +77,7 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 6g. **Crescita ZampaViva** (agente in `squadra.json`, nato il 13/10 con 0 ordini e
    48 visite in 30 giorni, tutte dirette). Ogni giorno:
    - prepara come UN compito "da approvare" di tipo "post" 2 Pin su Pinterest
-     (bacheca "ZampaViva", su Metricool con boardId risolto dal nome) per 2
+     (bacheca "ZampaViva", boardId 1039979807642687593) per 2
      prodotti attivi diversi, a rotazione e non spinti negli ultimi 7 giorni:
      immagine principale del prodotto, titolo, una frase presa dalla
      descrizione Shopify, link `https://zampavivaoff.myshopify.com/products/<handle>?utm_source=pinterest&utm_medium=pin&utm_campaign=<handle>`;
