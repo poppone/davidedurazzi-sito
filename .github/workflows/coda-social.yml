@@ -1,0 +1,28 @@
+name: Coda social (Reel e Pin diretti)
+on:
+  push:
+    branches: [main]
+    paths: ["social/coda.json"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: coda-social
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python agenti/coda_social.py pubblica
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          PINTEREST_TOKEN: ${{ secrets.PINTEREST_TOKEN }}
+      - name: Registra l'esito
+        run: |
+          git config user.name "redazione-ai"
+          git config user.email "actions@users.noreply.github.com"
+          git add social/coda.json
+          git diff --cached --quiet || (git commit -m "Coda social: esito pubblicazioni" && git pull --rebase -X theirs && git push)

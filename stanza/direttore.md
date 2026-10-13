@@ -112,6 +112,15 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    Dal 1/11 tieni il conto nel verbale (massimo 20 al mese, ogni rete conta):
    prima gli Short votati 4/5 su TikTok, poi i rilanci degli articoli, poi i
    Pin, al massimo 1 Pin ZampaViva al giorno. Mai più programmare in blocco.
+   **Strada diretta (scelta di Davide il 13/10).** Reel Instagram e Pin
+   Pinterest non passano più da Metricool: aggiungi una voce in
+   `social/coda.json` (formato in `agenti/coda_social.py`) e fai commit su
+   main; il workflow "Coda social" pubblica e scrive l'esito nella voce.
+   Valgono le stesse regole di approvazione: in coda vanno solo i Reel coperti
+   dal permesso fisso 6e (voti >= 4/5, didascalia con la nota AI) e i Pin che
+   Davide ha approvato. Il giro dopo controlla `stato` ("pubblicato" con
+   `post_id`, oppure "errore" con il motivo) e scrivilo nel verbale.
+   TikTok resta solo su Metricool, dal 1/11.
 
 6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
