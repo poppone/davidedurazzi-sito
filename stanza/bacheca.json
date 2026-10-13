@@ -338,14 +338,15 @@
       "id": "2026-10-13-24",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "regola 6e",
       "titolo": "Rilanciare su TikTok e Instagram lo Short delle 14:00: GTA 6, la scatola senza disco",
       "dettagli": "Argomento: 4 su 5 (notizia di gaming, titolo fedele alla fonte). Video: non votabile, la copia su Vercel Blob non si scarica da qui, quindi per regola passa da te. La didascalia aveva un \\n scritto per esteso: corretto qui sotto. Il file su Blob scade il 17/10.",
       "link": "https://youtube.com/shorts/YhBgD6euibg",
-      "azione": "Programmare su Metricool (brand 7358624) su TikTok @davidedurazzi (isAigc vero) e come Reel Instagram (isAiGenerated vero) il file https://8ggiyctagekoppcx.public.blob.vercel-storage.com/samaritan/YhBgD6euibg-AQrLd2eBTT0wywX3EI5ZiB3XySKg6X.mp4 con questa didascalia, all'ora suggerita da getBestTimeToPostByNetwork:\nGTA 6: la scatola senza disco è reale? 🎮\n\nScopri se la versione in scatola di GTA 6 ha davvero il disco e cosa contiene l'extra fisico.\nTi sorprende questa novità? Lascia il tuo commento!\n\n#grandtheftautovi #rumor #gamingita #perte"
+      "azione": "Programmare su Metricool (brand 7358624) su TikTok @davidedurazzi (isAigc vero) e come Reel Instagram (isAiGenerated vero) il file https://8ggiyctagekoppcx.public.blob.vercel-storage.com/samaritan/YhBgD6euibg-AQrLd2eBTT0wywX3EI5ZiB3XySKg6X.mp4 con questa didascalia, all'ora suggerita da getBestTimeToPostByNetwork:\nGTA 6: la scatola senza disco è reale? 🎮\n\nScopri se la versione in scatola di GTA 6 ha davvero il disco e cosa contiene l'extra fisico.\nTi sorprende questa novità? Lascia il tuo commento!\n\n#grandtheftautovi #rumor #gamingita #perte",
+      "deciso": "2026-10-13T16:42:51.924Z"
     },
     {
       "id": "2026-10-13-25",
