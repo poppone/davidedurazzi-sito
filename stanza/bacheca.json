@@ -28,7 +28,7 @@
       "id": "2026-10-13-2",
       "per": "social",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "in corso",
       "titolo": "Rilanciare il carosello \"Tesla dice addio al nome Full Self-Driving in Europa\"",
       "dettagli": "4 immagini già pronte per Instagram. Didascalia: quella del post Instagram, con l'AI dichiarata.",
       "origine": "regola 6d",
@@ -36,13 +36,17 @@
       "tipo": "post",
       "link": "https://www.davidedurazzi.it/articolo.html?slug=tesla-dice-addio-al-nome-full-self-driving-in-europa-20261012",
       "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/tesla-dice-addio-al-nome-full-self-driving-in-europa-20261012/1.jpg … 4.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo.",
-      "deciso": "2026-10-13T04:21:14.494Z"
+      "deciso": "2026-10-13T04:21:14.494Z",
+      "plannerUrl": [
+        "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=-6871787814341688855"
+      ],
+      "esito": "Programmato per oggi alle 13:00 su TikTok e Facebook. Il post su Bluesky è stato bloccato dal controllo di sicurezza: da rifare. Pinterest saltato: manca l'ID della bacheca."
     },
     {
       "id": "2026-10-13-3",
       "per": "social",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "titolo": "Rilanciare il carosello \"Crisi delle console e il ruolo del Game Pass nel mercato\"",
       "dettagli": "6 immagini già pronte per Instagram. Didascalia: quella del post Instagram, con l'AI dichiarata.",
       "origine": "regola 6d",
@@ -50,7 +54,12 @@
       "tipo": "post",
       "link": "https://www.davidedurazzi.it/articolo.html?slug=crisi-delle-console-e-il-ruolo-del-game-pass-nel-mercato-20261012",
       "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/crisi-delle-console-e-il-ruolo-del-game-pass-nel-mercato-20261012/1.jpg … 6.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo.",
-      "deciso": "2026-10-13T04:21:33.143Z"
+      "deciso": "2026-10-13T04:21:33.143Z",
+      "plannerUrl": [
+        "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=-5726425224211184738",
+        "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=-3148898943347375685"
+      ],
+      "esito": "Programmato per oggi alle 19:00 su TikTok, Facebook e Bluesky. Pinterest saltato: manca l'ID della bacheca."
     },
     {
       "id": "2026-10-13-4",
@@ -93,13 +102,14 @@
       "tipo": "email",
       "link": "https://mail.google.com/mail/#drafts",
       "azione": "Inviare così com'è la bozza Gmail indirizzata a affiliate@nordvpnmedia.com.",
-      "deciso": "2026-10-13T04:22:07.357Z"
+      "deciso": "2026-10-13T04:22:07.357Z",
+      "esito": "Invio bloccato dal controllo di sicurezza il 13/10: si riprova al prossimo giro o la invia Davide dalla bozza Gmail."
     },
     {
       "id": "2026-10-13-7",
       "per": "davide",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "titolo": "Inviare la proposta sponsor a UGREEN",
       "dettagli": "Bozza scritta dal Procacciatore, ferma in Gmail. Destinatario affiliate@ugreen.com. Inglese, sponsorizzazione dichiarata, link al media kit.",
       "origine": "procacciatore-sponsor",
@@ -107,13 +117,14 @@
       "tipo": "email",
       "link": "https://mail.google.com/mail/#drafts",
       "azione": "Inviare così com'è la bozza Gmail indirizzata a affiliate@ugreen.com.",
-      "deciso": "2026-10-13T04:22:15.449Z"
+      "deciso": "2026-10-13T04:22:15.449Z",
+      "esito": "Email inviata il 13/10."
     },
     {
       "id": "2026-10-13-8",
       "per": "davide",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "titolo": "Inviare la proposta sponsor a Surfshark",
       "dettagli": "Bozza scritta dal Procacciatore, ferma in Gmail. Destinatario influencers@surfshark.com. Inglese, sponsorizzazione dichiarata, link al media kit.",
       "origine": "procacciatore-sponsor",
@@ -121,7 +132,8 @@
       "tipo": "email",
       "link": "https://mail.google.com/mail/#drafts",
       "azione": "Inviare così com'è la bozza Gmail indirizzata a influencers@surfshark.com.",
-      "deciso": "2026-10-13T04:22:19.895Z"
+      "deciso": "2026-10-13T04:22:19.895Z",
+      "esito": "Email inviata il 13/10."
     },
     {
       "id": "2026-10-13-9",
@@ -181,6 +193,16 @@
       "titolo": "Prima vendita ZampaViva: zero ordini, scegliere il prodotto da spingere",
       "dettagli": "Shopify: 0 ordini. Domani il Direttore propone un video Samaritan animali dedicato al prodotto con più margine, da approvare.",
       "origine": "regola 6c",
+      "volte": 1
+    },
+    {
+      "id": "2026-10-13-15",
+      "per": "videomaker",
+      "da": "direttore",
+      "stato": "da fare",
+      "titolo": "Togliere i 2 secondi di silenzio finale dai 3 Short",
+      "dettagli": "controllo.txt: tutti e tre gli Short finiscono con circa 2 secondi muti (1,99 s, 2,19 s, 2,25 s). Sugli Short la coda muta fa scorrere via prima del loop: chiudere sull'ultima parola. Il video lungo è a posto (-14,5 LUFS, nessun silenzio).",
+      "origine": "revisore-video",
       "volte": 1
     }
   ]

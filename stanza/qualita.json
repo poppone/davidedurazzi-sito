@@ -123,6 +123,30 @@
         }
       ],
       "media": 1.0
+    },
+    {
+      "data": "2026-10-13",
+      "agente": "videomaker",
+      "lavoro": "Ho cancellato 27 video (lungo + 3 Short)",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "nessun silenzio oltre 1,5 s",
+          "voto": 5,
+          "motivo": "video lungo pulito"
+        },
+        {
+          "punto": "volume tra -16 e -12 LUFS",
+          "voto": 5,
+          "motivo": "da -16,0 a -14,5"
+        },
+        {
+          "punto": "Short senza code mute",
+          "voto": 2,
+          "motivo": "circa 2 secondi muti alla fine di tutti e tre"
+        }
+      ],
+      "media": 4.0
     }
   ]
 }
