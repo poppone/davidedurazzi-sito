@@ -1,0 +1,164 @@
+{
+  "aggiornato": "2026-10-13",
+  "agenti": [
+    {
+      "id": "samaritan-gaming",
+      "nome": "Samaritan · Gaming",
+      "reparto": "Video",
+      "dove": "GitHub poppone/samaritan_v2, workflow samaritan.yml",
+      "produce": "4 Short al giorno su @davidedurazzioff (2 IT, 2 EN)",
+      "come_leggerlo": "run di samaritan.yml delle ultime 24 ore (titolo, materiale, righe SCARTATO, URL); performance.json; vidIQ sul canale UCNMKJ6Etxs-2SMGGquGnaDg",
+      "pubblica_da_solo": true,
+      "revisore": "samaritan-notizie",
+      "checklist": [
+        "Il titolo è chiaro e non è clickbait ingannevole",
+        "Il materiale è ufficiale (trailer Steam o dell'editore), mai di altri creator",
+        "La notizia è vera e recente",
+        "Il video è uscito nel suo orario",
+        "La retention è almeno nella media degli ultimi 30 giorni"
+      ]
+    },
+    {
+      "id": "samaritan-notizie",
+      "nome": "Samaritan · Notizie",
+      "reparto": "Video",
+      "dove": "GitHub poppone/samaritan-notizie, workflow samaritan.yml",
+      "produce": "Short di notizie su @Notiziein60secondioff",
+      "come_leggerlo": "run di samaritan.yml delle ultime 24 ore; performance.json; vidIQ sul canale",
+      "pubblica_da_solo": true,
+      "revisore": "fact-checker",
+      "checklist": [
+        "Ogni notizia è riportata da almeno due testate",
+        "Nessuna opinione presentata come fatto",
+        "Il titolo corrisponde al contenuto",
+        "Il video è uscito nel suo orario"
+      ]
+    },
+    {
+      "id": "samaritan-animali",
+      "nome": "Samaritan · Animali (video maker ZampaViva)",
+      "reparto": "Video",
+      "dove": "PC di Davide, poppone/samaritan-animali (run_zampaviva.bat), video su Telegram",
+      "produce": "Video TikTok che portano al negozio ZampaViva",
+      "come_leggerlo": "cronologia_zampaviva.json nel repo (se aggiornata); catalogo Shopify",
+      "pubblica_da_solo": false,
+      "revisore": "dropshipping",
+      "checklist": [
+        "Prodotto, prezzo e caratteristiche corrispondono a Shopify",
+        "Nessuna promessa che il negozio non mantiene (tempi, resi)",
+        "Il gancio nei primi 2 secondi è chiaro",
+        "La didascalia porta al negozio"
+      ]
+    },
+    {
+      "id": "videomaker",
+      "nome": "Videomaker",
+      "reparto": "Video",
+      "dove": "DA COMPLETARE: progetto Claude \"Videomaker\" di Davide",
+      "produce": "DA COMPLETARE",
+      "come_leggerlo": "DA COMPLETARE",
+      "pubblica_da_solo": false,
+      "revisore": "samaritan-gaming",
+      "checklist": [
+        "Il video è coerente con il brand di Davide",
+        "Audio e sottotitoli sono puliti",
+        "Il gancio nei primi 2 secondi è chiaro"
+      ]
+    },
+    {
+      "id": "scout",
+      "nome": "Scout (redazione)",
+      "reparto": "Redazione",
+      "dove": "GitHub poppone/davidedurazzi-sito, agenti/ (redazione.yml)",
+      "produce": "I temi del giorno per la redazione",
+      "come_leggerlo": "bozze/scaletta-AAAA-MM-GG.md e log di redazione.yml",
+      "pubblica_da_solo": false,
+      "revisore": "analista",
+      "checklist": [
+        "I temi sono di interesse per il pubblico di Davide (tech, AI, gaming, motori, attualità)",
+        "Almeno un tema è utile anche a Samaritan o ai social",
+        "Nessun feed RSS in errore lasciato senza segnalazione"
+      ]
+    },
+    {
+      "id": "redattore",
+      "nome": "Redattore (con Fact-checker e Critico)",
+      "reparto": "Redazione",
+      "dove": "GitHub poppone/davidedurazzi-sito, agenti/ (redazione.yml)",
+      "produce": "3 bozze di articolo al giorno in bozze/bozze.json",
+      "come_leggerlo": "bozze/bozze.json, solo le bozze nuove",
+      "pubblica_da_solo": false,
+      "revisore": "critico-stanza",
+      "checklist": [
+        "Fonti citate in fondo e coerenti con il testo",
+        "Titolo onesto e sotto i 70 caratteri",
+        "Tono neutro su politica e cronaca",
+        "Leggibile da telefono: paragrafi brevi"
+      ]
+    },
+    {
+      "id": "social",
+      "nome": "Social",
+      "reparto": "Distribuzione",
+      "dove": "GitHub poppone/davidedurazzi-sito, workflow pubblica.yml",
+      "produce": "Caroselli e post per Instagram, Facebook, LinkedIn dagli articoli approvati",
+      "come_leggerlo": "social/instagram.json e cartella ig/",
+      "pubblica_da_solo": false,
+      "revisore": "redattore",
+      "checklist": [
+        "Il carosello riassume l'articolo senza aggiungere fatti",
+        "La prima slide si capisce senza leggere il resto",
+        "Le affiliazioni sono dichiarate"
+      ]
+    },
+    {
+      "id": "dropshipping",
+      "nome": "Dropshipping e assistenza ZampaViva",
+      "reparto": "Commerciale",
+      "dove": "Shopify + routine Claude \"Risposte clienti ZampaViva\" (ogni sera)",
+      "produce": "Bozze di risposta ai clienti in Gmail, elenco ordini bloccati",
+      "come_leggerlo": "Shopify (ordini pagati non evasi, vendite, sessioni); bozze Gmail firmate \"Il team ZampaViva\"",
+      "pubblica_da_solo": false,
+      "revisore": "analista",
+      "checklist": [
+        "Nessun ordine pagato fermo da più di 3 giorni senza segnalazione",
+        "Le risposte usano i dati veri dell'ordine",
+        "Nessuna promessa di rimborso o sconto non decisa da Davide"
+      ]
+    },
+    {
+      "id": "procacciatore-sponsor",
+      "nome": "Procacciatore sponsor",
+      "reparto": "Commerciale",
+      "dove": "Routine Claude del lunedì",
+      "produce": "Bozze di proposta sponsor in Gmail",
+      "come_leggerlo": "bozze Gmail con oggetto partnership, collaborazione, affiliate",
+      "pubblica_da_solo": false,
+      "revisore": "analista",
+      "checklist": [
+        "I numeri citati sono quelli del media kit",
+        "Il contatto viene da una pagina ufficiale del brand",
+        "Il brand è adatto al pubblico (tech, auto, gaming)"
+      ]
+    },
+    {
+      "id": "analista",
+      "nome": "Analista",
+      "reparto": "Amministrazione",
+      "dove": "Routine Claude \"Resoconto settimanale ecosistema\" (lunedì)",
+      "produce": "Resoconto settimanale con cosa spingere e cosa spegnere",
+      "come_leggerlo": "il resoconto del lunedì",
+      "pubblica_da_solo": false,
+      "revisore": "direttore",
+      "checklist": [
+        "Ogni numero ha la sua fonte",
+        "Il consiglio segue dai numeri"
+      ]
+    }
+  ],
+  "note_revisori": {
+    "fact-checker": "Il Direttore applica la regola del Fact-checker della redazione: due testate.",
+    "critico-stanza": "Il Direttore rilegge con gli occhi del Critico, oltre al Critico che già gira nella redazione.",
+    "direttore": "Il Direttore controlla l'Analista; Davide controlla il Direttore."
+  }
+}
