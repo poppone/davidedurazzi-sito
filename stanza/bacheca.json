@@ -28,14 +28,15 @@
       "id": "2026-10-13-2",
       "per": "social",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "approvato",
       "titolo": "Rilanciare il carosello \"Tesla dice addio al nome Full Self-Driving in Europa\"",
       "dettagli": "4 immagini già pronte per Instagram. Didascalia: quella del post Instagram, con l'AI dichiarata.",
       "origine": "regola 6d",
       "volte": 1,
       "tipo": "post",
       "link": "https://www.davidedurazzi.it/articolo.html?slug=tesla-dice-addio-al-nome-full-self-driving-in-europa-20261012",
-      "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/tesla-dice-addio-al-nome-full-self-driving-in-europa-20261012/1.jpg … 4.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo."
+      "azione": "Programmare su Metricool oggi alle 13:00 il carosello (https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/tesla-dice-addio-al-nome-full-self-driving-in-europa-20261012/1.jpg … 4.jpg) su TikTok (foto), Facebook e Bluesky (prime 4 immagini), più un Pin su Pinterest con la prima immagine e il link all'articolo.",
+      "deciso": "2026-10-13T04:21:14.494Z"
     },
     {
       "id": "2026-10-13-3",
