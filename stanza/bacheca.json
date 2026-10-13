@@ -249,6 +249,18 @@
       "da": "direttore",
       "volte": 1,
       "id": "2026-10-13-18"
+    },
+    {
+      "id": "2026-10-13-19",
+      "per": "social",
+      "da": "direttore",
+      "stato": "fatto",
+      "titolo": "Pin per tutti i 14 prodotti ZampaViva rimasti",
+      "dettagli": "Chiesto da Davide nel thread ('si procedi'). Uno all'ora dalle 8:00 alle 21:00 del 13/10, bacheca ZampaViva, link con utm_source=pinterest e utm_campaign=<handle>.",
+      "origine": "crescita-zampaviva",
+      "volte": 1,
+      "deciso": "2026-10-13",
+      "esito": "14 Pin programmati su Metricool."
     }
   ]
 }
