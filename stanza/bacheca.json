@@ -205,6 +205,42 @@
       "dettagli": "controllo.txt: tutti e tre gli Short finiscono con circa 2 secondi muti (1,99 s, 2,19 s, 2,25 s). Sugli Short la coda muta fa scorrere via prima del loop: chiudere sull'ultima parola. Il video lungo è a posto (-14,5 LUFS, nessun silenzio).",
       "origine": "revisore-video",
       "volte": 1
+    },
+    {
+      "per": "davide",
+      "stato": "da approvare",
+      "tipo": "spesa",
+      "titolo": "Creare il codice sconto BENVENUTO10 per ZampaViva",
+      "dettagli": "Oggi ZampaViva non ha nessuno sconto attivo e zero ordini. Un codice da dire nei video dà una ragione per comprare subito e ci fa capire da dove arriva chi compra. Costo: 10% sul primo ordine (circa 2-3 € su un prodotto da 25 €).",
+      "link": "https://admin.shopify.com/store/zampavivaoff/discounts",
+      "origine": "crescita-zampaviva",
+      "azione": "Creare su Shopify il codice BENVENUTO10: 10% di sconto, un solo uso per cliente, valido 60 giorni.",
+      "da": "direttore",
+      "volte": 1,
+      "id": "2026-10-13-16"
+    },
+    {
+      "per": "social",
+      "stato": "da approvare",
+      "tipo": "post",
+      "titolo": "Primi 2 Pin ZampaViva: tappeto olfattivo e amaca da finestra",
+      "dettagli": "Pinterest è il canale gratuito dove gli accessori per animali si cercano di più, e ora è collegato a Metricool. Oggi il negozio ha 48 visite in 30 giorni, tutte dirette: nessuna dai social.",
+      "link": "https://zampavivaoff.myshopify.com/products/tappeto-olfattivo-anti-noia-per-cani",
+      "origine": "crescita-zampaviva",
+      "azione": "Programmare su Metricool, nella bacheca Pinterest 'ZampaViva', domani alle 20:00 il Pin del tappeto olfattivo (https://zampavivaoff.myshopify.com/products/tappeto-olfattivo-anti-noia-per-cani?utm_source=pinterest&utm_medium=pin&utm_campaign=tappeto-olfattivo-anti-noia-per-cani) e alle 20:30 quello dell'amaca da finestra (https://zampavivaoff.myshopify.com/products/amaca-da-finestra-per-gatti-con-ventose?utm_source=pinterest&utm_medium=pin&utm_campaign=amaca-da-finestra-per-gatti-con-ventose), con immagine principale e una frase dalla descrizione Shopify.",
+      "da": "direttore",
+      "volte": 1,
+      "id": "2026-10-13-17"
+    },
+    {
+      "per": "davide",
+      "stato": "da fare",
+      "titolo": "Creare la bacheca Pinterest 'ZampaViva' e controllare il link in bio su TikTok ZampaViva",
+      "dettagli": "La bacheca serve per i Pin dei prodotti. Il link in bio di TikTok ZampaViva deve portare a zampavivaoff.myshopify.com: i link nelle didascalie di TikTok non sono cliccabili.",
+      "origine": "crescita-zampaviva",
+      "da": "direttore",
+      "volte": 1,
+      "id": "2026-10-13-18"
     }
   ]
 }

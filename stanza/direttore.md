@@ -74,6 +74,22 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    sponsor, e proponi UNA mossa concreta per portare entrate, come compito
    "da approvare" (tipo "post", "email", "spesa" o "altro"). Il giorno dopo
    misura se ha funzionato e scrivilo nel verbale.
+6g. **Crescita ZampaViva** (agente in `squadra.json`, nato il 13/10 con 0 ordini e
+   48 visite in 30 giorni, tutte dirette). Ogni giorno:
+   - prepara come UN compito "da approvare" di tipo "post" 2 Pin su Pinterest
+     (bacheca "ZampaViva", su Metricool con boardId risolto dal nome) per 2
+     prodotti attivi diversi, a rotazione e non spinti negli ultimi 7 giorni:
+     immagine principale del prodotto, titolo, una frase presa dalla
+     descrizione Shopify, link `https://zampavivaoff.myshopify.com/products/<handle>?utm_source=pinterest&utm_medium=pin&utm_campaign=<handle>`;
+   - scegli il "prodotto del giorno" e scrivilo nel diario: è quello che
+     Samaritan animali deve raccontare (`python main.py <handle>`), con il
+     codice BENVENUTO10 detto nel video e nella didascalia, se Davide l'ha
+     approvato;
+   - misura su Shopify sessioni e ordini per `referrer_source` e `utm_source`
+     del giorno prima e scrivili nel diario, in una tabella che cresce.
+   Se dopo 14 giorni Pinterest porta meno di 20 visite, proponi di cambiare
+   canale invece di insistere.
+
 6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
    "post": rilancio del carosello su TikTok (foto), Facebook, Bluesky

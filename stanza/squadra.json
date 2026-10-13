@@ -196,6 +196,22 @@
         "Ogni numero ha la sua fonte",
         "Il consiglio segue dai numeri"
       ]
+    },
+    {
+      "id": "crescita-zampaviva",
+      "nome": "Crescita ZampaViva",
+      "reparto": "Commerciale",
+      "dove": "Dentro Finch (stesso giro giornaliero), regola 6g di direttore.md",
+      "produce": "Ogni giorno: 2 Pin prodotto su Pinterest con link tracciato, 1 prodotto del giorno da far raccontare a Samaritan animali, il controllo di visite e ordini per canale",
+      "come_leggerlo": "Shopify: sessioni per referrer_source e utm_source, carrelli, checkout, ordini, sconto BENVENUTO10 usato. Metricool: Pin pubblicati",
+      "pubblica_da_solo": false,
+      "revisore": "analista",
+      "checklist": [
+        "Ogni link porta utm_source e utm_campaign",
+        "Il prodotto spinto non è uno già spinto negli ultimi 7 giorni",
+        "Testo fedele alla descrizione Shopify, niente promesse inventate",
+        "Il giorno dopo misura visite e ordini arrivati da quel canale"
+      ]
     }
   ],
   "note_revisori": {
