@@ -70,14 +70,16 @@
       "id": "2026-10-13-5",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "scartato",
       "titolo": "Inviare la proposta sponsor a carVertical",
       "dettagli": "Bozza scritta dal Procacciatore, ferma in Gmail. Destinatario affiliate@carvertical.com. Inglese, sponsorizzazione dichiarata, link al media kit.",
       "origine": "procacciatore-sponsor",
       "volte": 1,
       "tipo": "email",
       "link": "https://mail.google.com/mail/#drafts",
-      "azione": "Inviare così com'è la bozza Gmail indirizzata a affiliate@carvertical.com."
+      "azione": "Inviare così com'è la bozza Gmail indirizzata a affiliate@carvertical.com.",
+      "deciso": "2026-10-13T04:21:53.432Z",
+      "nota_davide": "ci hanno respinto"
     },
     {
       "id": "2026-10-13-6",
