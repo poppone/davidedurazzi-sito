@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "auto-elettrica-a-15-000-euro-la-nuova-sfida-di-stellantis-20261014",
+    "titolo": "Auto elettrica a 15.000 euro: la nuova sfida di Stellantis",
+    "sezione": "motori",
+    "rubrica": "",
+    "data": "2026-10-14",
+    "sommario": "Stellantis punta a rendere accessibile la mobilità a zero emissioni con una vettura economica, ma servono interventi normativi mirati.",
+    "testo": [
+      "Secondo InsideEVs Italia, il gruppo Stellantis avrebbe l'obiettivo di realizzare un'auto elettrica economica proposta al prezzo di 15.000 euro, cercando di fissare nuovi standard per il settore.",
+      "Sempre secondo quanto riportato dalla testata, durante il Salone di Parigi il manager Filosa avrebbe rilanciato il progetto della cosiddetta E-Car, chiarendo che non saranno introdotte nuove categorie di veicoli.",
+      "La testata InsideEVs Italia riferisce inoltre che, per raggiungere questo traguardo e favorire la diffusione delle piccole vetture a batteria, risulterebbero necessari dei supercrediti da parte dell'Unione Europea."
+    ],
+    "fonti": [
+      {
+        "nome": "InsideEVs Italia: Auto elettrica economica: ora la sfida è fissata a 15.000 euro",
+        "url": "https://insideevs.it/news/811768/auto-elettirca-economica-stellantis-150000-euro/"
+      },
+      {
+        "nome": "InsideEVs Italia: Stellantis vuole l'auto elettrica da 15.000 euro: ecco cosa serve",
+        "url": "https://insideevs.it/news/811655/stellantis-auto-elettrica-economica-e-car/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Comprereste un'auto elettrica se costasse davvero 15.000 euro?",
+      "Secondo voi i supercrediti europei possono sbloccare il mercato delle citycar?",
+      "Le case automobilistiche riusciranno a mantenere questa promessa di prezzo?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "linus-torvalds-sperimenta-claude-code-per-velocizzare-il-kernel-linux-20261014",
+    "titolo": "Linus Torvalds sperimenta Claude Code per velocizzare il kernel Linux",
+    "sezione": "tecnologia",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-14",
+    "sommario": "Secondo Punto Informatico, Linus Torvalds avrebbe impiegato l'intelligenza artificiale per realizzare un aggiornamento del kernel Linux capace di triplicare le performance in specifici test.",
+    "testo": [
+      "Cosa è successo: secondo quanto riportato da Punto Informatico, Linus Torvalds avrebbe fatto ricorso a Claude Code, un sistema di intelligenza artificiale, per sviluppare una modifica destinata al kernel Linux. Il codice ideato con questo supporto avrebbe ottenuto risultati sorprendenti, arrivando a triplicare la velocità in determinati test.",
+      "Perché questa notizia è importante per tutti noi: il kernel Linux costituisce la base di una quantità enorme di dispositivi, dai server di rete agli smartphone Android fino ai sistemi digitali delle automobili moderne. Migliorare l'efficienza di questo software significa, in prospettiva, ottenere prestazioni superiori e una maggiore fluidità su una vastissima gamma di tecnologie che utilizziamo ogni giorno.",
+      "Cosa resta ancora da capire: al momento, sempre secondo la stessa testata, la modifica realizzata con l'ausilio dell'intelligenza artificiale si trova soltanto in fase di revisione. Resta da vedere se questo codice verrà effettivamente integrato nella versione ufficiale del sistema operativo e se l'uso dell'IA diventerà una pratica comune nello sviluppo dei software di base."
+    ],
+    "fonti": [
+      {
+        "nome": "Punto Informatico: Linus Torvalds usa Claude Code per ottimizzare Linux, la svolta",
+        "url": "https://www.punto-informatico.it/linus-torvalds-usa-claude-code-ottimizzare-linux-svolta/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Vi fidereste di un codice per il kernel Linux scritto da un'intelligenza artificiale?",
+      "Secondo voi l'IA rivoluzionerà il lavoro dei programmatori?",
+      "Avete già provato strumenti di programmazione basati su intelligenza artificiale?"
+    ],
+    "acquisto": null,
+    "domanda": "L'impiego di strumenti di intelligenza artificiale come Claude Code da parte di sviluppatori chiave per scrivere parti del kernel Linux costituisce un pericolo per la qualità e la sicurezza future del software quotidiano?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "L'uso di assistenti IA, come Claude Code impiegato da Linus Torvalds per una modifica al kernel Linux, crea incertezze sulla comprensione approfondita del codice creato e sulla stabilità futura del software.",
+        "Nonostante i test indichino un aumento delle prestazioni con il codice generato dall'IA, la verifica umana potrebbe non bastare per trovare ogni vulnerabilità o errore logico.",
+        "La forte dipendenza da sistemi automatici da parte di programmatori centrali mette a rischio i metodi di controllo e sicurezza consolidati del kernel Linux."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Il vaglio umano resta centrale e severo, assicurando che tutto il codice creato dall'intelligenza artificiale sia esaminato prima dell'inserimento.",
+        "L'uso di tali strumenti da parte di programmatori competenti come Linus Torvalds evidenzia che l'IA rappresenta un aiuto per migliorare il lavoro e non rimpiazza la competenza tecnica.",
+        "L'impiego di assistenti IA può velocizzare la creazione e accrescere le prestazioni in determinati test, come evidenziato dal raddoppio o triplicarsi della velocità in certi settori, mantenendo la sicurezza."
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "console-anbernic-a-rischio-l-esa-punta-il-dito-20261014",
+    "titolo": "Console Anbernic a rischio: l'ESA punta il dito",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-14",
+    "sommario": "Secondo Everyeye, l'Entertainment Software Association avrebbe inserito le popolari console portatili Anbernic nel mirino, definendole come prodotti contraffatti.",
+    "testo": [
+      "Secondo quanto riportato da Everyeye, l'associazione ESA avrebbe acceso i riflettori sui dispositivi targati Anbernic, arrivando a definirli con il termine \"Superfake\" e chiedendo di classificarli ufficialmente come merce contraffatta.",
+      "Questa mossa potrebbe avere un peso notevole per gli appassionati del settore e per il mercato statunitense, dato che la presa di posizione dell'associazione rischia di cambiare gli equilibri nella distribuzione di questi dispositivi portatili.",
+      "Al momento, tuttavia, restano diversi punti da chiarire sulle reali conseguenze pratiche che questa segnalazione comporterà per chi acquista o importa i prodotti del marchio."
+    ],
+    "fonti": [
+      {
+        "nome": "Everyeye: Anbernic nei guai: l'ESA chiede di classificare le note console portatili come merce contraffatta",
+        "url": "https://www.everyeye.it/notizie/anbernic-guai-esa-chiede-classificare-note-console-portatili-come-merce-contraffatta-905842.html"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Possedete anche voi una console portatile Anbernic?",
+      "Secondo voi questa mossa dell'ESA bloccherà il mercato di queste console?",
+      "Temete rincari o difficoltà nel reperire questi dispositivi?"
+    ],
+    "acquisto": {
+      "tipo": "prodotto",
+      "nome": "Anbernic"
+    }
+  }
+]
