@@ -421,7 +421,7 @@
       "id": "2026-10-14-3",
       "per": "davide",
       "da": "crescita-zampaviva",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "post",
       "volte": 1,
       "origine": "regola 6g",
@@ -429,13 +429,14 @@
       "dettagli": "Ieri sono usciti 14 Pin su 16; questi 2 sono caduti per il limite di Metricool. Testi già scritti ieri, stessi link con utm_source=pinterest.\nPinterest finora: 0 visite al negozio (ieri 6 visite: 5 dirette, 1 da ricerca; 1 carrello, 1 checkout, 0 ordini).",
       "link": "https://zampavivaoff.myshopify.com/products/collare-luminoso-led-per-cani",
       "azione": "Metto i 2 Pin in social/coda.json (rete pinterest, bacheca ZampaViva). Escono quando c'è il segreto PINTEREST_TOKEN nel repo del sito; fino ad allora restano in attesa.",
-      "deciso": "2026-10-14T06:13:07.003Z"
+      "deciso": "2026-10-14T06:13:07.003Z",
+      "esito": "14/10 15:20: 2 Pin messi in social/coda.json (bacheca ZampaViva). Partono quando c'è il segreto PINTEREST_TOKEN."
     },
     {
       "id": "2026-10-14-4",
       "per": "davide",
       "da": "grafico",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "altro",
       "volte": 1,
       "origine": "regola 6h",
@@ -443,7 +444,8 @@
       "dettagli": "Amaca da finestra per gatti: 9 immagini, nessuna con testo alternativo (serve a Google Immagini e all'accessibilità). La borraccia invece è a posto (10 immagini, testo in italiano).",
       "link": "https://admin.shopify.com/store/zampavivaoff/products/16088973050200",
       "azione": "Scrivo su Shopify il testo alternativo in italiano sulle 9 foto, per esempio \"Amaca da finestra per gatti con ventose, gatto sdraiato al sole sul vetro\", adattato a ogni foto.",
-      "deciso": "2026-10-14T06:13:18.626Z"
+      "deciso": "2026-10-14T06:13:18.626Z",
+      "esito": "14/10 15:15: testo alternativo in italiano scritto su Shopify su tutte e 9 le foto dell'amaca."
     },
     {
       "id": "2026-10-14-5",
