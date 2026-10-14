@@ -421,14 +421,15 @@
       "id": "2026-10-14-3",
       "per": "davide",
       "da": "crescita-zampaviva",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "post",
       "volte": 1,
       "origine": "regola 6g",
       "titolo": "2 Pin ZampaViva rimasti indietro: tappetino raccogli-lettiera e collare LED",
       "dettagli": "Ieri sono usciti 14 Pin su 16; questi 2 sono caduti per il limite di Metricool. Testi già scritti ieri, stessi link con utm_source=pinterest.\nPinterest finora: 0 visite al negozio (ieri 6 visite: 5 dirette, 1 da ricerca; 1 carrello, 1 checkout, 0 ordini).",
       "link": "https://zampavivaoff.myshopify.com/products/collare-luminoso-led-per-cani",
-      "azione": "Metto i 2 Pin in social/coda.json (rete pinterest, bacheca ZampaViva). Escono quando c'è il segreto PINTEREST_TOKEN nel repo del sito; fino ad allora restano in attesa."
+      "azione": "Metto i 2 Pin in social/coda.json (rete pinterest, bacheca ZampaViva). Escono quando c'è il segreto PINTEREST_TOKEN nel repo del sito; fino ad allora restano in attesa.",
+      "deciso": "2026-10-14T06:13:07.003Z"
     },
     {
       "id": "2026-10-14-4",
