@@ -15,6 +15,13 @@ MODELLI_RISERVA = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite"]
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 GROQ_MODELLI = [m for m in [os.environ.get("GROQ_MODEL", ""), "llama-3.3-70b-versatile", "llama-3.1-8b-instant"] if m]
 
+# Ordine dei fornitori AI, tutti gratuiti (dal 14/10/2026 Gemini è l'ultimo: spesso sovraccarico).
+# "groq": secret GROQ_API_KEY. "github": GitHub Models, usa il GITHUB_TOKEN del workflow
+# (permesso models: read), nessun account in più. "gemini": secret GEMINI_API_KEY.
+LLM_ORDINE = [x.strip() for x in (os.environ.get("LLM_ORDINE") or "groq,github,gemini").split(",") if x.strip()]
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_MODELLI = [m for m in [os.environ.get("GITHUB_MODEL", ""), "openai/gpt-4.1-mini", "openai/gpt-4o-mini", "openai/gpt-4.1-nano"] if m]
+
 # Pausa tra una chiamata e l'altra (secondi) per stare nei limiti del free tier
 PAUSA_TRA_CHIAMATE = 7
 
