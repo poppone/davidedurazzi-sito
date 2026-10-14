@@ -6,9 +6,12 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # Usati in ordine se il modello principale non risponde o ha finito la quota gratuita
-MODELLI_RISERVA = ["gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.5-flash-lite"]
+# (i 2.5 sono stati ritirati: rispondevano 404 il 13/10/2026)
+MODELLI_RISERVA = ["gemini-flash-lite-latest", "gemini-3.5-flash-lite"]
 
-# Riserva gratuita Groq (opzionale): secret GROQ_API_KEY. Modelli provati in ordine.
+# Riserva gratuita Groq (opzionale): secret GROQ_API_KEY. Prima i modelli scritti qui,
+# poi quelli che Groq elenca come disponibili (i nomi cambiano spesso: il 13/10/2026
+# entrambi i modelli llama qui sotto rispondevano 404).
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 GROQ_MODELLI = [m for m in [os.environ.get("GROQ_MODEL", ""), "llama-3.3-70b-versatile", "llama-3.1-8b-instant"] if m]
 
