@@ -393,14 +393,15 @@
       "id": "2026-10-14-1",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "live del 13/10",
       "titolo": "3 Short dalla live di ieri sera",
       "dettagli": "Minuti presi dalla scaletta (live/scaletta-live-13-10.md), da verificare sul VOD: vidIQ è senza crediti e non leggo la trascrizione.\n1) 0:10-0:35, Il Contraddittorio sul Game Pass: il momento del risultato del sondaggio !si/!no. Titolo: \"Il Game Pass sta uccidendo le console?\". Perché: è una domanda divisiva, fa commentare.\n2) 1:10-1:35, auto elettriche a meno di 20.000 euro (smart #2 a 19.900 euro e le cinesi). Titolo: \"Auto elettrica sotto i 20.000 euro: ci siamo?\". Perché: tema concreto, pubblico motori.\n3) 0:35-0:55, GTA 6 e la minaccia del leaker. Titolo: \"GTA 6: il leaker minaccia di pubblicare tutto\". Perché: GTA 6 è il tema che tira di più sul canale; niente immagini del leak.",
       "link": "https://www.twitch.tv/davidedurazzi/videos",
-      "azione": "Giro il compito al Videomaker: taglia i 3 Short dal VOD (verticali, sottotitoli, massimo 60 secondi) e li consegna su Drive; poi tornano qui da approvare prima di uscire."
+      "azione": "Giro il compito al Videomaker: taglia i 3 Short dal VOD (verticali, sottotitoli, massimo 60 secondi) e li consegna su Drive; poi tornano qui da approvare prima di uscire.",
+      "deciso": "2026-10-14T06:13:00.705Z"
     },
     {
       "id": "2026-10-14-2",
