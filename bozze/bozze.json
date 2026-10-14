@@ -2,6 +2,139 @@
   {
     "approvato": false,
     "scartare": false,
+    "slug": "omoda-4-e-omoda-5-next-ai-e-ibridi-al-salone-di-parigi-2026-20261014",
+    "titolo": "OMODA 4 e OMODA 5 NEXT: AI e ibridi al Salone di Parigi 2026",
+    "sezione": "motori",
+    "rubrica": "",
+    "data": "2026-10-14",
+    "sommario": "Al Salone di Parigi 2026 OMODA ha svelato due nuovi modelli dotati di assistente virtuale, funzioni di parcheggio remoto, sedili con massaggio e propulsione full‑hybrid, secondo HDmotori.",
+    "testo": [
+      "Secondo HDmotori, al Salone di Parigi 2026 il marchio OMODA ha presentato le versioni OMODA 4 e OMODA 5 NEXT, introducendo una combinazione di intelligenza artificiale e propulsione ibrida in due nuovi veicoli.",
+      "Le due auto includono un assistente AI per la gestione delle funzioni di bordo, la possibilità di parcheggiare a distanza, sedili dotati di sistema di massaggio e un motore full‑hybrid che unisce motore elettrico e combustione tradizionale.",
+      "Questa doppia novità è rilevante perché porta tecnologie tipicamente riservate a segmenti premium anche a una gamma più accessibile, promettendo una guida più comoda e una riduzione delle emissioni.",
+      "Rimane da approfondire come queste soluzioni si tradurranno in termini di prestazioni reali, costi di acquisto e disponibilità sul mercato, aspetti che saranno chiariti nei prossimi mesi."
+    ],
+    "fonti": [
+      {
+        "nome": "HDmotori: OMODA 4 e OMODA 5 NEXT, doppia novità a Parigi: tecnologia, IA e motori ibridi",
+        "url": "https://www.hdmotori.it/omoda-4-omoda-5-next-salone-parigi/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è la vostra opinione sull’integrazione di un assistente AI nelle auto di media gamma?",
+      "Quanto conta per voi la presenza di una propulsione full‑hybrid rispetto a un motore tradizionale?",
+      "Quali funzionalità ritenete più utili tra parcheggio remoto e sedili massaggianti?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "gemini-4-argon-google-apre-l-accesso-e-spiega-le-nuove-protezioni-20261014",
+    "titolo": "Gemini 4 Argon: Google apre l'accesso e spiega le nuove protezioni",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-14",
+    "sommario": "Google ha reso disponibile Gemini 4 Argon per sviluppatori e utenti Pro, presentandolo come risposta a ChatGPT-6. Il modello include specifiche protezioni contro gli usi illeciti.",
+    "testo": [
+      "Secondo il Sole 24 Ore, dopo l'anteprima riservata ai partner di Fairwind, Google ha aperto l'accesso al suo nuovo modello di frontiera Gemini 4 Argon. La piattaforma è ora disponibile per sviluppatori e utenti Pro, con prezzi promozionali attivi fino al 30 novembre.",
+      "Il Sole 24 Ore riporta che il modello si posiziona al primo posto nel Vals Index per finanza, coding e sicurezza. La strategia di Google punta fortemente sullo sviluppo agentico all'interno della piattaforma Antigravity, cercando di distinguersi dai concorrenti.",
+      "Punto Informatico evidenzia le nuove misure di sicurezza implementate da Google. Il publisher spiega che sono state introdotte protezioni specifiche per bloccare eventuali usi illeciti del modello, come la scrittura di codice per exploit.",
+      "Punto Informatico analizza inoltre le capacità reali del nuovo modello, confrontandolo con GPT-6 Astra e Claude. Il testo sottolinea la disponibilità per i piani Pro e Ultra, offrendo una panoramica su come Gemini 4 Argon si comporta rispetto ai principali rivali nel mercato dell'intelligenza artificiale."
+    ],
+    "fonti": [
+      {
+        "nome": "Il Sole 24 Ore: Gemini 4 Argon disponibile al pubblico: la risposta di Google a ChatGPT-6 e Fable 5",
+        "url": "https://www.ilsole24ore.com/art/gemini-4-argon-disponibile-pubblico-risposta-google-chatgpt-6-e-fable-5-AJTVLkiB"
+      },
+      {
+        "nome": "Punto Informatico: Gemini 4 Argon: protezioni contro usi illeciti del modello",
+        "url": "https://www.punto-informatico.it/gemini-4-argon-protezioni-contro-usi-illeciti-modello/"
+      },
+      {
+        "nome": "Punto Informatico: Gemini 4 Argon, cosa sa fare davvero il nuovo modello di Google",
+        "url": "https://www.punto-informatico.it/gemini-4-argon-cosa-sa-fare-davvero-nuovo-modello-google/"
+      }
+    ],
+    "nota_critico": [
+      "Alcune frasi sono quasi identiche alle fonti, ad esempio \"primo posto nel Vals Index per finanza, coding e sicurezza\", violando il requisito di riformulare con parole proprie",
+      "L'affermazione \"cercando di distinguersi dai concorrenti\" non è presente nelle fonti e aggiunge un giudizio non attribuito"
+    ],
+    "domande_live": [
+      "Secondo voi, le protezioni contro gli exploit sono sufficienti o servono ulteriori limiti?",
+      "Che ruolo pensate avrà l'Antigravity per lo sviluppo agentico rispetto ad altre piattaforme?",
+      "I prezzi promozionali fino a novembre vi spingeranno a testare Gemini 4 Argon?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "gta-vi-leak-novita-e-data-di-uscita-per-pc-20261014",
+    "titolo": "GTA VI: leak, novità e data di uscita per PC",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-14",
+    "sommario": "Sono emerse nuove indiscrezioni su GTA VI, dalla possibile uscita su PC nel primo trimestre del 2027 alle minacce di una leak completa, passando per innovazioni come radio e podcast ascoltabili a piedi.",
+    "testo": [
+      "Secondo un’indiscrezione riportata da IGN Italia, la versione per PC di GTA VI potrebbe arrivare nel primo trimestre del 2027. Nella stessa testata è stata pubblicata l’intervista completa a Rob Nelson, co‑studio head di Rockstar North, che ha confermato l’avvio dello sviluppo del titolo più atteso dell’anno.",
+      "Le rivelazioni di Everyeye descrivono un mondo di gioco più ampio e una narrazione più profonda, mentre Gamereactor segnala che per la prima volta le radio e i podcast saranno fruibili anche durante le esplorazioni a piedi, una novità che potrebbe cambiare l’esperienza di immersione dei fan.",
+      "Un altro elemento di tensione è la minaccia del gruppo CyberLeek, che ha dichiarato di voler diffondere un’intera build del gioco se la sua criptovaluta raggiunge una capitalizzazione di 30 milioni di dollari, secondo quanto riportato da Gamereactor. La comunità resta in attesa di conferme ufficiali su data, piattaforme e sulla possibile diffusione di materiale non autorizzato."
+    ],
+    "fonti": [
+      {
+        "nome": "IGN Italia: Secondo alcune indiscrezioni, la versione PC di GTA VI sarebbe prevista per il primo trimestre del 2027",
+        "url": "https://it.ign.com/grand-theft-auto-vi/228557/secondo-alcune-indiscrezioni-la-versione-pc-di-gta-vi-sarebbe-prevista-per-il-primo-trimestre-del-20"
+      },
+      {
+        "nome": "IGN Italia: Grand Theft Auto VI: l'intervista completa con Rockstar North",
+        "url": "https://it.ign.com/grand-theft-auto-vi/228467/grand-theft-auto-vi-lintervista-completa-con-rockstar-north"
+      },
+      {
+        "nome": "Everyeye: Nuove rivelazioni su GTA 6: ecco cosa ci aspetta nel titolo più desiderato del momento",
+        "url": "https://www.everyeye.it/notizie/nuove-rivelazioni-gta-6-cosa-aspetta-desiderato-momento-904253.html"
+      },
+      {
+        "nome": "Gamereactor: GTA 6: CyberLeek minaccia di pubblicare l'intera build",
+        "url": "https://www.gamereactor.it/gta-6-cyberleek-minaccia-leak-build-completa-criptovalute/"
+      },
+      {
+        "nome": "Gamereactor: GTA 6: radio e podcast ascoltabili anche a piedi",
+        "url": "https://www.gamereactor.it/gta-6-radio-podcast-ascoltabili-piedi-smartphone-novita/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è la vostra aspettativa per la versione PC di GTA VI nel 2027?",
+      "Quanto vi entusiasma la possibilità di ascoltare radio e podcast a piedi nel nuovo gioco?",
+      "Cosa ne pensate della minaccia di CyberLeek di pubblicare una build completa?"
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Grand Theft Auto VI"
+    },
+    "domanda": "Ritieni che la minaccia di CyberLeek di diffondere la build completa di GTA VI, legata al valore di una criptovaluta, possa mettere a rischio la sicurezza online degli utenti?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo Gamereactor, CyberLeek intende rilasciare una build completa di GTA VI; i file pirata sono spesso modificati con malware o backdoor, perciò chi scarica quella versione corre il rischio di infezioni e furto di dati",
+        "La richiesta è legata a una criptovaluta che deve raggiungere una capitalizzazione di 30 milioni di dollari; per ottenerla gli utenti potrebbero essere spinti a utilizzare exchange o piattaforme non regolamentate, esponendosi a truffe e furti di credenziali",
+        "Secondo alcuni esperti, una build integrale potrebbe consentire a hacker di analizzare il codice del gioco e individuare vulnerabilità del motore o dei sistemi online, potenzialmente sfruttabili per attacchi DDoS, cheat o compromissione della privacy degli utenti"
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "La minaccia di CyberLeek riguarda la diffusione di una build del gioco, non di software malevolo: non ci sono prove che il pacchetto contenga malware o che possa compromettere i sistemi degli utenti, quindi il rischio per la sicurezza online resta ipotetico",
+        "Anche se la build fosse resa pubblica, si tratterebbe di un videogioco offline; in teoria, un file di gioco non ha la capacità di accedere a dati personali o di installare componenti dannosi senza l’intervento dell’utente",
+        "La pressione esercitata da CyberLeek è legata al valore della propria criptovaluta (30 milioni di dollari), il che indica che l’obiettivo è finanziario e di visibilità, non un intento di attacchi informatici mirati agli utenti; quindi la minaccia è più di natura economica che di sicurezza"
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
     "slug": "auto-elettrica-a-15-000-euro-la-nuova-sfida-di-stellantis-20261014",
     "titolo": "Auto elettrica a 15.000 euro: la nuova sfida di Stellantis",
     "sezione": "motori",
