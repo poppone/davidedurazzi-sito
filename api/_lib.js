@@ -63,7 +63,7 @@ function pubblico(c) {
 async function gemini(sistema, richiesta) {
   const chiave = process.env.GEMINI_API_KEY;
   if (!chiave) throw new Error("Manca GEMINI_API_KEY");
-  const modelli = [process.env.GEMINI_MODEL || "gemini-flash-latest", "gemini-flash-lite-latest", "gemini-2.5-flash"];
+  const modelli = [process.env.GEMINI_MODEL || "gemini-flash-latest", "gemini-flash-lite-latest", "gemini-3.5-flash-lite"];
   let errore = "";
   const scadenza = Date.now() + 40000; // tempo totale massimo per l'agente
   for (const m of modelli) {

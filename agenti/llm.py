@@ -15,7 +15,7 @@ _gemini_ko = [False]  # dopo un fallimento completo di Gemini, le chiamate succe
 
 
 def _modelli() -> list[str]:
-    riserva = getattr(config, "MODELLI_RISERVA", ["gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.5-flash-lite"])
+    riserva = getattr(config, "MODELLI_RISERVA", ["gemini-flash-lite-latest", "gemini-3.5-flash-lite"])
     lista = [config.GEMINI_MODEL] + [m for m in riserva if m != config.GEMINI_MODEL]
     return [m for m in lista if m not in _esauriti]
 
@@ -26,12 +26,31 @@ def _attesa_suggerita(r: requests.Response) -> float:
 
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+GROQ_LISTA = "https://api.groq.com/openai/v1/models"
+_NON_CHAT = ("whisper", "guard", "tts", "orpheus", "playai", "distil")
+
+
+def _groq_modelli() -> list[str]:
+    """Modelli Groq da provare: prima quelli di config, poi quelli che Groq dice di avere oggi."""
+    lista = list(config.GROQ_MODELLI)
+    try:
+        r = requests.get(GROQ_LISTA, headers={"Authorization": f"Bearer {config.GROQ_API_KEY}"}, timeout=30)
+        if r.status_code == 200:
+            attivi = [m["id"] for m in r.json().get("data", [])
+                      if m.get("active", True) and not any(x in m["id"].lower() for x in _NON_CHAT)]
+            # i modelli più grandi rispondono meglio in italiano: prima quelli con più parametri dichiarati
+            attivi.sort(key=lambda n: -max([int(x) for x in re.findall(r"(\d+)b", n.lower())] or [0]))
+            lista = [m for m in lista if m in attivi] + [m for m in attivi if m not in lista]
+            print(f"[llm] groq modelli disponibili: {', '.join(lista[:6])}")
+    except (requests.exceptions.RequestException, ValueError, KeyError) as e:
+        print(f"[llm] groq elenco modelli non disponibile: {e}")
+    return lista
 
 
 def _groq(sistema: str, richiesta: str, temperatura: float) -> dict:
     """Riserva gratuita: Groq (API compatibile OpenAI). Prova i modelli in ordine."""
     ultimo = ""
-    for modello in config.GROQ_MODELLI:
+    for modello in _groq_modelli()[:5]:
         for tentativo in range(2):
             try:
                 r = requests.post(
