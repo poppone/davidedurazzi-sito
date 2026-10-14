@@ -435,14 +435,15 @@
       "id": "2026-10-14-4",
       "per": "davide",
       "da": "grafico",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "altro",
       "volte": 1,
       "origine": "regola 6h",
       "titolo": "Testo alternativo mancante sulle 9 foto dell'amaca da finestra",
       "dettagli": "Amaca da finestra per gatti: 9 immagini, nessuna con testo alternativo (serve a Google Immagini e all'accessibilità). La borraccia invece è a posto (10 immagini, testo in italiano).",
       "link": "https://admin.shopify.com/store/zampavivaoff/products/16088973050200",
-      "azione": "Scrivo su Shopify il testo alternativo in italiano sulle 9 foto, per esempio \"Amaca da finestra per gatti con ventose, gatto sdraiato al sole sul vetro\", adattato a ogni foto."
+      "azione": "Scrivo su Shopify il testo alternativo in italiano sulle 9 foto, per esempio \"Amaca da finestra per gatti con ventose, gatto sdraiato al sole sul vetro\", adattato a ogni foto.",
+      "deciso": "2026-10-14T06:13:18.626Z"
     },
     {
       "id": "2026-10-14-5",
