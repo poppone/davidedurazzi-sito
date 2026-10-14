@@ -56,6 +56,10 @@ section.blocco{padding:clamp(1.8rem,5vw,3.2rem) 0;border-top:2px solid var(--ink
 .locandina{position:absolute;inset:0;z-index:2;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:clamp(.8rem,3vw,1.6rem)}
 .locandina .acts{margin:0}
 .player.online .locandina{display:none}
+.replica{position:absolute;inset:0;z-index:3;background:#000}
+.replica iframe{width:100%;height:100%;border:0}
+.replica .etichetta{position:absolute;top:.6rem;left:.6rem;background:var(--live);color:#fff;font:600 .75rem/1 Archivo,sans-serif;padding:.35rem .55rem;border-radius:3px;pointer-events:none}
+.player.online .replica{display:none}
 #twitchPlayerApi{position:absolute;inset:0}
 #twitchPlayerApi iframe{width:100%;height:100%}
 .chat{display:none;border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:420px}
