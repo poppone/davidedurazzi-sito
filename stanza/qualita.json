@@ -147,6 +147,167 @@
         }
       ],
       "media": 4.0
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "samaritan-gaming",
+      "lavoro": "4 Short del 13/10 (1 IT, 3 EN)",
+      "revisore": "revisore-testi",
+      "punti": [
+        {
+          "punto": "titoli chiari e completi",
+          "voto": 3,
+          "motivo": "\"Zelda: New Ocarina of Time remake footage blows\" è troncato"
+        },
+        {
+          "punto": "didascalia pulita",
+          "voto": 4,
+          "motivo": "didascalie ok, \\n corretto nella coda"
+        }
+      ],
+      "media": 3.5
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "samaritan-gaming",
+      "lavoro": "4 Short del 13/10 (1 IT, 3 EN)",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "notizia vera e recente",
+          "voto": 3,
+          "motivo": "2 su 4 sono voci di leak su GTA 6, 1 è un furto (cronaca)"
+        },
+        {
+          "punto": "adatto al canale",
+          "voto": 4,
+          "motivo": "gaming in tema"
+        }
+      ],
+      "media": 3.5
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "samaritan-gaming",
+      "lavoro": "uscite del 13-14/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "uscito nel suo orario",
+          "voto": 2,
+          "motivo": "la partenza delle 01:49 non ha prodotto video"
+        },
+        {
+          "punto": "retention nella media",
+          "voto": 3,
+          "motivo": "non disponibile: performance.json fermo"
+        }
+      ],
+      "media": 2.5
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "samaritan-notizie",
+      "lavoro": "3 Short del 13/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "due testate per notizia",
+          "voto": 3,
+          "motivo": "non verificabile da qui"
+        },
+        {
+          "punto": "temi non ripetuti",
+          "voto": 3,
+          "motivo": "due Short sulla manovra nello stesso giorno, angoli diversi"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "samaritan-notizie",
+      "lavoro": "uscite del 13-14/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "uscito nel suo orario",
+          "voto": 2,
+          "motivo": "la partenza delle 01:47 del 14/10 non ha prodotto video"
+        }
+      ],
+      "media": 2.0
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "redattore",
+      "lavoro": "redazione del 13/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "bozze prodotte",
+          "voto": 1,
+          "motivo": "0 bozze: tutti i modelli AI ko (503 e 404)"
+        }
+      ],
+      "media": 1.0
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "social",
+      "lavoro": "rilanci caroselli del 13/10",
+      "revisore": "revisore-testi",
+      "punti": [
+        {
+          "punto": "pubblicato come approvato",
+          "voto": 5,
+          "motivo": "Tesla e Game Pass usciti su TikTok, Facebook, Bluesky, Pinterest"
+        },
+        {
+          "punto": "AI dichiarata",
+          "voto": 5,
+          "motivo": "isAigc su TikTok e frase in didascalia"
+        }
+      ],
+      "media": 5.0
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "crescita-zampaviva",
+      "lavoro": "16 Pin del 13/10",
+      "revisore": "analista",
+      "punti": [
+        {
+          "punto": "link con utm",
+          "voto": 5,
+          "motivo": "tutti i 16 con utm_source e utm_campaign"
+        },
+        {
+          "punto": "testo fedele a Shopify",
+          "voto": 5,
+          "motivo": "frasi dalle descrizioni"
+        },
+        {
+          "punto": "misura il giorno dopo",
+          "voto": 3,
+          "motivo": "0 visite da Pinterest finora; 2 Pin non usciti per il limite Metricool"
+        }
+      ],
+      "media": 4.33
+    },
+    {
+      "data": "2026-10-14",
+      "agente": "grafico",
+      "lavoro": "controllo prodotti: amaca, borraccia",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "3+ immagini e alt in italiano",
+          "voto": 3,
+          "motivo": "amaca 9 foto senza alt; borraccia 10 foto con alt"
+        }
+      ],
+      "media": 3.0
     }
   ]
 }

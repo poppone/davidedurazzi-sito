@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-13T06:14:33Z",
+  "aggiornato": "2026-10-14",
   "stati": [
     "da fare",
     "in corso",
@@ -206,11 +206,12 @@
       "id": "2026-10-13-14",
       "per": "vendite",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "fatto",
       "titolo": "Prima vendita ZampaViva: zero ordini, scegliere il prodotto da spingere",
       "dettagli": "Shopify: 0 ordini. Domani il Direttore propone un video Samaritan animali dedicato al prodotto con più margine, da approvare.",
       "origine": "regola 6c",
-      "volte": 1
+      "volte": 1,
+      "esito": "Prodotto scelto il 14/10: collare luminoso LED (passeggiate serali, uno dei 2 Pin non usciti). Va nel video di Samaritan animali."
     },
     {
       "id": "2026-10-13-15",
@@ -339,7 +340,7 @@
       "id": "2026-10-13-24",
       "per": "davide",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "regola 6e",
@@ -347,7 +348,9 @@
       "dettagli": "Argomento: 4 su 5 (notizia di gaming, titolo fedele alla fonte). Video: non votabile, la copia su Vercel Blob non si scarica da qui, quindi per regola passa da te. La didascalia aveva un \\n scritto per esteso: corretto qui sotto. Il file su Blob scade il 17/10.",
       "link": "https://youtube.com/shorts/YhBgD6euibg",
       "azione": "Programmare su Metricool (brand 7358624) su TikTok @davidedurazzi (isAigc vero) e come Reel Instagram (isAiGenerated vero) il file https://8ggiyctagekoppcx.public.blob.vercel-storage.com/samaritan/YhBgD6euibg-AQrLd2eBTT0wywX3EI5ZiB3XySKg6X.mp4 con questa didascalia, all'ora suggerita da getBestTimeToPostByNetwork:\nGTA 6: la scatola senza disco è reale? 🎮\n\nScopri se la versione in scatola di GTA 6 ha davvero il disco e cosa contiene l'extra fisico.\nTi sorprende questa novità? Lascia il tuo commento!\n\n#grandtheftautovi #rumor #gamingita #perte",
-      "deciso": "2026-10-13T16:42:51.924Z"
+      "deciso": "2026-10-13T16:42:51.924Z",
+      "eseguito": "2026-10-14",
+      "esito": "Reel Instagram messo in social/coda.json (voce 2026-10-14-reel-YhBgD6euibg, nota AI aggiunta in didascalia): esce col workflow Coda social. TikTok NON programmato: Metricool è al limite gratuito fino al 31/10 (regola 6m) e il file scade il 17/10. Se lo vuoi su TikTok, caricalo a mano dall'app."
     },
     {
       "id": "2026-10-13-25",
@@ -377,13 +380,89 @@
       "id": "2026-10-13-27",
       "per": "direttore",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "fatto",
       "tipo": "altro",
       "volte": 1,
       "origine": "live",
       "titolo": "Clip dalla live del 13/10 (circa 2 ore, Twitch + YouTube)",
       "dettagli": "Davide ha fatto la live dalle 21:46 alle 23:33 circa, con la scaletta in /mnt/project-files/live/scaletta-live-13-10.md. Nel giro del 14/10: leggi i numeri della live su YouTube (vidIQ) e proponi 2-3 momenti da tagliare in Short (minuto di inizio e fine, titolo, perché), come compito 'da approvare' di tipo video.",
-      "azione": "Proporre 2-3 Short dalla live in /admin."
+      "azione": "Proporre 2-3 Short dalla live in /admin.",
+      "esito": "Proposte in 2026-10-14-1. Numeri YouTube della live non disponibili (vidIQ senza crediti); da Davide: 6 spettatori medi, 1 sub."
+    },
+    {
+      "id": "2026-10-14-1",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "live del 13/10",
+      "titolo": "3 Short dalla live di ieri sera",
+      "dettagli": "Minuti presi dalla scaletta (live/scaletta-live-13-10.md), da verificare sul VOD: vidIQ è senza crediti e non leggo la trascrizione.\n1) 0:10-0:35, Il Contraddittorio sul Game Pass: il momento del risultato del sondaggio !si/!no. Titolo: \"Il Game Pass sta uccidendo le console?\". Perché: è una domanda divisiva, fa commentare.\n2) 1:10-1:35, auto elettriche a meno di 20.000 euro (smart #2 a 19.900 euro e le cinesi). Titolo: \"Auto elettrica sotto i 20.000 euro: ci siamo?\". Perché: tema concreto, pubblico motori.\n3) 0:35-0:55, GTA 6 e la minaccia del leaker. Titolo: \"GTA 6: il leaker minaccia di pubblicare tutto\". Perché: GTA 6 è il tema che tira di più sul canale; niente immagini del leak.",
+      "link": "https://www.twitch.tv/davidedurazzi/videos",
+      "azione": "Giro il compito al Videomaker: taglia i 3 Short dal VOD (verticali, sottotitoli, massimo 60 secondi) e li consegna su Drive; poi tornano qui da approvare prima di uscire."
+    },
+    {
+      "id": "2026-10-14-2",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "volte": 1,
+      "origine": "redattore",
+      "titolo": "Far ripartire la redazione: modelli AI di riserva aggiornati (PR #5)",
+      "dettagli": "Il 13/10 la redazione non ha scritto nessuna bozza: Gemini sovraccarico (503) e tutti i modelli di riserva ritirati (404: gemini-2.5, due llama di Groq). La PR usa gemini-3.5-flash-lite e fa scegliere a Groq i modelli attivi.",
+      "link": "https://github.com/poppone/davidedurazzi-sito/pull/5",
+      "azione": "Unisci tu la PR #5 dal link (io non posso unire): dalla run successiva la redazione torna a produrre bozze."
+    },
+    {
+      "id": "2026-10-14-3",
+      "per": "davide",
+      "da": "crescita-zampaviva",
+      "stato": "da approvare",
+      "tipo": "post",
+      "volte": 1,
+      "origine": "regola 6g",
+      "titolo": "2 Pin ZampaViva rimasti indietro: tappetino raccogli-lettiera e collare LED",
+      "dettagli": "Ieri sono usciti 14 Pin su 16; questi 2 sono caduti per il limite di Metricool. Testi già scritti ieri, stessi link con utm_source=pinterest.\nPinterest finora: 0 visite al negozio (ieri 6 visite: 5 dirette, 1 da ricerca; 1 carrello, 1 checkout, 0 ordini).",
+      "link": "https://zampavivaoff.myshopify.com/products/collare-luminoso-led-per-cani",
+      "azione": "Metto i 2 Pin in social/coda.json (rete pinterest, bacheca ZampaViva). Escono quando c'è il segreto PINTEREST_TOKEN nel repo del sito; fino ad allora restano in attesa."
+    },
+    {
+      "id": "2026-10-14-4",
+      "per": "davide",
+      "da": "grafico",
+      "stato": "da approvare",
+      "tipo": "altro",
+      "volte": 1,
+      "origine": "regola 6h",
+      "titolo": "Testo alternativo mancante sulle 9 foto dell'amaca da finestra",
+      "dettagli": "Amaca da finestra per gatti: 9 immagini, nessuna con testo alternativo (serve a Google Immagini e all'accessibilità). La borraccia invece è a posto (10 immagini, testo in italiano).",
+      "link": "https://admin.shopify.com/store/zampavivaoff/products/16088973050200",
+      "azione": "Scrivo su Shopify il testo alternativo in italiano sulle 9 foto, per esempio \"Amaca da finestra per gatti con ventose, gatto sdraiato al sole sul vetro\", adattato a ogni foto."
+    },
+    {
+      "id": "2026-10-14-5",
+      "per": "davide",
+      "da": "vendite",
+      "stato": "da approvare",
+      "tipo": "altro",
+      "volte": 1,
+      "origine": "regola 6c",
+      "titolo": "NordVPN ha risposto: iscriversi al loro programma affiliati",
+      "dettagli": "Il 13/10 alle 16:47 il team affiliati di NordVPN ha risposto alla proposta: ti invitano a iscriverti al programma affiliati (link nella loro email). È l'unica risposta positiva su 3 email inviate. Rende solo sulle vendite fatte col tuo link: lo misuriamo dal loro pannello.",
+      "link": "https://mail.google.com/mail/?authuser=davide1988rm@gmail.com#all/thread-f:1878808158309598046",
+      "azione": "L'iscrizione la fai tu (serve creare un account a tuo nome). Appena hai il link affiliato, lo metto nella pagina Consigli e negli articoli di tecnologia, dichiarato come affiliazione."
+    },
+    {
+      "id": "2026-10-14-6",
+      "per": "samaritan-gaming",
+      "da": "direttore",
+      "stato": "da fare",
+      "volte": 1,
+      "origine": "controllo incrociato",
+      "titolo": "La partenza delle 01:49 del 14/10 è finita senza video (gaming e notizie)",
+      "dettagli": "Run 38486510722 (gaming) e 38486388365 (notizie): esito success ma nessuna prenotazione, nessun video, nessun artefatto. Ultimo Short: gaming 13/10 16:20, notizie 13/10 12:44 (ora italiana). Probabile uscita serale partita in ritardo e saltata: va capito perché non lascia traccia nel log."
     }
   ]
 }
