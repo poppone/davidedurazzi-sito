@@ -1,5 +1,6 @@
-"""Chiamata a Gemini via REST, con risposta JSON, gestione dei limiti e modelli di riserva.
-Se Gemini non risponde, ripiega su Groq (gratuito) quando e impostata GROQ_API_KEY."""
+"""Chiamata ai modelli AI gratuiti via REST, con risposta JSON, gestione dei limiti e riserve.
+I fornitori si provano nell'ordine di config.LLM_ORDINE (groq, github, gemini): se uno
+non risponde, si passa al successivo e per il resto del giro si salta quello caduto."""
 import json
 import re
 import time
@@ -11,7 +12,7 @@ import config
 URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 _ultima = 0.0
 _esauriti: set[str] = set()
-_gemini_ko = [False]  # dopo un fallimento completo di Gemini, le chiamate successive vanno dirette su Groq
+_caduti: set[str] = set()  # fornitori falliti del tutto: per il resto del giro si saltano
 
 
 def _modelli() -> list[str]:
@@ -81,18 +82,66 @@ def _groq(sistema: str, richiesta: str, temperatura: float) -> dict:
     raise RuntimeError(f"Groq non disponibile. Ultimo errore: {ultimo}")
 
 
+GITHUB_URL = "https://models.github.ai/inference/chat/completions"
+
+
+def _github(sistema: str, richiesta: str, temperatura: float) -> dict:
+    """GitHub Models: gratuito con il GITHUB_TOKEN del workflow (permesso models: read)."""
+    ultimo = ""
+    for modello in config.GITHUB_MODELLI:
+        for tentativo in range(2):
+            try:
+                r = requests.post(
+                    GITHUB_URL,
+                    headers={"Authorization": f"Bearer {config.GITHUB_TOKEN}", "Content-Type": "application/json",
+                             "Accept": "application/json"},
+                    json={"model": modello, "temperature": temperatura, "response_format": {"type": "json_object"},
+                          "messages": [{"role": "system", "content": sistema + "\nRispondi solo con un oggetto JSON valido, in italiano."},
+                                       {"role": "user", "content": richiesta}]},
+                    timeout=120,
+                )
+            except requests.exceptions.RequestException as e:
+                ultimo = f"{modello}: rete {e}"
+                time.sleep(10)
+                continue
+            if r.status_code == 200:
+                try:
+                    return json.loads(r.json()["choices"][0]["message"]["content"])
+                except (KeyError, IndexError, TypeError, json.JSONDecodeError):
+                    ultimo = f"{modello}: JSON non valido"
+                    continue
+            ultimo = f"{modello}: HTTP {r.status_code} {r.text[:300]}"
+            print(f"[llm] github {ultimo}")
+            if r.status_code == 429 and tentativo == 0:
+                time.sleep(min(60, float(r.headers.get("retry-after", 20) or 20)))
+                continue
+            break
+    raise RuntimeError(f"GitHub Models non disponibile. Ultimo errore: {ultimo}")
+
+
+def _fornitori() -> list[tuple[str, object]]:
+    disponibili = {
+        "groq": (config.GROQ_API_KEY, _groq),
+        "github": (config.GITHUB_TOKEN, _github),
+        "gemini": (config.GEMINI_API_KEY, _gemini),
+    }
+    return [(nome, disponibili[nome][1]) for nome in config.LLM_ORDINE
+            if nome in disponibili and disponibili[nome][0] and nome not in _caduti]
+
+
 def chiedi(sistema: str, richiesta: str, temperatura: float = 0.4) -> dict:
-    """Prova Gemini; se fallisce e c'e la chiave Groq, usa Groq."""
-    if config.GROQ_API_KEY and _gemini_ko[0]:
-        return _groq(sistema, richiesta, temperatura)
-    try:
-        return _gemini(sistema, richiesta, temperatura)
-    except RuntimeError as e:
-        if not config.GROQ_API_KEY:
-            raise
-        _gemini_ko[0] = True
-        print(f"[llm] {e} -> uso Groq per il resto del giro")
-        return _groq(sistema, richiesta, temperatura)
+    """Prova i fornitori nell'ordine di config.LLM_ORDINE; il primo che risponde vince."""
+    errori = []
+    for nome, funzione in _fornitori():
+        try:
+            return funzione(sistema, richiesta, temperatura)
+        except RuntimeError as e:
+            _caduti.add(nome)
+            errori.append(str(e))
+            print(f"[llm] {e} -> salto {nome} per il resto del giro")
+    if not errori:
+        raise RuntimeError("Nessun fornitore AI configurato: servono GROQ_API_KEY, GITHUB_TOKEN o GEMINI_API_KEY.")
+    raise RuntimeError("Nessun fornitore AI ha risposto. " + " | ".join(errori))
 
 
 def _gemini(sistema: str, richiesta: str, temperatura: float = 0.4) -> dict:
