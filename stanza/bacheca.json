@@ -406,14 +406,15 @@
       "id": "2026-10-14-2",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "fatto",
       "tipo": "pr",
       "volte": 1,
       "origine": "redattore",
       "titolo": "Far ripartire la redazione: modelli AI di riserva aggiornati (PR #5)",
       "dettagli": "Il 13/10 la redazione non ha scritto nessuna bozza: Gemini sovraccarico (503) e tutti i modelli di riserva ritirati (404: gemini-2.5, due llama di Groq). La PR usa gemini-3.5-flash-lite e fa scegliere a Groq i modelli attivi.",
       "link": "https://github.com/poppone/davidedurazzi-sito/pull/5",
-      "azione": "Unisci tu la PR #5 dal link (io non posso unire): dalla run successiva la redazione torna a produrre bozze."
+      "azione": "Unisci tu la PR #5 dal link (io non posso unire): dalla run successiva la redazione torna a produrre bozze.",
+      "esito": "PR #5 unita da Davide il 14/10 alle 8:04. Verifica alla prossima redazione."
     },
     {
       "id": "2026-10-14-3",
