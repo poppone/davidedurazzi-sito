@@ -211,6 +211,18 @@
       };
       sc.onerror = function () { /* resta la locandina con il link al canale */ };
       document.body.appendChild(sc);
+
+      // Da offline, al posto della locandina si vede l'ultima diretta salvata (se c'è)
+      fetch("/api/twitch?canale=" + canale).then(function (r) { return r.ok ? r.json() : {}; }).then(function (j) {
+        var v = j && j.video;
+        if (!v || !/^\d+$/.test(v.id)) return;
+        var rep = document.createElement("div");
+        rep.className = "replica";
+        rep.innerHTML = '<iframe title="Ultima diretta" allowfullscreen src="https://player.twitch.tv/?video=v' + v.id +
+          "&parent=" + encodeURIComponent(host) + '&autoplay=false"></iframe>' +
+          '<span class="etichetta">Ultima diretta' + (v.data ? " \u00b7 " + esc(data(v.data)) : "") + "</span>";
+        $("twitchPlayer").appendChild(rep);
+      }).catch(function () { /* resta la locandina */ });
     }
 
     // Articoli + Contraddittorio
