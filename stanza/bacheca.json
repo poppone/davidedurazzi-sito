@@ -449,14 +449,16 @@
       "id": "2026-10-14-5",
       "per": "davide",
       "da": "vendite",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "altro",
       "volte": 1,
       "origine": "regola 6c",
       "titolo": "NordVPN ha risposto: iscriversi al loro programma affiliati",
       "dettagli": "Il 13/10 alle 16:47 il team affiliati di NordVPN ha risposto alla proposta: ti invitano a iscriverti al programma affiliati (link nella loro email). È l'unica risposta positiva su 3 email inviate. Rende solo sulle vendite fatte col tuo link: lo misuriamo dal loro pannello.",
       "link": "https://mail.google.com/mail/?authuser=davide1988rm@gmail.com#all/thread-f:1878808158309598046",
-      "azione": "L'iscrizione la fai tu (serve creare un account a tuo nome). Appena hai il link affiliato, lo metto nella pagina Consigli e negli articoli di tecnologia, dichiarato come affiliazione."
+      "azione": "L'iscrizione la fai tu (serve creare un account a tuo nome). Appena hai il link affiliato, lo metto nella pagina Consigli e negli articoli di tecnologia, dichiarato come affiliazione.",
+      "deciso": "2026-10-14T06:13:51.907Z",
+      "nota_davide": "ho gia fatto l'iscrizione atte diamo Loro "
     },
     {
       "id": "2026-10-14-6",
