@@ -32,7 +32,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "apple-homeview-le-app-di-streaming-arriveranno-20261015",
     "titolo": "Apple HomeView: le app di streaming arriveranno?",
