@@ -1,5 +1,253 @@
 [
   {
+    "slug": "console-anbernic-a-rischio-l-esa-punta-il-dito-20261014",
+    "titolo": "Console Anbernic a rischio: l'ESA punta il dito",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-14",
+    "sommario": "Secondo Everyeye, l'Entertainment Software Association avrebbe inserito le popolari console portatili Anbernic nel mirino, definendole come prodotti contraffatti.",
+    "testo": [
+      "Secondo quanto riportato da Everyeye, l'associazione ESA avrebbe acceso i riflettori sui dispositivi targati Anbernic, arrivando a definirli con il termine \"Superfake\" e chiedendo di classificarli ufficialmente come merce contraffatta.",
+      "Questa mossa potrebbe avere un peso notevole per gli appassionati del settore e per il mercato statunitense, dato che la presa di posizione dell'associazione rischia di cambiare gli equilibri nella distribuzione di questi dispositivi portatili.",
+      "Al momento, tuttavia, restano diversi punti da chiarire sulle reali conseguenze pratiche che questa segnalazione comporterà per chi acquista o importa i prodotti del marchio."
+    ],
+    "fonti": [
+      {
+        "nome": "Everyeye: Anbernic nei guai: l'ESA chiede di classificare le note console portatili come merce contraffatta",
+        "url": "https://www.everyeye.it/notizie/anbernic-guai-esa-chiede-classificare-note-console-portatili-come-merce-contraffatta-905842.html"
+      }
+    ],
+    "acquisto": {
+      "tipo": "prodotto",
+      "nome": "Anbernic"
+    },
+    "pubblicato": true
+  },
+  {
+    "slug": "linus-torvalds-sperimenta-claude-code-per-velocizzare-il-kernel-linux-20261014",
+    "titolo": "Linus Torvalds sperimenta Claude Code per velocizzare il kernel Linux",
+    "sezione": "tecnologia",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-14",
+    "sommario": "Secondo Punto Informatico, Linus Torvalds avrebbe impiegato l'intelligenza artificiale per realizzare un aggiornamento del kernel Linux capace di triplicare le performance in specifici test.",
+    "testo": [
+      "Cosa è successo: secondo quanto riportato da Punto Informatico, Linus Torvalds avrebbe fatto ricorso a Claude Code, un sistema di intelligenza artificiale, per sviluppare una modifica destinata al kernel Linux. Il codice ideato con questo supporto avrebbe ottenuto risultati sorprendenti, arrivando a triplicare la velocità in determinati test.",
+      "Perché questa notizia è importante per tutti noi: il kernel Linux costituisce la base di una quantità enorme di dispositivi, dai server di rete agli smartphone Android fino ai sistemi digitali delle automobili moderne. Migliorare l'efficienza di questo software significa, in prospettiva, ottenere prestazioni superiori e una maggiore fluidità su una vastissima gamma di tecnologie che utilizziamo ogni giorno.",
+      "Cosa resta ancora da capire: al momento, sempre secondo la stessa testata, la modifica realizzata con l'ausilio dell'intelligenza artificiale si trova soltanto in fase di revisione. Resta da vedere se questo codice verrà effettivamente integrato nella versione ufficiale del sistema operativo e se l'uso dell'IA diventerà una pratica comune nello sviluppo dei software di base."
+    ],
+    "fonti": [
+      {
+        "nome": "Punto Informatico: Linus Torvalds usa Claude Code per ottimizzare Linux, la svolta",
+        "url": "https://www.punto-informatico.it/linus-torvalds-usa-claude-code-ottimizzare-linux-svolta/"
+      }
+    ],
+    "acquisto": null,
+    "domanda": "L'impiego di strumenti di intelligenza artificiale come Claude Code da parte di sviluppatori chiave per scrivere parti del kernel Linux costituisce un pericolo per la qualità e la sicurezza future del software quotidiano?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "L'uso di assistenti IA, come Claude Code impiegato da Linus Torvalds per una modifica al kernel Linux, crea incertezze sulla comprensione approfondita del codice creato e sulla stabilità futura del software.",
+        "Nonostante i test indichino un aumento delle prestazioni con il codice generato dall'IA, la verifica umana potrebbe non bastare per trovare ogni vulnerabilità o errore logico.",
+        "La forte dipendenza da sistemi automatici da parte di programmatori centrali mette a rischio i metodi di controllo e sicurezza consolidati del kernel Linux."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Il vaglio umano resta centrale e severo, assicurando che tutto il codice creato dall'intelligenza artificiale sia esaminato prima dell'inserimento.",
+        "L'uso di tali strumenti da parte di programmatori competenti come Linus Torvalds evidenzia che l'IA rappresenta un aiuto per migliorare il lavoro e non rimpiazza la competenza tecnica.",
+        "L'impiego di assistenti IA può velocizzare la creazione e accrescere le prestazioni in determinati test, come evidenziato dal raddoppio o triplicarsi della velocità in certi settori, mantenendo la sicurezza."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
+    "slug": "auto-elettrica-a-15-000-euro-la-nuova-sfida-di-stellantis-20261014",
+    "titolo": "Auto elettrica a 15.000 euro: la nuova sfida di Stellantis",
+    "sezione": "motori",
+    "rubrica": "",
+    "data": "2026-10-14",
+    "sommario": "Stellantis punta a rendere accessibile la mobilità a zero emissioni con una vettura economica, ma servono interventi normativi mirati.",
+    "testo": [
+      "Secondo InsideEVs Italia, il gruppo Stellantis avrebbe l'obiettivo di realizzare un'auto elettrica economica proposta al prezzo di 15.000 euro, cercando di fissare nuovi standard per il settore.",
+      "Sempre secondo quanto riportato dalla testata, durante il Salone di Parigi il manager Filosa avrebbe rilanciato il progetto della cosiddetta E-Car, chiarendo che non saranno introdotte nuove categorie di veicoli.",
+      "La testata InsideEVs Italia riferisce inoltre che, per raggiungere questo traguardo e favorire la diffusione delle piccole vetture a batteria, risulterebbero necessari dei supercrediti da parte dell'Unione Europea."
+    ],
+    "fonti": [
+      {
+        "nome": "InsideEVs Italia: Auto elettrica economica: ora la sfida è fissata a 15.000 euro",
+        "url": "https://insideevs.it/news/811768/auto-elettirca-economica-stellantis-150000-euro/"
+      },
+      {
+        "nome": "InsideEVs Italia: Stellantis vuole l'auto elettrica da 15.000 euro: ecco cosa serve",
+        "url": "https://insideevs.it/news/811655/stellantis-auto-elettrica-economica-e-car/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
+    "slug": "gta-vi-leak-novita-e-data-di-uscita-per-pc-20261014",
+    "titolo": "GTA VI: leak, novità e data di uscita per PC",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-14",
+    "sommario": "Sono emerse nuove indiscrezioni su GTA VI, dalla possibile uscita su PC nel primo trimestre del 2027 alle minacce di una leak completa, passando per innovazioni come radio e podcast ascoltabili a piedi.",
+    "testo": [
+      "Secondo un’indiscrezione riportata da IGN Italia, la versione per PC di GTA VI potrebbe arrivare nel primo trimestre del 2027. Nella stessa testata è stata pubblicata l’intervista completa a Rob Nelson, co‑studio head di Rockstar North, che ha confermato l’avvio dello sviluppo del titolo più atteso dell’anno.",
+      "Le rivelazioni di Everyeye descrivono un mondo di gioco più ampio e una narrazione più profonda, mentre Gamereactor segnala che per la prima volta le radio e i podcast saranno fruibili anche durante le esplorazioni a piedi, una novità che potrebbe cambiare l’esperienza di immersione dei fan.",
+      "Un altro elemento di tensione è la minaccia del gruppo CyberLeek, che ha dichiarato di voler diffondere un’intera build del gioco se la sua criptovaluta raggiunge una capitalizzazione di 30 milioni di dollari, secondo quanto riportato da Gamereactor. La comunità resta in attesa di conferme ufficiali su data, piattaforme e sulla possibile diffusione di materiale non autorizzato."
+    ],
+    "fonti": [
+      {
+        "nome": "IGN Italia: Secondo alcune indiscrezioni, la versione PC di GTA VI sarebbe prevista per il primo trimestre del 2027",
+        "url": "https://it.ign.com/grand-theft-auto-vi/228557/secondo-alcune-indiscrezioni-la-versione-pc-di-gta-vi-sarebbe-prevista-per-il-primo-trimestre-del-20"
+      },
+      {
+        "nome": "IGN Italia: Grand Theft Auto VI: l'intervista completa con Rockstar North",
+        "url": "https://it.ign.com/grand-theft-auto-vi/228467/grand-theft-auto-vi-lintervista-completa-con-rockstar-north"
+      },
+      {
+        "nome": "Everyeye: Nuove rivelazioni su GTA 6: ecco cosa ci aspetta nel titolo più desiderato del momento",
+        "url": "https://www.everyeye.it/notizie/nuove-rivelazioni-gta-6-cosa-aspetta-desiderato-momento-904253.html"
+      },
+      {
+        "nome": "Gamereactor: GTA 6: CyberLeek minaccia di pubblicare l'intera build",
+        "url": "https://www.gamereactor.it/gta-6-cyberleek-minaccia-leak-build-completa-criptovalute/"
+      },
+      {
+        "nome": "Gamereactor: GTA 6: radio e podcast ascoltabili anche a piedi",
+        "url": "https://www.gamereactor.it/gta-6-radio-podcast-ascoltabili-piedi-smartphone-novita/"
+      }
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Grand Theft Auto VI"
+    },
+    "domanda": "Ritieni che la minaccia di CyberLeek di diffondere la build completa di GTA VI, legata al valore di una criptovaluta, possa mettere a rischio la sicurezza online degli utenti?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo Gamereactor, CyberLeek intende rilasciare una build completa di GTA VI; i file pirata sono spesso modificati con malware o backdoor, perciò chi scarica quella versione corre il rischio di infezioni e furto di dati",
+        "La richiesta è legata a una criptovaluta che deve raggiungere una capitalizzazione di 30 milioni di dollari; per ottenerla gli utenti potrebbero essere spinti a utilizzare exchange o piattaforme non regolamentate, esponendosi a truffe e furti di credenziali",
+        "Secondo alcuni esperti, una build integrale potrebbe consentire a hacker di analizzare il codice del gioco e individuare vulnerabilità del motore o dei sistemi online, potenzialmente sfruttabili per attacchi DDoS, cheat o compromissione della privacy degli utenti"
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "La minaccia di CyberLeek riguarda la diffusione di una build del gioco, non di software malevolo: non ci sono prove che il pacchetto contenga malware o che possa compromettere i sistemi degli utenti, quindi il rischio per la sicurezza online resta ipotetico",
+        "Anche se la build fosse resa pubblica, si tratterebbe di un videogioco offline; in teoria, un file di gioco non ha la capacità di accedere a dati personali o di installare componenti dannosi senza l’intervento dell’utente",
+        "La pressione esercitata da CyberLeek è legata al valore della propria criptovaluta (30 milioni di dollari), il che indica che l’obiettivo è finanziario e di visibilità, non un intento di attacchi informatici mirati agli utenti; quindi la minaccia è più di natura economica che di sicurezza"
+      ]
+    },
+    "pubblicato": true
+  },
+  {
+    "slug": "gemini-4-argon-google-apre-l-accesso-e-spiega-le-nuove-protezioni-20261014",
+    "titolo": "Gemini 4 Argon: Google apre l'accesso e spiega le nuove protezioni",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-14",
+    "sommario": "Google ha reso disponibile Gemini 4 Argon per sviluppatori e utenti Pro, presentandolo come risposta a ChatGPT-6. Il modello include specifiche protezioni contro gli usi illeciti.",
+    "testo": [
+      "Secondo il Sole 24 Ore, dopo l'anteprima riservata ai partner di Fairwind, Google ha aperto l'accesso al suo nuovo modello di frontiera Gemini 4 Argon. La piattaforma è ora disponibile per sviluppatori e utenti Pro, con prezzi promozionali attivi fino al 30 novembre.",
+      "Il Sole 24 Ore riporta che il modello si posiziona al primo posto nel Vals Index per finanza, coding e sicurezza. La strategia di Google punta fortemente sullo sviluppo agentico all'interno della piattaforma Antigravity, cercando di distinguersi dai concorrenti.",
+      "Punto Informatico evidenzia le nuove misure di sicurezza implementate da Google. Il publisher spiega che sono state introdotte protezioni specifiche per bloccare eventuali usi illeciti del modello, come la scrittura di codice per exploit.",
+      "Punto Informatico analizza inoltre le capacità reali del nuovo modello, confrontandolo con GPT-6 Astra e Claude. Il testo sottolinea la disponibilità per i piani Pro e Ultra, offrendo una panoramica su come Gemini 4 Argon si comporta rispetto ai principali rivali nel mercato dell'intelligenza artificiale."
+    ],
+    "fonti": [
+      {
+        "nome": "Il Sole 24 Ore: Gemini 4 Argon disponibile al pubblico: la risposta di Google a ChatGPT-6 e Fable 5",
+        "url": "https://www.ilsole24ore.com/art/gemini-4-argon-disponibile-pubblico-risposta-google-chatgpt-6-e-fable-5-AJTVLkiB"
+      },
+      {
+        "nome": "Punto Informatico: Gemini 4 Argon: protezioni contro usi illeciti del modello",
+        "url": "https://www.punto-informatico.it/gemini-4-argon-protezioni-contro-usi-illeciti-modello/"
+      },
+      {
+        "nome": "Punto Informatico: Gemini 4 Argon, cosa sa fare davvero il nuovo modello di Google",
+        "url": "https://www.punto-informatico.it/gemini-4-argon-cosa-sa-fare-davvero-nuovo-modello-google/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
+    "slug": "omoda-4-e-omoda-5-next-ai-e-ibridi-al-salone-di-parigi-2026-20261014",
+    "titolo": "OMODA 4 e OMODA 5 NEXT: AI e ibridi al Salone di Parigi 2026",
+    "sezione": "motori",
+    "rubrica": "",
+    "data": "2026-10-14",
+    "sommario": "Al Salone di Parigi 2026 OMODA ha svelato due nuovi modelli dotati di assistente virtuale, funzioni di parcheggio remoto, sedili con massaggio e propulsione full‑hybrid, secondo HDmotori.",
+    "testo": [
+      "Secondo HDmotori, al Salone di Parigi 2026 il marchio OMODA ha presentato le versioni OMODA 4 e OMODA 5 NEXT, introducendo una combinazione di intelligenza artificiale e propulsione ibrida in due nuovi veicoli.",
+      "Le due auto includono un assistente AI per la gestione delle funzioni di bordo, la possibilità di parcheggiare a distanza, sedili dotati di sistema di massaggio e un motore full‑hybrid che unisce motore elettrico e combustione tradizionale.",
+      "Questa doppia novità è rilevante perché porta tecnologie tipicamente riservate a segmenti premium anche a una gamma più accessibile, promettendo una guida più comoda e una riduzione delle emissioni.",
+      "Rimane da approfondire come queste soluzioni si tradurranno in termini di prestazioni reali, costi di acquisto e disponibilità sul mercato, aspetti che saranno chiariti nei prossimi mesi."
+    ],
+    "fonti": [
+      {
+        "nome": "HDmotori: OMODA 4 e OMODA 5 NEXT, doppia novità a Parigi: tecnologia, IA e motori ibridi",
+        "url": "https://www.hdmotori.it/omoda-4-omoda-5-next-salone-parigi/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
+    "slug": "apple-homeview-le-app-di-streaming-arriveranno-20261015",
+    "titolo": "Apple HomeView: le app di streaming arriveranno?",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-15",
+    "sommario": "Apple ha lanciato HomeView, ma resta incerta l’integrazione di YouTube, Netflix e Disney+.",
+    "testo": [
+      "Apple ha introdotto HomeView, la nuova piattaforma per la casa intelligente, segnando un passo importante nella strategia hardware dell'azienda.",
+      "In Europa, la disponibilità è limitata a HomePod Mini 2 e Apple TV, come riportato da Il Sole 24 Ore.",
+      "Secondo HDblog, HomeView potrebbe supportare app di streaming come YouTube, Netflix e Disney+, ma l’integrazione dipenderà dagli sviluppatori.",
+      "Questo è rilevante per gli utenti perché consentirebbe di gestire i contenuti video direttamente dal hub domestico, semplificando l’esperienza di fruizione.",
+      "Rimane da capire quando gli sviluppatori porteranno queste app su HomeView e quali saranno le modalità tecniche di integrazione."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Apple HomeView: YouTube e Netflix tra le app compatibili? Dipenderà da sviluppatori",
+        "url": "https://www.hdblog.it/apple/articoli/n673807/apple-homeview-anche-youtube-netflix/"
+      },
+      {
+        "nome": "Il Sole 24 Ore: Apple lancia HomeView, ma in Europa arrivano solo HomePod Mini 2 e Apple TV",
+        "url": "https://www.ilsole24ore.com/art/apple-lancia-homeview-ma-europa-arrivano-solo-homepod-mini-2-e-apple-tv-AJsIZciB"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
+    "slug": "xbox-e-il-ritorno-alle-esclusive-i-risultati-del-sondaggio-20261015",
+    "titolo": "Xbox e il ritorno alle esclusive: i risultati del sondaggio",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-15",
+    "sommario": "Un sondaggio interno ha chiesto ai giocatori se Microsoft dovrebbe tornare a esclusive console, suscitando dibattito sul futuro del brand.",
+    "testo": [
+      "Xbox ha sottoposto ai propri utenti un questionario per valutare la possibilità di far tornare le esclusive per le proprie produzioni, secondo Spaziogames.",
+      "Il tema è rilevante perché le esclusive possono rafforzare la fedeltà al marchio e influenzare gli acquisti futuri, mentre la strategia multipiattaforma è stata criticata per aver ridotto il valore percepito di Xbox, secondo Everyeye.",
+      "Resta da capire se i risultati del sondaggio spingeranno Microsoft a modificare la sua politica, quali franchise saranno interessati e come reagiranno concorrenti e community."
+    ],
+    "fonti": [
+      {
+        "nome": "Spaziogames: XBOX, un sondaggio riapre la questione delle esclusive",
+        "url": "https://www.spaziogames.it/notizie/xbox-un-sondaggio-riapre-la-partita-delle-esclusive"
+      },
+      {
+        "nome": "Everyeye: Xbox pensa ad un clamoroso ritorno alle esclusive console? Indizi da un sondaggio di Microsoft",
+        "url": "https://www.everyeye.it/notizie/xbox-pensa-clamoroso-ritorno-esclusive-console-indizi-sondaggio-microsoft-906089.html"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
     "slug": "chatgpt-sotto-accusa-otto-denunce-per-mancata-protezione-dei-minori-20261015",
     "titolo": "ChatGPT sotto accusa: otto denunce per mancata protezione dei minori",
     "sezione": "ai",
