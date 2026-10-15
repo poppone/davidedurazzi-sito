@@ -1,5 +1,44 @@
 [
   {
+    "slug": "chatgpt-sotto-accusa-otto-denunce-per-mancata-protezione-dei-minori-20261015",
+    "titolo": "ChatGPT sotto accusa: otto denunce per mancata protezione dei minori",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-15",
+    "sommario": "Secondo Punto Informatico, otto stati degli USA hanno presentato denunce contro OpenAI, accusandola di non aver garantito adeguate protezioni per i minori.",
+    "testo": [
+      "Otto stati americani hanno sporto denuncia contro OpenAI, sostenendo che l'azienda abbia ingannato i consumatori sulla sicurezza di ChatGPT e non abbia messo in atto le necessarie barriere per i giovani utenti.",
+      "La questione è rilevante perché sempre più adolescenti e bambini usano l'IA per compiti scolastici, intrattenimento e ricerca, esponendosi a contenuti non filtrati o a risposte potenzialmente fuorvianti.",
+      "Rimane incerto se le autorità imporranno a OpenAI l'adozione di sistemi di verifica dell'età, filtri più severi o altre misure correttive, e quale sarà l'esito delle cause legali.",
+      "Il dibattito evidenzia la necessità di trasparenza da parte dei fornitori di intelligenza artificiale e di un quadro normativo più chiaro per tutelare i minori online."
+    ],
+    "fonti": [
+      {
+        "nome": "Punto Informatico: ChatGPT non è sicuro per i giovani: otto denunce negli USA",
+        "url": "https://www.punto-informatico.it/chatgpt-non-sicuro-giovani-otto-denunce-usa/"
+      }
+    ],
+    "acquisto": null,
+    "domanda": "Pensi che ChatGPT rappresenti un pericolo per i minori?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Le denunce presentate in otto stati americani accusano OpenAI di non aver implementato adeguate protezioni per i minori, evidenziando una carenza di controlli di età e filtri di contenuti per gli utenti più giovani (secondo Punto Informatico).",
+        "Il modello può fornire risposte non filtrate o inappropriate, esponendo i ragazzi a informazioni potenzialmente dannose o non adatte alla loro età, soprattutto se non sono presenti meccanismi di supervisione efficaci.",
+        "L’uso di ChatGPT comporta la raccolta e l’elaborazione di dati personali degli utenti; senza adeguate salvaguardie per i minori, vi è il rischio che informazioni sensibili vengano trattate o conservate in modo non sicuro, aumentando il pericolo di violazioni della privacy."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Le denunce sono solo accuse e non dimostrano che ChatGPT abbia effettivamente fornito contenuti pericolosi ai minori.",
+        "Non sono state segnalate prove concrete di violazioni della privacy di utenti minorenni da parte di ChatGPT.",
+        "Finora non sono state adottate misure restrittive da parte delle autorità, il che suggerisce che il pericolo percepito non sia stato confermato."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "crisi-delle-console-e-il-ruolo-del-game-pass-nel-mercato-20261012",
     "titolo": "Crisi delle console e il ruolo del Game Pass nel mercato",
     "sezione": "gaming",
