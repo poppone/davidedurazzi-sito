@@ -120,7 +120,7 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    | Cosa | Dove va |
    |---|---|
    | Short votato >= 4/5 (6e) | coda: `instagram_reel` + `facebook_video`; Metricool: TikTok |
-   | Articolo approvato (6d) | Instagram e Facebook escono già da soli con `pubblica.yml`; coda: `bluesky` (max 4 slide); Metricool: TikTok foto. **Mai su Pinterest.** |
+   | Articolo approvato (6d) | Instagram e Facebook escono già da soli con `pubblica.yml`; coda: `bluesky` (max 4 slide) + `pinterest` SOLO bacheca Notizie (1039979807642687589); Metricool: TikTok foto |
    | Pin ZampaViva approvato (6g) | coda: `pinterest` (bacheca ZampaViva) |
    Valgono le stesse regole di approvazione: in coda vanno solo i Reel coperti
    dal permesso fisso 6e (didascalia con la nota AI) e i post che Davide ha
@@ -131,13 +131,17 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
    "post": rilancio del carosello su TikTok (foto), Bluesky
-   (davidedurazzi.bsky.social, massimo 4 immagini), con le immagini
+   (davidedurazzi.bsky.social, massimo 4 immagini) e Pinterest (davide1988rm:
+   un Pin con la prima immagine e il link all'articolo sul sito, SOLO nella
+   bacheca "Notizie davidedurazzi.it", boardId 1039979807642687589), con le immagini
    prese da `https://raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/<slug>/N.jpg`
    e la didascalia del post Instagram. L'`azione` dice reti, giorno e ora
    (usa getBestTimeToPostByNetwork).
 
-   **Pinterest è solo per ZampaViva** (decisione di Davide del 15/10/2026):
-   niente articoli del sito, niente Short, niente altro sulla bacheca Notizie.
+   **Pinterest, due bacheche separate** (decisione di Davide del 15/10/2026):
+   la bacheca ZampaViva (1039979807642687593) riceve SOLO prodotti ZampaViva;
+   gli articoli del sito vanno SOLO nella bacheca Notizie (1039979807642687589)
+   per portare visite al sito. Mai mescolarle. Niente Short su Pinterest.
 
 6e. **Short di Samaritan su TikTok e Instagram: permesso fisso.** Davide ha
    dato il permesso fisso il 13/10/2026 (thread della stanza): questi rilanci
