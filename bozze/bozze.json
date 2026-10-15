@@ -2,6 +2,122 @@
   {
     "approvato": false,
     "scartare": false,
+    "slug": "chatgpt-sotto-accusa-otto-denunce-per-mancata-protezione-dei-minori-20261015",
+    "titolo": "ChatGPT sotto accusa: otto denunce per mancata protezione dei minori",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-15",
+    "sommario": "Secondo Punto Informatico, otto stati degli USA hanno presentato denunce contro OpenAI, accusandola di non aver garantito adeguate protezioni per i minori.",
+    "testo": [
+      "Otto stati americani hanno sporto denuncia contro OpenAI, sostenendo che l'azienda abbia ingannato i consumatori sulla sicurezza di ChatGPT e non abbia messo in atto le necessarie barriere per i giovani utenti.",
+      "La questione è rilevante perché sempre più adolescenti e bambini usano l'IA per compiti scolastici, intrattenimento e ricerca, esponendosi a contenuti non filtrati o a risposte potenzialmente fuorvianti.",
+      "Rimane incerto se le autorità imporranno a OpenAI l'adozione di sistemi di verifica dell'età, filtri più severi o altre misure correttive, e quale sarà l'esito delle cause legali.",
+      "Il dibattito evidenzia la necessità di trasparenza da parte dei fornitori di intelligenza artificiale e di un quadro normativo più chiaro per tutelare i minori online."
+    ],
+    "fonti": [
+      {
+        "nome": "Punto Informatico: ChatGPT non è sicuro per i giovani: otto denunce negli USA",
+        "url": "https://www.punto-informatico.it/chatgpt-non-sicuro-giovani-otto-denunce-usa/"
+      }
+    ],
+    "nota_critico": [
+      "Il paragrafo che descrive l'uso di ChatGPT da parte di adolescenti e bambini per compiti scolastici, intrattenimento e ricerca non è presente nella fonte fornita",
+      "Le affermazioni sull'incertezza delle autorità riguardo l'adozione di sistemi di verifica dell'età, filtri più severi o altre misure correttive non sono riportate nella notizia di Punto Informatico",
+      "L'enunciato che il dibattito evidenzia la necessità di trasparenza da parte dei fornitori di IA e di un quadro normativo più chiaro non è sostenuto dalla fonte"
+    ],
+    "domande_live": [
+      "Qual è la vostra esperienza personale con ChatGPT da giovani?",
+      "Ritenete sufficienti le attuali misure di sicurezza di ChatGPT per i minori?",
+      "Che tipo di protezioni dovrebbe introdurre OpenAI per garantire un uso sicuro ai più giovani?"
+    ],
+    "acquisto": null,
+    "domanda": "Pensi che ChatGPT rappresenti un pericolo per i minori?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Le denunce presentate in otto stati americani accusano OpenAI di non aver implementato adeguate protezioni per i minori, evidenziando una carenza di controlli di età e filtri di contenuti per gli utenti più giovani (secondo Punto Informatico).",
+        "Il modello può fornire risposte non filtrate o inappropriate, esponendo i ragazzi a informazioni potenzialmente dannose o non adatte alla loro età, soprattutto se non sono presenti meccanismi di supervisione efficaci.",
+        "L’uso di ChatGPT comporta la raccolta e l’elaborazione di dati personali degli utenti; senza adeguate salvaguardie per i minori, vi è il rischio che informazioni sensibili vengano trattate o conservate in modo non sicuro, aumentando il pericolo di violazioni della privacy."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Le denunce sono solo accuse e non dimostrano che ChatGPT abbia effettivamente fornito contenuti pericolosi ai minori.",
+        "Non sono state segnalate prove concrete di violazioni della privacy di utenti minorenni da parte di ChatGPT.",
+        "Finora non sono state adottate misure restrittive da parte delle autorità, il che suggerisce che il pericolo percepito non sia stato confermato."
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "xbox-e-il-ritorno-alle-esclusive-i-risultati-del-sondaggio-20261015",
+    "titolo": "Xbox e il ritorno alle esclusive: i risultati del sondaggio",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-15",
+    "sommario": "Un sondaggio interno ha chiesto ai giocatori se Microsoft dovrebbe tornare a esclusive console, suscitando dibattito sul futuro del brand.",
+    "testo": [
+      "Xbox ha sottoposto ai propri utenti un questionario per valutare la possibilità di far tornare le esclusive per le proprie produzioni, secondo Spaziogames.",
+      "Il tema è rilevante perché le esclusive possono rafforzare la fedeltà al marchio e influenzare gli acquisti futuri, mentre la strategia multipiattaforma è stata criticata per aver ridotto il valore percepito di Xbox, secondo Everyeye.",
+      "Resta da capire se i risultati del sondaggio spingeranno Microsoft a modificare la sua politica, quali franchise saranno interessati e come reagiranno concorrenti e community."
+    ],
+    "fonti": [
+      {
+        "nome": "Spaziogames: XBOX, un sondaggio riapre la questione delle esclusive",
+        "url": "https://www.spaziogames.it/notizie/xbox-un-sondaggio-riapre-la-partita-delle-esclusive"
+      },
+      {
+        "nome": "Everyeye: Xbox pensa ad un clamoroso ritorno alle esclusive console? Indizi da un sondaggio di Microsoft",
+        "url": "https://www.everyeye.it/notizie/xbox-pensa-clamoroso-ritorno-esclusive-console-indizi-sondaggio-microsoft-906089.html"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Preferite che Xbox torni a lanciare esclusive o continuare con giochi multipiattaforma?",
+      "Quale franchise vorreste vedere diventare esclusivo su Xbox?",
+      "Quanto incide la presenza di esclusive nella vostra decisione di acquistare una console Xbox?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "apple-homeview-le-app-di-streaming-arriveranno-20261015",
+    "titolo": "Apple HomeView: le app di streaming arriveranno?",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-15",
+    "sommario": "Apple ha lanciato HomeView, ma resta incerta l’integrazione di YouTube, Netflix e Disney+.",
+    "testo": [
+      "Apple ha introdotto HomeView, la nuova piattaforma per la casa intelligente, segnando un passo importante nella strategia hardware dell'azienda.",
+      "In Europa, la disponibilità è limitata a HomePod Mini 2 e Apple TV, come riportato da Il Sole 24 Ore.",
+      "Secondo HDblog, HomeView potrebbe supportare app di streaming come YouTube, Netflix e Disney+, ma l’integrazione dipenderà dagli sviluppatori.",
+      "Questo è rilevante per gli utenti perché consentirebbe di gestire i contenuti video direttamente dal hub domestico, semplificando l’esperienza di fruizione.",
+      "Rimane da capire quando gli sviluppatori porteranno queste app su HomeView e quali saranno le modalità tecniche di integrazione."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Apple HomeView: YouTube e Netflix tra le app compatibili? Dipenderà da sviluppatori",
+        "url": "https://www.hdblog.it/apple/articoli/n673807/apple-homeview-anche-youtube-netflix/"
+      },
+      {
+        "nome": "Il Sole 24 Ore: Apple lancia HomeView, ma in Europa arrivano solo HomePod Mini 2 e Apple TV",
+        "url": "https://www.ilsole24ore.com/art/apple-lancia-homeview-ma-europa-arrivano-solo-homepod-mini-2-e-apple-tv-AJsIZciB"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è la vostra app di streaming preferita che vorreste vedere su HomeView?",
+      "Pensate che Apple debba aprire le API per facilitare l’integrazione di queste app?",
+      "Quali funzionalità aggiuntive vi aspettate da HomeView per la gestione dei contenuti multimediali?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
     "slug": "omoda-4-e-omoda-5-next-ai-e-ibridi-al-salone-di-parigi-2026-20261014",
     "titolo": "OMODA 4 e OMODA 5 NEXT: AI e ibridi al Salone di Parigi 2026",
     "sezione": "motori",
