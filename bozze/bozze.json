@@ -231,7 +231,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "linus-torvalds-sperimenta-claude-code-per-velocizzare-il-kernel-linux-20261014",
     "titolo": "Linus Torvalds sperimenta Claude Code per velocizzare il kernel Linux",
