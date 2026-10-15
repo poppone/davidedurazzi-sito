@@ -500,14 +500,15 @@
       "id": "2026-10-15-3",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "regola 6e",
       "titolo": "Short 'Super Mario: la storia nascosta nei musei' su Instagram e Facebook",
       "dettagli": "Short italiano di Samaritan gaming del 14/10 (fonte StartupItalia: videogiochi in mostra al museo M9). Voti: argomenti 3 (notizia locale, titolo più forte della fonte), video 4. Sotto il 4 non esce da solo. TikTok: in attesa del limite Metricool (fino al 31/10).",
       "link": "https://www.youtube.com/shorts/QTp1UuzZvkY",
-      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI. Il file scade il 18/10."
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI. Il file scade il 18/10.",
+      "deciso": "2026-10-15T06:15:18.448Z"
     }
   ]
 }
