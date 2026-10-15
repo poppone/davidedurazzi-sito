@@ -276,7 +276,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "console-anbernic-a-rischio-l-esa-punta-il-dito-20261014",
     "titolo": "Console Anbernic a rischio: l'ESA punta il dito",
