@@ -308,6 +308,115 @@
         }
       ],
       "media": 3.0
+    },
+    {
+      "data": "2026-10-15",
+      "agente": "samaritan-gaming",
+      "lavoro": "4 Short del 14/10 (1 IT, 3 EN)",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "tema forte e attuale",
+          "voto": 4,
+          "motivo": "GTA 6 su PC, Mario Kart, cuffie Pokémon: temi del giorno"
+        },
+        {
+          "punto": "Short italiano",
+          "voto": 3,
+          "motivo": "museo M9 con Super Mario: notizia locale, titolo 'storia nascosta' più forte della fonte"
+        }
+      ],
+      "media": 3.5
+    },
+    {
+      "data": "2026-10-15",
+      "agente": "samaritan-gaming",
+      "lavoro": "uscite 14-15/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "uscite regolari",
+          "voto": 4,
+          "motivo": "4 Short in orario; la partenza notturna è il recupero e non trova niente da rifare (log 23:26)"
+        },
+        {
+          "punto": "dati di resa",
+          "voto": 2,
+          "motivo": "performance.json fermo al 9/10"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-15",
+      "agente": "samaritan-notizie",
+      "lavoro": "2 Short del 14/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "fonti",
+          "voto": 4,
+          "motivo": "ANSA e Adnkronos"
+        },
+        {
+          "punto": "rischio",
+          "voto": 3,
+          "motivo": "due temi politici: restano fuori dal permesso fisso"
+        }
+      ],
+      "media": 3.5
+    },
+    {
+      "data": "2026-10-15",
+      "agente": "redattore",
+      "lavoro": "6 bozze del 14/10",
+      "revisore": "critico",
+      "punti": [
+        {
+          "punto": "fonti",
+          "voto": 3,
+          "motivo": "3 bozze con una sola testata (ammesso per tecnologia/gaming, poco per motori)"
+        },
+        {
+          "punto": "parole proprie",
+          "voto": 3,
+          "motivo": "il Critico segnala frasi quasi identiche alla fonte nella bozza Gemini"
+        },
+        {
+          "punto": "produzione",
+          "voto": 4,
+          "motivo": "redazione ripartita: 6 bozze dopo lo zero del 13/10"
+        }
+      ],
+      "media": 3.3
+    },
+    {
+      "data": "2026-10-15",
+      "agente": "grafico",
+      "lavoro": "controllo prodotti: lavazampe, tappeto olfattivo (+ lettiera, collare)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "3+ immagini e alt in italiano",
+          "voto": 3,
+          "motivo": "4 prodotti con 6-9 foto ma alt vuoto: corretto dal Direttore"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-15",
+      "agente": "crescita-zampaviva",
+      "lavoro": "visite del 14/10",
+      "revisore": "analista",
+      "punti": [
+        {
+          "punto": "traffico misurato",
+          "voto": 3,
+          "motivo": "5 visite, 1 da TikTok, 0 da Pinterest; 3 carrelli, 1 checkout, 0 ordini"
+        }
+      ],
+      "media": 3.0
     }
   ]
 }
