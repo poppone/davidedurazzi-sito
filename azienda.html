@@ -38,6 +38,28 @@
     <div class="az-umano" id="azUmano"><div><strong>Davide Durazzi</strong><span>Fondatore e unico dipendente umano</span></div><p>Decide cosa fare, approva tutto quello che esce, ci mette la faccia.</p></div>
   </section>
 
+  <section class="blocco" id="mappa">
+    <div class="testa"><h2>La mappa</h2><p>Tocca un reparto per avvicinarti, un punto per aprire la scheda del suo lavoro. Al centro c'è quello che tutti gli agenti devono sapere.</p></div>
+    <p class="mp-conta" id="mpConta"></p>
+    <div class="mp">
+      <div>
+        <div class="mp-tela" id="mpTela">
+          <div class="mp-comandi"><button class="btn" type="button" id="mpTutta" hidden>← Tutta l'azienda</button></div>
+          <div id="mpMappa" style="height:100%"><p class="meta">Caricamento della mappa.</p></div>
+        </div>
+        <div class="mp-reparti" id="mpReparti" aria-label="Reparti"></div>
+        <ul class="mp-legenda" aria-label="Legenda">
+          <li><span class="mp-segno" style="background:#4FD39A"></span>Attivo</li>
+          <li><span class="mp-segno" style="background:var(--anti)"></span>In prova</li>
+          <li><span class="mp-segno" style="background:#5A6585"></span>Fermo</li>
+          <li><span class="mp-segno" style="border:2px dashed var(--muted)"></span>Da costruire</li>
+          <li><span class="mp-segno" style="background:var(--tesi)"></span>Reparto</li>
+        </ul>
+      </div>
+      <aside class="mp-scheda" id="mpScheda" aria-live="polite"></aside>
+    </div>
+  </section>
+
   <section class="blocco" id="squadra">
     <div class="testa"><h2>La squadra</h2><p>Ogni agente fa un lavoro solo. Nessuno pubblica niente di importante senza che io lo approvi.</p></div>
     <div id="azReparti"><p class="meta">Caricamento della squadra.</p></div>
@@ -62,6 +84,7 @@
 </div></footer>
 <script src="/config.js"></script>
 <script src="/app.js"></script>
+<script defer src="/mappa.js"></script>
 <script>
 (function () {
   var $ = function (id) { return document.getElementById(id); };

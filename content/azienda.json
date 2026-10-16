@@ -1,6 +1,6 @@
 {
   "_nota": "Pagina /azienda. Agenti: aggiungi, togli o cambia stato (attivo, in prova, fermo). Bilancio: una riga per settimana, importi in euro; null = non ancora inserito.",
-  "aggiornato": "2026-10-11",
+  "aggiornato": "2026-10-16",
   "umano": {
     "nome": "Davide Durazzi",
     "ruolo": "Fondatore e unico dipendente umano",
@@ -66,14 +66,26 @@
         {
           "nome": "Samaritan · Notizie",
           "ruolo": "Il telegiornale in 60 secondi sul canale Notizie in 60 secondi",
-          "stato": "attivo",
-          "turno": "2 Short al giorno"
+          "stato": "fermo",
+          "turno": "In pausa fino al 1° novembre"
         },
         {
           "nome": "Samaritan · Animali",
           "ruolo": "Video per TikTok che portano al negozio ZampaViva",
           "stato": "in prova",
           "turno": "In avvio"
+        },
+        {
+          "nome": "Clip dalle live",
+          "ruolo": "Trova i momenti migliori delle mie dirette Twitch, li taglia in verticale con i sottotitoli e li passa al Direttore",
+          "stato": "in prova",
+          "turno": "Dopo ogni diretta"
+        },
+        {
+          "nome": "Videomaker",
+          "ruolo": "Monta i video lunghi per YouTube e ne ricava gli Short",
+          "stato": "in prova",
+          "turno": "Su richiesta"
         }
       ]
     },
@@ -108,6 +120,18 @@
           "ruolo": "Legge le domande dei clienti del negozio e prepara le risposte con i dati veri dell'ordine: le approvo io",
           "stato": "attivo",
           "turno": "Ogni sera alle 18:52"
+        },
+        {
+          "nome": "Vendite",
+          "ruolo": "Ogni giorno propone una mossa per portare entrate: negozio, affiliazioni o sponsor",
+          "stato": "attivo",
+          "turno": "Ogni giorno"
+        },
+        {
+          "nome": "Crescita ZampaViva",
+          "ruolo": "Pubblica i Pin dei prodotti su Pinterest e sceglie il prodotto del giorno da raccontare in video",
+          "stato": "in prova",
+          "turno": "Ogni giorno"
         }
       ]
     },
@@ -119,6 +143,12 @@
           "ruolo": "Ogni lunedì raccoglie i numeri di canali, sito e negozio e dice cosa spingere e cosa spegnere",
           "stato": "attivo",
           "turno": "Lunedì alle 3:55, prima che mi svegli"
+        },
+        {
+          "nome": "Rinnovo token",
+          "ruolo": "Rinnova da solo l'accesso a Instagram prima che scada, così le pubblicazioni non si fermano",
+          "stato": "attivo",
+          "turno": "Il 1 e il 15 del mese"
         }
       ]
     }
