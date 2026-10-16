@@ -197,8 +197,9 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    name, updated).
    Vocale del mattino (solo alle 7:52, quando il workflow "Vocale di Finch"
    esiste su main di samaritan_v2): lo stesso contenuto della reply, scritto
-   per essere ascoltato (frasi brevi, niente link né sigle), massimo 900
-   caratteri, mandato con `gh api -X POST repos/poppone/samaritan_v2/actions/workflows/vocale-finch.yml/dispatches -f ref=main -f inputs[testo]=...`.
+   per essere ascoltato (frasi brevi, niente link né sigle), massimo 600
+   caratteri (voce ElevenLabs "Davide", scelta da Davide il 16/10; il credito
+   ElevenLabs è condiviso con i video di Samaritan), mandato con `gh api -X POST repos/poppone/samaritan_v2/actions/workflows/vocale-finch.yml/dispatches -f ref=main -f inputs[testo]=...`.
 
 6p. **Budget di Finch: 5 € a settimana** (deciso da Davide il 16/10/2026).
    È il tetto per le piccole spese che proponi: pubblicità di prova, un
