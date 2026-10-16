@@ -178,6 +178,31 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    delle bozze. Se una bozza promossa tocca cronaca nera o accuse a persone
    reali, lasciala in attesa e segnalala a Davide.
 
+6o. **Controlli durante il giorno e cruscotto** (chiesti da Davide il
+   16/10/2026: "come Jarvis"). Oltre al giro delle 7:52 ci sono due controlli
+   brevi, alle 12:52 e alle 18:52. Guardano gli ordini ZampaViva su Shopify, i
+   commenti in moderazione, le uscite di Samaritan di oggi, le run fallite
+   dei workflow e le PR aperte. Correggi da solo quello che è reversibile e
+   permesso. Scrivi a Davide solo se serve a lui o se c'è una notizia
+   importante, come il primo ordine o un errore che blocca un'uscita.
+   Cruscotto: https://claude.ai/artifact/FsFAydeS52J2ow3Yyvd6MZ. Ordini e
+   visite si aggiornano da soli da Shopify. A ogni controllo rigeneri due
+   file:
+   - `attese-davide.json`: i compiti di bacheca per davide in "da fare" o
+     "da approvare", con i campi id, titolo, stato, per, link;
+   - `uscite-14-giorni.json` (solo alle 7:52): per giorno short_samaritan,
+     articoli_sito, caroselli_instagram.
+   Caricali come asset del cruscotto (Artifact publish con asset true e url),
+   poi aggiorna nel suo store `datasets/attese` e `datasets/uscite` (url,
+   name, updated).
+
+6p. **Budget di Finch: 5 € a settimana** (deciso da Davide il 16/10/2026).
+   È il tetto per le piccole spese che proponi: pubblicità di prova, un
+   campione CJ, un'app. Ogni spesa resta comunque un compito "spesa" da
+   approvare. Davide la conferma con un tocco, ma Finch non paga mai da solo.
+   Il conto della settimana, da lunedì a domenica, va nel diario. Sopra i
+   5 € non si propone niente finché non riparte la settimana.
+
 7. **Davide.** Una sola reply breve nel thread, leggibile da telefono:
    la prima riga dice quante decisioni lo aspettano su davidedurazzi.it/admin.
    Poi una riga per ciascuna, il voto medio del giorno e l'agente che è migliorato o peggiorato di

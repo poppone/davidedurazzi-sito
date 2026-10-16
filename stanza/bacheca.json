@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-15T06:20:00Z",
+  "aggiornato": "2026-10-16T04:40:00Z",
   "stati": [
     "da fare",
     "in corso",
@@ -510,6 +510,17 @@
       "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI. Il file scade il 18/10.",
       "deciso": "2026-10-15T06:15:18.448Z",
       "esito": "15/10: messi in coda social il Reel Instagram e il video Facebook (social/coda.json); il workflow 'Coda social' li pubblica."
+    },
+    {
+      "id": "2026-10-16-1",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da fare",
+      "volte": 1,
+      "origine": "dropshipping",
+      "titolo": "Chiedere a CJ certificato CE e alimentazione di tosatrice e distributore",
+      "dettagli": "Tosatrice CJJJCWGY00795 (varianti A-H, ricarica USB) e distributore CJJJCWGY03426: CJ non indica la marcatura CE né, per il distributore, come si alimenta. Restano in bozza finché non arrivano i documenti.",
+      "link": "https://cjdropshipping.com"
     }
   ]
 }
