@@ -1,0 +1,237 @@
+{
+  "_nota": "Dati della mappa viva in /azienda. Reparti, agenti e stati arrivano da azienda.json; qui ci sono le schede (cosa sostituisce, autonomia, posto nella catena, voto medio del Direttore), il cervello e i lavori ancora da costruire. Autonomia: 'guidato' = lo faccio io con l'aiuto dell'agente; 'assistito' = l'agente prepara, io approvo; 'autonomo' = l'agente fa da solo e il Direttore controlla dopo. I voti sono le medie di stanza/qualita.json (scala 1-5): li aggiorna il Direttore.",
+  "aggiornato": "2026-10-16",
+  "voti_dal": "2026-10-13",
+  "cervello": {
+    "nome": "Il cervello",
+    "cosa": "Tutto quello che gli agenti devono sapere per lavorare come lavorerei io: chi sono, come parlo, cosa vendo, quali regole non si toccano. Oggi è sparso in più posti; l'obiettivo è un posto solo da cui leggono tutti.",
+    "stato": "in costruzione",
+    "fonti": [
+      {
+        "nome": "Chi sono e come parlo",
+        "stato": "sparso",
+        "dove": "Configurazione del sito e istruzioni dei singoli agenti"
+      },
+      {
+        "nome": "Le regole dell'azienda",
+        "stato": "pronto",
+        "dove": "Le regole del Direttore: approvo io ogni uscita, niente numeri inventati, gli agenti si dichiarano AI"
+      },
+      {
+        "nome": "I numeri dei canali",
+        "stato": "pronto",
+        "dove": "Media kit, aggiornato dal sito"
+      },
+      {
+        "nome": "Prodotti e politiche di ZampaViva",
+        "stato": "sparso",
+        "dove": "Shopify e le politiche del negozio"
+      },
+      {
+        "nome": "Offerte e link affiliati",
+        "stato": "pronto",
+        "dove": "Pagina Consigli"
+      },
+      {
+        "nome": "Sponsor e contatti",
+        "stato": "sparso",
+        "dove": "Email"
+      }
+    ]
+  },
+  "direttore": {
+    "nome": "Finch, il Direttore",
+    "cosa": "Ogni mattina alle 7:52 legge cosa ha fatto ogni agente, lo fa votare dai revisori, apre le correzioni e mi porta le decisioni in un posto solo. Mi manda anche un vocale con il riassunto.",
+    "sostituisce": "Un responsabile che controlla il lavoro di tutti e fa da filtro prima che arrivi a me",
+    "autonomia": "assistito",
+    "revisori": [
+      "Revisore argomenti",
+      "Revisore testi",
+      "Revisore video",
+      "Revisore trailer"
+    ]
+  },
+  "schede": {
+    "Scout": {
+      "sostituisce": "Chi passa la mattina a leggere le testate per trovare i temi del giorno",
+      "autonomia": "autonomo",
+      "catena": 1
+    },
+    "Fact-checker": {
+      "sostituisce": "La verifica delle fonti prima di scrivere",
+      "autonomia": "autonomo",
+      "catena": 2
+    },
+    "Redattore": {
+      "sostituisce": "Un redattore che scrive tre bozze al giorno",
+      "autonomia": "assistito",
+      "catena": 3,
+      "voto": "redattore"
+    },
+    "Critico": {
+      "sostituisce": "Il caporedattore che rilegge e rimanda indietro",
+      "autonomia": "autonomo",
+      "catena": 4
+    },
+    "Il Contraddittorio": {
+      "sostituisce": "La preparazione della diretta: domanda e argomenti dei due lati",
+      "autonomia": "assistito",
+      "catena": 5
+    },
+    "Redazione AI commenti": {
+      "sostituisce": "Le risposte alle domande pratiche dei lettori",
+      "autonomia": "autonomo",
+      "catena": 6,
+      "nota": "Risponde solo alle domande pratiche e si firma sempre come AI; il resto lo scrivo io"
+    },
+    "Grafico": {
+      "sostituisce": "Un grafico per caroselli, copertine e immagini prodotto",
+      "autonomia": "assistito",
+      "catena": 7,
+      "voto": "grafico"
+    },
+    "Samaritan · Gaming": {
+      "sostituisce": "Un video editor e uno speaker per quattro Short al giorno",
+      "autonomia": "autonomo",
+      "catena": 1,
+      "voto": "samaritan-gaming"
+    },
+    "Samaritan · Notizie": {
+      "sostituisce": "Un piccolo telegiornale in 60 secondi",
+      "autonomia": "autonomo",
+      "catena": 2,
+      "voto": "samaritan-notizie"
+    },
+    "Samaritan · Animali": {
+      "sostituisce": "Chi gira e monta i video dei prodotti per TikTok",
+      "autonomia": "assistito",
+      "catena": 3
+    },
+    "Clip dalle live": {
+      "sostituisce": "Chi riguarda ore di diretta per tagliare i momenti migliori",
+      "autonomia": "assistito",
+      "catena": 4,
+      "nota": "Le prime due settimane ogni clip la approvo io, poi esce da sola se i revisori danno almeno 4"
+    },
+    "Videomaker": {
+      "sostituisce": "Un montatore per i video lunghi di YouTube",
+      "autonomia": "guidato",
+      "catena": 5,
+      "voto": "videomaker"
+    },
+    "Social": {
+      "sostituisce": "Un social media manager per Instagram, Facebook e LinkedIn",
+      "autonomia": "assistito",
+      "catena": 1,
+      "voto": "social"
+    },
+    "Procacciatore sponsor": {
+      "sostituisce": "Chi cerca i brand e scrive la prima proposta",
+      "autonomia": "assistito",
+      "catena": 1,
+      "voto": "procacciatore-sponsor",
+      "nota": "Le email le invio io, solo se mi convincono"
+    },
+    "Affiliazioni": {
+      "sostituisce": "L'inserimento dei link affiliati negli articoli",
+      "autonomia": "autonomo",
+      "catena": 2
+    },
+    "Vendite": {
+      "sostituisce": "Chi ogni giorno si chiede: oggi da dove entrano soldi?",
+      "autonomia": "assistito",
+      "catena": 3
+    },
+    "Assistenza ZampaViva": {
+      "sostituisce": "Il servizio clienti del negozio",
+      "autonomia": "assistito",
+      "catena": 4,
+      "nota": "Prepara le risposte con i dati veri dell'ordine; le invio io"
+    },
+    "Crescita ZampaViva": {
+      "sostituisce": "Chi promuove i prodotti su Pinterest ogni giorno",
+      "autonomia": "assistito",
+      "catena": 5,
+      "voto": "crescita-zampaviva"
+    },
+    "Analista": {
+      "sostituisce": "Il resoconto del lunedì: cosa spingere e cosa spegnere",
+      "autonomia": "autonomo",
+      "catena": 1,
+      "voto": "analista"
+    },
+    "Rinnovo token": {
+      "sostituisce": "Ricordarsi di rinnovare l'accesso a Instagram ogni due mesi",
+      "autonomia": "autonomo",
+      "catena": 2
+    }
+  },
+  "da_costruire": [
+    {
+      "reparto": "Commerciale",
+      "nome": "Trattative",
+      "cosa": "Segue lo sponsor dopo la prima email: risposte, controproposte, scadenze",
+      "sostituisce": "Chi tiene viva una trattativa senza farla cadere",
+      "ordine": 2
+    },
+    {
+      "reparto": "Amministrazione",
+      "nome": "Guardiano delle chiavi",
+      "cosa": "Controlla ogni giorno che chiavi, token e minuti di GitHub non siano scaduti o finiti, prima che qualcosa si fermi",
+      "sostituisce": "Il tecnico che se ne accorge prima che si rompa",
+      "ordine": 1
+    },
+    {
+      "reparto": "Clienti e community",
+      "nome": "Messaggi privati",
+      "cosa": "Legge i DM di Instagram e TikTok, risponde alle domande pratiche dichiarandosi AI e mi passa il resto",
+      "sostituisce": "Chi risponde ai messaggi privati",
+      "ordine": 3
+    },
+    {
+      "reparto": "Clienti e community",
+      "nome": "Chat delle dirette",
+      "cosa": "Durante le dirette risponde alle domande ripetute e mi segnala quelle da leggere in onda",
+      "sostituisce": "Un moderatore della chat Twitch",
+      "ordine": 4
+    }
+  ],
+  "voti": {
+    "analista": {
+      "media": 1.0,
+      "controlli": 1
+    },
+    "crescita-zampaviva": {
+      "media": 3.1,
+      "controlli": 3
+    },
+    "grafico": {
+      "media": 2.7,
+      "controlli": 3
+    },
+    "procacciatore-sponsor": {
+      "media": 4.0,
+      "controlli": 1
+    },
+    "redattore": {
+      "media": 2.9,
+      "controlli": 3
+    },
+    "samaritan-gaming": {
+      "media": 2.9,
+      "controlli": 9
+    },
+    "samaritan-notizie": {
+      "media": 2.5,
+      "controlli": 5
+    },
+    "social": {
+      "media": 5.0,
+      "controlli": 1
+    },
+    "videomaker": {
+      "media": 4.0,
+      "controlli": 1
+    }
+  }
+}
