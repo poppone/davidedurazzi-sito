@@ -526,14 +526,15 @@
       "id": "2026-10-16-2",
       "per": "social",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming",
       "titolo": "Rilanciare lo Short \"GTA 6: il mese più pazzo di novembre\" su Instagram e Facebook",
       "dettagli": "Short italiano del 15/10. Argomenti 4/5 (fonte Everyeye), video 3/5: l'attacco dice \"il lancio è qui\" ma GTA 6 esce a novembre, e senza dati di visione non arriva a 4. Il file scade il 19/10. TikTok resta fermo fino al 31/10 (limite Metricool).",
       "link": "https://youtube.com/shorts/Y5iRMBL4Mb0",
-      "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia"
+      "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia",
+      "deciso": "2026-10-16T15:41:41.461Z"
     },
     {
       "id": "2026-10-16-3",
