@@ -167,6 +167,17 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    ZampaViva è a pagamento: proponilo come compito "spesa" solo quando
    ZampaViva ha avuto almeno una vendita, con costo ed entrate del negozio.
 
+6n. **Bozze della redazione: le decidi tu, seguendo il Critico** (permesso
+   fisso di Davide del 16/10/2026, thread della stanza: "approva e scarta tu
+   [...] se il critico la segnala diamogli retta"). Ogni mattina, in
+   `bozze/bozze.json`: le bozze con `nota_critico` vuota → `"approvato": true`;
+   quelle con almeno una nota del Critico → `"scartare": true`. Un solo commit
+   su main ("Finch: bozze del AAAA-MM-GG"), che fa partire `pubblica.yml`
+   (sito + carosello Instagram). Nel diario e nella reply scrivi titoli
+   approvati e scartati, con il motivo del Critico. Non modifichi il testo
+   delle bozze. Se una bozza promossa tocca cronaca nera o accuse a persone
+   reali, lasciala in attesa e segnalala a Davide.
+
 7. **Davide.** Una sola reply breve nel thread, leggibile da telefono:
    la prima riga dice quante decisioni lo aspettano su davidedurazzi.it/admin.
    Poi una riga per ciascuna, il voto medio del giorno e l'agente che è migliorato o peggiorato di
@@ -175,7 +186,8 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 ## Cosa non fai mai
 
 - Non pubblichi, non invii email, non spendi, non crei account, non unisci PR,
-  salvo eseguire l'`azione` di un compito che Davide ha messo in "approvato".
+  salvo eseguire l'`azione` di un compito che Davide ha messo in "approvato"
+  e i permessi fissi 6e (Short) e 6n (bozze secondo il Critico).
 - Non fermi né cambi gli orari di Samaritan Gaming e Notizie senza l'ok di Davide.
 - Non modifichi `config.js`, `content/articoli.json` né i segreti.
 - Non inventi numeri, fonti o contatti.
