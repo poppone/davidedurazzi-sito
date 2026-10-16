@@ -556,6 +556,19 @@
       "titolo": "Aggiungere foto a coprisedile auto e zaino trasportino",
       "dettagli": "Prodotti attivi dal 16/10 con 1 sola foto ciascuno (minimo 3). Prendere le immagini CJ del prodotto e caricarle con il testo alternativo in italiano. Modifica reversibile del negozio: la fa Finch.",
       "link": "https://admin.shopify.com/store/zampaviva-5/products/16108684247384"
+    },
+    {
+      "id": "2026-10-16-5",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da fare",
+      "tipo": "spesa",
+      "volte": 1,
+      "origine": "github",
+      "titolo": "Sbloccare GitHub Actions: pagamento o limite di spesa",
+      "dettagli": "Alle 12:58 la Ricerca CJ su samaritan-animali non è partita: GitHub dice che un pagamento recente è fallito o il limite di spesa va alzato. Riguarda i repo privati (samaritan_v2, samaritan-animali, samaritan-notizie): se resta così, le prossime uscite di Samaritan e i video ZampaViva non partono. Il sito, che è pubblico, funziona.",
+      "link": "https://github.com/settings/billing",
+      "azione": "nessuna: lo fa Davide dalle impostazioni GitHub"
     }
   ]
 }
