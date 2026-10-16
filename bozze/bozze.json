@@ -1,1 +1,112 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "mercedes-e-nvidia-guida-autonoma-di-livello-4-dal-2027-20261016",
+    "titolo": "Mercedes e NVIDIA: guida autonoma di livello 4 dal 2027",
+    "sezione": "motori",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-16",
+    "sommario": "Secondo InsideEVs Italia, la partnership tra Mercedes e NVIDIA porterà nuove funzioni hands-free e la Robo-Limousine di livello 4 a partire dal 2027.",
+    "testo": [
+      "Secondo quanto riportato da InsideEVs Italia, Mercedes-Benz e NVIDIA stanno accelerando lo sviluppo della guida autonoma con novità attese a partire dal 2027. La collaborazione punta a evolvere le attuali funzioni hands-free verso sistemi più avanzati.",
+      "La testata specifica che tra le novità principali figura la 'Robo-Limousine', un veicolo progettato per operare al livello 4 di autonomia. Questo significa che il sistema sarà in grado di gestire la guida in scenari specifici senza l'intervento del conducente.",
+      "Le informazioni disponibili si limitano a questi aspetti tecnici e temporali. Non sono stati forniti dettagli aggiuntivi su costi, requisiti normativi o specifiche tecniche non citate nella fonte originale."
+    ],
+    "fonti": [
+      {
+        "nome": "InsideEVs Italia: Mercedes e NVIDIA accelerano sulla guida autonoma: ecco le novità in arrivo a partire dal 2027",
+        "url": "https://insideevs.it/news/812177/mercedes-nvidia-guida-autonoma-ia/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Avete mai provato funzioni di guida assistita hands-free? Com'è stata l'esperienza?",
+      "Cosa pensate della Robo-Limousine di livello 4: la usereste per spostamenti urbani?",
+      "Secondo voi, il 2027 è una data realistica per l'arrivo di questi veicoli sul mercato?"
+    ],
+    "acquisto": null,
+    "domanda": "Credi che l'introduzione di veicoli a guida autonoma di livello 4 a partire dal 2027 migliorerà la sicurezza stradale per tutti?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo le previsioni, le auto di livello 4, come la Robo‑Limousine di Mercedes prevista per il 2027, potrebbero ridurre molti errori umani, che sono la principale causa di incidenti, grazie a sistemi di guida totalmente autonomi basati su intelligenza artificiale avanzata.",
+        "La collaborazione con NVIDIA dovrebbe fornire potenza di calcolo e algoritmi di percezione in tempo reale, migliorando il riconoscimento di ostacoli, pedoni e condizioni stradali complesse rispetto a un conducente umano.",
+        "Le funzioni hands‑free e le assistenze evolute, già testate su modelli precedenti, hanno mostrato una diminuzione degli incidenti in contesti urbani; estendere queste capacità al livello 4 potrebbe garantire risposte più rapide e coerenti, aumentando la sicurezza per tutti gli utenti della strada."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "La notizia indica che la prima offerta è una Robo‑Limousine di livello 4, destinata a una fascia di mercato molto ristretta; quindi la maggior parte dei veicoli in circolazione resterà a guida tradizionale, mantenendo il rischio di incidenti in un traffico misto.",
+        "I sistemi di livello 4 operano in condizioni ben definite e controllate; l’interazione con conducenti umani, che possono comportarsi in modo imprevedibile, può generare situazioni pericolose finché non sarà garantita una piena coesistenza tra veicoli autonomi e non autonomi.",
+        "L’impiego di hardware avanzato e intelligenza artificiale, come quello sviluppato da NVIDIA, introduce nuove vulnerabilità informatiche; eventuali errori software o attacchi hacker nelle prime fasi di diffusione potrebbero compromettere la sicurezza stradale."
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "modern-warfare-4-su-game-pass-il-piano-di-activision-per-il-2027-20261016",
+    "titolo": "Modern Warfare 4 su Game Pass: il piano di Activision per il 2027",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-16",
+    "sommario": "Secondo Spaziogames, il nuovo capitolo di Call of Duty potrebbe essere gratuito per gli abbonati Xbox Game Pass durante le festività del 2027.",
+    "testo": [
+      "Stando a quanto riportato da Spaziogames, Activision ha inserito una comunicazione ufficiale che indica una finestra temporale specifica per il debutto di Modern Warfare 4. Il titolo è previsto per arrivare tra i giochi inclusi nell'abbonamento Xbox Game Pass durante il periodo natalizio del 2027.",
+      "Questa mossa è significativa per i giocatori che utilizzano il servizio di Microsoft, poiché garantirebbe l'accesso gratuito a uno dei titoli di sparatutto più attesi dell'anno senza costi aggiuntivi. Per chi non possiede una console o un PC compatibile, questo rappresenta un'opportunità per provare il nuovo capitolo della saga senza l'acquisto del singolo.",
+      "Resta da capire se questa disponibilità sarà esclusiva per gli abbonati Game Pass o se ci saranno altre modalità di accesso. Inoltre, non è ancora chiaro se il gioco sarà disponibile in esclusiva temporanea o se seguirà un modello ibrido, come accaduto con altri titoli recenti della serie."
+    ],
+    "fonti": [
+      {
+        "nome": "Spaziogames: Modern Warfare 4 arriverà su Game Pass al lancio?",
+        "url": "https://www.spaziogames.it/notizie/modern-warfare-4-su-game-pass-lattesa-sara-lunga"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Giocate a Modern Warfare 4 su Game Pass o preferite acquistare il gioco?",
+      "Cosa vi aspettate dal nuovo capitolo della saga Call of Duty?",
+      "Credete che questa strategia di Activision aumenterà gli abbonamenti a Game Pass?"
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Modern Warfare 4"
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "chatgpt-si-integra-con-chrome-legge-le-schede-e-compila-moduli-20261016",
+    "titolo": "ChatGPT si integra con Chrome: legge le schede e compila moduli",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-16",
+    "sommario": "L'AI di OpenAI può ora accedere alle schede aperte in Chrome e usare le informazioni per compilare moduli, secondo le notizie di HDblog e Punto Informatico.",
+    "testo": [
+      "Secondo le fonti di HDblog e Punto Informatico, ChatGPT è stato integrato in Chrome con la capacità di leggere le schede aperte nel browser, confrontare i dati presenti e svolgere operazioni come la compilazione di moduli.",
+      "La nuova funzionalità permette all'intelligenza artificiale di estrarre contenuti dalle pagine attive e di impiegarli per rispondere a richieste dell'utente, senza dover copiare manualmente le informazioni.",
+      "Questo sviluppo è rilevante perché consente agli utenti di sfruttare le informazioni già disponibili nel browser per automatizzare l'inserimento di dati, semplificando alcune attività online.",
+      "Rimane ancora da capire quali siano i limiti tecnici dell'accesso alle schede, le eventuali restrizioni imposte da Chrome e le modalità di gestione dei diversi tipi di moduli.",
+      "OpenAI potrebbe in futuro estendere l'integrazione ad altri browser o approfondire le capacità di interazione con il contenuto web, ma per il momento la funzionalità è limitata a Chrome."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: ChatGPT si integra con Chrome: legge le schede e compila moduli",
+        "url": "https://www.hdblog.it/tecnologia/articoli/n673914/chatgpt-chrome-schede-aperte-nuove-funzioni/"
+      },
+      {
+        "nome": "Punto Informatico: ChatGPT può leggere tutte le schede aperte in Chrome",
+        "url": "https://www.punto-informatico.it/chatgpt-puo-leggere-tutte-schede-aperte-chrome/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Quali utilizzi immaginate per ChatGPT che legge le vostre schede aperte?",
+      "Ritenete utile l'automazione della compilazione dei moduli tramite l'AI?",
+      "Quali limitazioni vi aspettate da questa integrazione con Chrome?"
+    ],
+    "acquisto": null
+  }
+]
