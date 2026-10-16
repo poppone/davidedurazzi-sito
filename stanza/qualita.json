@@ -417,6 +417,62 @@
         }
       ],
       "media": 3.0
+    },
+    {
+      "data": "2026-10-16",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it Y5iRMBL4Mb0 del 15/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 4,
+          "motivo": "GTA 6 a novembre, fonte Everyeye"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-16",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it Y5iRMBL4Mb0 del 15/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "attacco e accuratezza",
+          "voto": 3,
+          "motivo": "\"il lancio è qui\" è impreciso, nessun dato di visione (vidIQ senza crediti)"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-16",
+      "agente": "crescita-zampaviva",
+      "lavoro": "visite del 15/10",
+      "revisore": "analista",
+      "punti": [
+        {
+          "punto": "traffico misurato",
+          "voto": 2,
+          "motivo": "14 visite tutte dirette, 0 carrelli, 0 ordini"
+        }
+      ],
+      "media": 2.0
+    },
+    {
+      "data": "2026-10-16",
+      "agente": "grafico",
+      "lavoro": "controllo coprisedile e zaino",
+      "revisore": "critico",
+      "punti": [
+        {
+          "punto": "almeno 3 foto con alt in italiano",
+          "voto": 2,
+          "motivo": "1 foto ciascuno, alt in italiano"
+        }
+      ],
+      "media": 2.0
     }
   ]
 }

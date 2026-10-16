@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-16T04:40:00Z",
+  "aggiornato": "2026-10-16",
   "stati": [
     "da fare",
     "in corso",
@@ -521,6 +521,41 @@
       "titolo": "Chiedere a CJ certificato CE e alimentazione di tosatrice e distributore",
       "dettagli": "Tosatrice CJJJCWGY00795 (varianti A-H, ricarica USB) e distributore CJJJCWGY03426: CJ non indica la marcatura CE né, per il distributore, come si alimenta. Restano in bozza finché non arrivano i documenti.",
       "link": "https://cjdropshipping.com"
+    },
+    {
+      "id": "2026-10-16-2",
+      "per": "social",
+      "da": "revisore-video",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-gaming",
+      "titolo": "Rilanciare lo Short \"GTA 6: il mese più pazzo di novembre\" su Instagram e Facebook",
+      "dettagli": "Short italiano del 15/10. Argomenti 4/5 (fonte Everyeye), video 3/5: l'attacco dice \"il lancio è qui\" ma GTA 6 esce a novembre, e senza dati di visione non arriva a 4. Il file scade il 19/10. TikTok resta fermo fino al 31/10 (limite Metricool).",
+      "link": "https://youtube.com/shorts/Y5iRMBL4Mb0",
+      "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia"
+    },
+    {
+      "id": "2026-10-16-3",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da fare",
+      "volte": 1,
+      "origine": "clip-live",
+      "titolo": "Rinnovare la chiave Groq nel .env del taglio clip sul PC",
+      "dettagli": "Nel taglio della live del 13/10 Groq risponde 401 \"Invalid API Key\" per tutte e 5 le clip, quindi titoli e descrizioni non vengono scritti. Crea una chiave nuova su console.groq.com/keys e incollala in GROQ_API_KEY nel file .env della cartella taglia_live. Facoltativo: TwitchDownloaderCLI (percorso in TWITCHDOWNLOADER=) per usare anche la chat.",
+      "link": "https://console.groq.com/keys"
+    },
+    {
+      "id": "2026-10-16-4",
+      "per": "grafico",
+      "da": "direttore",
+      "stato": "da fare",
+      "volte": 1,
+      "origine": "grafico",
+      "titolo": "Aggiungere foto a coprisedile auto e zaino trasportino",
+      "dettagli": "Prodotti attivi dal 16/10 con 1 sola foto ciascuno (minimo 3). Prendere le immagini CJ del prodotto e caricarle con il testo alternativo in italiano. Modifica reversibile del negozio: la fa Finch.",
+      "link": "https://admin.shopify.com/store/zampaviva-5/products/16108684247384"
     }
   ]
 }
