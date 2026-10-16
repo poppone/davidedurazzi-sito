@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "mercedes-e-nvidia-guida-autonoma-di-livello-4-dal-2027-20261016",
     "titolo": "Mercedes e NVIDIA: guida autonoma di livello 4 dal 2027",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "modern-warfare-4-su-game-pass-il-piano-di-activision-per-il-2027-20261016",
     "titolo": "Modern Warfare 4 su Game Pass: il piano di Activision per il 2027",
@@ -76,7 +76,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "chatgpt-si-integra-con-chrome-legge-le-schede-e-compila-moduli-20261016",
     "titolo": "ChatGPT si integra con Chrome: legge le schede e compila moduli",
