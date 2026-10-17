@@ -1,5 +1,52 @@
 [
   {
+    "slug": "claude-risolve-in-30-minuti-un-mistero-crittografico-della-nsa-di-25-a-20261017",
+    "titolo": "Claude risolve in 30 minuti un mistero crittografico della NSA di 25 anni",
+    "sezione": "ai",
+    "rubrica": "",
+    "data": "2026-10-17",
+    "sommario": "Secondo Tom's Hardware, un modello interno di Anthropic ha chiuso in meno di mezz'ora una questione crittografica rimasta aperta da circa venticinque anni, relativa all'origine dei semi usati per generare le curve.",
+    "testo": [
+      "Un modello di ricerca interno di Anthropic, denominato Claude, ha concluso in circa trenta minuti una problematica aperta da circa venticinque anni nella crittografia, secondo quanto riportato da Tom's Hardware. La questione riguardava l'origine dei semi impiegati per generare le curve crittografiche utilizzate in vari standard.",
+      "La scoperta fornisce alla comunità di sicurezza una risposta a un punto oscuro della storia della crittografia, contribuendo a una migliore comprensione dei parametri su cui si basano gli algoritmi di protezione dei dati. Questo tipo di informazione è utile per ricercatori e sviluppatori che lavorano su protocolli crittografici.",
+      "Rimane ancora da approfondire il motivo per cui la NSA ha scelto quei specifici semi e quali eventuali implicazioni possa avere sulla robustezza delle curve stesse. Ulteriori analisi saranno necessarie per valutare se altre parti dei parametri crittografici nascondano similari misteri non ancora risolti."
+    ],
+    "fonti": [
+      {
+        "nome": "Tom's Hardware: Claude risolve in 30 minuti un mistero della NSA rimasto irrisolto per 25 anni",
+        "url": "https://www.tomshw.it/altro/claude-risolve-in-30-minuti-un-mistero-della-nsa-rimasto-irrisolto-per-25-anni"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
+    "slug": "nvidia-rtx-spark-i-laptop-con-ai-locale-sbarcano-in-italia-20261017",
+    "titolo": "NVIDIA RTX Spark: i laptop con AI locale sbarcano in Italia",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-17",
+    "sommario": "Secondo TuttoTech, i nuovi notebook con AI integrata partono da 2.999 euro, disponibili su ASUS, Dell, HP, Lenovo, Microsoft e MSI.",
+    "testo": [
+      "Secondo TuttoTech, NVIDIA ha lanciato in Italia la piattaforma RTX Spark, che arriva sui laptop di sei grandi marchi, offrendo intelligenza artificiale locale e la grafica RTX.",
+      "I dispositivi partono da 2.999 euro e includono fino a 128 GB di memoria unificata, una combinazione pensata per gestire carichi di lavoro AI senza ricorrere al cloud.",
+      "Per gli utenti, questa novità significa prestazioni più rapide in applicazioni di editing, gaming e sviluppo software, con minore latenza e maggiore privacy dei dati.",
+      "Rimane però da capire come si tradurrà l’esperienza quotidiana: la durata della batteria, il supporto software e la reale differenza rispetto ai laptop tradizionali sono ancora incerti.",
+      "Inoltre, la disponibilità dei modelli specifici e le eventuali varianti di prezzo per configurazioni più potenti saranno monitorate nei prossimi mesi."
+    ],
+    "fonti": [
+      {
+        "nome": "TuttoTech: NVIDIA RTX Spark arriva in Italia: i nuovi laptop con AI locale partono da 2.999 euro",
+        "url": "https://www.tuttotech.net/news/2026/10/16/nvidia-rtx-spark-laptop-disponibili-italia-prezzi.html"
+      }
+    ],
+    "acquisto": {
+      "tipo": "prodotto",
+      "nome": "NVIDIA RTX Spark laptop"
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "chatgpt-si-integra-con-chrome-legge-le-schede-e-compila-moduli-20261016",
     "titolo": "ChatGPT si integra con Chrome: legge le schede e compila moduli",
     "sezione": "tecnologia",
