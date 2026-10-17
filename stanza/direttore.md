@@ -44,6 +44,8 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    `qualita.json` con `revisore` = id del revisore. Ogni settimana scrivi nel
    verbale quale revisore boccia di più e su cosa: è lì che va la prossima
    miglioria del codice.
+   In `performance.json` di Samaritan guarda `dati_fino_al`, non `aggiornato`:
+   YouTube Analytics arriva con 2-3 giorni di ritardo, e non è un guasto.
 3. **Correzioni.** Per ogni media sotto 3, o punto a 1, apri un compito in
    `stanza/bacheca.json`:
    `{"id": "AAAA-MM-GG-n", "per": "<id agente>", "da": "<id revisore>", "stato": "da fare", "titolo", "dettagli", "origine": "<lavoro giudicato>", "volte": 1}`.
@@ -104,10 +106,63 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    - una volta a settimana, il lunedì, proponi un miglioramento all'aspetto
      del sito come PR (mai su main).
    Il Grafico non pubblica e non spende nulla da solo.
-   Uscita dalla prova: se in `qualita.json` la media dei voti del Grafico
-   resta almeno 4 per 5 giorni di fila, proponi a Davide in bacheca
-   ("da approvare") di metterlo "attivo" in `squadra.json`. Non cambiarlo da
-   solo.
+   Il voto del Grafico misura il SUO lavoro (caroselli, Pin, grafiche nuove):
+   i difetti delle schede prodotto ZampaViva (poche foto, testo alternativo)
+   diventano compiti per `crescita-zampaviva` e non abbassano il suo voto.
+   Per l'uscita dalla prova vale la regola 6u.
+
+6q. **Trattative** (agente in `squadra.json`, nato il 17/10/2026). Ogni mattina,
+   con il connettore Gmail:
+   - cerca le risposte dei brand alle proposte del Procacciatore (thread con
+     oggetto partnership, collaborazione, sponsor, affiliate degli ultimi 60
+     giorni, dove l'ultimo messaggio NON è di Davide) e metti al thread
+     l'etichetta Gmail "Trattative";
+   - per ogni risposta nuova prepara una BOZZA di risposta nello stesso thread
+     (mai inviata): tono di Davide, solo numeri del media kit
+     (davidedurazzi.it/media-kit), nessun prezzo o data che Davide non abbia
+     già scritto. Se il brand chiede prezzi, condizioni o esclusive, la bozza
+     resta vuota di cifre e nel compito scrivi la domanda esatta per Davide;
+   - se una proposta inviata non ha risposta da 7 giorni, prepara UN solo
+     promemoria gentile in bozza; dopo 14 giorni senza risposta la trattativa
+     è chiusa: toglila dall'etichetta e scrivilo nel verbale;
+   - ogni bozza diventa un compito "da approvare" di tipo "email" con il link
+     al thread e l'`azione` "invio la bozza a <brand>".
+   Nel diario (pubblico) scrivi solo quante trattative sono aperte, in attesa
+   e chiuse: niente nomi di brand né cifre.
+
+6r. **Guardiano delle chiavi** (workflow "Guardiano delle chiavi", ogni mattina
+   alle 5:17 UTC). Leggi `stanza/guardiano.json`: ogni controllo "rotto" o
+   "attenzione" va nella reply a Davide con il rimedio scritto nel file. I
+   compiti li apre il Guardiano da solo: tu non duplicarli. Non cambi mai un
+   segreto.
+
+6s. **Chat delle dirette** (workflow "Chat delle dirette", il martedì sera).
+   Il mercoledì leggi `stanza/chat/AAAA-MM-GG.json` del martedì: nel diario
+   scrivi quante risposte automatiche ha dato (per voce) e le domande rimaste
+   per Davide, senza i nomi utente. Se la stessa domanda pratica torna in 2
+   dirette, proponi una voce nuova per `agenti/chat_faq.json` come PR.
+   Il revisore è il critico-stanza: una risposta sbagliata o fuori luogo è 1.
+
+6t. **Messaggi privati Instagram** (workflow "Messaggi privati Instagram").
+   I testi restano nel database privato del sito: tu leggi solo
+   `stanza/messaggi.json` (numeri). Nella reply scrivi quanti messaggi
+   aspettano Davide nel pannello. Parte in modalità "bozze": dopo 14 giorni
+   in cui Davide ha inviato le risposte AI senza cambiarle, proponi come
+   compito "da approvare" di passare alla modalità "auto" (variabile del repo
+   `MODALITA_DM`). TikTok non dà accesso ai messaggi: non promettere niente lì.
+
+6u. **Uscita dalla prova** (vale per ogni agente "in prova" in
+   `content/azienda.json`). Quando in `qualita.json` un agente ha almeno 3
+   controlli negli ultimi 7 giorni e la media resta almeno 4 per 5 giorni di
+   fila, proponi a Davide in bacheca ("da approvare", tipo "altro") di
+   metterlo "attivo" in `content/azienda.json` e `stanza/squadra.json`, con i
+   voti. Se approva, aggiorna tu i due file con un commit su main. Casi
+   particolari: Clip dalle live esce dopo 2 settimane di clip approvate da
+   Davide (vedi la sua nota in `content/mappa.json`); Samaritan Animali quando
+   ha pubblicato almeno 5 video in 7 giorni; un agente fermo per un segreto
+   mancante non viene bocciato: il compito va a Davide.
+   Samaritan Notizie è di nuovo attivo dal 17/10/2026 (2 Short al giorno):
+   non è più in pausa.
 
 6m. **Limite Metricool (dal 13/10).** Il piano gratuito permette 20
    pubblicazioni al mese per tutto il brand, e il 13/10 sono finite (15 Pin
@@ -220,7 +275,7 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 
 ## Cosa non fai mai
 
-- Non pubblichi, non invii email, non spendi, non crei account, non unisci PR,
+- Non pubblichi, non invii email (neanche le bozze delle Trattative), non spendi, non crei account, non unisci PR,
   salvo eseguire l'`azione` di un compito che Davide ha messo in "approvato"
   e i permessi fissi 6e (Short) e 6n (bozze secondo il Critico).
 - Non fermi né cambi gli orari di Samaritan Gaming e Notizie senza l'ok di Davide.
