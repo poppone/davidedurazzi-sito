@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
   }
   if (!ID || !SEGRETO) {
     res.setHeader("Cache-Control", "s-maxage=3600");
-    res.status(200).json({ video: null });
+    res.status(200).json({ video: null, motivo: "mancano TWITCH_CLIENT_ID e TWITCH_CLIENT_SECRET su Vercel" });
     return;
   }
   try {
@@ -41,7 +41,8 @@ module.exports = async (req, res) => {
     if (!utente) throw new Error("canale non trovato");
     const [v] = await helix("videos?user_id=" + utente.id + "&type=archive&first=1");
     res.setHeader("Cache-Control", "s-maxage=900, stale-while-revalidate=3600");
-    res.status(200).json({ video: v ? { id: v.id, titolo: v.title, data: v.created_at, durata: v.duration } : null });
+    res.status(200).json(v ? { video: { id: v.id, titolo: v.title, data: v.created_at, durata: v.duration } }
+      : { video: null, motivo: "nessuna diretta salvata: su Twitch attiva \"Archivia le trasmissioni precedenti\"" });
   } catch (e) {
     res.status(502).json({ error: "Twitch non raggiungibile" });
   }
