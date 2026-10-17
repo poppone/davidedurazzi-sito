@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-16",
+  "aggiornato": "2026-10-17",
   "stati": [
     "da fare",
     "in corso",
@@ -534,7 +534,8 @@
       "dettagli": "Short italiano del 15/10. Argomenti 4/5 (fonte Everyeye), video 3/5: l'attacco dice \"il lancio è qui\" ma GTA 6 esce a novembre, e senza dati di visione non arriva a 4. Il file scade il 19/10. TikTok resta fermo fino al 31/10 (limite Metricool).",
       "link": "https://youtube.com/shorts/Y5iRMBL4Mb0",
       "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia",
-      "deciso": "2026-10-16T15:41:41.461Z"
+      "deciso": "2026-10-16T15:41:41.461Z",
+      "nota": "17/10: approvato sul pannello, ma per mettere in coda serve anche un tuo \"sì\" in chat nella stanza. Il file scade il 19/10."
     },
     {
       "id": "2026-10-16-3",
@@ -551,25 +552,40 @@
       "id": "2026-10-16-4",
       "per": "grafico",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "fatto",
       "volte": 1,
       "origine": "grafico",
       "titolo": "Aggiungere foto a coprisedile auto e zaino trasportino",
       "dettagli": "Prodotti attivi dal 16/10 con 1 sola foto ciascuno (minimo 3). Prendere le immagini CJ del prodotto e caricarle con il testo alternativo in italiano. Modifica reversibile del negozio: la fa Finch.",
-      "link": "https://admin.shopify.com/store/zampaviva-5/products/16108684247384"
+      "link": "https://admin.shopify.com/store/zampaviva-5/products/16108684247384",
+      "esito": "17/10: aggiunte 4 foto CJ a coprisedile e zaino (ora 5 ciascuno), alt neutri. Ricerca foto in PR #6 di samaritan-animali, da unire."
     },
     {
       "id": "2026-10-16-5",
       "per": "davide",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "fatto",
       "tipo": "spesa",
       "volte": 1,
       "origine": "github",
       "titolo": "Sbloccare GitHub Actions: pagamento o limite di spesa",
       "dettagli": "Alle 12:58 la Ricerca CJ su samaritan-animali non è partita: GitHub dice che un pagamento recente è fallito o il limite di spesa va alzato. Riguarda i repo privati (samaritan_v2, samaritan-animali, samaritan-notizie): se resta così, le prossime uscite di Samaritan e i video ZampaViva non partono. Il sito, che è pubblico, funziona.",
       "link": "https://github.com/settings/billing",
-      "azione": "nessuna: lo fa Davide dalle impostazioni GitHub"
+      "azione": "nessuna: lo fa Davide dalle impostazioni GitHub",
+      "esito": "Dalle 07:06 del 17/10 le run sui repo privati ripartono (Ricerca CJ e Samaritan riuscite)."
+    },
+    {
+      "id": "2026-10-17-1",
+      "per": "social",
+      "da": "revisore-video",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-gaming",
+      "titolo": "Rilanciare lo Short \"GTA 6: il trailer riaccende il dibattito grafico\" su Instagram e Facebook",
+      "dettagli": "Short italiano del 17/10 (fonte SpazioGames). Argomenti 4/5, video 3/5: non verificabile (video e vidIQ non raggiungibili), quindi niente rilancio automatico. TikTok fermo fino al 31/10.",
+      "link": "https://youtube.com/shorts/dHlm4DuesZs",
+      "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia"
     }
   ]
 }

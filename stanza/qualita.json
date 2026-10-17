@@ -473,6 +473,90 @@
         }
       ],
       "media": 2.0
+    },
+    {
+      "data": "2026-10-17",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it dHlm4DuesZs del 17/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 4,
+          "motivo": "GTA 6 e grafica del trailer, fonte SpazioGames"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-17",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it dHlm4DuesZs del 17/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "attacco e accuratezza",
+          "voto": 3,
+          "motivo": "non verificabile: video e vidIQ non raggiungibili"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-17",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it _KnBZGCDFRs del 16/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 3,
+          "motivo": "offerta Instant Gaming, più promozione che notizia"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-17",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it kjSxYkGYahM del 17/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 2,
+          "motivo": "evento locale, titolo \"glitch\" fuorviante"
+        }
+      ],
+      "media": 2.0
+    },
+    {
+      "data": "2026-10-17",
+      "agente": "crescita-zampaviva",
+      "lavoro": "visite del 16/10",
+      "revisore": "analista",
+      "punti": [
+        {
+          "punto": "traffico misurato",
+          "voto": 2,
+          "motivo": "4 visite tutte dirette, 0 carrelli, 0 ordini"
+        }
+      ],
+      "media": 2.0
+    },
+    {
+      "data": "2026-10-17",
+      "agente": "grafico",
+      "lavoro": "foto coprisedile e zaino",
+      "revisore": "critico",
+      "punti": [
+        {
+          "punto": "almeno 3 foto con alt in italiano",
+          "voto": 4,
+          "motivo": "5 foto ciascuno, alt generici perché non ho potuto vedere le immagini"
+        }
+      ],
+      "media": 4.0
     }
   ]
 }
