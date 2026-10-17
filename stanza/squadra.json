@@ -293,6 +293,34 @@
         "Non riempie la chat (al massimo un messaggio ogni 20 secondi)",
         "Le domande vere arrivano a Davide"
       ]
+    },
+    {
+      "id": "aurora",
+      "nome": "Aurora Riva",
+      "reparto": "Aurora Riva",
+      "dove": "Foto generate in locale sul PC di Davide (SDXL + LoRA, che restano sul PC); coda social/aurora.json e workflow aurora.yml nel repo del sito; regola 6v di direttore.md. Nata il 17/10/2026, in prova",
+      "produce": "Post Instagram della modella IA Aurora Riva (foto JPG in aurora/ + didascalia), dichiarati IA, con la rubrica \"Il conto\" sui capi veri",
+      "come_leggerlo": "social/aurora.json (stato, voti, esito) e le immagini in aurora/; `python agenti/aurora.py controlla` elenca cosa manca a ogni post",
+      "pubblica_da_solo": false,
+      "revisori": [
+        "grafico",
+        "critico-stanza"
+      ],
+      "voto": "Due voti: il Grafico vota la foto, il Critico la didascalia. Conta il più basso dei due.",
+      "checklist_foto": [
+        "Aurora è coerente con la sua scheda: volto, caschetto mosso con frangia, neo sopra il labbro, anello sul pollice sinistro",
+        "Nessun difetto tipico dell'IA: mani, dita, occhi, testo storpiato, pelle di plastica",
+        "Nessun logo o capo riconoscibile di brand che non ha firmato un accordo",
+        "Sensuale sì, esplicita no: niente nudo né pose esplicite",
+        "Il capo sponsorizzato è identico alle foto prodotto del brand"
+      ],
+      "checklist_caption": [
+        "Nel \"Il conto\" i prezzi sono controllati (prezzi_verificati) e c'è la riga \"Look ricreato con IA, capi reali.\" vicino ai prezzi",
+        "Il link affiliato porta al capo giusto, non a uno che gli somiglia",
+        "Post sponsorizzato: #adv in testa",
+        "Tono di Aurora: ironica, sicura, frasi brevi, massimo due emoji, una domanda finale",
+        "Nessuna promessa o prezzo che Davide non abbia deciso"
+      ]
     }
   ],
   "note_revisori": {

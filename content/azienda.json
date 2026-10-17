@@ -180,6 +180,17 @@
           "turno": "Il martedì in diretta"
         }
       ]
+    },
+    {
+      "nome": "Aurora Riva",
+      "agenti": [
+        {
+          "nome": "Aurora Riva",
+          "ruolo": "Modella IA su Instagram, creata da me: look low cost a Roma con il conto di ogni capo, sempre dichiarata IA",
+          "stato": "in prova",
+          "turno": "Post dal 2 novembre: lunedì, mercoledì e venerdì"
+        }
+      ]
     }
   ],
   "prodotti": [

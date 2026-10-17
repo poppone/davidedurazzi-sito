@@ -164,6 +164,49 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    Samaritan Notizie è di nuovo attivo dal 17/10/2026 (2 Short al giorno):
    non è più in pausa.
 
+6v. **Aurora Riva** (agente "in prova" dal 17/10/2026; regole decise da Finch
+   e approvate da Davide il 17/10). Modella IA su Instagram, collegata
+   pubblicamente a Davide: bio "Modella IA · creata da Davide Durazzi" (la
+   imposta Davide dall'app). I suoi post NON passano da Metricool: stanno in
+   `social/aurora.json` (formato in `agenti/aurora.py`) e li pubblica il
+   workflow "Aurora Riva" all'ora di `quando`, sempre con l'etichetta "Info IA".
+   Le immagini finali (solo JPG) stanno in `aurora/`; LoRA, prompt e scarti
+   restano sul PC di Davide. Ogni mattina:
+   - leggi l'uscita di `python agenti/aurora.py controlla`: per ogni post in
+     "bozza" senza problemi fai votare il Grafico sulla foto
+     (`checklist_foto` in `squadra.json`, guardando le immagini in `aurora/`)
+     e il Critico sulla didascalia (`checklist_caption`). Due righe in
+     `qualita.json` (agente "aurora", revisori "grafico" e "critico-stanza")
+     e nel post `"voti": {"foto": n, "caption": n}`. Conta il più basso;
+   - più basso almeno 4: metti il post in "da approvare" e apri un compito
+     "da approvare" di tipo "post" con il link alle immagini e l'`azione`
+     "aggiungo davide e finch ad approvato_da e metto il post in approvato".
+     Sotto 4: compito "da fare" per `aurora` con la correzione esatta;
+   - fino al 15/11/2026 (`doppia_approvazione_fino_al`) un post esce solo con
+     l'ok di Davide e il tuo: lo script lo controlla. Dopo approvi tu da solo,
+     aggiungendo "finch" ad `approvato_da` e mettendo il post in "approvato";
+   - "Il conto": la foto è generata, i capi sono veri. Metti
+     `prezzi_verificati: true` solo dopo aver controllato ogni prezzo sul sito
+     del venditore; il link affiliato deve portare al capo esatto, non a uno
+     simile. La riga "Look ricreato con IA, capi reali." la aggiunge lo script;
+   - niente loghi né capi riconoscibili di brand che non hanno firmato un
+     accordo; sensuale sì, esplicita no;
+   - nel verbale: post in coda, approvati e pubblicati (con `post_id` o
+     l'errore), voti del giorno.
+   **Prova:** parte subito sulle bozze. Servono 5 giorni con almeno un post
+   completo al giorno (foto e didascalia) messo in coda come bozza; poi vale
+   la regola 6u (media almeno 4 per 5 giorni). Un giorno senza immagini perché
+   Davide non le ha generate non boccia Aurora: il compito va a Davide.
+   **Messaggi:** l'agente smista e basta, non risponde mai e non chatta mai
+   "come Aurora". Leggi `stanza/messaggi-aurora.json` (solo numeri) e nella
+   reply scrivi quanti sono "da bloccare" (sfondo sessuale o profili che
+   sembrano minorenni: Davide li blocca e li segnala dall'app) e quante
+   collaborazioni aspettano.
+   **Sponsor:** Trattative (6q) segue anche gli sponsor di Aurora. Tu approvi
+   bozze e scalette, ma ogni accordo con soldi, prezzi o contratti lo firma
+   Davide. Il Procacciatore cerca il primo sponsor di Aurora solo dopo che la
+   prova è superata e ci sono almeno 6 post pubblicati. Le spese restano a zero.
+
 6m. **Limite Metricool (dal 13/10).** Il piano gratuito permette 20
    pubblicazioni al mese per tutto il brand, e il 13/10 sono finite (15 Pin
    ZampaViva programmati in un giorno le hanno consumate). Fino al 31/10 NON

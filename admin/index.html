@@ -72,7 +72,8 @@
     var contenuti = api({ azione: "contenuti" }).catch(function (e) { return { errore: e.message }; });
     var stanza = api({ azione: "stanza" }).catch(function (e) { return { errore: e.message }; });
     var dm = api({ azione: "dm" }).catch(function (e) { return { errore: e.message }; });
-    api({ azione: "elenco" }).then(function (j) { return Promise.all([contenuti, stanza, dm]).then(function (r) { disegna(j, r[0], r[1], r[2]); }); }).catch(function (e) {
+    var dma = api({ azione: "dm_aurora" }).catch(function (e) { return { errore: e.message }; });
+    api({ azione: "elenco" }).then(function (j) { return Promise.all([contenuti, stanza, dm, dma]).then(function (r) { disegna(j, r[0], r[1], r[2], r[3]); }); }).catch(function (e) {
       if (/Password/.test(e.message)) { sessionStorage.removeItem("pw"); login("Password errata."); }
       else app.innerHTML = '<p class="vuoto">' + esc(e.message) + '</p>';
     });
@@ -111,6 +112,19 @@
     }).join("") : '<p class="vuoto">Nessun messaggio in attesa.</p>');
   }
 
+  function sezDmAurora(d) {
+    // Nessuna risposta da qui: l'agente di Aurora smista e basta (regola di Finch)
+    if (!d || d.errore || !d.messaggi.length) return "";
+    var h = '<h2>Messaggi di Aurora Riva (' + d.messaggi.length + ')</h2><p class="vuoto">Da qui non si risponde: rispondi tu dall\u2019app, se serve.</p>';
+    return h + d.messaggi.map(function (m) {
+      var blocca = m.stato === "da bloccare";
+      var tipo = blocca ? "da bloccare e segnalare dall\u2019app" : (m.tipo === "collaborazione" ? "collaborazione" : "da leggere tu");
+      return '<div class="card" data-dma="' + esc(m.id) + '"><div class="chi">@' + esc(m.utente || "?") + '</div><div class="dove">' + data(m.quando) + ' \u00b7 ' + tipo + '</div>' +
+        (blocca ? '<p class="vuoto">Contenuto nascosto: l\u2019agente l\u2019ha segnalato.</p>' : '<p>' + esc(m.testo) + '</p>') +
+        '<div class="acts"><button class="btn" data-az="visto_dm_aurora" type="button">' + (blocca ? "Bloccato e segnalato" : "Visto") + '</button></div><div class="esito"></div></div>';
+    }).join("");
+  }
+
   function sezContenuti(c) {
     if (!c || c.errore) return '<h2>Articoli e bozze</h2><p class="vuoto">' + esc((c && c.errore) || "Non disponibili") + '</p>';
     var h = '<h2>Bozze da approvare (' + c.bozze.length + ')</h2>';
@@ -132,8 +146,8 @@
     return h;
   }
 
-  function disegna(j, cont, stz, dm) {
-    var h = sezStanza(stz) + sezDm(dm) + '<h2>Visite al sito</h2><div id="visite"><p class="vuoto">Caricamento.</p></div>' + sezContenuti(cont) + '<h1 style="margin-top:3rem;font-size:1.5rem">Commenti</h1><h2>Da approvare (' + j.attesa.length + ')</h2>';
+  function disegna(j, cont, stz, dm, dma) {
+    var h = sezStanza(stz) + sezDm(dm) + sezDmAurora(dma) + '<h2>Visite al sito</h2><div id="visite"><p class="vuoto">Caricamento.</p></div>' + sezContenuti(cont) + '<h1 style="margin-top:3rem;font-size:1.5rem">Commenti</h1><h2>Da approvare (' + j.attesa.length + ')</h2>';
     h += j.attesa.length ? j.attesa.map(function (c) {
       return '<div class="card" data-id="' + esc(c.id) + '"><div class="chi">' + esc(c.nome) + '</div><div class="dove">' + data(c.data) + ', ' + link(c) + '</div>' +
         '<p>' + esc(c.testo) + '</p>' +
@@ -188,7 +202,7 @@
 
   app.addEventListener("click", function (e) {
     var b = e.target.closest("button[data-az]"); if (!b) return;
-    var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id || card.dataset.compito || card.dataset.dm };
+    var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id || card.dataset.compito || card.dataset.dm || card.dataset.dma };
     if (card.dataset.slug) {
       corpo.slug = card.dataset.slug;
       var conf = { togli_articolo: "Togliere l\u2019articolo dal sito?", scarta_bozza_articolo: "Scartare la bozza?", approva_bozza: "Approvare? Va online sul sito e su Instagram." }[az];

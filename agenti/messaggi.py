@@ -18,11 +18,19 @@ database privato del sito (Upstash Redis, chiavi dd:dm:*), che il pannello
 
 TikTok non dà accesso ai messaggi privati con le API pubbliche: lì niente agente.
 
+Account di Aurora Riva (MESSAGGI_ACCOUNT=aurora, segreto IG_AURORA_TOKEN), regole di
+Finch del 17/10/2026: l'agente smista e basta, non risponde MAI e non chatta mai
+"come Aurora". Collaborazioni e il resto vanno a Davide; i messaggi a sfondo
+sessuale o da profili che sembrano minorenni diventano "da bloccare": Davide li
+blocca e li segnala dall'app (le API non permettono di bloccare). Chiavi
+separate (dd:dma:*), così dal pannello non può partire nessuna risposta.
+
 Segreti: IG_ACCESS_TOKEN (con il permesso instagram_business_manage_messages),
 UPSTASH_REDIS_REST_URL e UPSTASH_REDIS_REST_TOKEN (gli stessi di Vercel),
 una chiave AI (GROQ_API_KEY, GITHUB_TOKEN o GEMINI_API_KEY).
 """
 import json
+import re
 import os
 import sys
 from datetime import datetime, timedelta, timezone
@@ -36,7 +44,12 @@ import llm  # noqa: E402
 RADICE = Path(__file__).resolve().parent.parent
 CONTEGGI = RADICE / "stanza" / "messaggi.json"
 API = "https://graph.instagram.com/" + os.environ.get("IG_API_VERSION", "v25.0")
-TOKEN = os.environ.get("IG_ACCESS_TOKEN", "")
+ACCOUNT = os.environ.get("MESSAGGI_ACCOUNT", "davide")
+AURORA = ACCOUNT == "aurora"
+TOKEN = os.environ.get("IG_AURORA_TOKEN" if AURORA else "IG_ACCESS_TOKEN", "")
+P = "dma:" if AURORA else "dm:"  # prefisso delle chiavi nel database privato
+if AURORA:
+    CONTEGGI = RADICE / "stanza" / "messaggi-aurora.json"
 DB_URL = os.environ.get("UPSTASH_REDIS_REST_URL") or os.environ.get("KV_REST_API_URL", "")
 DB_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN") or os.environ.get("KV_REST_API_TOKEN", "")
 MODALITA = os.environ.get("MODALITA_DM", "bozze")
@@ -54,6 +67,20 @@ gaming; ha anche il negozio per animali ZampaViva). Rispondi SOLO in JSON:
   cosa che deve leggere lui. "risposta" vuota.
 - "ignora": spam, truffe, insulti, messaggi senza contenuto. "risposta" vuota.
 Non fingerti mai Davide, non promettere niente a suo nome, non chiedere dati personali."""
+
+SISTEMA_AURORA = """Smisti i messaggi privati Instagram di Aurora Riva, modella virtuale dichiaratamente IA
+creata da Davide Durazzi (moda e look low cost a Roma). NON rispondi mai: classifichi e basta.
+Rispondi SOLO in JSON: {"tipo": "collaborazione" | "segnala" | "personale" | "ignora"}
+- "segnala": contenuto sessuale, richieste intime o di foto private, molestie, oppure il mittente
+  sembra minorenne (dice un'età sotto i 18 anni, parla di scuola media o superiore, linguaggio da ragazzino).
+  Nel dubbio su questi punti, "segnala".
+- "collaborazione": brand, negozi, agenzie, proposte di lavoro o sponsor.
+- "personale": domande sui look e sui capi, complimenti, critiche, tutto il resto che Davide può leggere.
+- "ignora": spam, truffe, link sospetti, messaggi senza contenuto."""
+
+# Rete di sicurezza se l'AI sbaglia o non risponde: questi messaggi vanno sempre segnalati
+SEGNALA = re.compile(r"\b(nud[aeio]|sesso|sex|porno|onlyfans|hot|piccant[ei]|intim[aeio]|ho (1[0-7]|[5-9]) anni|"
+                     r"(prima|seconda|terza) media|scuola media)\b", re.IGNORECASE)
 
 INFORMAZIONI = """Diretta: martedì alle 21:30 su twitch.tv/davidedurazzi.
 Sito con articoli e fonti: davidedurazzi.it. YouTube: youtube.com/@davidedurazzioff. TikTok: @davidedurazzi.
@@ -74,12 +101,12 @@ def db(*comandi):
 
 
 def leggi(mid: str) -> dict | None:
-    v = db(["GET", "dm:" + mid])[0]
+    v = db(["GET", P + mid])[0]
     return json.loads(v) if v else None
 
 
 def salva(m: dict) -> None:
-    db(["SET", "dm:" + m["id"], json.dumps(m, ensure_ascii=False), "EX", str(60 * 86400)])
+    db(["SET", P + m["id"], json.dumps(m, ensure_ascii=False), "EX", str(60 * 86400)])
 
 
 # ---------- Instagram ----------
@@ -102,9 +129,9 @@ def quando(s: str) -> datetime:
 
 
 def invia_approvati(conta: dict) -> None:
-    for mid in db(["LRANGE", "dm:approvati", "0", "-1"])[0] or []:
+    for mid in db(["LRANGE", P + "approvati", "0", "-1"])[0] or []:
         m = leggi(mid)
-        db(["LREM", "dm:approvati", "0", mid])
+        db(["LREM", P + "approvati", "0", mid])
         if not m or m.get("stato") != "approvato":
             continue
         if datetime.now(timezone.utc) - quando(m["quando"]) > FINESTRA:
@@ -119,6 +146,18 @@ def invia_approvati(conta: dict) -> None:
         salva(m)
 
 
+def smista_aurora(testo: str, utente: str) -> str:
+    """Account di Aurora: solo una categoria, mai una risposta."""
+    if SEGNALA.search(testo):
+        return "segnala"
+    try:
+        tipo = llm.chiedi(SISTEMA_AURORA, f"MESSAGGIO DI @{utente}:\n{testo[:1500]}", 0.1).get("tipo")
+    except RuntimeError as e:
+        print(f"AI non disponibile, lo passo a Davide: {e}")
+        return "personale"
+    return tipo if tipo in ("collaborazione", "segnala", "personale", "ignora") else "personale"
+
+
 def raccogli(conta: dict) -> None:
     io = ig("me", fields="user_id,username")
     mio_id = str(io.get("user_id") or io.get("id"))
@@ -130,10 +169,21 @@ def raccogli(conta: dict) -> None:
             mittente = msg.get("from") or {}
             if str(mittente.get("id")) == mio_id or not msg.get("message"):
                 continue
-            if quando(msg["created_time"]) < limite or db(["SISMEMBER", "dm:visti", msg["id"]])[0]:
+            if quando(msg["created_time"]) < limite or db(["SISMEMBER", P + "visti", msg["id"]])[0]:
                 continue
-            db(["SADD", "dm:visti", msg["id"]])
+            db(["SADD", P + "visti", msg["id"]])
             conta["nuovi"] += 1
+            if AURORA:
+                tipo = smista_aurora(msg["message"], mittente.get("username", "?"))
+                m = {"id": msg["id"], "igsid": str(mittente.get("id")), "utente": mittente.get("username", ""),
+                     "testo": msg["message"][:2000], "quando": msg["created_time"], "tipo": tipo, "bozza": "",
+                     "account": "aurora",
+                     "stato": {"segnala": "da bloccare", "ignora": "ignorato"}.get(tipo, "per Davide")}
+                conta[tipo] += 1
+                salva(m)
+                if m["stato"] != "ignorato":
+                    db(["LPUSH", P + "coda", m["id"]])
+                continue
             try:
                 esito = llm.chiedi(SISTEMA, f"INFORMAZIONI:\n{INFORMAZIONI}\n\nMESSAGGIO DI @{mittente.get('username', '?')}:\n{msg['message'][:1500]}", 0.2)
             except RuntimeError as e:
@@ -156,24 +206,27 @@ def raccogli(conta: dict) -> None:
                     m["stato"], m["errore"] = "da approvare", str(e)
             salva(m)
             if m["stato"] in ("da approvare", "per Davide"):
-                db(["LPUSH", "dm:coda", m["id"]])
+                db(["LPUSH", P + "coda", m["id"]])
 
 
 def main() -> None:
     if not TOKEN:
-        raise SystemExit("Manca IG_ACCESS_TOKEN.")
+        raise SystemExit("Manca " + ("IG_AURORA_TOKEN." if AURORA else "IG_ACCESS_TOKEN."))
     conta = {"nuovi": 0, "pratica": 0, "personale": 0, "ignora": 0, "inviati": 0}
-    invia_approvati(conta)
+    if AURORA:
+        conta = {"nuovi": 0, "collaborazione": 0, "personale": 0, "segnala": 0, "ignora": 0}
+    else:
+        invia_approvati(conta)
     raccogli(conta)
     oggi = datetime.now(timezone.utc).date().isoformat()
-    db(*[["HINCRBY", "dm:giorno:" + oggi, k, str(v)] for k, v in conta.items()], ["EXPIRE", "dm:giorno:" + oggi, str(40 * 86400)])
-    in_attesa = len(db(["LRANGE", "dm:coda", "0", "-1"])[0] or [])
+    db(*[["HINCRBY", P + "giorno:" + oggi, k, str(v)] for k, v in conta.items()], ["EXPIRE", P + "giorno:" + oggi, str(40 * 86400)])
+    in_attesa = len(db(["LRANGE", P + "coda", "0", "-1"])[0] or [])
     # Nel repo (pubblico) solo i numeri, una volta al giorno: meno commit, niente testi
     if os.environ.get("SCRIVI_CONTEGGI") == "1":
         giorni = {}
         for n in range(14):
             d = (datetime.now(timezone.utc).date() - timedelta(days=n)).isoformat()
-            v = db(["HGETALL", "dm:giorno:" + d])[0] or []
+            v = db(["HGETALL", P + "giorno:" + d])[0] or []
             if v:
                 giorni[d] = {v[k]: int(v[k + 1]) for k in range(0, len(v), 2)}
         CONTEGGI.write_text(json.dumps({"modalita": MODALITA, "in_attesa_nel_pannello": in_attesa, "giorni": dict(sorted(giorni.items()))},

@@ -59,6 +59,9 @@ def controlla_chiavi() -> None:
     chiave("IG_ACCESS_TOKEN", "Token Instagram",
            lambda v: requests.get("https://graph.instagram.com/me", params={"fields": "user_id", "access_token": v}, timeout=T),
            "Rigenera il token dal pannello Meta (Instagram API with Instagram Login) e aggiorna il segreto IG_ACCESS_TOKEN nel repo del sito.")
+    chiave("IG_AURORA_TOKEN", "Token Instagram di Aurora",
+           lambda v: requests.get("https://graph.instagram.com/me", params={"fields": "user_id", "access_token": v}, timeout=T),
+           "Rigenera il token dell'account di Aurora dal pannello Meta (Instagram API with Instagram Login) e aggiorna il segreto IG_AURORA_TOKEN nel repo del sito.")
     chiave("FB_PAGE_TOKEN", "Token pagina Facebook",
            lambda v: requests.get("https://graph.facebook.com/me", params={"access_token": v}, timeout=T),
            "Rigenera il token della pagina e aggiorna il segreto FB_PAGE_TOKEN nel repo del sito.")

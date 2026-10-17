@@ -28,6 +28,7 @@ Rispondi sempre in italiano. Davide preferisce risposte dirette e pratiche.
 - `.github/workflows/guardiano.yml` — ogni mattina `agenti/guardiano.py`: controlla chiavi, token (scadenza GH_PAT), workflow dei repo e sito; scrive `stanza/guardiano.json` e apre compiti per Davide.
 - `.github/workflows/chat-dirette.yml` — il martedì sera `agenti/chat_dirette.py`: bot nella chat Twitch (segreti `TWITCH_BOT_NOME`, `TWITCH_BOT_TOKEN`), risposte solo da `agenti/chat_faq.json`, sempre dichiarate AI; domande per Davide nel dock OBS `overlay/domande.html` e in `stanza/chat/`.
 - `.github/workflows/messaggi.yml` — ogni 30 minuti `agenti/messaggi.py`: DM Instagram smistati con l'AI; testi SOLO in Upstash (chiavi `dd:dm:*`, il repo è pubblico), decisioni nel pannello /admin; modalità `bozze` o `auto` (variabile `MODALITA_DM`).
+- `.github/workflows/aurora.yml` — ogni ora di giorno `agenti/aurora.py`: pubblica sull'account Instagram di Aurora Riva (modella IA, segreto `IG_AURORA_TOKEN`) i post "approvati" di `social/aurora.json` all'ora di `quando` (ora italiana), con etichetta IA (`is_ai_generated`). Immagini finali in `aurora/` (solo JPG). I DM di Aurora li smista `messaggi.py` con `MESSAGGI_ACCOUNT=aurora` (chiavi `dd:dma:*`, mai risposte). Regole in `stanza/direttore.md` 6v.
 - `.vercelignore` esclude agenti, bozze, social, .github.
 
 ## Regole
