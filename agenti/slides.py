@@ -1,4 +1,5 @@
 """Disegna le slide del carosello Instagram (1080x1350) con i colori e i font del sito."""
+import json
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -15,12 +16,40 @@ def _logo(lato: int):
         _logo_cache[lato] = Image.open(LOGO).convert("RGBA").resize((lato, lato), Image.LANCZOS) if LOGO.exists() else None
     return _logo_cache[lato]
 
-INK = (16, 22, 43)
-BG = (238, 241, 245)
-MUTED = (88, 96, 121)
-TESI = (47, 85, 228)
-ANTI = (232, 90, 22)
-LIVE = (229, 38, 59)
+# I colori vengono dal design system (design/tokens.json, regole in
+# design/SISTEMA.md): se cambia lì, cambiano anche i caroselli.
+TOKENS = Path(__file__).resolve().parent.parent / "design" / "tokens.json"
+
+
+def _rgb(esadecimale: str) -> tuple[int, int, int]:
+    h = esadecimale.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def _palette() -> dict:
+    base = {"inchiostro": "#10162B", "carta": "#F2F4F9", "nebbia": "#4A5573",
+            "tesi": "#2F55E4", "antitesi": "#E85A16", "diretta": "#E5263B",
+            "notte": "#070B18", "nebbia_notte": "#9AA6C6"}
+    try:
+        t = json.loads(TOKENS.read_text(encoding="utf-8"))
+        base.update(t.get("giorno") or {})
+        notte = t.get("notte") or {}
+        base["notte"] = notte.get("carta", base["notte"])
+        base["nebbia_notte"] = notte.get("nebbia", base["nebbia_notte"])
+    except (OSError, ValueError):
+        pass  # senza il file restano i valori di sempre
+    return base
+
+
+_P = _palette()
+INK = _rgb(_P["inchiostro"])
+BG = _rgb(_P["carta"])
+MUTED = _rgb(_P["nebbia"])
+TESI = _rgb(_P["tesi"])
+ANTI = _rgb(_P["antitesi"])
+LIVE = _rgb(_P["diretta"])
+NOTTE = _rgb(_P["notte"])          # fondo delle slide d'impatto
+TENUE = _rgb(_P["nebbia_notte"])   # testo secondario sul fondo notte
 WHITE = (255, 255, 255)
 
 
@@ -38,6 +67,7 @@ def _serif(size: int, peso: int = 400) -> ImageFont.FreeTypeFont:
 
 def _a_capo(d: ImageDraw.ImageDraw, testo: str, font, larghezza: int) -> list[str]:
     righe, riga = [], ""
+    testo = testo.replace("\u2011", "-").replace("\u00a0", " ")  # caratteri che i font non hanno
     for parola in testo.split():
         prova = (riga + " " + parola).strip()
         if d.textlength(prova, font=font) <= larghezza:
@@ -64,9 +94,9 @@ def _blocco(d, testo, crea_font, size_max, size_min, x, y, larghezza, altezza_ma
     return y + alto
 
 
-def _cornice(img, d, fondo_scuro: bool, n: int, tot: int, sezione: str = ""):
+def _cornice(img, d, fondo_scuro: bool, n: int, tot: int, sezione: str = "", fondo_colorato: bool = False):
     testo = WHITE if fondo_scuro else INK
-    tenue = (170, 178, 200) if fondo_scuro else MUTED
+    tenue = WHITE if fondo_colorato else (TENUE if fondo_scuro else MUTED)
     logo = _logo(64)
     if logo:
         img.paste(logo, (M, M - 14), logo)
@@ -96,11 +126,11 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
 
     # 1. Copertina
     def copertina(n, tot):
-        img, d = _nuova(INK)
+        img, d = _nuova(NOTTE)
         _cornice(img, d, True, n, tot, sezione)
         y = _blocco(d, articolo["titolo"], lambda s: _sans(s, 900, 112), 104, 60, M, 330, W - 2 * M, 640, WHITE, 1.08)
         d.rectangle((M, y + 50, M + 120, y + 60), fill=ANTI if ha_duello else TESI)
-        d.text((M, H - M - 110), "Scorri per capire", font=_sans(36, 600), fill=(170, 178, 200))
+        d.text((M, H - M - 110), "Scorri per capire", font=_sans(36, 600), fill=TENUE)
         return img
     pagine.append(copertina)
 
@@ -129,13 +159,13 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
         for lato, colore in (("tesi", TESI), ("antitesi", ANTI)):
             def pagina_lato(n, tot, lato=lato, colore=colore):
                 img, d = _nuova(colore)
-                _cornice(img, d, True, n, tot, "Il Contraddittorio")
-                d.text((M, 240), articolo[lato]["titolo"], font=_sans(220, 900, 125), fill=WHITE)
-                y = 560
+                _cornice(img, d, True, n, tot, "Il Contraddittorio", fondo_colorato=True)
+                d.text((M, 220), articolo[lato]["titolo"], font=_sans(180, 900, 125), fill=WHITE)
+                y = 470
                 spazio = (H - M - 110 - y) // max(1, len(articolo[lato]["punti"]))
                 for punto in articolo[lato]["punti"]:
                     d.rectangle((M, y + 18, M + 18, y + 36), fill=WHITE)
-                    _blocco(d, punto, lambda s: _sans(s, 600), 42, 28, M + 44, y, W - 2 * M - 44, spazio - 30, WHITE, 1.25)
+                    _blocco(d, punto, lambda s: _sans(s, 600), 44, 30, M + 44, y, W - 2 * M - 44, spazio - 30, WHITE, 1.25)
                     y += spazio
                 return img
             pagine.append(pagina_lato)
@@ -152,17 +182,17 @@ def crea_carosello(articolo: dict, sezione: str, twitch: str, cartella: Path) ->
 
     # Ultima: invito alla diretta + fonti
     def chiusura(n, tot):
-        img, d = _nuova(INK)
+        img, d = _nuova(NOTTE)
         _cornice(img, d, True, n, tot)
         invito = "Tu da che parte stai?" if ha_duello else "Tu cosa ne pensi?"
         y = _blocco(d, invito, lambda s: _sans(s, 900, 112), 110, 70, M, 300, W - 2 * M, 300, WHITE, 1.05)
-        d.text((M, y + 40), "Scrivilo nei commenti.", font=_sans(44, 600), fill=(170, 178, 200))
+        d.text((M, y + 40), "Scrivilo nei commenti.", font=_sans(44, 600), fill=TENUE)
         d.ellipse((M, 760, M + 30, 790), fill=LIVE)
         d.text((M + 48, 750), "Ne parliamo in diretta", font=_sans(48, 800), fill=WHITE)
-        d.text((M + 48, 815), f"twitch.tv/{twitch}", font=_sans(40, 600), fill=(170, 178, 200))
+        d.text((M + 48, 815), f"twitch.tv/{twitch}", font=_sans(40, 600), fill=TENUE)
         testate = sorted({f["nome"].split(":")[0] for f in articolo.get("fonti", [])})
         if testate:
-            _blocco(d, "Fonti: " + ", ".join(testate), lambda s: _sans(s, 500), 30, 22, M, 980, W - 2 * M, 150, (170, 178, 200), 1.35)
+            _blocco(d, "Fonti: " + ", ".join(testate), lambda s: _sans(s, 500), 30, 22, M, 980, W - 2 * M, 150, TENUE, 1.35)
         return img
     pagine.append(chiusura)
 

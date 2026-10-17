@@ -92,8 +92,9 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 
 6h. **Grafico** (agente in `squadra.json`, assunto da Davide il 13/10). Ogni giorno:
    - guarda le slide in `ig/<slug>/` degli articoli delle ultime 24 ore e le
-     immagini dei Pin di 6d e 6g, con la checklist del Grafico; vota 1-5 e
-     scrivi il voto nel verbale. Sotto 4, segnala cosa non va nel compito
+     immagini dei Pin di 6d e 6g con le regole di `design/SISTEMA.md`; vota
+     1-5 con i cinque punti di "Come vota il Grafico" (un punto per ciascuno)
+     e scrivi il voto nel verbale. Sotto 4, segnala cosa non va nel compito
      del rilancio e, se il difetto viene da `agenti/slides.py`, apri una PR;
    - controlla 2 prodotti attivi di ZampaViva al giorno, a rotazione: se hanno
      meno di 3 immagini o il testo alternativo manca o è in inglese, crea un
@@ -103,6 +104,10 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    - una volta a settimana, il lunedì, proponi un miglioramento all'aspetto
      del sito come PR (mai su main).
    Il Grafico non pubblica e non spende nulla da solo.
+   Uscita dalla prova: se in `qualita.json` la media dei voti del Grafico
+   resta almeno 4 per 5 giorni di fila, proponi a Davide in bacheca
+   ("da approvare") di metterlo "attivo" in `squadra.json`. Non cambiarlo da
+   solo.
 
 6m. **Limite Metricool (dal 13/10).** Il piano gratuito permette 20
    pubblicazioni al mese per tutto il brand, e il 13/10 sono finite (15 Pin

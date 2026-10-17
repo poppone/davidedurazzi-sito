@@ -219,12 +219,12 @@
       "reparto": "Redazione",
       "dove": "Dentro Finch (stesso giro giornaliero), regola 6h di direttore.md. Assunto da Davide il 13/10/2026",
       "produce": "Il controllo grafico di caroselli, copertine, Pin e immagini prodotto ZampaViva; nuove grafiche in bozza su Canva; una proposta a settimana per l'aspetto del sito",
-      "come_leggerlo": "ig/<slug>/*.jpg degli articoli nuovi, immagini dei prodotti attivi su Shopify, le pagine del sito",
+      "come_leggerlo": "ig/<slug>/*.jpg degli articoli nuovi, immagini dei prodotti attivi su Shopify, le pagine del sito; le regole sono in design/SISTEMA.md",
       "pubblica_da_solo": false,
       "revisore": "critico-stanza",
       "checklist": [
         "Testo leggibile da telefono, mai tagliato o sopra il viso",
-        "Colori e font del marchio (ink #10162B, blu #2F55E4, arancio #E85A16; Archivo + Source Serif 4)",
+        "Rispetta design/SISTEMA.md: solo i colori di design/tokens.json, Archivo per i titoli e Source Serif 4 per leggere, margini di almeno 96px, un solo accento per slide",
         "Ogni prodotto ZampaViva ha almeno 3 immagini e il testo alternativo in italiano",
         "Nessuna immagine di altri creator o senza diritti",
         "Le grafiche nuove restano bozze finché Davide non le approva"
