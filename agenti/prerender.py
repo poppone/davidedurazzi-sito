@@ -88,8 +88,8 @@ def html_lista(cfg, articoli) -> str:
     righe = []
     for a in articoli:
         som = f"<p>{e(a['sommario'])}</p>" if a.get("sommario") else ""
-        righe.append(f'<li><a href="{link(a)}"><span class="sez">{e(nome_sezione(cfg, a.get("sezione")))}<br>'
-                     f'{e(data_it(a.get("data")))}</span><span><h3>{e(a.get("titolo"))}</h3>{som}</span></a></li>')
+        righe.append(f'<li data-sez="{e(a.get("sezione") or "")}"><a href="{link(a)}"><span class="sez">{e(nome_sezione(cfg, a.get("sezione")))}<br>'
+                     f'<time>{e(data_it(a.get("data")))}</time></span><span><h3>{e(a.get("titolo"))}</h3>{som}</span></a></li>')
     return "".join(righe)
 
 

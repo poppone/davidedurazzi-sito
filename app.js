@@ -230,8 +230,8 @@
     function disegnaLista() {
       var lista = tutti.filter(function (a) { return filtro === "tutte" || a.sezione === filtro; });
       $("lista").innerHTML = lista.length ? lista.map(function (a) {
-        return '<li><a href="/articoli/' + encodeURIComponent(a.slug) + '"><span class="sez">' +
-          esc(nomeSezione(a.sezione)) + "<br>" + esc(data(a.data)) + "</span><span><h3>" + esc(a.titolo) +
+        return '<li data-sez="' + esc(a.sezione || "") + '"><a href="/articoli/' + encodeURIComponent(a.slug) + '"><span class="sez">' +
+          esc(nomeSezione(a.sezione)) + "<br><time>" + esc(data(a.data)) + "</time></span><span><h3>" + esc(a.titolo) +
           "</h3>" + (a.sommario ? "<p>" + esc(a.sommario) + "</p>" : "") + "</span></a></li>";
       }).join("") : '<li class="vuoto">Ancora nessun articolo in questa sezione.</li>';
       [].forEach.call($("lista").children, rivela);
