@@ -1,6 +1,6 @@
 {
   "_nota": "Pagina /azienda. Agenti: aggiungi, togli o cambia stato (attivo, in prova, fermo). Bilancio: una riga per settimana, importi in euro; null = non ancora inserito.",
-  "aggiornato": "2026-10-16",
+  "aggiornato": "2026-10-17",
   "umano": {
     "nome": "Davide Durazzi",
     "ruolo": "Fondatore e unico dipendente umano",
@@ -66,8 +66,8 @@
         {
           "nome": "Samaritan · Notizie",
           "ruolo": "Il telegiornale in 60 secondi sul canale Notizie in 60 secondi",
-          "stato": "fermo",
-          "turno": "In pausa fino al 1° novembre"
+          "stato": "in prova",
+          "turno": "Riacceso il 17 ottobre: 2 Short al giorno"
         },
         {
           "nome": "Samaritan · Animali",

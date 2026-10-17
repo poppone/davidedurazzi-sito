@@ -532,5 +532,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .mp-voto span{color:var(--muted);font-size:.9rem}
 .mp-barra{height:6px;border-radius:6px;background:var(--line);margin-top:.5rem;overflow:hidden}
 .mp-barra i{display:block;height:100%;background:linear-gradient(90deg,var(--tesi),var(--anti));border-radius:6px}
+.mp-codice{justify-self:start;font-weight:600;color:var(--tesi);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+.mp-codice:hover{color:#fff}
 .mp-segno{display:inline-block;width:.75rem;height:.75rem;border-radius:50%}
 @media (prefers-reduced-motion:reduce){.mp-flusso,.mp-gira,.mp-respiro{animation:none}}
