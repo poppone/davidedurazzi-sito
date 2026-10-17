@@ -55,7 +55,7 @@
           return {
             tipo: "agente", nome: a.nome, reparto: r.nome, stato: a.stato, cosa: a.ruolo,
             turno: a.turno, sostituisce: s.sostituisce, autonomia: s.autonomia,
-            catena: s.catena || 99, nota: s.nota, voto: s.voto && mp.voti ? mp.voti[s.voto] : null
+            catena: s.catena || 99, nota: s.nota, codice: s.codice, voto: s.voto && mp.voti ? mp.voti[s.voto] : null
           };
         })
       };
@@ -273,6 +273,12 @@
     return '<div class="mp-blocco"><h4>' + esc(titolo) + "</h4>" + html + "</div>";
   }
 
+  // Solo link a GitHub: il codice degli agenti e' pubblico, le chiavi no.
+  function linkCodice(url) {
+    if (!/^https:\/\/github\.com\/poppone\//.test(url || "")) return "";
+    return '<a class="mp-codice" href="' + esc(url) + '" target="_blank" rel="noopener">Guarda il codice su GitHub →</a>';
+  }
+
   function scalaAutonomia(livello) {
     return '<ol class="mp-scala">' + AUTONOMIA.map(function (a, i) {
       return '<li class="' + (a[0] === livello ? "mp-qui" : "") + '"><span>' + (i + 1) + "</span><div><strong>" + esc(a[1]) + "</strong><small>" + esc(a[2]) + "</small></div></li>";
@@ -292,7 +298,8 @@
         "<p>" + esc(d.cosa) + "</p>" +
         blocco("Cosa sostituisce", "<p>" + esc(d.sostituisce) + "</p>") +
         blocco("Autonomia", scalaAutonomia(d.autonomia)) +
-        blocco("I revisori che votano per lui", "<p>" + esc((d.revisori || []).join(" · ")) + "</p>");
+        blocco("I revisori che votano per lui", "<p>" + esc((d.revisori || []).join(" · ")) + "</p>") +
+        linkCodice(d.codice);
     } else {
       var rep = cosa.reparto;
       html = '<p class="mp-tipo">Reparto ' + esc(d.reparto) + "</p><h3>" + esc(d.nome) + "</h3>" + pill(d.stato) +
@@ -309,6 +316,7 @@
       if (rep) html += blocco("In che ordine lavora il reparto", '<ol class="mp-catena">' + rep.agenti.map(function (a) {
         return '<li class="' + (a === d ? "mp-qui " : "") + classeStato(a.stato) + '">' + esc(a.nome) + "</li>";
       }).join("") + "</ol>");
+      html += linkCodice(d.codice);
       if (d.turno) html += '<p class="meta">Turno: ' + esc(d.turno) + "</p>";
       if (d.nota) html += '<p class="meta">' + esc(d.nota) + "</p>";
     }

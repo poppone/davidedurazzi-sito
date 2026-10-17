@@ -1,6 +1,6 @@
 {
   "_nota": "Dati della mappa viva in /azienda. Reparti, agenti e stati arrivano da azienda.json; qui ci sono le schede (cosa sostituisce, autonomia, posto nella catena, voto medio del Direttore), il cervello e i lavori ancora da costruire. Autonomia: 'guidato' = lo faccio io con l'aiuto dell'agente; 'assistito' = l'agente prepara, io approvo; 'autonomo' = l'agente fa da solo e il Direttore controlla dopo. I voti sono le medie di stanza/qualita.json (scala 1-5): li aggiorna il Direttore.",
-  "aggiornato": "2026-10-16",
+  "aggiornato": "2026-10-17",
   "voti_dal": "2026-10-13",
   "cervello": {
     "nome": "Il cervello",
@@ -49,40 +49,47 @@
       "Revisore testi",
       "Revisore video",
       "Revisore trailer"
-    ]
+    ],
+    "codice": "https://github.com/poppone/davidedurazzi-sito/tree/main/stanza"
   },
   "schede": {
     "Scout": {
       "sostituisce": "Chi passa la mattina a leggere le testate per trovare i temi del giorno",
       "autonomia": "autonomo",
-      "catena": 1
+      "catena": 1,
+      "codice": "https://github.com/poppone/davidedurazzi-sito/tree/main/agenti"
     },
     "Fact-checker": {
       "sostituisce": "La verifica delle fonti prima di scrivere",
       "autonomia": "autonomo",
-      "catena": 2
+      "catena": 2,
+      "codice": "https://github.com/poppone/davidedurazzi-sito/tree/main/agenti"
     },
     "Redattore": {
       "sostituisce": "Un redattore che scrive tre bozze al giorno",
       "autonomia": "assistito",
       "catena": 3,
-      "voto": "redattore"
+      "voto": "redattore",
+      "codice": "https://github.com/poppone/davidedurazzi-sito/tree/main/agenti"
     },
     "Critico": {
       "sostituisce": "Il caporedattore che rilegge e rimanda indietro",
       "autonomia": "autonomo",
-      "catena": 4
+      "catena": 4,
+      "codice": "https://github.com/poppone/davidedurazzi-sito/tree/main/agenti"
     },
     "Il Contraddittorio": {
       "sostituisce": "La preparazione della diretta: domanda e argomenti dei due lati",
       "autonomia": "assistito",
-      "catena": 5
+      "catena": 5,
+      "codice": "https://github.com/poppone/davidedurazzi-sito/tree/main/agenti"
     },
     "Redazione AI commenti": {
       "sostituisce": "Le risposte alle domande pratiche dei lettori",
       "autonomia": "autonomo",
       "catena": 6,
-      "nota": "Risponde solo alle domande pratiche e si firma sempre come AI; il resto lo scrivo io"
+      "nota": "Risponde solo alle domande pratiche e si firma sempre come AI; il resto lo scrivo io",
+      "codice": "https://github.com/poppone/davidedurazzi-sito/blob/main/api/admin.js"
     },
     "Grafico": {
       "sostituisce": "Un grafico per caroselli, copertine e immagini prodotto",
@@ -94,24 +101,28 @@
       "sostituisce": "Un video editor e uno speaker per quattro Short al giorno",
       "autonomia": "autonomo",
       "catena": 1,
-      "voto": "samaritan-gaming"
+      "voto": "samaritan-gaming",
+      "codice": "https://github.com/poppone/samaritan_v2"
     },
     "Samaritan · Notizie": {
       "sostituisce": "Un piccolo telegiornale in 60 secondi",
       "autonomia": "autonomo",
       "catena": 2,
-      "voto": "samaritan-notizie"
+      "voto": "samaritan-notizie",
+      "codice": "https://github.com/poppone/samaritan-notizie"
     },
     "Samaritan · Animali": {
       "sostituisce": "Chi gira e monta i video dei prodotti per TikTok",
       "autonomia": "assistito",
-      "catena": 3
+      "catena": 3,
+      "codice": "https://github.com/poppone/samaritan-animali"
     },
     "Clip dalle live": {
       "sostituisce": "Chi riguarda ore di diretta per tagliare i momenti migliori",
       "autonomia": "assistito",
       "catena": 4,
-      "nota": "Le prime due settimane ogni clip la approvo io, poi esce da sola se i revisori danno almeno 4"
+      "nota": "Le prime due settimane ogni clip la approvo io, poi esce da sola se i revisori danno almeno 4",
+      "codice": "https://github.com/poppone/samaritan_v2/tree/main/taglia_live"
     },
     "Videomaker": {
       "sostituisce": "Un montatore per i video lunghi di YouTube",
@@ -123,7 +134,8 @@
       "sostituisce": "Un social media manager per Instagram, Facebook e LinkedIn",
       "autonomia": "assistito",
       "catena": 1,
-      "voto": "social"
+      "voto": "social",
+      "codice": "https://github.com/poppone/davidedurazzi-sito/tree/main/agenti"
     },
     "Procacciatore sponsor": {
       "sostituisce": "Chi cerca i brand e scrive la prima proposta",
@@ -163,7 +175,8 @@
     "Rinnovo token": {
       "sostituisce": "Ricordarsi di rinnovare l'accesso a Instagram ogni due mesi",
       "autonomia": "autonomo",
-      "catena": 2
+      "catena": 2,
+      "codice": "https://github.com/poppone/davidedurazzi-sito/blob/main/.github/workflows/token-instagram.yml"
     }
   },
   "da_costruire": [
