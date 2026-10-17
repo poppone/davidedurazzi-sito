@@ -1,0 +1,40 @@
+name: Messaggi privati Instagram
+on:
+  schedule:
+    - cron: "*/30 6-22 * * *"   # ogni mezz'ora di giorno
+  workflow_dispatch:
+permissions:
+  contents: write
+  models: read
+concurrency: messaggi
+jobs:
+  smista:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Leggi, smista, invia gli approvati
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MODALITA_DM: ${{ vars.MODALITA_DM || 'bozze' }}
+        run: |
+          if [ -z "$UPSTASH_REDIS_REST_URL" ]; then echo "Messaggi privati non ancora configurati (mancano i segreti Upstash): salto."; exit 0; fi
+          SCRIVI_CONTEGGI=$([ "$(date -u +%H)" = "21" ] && echo 1 || echo 0) python agenti/messaggi.py
+      - name: Salva i conteggi (solo numeri, nessun testo)
+        run: |
+          git config user.name "messaggi-ai"
+          git config user.email "actions@users.noreply.github.com"
+          [ -f stanza/messaggi.json ] || exit 0
+          git add stanza/messaggi.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Messaggi privati: conteggi"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; sleep 5; done
+          exit 1
