@@ -25,6 +25,10 @@ Rispondi sempre in italiano. Davide preferisce risposte dirette e pratiche.
   Palinsesto in `agenti/config.py` (`PALINSESTO`): 1 tema di attualità + 2 aree del giorno; Scout per area → fact-check (min 2 testate per attualità/politica, 1 testata citata per tecnologia/AI/gaming; 3 bozze al giorno) → Redattore → Critico → Il Contraddittorio (tema più "divisivo"). Output: `bozze/bozze.json` + `bozze/scaletta-AAAA-MM-GG.md`.
 - `.github/workflows/pubblica.yml` — su push di `bozze/bozze.json`: `promuovi.py` sposta le bozze con `"approvato": true` in `content/articoli.json`; `instagram.py genera` crea il carosello (`slides.py`, Pillow) in `ig/<slug>/`; `instagram.py pubblica` pubblica via Instagram API with Instagram Login (secret `IG_ACCESS_TOKEN`), registro in `social/instagram.json`.
 - `.github/workflows/token-instagram.yml` — rinnovo token il 1 e il 15 del mese (secret `GH_PAT`).
+- `.github/workflows/guardiano.yml` — ogni mattina `agenti/guardiano.py`: controlla chiavi, token (scadenza GH_PAT), workflow dei repo e sito; scrive `stanza/guardiano.json` e apre compiti per Davide.
+- `.github/workflows/chat-dirette.yml` — il martedì sera `agenti/chat_dirette.py`: bot nella chat Twitch (segreti `TWITCH_BOT_NOME`, `TWITCH_BOT_TOKEN`), risposte solo da `agenti/chat_faq.json`, sempre dichiarate AI; domande per Davide nel dock OBS `overlay/domande.html` e in `stanza/chat/`.
+- `.github/workflows/messaggi.yml` — ogni 30 minuti `agenti/messaggi.py`: DM Instagram smistati con l'AI; testi SOLO in Upstash (chiavi `dd:dm:*`, il repo è pubblico), decisioni nel pannello /admin; modalità `bozze` o `auto` (variabile `MODALITA_DM`).
+- `.github/workflows/aurora.yml` — ogni ora di giorno `agenti/aurora.py`: pubblica sull'account Instagram di Aurora Riva (modella IA, segreto `IG_AURORA_TOKEN`) i post "approvati" di `social/aurora.json` all'ora di `quando` (ora italiana), con etichetta IA (`is_ai_generated`). Immagini finali in `aurora/` (solo JPG). I DM di Aurora li smista `messaggi.py` con `MESSAGGI_ACCOUNT=aurora` (chiavi `dd:dma:*`, mai risposte). Regole in `stanza/direttore.md` 6v.
 - `.vercelignore` esclude agenti, bozze, social, .github.
 
 ## Regole

@@ -156,6 +156,53 @@ module.exports = async (req, res) => {
       return res.status(200).json({ ok: true, esito: approva ? "approvato: il Direttore lo esegue al prossimo giro" : "scartato" });
     }
 
+    // ---- Messaggi privati Instagram (agenti/messaggi.py): restano nel database privato ----
+    if (b.azione === "dm") {
+      const [ids] = await db(["LRANGE", "dm:coda", "0", "49"]);
+      if (!ids || !ids.length) return res.status(200).json({ messaggi: [] });
+      const valori = await db(...ids.map((x) => ["GET", "dm:" + x]));
+      return res.status(200).json({ messaggi: valori.filter(Boolean).map((v) => JSON.parse(v)) });
+    }
+
+    // ---- Messaggi di Aurora Riva: solo smistati, da qui non parte nessuna risposta ----
+    if (b.azione === "dm_aurora") {
+      const [ids] = await db(["LRANGE", "dma:coda", "0", "49"]);
+      if (!ids || !ids.length) return res.status(200).json({ messaggi: [] });
+      const valori = await db(...ids.map((x) => ["GET", "dma:" + x]));
+      return res.status(200).json({ messaggi: valori.filter(Boolean).map((v) => JSON.parse(v)) });
+    }
+
+    if (b.azione === "visto_dm_aurora") {
+      const [v] = await db(["GET", "dma:" + id]);
+      if (!v) return res.status(404).json({ errore: "Messaggio non trovato" });
+      const m = JSON.parse(v);
+      m.stato = "visto";
+      await db(["LREM", "dma:coda", "0", id], ["SET", "dma:" + id, JSON.stringify(m), "KEEPTTL"]);
+      return res.status(200).json({ ok: true, esito: "tolto dalla lista" });
+    }
+
+    if (b.azione === "approva_dm" || b.azione === "approva_dm_mio" || b.azione === "archivia_dm") {
+      const [v] = await db(["GET", "dm:" + id]);
+      if (!v) return res.status(404).json({ errore: "Messaggio non trovato" });
+      const m = JSON.parse(v);
+      await db(["LREM", "dm:coda", "0", id]);
+      if (b.azione === "archivia_dm") {
+        m.stato = "archiviato";
+        await db(["SET", "dm:" + id, JSON.stringify(m), "KEEPTTL"]);
+        return res.status(200).json({ ok: true, esito: "archiviato, nessuna risposta" });
+      }
+      const testo = String(b.testo || "").trim();
+      if (testo.length < 2 || testo.length > 900) {
+        await db(["LPUSH", "dm:coda", id]);
+        return res.status(400).json({ errore: "Scrivi una risposta (massimo 900 caratteri)" });
+      }
+      m.bozza = testo;
+      m.di_davide = b.azione === "approva_dm_mio"; // col suo nome: niente firma AI
+      m.stato = "approvato";
+      await db(["SET", "dm:" + id, JSON.stringify(m), "KEEPTTL"], ["RPUSH", "dm:approvati", id]);
+      return res.status(200).json({ ok: true, esito: "parte entro mezz'ora" + (m.di_davide ? " col tuo nome" : " come risposta AI") });
+    }
+
     const c = await leggiCommento(id);
     if (!c) return res.status(404).json({ errore: "Commento non trovato" });
 

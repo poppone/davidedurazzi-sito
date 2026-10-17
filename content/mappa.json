@@ -177,38 +177,40 @@
       "autonomia": "autonomo",
       "catena": 2,
       "codice": "https://github.com/poppone/davidedurazzi-sito/blob/main/.github/workflows/token-instagram.yml"
+    },
+    "Trattative": {
+      "sostituisce": "Chi tiene viva una trattativa senza farla cadere",
+      "autonomia": "assistito",
+      "catena": 2,
+      "nota": "Prepara solo bozze in Gmail: le invio io, e i prezzi li decido io"
+    },
+    "Guardiano delle chiavi": {
+      "sostituisce": "Il tecnico che se ne accorge prima che si rompa",
+      "autonomia": "autonomo",
+      "catena": 1,
+      "nota": "Non cambia mai un segreto: mi dice quale e come"
+    },
+    "Messaggi privati": {
+      "sostituisce": "Chi risponde ai messaggi privati",
+      "autonomia": "assistito",
+      "catena": 1,
+      "nota": "Per ora ogni risposta la approvo io; i testi restano nel database privato del sito. TikTok non dà accesso ai messaggi"
+    },
+    "Chat delle dirette": {
+      "sostituisce": "Un moderatore della chat Twitch",
+      "autonomia": "autonomo",
+      "catena": 1,
+      "nota": "Risponde solo con le risposte pratiche scritte da me, sempre dichiarandosi AI"
+    },
+    "Aurora Riva": {
+      "sostituisce": "Una modella e un fotografo per i servizi di moda degli sponsor",
+      "autonomia": "assistito",
+      "catena": 1,
+      "voto": "aurora",
+      "nota": "Le foto le genero io sul mio PC; i post li approviamo io e Finch. Prima del primo sponsor: prova superata e almeno 6 post online"
     }
   },
-  "da_costruire": [
-    {
-      "reparto": "Commerciale",
-      "nome": "Trattative",
-      "cosa": "Segue lo sponsor dopo la prima email: risposte, controproposte, scadenze",
-      "sostituisce": "Chi tiene viva una trattativa senza farla cadere",
-      "ordine": 2
-    },
-    {
-      "reparto": "Amministrazione",
-      "nome": "Guardiano delle chiavi",
-      "cosa": "Controlla ogni giorno che chiavi, token e minuti di GitHub non siano scaduti o finiti, prima che qualcosa si fermi",
-      "sostituisce": "Il tecnico che se ne accorge prima che si rompa",
-      "ordine": 1
-    },
-    {
-      "reparto": "Clienti e community",
-      "nome": "Messaggi privati",
-      "cosa": "Legge i DM di Instagram e TikTok, risponde alle domande pratiche dichiarandosi AI e mi passa il resto",
-      "sostituisce": "Chi risponde ai messaggi privati",
-      "ordine": 3
-    },
-    {
-      "reparto": "Clienti e community",
-      "nome": "Chat delle dirette",
-      "cosa": "Durante le dirette risponde alle domande ripetute e mi segnala quelle da leggere in onda",
-      "sostituisce": "Un moderatore della chat Twitch",
-      "ordine": 4
-    }
-  ],
+  "da_costruire": [],
   "voti": {
     "analista": {
       "media": 1.0,

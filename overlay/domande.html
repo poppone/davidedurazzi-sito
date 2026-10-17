@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Domande dalla chat</title>
+<style>
+  /* Pannello per OBS (Docks > Custom Browser Docks): legge la chat Twitch in
+     sola lettura e tiene in fila le domande per Davide. Le domande pratiche
+     ripetute le risponde in chat l'assistente AI (agenti/chat_dirette.py).
+     ?canale=nome per un altro canale, ?demo=1 per provarlo. */
+  :root{--bg:#04060D;--pannello:#0E1530;--ink:#EEF1F8;--muted:#A3AECB;--line:rgba(150,170,255,.18);--tesi:#7B97FF;--anti:#FF8A4C;--live:#FF4D61}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:500 15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+  header{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.6rem .8rem;background:rgba(4,6,13,.95);border-bottom:1px solid var(--line)}
+  header strong{font-size:15px}
+  header span{color:var(--muted);font-size:13px}
+  button{font:inherit;cursor:pointer}
+  .svuota{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:.25rem .6rem;font-size:13px}
+  #onda{margin:.6rem .6rem 0;padding:.7rem .8rem;border-radius:12px;border:1px solid var(--anti);background:rgba(255,138,76,.12);display:none}
+  #onda.on{display:block}
+  #onda small{color:var(--anti);font-weight:700}
+  #onda p{margin:.2rem 0 0;font-size:17px;font-weight:600}
+  ul{list-style:none;margin:0;padding:.6rem;display:grid;gap:.45rem}
+  li{display:grid;grid-template-columns:1fr auto;gap:.3rem .6rem;padding:.6rem .7rem;border-radius:10px;background:var(--pannello);border:1px solid var(--line)}
+  li .da{color:var(--tesi);font-weight:700;font-size:13px}
+  li .ora{color:var(--muted);font-size:12px;justify-self:end}
+  li p{grid-column:1/-1;margin:0}
+  li .azioni{grid-column:1/-1;display:flex;gap:.4rem}
+  li .azioni button{border:0;border-radius:8px;padding:.3rem .65rem;font-size:13px;font-weight:700}
+  .leggi{background:var(--anti);color:#1a0c02}
+  .salta{background:rgba(150,170,255,.14);color:var(--ink)}
+  li.letta{opacity:.4}
+  .vuoto{color:var(--muted);text-align:center;padding:2rem 1rem}
+</style>
+</head>
+<body>
+<header><strong>Domande dalla chat</strong><span id="stato">Collegamento…</span><button class="svuota" id="svuota" type="button">Svuota lette</button></header>
+<div id="onda"><small>In onda</small><p id="ondaTesto"></p></div>
+<ul id="lista"><li class="vuoto" style="display:block">Qui arrivano le domande per te. Quelle pratiche le risponde l'assistente AI in chat.</li></ul>
+<script>
+(function () {
+  "use strict";
+  var q = new URLSearchParams(location.search);
+  var canale = (q.get("canale") || "davidedurazzi").toLowerCase().replace(/[^a-z0-9_]/g, "");
+  var $ = function (id) { return document.getElementById(id); };
+  var domande = [], n = 0;
+  // Stessa regola di agenti/chat_dirette.py: domanda vera, non un comando, non un link
+  var PRATICHE = /(che ora|orari|prossima (live|diretta)|quando (la|e la|e' la|è la|fai|sei in) (live|diretta)|contraddittorio|come si vota|link|youtube|instagram|tiktok|ko-?fi|sei un bot)/i;
+  function eDomanda(t) {
+    t = t.trim();
+    if (t.charAt(0) === "!" || /http/i.test(t) || t.length < 12) return false;
+    if (PRATICHE.test(t)) return false; // ci pensa l'assistente AI
+    return t.indexOf("?") !== -1 || /^(davide|domanda)/i.test(t);
+  }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function disegna() {
+    var vive = domande.filter(function (d) { return !d.via; });
+    $("lista").innerHTML = vive.length ? vive.map(function (d) {
+      return '<li class="' + (d.letta ? "letta" : "") + '" data-id="' + d.id + '"><span class="da">' + esc(d.da) + '</span><span class="ora">' + d.ora + "</span><p>" + esc(d.testo) + "</p>" +
+        (d.letta ? "" : '<div class="azioni"><button class="leggi" type="button" data-a="leggi">Leggo in onda</button><button class="salta" type="button" data-a="salta">Salta</button></div>') + "</li>";
+    }).join("") : '<li class="vuoto" style="display:block">Nessuna domanda per ora.</li>';
+  }
+  function aggiungi(da, testo) {
+    if (!eDomanda(testo)) return;
+    var d = new Date();
+    domande.push({ id: ++n, da: da, testo: testo.slice(0, 300), ora: ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) });
+    if (domande.length > 80) domande.shift();
+    disegna();
+  }
+  $("lista").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-a]"); if (!b) return;
+    var d = domande.filter(function (x) { return x.id === +b.closest("li").dataset.id; })[0]; if (!d) return;
+    d.letta = true;
+    if (b.dataset.a === "leggi") { $("ondaTesto").textContent = d.da + ": " + d.testo; $("onda").classList.add("on"); }
+    disegna();
+  });
+  $("onda").addEventListener("click", function () { $("onda").classList.remove("on"); });
+  $("svuota").addEventListener("click", function () { domande.forEach(function (d) { if (d.letta) d.via = true; }); disegna(); });
+
+  function connetti() {
+    var ws = new WebSocket("wss://irc-ws.chat.twitch.tv:443");
+    ws.onopen = function () {
+      ws.send("CAP REQ :twitch.tv/tags");
+      ws.send("PASS SCHMOOPIIE");
+      ws.send("NICK justinfan" + Math.floor(10000 + Math.random() * 80000));
+      ws.send("JOIN #" + canale);
+      $("stato").textContent = "#" + canale;
+    };
+    ws.onmessage = function (ev) {
+      ev.data.split("\r\n").forEach(function (riga) {
+        if (!riga) return;
+        if (riga.indexOf("PING") === 0) { ws.send("PONG :tmi.twitch.tv"); return; }
+        var m = riga.match(/^@(\S+) :[^ ]+ PRIVMSG #[^ ]+ :(.*)$/);
+        if (!m) return;
+        var tag = {};
+        m[1].split(";").forEach(function (t) { var i = t.indexOf("="); tag[t.slice(0, i)] = t.slice(i + 1); });
+        if ((tag.badges || "").indexOf("broadcaster/") !== -1) return;
+        var nome = tag["display-name"] || "anonimo";
+        if (/bot$/i.test(nome)) return;
+        aggiungi(nome, m[2]);
+      });
+    };
+    ws.onclose = function () { $("stato").textContent = "Riconnessione…"; setTimeout(connetti, 3000); };
+  }
+  if (q.get("demo")) {
+    $("stato").textContent = "prova";
+    var esempi = ["Davide secondo te GTA 6 slitta ancora?", "a che ora è la live?", "ma il Game Pass conviene ancora con i nuovi prezzi?", "ciao a tutti", "domanda: che ne pensi delle auto cinesi in Italia", "!si"];
+    var i = 0; setInterval(function () { aggiungi("utente" + (i % 7), esempi[i++ % esempi.length]); }, 1500);
+  } else {
+    connetti();
+  }
+})();
+</script>
+</body>
+</html>

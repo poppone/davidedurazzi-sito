@@ -132,6 +132,12 @@
           "ruolo": "Pubblica i Pin dei prodotti su Pinterest e sceglie il prodotto del giorno da raccontare in video",
           "stato": "in prova",
           "turno": "Ogni giorno"
+        },
+        {
+          "nome": "Trattative",
+          "stato": "in prova",
+          "ruolo": "Segue lo sponsor dopo la prima email: prepara le risposte e i promemoria in bozza, le invio io",
+          "turno": "Ogni mattina"
         }
       ]
     },
@@ -149,6 +155,40 @@
           "ruolo": "Rinnova da solo l'accesso a Instagram prima che scada, così le pubblicazioni non si fermano",
           "stato": "attivo",
           "turno": "Il 1 e il 15 del mese"
+        },
+        {
+          "nome": "Guardiano delle chiavi",
+          "stato": "in prova",
+          "ruolo": "Controlla ogni mattina che chiavi, token, workflow e sito funzionino, e mi dice cosa sistemare prima che si fermi qualcosa",
+          "turno": "Ogni mattina, prima di Finch"
+        }
+      ]
+    },
+    {
+      "nome": "Clienti e community",
+      "agenti": [
+        {
+          "nome": "Messaggi privati",
+          "stato": "in prova",
+          "ruolo": "Legge i DM di Instagram, prepara le risposte alle domande pratiche firmate come AI e mi passa il resto",
+          "turno": "Ogni mezz'ora"
+        },
+        {
+          "nome": "Chat delle dirette",
+          "stato": "in prova",
+          "ruolo": "In diretta risponde in chat alle domande pratiche, dichiarandosi AI, e mette in fila per me quelle da leggere in onda",
+          "turno": "Il martedì in diretta"
+        }
+      ]
+    },
+    {
+      "nome": "Aurora Riva",
+      "agenti": [
+        {
+          "nome": "Aurora Riva",
+          "ruolo": "Modella IA su Instagram, creata da me: look low cost a Roma con il conto di ogni capo, sempre dichiarata IA",
+          "stato": "in prova",
+          "turno": "Post dal 2 novembre: lunedì, mercoledì e venerdì"
         }
       ]
     }

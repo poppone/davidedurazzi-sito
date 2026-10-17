@@ -1,0 +1,42 @@
+name: Chat delle dirette
+on:
+  schedule:
+    # martedì: parte un po' prima della diretta delle 21:30 (ora di Roma).
+    # Due orari per l'ora legale e quella solare: lo script parte solo dentro la finestra giusta.
+    - cron: "55 18 * * 2"
+    - cron: "55 19 * * 2"
+  workflow_dispatch:
+    inputs:
+      durata:
+        description: "Minuti massimi di lavoro"
+        default: "240"
+permissions:
+  contents: write
+concurrency: chat-dirette
+jobs:
+  chat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python agenti/chat_dirette.py ${{ github.event_name == 'workflow_dispatch' && '--subito' || '' }}
+        env:
+          TWITCH_BOT_NOME: ${{ secrets.TWITCH_BOT_NOME }}
+          TWITCH_BOT_TOKEN: ${{ secrets.TWITCH_BOT_TOKEN }}
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          DURATA_MINUTI: ${{ github.event.inputs.durata || '240' }}
+      - name: Salva le domande per il verbale
+        if: always()
+        run: |
+          git config user.name "chat-dirette-ai"
+          git config user.email "actions@users.noreply.github.com"
+          git add stanza/chat 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "Chat delle dirette: domande del $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase -X theirs && git push && exit 0; sleep 5; done
+          exit 1

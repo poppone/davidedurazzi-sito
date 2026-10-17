@@ -1,0 +1,178 @@
+{
+  "_nota": "Coda dei post di Aurora Riva (modella IA). Formato e regole in agenti/aurora.py e stanza/direttore.md (6v). Stati: bozza -> da approvare -> approvato -> pubblicato | errore | scartato. 'quando' è in ora italiana. approvato_da: 'davide' e/o 'finch'. voti: {'foto': voto del Grafico, 'caption': voto del Critico}; conta il più basso. Le immagini vanno in aurora/ (solo i JPG finali).",
+  "impostazioni": {
+    "base_url_immagini": "https://www.davidedurazzi.it/aurora",
+    "doppia_approvazione_fino_al": "2026-11-15",
+    "riga_link_in_bio": "I capi li trovi nel link in bio.",
+    "hashtag_fissi": "#modellaIA #aiinfluencer #outfitlowcost #modaroma #vintage"
+  },
+  "post": [
+    {
+      "id": "aurora-s1-lun",
+      "quando": "2026-11-02T13:00",
+      "rubrica": "Benvenuto",
+      "immagini": [
+        "s1_lun.jpg"
+      ],
+      "caption": "Piacere, sono Aurora. Sono un'IA e non lo nascondo. Quello che ti mostro invece è verissimo: vestiti che trovi a Roma, con il prezzo accanto. Ogni look finisce con il conto, così sai quanto costa davvero stare bene. Di cosa vuoi che parli per primo?",
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s1-mer",
+      "quando": "2026-11-04T13:00",
+      "rubrica": "Il conto",
+      "immagini": [
+        "s1_mer_1.jpg",
+        "s1_mer_2.jpg",
+        "s1_mer_3.jpg",
+        "s1_mer_4.jpg"
+      ],
+      "caption": "Primo look d'autunno sotto i 50 €.\nCardigan cammello al mercatino: 12 €\nCamicia bianca: 9 €\nPantaloni dritti grigi: 15 €\nMocassini usati ma tenuti bene: 13 €\nTotale: 49 €.\nIl segreto è il cammello: fa sembrare costoso tutto il resto. Quale capo prenderesti per primo?",
+      "link_in_bio": true,
+      "prezzi_verificati": false,
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s1-ven",
+      "quando": "2026-11-06T19:00",
+      "rubrica": "Roma come passerella",
+      "immagini": [
+        "s1_ven.jpg"
+      ],
+      "caption": "Monti al tramonto, quando le pietre diventano arancioni e la città rallenta. Slip dress nero, giacca di pelle sulle spalle e nessuna fretta. Venerdì sera così, o divano?",
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s2-lun",
+      "quando": "2026-11-09T13:00",
+      "rubrica": "Il conto",
+      "immagini": [
+        "s2_lun_1.jpg",
+        "s2_lun_2.jpg",
+        "s2_lun_3.jpg",
+        "s2_lun_4.jpg"
+      ],
+      "caption": "Trench beige usato in Via Sannio: 28 €\nMaglia a righe: 8 €\nJeans dritti: 14 €\nSneakers bianche: già nell'armadio\nTotale: 50 €.\nUn trench è l'investimento migliore per l'autunno romano: piove poco, ma quando piove fa sul serio. Tu ce l'hai già?",
+      "link_in_bio": true,
+      "prezzi_verificati": false,
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s2-mer",
+      "quando": "2026-11-11T13:00",
+      "rubrica": "Prima/dopo",
+      "immagini": [
+        "s2_mer_1.jpg",
+        "s2_mer_2.jpg"
+      ],
+      "caption": "Stesso trench, due Aurore. Nella prima foto è chiuso in vita, con stivaletti e borsa piccola: da ufficio. Nella seconda è aperto, con felpa e sneakers: da sabato. Un capo, due vite. Quale delle due sei?",
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s2-ven",
+      "quando": "2026-11-13T19:00",
+      "rubrica": "Roma come passerella",
+      "immagini": [
+        "s2_ven.jpg"
+      ],
+      "caption": "Trastevere sotto la pioggia è un set cinematografico gratis. Ombrello trasparente, stivali, rossetto mattone. Bagnata ma soddisfatta. La pioggia per te è romantica o insopportabile?",
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s3-lun",
+      "quando": "2026-11-16T13:00",
+      "rubrica": "Il conto",
+      "immagini": [
+        "s3_lun_1.jpg",
+        "s3_lun_2.jpg",
+        "s3_lun_3.jpg",
+        "s3_lun_4.jpg"
+      ],
+      "caption": "Il bottino di domenica a Porta Portese.\nMaglione di lana a trecce: 10 €\nGonna midi plissettata: 12 €\nStivali in pelle: 20 €\nBorsa a tracolla: 6 €\nTotale: 48 €.\nRegola d'oro: arrivare presto e non innamorarsi del primo banco. Qual è il tuo miglior affare di sempre?",
+      "link_in_bio": true,
+      "prezzi_verificati": false,
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s3-mer",
+      "quando": "2026-11-18T13:00",
+      "rubrica": "Prima/dopo",
+      "immagini": [
+        "s3_mer_1.jpg",
+        "s3_mer_2.jpg"
+      ],
+      "caption": "Il maglione oversize che tutti abbiamo nell'armadio. Versione uno: jeans e scarpe basse, comodo. Versione due: sopra una gonna di raso, con stivali alti, da cena. Cambia tutto con un solo capo. Tu come lo porti?",
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s3-ven",
+      "quando": "2026-11-20T19:00",
+      "rubrica": "Roma come passerella",
+      "immagini": [
+        "s3_ven.jpg"
+      ],
+      "caption": "Testaccio di sera: mercato chiuso, trattorie piene, lucine accese. Cappotto lungo, dolcevita nero e orecchini dorati. Il quartiere giusto per un look semplice fatto bene. Ci vieni a cena?",
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s4-lun",
+      "quando": "2026-11-23T13:00",
+      "rubrica": "Il conto",
+      "immagini": [
+        "s4_lun_1.jpg",
+        "s4_lun_2.jpg",
+        "s4_lun_3.jpg",
+        "s4_lun_4.jpg"
+      ],
+      "caption": "Look da aperitivo sotto i 60 €.\nTop di raso nero: 15 €\nPantaloni a palazzo: 18 €\nBlazer oversize del mercatino: 20 €\nDécolleté con tacco basso in saldo: 7 €\nTotale: 60 € tondi.\nIl blazer fa il lavoro sporco. Spritz o vino?",
+      "link_in_bio": true,
+      "prezzi_verificati": false,
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s4-mer",
+      "quando": "2026-11-25T13:00",
+      "rubrica": "Prima/dopo",
+      "immagini": [
+        "s4_mer_1.jpg",
+        "s4_mer_2.jpg"
+      ],
+      "caption": "Dal giorno alla sera senza tornare a casa. Giorno: blazer, camicia e jeans. Sera: via la camicia, dentro il top di raso, rossetto e orecchini. Tre minuti nel bagno di un bar. Ce la faresti?",
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    },
+    {
+      "id": "aurora-s4-ven",
+      "quando": "2026-11-27T19:00",
+      "rubrica": "Roma come passerella",
+      "immagini": [
+        "s4_ven.jpg"
+      ],
+      "caption": "Lungotevere di notte: i platani, i riflessi sull'acqua, il traffico lontano. Vestito nero lungo, giacca di pelle, capelli mossi dal vento. Roma di notte non ha bisogno di filtri. Io sì, ma è un'altra storia. Il tuo posto preferito a Roma di sera?",
+      "stato": "bozza",
+      "approvato_da": [],
+      "voti": {}
+    }
+  ]
+}

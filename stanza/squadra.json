@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-13",
+  "aggiornato": "2026-10-17",
   "agenti": [
     {
       "id": "samaritan-gaming",
@@ -228,6 +228,98 @@
         "Ogni prodotto ZampaViva ha almeno 3 immagini e il testo alternativo in italiano",
         "Nessuna immagine di altri creator o senza diritti",
         "Le grafiche nuove restano bozze finché Davide non le approva"
+      ]
+    },
+    {
+      "id": "trattative",
+      "nome": "Trattative",
+      "reparto": "Commerciale",
+      "dove": "Dentro Finch (stesso giro giornaliero), regola 6q di direttore.md",
+      "produce": "Bozze Gmail di risposta e promemoria per gli sponsor, etichetta Gmail \"Trattative\"",
+      "come_leggerlo": "thread Gmail con etichetta Trattative",
+      "pubblica_da_solo": false,
+      "revisore": "analista",
+      "checklist": [
+        "Risponde a quello che il brand ha chiesto davvero",
+        "Usa solo i numeri del media kit, nessun prezzo inventato",
+        "Il tono è quello di Davide, breve e cortese",
+        "Nessuna trattativa resta senza risposta o promemoria per più di 7 giorni"
+      ]
+    },
+    {
+      "id": "guardiano",
+      "nome": "Guardiano delle chiavi",
+      "reparto": "Amministrazione",
+      "dove": "GitHub poppone/davidedurazzi-sito, workflow guardiano.yml (agenti/guardiano.py)",
+      "produce": "stanza/guardiano.json e compiti per Davide quando una chiave, un token o un workflow si sta per fermare",
+      "come_leggerlo": "stanza/guardiano.json",
+      "pubblica_da_solo": false,
+      "revisore": "critico-stanza",
+      "checklist": [
+        "Ha controllato tutto quello che poteva (pochi 'non controllato')",
+        "Ogni problema ha il rimedio scritto in parole semplici",
+        "Non duplica compiti già aperti",
+        "Nessun falso allarme"
+      ]
+    },
+    {
+      "id": "messaggi-privati",
+      "nome": "Messaggi privati",
+      "reparto": "Clienti e community",
+      "dove": "GitHub poppone/davidedurazzi-sito, workflow messaggi.yml (agenti/messaggi.py); testi nel database privato del sito, pannello /admin",
+      "produce": "Risposte pratiche ai DM Instagram firmate come AI, il resto in fila per Davide",
+      "come_leggerlo": "stanza/messaggi.json (solo numeri)",
+      "pubblica_da_solo": false,
+      "revisore": "critico-stanza",
+      "checklist": [
+        "Le risposte automatiche si dichiarano sempre AI",
+        "Solo fatti presenti nelle informazioni, niente promesse a nome di Davide",
+        "Collaborazioni e questioni personali vanno sempre a Davide",
+        "Nessun messaggio resta senza smistamento oltre le 24 ore"
+      ]
+    },
+    {
+      "id": "chat-dirette",
+      "nome": "Chat delle dirette",
+      "reparto": "Clienti e community",
+      "dove": "GitHub poppone/davidedurazzi-sito, workflow chat-dirette.yml (agenti/chat_dirette.py, risposte in agenti/chat_faq.json); pannello OBS overlay/domande.html",
+      "produce": "Risposte automatiche dichiarate AI in chat Twitch e la fila delle domande per Davide",
+      "come_leggerlo": "stanza/chat/AAAA-MM-GG.json del martedì",
+      "pubblica_da_solo": true,
+      "revisore": "critico-stanza",
+      "checklist": [
+        "Risponde solo alle domande pratiche, mai su opinioni o temi delicati",
+        "Si dichiara sempre AI",
+        "Non riempie la chat (al massimo un messaggio ogni 20 secondi)",
+        "Le domande vere arrivano a Davide"
+      ]
+    },
+    {
+      "id": "aurora",
+      "nome": "Aurora Riva",
+      "reparto": "Aurora Riva",
+      "dove": "Foto generate in locale sul PC di Davide (SDXL + LoRA, che restano sul PC); coda social/aurora.json e workflow aurora.yml nel repo del sito; regola 6v di direttore.md. Nata il 17/10/2026, in prova",
+      "produce": "Post Instagram della modella IA Aurora Riva (foto JPG in aurora/ + didascalia), dichiarati IA, con la rubrica \"Il conto\" sui capi veri",
+      "come_leggerlo": "social/aurora.json (stato, voti, esito) e le immagini in aurora/; `python agenti/aurora.py controlla` elenca cosa manca a ogni post",
+      "pubblica_da_solo": false,
+      "revisori": [
+        "grafico",
+        "critico-stanza"
+      ],
+      "voto": "Due voti: il Grafico vota la foto, il Critico la didascalia. Conta il più basso dei due.",
+      "checklist_foto": [
+        "Aurora è coerente con la sua scheda: volto, caschetto mosso con frangia, neo sopra il labbro, anello sul pollice sinistro",
+        "Nessun difetto tipico dell'IA: mani, dita, occhi, testo storpiato, pelle di plastica",
+        "Nessun logo o capo riconoscibile di brand che non ha firmato un accordo",
+        "Sensuale sì, esplicita no: niente nudo né pose esplicite",
+        "Il capo sponsorizzato è identico alle foto prodotto del brand"
+      ],
+      "checklist_caption": [
+        "Nel \"Il conto\" i prezzi sono controllati (prezzi_verificati) e c'è la riga \"Look ricreato con IA, capi reali.\" vicino ai prezzi",
+        "Il link affiliato porta al capo giusto, non a uno che gli somiglia",
+        "Post sponsorizzato: #adv in testa",
+        "Tono di Aurora: ironica, sicura, frasi brevi, massimo due emoji, una domanda finale",
+        "Nessuna promessa o prezzo che Davide non abbia deciso"
       ]
     }
   ],

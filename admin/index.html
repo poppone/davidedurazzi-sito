@@ -71,7 +71,9 @@
     app.innerHTML = '<p class="vuoto">Caricamento.</p>';
     var contenuti = api({ azione: "contenuti" }).catch(function (e) { return { errore: e.message }; });
     var stanza = api({ azione: "stanza" }).catch(function (e) { return { errore: e.message }; });
-    api({ azione: "elenco" }).then(function (j) { return Promise.all([contenuti, stanza]).then(function (r) { disegna(j, r[0], r[1]); }); }).catch(function (e) {
+    var dm = api({ azione: "dm" }).catch(function (e) { return { errore: e.message }; });
+    var dma = api({ azione: "dm_aurora" }).catch(function (e) { return { errore: e.message }; });
+    api({ azione: "elenco" }).then(function (j) { return Promise.all([contenuti, stanza, dm, dma]).then(function (r) { disegna(j, r[0], r[1], r[2], r[3]); }); }).catch(function (e) {
       if (/Password/.test(e.message)) { sessionStorage.removeItem("pw"); login("Password errata."); }
       else app.innerHTML = '<p class="vuoto">' + esc(e.message) + '</p>';
     });
@@ -96,6 +98,33 @@
     }).join("") : '<p class="vuoto">Niente da decidere.</p>');
   }
 
+  function sezDm(d) {
+    if (!d || d.errore) return '<h2>Messaggi privati Instagram</h2><p class="vuoto">' + esc((d && d.errore) || "Non disponibili") + '</p>';
+    var h = '<h2>Messaggi privati Instagram (' + d.messaggi.length + ')</h2>';
+    return h + (d.messaggi.length ? d.messaggi.map(function (m) {
+      var pratica = m.tipo === "pratica";
+      return '<div class="card" data-dm="' + esc(m.id) + '"><div class="chi">@' + esc(m.utente || "?") + '</div><div class="dove">' + data(m.quando) + ' \u00b7 ' + (pratica ? "domanda pratica: l\u2019AI ha preparato la risposta" : "da leggere tu") + (m.errore ? ' \u00b7 ' + esc(m.errore) : '') + '</div>' +
+        '<p>' + esc(m.testo) + '</p><textarea placeholder="Scrivi la risposta">' + esc(m.bozza || "") + '</textarea>' +
+        '<div class="acts">' + (pratica ? '<button class="btn pieno" data-az="approva_dm" type="button">Invia come risposta AI</button>' : '') +
+        '<button class="btn' + (pratica ? '' : ' pieno') + '" data-az="approva_dm_mio" type="button">Invia col mio nome</button>' +
+        '<button class="btn rosso" data-az="archivia_dm" type="button">Non rispondere</button></div>' +
+        '<div class="dove">Instagram permette di rispondere solo entro 24 ore dal messaggio.</div><div class="esito"></div></div>';
+    }).join("") : '<p class="vuoto">Nessun messaggio in attesa.</p>');
+  }
+
+  function sezDmAurora(d) {
+    // Nessuna risposta da qui: l'agente di Aurora smista e basta (regola di Finch)
+    if (!d || d.errore || !d.messaggi.length) return "";
+    var h = '<h2>Messaggi di Aurora Riva (' + d.messaggi.length + ')</h2><p class="vuoto">Da qui non si risponde: rispondi tu dall\u2019app, se serve.</p>';
+    return h + d.messaggi.map(function (m) {
+      var blocca = m.stato === "da bloccare";
+      var tipo = blocca ? "da bloccare e segnalare dall\u2019app" : (m.tipo === "collaborazione" ? "collaborazione" : "da leggere tu");
+      return '<div class="card" data-dma="' + esc(m.id) + '"><div class="chi">@' + esc(m.utente || "?") + '</div><div class="dove">' + data(m.quando) + ' \u00b7 ' + tipo + '</div>' +
+        (blocca ? '<p class="vuoto">Contenuto nascosto: l\u2019agente l\u2019ha segnalato.</p>' : '<p>' + esc(m.testo) + '</p>') +
+        '<div class="acts"><button class="btn" data-az="visto_dm_aurora" type="button">' + (blocca ? "Bloccato e segnalato" : "Visto") + '</button></div><div class="esito"></div></div>';
+    }).join("");
+  }
+
   function sezContenuti(c) {
     if (!c || c.errore) return '<h2>Articoli e bozze</h2><p class="vuoto">' + esc((c && c.errore) || "Non disponibili") + '</p>';
     var h = '<h2>Bozze da approvare (' + c.bozze.length + ')</h2>';
@@ -117,8 +146,8 @@
     return h;
   }
 
-  function disegna(j, cont, stz) {
-    var h = sezStanza(stz) + '<h2>Visite al sito</h2><div id="visite"><p class="vuoto">Caricamento.</p></div>' + sezContenuti(cont) + '<h1 style="margin-top:3rem;font-size:1.5rem">Commenti</h1><h2>Da approvare (' + j.attesa.length + ')</h2>';
+  function disegna(j, cont, stz, dm, dma) {
+    var h = sezStanza(stz) + sezDm(dm) + sezDmAurora(dma) + '<h2>Visite al sito</h2><div id="visite"><p class="vuoto">Caricamento.</p></div>' + sezContenuti(cont) + '<h1 style="margin-top:3rem;font-size:1.5rem">Commenti</h1><h2>Da approvare (' + j.attesa.length + ')</h2>';
     h += j.attesa.length ? j.attesa.map(function (c) {
       return '<div class="card" data-id="' + esc(c.id) + '"><div class="chi">' + esc(c.nome) + '</div><div class="dove">' + data(c.data) + ', ' + link(c) + '</div>' +
         '<p>' + esc(c.testo) + '</p>' +
@@ -173,13 +202,14 @@
 
   app.addEventListener("click", function (e) {
     var b = e.target.closest("button[data-az]"); if (!b) return;
-    var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id || card.dataset.compito };
+    var card = b.closest(".card"), az = b.dataset.az, corpo = { azione: az, id: card.dataset.id || card.dataset.compito || card.dataset.dm || card.dataset.dma };
     if (card.dataset.slug) {
       corpo.slug = card.dataset.slug;
       var conf = { togli_articolo: "Togliere l\u2019articolo dal sito?", scarta_bozza_articolo: "Scartare la bozza?", approva_bozza: "Approvare? Va online sul sito e su Instagram." }[az];
       if (conf && !confirm(conf)) return;
     }
     if (az === "elimina" && !confirm("Eliminare il commento?")) return;
+    if (card.dataset.dm) corpo.testo = (card.querySelector("textarea") || {}).value || "";
     if (card.dataset.compito) corpo.testo = (card.querySelector("textarea") || {}).value || "";
     if (az === "rispondi" || az === "approva") corpo.testo = (card.querySelector("textarea") || {}).value || "";
     if (az === "rispondi" && !corpo.testo.trim()) { card.querySelector(".esito").textContent = "Scrivi prima la risposta."; return; }
