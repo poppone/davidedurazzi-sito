@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-tema="chiaro">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,9 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/design/tokens.css">
-<link rel="stylesheet" href="/design/sito.css">
-<script>try{if(localStorage.getItem("tema")==="scuro")document.documentElement.removeAttribute("data-tema")}catch(e){}</script>
+<link rel="stylesheet" href="/design/plancia.css">
 <link rel="icon" type="image/png" href="/assets/logo-64.png">
 <link rel="apple-touch-icon" href="/assets/logo-192.png">
 <title>Davide Durazzi — Tecnologia, AI e Gaming</title>
@@ -28,27 +26,33 @@
     <a href="/#diretta">Diretta</a><a href="/#contraddittorio">Il Contraddittorio</a><a href="/#articoli">Articoli</a><a href="/#video">Video</a><a href="/#gioco">Il Sistema</a><a href="/#app">Ricordati</a><a href="/#offerte">Offerte</a><a href="/consigli">Consigli</a><a href="/piazza">Piazza Aperta</a>
   </nav>
 </div></header>
-<section class="stage" id="stage">
-  <canvas id="fx" aria-hidden="true"></canvas>
-  <div class="wrap hero">
-    <div class="stato" id="stato" role="status"><span class="dot" aria-hidden="true"></span><span id="statoTesto">Prossima diretta</span></div>
-    <h1 id="nome"><span>Davide</span><span>Durazzi</span></h1>
-    <div>
-      <img class="hero-logo" src="/assets/logo-192.png" alt="Il logo di Davide Durazzi" width="132" height="132">
-      <p class="claim" id="claim"><!--PR:claim-->Tecnologia, AI e Gaming<!--/PR:claim--></p>
-      <p class="intro" id="intro"><!--PR:intro-->Ogni giorno prendo una notizia o una novità su tecnologia, intelligenza artificiale e videogiochi e la smonto pezzo per pezzo: in diretta, con gli ospiti e con il contraddittorio. Le fonti sono sempre in fondo all&#x27;articolo.<!--/PR:intro--></p>
+<section class="pl-apertura" id="plancia" aria-label="Apertura">
+  <canvas id="rete" aria-hidden="true"></canvas>
+  <div class="wrap pl-hero">
+    <div class="pl-testo">
+      <div class="stato" id="stato" role="status"><span class="dot" aria-hidden="true"></span><span id="statoTesto">Prossima diretta</span></div>
+      <h1 class="pl-nome" id="nome"><span>Davide</span><span>Durazzi</span></h1>
+      <p class="pl-claim" id="claim"><!--PR:claim-->Tecnologia, AI e Gaming<!--/PR:claim--></p>
+      <p class="pl-intro" id="intro"><!--PR:intro-->Ogni giorno prendo una notizia o una novità su tecnologia, intelligenza artificiale e videogiochi e la smonto pezzo per pezzo: in diretta, con gli ospiti e con il contraddittorio. Le fonti sono sempre in fondo all&#x27;articolo.<!--/PR:intro--></p>
       <div class="acts">
         <a class="btn pieno" href="#diretta"><span class="dot" aria-hidden="true"></span>Guarda la diretta</a>
         <a class="btn" id="ytBtn" href="#video">Iscriviti su YouTube</a>
       </div>
     </div>
+    <ul class="pl-hud" aria-label="La redazione in numeri">
+      <li><strong id="hudAgenti">0</strong><span>agenti AI nella squadra</span></li>
+      <li><strong id="hudAttivi">0</strong><span>al lavoro adesso</span></li>
+      <li><strong id="hudArticoli">0</strong><span>articoli con le fonti</span></li>
+      <li><a href="/azienda#mappa">Esplora la squadra</a></li>
+    </ul>
   </div>
+  <div class="pl-info" id="reteInfo" aria-hidden="true"></div>
 </section>
 <main class="wrap">
 
   <section class="blocco" id="diretta">
     <div class="testa"><h2>In diretta</h2><p id="orari"><!--PR:orari-->La diretta: martedì alle 21:30<!--/PR:orari--></p></div>
-    <div class="live">
+    <div class="live pl-pannello pl-schermo">
       <div class="player" id="twitchPlayer">
         <div class="locandina" id="locandina" style="background-image:url(/assets/offline.jpg)">
           <div class="acts"></div>
@@ -75,6 +79,7 @@
     <div class="griglia" id="griglia"></div>
   </section>
 
+  <div class="pl-coppia">
   <section class="blocco" id="gioco">
     <div class="gioco">
       <div class="gioco-testo">
@@ -103,6 +108,7 @@
       </div>
     </div>
   </section>
+  </div>
 
   <section class="blocco" id="offerte">
     <div class="testa"><h2>Offerte gaming</h2><p>Videogiochi scontati su Instant Gaming.</p></div>
@@ -115,6 +121,7 @@
     <div class="ig" id="ig"></div>
   </section>
 
+  <div class="pl-chiusura">
   <section class="blocco" id="newsletter">
     <div class="nl">
       <div>
@@ -141,6 +148,7 @@
       </div>
     </div>
   </section>
+  </div>
 </main>
 <footer><div class="wrap">
   <strong>Davide Durazzi</strong>
@@ -150,9 +158,8 @@
 <script>window.igBannerConfig={lang:"it",igr:"poppone",banners:["ig-banner"]};</script>
 <script src="https://www.instant-gaming.com/api/banner/partner/loader.js" defer></script>
 <script src="/config.js"></script>
-<script src="/fx.js" defer></script>
 <script src="/app.js"></script>
-<script src="/design/tema.js"></script>
+<script src="/design/rete.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

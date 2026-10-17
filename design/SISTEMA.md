@@ -1,16 +1,19 @@
 # Il design system di Davide Durazzi
 
 Una pagina sola di regole, per il sito, per le slide dei caroselli e per il
-Grafico. I valori stanno in [`tokens.json`](tokens.json); il sito li usa da
-[`tokens.css`](tokens.css). Se cambi un colore, cambialo in tutti e due.
+Grafico. I colori stanno in [`tokens.json`](tokens.json); il sito li usa da
+[`plancia.css`](plancia.css), le slide da `agenti/slides.py`. Se cambi un
+colore, cambialo in `tokens.json` e in `plancia.css`.
 
 ## L'idea in una riga
 
-**Si legge di giorno, la macchina vive di notte.** Le pagine da leggere sono
-chiare e calme. Dove c'è qualcosa che si muove da solo (l'apertura con la
-costellazione, la diretta, il Contraddittorio, la mappa degli agenti) si apre
-uno **schermo notturno**: un pannello scuro, arrotondato, che brilla di blu e
-arancio. Il futuro sta negli schermi, la lettura sta sulla carta.
+**Il sito è la plancia di comando della redazione.** Fondo buio da sala
+controllo, pannelli di vetro con il bordo che prende luce blu e arancio, e al
+centro dell'apertura la **rete viva** degli agenti (`rete.js`): la squadra vera,
+presa da `content/azienda.json`, che gira, segue il mouse e fa correre i
+pacchetti di lavoro lungo i fili. Gli articoli invece si leggono su un
+**foglio chiaro** estratto dalla plancia: il futuro sta intorno, la lettura sta
+sulla carta.
 
 ## Colori
 
@@ -27,6 +30,9 @@ arancio. Il futuro sta negli schermi, la lettura sta sulla carta.
 
 - Su sfondo chiaro l'arancio e il rosso come **testo piccolo** diventano
   `#B8430C` e `#C81E33`, altrimenti non si leggono (contrasto sotto 4,5).
+- Sul sito la plancia usa la colonna Notte, con il fondo ancora più buio
+  (`#04060D`) e il testo secondario `#A3AECB`; la colonna Giorno vale per il
+  foglio degli articoli e per le slide di testo.
 - Blu e arancio insieme in un gradiente solo sui bordi degli schermi e sulle
   barre del voto. Mai sul testo.
 - Ogni sezione degli articoli ha il suo colore, sempre lo stesso: vedi
@@ -42,20 +48,28 @@ arancio. Il futuro sta negli schermi, la lettura sta sulla carta.
 - Niente maiuscolo per le etichette: la sezione di un articolo si scrive
   normale, preceduta dal pallino del suo colore.
 
-## Schermi notturni
+## Plancia, pannelli e foglio
 
-- Raggio 28px, sfondo notte, bordo di 1px con gradiente blu-arancio.
-- Dentro vale la palette notte. Fuori dagli schermi, solo palette giorno.
-- Uno schermo per idea: l'apertura, la diretta, il Contraddittorio, la mappa.
-  Non diventano card per ogni cosa.
+- Fondo: il vuoto (`#04060D`) con una griglia leggera che sfuma verso il basso.
+- Pannelli: vetro scuro, raggio 22px, bordo di 1px con la luce blu in alto a
+  sinistra e arancio in basso a destra. Uno per idea (diretta, Contraddittorio,
+  il gioco, l'app, newsletter, Piazza), mai una card per ogni cosa.
+- Schermi: la diretta ha anche gli angoli da mirino.
+- Ogni canale (sezione) ha il titolo grande, la riga sotto e un punto acceso
+  all'inizio della riga.
+- Testo secondario mai più scuro di `#A3AECB` sul fondo: si deve leggere.
+- Foglio dell'articolo: carta `#F4F6FB`, inchiostro `#10162B`, Source Serif 4
+  a 1,2rem con interlinea 1,78. Il Contraddittorio dentro il foglio resta scuro.
 
 ## Movimento
 
-- Si muove solo ciò che è vivo: la costellazione dell'apertura, il nome che si
-  compone, il nastro delle ultime notizie, lo scontro Sì/No, la mappa.
-- Una sola apparizione per sezione quando entra nello schermo. Niente card che
-  si inclinano, niente anelli che girano, niente testi che scorrono in doppio.
-- Con "riduci movimento" attivo nel telefono, tutto resta fermo.
+- Si muove solo ciò che è vivo: la rete degli agenti, il nome che si compone,
+  il nastro delle ultime notizie, lo scontro Sì/No, la mappa in /azienda.
+- La rete esce dal cervello una volta sola all'apertura, poi gira piano.
+- Al passaggio del mouse: la scheda dell'agente, i fili accesi, la riga che si
+  illumina sotto un articolo. Niente card che si inclinano o anelli che girano.
+- Con "riduci movimento" attivo, tutto resta fermo (la rete si può ancora
+  esplorare col mouse).
 
 ## Caroselli, copertine e Pin (il lavoro del Grafico)
 
