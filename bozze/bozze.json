@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "apple-aggiorna-le-regole-dell-app-store-stop-alle-app-ai-di-nudificazi-20261018",
+    "titolo": "Apple aggiorna le regole dell'App Store: stop alle app AI di nudificazione",
+    "sezione": "ai",
+    "rubrica": "",
+    "data": "2026-10-18",
+    "sommario": "La casa di Cupertino interviene sulle linee guida del proprio store digitale per bandire gli strumenti che generano immagini intime non consensuali. Arriva anche un freno a servizi ingannevoli e funzioni nascoste.",
+    "testo": [
+      "Apple ha annunciato un aggiornamento delle linee guida del proprio App Store per vietare in modo esplicito le applicazioni di intelligenza artificiale dedicate alla nudificazione. Come riportato da Punto Informatico e TuttoTech, i software di questo tipo saranno rimossi per impedire la creazione e diffusione di immagini intime non consensuali.",
+      "Il cambiamento include regole più rigide anche per contrastare comportamenti scorretti da parte degli sviluppatori. La revisione delle norme prende infatti di mira le applicazioni ingannevoli e quelle che integrano funzioni nascoste, con l'obiettivo di offrire maggiore trasparenza e sicurezza a chi effettua download sullo store.",
+      "Resta ora da capire con quale efficacia i sistemi di revisione riusciranno a individuare ed eliminare tempestivamente queste applicazioni, verificando se le nuove misure basteranno a impedire qualsiasi tentativo di aggirare i controlli della piattaforma."
+    ],
+    "fonti": [
+      {
+        "nome": "Punto Informatico: Apple aggiorna le linee guida per le app di nudificazione",
+        "url": "https://www.punto-informatico.it/apple-aggiorna-linee-guida-app-nudificazione/"
+      },
+      {
+        "nome": "TuttoTech: Apple cambia le regole dell’App Store: stop ad app ingannevoli e immagini intime non consensuali",
+        "url": "https://www.tuttotech.net/news/2026/10/17/apple-app-store-stop-app-ingannevoli-immagini-non-consensuali.html"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Ritenete che questo blocco riuscirà a eliminare del tutto queste app dagli smartphone?",
+      "Vi è mai capitato di scaricare un'applicazione che nascondeva funzioni non dichiarate?",
+      "Credete che anche gli altri negozi digitali dovrebbero seguire immediatamente la stessa linea?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "nuova-tesla-roadster-tra-promesse-estreme-numeri-record-e-dubbi-20261018",
+    "titolo": "Nuova Tesla Roadster: tra promesse estreme, numeri record e dubbi",
+    "sezione": "motori",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-18",
+    "sommario": "I vertici di Tesla hanno svelato prestazioni incredibili per la nuova Roadster. Tuttavia, tra annunci spettacolari e soluzioni tecniche già viste, non mancano le perplessità degli addetti ai lavori.",
+    "testo": [
+      "I dirigenti di Tesla, Lars Moravy e Franz von Holzhausen, hanno svelato alcuni dettagli tecnici della nuova Roadster, annunciando una potenza di oltre 1.360 cavalli e tempi di ricarica ridotti ad appena dieci minuti. Tra le caratteristiche più discusse spicca anche l'uso di ventole per l'effetto suolo, studiate per tenere l'auto incollata a terra sfidando le leggi della fisica.",
+      "Queste cifre da record mostrano le potenzialità estreme dell'elettrico, ma hanno subito sollevato forti dubbi. Come sottolinea HDmotori, la tecnologia delle ventole non è una novità assoluta, visto che è già stata impiegata sulla McMurtry Spéirling Pure. Inoltre, secondo Motor1 Italia, dietro a slogan spettacolari su un'auto che sembra quasi volare o arrampicarsi sui muri, mancano ancora molte informazioni concrete.",
+      "Resta ora da capire quanto di queste promesse arriverà effettivamente su strada e persino quale sarà la vera natura dell'auto. Come evidenziato da InsideEVs Italia, non si tratta di una normale cabriolet e il verdetto sulla sua effettiva appartenenza alla categoria delle vere roadster è ancora del tutto aperto."
+    ],
+    "fonti": [
+      {
+        "nome": "HDmotori: No, la Tesla Roadster non è la prima auto a vincere la gravità",
+        "url": "https://www.hdmotori.it/no-la-tesla-roadster-non-e-la-prima-auto-a-vincere-la-gravita/"
+      },
+      {
+        "nome": "Motor1 Italia: Tutto il fumo negli occhi della nuova Tesla Roadster",
+        "url": "https://it.motor1.com/news/812223/tesla-roadster-2026-presentazione-distrazione/"
+      },
+      {
+        "nome": "InsideEVs Italia: La nuova Tesla Roadster è davvero una roadster? Il verdetto è ancora aperto",
+        "url": "https://insideevs.it/news/812202/tesla-roadster-scoperta-vera-verdetto/"
+      },
+      {
+        "nome": "InsideEVs Italia: La Tesla Roadster ha oltre 1.360 CV e si ricarica in 10 minuti. Tutti i dati tecnici",
+        "url": "https://insideevs.it/news/812248/tesla-roadster-2028-dati-tecnici/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Credete sia possibile ottenere una ricarica completa in 10 minuti con oltre 1.360 cavalli?",
+      "Cosa ne pensate dell'uso di ventole per l'effetto suolo su una vettura sportiva?",
+      "Secondo voi le promesse spettacolari di Tesla si trasformeranno in realtà o resteranno solo annunci?"
+    ],
+    "acquisto": null,
+    "domanda": "Ritenete credibili le promesse sulle prestazioni estreme annunciate per la nuova Tesla Roadster?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "I dirigenti Lars Moravy e Franz von Holzhausen hanno condiviso dettagli tecnici precisi, citando una potenza superiore a 1.360 cavalli e tempi di ricarica di appena dieci minuti, come riporta InsideEVs Italia.",
+        "L'impiego di ventole per generare effetto suolo e spinta aggiuntiva poggia su concetti già collaudati con successo nel mondo dell'auto, ad esempio dalla McMurtry Spéirling Pure, secondo quanto evidenzia HDmotori.",
+        "Le prestazioni anticipate derivano direttamente dai vertici dell'ingegneria e dello stile del marchio, attestando l'impegno concreto nello sviluppo di queste soluzioni, in base a quanto riferito da InsideEVs Italia."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Molte affermazioni rischiano di rivelarsi solo annunci a effetto, poiché la mancanza di prove pratiche lascia dubbi su doti velocistiche descritte come quasi inverosimili, secondo quanto sottolinea Motor1 Italia.",
+        "Le soluzioni aerodinamiche prospettate non rappresentano una novità assoluta, dato che l'utilizzo di ventole per incrementare la deportanza è già realtà sulla McMurtry Spéirling Pure, ricorda HDmotori.",
+        "Sussistono perplessità persino sull'impostazione di base della vettura, non essendo ancora chiaro se rispetterà a pieno la classica configurazione aperta da roadster, come fa notare InsideEVs Italia."
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "ps6-a-oltre-1-000-dollari-i-rumor-sui-rincari-e-il-futuro-del-gaming-20261018",
+    "titolo": "PS6 a oltre 1.000 dollari? I rumor sui rincari e il futuro del gaming",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-18",
+    "sommario": "Nuove indiscrezioni ipotizzano una cifra record per il debutto della prossima console di Sony. A pesare sarebbero i costi crescenti dei componenti spinti dall'intelligenza artificiale.",
+    "testo": [
+      "Secondo quanto riportato da Everyeye, recenti rumor suggeriscono che PlayStation 6 potrebbe raggiungere un prezzo di lancio superiore ai 1.000 dollari. L'aumento stimato per la vendita della futura piattaforma sarebbe causato da una generale crisi dei componenti, i cui costi continuano a salire anche per via delle richieste legate al settore dell'intelligenza artificiale.",
+      "Questo scenario toccherebbe da vicino le tasche degli appassionati, trattandosi di una cifra senza precedenti per l'hardware casalingo. L'eventuale rialzo dei prezzi metterebbe a rischio l'accessibilità economica dei videogiochi, rendendo l'ingresso nella nuova generazione molto più difficile per una grossa fetta di utenti.",
+      "Resta comunque da comprendere quanto ci sia di concreto in queste indiscrezioni, trattandosi di stime preliminari non ufficiali. Sarà fondamentale osservare come evolverà il mercato della componentistica nel tempo e quali strategie commerciali verranno adottate per non allontanare il pubblico dei giocatori."
+    ],
+    "fonti": [
+      {
+        "nome": "Everyeye: Incubo PS6! Potrebbe costare più di $1.000, componenti sempre più costosi a causa dell'IA",
+        "url": "https://www.everyeye.it/notizie/incubo-ps6-costare-1-000-dollari-componenti-costosi-colpa-ia-906621.html"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Spendereste mai più di mille dollari per una console da gioco?",
+      "Qual è la cifra massima che considerereste accettabile per la nuova generazione?",
+      "Temete che i costi legati allo sviluppo dell'IA continueranno a far salire i prezzi del tech?"
+    ],
+    "acquisto": {
+      "tipo": "prodotto",
+      "nome": "PlayStation 6"
+    }
+  }
+]
