@@ -1,0 +1,47 @@
+{
+  "_nota": "Risposte della Chat delle dirette (agenti/chat_dirette.py). Una voce risponde quando il messaggio contiene almeno una delle 'chiavi' (minuscolo, senza accenti) e almeno una parola di domanda. Le risposte partono sempre con il prefisso AI: il bot non si finge mai Davide. Si modifica a mano; niente politica, cronaca o consigli personali qui.",
+  "prefisso": "[Risposta automatica AI] ",
+  "parole_domanda": ["?", "quando", "dove", "come", "che ora", "a che ora", "orario", "orari", "link", "qual", "come si", "c'e", "si puo"],
+  "voci": [
+    {
+      "id": "orari",
+      "chiavi": ["che ora", "orario", "orari", "prossima live", "prossima diretta", "quando la live", "quando la diretta", "quando fai live", "quando sei in live", "quando c'e la live", "quando e la live", "quando e la diretta", "che giorno"],
+      "risposta": "La diretta è il martedì alle 21:30, qui su Twitch. Gli orari aggiornati sono sempre su davidedurazzi.it"
+    },
+    {
+      "id": "contraddittorio",
+      "chiavi": ["contraddittorio", "votare", "voto", "sondaggio", "!si", "!no"],
+      "risposta": "Il Contraddittorio: scrivi !si oppure !no in chat per votare quando il sondaggio è aperto. Le due posizioni con le fonti sono su davidedurazzi.it"
+    },
+    {
+      "id": "fonti",
+      "chiavi": ["fonte", "fonti", "articolo", "articoli", "dove leggo", "sito"],
+      "risposta": "Gli articoli con tutte le fonti citate sono su davidedurazzi.it, sezione Articoli."
+    },
+    {
+      "id": "social",
+      "chiavi": ["youtube", "instagram", "tiktok", "social", "canale"],
+      "risposta": "YouTube: youtube.com/@davidedurazzioff · Instagram: davidedurazzi.it · TikTok: @davidedurazzi"
+    },
+    {
+      "id": "gioco",
+      "chiavi": ["il sistema", "gioco di davide", "tuo gioco", "itch"],
+      "risposta": "Il Sistema, il gioco di satira politica di Davide, si gioca gratis su durazzidev.itch.io/il-sistema"
+    },
+    {
+      "id": "app",
+      "chiavi": ["ricordati", "app", "applicazione"],
+      "risposta": "Ricordati è l'app di Davide per i promemoria a voce, per Android: la trovi su Google Play cercando \"Ricordati Durazzi\"."
+    },
+    {
+      "id": "sostieni",
+      "chiavi": ["donare", "donazione", "sostenere", "ko-fi", "kofi", "supportare"],
+      "risposta": "Grazie! Puoi sostenere il canale su ko-fi.com/davidedurazzi"
+    },
+    {
+      "id": "ai",
+      "chiavi": ["sei un bot", "sei una ai", "sei un'ai", "chi risponde", "bot"],
+      "risposta": "Sì, sono un assistente AI della redazione di Davide: rispondo solo alle domande pratiche, il resto lo legge lui in diretta."
+    }
+  ]
+}
