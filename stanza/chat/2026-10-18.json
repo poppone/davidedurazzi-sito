@@ -1,7 +1,25 @@
 {
   "canale": "davidedurazzi",
-  "inizio": "2026-10-18T08:27+02:00",
-  "risposte": {},
-  "domande": [],
-  "fine": "2026-10-18T08:34+02:00"
+  "inizio": "2026-10-18T08:34+02:00",
+  "risposte": {
+    "orari": 1
+  },
+  "domande": [
+    {
+      "ora": "08:35",
+      "da": "fedeass",
+      "testo": "Davide secondo te GTA 6 slitta ancora?"
+    },
+    {
+      "ora": "08:39",
+      "da": "fedeass",
+      "testo": "ma il Game Pass conviene ancora?"
+    },
+    {
+      "ora": "08:42",
+      "da": "streamelements",
+      "testo": "DavideDurazzi is now live! Streaming Talk Shows & Podcasts: IL CONTRADDITTORIO | Una notizia, due posizioni | Vota !si o !no"
+    }
+  ],
+  "fine": "2026-10-18T08:51+02:00"
 }
