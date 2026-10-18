@@ -585,6 +585,34 @@
         }
       ],
       "media": 3.0
+    },
+    {
+      "data": "2026-10-18",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it voIRtB9En_Y del 18/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 4,
+          "motivo": "GTA 6 non esclusiva Xbox Cloud, fonte Everyeye"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-18",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it voIRtB9En_Y del 18/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "attacco e accuratezza",
+          "voto": 3,
+          "motivo": "non verificabile: video e vidIQ non raggiungibili"
+        }
+      ],
+      "media": 3.0
     }
   ]
 }
