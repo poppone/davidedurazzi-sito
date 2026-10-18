@@ -557,6 +557,34 @@
         }
       ],
       "media": 4.0
+    },
+    {
+      "data": "2026-10-18",
+      "agente": "crescita-zampaviva",
+      "lavoro": "visite del 17/10",
+      "revisore": "analista",
+      "punti": [
+        {
+          "punto": "traffico misurato",
+          "voto": 1,
+          "motivo": "2 visite, 0 carrelli, 0 ordini; fonte delle visite non disponibile"
+        }
+      ],
+      "media": 1.0
+    },
+    {
+      "data": "2026-10-18",
+      "agente": "redazione",
+      "lavoro": "bozze del 17/10",
+      "revisore": "critico",
+      "punti": [
+        {
+          "punto": "fonti che reggono le affermazioni",
+          "voto": 3,
+          "motivo": "3 bozze, 1 scartata: affermazioni su Rockstar non presenti nella fonte"
+        }
+      ],
+      "media": 3.0
     }
   ]
 }
