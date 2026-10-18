@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "apple-aggiorna-le-regole-dell-app-store-stop-alle-app-ai-di-nudificazi-20261018",
     "titolo": "Apple aggiorna le regole dell'App Store: stop alle app AI di nudificazione",
@@ -32,7 +32,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "nuova-tesla-roadster-tra-promesse-estreme-numeri-record-e-dubbi-20261018",
     "titolo": "Nuova Tesla Roadster: tra promesse estreme, numeri record e dubbi",
@@ -89,7 +89,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "ps6-a-oltre-1-000-dollari-i-rumor-sui-rincari-e-il-futuro-del-gaming-20261018",
     "titolo": "PS6 a oltre 1.000 dollari? I rumor sui rincari e il futuro del gaming",
