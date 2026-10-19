@@ -1,5 +1,50 @@
 [
   {
+    "slug": "tesla-roadster-2028-evoluzione-tecnologie-e-dubbi-aperti-20261019",
+    "titolo": "Tesla Roadster 2028: evoluzione, tecnologie e dubbi aperti",
+    "sezione": "motori",
+    "rubrica": "",
+    "data": "2026-10-19",
+    "sommario": "Tesla ha presentato la nuova Roadster 2028, una versione rivisitata del modello del 2017 con innovazioni SpaceX, steer‑by‑wire e aerodinamica Hidden Aero. Restano incerti alcuni aspetti sulla sua definizione e sul lancio commerciale.",
+    "testo": [
+      "Secondo HDmotori, la Roadster 2028 è il risultato di una lunga evoluzione dal concept del 2017, con un design più vicino allo stile Cyber di Tesla e l'integrazione di tecnologie sviluppate da SpaceX.",
+      "L'auto introduce un abitacolo steer‑by‑wire, propulsori a gas e un sistema aerodinamico denominato Hidden Aero, pensato per ottimizzare la stabilità ad alte velocità.",
+      "I filmati dietro le quinte, riportati da HDmotori, mostrano test segreti su ventole, propulsori ad aria e rampe speciali, a dimostrazione dell'approccio sperimentale di Tesla nello sviluppo della Roadster.",
+      "InsideEVs Italia segnala che, nonostante il nome, la nuova Roadster non è una cabriolet, lasciando aperto il dibattito sulla sua reale classificazione.",
+      "Rimane da capire quando la produzione entrerà in serie, quale sarà il prezzo finale e quali prestazioni concrete offrirà rispetto alle promesse di velocità e autonomia.",
+      "]",
+      "domande_live",
+      ":",
+      [
+        "Qual è la vostra opinione sul passaggio a un abitacolo steer‑by‑wire nella nuova Roadster?",
+        "Pensate che l'assenza di una versione cabriolet possa influenzare l'interesse dei fan di Tesla?",
+        "Quali aspetti della tecnologia SpaceX integrata nella Roadster vi incuriosiscono di più?"
+      ],
+      "acquisto",
+      ":",
+      {
+        "tipo": "nessuno",
+        "nome": ""
+      }
+    ],
+    "fonti": [
+      {
+        "nome": "HDmotori: Tesla Roadster 2028: come cambia rispetto a quella del 2017",
+        "url": "https://www.hdmotori.it/tesla-roadster-2028-vs-2017/"
+      },
+      {
+        "nome": "HDmotori: Come Tesla ha sviluppato la Roadster (in segreto)",
+        "url": "https://www.hdmotori.it/come-tesla-sviluppato-roadster/"
+      },
+      {
+        "nome": "InsideEVs Italia: La nuova Tesla Roadster è davvero una roadster? Il verdetto è ancora aperto",
+        "url": "https://insideevs.it/news/812202/tesla-roadster-scoperta-vera-verdetto/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
     "slug": "ps6-a-oltre-1-000-dollari-i-rumor-sui-rincari-e-il-futuro-del-gaming-20261018",
     "titolo": "PS6 a oltre 1.000 dollari? I rumor sui rincari e il futuro del gaming",
     "sezione": "gaming",
