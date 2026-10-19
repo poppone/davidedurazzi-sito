@@ -611,11 +611,12 @@
       "id": "2026-10-19-g1",
       "per": "davide",
       "da": "guardiano",
-      "stato": "da fare",
+      "stato": "fatto",
       "titolo": "Guardiano: samaritan-notizie · Samaritan Auto-Poster",
       "dettagli": "l'ultima esecuzione del 2026-10-18 è fallita. Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/39172537980",
       "origine": "controllo del Guardiano delle chiavi",
-      "volte": 1
+      "volte": 1,
+      "esito": "19/10: letto il log. Non è un guasto: il controllo anti-invenzioni ha scartato tutti i testi (aggiungevano dettagli che il titolo non dice) e il video è stato saltato apposta, poi lo recupera la riserva. Non serve niente da Davide."
     }
   ]
 }
