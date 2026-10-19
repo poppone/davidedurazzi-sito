@@ -265,7 +265,8 @@
       "origine": "crescita-zampaviva",
       "da": "direttore",
       "volte": 1,
-      "id": "2026-10-13-18"
+      "id": "2026-10-13-18",
+      "nota": "19/10: rimandato da Davide."
     },
     {
       "id": "2026-10-13-19",
@@ -494,7 +495,8 @@
       "volte": 1,
       "origine": "bacheca 2026-10-14-5",
       "titolo": "Inserire il link affiliato NordVPN quando arriva",
-      "dettagli": "Davide si è iscritto al programma affiliati. Quando NordVPN approva, il link va nella pagina Consigli e negli articoli di tecnologia, dichiarato come affiliazione."
+      "dettagli": "Davide si è iscritto al programma affiliati. Quando NordVPN approva, il link va nella pagina Consigli e negli articoli di tecnologia, dichiarato come affiliazione.",
+      "nota": "19/10: Davide ha fatto domanda sul sito NordVPN, ancora nessuna risposta."
     },
     {
       "id": "2026-10-15-3",
@@ -515,18 +517,19 @@
       "id": "2026-10-16-1",
       "per": "davide",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "fatto",
       "volte": 1,
       "origine": "dropshipping",
       "titolo": "Chiedere a CJ certificato CE e alimentazione di tosatrice e distributore",
       "dettagli": "Tosatrice CJJJCWGY00795 (varianti A-H, ricarica USB) e distributore CJJJCWGY03426: CJ non indica la marcatura CE né, per il distributore, come si alimenta. Restano in bozza finché non arrivano i documenti.",
-      "link": "https://cjdropshipping.com"
+      "link": "https://cjdropshipping.com",
+      "esito": "19/10: Davide conferma che il certificato CE non esiste. Tosatrice e distributore non si vendono: restano in bozza, fuori dal negozio."
     },
     {
       "id": "2026-10-16-2",
       "per": "social",
       "da": "revisore-video",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming",
@@ -535,7 +538,7 @@
       "link": "https://youtube.com/shorts/Y5iRMBL4Mb0",
       "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia",
       "deciso": "2026-10-16T15:41:41.461Z",
-      "nota": "18/10: serve ancora il tuo \"sì\" in chat nella stanza. Il file scade domani, 19/10."
+      "esito": "19/10: messi in coda social Reel Instagram e video Facebook con la nota AI."
     },
     {
       "id": "2026-10-16-3",
@@ -578,7 +581,7 @@
       "id": "2026-10-17-1",
       "per": "social",
       "da": "revisore-video",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming",
@@ -586,13 +589,14 @@
       "dettagli": "Short italiano del 17/10 (fonte SpazioGames). Argomenti 4/5, video 3/5: non verificabile (video e vidIQ non raggiungibili), quindi niente rilancio automatico. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/dHlm4DuesZs",
       "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia",
-      "deciso": "2026-10-19T03:59:17.986Z"
+      "deciso": "2026-10-19T03:59:17.986Z",
+      "esito": "19/10: messi in coda social Reel Instagram e video Facebook con la nota AI."
     },
     {
       "id": "2026-10-18-1",
       "per": "social",
       "da": "revisore-video",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming",
@@ -600,7 +604,8 @@
       "dettagli": "Short italiano del 18/10 (fonte Everyeye: Microsoft smentisce l'esclusiva Xbox Cloud). Argomenti 4/5, video 3/5: non verificabile, quindi niente rilancio automatico. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/voIRtB9En_Y",
       "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia",
-      "deciso": "2026-10-19T03:59:22.000Z"
+      "deciso": "2026-10-19T03:59:22.000Z",
+      "esito": "19/10: messi in coda social Reel Instagram e video Facebook con la nota AI."
     },
     {
       "id": "2026-10-19-g1",
