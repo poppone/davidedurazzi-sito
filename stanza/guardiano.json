@@ -1,0 +1,161 @@
+{
+  "aggiornato": "2026-10-19T04:00+00:00",
+  "riassunto": {
+    "ok": 23,
+    "attenzione": 0,
+    "rotto": 1,
+    "non controllato": 1
+  },
+  "controlli": [
+    {
+      "nome": "Token Instagram",
+      "esito": "ok",
+      "messaggio": "risponde",
+      "rimedio": ""
+    },
+    {
+      "nome": "Token pagina Facebook",
+      "esito": "ok",
+      "messaggio": "risponde",
+      "rimedio": ""
+    },
+    {
+      "nome": "Chiave Gemini (redazione)",
+      "esito": "ok",
+      "messaggio": "risponde",
+      "rimedio": ""
+    },
+    {
+      "nome": "Chiave Groq",
+      "esito": "ok",
+      "messaggio": "risponde",
+      "rimedio": ""
+    },
+    {
+      "nome": "Token Pinterest",
+      "esito": "non controllato",
+      "messaggio": "PINTEREST_TOKEN non è passato al Guardiano",
+      "rimedio": ""
+    },
+    {
+      "nome": "Token GitHub GH_PAT",
+      "esito": "ok",
+      "messaggio": "risponde, senza scadenza",
+      "rimedio": ""
+    },
+    {
+      "nome": "Token del bot della chat Twitch",
+      "esito": "ok",
+      "messaggio": "valido, scade tra 60 giorni",
+      "rimedio": ""
+    },
+    {
+      "nome": "davidedurazzi-sito · Chat delle dirette",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "davidedurazzi-sito · Coda social (Reel e Pin diretti)",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-16: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "davidedurazzi-sito · Messaggi privati Instagram",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "davidedurazzi-sito · Aggiorna pagine statiche",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-17: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "davidedurazzi-sito · Pubblica bozze approvate",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "davidedurazzi-sito · Redazione del mattino",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "davidedurazzi-sito · Rinnova token Instagram",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-15: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "samaritan_v2 · Pulizia copie dei video",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "samaritan_v2 · Samaritan Auto-Poster",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "samaritan_v2 · Test",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-16: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "samaritan_v2 · Vocale di Finch",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "samaritan-notizie · Samaritan Auto-Poster",
+      "esito": "rotto",
+      "messaggio": "l'ultima esecuzione del 2026-10-18 è fallita",
+      "rimedio": "Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/39172537980"
+    },
+    {
+      "nome": "samaritan-notizie · Test",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-13: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "samaritan-animali · Ricerca CJ",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-15: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "samaritan-animali · ZampaViva TikTok",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "Sito davidedurazzi.it",
+      "esito": "ok",
+      "messaggio": "risponde",
+      "rimedio": ""
+    },
+    {
+      "nome": "Commenti del sito",
+      "esito": "ok",
+      "messaggio": "risponde",
+      "rimedio": ""
+    },
+    {
+      "nome": "Ultima diretta Twitch sul sito",
+      "esito": "ok",
+      "messaggio": "c'è l'ultima diretta salvata",
+      "rimedio": ""
+    }
+  ]
+}

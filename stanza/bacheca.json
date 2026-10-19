@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-18",
+  "aggiornato": "2026-10-19",
   "stati": [
     "da fare",
     "in corso",
@@ -601,6 +601,16 @@
       "link": "https://youtube.com/shorts/voIRtB9En_Y",
       "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia",
       "deciso": "2026-10-19T03:59:22.000Z"
+    },
+    {
+      "id": "2026-10-19-g1",
+      "per": "davide",
+      "da": "guardiano",
+      "stato": "da fare",
+      "titolo": "Guardiano: samaritan-notizie · Samaritan Auto-Poster",
+      "dettagli": "l'ultima esecuzione del 2026-10-18 è fallita. Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/39172537980",
+      "origine": "controllo del Guardiano delle chiavi",
+      "volte": 1
     }
   ]
 }
