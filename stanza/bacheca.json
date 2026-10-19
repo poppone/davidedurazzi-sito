@@ -617,6 +617,19 @@
       "origine": "controllo del Guardiano delle chiavi",
       "volte": 1,
       "esito": "19/10: letto il log. Non è un guasto: il controllo anti-invenzioni ha scartato tutti i testi (aggiungevano dettagli che il titolo non dice) e il video è stato saltato apposta, poi lo recupera la riserva. Non serve niente da Davide."
+    },
+    {
+      "id": "2026-10-19-1",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "tipo": "video",
+      "titolo": "Rilanciare lo Short \"PS5 Pro: la classifica lampo dei giochi PSSR 2.0\"",
+      "dettagli": "Short italiano di Samaritan gaming in uscita alle 14:00 del 19/10 (fonte Everyeye). Voti: argomenti 4 (notizia vera e citata), video 3 (non verificabile da qui; dall'estratto la classifica non nomina i giochi). Sotto il 4 il permesso fisso 6e non vale, quindi decidi tu. Il file del video scade dopo 4 giorni.",
+      "origine": "cronologia_trend.json EVEPr8um4DU",
+      "volte": 1,
+      "link": "https://youtube.com/shorts/EVEPr8um4DU",
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI (TikTok resta fermo fino al 1/11 per il limite Metricool)."
     }
   ]
 }
