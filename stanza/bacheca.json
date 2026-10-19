@@ -592,14 +592,15 @@
       "id": "2026-10-18-1",
       "per": "social",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming",
       "titolo": "Rilanciare lo Short \"GTA 6: non sarà solo Xbox Cloud\" su Instagram e Facebook",
       "dettagli": "Short italiano del 18/10 (fonte Everyeye: Microsoft smentisce l'esclusiva Xbox Cloud). Argomenti 4/5, video 3/5: non verificabile, quindi niente rilancio automatico. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/voIRtB9En_Y",
-      "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia"
+      "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia",
+      "deciso": "2026-10-19T03:59:22.000Z"
     }
   ]
 }
