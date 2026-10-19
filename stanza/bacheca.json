@@ -578,14 +578,15 @@
       "id": "2026-10-17-1",
       "per": "social",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming",
       "titolo": "Rilanciare lo Short \"GTA 6: il trailer riaccende il dibattito grafico\" su Instagram e Facebook",
       "dettagli": "Short italiano del 17/10 (fonte SpazioGames). Argomenti 4/5, video 3/5: non verificabile (video e vidIQ non raggiungibili), quindi niente rilancio automatico. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/dHlm4DuesZs",
-      "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia"
+      "azione": "metto in coda social un Reel Instagram e un video Facebook con questo Short e la nota AI nella didascalia",
+      "deciso": "2026-10-19T03:59:17.986Z"
     },
     {
       "id": "2026-10-18-1",
