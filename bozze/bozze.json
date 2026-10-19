@@ -1,7 +1,7 @@
 [
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "xbox-series-x-esegue-giochi-ps5-grazie-a-un-emulatore-20261019",
     "titolo": "Xbox Series X esegue giochi PS5 grazie a un emulatore",
     "sezione": "tecnologia",
@@ -49,7 +49,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "tesla-roadster-2028-evoluzione-tecnologie-e-dubbi-aperti-20261019",
     "titolo": "Tesla Roadster 2028: evoluzione, tecnologie e dubbi aperti",
@@ -98,7 +98,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "gta-6-trailer-ufficiale-e-data-di-uscita-fissata-al-19-novembre-2026-20261019",
     "titolo": "GTA 6: trailer ufficiale e data di uscita fissata al 19 novembre 2026",
     "sezione": "gaming",
