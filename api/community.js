@@ -164,7 +164,9 @@ module.exports = async (req, res) => {
     if (!u) return err(res, 401, "Devi accedere per farlo");
 
     if (a === "elimina-account") {
-      await db(["DEL", "u:" + u.id], ["DEL", "ue:" + emailKey(u.email)], ["DEL", "un:" + u.nome.toLowerCase()], ["SREM", "utenti", u.id], ["DEL", "s:" + cookie(req, "dd_sess")]);
+      await db(["DEL", "u:" + u.id], ["DEL", "ue:" + emailKey(u.email)], ["DEL", "un:" + u.nome.toLowerCase()], ["SREM", "utenti", u.id], ["DEL", "s:" + cookie(req, "dd_sess")],
+        // anche il profilo di Cerca squadra (ID di gioco e affidabilità)
+        ["DEL", "sq:p:" + u.id], ["SREM", "sq:giocatori", u.id], ["SREM", "sq:valutati", u.id], ["DEL", "sq:mie:" + u.id]);
       setCookie(res, "", 0);
       return res.json({ ok: true });
     }

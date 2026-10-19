@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Cerca squadra — overlay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+  /* Fonte Browser OBS 1920x1080, sfondo trasparente: pannello a destra con le squadre aperte
+     (prossime 6 ore) e i 5 giocatori più affidabili. Si aggiorna ogni 30 secondi.
+     ?demo=1 per provarlo con dati finti · ?lato=sinistra per spostarlo. */
+  :root{--ink:#EEF1F8;--muted:#A3AECB;--pannello:rgba(10,15,36,.92);--line:rgba(150,170,255,.22);--tesi:#7B97FF;--anti:#FF8A4C;--verde:#3DDC97;--viola:#B67CFF}
+  html,body{margin:0;width:1920px;height:1080px;background:transparent;overflow:hidden}
+  body{font-family:"Archivo",system-ui,sans-serif;color:var(--ink)}
+  .p{position:absolute;top:60px;right:60px;width:520px;background:var(--pannello);border:1px solid var(--line);border-radius:22px;padding:22px 24px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+  .p.sx{right:auto;left:60px}
+  .testa{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+  h1{margin:0;font:900 34px/1 "Archivo";font-stretch:118%;letter-spacing:-.02em}
+  .url{color:var(--tesi);font:700 18px "Archivo"}
+  ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .a{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.04);border-left:5px solid var(--tesi)}
+  .a.g-fc{border-left-color:var(--verde)} .a.g-fortnite{border-left-color:var(--viola)} .a.g-rocket{border-left-color:var(--anti)}
+  .a b{font:800 22px "Archivo"}
+  .a .ora{font:800 22px "Archivo";color:var(--tesi);text-align:right}
+  .a .info{color:var(--muted);font-size:17px}
+  .a .liberi{font:700 17px "Archivo";text-align:right}
+  h2{margin:18px 0 8px;font:800 20px "Archivo";color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  ol{margin:0;padding:0 0 0 26px;display:grid;gap:4px;font-size:19px}
+  ol span{color:var(--verde);font-weight:700;margin-left:8px}
+  .vuoto{color:var(--muted);font-size:19px;padding:6px 0}
+</style>
+</head>
+<body>
+<div class="p" id="p">
+  <div class="testa"><h1>Cerca squadra</h1><span class="url">davidedurazzi.it/squadre</span></div>
+  <ul id="lista"><li class="vuoto">Caricamento…</li></ul>
+  <h2>I più affidabili</h2>
+  <ol id="top"></ol>
+</div>
+<script>
+(function () {
+  "use strict";
+  var q = new URLSearchParams(location.search), $ = function (id) { return document.getElementById(id); };
+  if (q.get("lato") === "sinistra") $("p").classList.add("sx");
+  var CHIAVI = { "EA FC (FIFA)": "fc", "Fortnite": "fortnite", "Rocket League": "rocket" };
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function ora(ms) { return Date.now() >= ms ? "ORA" : new Date(ms).toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" }); }
+  function disegna(j) {
+    $("lista").innerHTML = j.annunci.length ? j.annunci.map(function (a) {
+      return '<li class="a g-' + (CHIAVI[a.gioco] || "x") + '"><b>' + esc(a.gioco) + '</b><span class="ora">' + ora(a.inizio) + '</span>' +
+        '<span class="info">' + esc(a.piatt) + ' · ' + esc(a.livello) + ' · ' + esc(a.nome) + '</span><span class="liberi">' + a.liberi + (a.liberi === 1 ? ' posto' : ' posti') + '</span></li>';
+    }).join("") : '<li class="vuoto">Nessuna squadra aperta: creala tu dal sito!</li>';
+    $("top").innerHTML = j.classifica.length ? j.classifica.map(function (c) { return "<li>" + esc(c.nome) + "<span>" + c.perc + "%</span></li>"; }).join("") : '<li class="vuoto" style="list-style:none;margin-left:-26px">La classifica parte con le prime partite.</li>';
+  }
+  var demo = { annunci: [
+    { gioco: "EA FC (FIFA)", piatt: "PlayStation", livello: "Competitivo", inizio: Date.now() + 20 * 60000, liberi: 3, nome: "Marco_10" },
+    { gioco: "Fortnite", piatt: "Crossplay", livello: "Tranquillo", inizio: Date.now() + 50 * 60000, liberi: 2, nome: "Giuly" },
+    { gioco: "Rocket League", piatt: "PC", livello: "Medio", inizio: Date.now() + 95 * 60000, liberi: 1, nome: "TurboAle" }
+  ], classifica: [{ nome: "Giuly", perc: 100 }, { nome: "Marco_10", perc: 96 }, { nome: "TurboAle", perc: 92 }] };
+  function carica() {
+    if (q.get("demo") === "1") return disegna(demo);
+    fetch("/api/squadre?a=overlay").then(function (r) { return r.json(); }).then(disegna).catch(function () {});
+  }
+  carica(); setInterval(carica, 30000);
+})();
+</script>
+</body>
+</html>

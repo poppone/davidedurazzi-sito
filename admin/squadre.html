@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin Cerca squadra</title>
+<link rel="icon" type="image/png" href="/assets/logo-64.png">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .mod{max-width:820px;margin:0 auto;padding:1.5rem clamp(1rem,4vw,2rem) 4rem}
+  .mod h1{font:800 2rem/1.1 var(--sans);margin:.5rem 0 1rem}
+  .mod h2{font:800 1.2rem var(--sans);margin:0 0 .8rem;display:flex;align-items:center;gap:.6rem}
+  .sez{margin:2rem 0}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.6rem;margin:1rem 0}
+  .stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:.7rem .9rem}
+  .stat b{display:block;font:800 1.7rem var(--sans)}
+  .stat span{color:var(--muted);font-size:.85rem}
+  .stat.alert{border-color:var(--anti)}
+  .opzioni{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;justify-content:space-between;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem}
+  .opzioni label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer}
+  .opzioni small{display:block;color:var(--muted)}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:.8rem 1rem;margin-bottom:.6rem}
+  .card .top2{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+  .card .dove{color:var(--muted);font-size:.85rem}
+  .card p{margin:.4rem 0 .7rem;white-space:pre-line;overflow-wrap:anywhere}
+  .badge{font:700 .72rem var(--sans);border-radius:999px;padding:.15rem .6rem;border:1px solid var(--line);color:var(--muted)}
+  .badge.on{border-color:#2e9b5b;color:#2e9b5b}
+  .badge.att{border-color:#e0a000;color:#e0a000}
+  .badge.off{border-color:var(--anti);color:var(--anti)}
+  .acts{display:flex;gap:.5rem;flex-wrap:wrap}
+  .acts .btn{min-height:38px;padding:.4rem .9rem;font-size:.88rem}
+  .btn.rosso{border-color:var(--anti);color:var(--anti)}
+  .vuoto,.esito{color:var(--muted)}
+  .conta{background:var(--ink);color:var(--bg);border-radius:999px;font-size:.8rem;padding:.1rem .6rem}
+  .login{display:grid;gap:.7rem;max-width:360px}
+  .login input{width:100%;font:400 1rem var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:.65rem .75rem}
+</style>
+</head>
+<body>
+<main class="mod">
+  <a href="/admin/">← Pannello admin</a>
+  <h1>Cerca squadra</h1>
+  <p class="esito">Overlay per OBS (fonte Browser 1920x1080): <code>https://www.davidedurazzi.it/overlay/squadre</code> · prova con <code>?demo=1</code></p>
+  <div id="app"></div>
+</main>
+<script>
+(function () {
+  var app = document.getElementById("app"), pw = sessionStorage.getItem("pw") || "";
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function api(a, corpo) {
+    return fetch("/api/squadre?a=" + a, { method: "POST", headers: { "Content-Type": "application/json", "x-admin-password": pw }, body: JSON.stringify(corpo || {}) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.errore || "Errore"); return j; }); });
+  }
+  function login(m) {
+    app.innerHTML = '<form class="login" id="f"><label>Password<input type="password" id="p" required></label><button class="btn pieno" type="submit">Entra</button>' + (m ? '<p class="esito">' + esc(m) + '</p>' : '') + '</form>';
+    document.getElementById("f").onsubmit = function (e) { e.preventDefault(); pw = document.getElementById("p").value; sessionStorage.setItem("pw", pw); carica(); };
+  }
+  function carica() {
+    api("admin-elenco").then(disegna).catch(function (e) {
+      if (/Password/.test(e.message)) { sessionStorage.removeItem("pw"); login("Password errata."); } else app.innerHTML = '<p class="vuoto">' + esc(e.message) + '</p>';
+    });
+  }
+  function disegna(d) {
+    var segnalati = d.annunci.filter(function (a) { return a.nascosto || a.segn; });
+    var h = '<div class="stats"><div class="stat"><b>' + d.giocatori + '</b><span>Profili giocatore</span></div>' +
+      '<div class="stat"><b>' + d.annunci.length + '</b><span>Annunci aperti</span></div>' +
+      '<div class="stat"><b>' + d.valutati + '</b><span>Con presenze</span></div>' +
+      '<div class="stat' + (segnalati.length ? " alert" : "") + '"><b>' + segnalati.length + '</b><span>Segnalati/nascosti</span></div></div>';
+    h += '<div class="sez"><h2>Annunci <span class="conta">' + d.annunci.length + '</span></h2>' + (d.annunci.length ? d.annunci.map(function (a) {
+      var bl = d.bloccati.indexOf(a.uid) >= 0;
+      return '<div class="card" data-id="' + a.id + '" data-uid="' + a.uid + '"><div class="top2"><span class="badge">' + esc(a.gioco) + ' · ' + esc(a.piatt) + '</span><b>' + esc(a.nome) + '</b>' +
+        (a.nascosto ? '<span class="badge off">Nascosto</span>' : '<span class="badge on">Visibile</span>') + (a.segn ? '<span class="badge off">' + a.segn + ' segnalazioni</span>' : '') + (bl ? '<span class="badge off">Utente bloccato</span>' : '') +
+        '<span class="dove">' + new Date(a.inizio).toLocaleString("it-IT", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) + ' · ' + a.iscritti + '/' + a.posti + '</span></div>' +
+        '<p>' + esc(a.note || "(nessuna nota)") + '</p><div class="acts">' +
+        '<button class="btn" data-az="nascondi" data-v="' + (a.nascosto ? "0" : "1") + '" type="button">' + (a.nascosto ? "Rendi visibile" : "Nascondi") + '</button>' +
+        '<button class="btn rosso" data-az="blocca" data-v="' + (bl ? "0" : "1") + '" type="button">' + (bl ? "Sblocca utente" : "Blocca utente") + '</button></div></div>';
+    }).join("") : '<p class="vuoto">Nessun annuncio aperto.</p>') + '</div>';
+    h += '<div class="sez"><h2>Classifica affidabilità</h2>' + (d.classifica.length ? '<ol>' + d.classifica.map(function (c) { return '<li><b>' + esc(c.nome) + '</b> · ' + c.perc + '% (' + c.pres + '/' + c.tot + ')</li>'; }).join("") + '</ol>' : '<p class="vuoto">Ancora vuota.</p>') + '</div>';
+    app.innerHTML = h;
+    app.querySelectorAll(".card .btn").forEach(function (b) {
+      b.onclick = function () {
+        var c = b.closest(".card"), v = b.dataset.v === "1";
+        if (b.dataset.az === "blocca" && v && !confirm("Bloccare questo utente? Non potrà più creare annunci né unirsi.")) return;
+        b.disabled = true;
+        var p = b.dataset.az === "nascondi" ? api("admin-nascondi", { id: c.dataset.id, nascondi: v }) : api("admin-blocca", { uid: c.dataset.uid, blocca: v });
+        p.then(carica).catch(function (e) { alert(e.message); b.disabled = false; });
+      };
+    });
+  }
+  if (pw) carica(); else login();
+})();
+</script>
+</body>
+</html>
