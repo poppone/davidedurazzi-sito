@@ -1,0 +1,16 @@
+{
+  "name": "Cerca squadra — Davide Durazzi",
+  "short_name": "Cerca squadra",
+  "description": "Trova compagni di gioco per EA FC, Fortnite e Rocket League.",
+  "start_url": "/squadre",
+  "scope": "/squadre",
+  "display": "standalone",
+  "background_color": "#070B18",
+  "theme_color": "#070B18",
+  "lang": "it",
+  "icons": [
+    { "src": "/assets/logo-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/logo-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

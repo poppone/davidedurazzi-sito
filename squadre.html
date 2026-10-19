@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/piazza.css">
+<link rel="stylesheet" href="/squadre.css">
+<link rel="icon" type="image/png" href="/assets/logo-64.png">
+<link rel="apple-touch-icon" href="/assets/logo-192.png">
+<link rel="manifest" href="/squadre.webmanifest">
+<meta name="theme-color" content="#070B18">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cerca squadra">
+<title>Cerca squadra — Davide Durazzi</title>
+<meta name="description" content="Trova compagni di gioco per EA FC, Fortnite e Rocket League. Annunci veloci e un punteggio di affidabilità basato su chi si presenta davvero.">
+</head>
+<body data-page="squadre">
+<header class="top"><div class="wrap">
+  <a class="logo" href="/"><img src="/assets/logo-64.png" alt="" width="34" height="34">Davide Durazzi</a>
+  <nav aria-label="Sezioni">
+    <a href="/#diretta">Diretta</a><a href="/#contraddittorio">Il Contraddittorio</a><a href="/#articoli">Articoli</a><a href="/#video">Video</a><a href="/#gioco">Il Sistema</a><a href="/#app">Ricordati</a><a href="/#offerte">Offerte</a><a href="/consigli">Consigli</a><a href="/piazza">Piazza Aperta</a><a href="/squadre" aria-current="page">Cerca squadra</a>
+  </nav>
+</div></header>
+<main class="wrap pz sq">
+  <h1>Cerca squadra</h1>
+  <p class="intro">Trova gente con cui giocare stasera. Pubblichi un annuncio, chi si unisce vede il tuo ID e vi aggiungete in gioco. Dopo la partita confermate chi c'era: così nasce l'<a href="#regole">affidabilità</a>.</p>
+  <div class="sq-installa" id="installa" hidden>
+    <span>Tienila sul telefono come un'app.</span>
+    <button class="btn" id="bInstalla" type="button">Installa</button>
+  </div>
+  <p class="small" id="iosHint" hidden>Su iPhone: tocca Condividi e poi «Aggiungi alla schermata Home».</p>
+
+  <div id="barra" class="pz-barra"></div>
+
+  <div id="accesso" class="pz-box" hidden>
+    <p class="small">Usa lo stesso account della <a href="/piazza">Piazza Aperta</a>.</p>
+    <div class="pz-tabs" role="tablist">
+      <button type="button" data-t="entra" aria-pressed="true">Entra</button>
+      <button type="button" data-t="reg" aria-pressed="false">Crea account</button>
+    </div>
+    <form id="fEntra" class="pz-form" autocomplete="on">
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="btn pieno" type="submit">Entra</button>
+    </form>
+    <form id="fReg" class="pz-form" autocomplete="on" hidden>
+      <label>Nome pubblico<input name="nome" autocomplete="nickname" minlength="3" maxlength="24" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Password (min. 8 caratteri)<input name="password" type="password" autocomplete="new-password" minlength="8" required></label>
+      <label class="trappola" aria-hidden="true">Sito<input name="sito" tabindex="-1" autocomplete="off"></label>
+      <label class="pz-chk"><input type="checkbox" name="privacy" required> Ho letto l'<a href="/privacy" target="_blank">informativa privacy</a> (obbligatorio)</label>
+      <label class="pz-chk"><input type="checkbox" name="news"> Voglio ricevere novità e avvisi sulle dirette via email (facoltativo)</label>
+      <button class="btn pieno" type="submit">Crea account</button>
+    </form>
+    <p class="nota" id="esitoAcc" role="status"></p>
+  </div>
+
+  <section id="profilo" class="pz-box" hidden>
+    <h2>Il tuo profilo giocatore</h2>
+    <p class="small">Inserisci almeno un ID. Lo vedono <strong>solo</strong> le persone nella tua stessa squadra, mai gli altri.</p>
+    <form id="fProfilo" class="pz-form sq-griglia">
+      <label>PlayStation (PSN)<input name="psn" maxlength="32" autocomplete="off"></label>
+      <label>Xbox (Gamertag)<input name="xbox" maxlength="32" autocomplete="off"></label>
+      <label>Epic Games<input name="epic" maxlength="32" autocomplete="off"></label>
+      <label>EA ID<input name="ea" maxlength="32" autocomplete="off"></label>
+      <label>Steam<input name="steam" maxlength="32" autocomplete="off"></label>
+      <label>Nintendo<input name="nintendo" maxlength="32" autocomplete="off"></label>
+      <label class="pz-chk sq-tutta"><input type="checkbox" name="eta" required> Ho almeno 16 anni (obbligatorio)</label>
+      <div class="pz-riga sq-tutta"><button class="btn" id="bDelProf" type="button" hidden>Elimina profilo giocatore</button><button class="btn pieno" type="submit">Salva profilo</button></div>
+    </form>
+    <p class="nota" id="esitoProf" role="status"></p>
+  </section>
+
+  <section class="pz-sez" id="nuovo" hidden>
+    <h2>Pubblica un annuncio</h2>
+    <form id="fCrea" class="pz-form sq-griglia">
+      <label>Gioco<select name="gioco" id="selGioco"></select></label>
+      <label>Piattaforma<select name="piatt" id="selPiatt"></select></label>
+      <label>Quando<input name="inizio" id="inQuando" type="datetime-local" required></label>
+      <label>Posti liberi<input name="posti" id="inPosti" type="number" min="1" max="10" value="2" required></label>
+      <label>Livello<select name="livello" id="selLiv"></select></label>
+      <label class="sq-tutta">Note (facoltative)<input name="note" maxlength="140" placeholder="Es. Pro Clubs, cerco difensore · Arena · 2v2 ranked"></label>
+      <div class="pz-riga sq-tutta"><span class="small">Massimo 2 annunci aperti. Scade da solo 2 ore dopo l'inizio.</span><button class="btn pieno" type="submit">Pubblica</button></div>
+    </form>
+    <p class="nota" id="esitoCrea" role="status"></p>
+  </section>
+
+  <section class="pz-sez" id="mie" hidden>
+    <h2>Le mie partite</h2>
+    <ul id="listaMie" class="sq-lista"></ul>
+  </section>
+
+  <section class="pz-sez">
+    <div class="sq-testa">
+      <h2>Annunci</h2>
+      <div class="sq-filtri" id="filtri" role="group" aria-label="Filtra per gioco"></div>
+    </div>
+    <ul id="annunci" class="sq-lista"><li class="vuoto">Caricamento…</li></ul>
+  </section>
+
+  <section class="pz-sez">
+    <h2>I più affidabili</h2>
+    <ol id="classifica" class="sq-classifica"></ol>
+    <p class="small">Entra in classifica chi ha almeno 3 partite valutate.</p>
+  </section>
+
+  <section class="pz-sez" id="regole">
+    <h2>Come funziona l'affidabilità</h2>
+    <ul class="sq-regole">
+      <li><strong>Contano i fatti, non le stelline.</strong> Dopo l'orario di inizio, ognuno nella squadra segna chi si è presentato.</li>
+      <li><strong>Decide la maggioranza.</strong> Per ogni giocatore contano le conferme degli altri membri, più la sua se ha confermato anche lui. In caso di parità la partita non conta: un singolo non può rovinare la media a nessuno. Chi non si presenta e non conferma, invece, risulta assente.</li>
+      <li><strong>Avvisa per tempo.</strong> Annullare o lasciare una squadra meno di un'ora prima dell'inizio conta come assenza.</li>
+      <li><strong>Badge «Affidabile»</strong> con almeno 5 partite valutate e il 90% di presenze.</li>
+      <li>Le conferme restano aperte 48 ore, poi la partita si chiude da sola.</li>
+      <li>Niente chat qui dentro: vi aggiungete con gli ID e parlate in gioco. Un annuncio con 3 segnalazioni sparisce finché non lo controllo.</li>
+    </ul>
+  </section>
+</main>
+<footer><div class="wrap"><strong>Davide Durazzi</strong><span class="small"><a href="/privacy">Privacy</a> · <a href="/piazza">Piazza Aperta</a> · <a href="/">Home</a></span></div></footer>
+<script src="/squadre.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
