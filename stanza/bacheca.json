@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-19",
+  "aggiornato": "2026-10-20T06:10:00+00:00",
   "stati": [
     "da fare",
     "in corso",
@@ -633,6 +633,45 @@
       "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI (TikTok resta fermo fino al 1/11 per il limite Metricool).",
       "deciso": "2026-10-20T03:56:50.143Z",
       "esito": "20/10: messi in coda social il Reel Instagram e il video Facebook (con nota AI). TikTok dopo il 1/11 (limite Metricool)."
+    },
+    {
+      "id": "2026-10-20-1",
+      "per": "social",
+      "da": "revisore-video",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-notizie Lr8yCw1ZrZA",
+      "titolo": "Rilanciare lo Short \"Inter: da 0-1 a 3-1, avanza al Dall'Ara\" su Instagram e Facebook",
+      "dettagli": "Short italiano di Samaritan notizie del 19/10 (fonte ANSA). Argomenti 4/5 (notizia sportiva con fonte), video 3/5: non verificabile da qui. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 23/10. TikTok fermo fino al 31/10.",
+      "link": "https://youtube.com/shorts/Lr8yCw1ZrZA",
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
+    },
+    {
+      "id": "2026-10-20-2",
+      "per": "social",
+      "da": "revisore-argomenti",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-notizie dVFsufxRRgU",
+      "titolo": "Rilanciare lo Short \"Manovra: 5 miliardi da banche e assicurazioni\" su Instagram e Facebook",
+      "dettagli": "Short italiano di Samaritan notizie del 19/10 (fonte Corriere della Sera). È politica: il permesso fisso 6e non vale, decidi tu. Argomenti 4/5, video 3/5 (non verificabile). Il file scade il 23/10.",
+      "link": "https://youtube.com/shorts/dVFsufxRRgU",
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
+    },
+    {
+      "id": "2026-10-20-3",
+      "per": "davide",
+      "da": "direttore",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "clip-live 2899935903",
+      "titolo": "Pubblicare su YouTube 2 clip della live del 13/10",
+      "dettagli": "Il taglio di stanotte ha rifatto le 5 clip con i titoli di Groq (la chiave nuova funziona). Finch propone le 2 senza avvisi e col punteggio più alto: \"Nuovo format: schemi veloci e discussioni in diretta\" (00699, punteggio 100) e \"Collaborazioni gaming e calcio: il dilemma con l'amico\" (00897, punteggio 97). Le altre 3 (eSIM, Damiano, nuova tecnologia) hanno l'avviso \"insulti\" e restano ferme. Durano 34 secondi: non hanno ancora la versione lunga per TikTok (è arrivata dopo il taglio).",
+      "link": "https://github.com/poppone/samaritan_v2/tree/main/clip_live/da_pubblicare",
+      "azione": "Metto le 2 schede in \"approvato\" con orario 16:00 del 21/10 e del 22/10: le carica su YouTube il workflow Clip Live."
     }
   ]
 }

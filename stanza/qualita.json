@@ -613,6 +613,76 @@
         }
       ],
       "media": 3.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short it Lr8yCw1ZrZA del 19/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 4,
+          "motivo": "rimonta Inter, fonte ANSA"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short it Lr8yCw1ZrZA del 19/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "attacco e accuratezza",
+          "voto": 3,
+          "motivo": "non verificabile: file del video non raggiungibile da qui"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short it dVFsufxRRgU del 19/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 4,
+          "motivo": "manovra, fonte Corriere; tema politico"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short it dVFsufxRRgU del 19/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "attacco e accuratezza",
+          "voto": 3,
+          "motivo": "non verificabile: file del video non raggiungibile da qui"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "grafico",
+      "lavoro": "carosello Tesla Roadster 2028 (4 slide)",
+      "revisore": "grafico",
+      "punti": [
+        {
+          "punto": "regole di design/SISTEMA.md",
+          "voto": 5,
+          "motivo": "leggibile, colori e caratteri giusti, firma, numerazione e fonti al loro posto, nessuna foto"
+        }
+      ],
+      "media": 5.0
     }
   ]
 }
