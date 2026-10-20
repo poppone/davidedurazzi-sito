@@ -63,7 +63,9 @@
       "revisori_qualita": [
         "revisore-testi",
         "revisore-video"
-      ]
+      ],
+      "stato": "chiuso",
+      "chiuso": "20/10/2026: Davide ha chiuso il negozio ZampaViva (niente partita IVA). Non si legge, non si vota, non si aprono compiti."
     },
     {
       "id": "videomaker",
@@ -150,7 +152,9 @@
         "Nessun ordine pagato fermo da più di 3 giorni senza segnalazione",
         "Le risposte usano i dati veri dell'ordine",
         "Nessuna promessa di rimborso o sconto non decisa da Davide"
-      ]
+      ],
+      "stato": "chiuso",
+      "chiuso": "20/10/2026: Davide ha chiuso il negozio ZampaViva (niente partita IVA). Non si legge, non si vota, non si aprono compiti."
     },
     {
       "id": "procacciatore-sponsor",
@@ -211,7 +215,9 @@
         "Il prodotto spinto non è uno già spinto negli ultimi 7 giorni",
         "Testo fedele alla descrizione Shopify, niente promesse inventate",
         "Il giorno dopo misura visite e ordini arrivati da quel canale"
-      ]
+      ],
+      "stato": "chiuso",
+      "chiuso": "20/10/2026: Davide ha chiuso il negozio ZampaViva (niente partita IVA). Non si legge, non si vota, non si aprono compiti."
     },
     {
       "id": "grafico",

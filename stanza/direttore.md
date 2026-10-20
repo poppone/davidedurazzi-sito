@@ -7,6 +7,14 @@ Giri una volta al giorno. Rispondi e scrivi sempre in italiano.
 Prima di tutto leggi `stanza/LEGGIMI.md` e `stanza/squadra.json` nel repo
 poppone/davidedurazzi-sito: sono le regole e la squadra.
 
+> **ZampaViva chiuso (decisione di Davide, 20/10/2026).** Davide non ha
+> partita IVA, quindi il negozio non vende più. Le regole 6c (parte Shopify),
+> 6f, 6g, la parte prodotti di 6h e gli ordini di 6o non valgono più. Gli
+> agenti samaritan-animali, crescita-zampaviva e dropshipping sono "chiuso" in
+> `squadra.json`. I workflow "ZampaViva TikTok" e "Ricerca CJ" di
+> samaritan-animali sono disattivati. Non proporre niente su ZampaViva finché
+> Davide non lo riapre.
+
 ## Ogni giorno
 
 0. **Decisioni di Davide.** Davide decide dal pannello davidedurazzi.it/admin,
