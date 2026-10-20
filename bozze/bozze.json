@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "grand-theft-auto-vi-trailer-data-di-uscita-19-novembre-2026-e-novita-t-20261020",
     "titolo": "Grand Theft Auto VI: trailer, data di uscita 19 novembre 2026 e novità tecniche",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "microsoft-aggiunge-protezioni-agli-agenti-ai-dopo-abusi-di-anthropic-e-20261020",
     "titolo": "Microsoft aggiunge protezioni agli agenti AI dopo abusi di Anthropic e OpenAI",
@@ -93,7 +93,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "android-auto-introduce-il-supporto-ai-profili-di-lavoro-20261020",
     "titolo": "Android Auto introduce il supporto ai profili di lavoro",
     "sezione": "tecnologia",
