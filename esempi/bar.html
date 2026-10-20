@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Caffè Aurelio — sito di esempio</title>
+<meta name="description" content="Sito di esempio per un bar, con attività inventata. Realizzato da Davide Durazzi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6ef;--ink:#2a1d14;--muted:#6f5d4f;--acc:#b5532a;--acc2:#d89a2b;--card:#fffdf9;--line:#ecdfcf}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 32px);margin-inline:auto}
+.demo{background:#10162B;color:#fff;font:600 .85rem/1.4 system-ui,sans-serif;text-align:center;padding:.55rem 16px}
+.demo a{color:#9db2ff}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+.logo{font:800 1.25rem/1 'Fraunces',Georgia,serif;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--acc)}
+nav{display:flex;gap:1.1rem;font-weight:600;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+@media (max-width:640px){nav{display:none}}
+.hero{padding:clamp(3rem,9vw,6.5rem) 0 clamp(2.5rem,6vw,4rem);background:radial-gradient(700px 360px at 85% 10%,#f6dcc4,transparent 70%),#fbf6ef}
+.hero p.tag{margin:0 0 .9rem;font:700 .8rem/1 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.hero h1{margin:0 0 1rem;font:800 clamp(2.3rem,7vw,4.4rem)/1 'Fraunces',Georgia,serif;letter-spacing:-.03em;max-width:16ch;text-wrap:balance}
+.hero .lead{margin:0 0 1.6rem;font-size:1.15rem;color:var(--muted);max-width:52ch}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.3rem;border-radius:999px;font:700 1rem/1 system-ui,sans-serif;text-decoration:none;border:2px solid var(--ink)}
+.btn.pieno{background:var(--acc);border-color:var(--acc);color:#fff}
+.info{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));margin-top:2.2rem}
+.info div{padding:1rem 1.1rem;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.info b{display:block;font:700 .78rem/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+section{padding:clamp(2.6rem,7vw,4.5rem) 0;border-top:1px solid var(--line)}
+h2{margin:0 0 1.4rem;font:800 clamp(1.7rem,4.5vw,2.6rem)/1.05 'Fraunces',Georgia,serif;letter-spacing:-.02em}
+.servizi{list-style:none;margin:0;padding:0;display:grid;gap:.8rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.servizi li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1rem 1.1rem;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.servizi span{color:var(--muted);font-size:.92rem;display:block}
+.servizi strong{font-weight:700}
+.prezzo{font:800 1.15rem/1 'Fraunces',Georgia,serif;color:var(--acc);white-space:nowrap}
+.galleria{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+.foto{aspect-ratio:4/3;border-radius:14px;display:grid;place-items:end start;padding:1rem;color:#fff;font:700 1rem/1.2 system-ui,sans-serif;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+.recensioni{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+blockquote{margin:0;padding:1.2rem;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+blockquote p{margin:0 0 .6rem;font-size:1.02rem}
+blockquote cite{font-style:normal;color:var(--muted);font-size:.9rem}
+.stelle{color:var(--acc2);letter-spacing:.1em}
+.dove{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));align-items:start}
+.mappa{aspect-ratio:4/3;border-radius:16px;border:1px solid var(--line);background:
+  linear-gradient(90deg,transparent 48%,var(--line) 48% 52%,transparent 52%),
+  linear-gradient(0deg,transparent 30%,var(--line) 30% 33%,transparent 33%),
+  linear-gradient(0deg,transparent 70%,var(--line) 70% 72%,transparent 72%),var(--card);display:grid;place-items:center}
+.pin{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--acc);box-shadow:0 6px 14px rgba(0,0,0,.25)}
+table{width:100%;border-collapse:collapse}
+td{padding:.55rem 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+footer{padding:2rem 0 5.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.wa{position:fixed;right:16px;bottom:16px;z-index:9;display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.2rem;border-radius:999px;background:#1f9d55;color:#fff;font:700 1rem/1 system-ui,sans-serif;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+<div class="demo">Sito di esempio con un'attività inventata · Realizzato da Davide Durazzi · <a href="/siti">Vuoi un sito così per la tua attività?</a></div>
+<header><div class="wrap">
+  <a class="logo" href="#">Caffè <span>Aurelio</span></a>
+  <nav aria-label="Sezioni"><a href="#servizi">Il menu</a><a href="#lavori">Foto</a><a href="#recensioni">Recensioni</a><a href="#dove">Dove siamo</a></nav>
+</div></header>
+<main>
+<div class="hero"><div class="wrap">
+  <p class="tag">Bar e colazioni · Roma Aurelio</p>
+  <h1>Cornetti caldi dalle 6:30 e pranzo veloce a 9 €.</h1>
+  <p class="lead">Colazioni con lieviti fatti da noi, pranzo del giorno e aperitivo con il tagliere. Prenota il tavolo per il pranzo con un messaggio.</p>
+  <div class="btns"><a class="btn pieno" href="tel:+390600000000">Chiama ora</a><a class="btn" href="#dove">Come arrivare</a></div>
+  <div class="info"><div><b>Aperti oggi</b>6:30–20:00</div><div><b>Pranzo</b>12:30–15:00</div><div><b>Tavoli fuori</b>Sì, anche d'inverno</div></div>
+</div></div>
+<section id="servizi"><div class="wrap">
+  <h2>Il menu</h2>
+  <ul class="servizi"><li><div><strong>Cappuccino e cornetto</strong><span>Cornetto vuoto, crema o integrale</span></div><span class="prezzo">2,80 €</span></li><li><div><strong>Pranzo del giorno</strong><span>Primo, acqua e caffè</span></div><span class="prezzo">9 €</span></li><li><div><strong>Insalatona</strong><span>Tre combinazioni, cambiano ogni settimana</span></div><span class="prezzo">8,50 €</span></li><li><div><strong>Tramezzini</strong><span>Fatti al momento</span></div><span class="prezzo">2,50 €</span></li><li><div><strong>Aperitivo</strong><span>Calice o spritz con tagliere</span></div><span class="prezzo">8 €</span></li><li><div><strong>Torta della casa</strong><span>La fetta</span></div><span class="prezzo">3,50 €</span></li></ul>
+</div></section>
+<section id="lavori"><div class="wrap">
+  <h2>Il locale</h2>
+  <div class="galleria"><div class="foto" style="background:linear-gradient(135deg,#2a1d14,#b5532a)">Il bancone</div><div class="foto" style="background:linear-gradient(135deg,#d89a2b,#f6dcc4)">Colazione</div><div class="foto" style="background:linear-gradient(135deg,#6f5d4f,#ecdfcf)">Tavoli fuori</div></div>
+</div></section>
+<section id="recensioni"><div class="wrap">
+  <h2>Cosa dicono di noi</h2>
+  <div class="recensioni"><blockquote><div class="stelle">★★★★★</div><p>Il miglior cornetto della zona e il pranzo a 9 € è un affare.</p><cite>Paolo M. · recensione di esempio</cite></blockquote><blockquote><div class="stelle">★★★★★</div><p>Personale gentilissimo, ci vengo ogni mattina prima del lavoro.</p><cite>Sara T. · recensione di esempio</cite></blockquote></div>
+</div></section>
+<section id="dove"><div class="wrap">
+  <h2>Dove siamo</h2>
+  <div class="dove">
+    <div class="mappa" role="img" aria-label="Mappa di esempio"><div class="pin"></div></div>
+    <div><p><strong>Piazza di esempio 3, Roma</strong><br>Aurelio · a due passi dalla metro</p><table><tr><td>Lunedì–Sabato</td><td>6:30–20:00</td></tr><tr><td>Domenica</td><td>7:00–13:00</td></tr></table></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">Caffè Aurelio · Piazza di esempio 3, Roma · Attività inventata, sito di esempio realizzato da <a href="/siti">Davide Durazzi</a>.</div></footer>
+<a class="wa" href="#" aria-label="Scrivici su WhatsApp">Prenota il tavolo</a>
+</body>
+</html>
