@@ -235,6 +235,14 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
      di tipo "video" come prima.
    Link del compito: lo Short su YouTube. Il permesso vale solo per questi
    Short: articoli, caroselli, email e spese restano da approvare.
+   **Short motori (samaritan-notizie, decisione di Davide del 20/10/2026):**
+   - al massimo 1 al giorno, il più votato dei due e solo se entrambi i voti
+     sono almeno 4: Reel su Instagram davidedurazzi.it e video Facebook in
+     coda, con la nota AI. NON su TikTok @davidedurazzi: su TikTok va il
+     profilo motori (ex ZampaViva), che pubblica Davide o Metricool se c'è;
+   - LinkedIn, solo pagina "Davide Durazzi Redazione" e mai il profilo
+     personale: 2-3 Short motori a settimana tra i più votati, appena
+     LI_ACCESS_TOKEN e LI_ORG_ID sono attivi. Fino ad allora niente.
 6f. **Spese in attesa.** Il secondo brand Metricool per il TikTok di
    ZampaViva è a pagamento: proponilo come compito "spesa" solo quando
    ZampaViva ha avuto almeno una vendita, con costo ed entrate del negozio.
