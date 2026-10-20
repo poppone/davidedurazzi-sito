@@ -64,16 +64,10 @@
           "turno": "4 Short al giorno"
         },
         {
-          "nome": "Samaritan · Notizie",
-          "ruolo": "Il telegiornale in 60 secondi sul canale Notizie in 60 secondi",
+          "nome": "Samaritan · Motori",
+          "ruolo": "Le notizie su auto e moto in 60 secondi, con la fonte, sul canale Motori in 60 secondi (YouTube e TikTok)",
           "stato": "in prova",
-          "turno": "Riacceso il 17 ottobre: 2 Short al giorno"
-        },
-        {
-          "nome": "Samaritan · Animali",
-          "ruolo": "Video per TikTok che portano al negozio ZampaViva",
-          "stato": "in prova",
-          "turno": "In avvio"
+          "turno": "Dal 21 ottobre: 2 Short al giorno"
         },
         {
           "nome": "Clip dalle live",
@@ -116,21 +110,9 @@
           "turno": "A ogni articolo approvato"
         },
         {
-          "nome": "Assistenza ZampaViva",
-          "ruolo": "Legge le domande dei clienti del negozio e prepara le risposte con i dati veri dell'ordine: le approvo io",
-          "stato": "attivo",
-          "turno": "Ogni sera alle 18:52"
-        },
-        {
           "nome": "Vendite",
-          "ruolo": "Ogni giorno propone una mossa per portare entrate: negozio, affiliazioni o sponsor",
+          "ruolo": "Ogni giorno propone una mossa per portare entrate: siti per attività locali, affiliazioni o sponsor",
           "stato": "attivo",
-          "turno": "Ogni giorno"
-        },
-        {
-          "nome": "Crescita ZampaViva",
-          "ruolo": "Pubblica i Pin dei prodotti su Pinterest e sceglie il prodotto del giorno da raccontare in video",
-          "stato": "in prova",
           "turno": "Ogni giorno"
         },
         {
@@ -194,12 +176,6 @@
       "cosa": "Videogioco di satira politica italiana",
       "stato": "pubblicato",
       "link": "https://durazzidev.itch.io/il-sistema"
-    },
-    {
-      "nome": "ZampaViva",
-      "cosa": "Negozio online di accessori per cani e gatti, spedizioni dal fornitore",
-      "stato": "in prova",
-      "link": ""
     },
     {
       "nome": "Il Contraddittorio per tutti",
