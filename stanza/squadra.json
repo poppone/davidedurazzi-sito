@@ -26,10 +26,10 @@
     },
     {
       "id": "samaritan-notizie",
-      "nome": "Samaritan · Notizie",
+      "nome": "Samaritan · Motori",
       "reparto": "Video",
       "dove": "GitHub poppone/samaritan-notizie, workflow samaritan.yml",
-      "produce": "Short di notizie su @Notiziein60secondioff",
+      "produce": "Short di motori (auto, elettriche, prezzi, F1, MotoGP) su YouTube @Motoriin60secondi; Davide li rilancia sul TikTok ex ZampaViva",
       "come_leggerlo": "run di samaritan.yml delle ultime 24 ore; performance.json; vidIQ sul canale",
       "pubblica_da_solo": true,
       "revisore": "fact-checker",
@@ -43,7 +43,8 @@
         "revisore-argomenti",
         "revisore-testi",
         "revisore-video"
-      ]
+      ],
+      "nota": "20/10/2026: il canale notizie è diventato motori (PR #4 di samaritan-notizie). L'id resta samaritan-notizie per non perdere lo storico dei voti."
     },
     {
       "id": "samaritan-animali",
@@ -176,8 +177,8 @@
       "nome": "Vendite",
       "reparto": "Commerciale",
       "dove": "Dentro il Direttore (stesso giro giornaliero)",
-      "produce": "Una mossa al giorno per portare entrate: ZampaViva, affiliazioni, sponsor",
-      "come_leggerlo": "Shopify (sessioni, ordini, prodotti più visti, carrelli), box affiliati negli articoli, bozze sponsor in Gmail, numeri dei canali",
+      "produce": "Una mossa al giorno per portare entrate: siti per attività locali, affiliazioni, sponsor",
+      "come_leggerlo": "Richieste dal modulo della pagina /siti, box affiliati negli articoli, bozze sponsor in Gmail, numeri dei canali",
       "pubblica_da_solo": false,
       "revisore": "analista",
       "checklist": [
@@ -224,14 +225,14 @@
       "nome": "Grafico",
       "reparto": "Redazione",
       "dove": "Dentro Finch (stesso giro giornaliero), regola 6h di direttore.md. Assunto da Davide il 13/10/2026",
-      "produce": "Il controllo grafico di caroselli, copertine, Pin e immagini prodotto ZampaViva; nuove grafiche in bozza su Canva; una proposta a settimana per l'aspetto del sito",
+      "produce": "Il controllo grafico di caroselli, copertine, Pin e grafiche dei canali; nuove grafiche in bozza su Canva; una proposta a settimana per l'aspetto del sito",
       "come_leggerlo": "ig/<slug>/*.jpg degli articoli nuovi, immagini dei prodotti attivi su Shopify, le pagine del sito; le regole sono in design/SISTEMA.md",
       "pubblica_da_solo": false,
       "revisore": "critico-stanza",
       "checklist": [
         "Testo leggibile da telefono, mai tagliato o sopra il viso",
         "Rispetta design/SISTEMA.md: solo i colori di design/tokens.json, Archivo per i titoli e Source Serif 4 per leggere, margini di almeno 96px, un solo accento per slide",
-        "Ogni prodotto ZampaViva ha almeno 3 immagini e il testo alternativo in italiano",
+        "Logo e banner dei canali (gaming, motori) coerenti e leggibili nel ritaglio rotondo",
         "Nessuna immagine di altri creator o senza diritti",
         "Le grafiche nuove restano bozze finché Davide non le approva"
       ]

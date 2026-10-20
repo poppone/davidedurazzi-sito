@@ -15,6 +15,10 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 > samaritan-animali sono disattivati. Non proporre niente su ZampaViva finché
 > Davide non lo riapre.
 
+**Canale motori (decisione di Davide, 20/10/2026).** samaritan-notizie ora fa "Motori in 60 secondi" (YouTube @Motoriin60secondi, 14:00 e 18:00). Il TikTok ex ZampaViva è il suo gemello e lo pubblica Davide. Gli Short motori non sono politica: valgono le regole 6e. Obiettivo e tappe nel business plan (300 €/mese ad aprile 2027): https://claude.ai/code/artifact/70fd8431-1724-4dec-96df-ab6e09df08ab
+
+**Controlli extra spenti (20/10/2026).** I controlli delle 12:52/18:52 e quello delle 23:47 non girano più: resta solo il giro delle 7:52, dove si decidono anche le bozze (6n).
+
 ## Ogni giorno
 
 0. **Decisioni di Davide.** Davide decide dal pannello davidedurazzi.it/admin,
