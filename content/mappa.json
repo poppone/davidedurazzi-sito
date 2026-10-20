@@ -23,11 +23,6 @@
         "dove": "Media kit, aggiornato dal sito"
       },
       {
-        "nome": "Prodotti e politiche di ZampaViva",
-        "stato": "sparso",
-        "dove": "Shopify e le politiche del negozio"
-      },
-      {
         "nome": "Offerte e link affiliati",
         "stato": "pronto",
         "dove": "Pagina Consigli"
@@ -104,19 +99,6 @@
       "voto": "samaritan-gaming",
       "codice": "https://github.com/poppone/samaritan_v2"
     },
-    "Samaritan · Notizie": {
-      "sostituisce": "Un piccolo telegiornale in 60 secondi",
-      "autonomia": "autonomo",
-      "catena": 2,
-      "voto": "samaritan-notizie",
-      "codice": "https://github.com/poppone/samaritan-notizie"
-    },
-    "Samaritan · Animali": {
-      "sostituisce": "Chi gira e monta i video dei prodotti per TikTok",
-      "autonomia": "assistito",
-      "catena": 3,
-      "codice": "https://github.com/poppone/samaritan-animali"
-    },
     "Clip dalle live": {
       "sostituisce": "Chi riguarda ore di diretta per tagliare i momenti migliori",
       "autonomia": "assistito",
@@ -154,18 +136,6 @@
       "autonomia": "assistito",
       "catena": 3
     },
-    "Assistenza ZampaViva": {
-      "sostituisce": "Il servizio clienti del negozio",
-      "autonomia": "assistito",
-      "catena": 4,
-      "nota": "Prepara le risposte con i dati veri dell'ordine; le invio io"
-    },
-    "Crescita ZampaViva": {
-      "sostituisce": "Chi promuove i prodotti su Pinterest ogni giorno",
-      "autonomia": "assistito",
-      "catena": 5,
-      "voto": "crescita-zampaviva"
-    },
     "Analista": {
       "sostituisce": "Il resoconto del lunedì: cosa spingere e cosa spegnere",
       "autonomia": "autonomo",
@@ -201,6 +171,13 @@
       "autonomia": "autonomo",
       "catena": 1,
       "nota": "Risponde solo con le risposte pratiche scritte da me, sempre dichiarandosi AI"
+    },
+    "Samaritan · Motori": {
+      "sostituisce": "Una redazione motori che racconta auto e moto in 60 secondi",
+      "autonomia": "autonomo",
+      "catena": 2,
+      "voto": "samaritan-notizie",
+      "codice": "https://github.com/poppone/samaritan-notizie"
     }
   },
   "da_costruire": [],
