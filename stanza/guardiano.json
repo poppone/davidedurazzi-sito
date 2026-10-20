@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-10-19T10:46+00:00",
+  "aggiornato": "2026-10-20T10:04+00:00",
   "riassunto": {
-    "ok": 25,
+    "ok": 26,
     "attenzione": 0,
     "rotto": 0,
     "non controllato": 1
@@ -46,7 +46,7 @@
     {
       "nome": "Token del bot della chat Twitch",
       "esito": "ok",
-      "messaggio": "valido, scade tra 60 giorni",
+      "messaggio": "valido, scade tra 59 giorni",
       "rimedio": ""
     },
     {
@@ -58,7 +58,7 @@
     {
       "nome": "davidedurazzi-sito · Coda social (Reel e Pin diretti)",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-19: success",
+      "messaggio": "ultima esecuzione del 2026-10-20: success",
       "rimedio": ""
     },
     {
@@ -70,25 +70,25 @@
     {
       "nome": "davidedurazzi-sito · Messaggi privati Instagram",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "messaggio": "ultima esecuzione del 2026-10-19: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Aggiorna pagine statiche",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-19: success",
+      "messaggio": "ultima esecuzione del 2026-10-20: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Pubblica bozze approvate",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "messaggio": "ultima esecuzione del 2026-10-19: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Redazione del mattino",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-19: success",
+      "messaggio": "ultima esecuzione del 2026-10-20: success",
       "rimedio": ""
     },
     {
@@ -98,15 +98,21 @@
       "rimedio": ""
     },
     {
+      "nome": "samaritan_v2 · Clip Live (pubblicazione)",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-20: success",
+      "rimedio": ""
+    },
+    {
       "nome": "samaritan_v2 · Pulizia copie dei video",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-19: success",
+      "messaggio": "ultima esecuzione del 2026-10-20: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan_v2 · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-19: success",
+      "messaggio": "ultima esecuzione del 2026-10-20: success",
       "rimedio": ""
     },
     {
@@ -118,13 +124,13 @@
     {
       "nome": "samaritan_v2 · Vocale di Finch",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-19: success",
+      "messaggio": "ultima esecuzione del 2026-10-20: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan-notizie · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-19: success",
+      "messaggio": "ultima esecuzione del 2026-10-20: success",
       "rimedio": ""
     },
     {
@@ -142,7 +148,7 @@
     {
       "nome": "samaritan-animali · ZampaViva TikTok",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-18: success",
+      "messaggio": "ultima esecuzione del 2026-10-19: success",
       "rimedio": ""
     },
     {
