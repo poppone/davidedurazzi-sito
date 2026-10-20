@@ -16,7 +16,12 @@
 <meta property="og:url" content="https://www.davidedurazzi.it/siti">
 <meta property="og:title" content="Un sito per la tua attività — Davide Durazzi">
 <meta property="og:description" content="Sito, scheda Google e social per le attività di Roma. Bozza in 48 ore, prezzi chiari.">
-<meta property="og:image" content="https://www.davidedurazzi.it/assets/logo-512.png">
+<meta property="og:image" content="https://www.davidedurazzi.it/assets/og-siti.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La tua attività, trovata su Google. In 48 ore. davidedurazzi.it/siti">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.davidedurazzi.it/assets/og-siti.jpg">
 <style>
 .st-prezzi{list-style:none;margin:0;padding:0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
 .st-prezzi li{display:flex;flex-direction:column;gap:.6rem;padding:1.3rem;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
@@ -34,6 +39,7 @@
 .st-passi{margin:0;padding-left:1.2rem;display:grid;gap:.7rem;max-width:70ch}
 .st-passi li{font:400 1.08rem/1.6 var(--serif)}
 .st-passi strong{font-family:var(--sans)}
+.st-condividi{display:flex;flex-wrap:wrap;gap:.6rem}
 </style>
 </head>
 <body data-page="siti">
@@ -94,6 +100,20 @@
       </div>
     </div>
   </section>
+
+  <section class="blocco" id="condividi">
+    <div class="testa"><h2>Conosci un'attività senza sito?</h2><p>Mandale questa pagina: la bozza è gratuita e senza impegno.</p></div>
+    <div class="st-condividi">
+      <button class="btn pieno" type="button" id="stNativo" hidden>Condividi</button>
+      <a class="btn" id="stWa" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" id="stFb" target="_blank" rel="noopener">Facebook</a>
+      <a class="btn" id="stLi" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" id="stTg" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn" id="stX" target="_blank" rel="noopener">X</a>
+      <button class="btn" type="button" id="stLink">Copia il link</button>
+    </div>
+    <p class="esito-nl" id="stEsitoLink" role="status"></p>
+  </section>
 </main>
 
 <footer><div class="wrap">
@@ -117,6 +137,26 @@
       $("stEsito").textContent = "Indirizzo selezionato: copialo con Copia.";
     };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(mail).then(ok, ko); else ko();
+  });
+
+  var url = "https://www.davidedurazzi.it/siti";
+  var testo = "Un sito e la scheda Google per la tua attività, bozza gratuita in 48 ore:";
+  var u = encodeURIComponent(url), t = encodeURIComponent(testo);
+  $("stWa").href = "https://wa.me/?text=" + t + "%20" + u;
+  $("stFb").href = "https://www.facebook.com/sharer/sharer.php?u=" + u;
+  $("stLi").href = "https://www.linkedin.com/sharing/share-offsite/?url=" + u;
+  $("stTg").href = "https://t.me/share/url?url=" + u + "&text=" + t;
+  $("stX").href = "https://x.com/intent/post?text=" + t + "&url=" + u;
+  if (navigator.share) {
+    $("stNativo").hidden = false;
+    $("stNativo").addEventListener("click", function () {
+      navigator.share({ title: document.title, text: testo, url: url }).catch(function () {});
+    });
+  }
+  $("stLink").addEventListener("click", function () {
+    var ok = function () { $("stEsitoLink").textContent = "Link copiato."; };
+    var ko = function () { $("stEsitoLink").textContent = url; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok, ko); else ko();
   });
 })();
 </script>
