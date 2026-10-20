@@ -638,7 +638,7 @@
       "id": "2026-10-20-1",
       "per": "social",
       "da": "revisore-video",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-notizie Lr8yCw1ZrZA",
@@ -646,13 +646,14 @@
       "dettagli": "Short italiano di Samaritan notizie del 19/10 (fonte ANSA). Argomenti 4/5 (notizia sportiva con fonte), video 3/5: non verificabile da qui. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 23/10. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/Lr8yCw1ZrZA",
       "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
-      "deciso": "2026-10-20T06:14:43.095Z"
+      "deciso": "2026-10-20T06:14:43.095Z",
+      "esito": "20/10: messi in coda social il Reel Instagram e il video Facebook (con nota AI). TikTok dopo il 1/11 (limite Metricool)."
     },
     {
       "id": "2026-10-20-2",
       "per": "social",
       "da": "revisore-argomenti",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-notizie dVFsufxRRgU",
@@ -660,7 +661,8 @@
       "dettagli": "Short italiano di Samaritan notizie del 19/10 (fonte Corriere della Sera). È politica: il permesso fisso 6e non vale, decidi tu. Argomenti 4/5, video 3/5 (non verificabile). Il file scade il 23/10.",
       "link": "https://youtube.com/shorts/dVFsufxRRgU",
       "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
-      "deciso": "2026-10-20T06:14:48.386Z"
+      "deciso": "2026-10-20T06:14:48.386Z",
+      "esito": "20/10: messi in coda social il Reel Instagram e il video Facebook (con nota AI). TikTok dopo il 1/11 (limite Metricool)."
     },
     {
       "id": "2026-10-20-3",
