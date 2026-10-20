@@ -142,35 +142,43 @@
   {
     "id": "2026-10-20-reel-Lr8yCw1ZrZA",
     "rete": "instagram_reel",
-    "stato": "da pubblicare",
+    "stato": "pubblicato",
     "video_url": "https://8ggiyctagekoppcx.public.blob.vercel-storage.com/notizie/Lr8yCw1ZrZA-EXOmoXl8cvYOr5OPM8ZYiqzrPXxap4.mp4",
     "didascalia": "Inter: da 0-1 a 3-1, avanza al Dall'Ara\n\nL'Inter trasforma 0-1 in 3-1 e avanza al Dall'Ara. Una rimonta che fa parlare tutti.\n\nFonte: ANSA\n\nVideo realizzato con l'AI: voce sintetica e montaggio automatico.\n\n#inter #rumor #notizie #perte",
     "origine": "bacheca 2026-10-20-1, approvato da Davide",
-    "account": "davidedurazzi.it"
+    "account": "davidedurazzi.it",
+    "post_id": "18038304461847820",
+    "pubblicato_il": "2026-10-20T10:57:12+00:00"
   },
   {
     "id": "2026-10-20-fb-Lr8yCw1ZrZA",
     "rete": "facebook_video",
-    "stato": "da pubblicare",
+    "stato": "pubblicato",
     "video_url": "https://8ggiyctagekoppcx.public.blob.vercel-storage.com/notizie/Lr8yCw1ZrZA-EXOmoXl8cvYOr5OPM8ZYiqzrPXxap4.mp4",
     "didascalia": "Inter: da 0-1 a 3-1, avanza al Dall'Ara\n\nL'Inter trasforma 0-1 in 3-1 e avanza al Dall'Ara. Una rimonta che fa parlare tutti.\n\nFonte: ANSA\n\nVideo realizzato con l'AI: voce sintetica e montaggio automatico.\n\n#inter #rumor #notizie #perte",
-    "origine": "bacheca 2026-10-20-1, approvato da Davide"
+    "origine": "bacheca 2026-10-20-1, approvato da Davide",
+    "post_id": "1633306631915676",
+    "pubblicato_il": "2026-10-20T10:57:18+00:00"
   },
   {
     "id": "2026-10-20-reel-dVFsufxRRgU",
     "rete": "instagram_reel",
-    "stato": "da pubblicare",
+    "stato": "pubblicato",
     "video_url": "https://8ggiyctagekoppcx.public.blob.vercel-storage.com/notizie/dVFsufxRRgU-jRCvpDGseOpYa1bB0tYUuYseyOgI53.mp4",
     "didascalia": "Manovra: 5 miliardi da banche e assicurazioni\n\nScopri le ultime novità sulla manovra fiscale e il contributo da 5 miliardi. Cosa ne pensi di queste scelte?\n\nFonte: Corriere della Sera\n\nVideo realizzato con l'AI: voce sintetica e montaggio automatico.\n\n#manovra #notizie #perte",
     "origine": "bacheca 2026-10-20-2, approvato da Davide",
-    "account": "davidedurazzi.it"
+    "account": "davidedurazzi.it",
+    "post_id": "17951664720339113",
+    "pubblicato_il": "2026-10-20T10:57:57+00:00"
   },
   {
     "id": "2026-10-20-fb-dVFsufxRRgU",
     "rete": "facebook_video",
-    "stato": "da pubblicare",
+    "stato": "pubblicato",
     "video_url": "https://8ggiyctagekoppcx.public.blob.vercel-storage.com/notizie/dVFsufxRRgU-jRCvpDGseOpYa1bB0tYUuYseyOgI53.mp4",
     "didascalia": "Manovra: 5 miliardi da banche e assicurazioni\n\nScopri le ultime novità sulla manovra fiscale e il contributo da 5 miliardi. Cosa ne pensi di queste scelte?\n\nFonte: Corriere della Sera\n\nVideo realizzato con l'AI: voce sintetica e montaggio automatico.\n\n#manovra #notizie #perte",
-    "origine": "bacheca 2026-10-20-2, approvato da Davide"
+    "origine": "bacheca 2026-10-20-2, approvato da Davide",
+    "post_id": "1069032732837643",
+    "pubblicato_il": "2026-10-20T10:58:01+00:00"
   }
 ]
