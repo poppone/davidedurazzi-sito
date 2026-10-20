@@ -683,14 +683,15 @@
       "id": "2026-10-20-4",
       "per": "social",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming W_LyppmTpT8",
       "titolo": "Rilanciare lo Short \"GTA 6: immagini mozzafiato che ti lasceranno a bocca\" su Instagram e Facebook",
       "dettagli": "Short italiano di Samaritan gaming del 20/10 (fonte Everyeye). Argomenti 4/5 (GTA 6 di tendenza, fonte citata), video 3/5: non verificabile da qui. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 24/10. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/W_LyppmTpT8",
-      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
+      "deciso": "2026-10-20T18:41:58.386Z"
     },
     {
       "id": "2026-10-20-5",
