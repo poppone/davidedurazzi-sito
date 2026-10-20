@@ -683,6 +683,104 @@
         }
       ],
       "media": 5.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it W_LyppmTpT8 del 20/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 4,
+          "motivo": "GTA 6 di tendenza, fonte Everyeye; titolo acchiappa-clic"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it W_LyppmTpT8 del 20/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "attacco e accuratezza",
+          "voto": 3,
+          "motivo": "non verificabile: file del video non raggiungibile da qui"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short it ixQJss50GIM del 20/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 3,
+          "motivo": "retroscena da una sola fonte (Libero)"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short it ixQJss50GIM del 20/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "attacco e accuratezza",
+          "voto": 3,
+          "motivo": "non verificabile: file del video non raggiungibile da qui"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short it Rtpli3SDjUM del 20/10",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento di tendenza con fonte",
+          "voto": 4,
+          "motivo": "manovra, fonte ANSA; tema politico"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short it Rtpli3SDjUM del 20/10",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "attacco e accuratezza",
+          "voto": 3,
+          "motivo": "non verificabile: file del video non raggiungibile da qui"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-20",
+      "agente": "redazione",
+      "lavoro": "bozze del 20/10",
+      "revisore": "critico",
+      "punti": [
+        {
+          "punto": "fonti che reggono le affermazioni",
+          "voto": 3,
+          "motivo": "3 bozze, 1 scartata: Android Auto aggiunge affermazioni non presenti nella fonte HDblog"
+        }
+      ],
+      "media": 3.0
     }
   ]
 }

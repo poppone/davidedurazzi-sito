@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-20T06:10:00+00:00",
+  "aggiornato": "2026-10-20T11:05:00+00:00",
   "stati": [
     "da fare",
     "in corso",
@@ -677,6 +677,45 @@
       "link": "https://github.com/poppone/samaritan_v2/tree/main/clip_live/da_pubblicare",
       "azione": "Metto le 2 schede in \"approvato\" con orario 16:00 del 21/10 e del 22/10: le carica su YouTube il workflow Clip Live.",
       "deciso": "2026-10-20T06:14:54.244Z"
+    },
+    {
+      "id": "2026-10-20-4",
+      "per": "social",
+      "da": "revisore-video",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-gaming W_LyppmTpT8",
+      "titolo": "Rilanciare lo Short \"GTA 6: immagini mozzafiato che ti lasceranno a bocca\" su Instagram e Facebook",
+      "dettagli": "Short italiano di Samaritan gaming del 20/10 (fonte Everyeye). Argomenti 4/5 (GTA 6 di tendenza, fonte citata), video 3/5: non verificabile da qui. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 24/10. TikTok fermo fino al 31/10.",
+      "link": "https://youtube.com/shorts/W_LyppmTpT8",
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
+    },
+    {
+      "id": "2026-10-20-5",
+      "per": "social",
+      "da": "revisore-video",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-notizie ixQJss50GIM",
+      "titolo": "Rilanciare lo Short \"Sanremo 2027: De Martino sceglie i Jackal\" su Instagram e Facebook",
+      "dettagli": "Short italiano di Samaritan notizie del 20/10 (fonte Libero, un retroscena). Argomenti 3/5 (una sola fonte, è un retroscena), video 3/5: non verificabile. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 24/10. TikTok fermo fino al 31/10.",
+      "link": "https://youtube.com/shorts/ixQJss50GIM",
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
+    },
+    {
+      "id": "2026-10-20-6",
+      "per": "social",
+      "da": "revisore-video",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-notizie Rtpli3SDjUM",
+      "titolo": "Rilanciare lo Short \"Manovra: priorità fissate, cerca intesa su banche\" su Instagram e Facebook",
+      "dettagli": "Short italiano di Samaritan notizie del 20/10 (fonte ANSA). È politica: il permesso fisso 6e non vale, decidi tu. Argomenti 4/5, video 3/5 (non verificabile). Il file del video scade il 24/10. TikTok fermo fino al 31/10.",
+      "link": "https://youtube.com/shorts/Rtpli3SDjUM",
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
     }
   ]
 }
