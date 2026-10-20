@@ -544,12 +544,13 @@
       "id": "2026-10-16-3",
       "per": "davide",
       "da": "direttore",
-      "stato": "da fare",
+      "stato": "fatto",
       "volte": 1,
       "origine": "clip-live",
       "titolo": "Rinnovare la chiave Groq nel .env del taglio clip sul PC",
       "dettagli": "Nel taglio della live del 13/10 Groq risponde 401 \"Invalid API Key\" per tutte e 5 le clip, quindi titoli e descrizioni non vengono scritti. Crea una chiave nuova su console.groq.com/keys e incollala in GROQ_API_KEY nel file .env della cartella taglia_live. Facoltativo: TwitchDownloaderCLI (percorso in TWITCHDOWNLOADER=) per usare anche la chat.",
-      "link": "https://console.groq.com/keys"
+      "link": "https://console.groq.com/keys",
+      "esito": "20/10: Davide ha rinnovato la chiave Groq nel .env sul PC. Verifica al prossimo taglio clip."
     },
     {
       "id": "2026-10-16-4",
