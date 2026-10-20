@@ -711,14 +711,15 @@
       "id": "2026-10-20-6",
       "per": "social",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "scartato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-notizie Rtpli3SDjUM",
       "titolo": "Rilanciare lo Short \"Manovra: priorità fissate, cerca intesa su banche\" su Instagram e Facebook",
       "dettagli": "Short italiano di Samaritan notizie del 20/10 (fonte ANSA). È politica: il permesso fisso 6e non vale, decidi tu. Argomenti 4/5, video 3/5 (non verificabile). Il file del video scade il 24/10. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/Rtpli3SDjUM",
-      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
+      "deciso": "2026-10-20T18:42:09.299Z"
     }
   ]
 }
