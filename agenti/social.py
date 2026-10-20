@@ -1,10 +1,12 @@
-"""Facebook (pagina) e LinkedIn (profilo personale): pubblica gli articoli approvati.
+"""Facebook (pagina) e LinkedIn (pagina della Redazione): pubblica gli articoli approvati.
 
 Uso: python agenti/social.py pubblica
 Secret richiesti (se mancano, la rete corrispondente viene saltata):
   FB_PAGE_ID, FB_PAGE_TOKEN   -> pagina Facebook (token di pagina)
   X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_SECRET -> X (permesso Read and write)
-  LI_ACCESS_TOKEN             -> LinkedIn, scope openid + profile + w_member_social (dura 60 giorni)
+  LI_ACCESS_TOKEN             -> LinkedIn, scope w_organization_social di un amministratore della pagina (dura 60 giorni)
+  LI_ORG_ID (variabile)       -> id numerico della pagina LinkedIn della Redazione (linkedin.com/company/<id>/admin)
+                                 Senza LI_ORG_ID LinkedIn viene saltato: non si pubblica piu sul profilo personale.
 """
 import json
 import os
@@ -22,6 +24,7 @@ REGISTRO = RADICE / "social" / "social.json"
 FB_ID = os.environ.get("FB_PAGE_ID", "")
 FB_TOKEN = os.environ.get("FB_PAGE_TOKEN", "")
 LI_TOKEN = os.environ.get("LI_ACCESS_TOKEN", "")
+LI_ORG = os.environ.get("LI_ORG_ID", "").strip()
 X_CHIAVI = [os.environ.get(k, "") for k in ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_SECRET")]
 FB_API = "https://graph.facebook.com/" + os.environ.get("FB_API_VERSION", "v21.0")
 # Versioni dell'API LinkedIn da provare in ordine (LinkedIn ritira le piu vecchie dopo circa un anno)
@@ -92,8 +95,7 @@ def _li(metodo: str, url: str, **kw) -> requests.Response:
 
 
 def linkedin(a: dict, immagine_url: str) -> str:
-    persona = _li("GET", "https://api.linkedin.com/v2/userinfo").json()["sub"]
-    owner = f"urn:li:person:{persona}"
+    owner = f"urn:li:organization:{LI_ORG}"
     init = _li("POST", "https://api.linkedin.com/rest/images?action=initializeUpload", json={"initializeUploadRequest": {"owner": owner}}).json()["value"]
     img = requests.get(immagine_url, timeout=60)
     img.raise_for_status()
@@ -126,7 +128,7 @@ def community() -> None:
 
 def pubblica() -> None:
     community()
-    reti = {"facebook": bool(FB_ID and FB_TOKEN), "linkedin": bool(LI_TOKEN), "x": all(X_CHIAVI)}
+    reti = {"facebook": bool(FB_ID and FB_TOKEN), "linkedin": bool(LI_TOKEN and LI_ORG), "x": all(X_CHIAVI)}
     for n, ok in reti.items():
         if not ok:
             print(f"[social] {n}: segreti mancanti, salto.")
