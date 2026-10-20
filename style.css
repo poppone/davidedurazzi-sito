@@ -22,8 +22,8 @@ img,iframe{max-width:100%}
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3.8rem}
 .logo{display:inline-flex;align-items:center;gap:.6rem;white-space:nowrap;flex:none;font:800 1.05rem/1 var(--sans);font-stretch:112%;text-decoration:none;letter-spacing:-.01em}
-.top nav{display:flex;gap:1.1rem;overflow-x:auto;scrollbar-width:none}
-.top nav a{text-decoration:none;font-weight:500;color:var(--muted);white-space:nowrap;padding:.4rem 0}
+.top nav{display:flex;gap:1rem;overflow-x:auto;scrollbar-width:none}
+.top nav a{text-decoration:none;font-weight:500;font-size:.93rem;color:var(--muted);white-space:nowrap;padding:.4rem 0}
 .top nav a:hover{color:var(--ink)}
 
 /* Apertura */

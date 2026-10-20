@@ -162,7 +162,7 @@
     }
 
     // nodi, dal piu' lontano al piu' vicino
-    var ordine = nodi.slice().sort(function (a, b) { return a.p.z - b.p.z; });
+    var ordine = nodi.slice().sort(function (a, b) { return a.p.z - b.p.z; }), nomi = [];
     ctx.font = "600 12px Archivo, system-ui, sans-serif";
     ordine.forEach(function (o) {
       var p = o.p, col = COLORE[o.tipo === "agente" ? o.stato : o.tipo === "reparto" && o.stato === "da costruire" ? "da costruire" : o.tipo] || COLORE.attivo;
@@ -188,15 +188,41 @@
         ctx.fillStyle = rgba(o.tipo === "cervello" ? "255,214,190" : col, prof); ctx.fill();
       }
       if (o.tipo === "direttore") { ctx.strokeStyle = "rgba(123,151,255,.9)"; ctx.lineWidth = 2; ctx.stroke(); }
-      // nomi dei reparti e di Finch quando guardano verso di noi
-      if ((o.tipo === "reparto" || o.tipo === "direttore") && p.z > -.5 && k > .9) {
-        var al = Math.min(1, (p.z + .5) * 1.4) * .9, testo = o.tipo === "direttore" ? "Finch" : o.nome;
-        ctx.fillStyle = rgba("238,241,248", al);
-        ctx.fillText(testo, p.sx + r + 7, p.sy + 4);
+      // nomi di reparti, Finch e agenti quando guardano verso di noi
+      if (k > .9 && sopra !== o) {
+        if ((o.tipo === "reparto" || o.tipo === "direttore") && p.z > -.5) {
+          nomi.push([o.tipo === "direttore" ? "Finch" : o.nome, p.sx, p.sy, r, Math.min(1, (p.z + .5) * 1.4) * .95, "700 12px", "238,241,248", p.z + 9]);
+        } else if (o.tipo === "agente" && p.z > -.1) {
+          nomi.push([o.nome, p.sx, p.sy, r, Math.min(1, (p.z + .1) * 1.6) * .85, "500 10.5px", o.stato === "da costruire" ? "163,174,203" : "205,214,240", p.z]);
+        }
       }
     });
+    // prima i nomi piu' vicini (reparti e Finch davanti a tutti); chi si sovrappone resta nascosto
+    if (sopra && sopra.p && k > .9) nomi.push([sopra.nome, sopra.p.sx, sopra.p.sy, sopra.r * sopra.p.s * 1.5, 1, "700 12px", "255,255,255", 99]);
+    var posti = [];
+    nomi.sort(function (a, b) { return b[7] - a[7]; }).forEach(function (n) { etichetta(n[0], n[1], n[2], n[3], n[4], n[5], n[6], posti); });
 
     aggiornaInfo();
+  }
+
+  // Nome accanto al punto, su una pastiglia scura per leggerlo sopra i fili;
+  // se esce dal bordo destro va a sinistra del punto.
+  function etichetta(testo, x, y, r, al, font, col, posti) {
+    if (al <= .05) return;
+    ctx.font = font + " Archivo, system-ui, sans-serif";
+    var w = ctx.measureText(testo).width, h = parseFloat(font.split(" ")[1]) + 6;
+    var lx = x + r + 7;
+    if (lx + w + 4 > W - 4) lx = x - r - 7 - w;
+    lx = Math.max(4, lx);
+    var box = { x: lx - 4, y: y - h / 2, w: w + 8, h: h };
+    if (posti.some(function (b) { return box.x < b.x + b.w && b.x < box.x + box.w && box.y < b.y + b.h && b.y < box.y + box.h; })) return;
+    posti.push(box);
+    ctx.fillStyle = "rgba(4,6,13," + (.62 * al).toFixed(3) + ")";
+    ctx.beginPath();
+    if (ctx.roundRect) ctx.roundRect(lx - 4, y - h / 2, w + 8, h, 4); else ctx.rect(lx - 4, y - h / 2, w + 8, h);
+    ctx.fill();
+    ctx.fillStyle = rgba(col, al);
+    ctx.fillText(testo, lx, y + h / 2 - 5);
   }
 
   function nuovoPacchetto() {
