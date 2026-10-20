@@ -697,14 +697,15 @@
       "id": "2026-10-20-5",
       "per": "social",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "scartato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-notizie ixQJss50GIM",
       "titolo": "Rilanciare lo Short \"Sanremo 2027: De Martino sceglie i Jackal\" su Instagram e Facebook",
       "dettagli": "Short italiano di Samaritan notizie del 20/10 (fonte Libero, un retroscena). Argomenti 3/5 (una sola fonte, è un retroscena), video 3/5: non verificabile. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 24/10. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/ixQJss50GIM",
-      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
+      "deciso": "2026-10-20T18:42:04.096Z"
     },
     {
       "id": "2026-10-20-6",
