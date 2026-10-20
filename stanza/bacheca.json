@@ -666,14 +666,15 @@
       "id": "2026-10-20-3",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "clip-live 2899935903",
       "titolo": "Pubblicare su YouTube 2 clip della live del 13/10",
       "dettagli": "Il taglio di stanotte ha rifatto le 5 clip con i titoli di Groq (la chiave nuova funziona). Finch propone le 2 senza avvisi e col punteggio più alto: \"Nuovo format: schemi veloci e discussioni in diretta\" (00699, punteggio 100) e \"Collaborazioni gaming e calcio: il dilemma con l'amico\" (00897, punteggio 97). Le altre 3 (eSIM, Damiano, nuova tecnologia) hanno l'avviso \"insulti\" e restano ferme. Durano 34 secondi: non hanno ancora la versione lunga per TikTok (è arrivata dopo il taglio).",
       "link": "https://github.com/poppone/samaritan_v2/tree/main/clip_live/da_pubblicare",
-      "azione": "Metto le 2 schede in \"approvato\" con orario 16:00 del 21/10 e del 22/10: le carica su YouTube il workflow Clip Live."
+      "azione": "Metto le 2 schede in \"approvato\" con orario 16:00 del 21/10 e del 22/10: le carica su YouTube il workflow Clip Live.",
+      "deciso": "2026-10-20T06:14:54.244Z"
     }
   ]
 }
