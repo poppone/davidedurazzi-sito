@@ -638,14 +638,15 @@
       "id": "2026-10-20-1",
       "per": "social",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-notizie Lr8yCw1ZrZA",
       "titolo": "Rilanciare lo Short \"Inter: da 0-1 a 3-1, avanza al Dall'Ara\" su Instagram e Facebook",
       "dettagli": "Short italiano di Samaritan notizie del 19/10 (fonte ANSA). Argomenti 4/5 (notizia sportiva con fonte), video 3/5: non verificabile da qui. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 23/10. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/Lr8yCw1ZrZA",
-      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI."
+      "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
+      "deciso": "2026-10-20T06:14:43.095Z"
     },
     {
       "id": "2026-10-20-2",
