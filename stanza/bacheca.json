@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-21T15:37:29+00:00",
+ "aggiornato": "2026-10-21T18:11:03+00:00",
  "stati": [
   "da fare",
   "in corso",
@@ -729,7 +729,7 @@
    "id": "2026-10-21-1",
    "per": "davide",
    "da": "finch",
-   "stato": "da approvare",
+   "stato": "fatto",
    "tipo": "sito",
    "volte": 1,
    "origine": "piano 10 euro al giorno, ok di Davide del 21/10",
@@ -737,7 +737,9 @@
    "dettagli": "Pagina di servizio per streamer Twitch: 3 clip gratis di prova, 10 clip al mese a 60 euro, 20 a 100 euro, pagate a fine mese in proporzione. Esempio incorporato (clip del 13/10 uscita oggi), nota di trasparenza sul taglio automatico, domande frequenti, contatti. Link dalla home e dal pie' di pagina, sitemap. Da decidere: prezzi e se aggiungere la voce di menu. I 5 messaggi per i primi streamer sono in /mnt/project-files/finch/clip-streamer/.",
    "link": "https://github.com/poppone/davidedurazzi-sito/pull/22",
    "azione": "Se approvi, unisco la PR e la pagina va online su davidedurazzi.it/clip. Se scarti, chiudo la PR.",
-   "creato": "2026-10-21T15:37:29+00:00"
+   "creato": "2026-10-21T15:37:29+00:00",
+   "fatto": "2026-10-21T18:11:03+00:00",
+   "nota_finch": "21/10 ore 20:10: Davide ha unito la PR #22 direttamente su GitHub; la pagina è online su davidedurazzi.it/clip."
   }
  ]
 }
