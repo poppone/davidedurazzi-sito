@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-21T05:56:01+00:00",
+  "aggiornato": "2026-10-21T07:27:04+00:00",
   "stati": [
     "da fare",
     "in corso",
@@ -669,7 +669,7 @@
       "id": "2026-10-20-3",
       "per": "davide",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "clip-live 2899935903",
@@ -678,13 +678,14 @@
       "link": "https://github.com/poppone/samaritan_v2/tree/main/clip_live/da_pubblicare",
       "azione": "Metto le 2 schede in \"approvato\" con orario 16:00 del 21/10 e del 22/10: le carica su YouTube il workflow Clip Live.",
       "deciso": "2026-10-20T06:14:54.244Z",
-      "nota_finch": "21/10 ore 07:55: non eseguito. Le schede delle clip si cambiano in samaritan_v2, repo non collegato a questa sessione. Resta approvato, da fare prima delle 16:00 di oggi."
+      "nota_finch": "21/10 ore 09:26: schede 00699 (16:00 del 21/10) e 00897 (16:00 del 22/10) messe in approvato su samaritan_v2 (commit 941a913). Le carica il workflow Clip Live.",
+      "fatto": "2026-10-21T07:27:04+00:00"
     },
     {
       "id": "2026-10-20-4",
       "per": "social",
       "da": "revisore-video",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming W_LyppmTpT8",
@@ -693,7 +694,8 @@
       "link": "https://youtube.com/shorts/W_LyppmTpT8",
       "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
       "deciso": "2026-10-20T18:41:58.386Z",
-      "nota_finch": "21/10 ore 07:55: non eseguito. Serve il video_file_url dello Short in samaritan_v2 (cronologia_trend.json), repo non collegato a questa sessione. Il link scade dopo circa 4 giorni. Resta approvato."
+      "nota_finch": "21/10 ore 09:26: Reel Instagram e video Facebook in social/coda.json, li pubblica il workflow Coda social.",
+      "fatto": "2026-10-21T07:27:04+00:00"
     },
     {
       "id": "2026-10-20-5",
