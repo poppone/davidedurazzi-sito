@@ -494,7 +494,7 @@
       "id": "2026-10-15-2",
       "per": "davide",
       "da": "vendite",
-      "stato": "da approvare",
+      "stato": "approvato",
       "volte": 1,
       "origine": "bacheca 2026-10-14-5",
       "titolo": "Inserire il link affiliato NordVPN quando arriva",
@@ -503,7 +503,8 @@
       "tipo": "pr",
       "link": "https://github.com/poppone/davidedurazzi-sito/pull/23",
       "azione": "unisco la PR #23: NordVPN nella pagina Consigli con il link di affiliazione dichiarato",
-      "nota_finch": "22/10: il link di affiliazione è arrivato il 21/10 con l'email dell'account manager NordVPN. PR #23 in bozza: nuovo gruppo \"Per navigare e giocare online\" in /consigli, affiliazione dichiarata nel testo. Prossimo passo, se vuoi: lo stesso link nelle descrizioni YouTube di Samaritan e nel pannello Twitch."
+      "nota_finch": "22/10: il link di affiliazione è arrivato il 21/10 con l'email dell'account manager NordVPN. PR #23 in bozza: nuovo gruppo \"Per navigare e giocare online\" in /consigli, affiliazione dichiarata nel testo. Prossimo passo, se vuoi: lo stesso link nelle descrizioni YouTube di Samaritan e nel pannello Twitch.",
+      "deciso": "2026-10-22T08:13:26.152Z"
     },
     {
       "id": "2026-10-15-3",
