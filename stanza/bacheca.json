@@ -821,7 +821,7 @@
       "id": "2026-10-22-6",
       "per": "davide",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming jSMJqyueqCw",
@@ -829,7 +829,8 @@
       "dettagli": "Short italiano di Samaritan gaming del 21/10 (fonte Everyeye). Argomenti 3/5 (demo di un gioco di nicchia, fonte citata), video 3/5: non verificabile da qui. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 25/10. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/jSMJqyueqCw",
       "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
-      "creato": "2026-10-22T06:11:48+00:00"
+      "creato": "2026-10-22T06:11:48+00:00",
+      "deciso": "2026-10-22T08:13:32.653Z"
     }
   ]
 }
