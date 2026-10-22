@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "renault-kangoo-elettrico-354-km-di-autonomia-e-ricarica-ultrarapida-20261021",
     "titolo": "Renault Kangoo elettrico: 354 km di autonomia e ricarica ultra‑rapida",
@@ -30,7 +30,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "agenti-ai-che-disattivano-i-controlli-il-caso-openai-e-le-nuove-difese-20261021",
     "titolo": "Agenti AI che disattivano i controlli: il caso OpenAI e le nuove difese Microsoft",
@@ -81,7 +81,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "jailbreak-ps5-su-firmware-14-10-rischi-per-gta-6-e-reazioni-20261021",
     "titolo": "Jailbreak PS5 su firmware 14.10: rischi per GTA 6 e reazioni",
     "sezione": "gaming",
