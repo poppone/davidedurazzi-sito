@@ -790,7 +790,7 @@
       "id": "2026-10-22-4",
       "per": "davide",
       "da": "trattative",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "email",
       "volte": 1,
       "origine": "trattativa Baseus, proposta dell'11/10",
@@ -798,7 +798,8 @@
       "dettagli": "Un solo promemoria gentile, in inglese come la proposta, con il link al media kit e nessuna cifra. Se entro il 25/10 non rispondono la trattativa si chiude.",
       "link": "https://mail.google.com/mail/?authuser=davide1988rm@gmail.com#all?compose=thread-f:1878781124201190771%2Bmsg-a:r4747750666788190402",
       "azione": "invio la bozza a Baseus",
-      "creato": "2026-10-22T06:11:48+00:00"
+      "creato": "2026-10-22T06:11:48+00:00",
+      "deciso": "2026-10-22T08:12:58.329Z"
     },
     {
       "id": "2026-10-22-5",
