@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-22T08:18:04+00:00",
+ "aggiornato": "2026-10-22T11:12:15+00:00",
  "stati": [
   "da fare",
   "in corso",
@@ -777,7 +777,7 @@
    "id": "2026-10-22-3",
    "per": "davide",
    "da": "trattative",
-   "stato": "approvato",
+   "stato": "fatto",
    "tipo": "email",
    "volte": 1,
    "origine": "trattativa UGREEN, proposta del 13/10",
@@ -787,13 +787,14 @@
    "azione": "invio la bozza a UGREEN",
    "creato": "2026-10-22T06:11:48+00:00",
    "deciso": "2026-10-22T08:12:48.281Z",
-   "nota_finch": "22/10: approvato, ma l'invio da qui è stato bloccato dai permessi della sessione. La bozza è pronta in Gmail: basta premere Invia, oppure Finch riprova al prossimo giro."
+   "nota_finch": "22/10 ore 13:11: Davide ha inviato il promemoria da Gmail.",
+   "fatto": "2026-10-22T11:12:15+00:00"
   },
   {
    "id": "2026-10-22-4",
    "per": "davide",
    "da": "trattative",
-   "stato": "approvato",
+   "stato": "fatto",
    "tipo": "email",
    "volte": 1,
    "origine": "trattativa Baseus, proposta dell'11/10",
@@ -803,7 +804,8 @@
    "azione": "invio la bozza a Baseus",
    "creato": "2026-10-22T06:11:48+00:00",
    "deciso": "2026-10-22T08:12:58.329Z",
-   "nota_finch": "22/10: approvato, ma l'invio da qui è stato bloccato dai permessi della sessione. La bozza è pronta in Gmail: basta premere Invia, oppure Finch riprova al prossimo giro."
+   "nota_finch": "22/10 ore 13:11: Davide ha inviato il promemoria da Gmail.",
+   "fatto": "2026-10-22T11:12:15+00:00"
   },
   {
    "id": "2026-10-22-5",
@@ -838,6 +840,20 @@
    "deciso": "2026-10-22T08:13:32.653Z",
    "fatto": "2026-10-22T08:18:04+00:00",
    "nota_finch": "22/10 ore 10:2x: Reel Instagram e video Facebook messi in social/coda.json (voci 2026-10-22-reel-jSMJqyueqCw e 2026-10-22-fb-jSMJqyueqCw), li pubblica il workflow Coda social."
+  },
+  {
+   "id": "2026-10-22-7",
+   "per": "davide",
+   "da": "vendite",
+   "stato": "da approvare",
+   "tipo": "pr",
+   "volte": 1,
+   "origine": "affiliazione NordVPN",
+   "titolo": "Link affiliato NordVPN nelle descrizioni degli Short gaming",
+   "dettagli": "Una riga in più sotto Instant Gaming nelle descrizioni YouTube dei 4 Short gaming al giorno, dichiarata come link affiliato. Test passati.",
+   "link": "https://github.com/poppone/samaritan_v2/pull/108",
+   "azione": "unisco la PR #108 di samaritan_v2",
+   "creato": "2026-10-22T11:12:15+00:00"
   }
  ]
 }
