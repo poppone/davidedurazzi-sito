@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-21T18:11:03+00:00",
+ "aggiornato": "2026-10-22T06:11:48+00:00",
  "stati": [
   "da fare",
   "in corso",
@@ -196,11 +196,13 @@
    "id": "2026-10-13-13",
    "per": "analista",
    "da": "direttore",
-   "stato": "da fare",
+   "stato": "fatto",
    "titolo": "Riattivare l'aggiornamento di performance.json",
    "dettagli": "I dati di Samaritan gaming si fermano al 9/10: i revisori video non possono confrontare la retention con la mediana a 30 giorni.",
    "origine": "revisore-video",
-   "volte": 1
+   "volte": 1,
+   "fatto": "2026-10-22T06:11:48+00:00",
+   "nota_finch": "22/10: performance.json si aggiorna di nuovo (aggiornato 21/10, dati fino al 18/10: è il ritardo normale di 2-3 giorni di YouTube Analytics, non un guasto). Chiuso."
   },
   {
    "id": "2026-10-13-14",
@@ -490,14 +492,18 @@
   },
   {
    "id": "2026-10-15-2",
-   "per": "direttore",
+   "per": "davide",
    "da": "vendite",
-   "stato": "da fare",
+   "stato": "da approvare",
    "volte": 1,
    "origine": "bacheca 2026-10-14-5",
    "titolo": "Inserire il link affiliato NordVPN quando arriva",
    "dettagli": "Davide si è iscritto al programma affiliati. Quando NordVPN approva, il link va nella pagina Consigli e negli articoli di tecnologia, dichiarato come affiliazione.",
-   "nota": "19/10: Davide ha fatto domanda sul sito NordVPN, ancora nessuna risposta."
+   "nota": "19/10: Davide ha fatto domanda sul sito NordVPN, ancora nessuna risposta.",
+   "tipo": "pr",
+   "link": "https://github.com/poppone/davidedurazzi-sito/pull/23",
+   "azione": "unisco la PR #23: NordVPN nella pagina Consigli con il link di affiliazione dichiarato",
+   "nota_finch": "22/10: il link di affiliazione è arrivato il 21/10 con l'email dell'account manager NordVPN. PR #23 in bozza: nuovo gruppo \"Per navigare e giocare online\" in /consigli, affiliazione dichiarata nel testo. Prossimo passo, se vuoi: lo stesso link nelle descrizioni YouTube di Samaritan e nel pannello Twitch."
   },
   {
    "id": "2026-10-15-3",
@@ -740,6 +746,86 @@
    "creato": "2026-10-21T15:37:29+00:00",
    "fatto": "2026-10-21T18:11:03+00:00",
    "nota_finch": "21/10 ore 20:10: Davide ha unito la PR #22 direttamente su GitHub; la pagina è online su davidedurazzi.it/clip."
+  },
+  {
+   "id": "2026-10-22-1",
+   "per": "samaritan-gaming",
+   "da": "samaritan-notizie",
+   "stato": "da fare",
+   "volte": 1,
+   "origine": "Short en PdKbEp_vY6I del 21/10",
+   "titolo": "Titolo in italiano sullo Short inglese delle 21:00 (Shrek 2 Remastered)",
+   "dettagli": "Lo Short delle 21:00 del 21/10 è in inglese (script e didascalia), ma il titolo YouTube è \"Shrek 2 Remastered: Trailer Parodia, uscita a novembre\". Il titolo deve seguire la lingua dell'uscita come il resto del video.",
+   "link": "https://youtube.com/shorts/PdKbEp_vY6I",
+   "creato": "2026-10-22T06:11:48+00:00"
+  },
+  {
+   "id": "2026-10-22-2",
+   "per": "chat-dirette",
+   "da": "direttore",
+   "stato": "da fare",
+   "volte": 1,
+   "origine": "chat-dirette, martedì 20/10",
+   "titolo": "Il bot non è partito martedì 20/10: run arrivate alle 23:58 e alle 00:44",
+   "dettagli": "Il cron è alle 18:55 UTC, ma GitHub ha avviato le due run con 3 ore di ritardo e lo script le ha scartate (\"fuori dalla finestra\", che va dalle 20:40 alle 22:00). Rimedio: anticipare il cron (per esempio 17:30 e 18:15 UTC) e allargare la finestra a 2 ore prima della diretta, oppure avviare il workflow a mano dal dock OBS quando parte la diretta. Nessuna domanda registrata quella sera.",
+   "link": "https://github.com/poppone/davidedurazzi-sito/actions/workflows/chat-dirette.yml",
+   "creato": "2026-10-22T06:11:48+00:00"
+  },
+  {
+   "id": "2026-10-22-3",
+   "per": "davide",
+   "da": "trattative",
+   "stato": "da approvare",
+   "tipo": "email",
+   "volte": 1,
+   "origine": "trattativa UGREEN, proposta del 13/10",
+   "titolo": "Promemoria a UGREEN: proposta del 13/10 senza risposta da 9 giorni",
+   "dettagli": "Un solo promemoria gentile, in inglese come la proposta, con il link al media kit e nessuna cifra. Se entro il 27/10 non rispondono la trattativa si chiude.",
+   "link": "https://mail.google.com/mail/?authuser=davide1988rm@gmail.com#all?compose=thread-f:1878808155321074263%2Bmsg-a:r6110452979068754236",
+   "azione": "invio la bozza a UGREEN",
+   "creato": "2026-10-22T06:11:48+00:00"
+  },
+  {
+   "id": "2026-10-22-4",
+   "per": "davide",
+   "da": "trattative",
+   "stato": "da approvare",
+   "tipo": "email",
+   "volte": 1,
+   "origine": "trattativa Baseus, proposta dell'11/10",
+   "titolo": "Promemoria a Baseus: proposta dell'11/10 senza risposta da 11 giorni",
+   "dettagli": "Un solo promemoria gentile, in inglese come la proposta, con il link al media kit e nessuna cifra. Se entro il 25/10 non rispondono la trattativa si chiude.",
+   "link": "https://mail.google.com/mail/?authuser=davide1988rm@gmail.com#all?compose=thread-f:1878781124201190771%2Bmsg-a:r4747750666788190402",
+   "azione": "invio la bozza a Baseus",
+   "creato": "2026-10-22T06:11:48+00:00"
+  },
+  {
+   "id": "2026-10-22-5",
+   "per": "davide",
+   "da": "trattative",
+   "stato": "da approvare",
+   "tipo": "email",
+   "volte": 1,
+   "origine": "email dell'account manager NordVPN del 21/10",
+   "titolo": "Risposta all'account manager NordVPN: newsletter, Saily e banner in italiano",
+   "dettagli": "Il 21/10 l'account manager ha mandato il link di affiliazione e ha chiesto se vuoi la newsletter settimanale dei partner; propone anche il prodotto eSIM Saily. La bozza ringrazia, dice sì alla newsletter, chiede la scheda di Saily e i banner in italiano, e conferma che non faremo campagne a pagamento sulla parola chiave NordVPN (loro regola). Nessuna cifra.",
+   "link": "https://mail.google.com/mail/?authuser=davide1988rm@gmail.com#all?compose=thread-f:1879646352901207041%2Bmsg-a:r-8634571834145920551",
+   "azione": "invio la bozza a NordVPN",
+   "creato": "2026-10-22T06:11:48+00:00"
+  },
+  {
+   "id": "2026-10-22-6",
+   "per": "davide",
+   "da": "revisore-video",
+   "stato": "da approvare",
+   "tipo": "video",
+   "volte": 1,
+   "origine": "samaritan-gaming jSMJqyueqCw",
+   "titolo": "Rilanciare lo Short \"Rideshare Stimulator: la corsa più bizzarra su PS5\" su Instagram e Facebook",
+   "dettagli": "Short italiano di Samaritan gaming del 21/10 (fonte Everyeye). Argomenti 3/5 (demo di un gioco di nicchia, fonte citata), video 3/5: non verificabile da qui. Sotto il 4 il permesso fisso 6e non vale. Il file del video scade il 25/10. TikTok fermo fino al 31/10.",
+   "link": "https://youtube.com/shorts/jSMJqyueqCw",
+   "azione": "Metto in coda social il Reel Instagram e il video Facebook con la didascalia TikTok e la nota AI.",
+   "creato": "2026-10-22T06:11:48+00:00"
   }
  ]
 }

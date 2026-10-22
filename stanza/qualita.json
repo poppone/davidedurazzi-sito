@@ -1,786 +1,1007 @@
 {
-  "scala": "1 = da rifare, 3 = accettabile, 5 = da prendere a modello",
-  "voti": [
+ "scala": "1 = da rifare, 3 = accettabile, 5 = da prendere a modello",
+ "voti": [
+  {
+   "data": "2026-10-13",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short EN 20:00 12/10 GTA VI leak (p3V5VCPA-iA)",
+   "revisore": "revisore-argomenti",
+   "punti": [
     {
-      "data": "2026-10-13",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short EN 20:00 12/10 GTA VI leak (p3V5VCPA-iA)",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento adatto al brand",
-          "voto": 1,
-          "motivo": "titolo a sfondo sessuale su materiale trapelato"
-        },
-        {
-          "punto": "notizia verificabile",
-          "voto": 2,
-          "motivo": "leak non confermato"
-        }
-      ],
-      "media": 1.5
+     "punto": "argomento adatto al brand",
+     "voto": 1,
+     "motivo": "titolo a sfondo sessuale su materiale trapelato"
     },
     {
-      "data": "2026-10-13",
-      "agente": "samaritan-gaming",
-      "lavoro": "Uscite del 12/10",
-      "revisore": "revisore-testi",
-      "punti": [
-        {
-          "punto": "lingua giusta per lo slot",
-          "voto": 2,
-          "motivo": "18:00 in inglese invece che in italiano"
-        },
-        {
-          "punto": "voto_revisore in cronologia almeno 6",
-          "voto": 1,
-          "motivo": "il revisore non è ancora attivo (PR #83)"
-        }
-      ],
-      "media": 1.5
-    },
-    {
-      "data": "2026-10-13",
-      "agente": "samaritan-notizie",
-      "lavoro": "Uscite 10-13/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "temi vari",
-          "voto": 2,
-          "motivo": "pensioni ripetute a due giorni"
-        },
-        {
-          "punto": "fonte italiana citata",
-          "voto": 4,
-          "motivo": "temi di attualità reali"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-13",
-      "agente": "samaritan-notizie",
-      "lavoro": "Lavorazione 12/10 13:00",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "video consegnato",
-          "voto": 1,
-          "motivo": "run fallita, nessun file"
-        }
-      ],
-      "media": 1.0
-    },
-    {
-      "data": "2026-10-13",
-      "agente": "redattore",
-      "lavoro": "3 articoli del 12/10",
-      "revisore": "revisore-testi",
-      "punti": [
-        {
-          "punto": "titolo chiaro",
-          "voto": 4,
-          "motivo": "titoli informativi"
-        },
-        {
-          "punto": "carosello completo",
-          "voto": 5,
-          "motivo": "4-6 immagini per articolo"
-        }
-      ],
-      "media": 4.5
-    },
-    {
-      "data": "2026-10-13",
-      "agente": "procacciatore-sponsor",
-      "lavoro": "4 bozze email",
-      "revisore": "revisore-testi",
-      "punti": [
-        {
-          "punto": "dichiarazione sponsor",
-          "voto": 5,
-          "motivo": "presente in tutte"
-        },
-        {
-          "punto": "numeri verificabili",
-          "voto": 3,
-          "motivo": "follower citati senza data: aggiornarli prima dell'invio"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-13",
-      "agente": "analista",
-      "lavoro": "performance.json",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "dati aggiornati",
-          "voto": 1,
-          "motivo": "fermi al 9/10"
-        }
-      ],
-      "media": 1.0
-    },
-    {
-      "data": "2026-10-13",
-      "agente": "videomaker",
-      "lavoro": "Ho cancellato 27 video (lungo + 3 Short)",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "nessun silenzio oltre 1,5 s",
-          "voto": 5,
-          "motivo": "video lungo pulito"
-        },
-        {
-          "punto": "volume tra -16 e -12 LUFS",
-          "voto": 5,
-          "motivo": "da -16,0 a -14,5"
-        },
-        {
-          "punto": "Short senza code mute",
-          "voto": 2,
-          "motivo": "circa 2 secondi muti alla fine di tutti e tre"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "samaritan-gaming",
-      "lavoro": "4 Short del 13/10 (1 IT, 3 EN)",
-      "revisore": "revisore-testi",
-      "punti": [
-        {
-          "punto": "titoli chiari e completi",
-          "voto": 3,
-          "motivo": "\"Zelda: New Ocarina of Time remake footage blows\" è troncato"
-        },
-        {
-          "punto": "didascalia pulita",
-          "voto": 4,
-          "motivo": "didascalie ok, \\n corretto nella coda"
-        }
-      ],
-      "media": 3.5
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "samaritan-gaming",
-      "lavoro": "4 Short del 13/10 (1 IT, 3 EN)",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "notizia vera e recente",
-          "voto": 3,
-          "motivo": "2 su 4 sono voci di leak su GTA 6, 1 è un furto (cronaca)"
-        },
-        {
-          "punto": "adatto al canale",
-          "voto": 4,
-          "motivo": "gaming in tema"
-        }
-      ],
-      "media": 3.5
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "samaritan-gaming",
-      "lavoro": "uscite del 13-14/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "uscito nel suo orario",
-          "voto": 2,
-          "motivo": "la partenza delle 01:49 non ha prodotto video"
-        },
-        {
-          "punto": "retention nella media",
-          "voto": 3,
-          "motivo": "non disponibile: performance.json fermo"
-        }
-      ],
-      "media": 2.5
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "samaritan-notizie",
-      "lavoro": "3 Short del 13/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "due testate per notizia",
-          "voto": 3,
-          "motivo": "non verificabile da qui"
-        },
-        {
-          "punto": "temi non ripetuti",
-          "voto": 3,
-          "motivo": "due Short sulla manovra nello stesso giorno, angoli diversi"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "samaritan-notizie",
-      "lavoro": "uscite del 13-14/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "uscito nel suo orario",
-          "voto": 2,
-          "motivo": "la partenza delle 01:47 del 14/10 non ha prodotto video"
-        }
-      ],
-      "media": 2.0
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "redattore",
-      "lavoro": "redazione del 13/10",
-      "revisore": "critico-stanza",
-      "punti": [
-        {
-          "punto": "bozze prodotte",
-          "voto": 1,
-          "motivo": "0 bozze: tutti i modelli AI ko (503 e 404)"
-        }
-      ],
-      "media": 1.0
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "social",
-      "lavoro": "rilanci caroselli del 13/10",
-      "revisore": "revisore-testi",
-      "punti": [
-        {
-          "punto": "pubblicato come approvato",
-          "voto": 5,
-          "motivo": "Tesla e Game Pass usciti su TikTok, Facebook, Bluesky, Pinterest"
-        },
-        {
-          "punto": "AI dichiarata",
-          "voto": 5,
-          "motivo": "isAigc su TikTok e frase in didascalia"
-        }
-      ],
-      "media": 5.0
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "crescita-zampaviva",
-      "lavoro": "16 Pin del 13/10",
-      "revisore": "analista",
-      "punti": [
-        {
-          "punto": "link con utm",
-          "voto": 5,
-          "motivo": "tutti i 16 con utm_source e utm_campaign"
-        },
-        {
-          "punto": "testo fedele a Shopify",
-          "voto": 5,
-          "motivo": "frasi dalle descrizioni"
-        },
-        {
-          "punto": "misura il giorno dopo",
-          "voto": 3,
-          "motivo": "0 visite da Pinterest finora; 2 Pin non usciti per il limite Metricool"
-        }
-      ],
-      "media": 4.33
-    },
-    {
-      "data": "2026-10-14",
-      "agente": "grafico",
-      "lavoro": "controllo prodotti: amaca, borraccia",
-      "revisore": "critico-stanza",
-      "punti": [
-        {
-          "punto": "3+ immagini e alt in italiano",
-          "voto": 3,
-          "motivo": "amaca 9 foto senza alt; borraccia 10 foto con alt"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-15",
-      "agente": "samaritan-gaming",
-      "lavoro": "4 Short del 14/10 (1 IT, 3 EN)",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "tema forte e attuale",
-          "voto": 4,
-          "motivo": "GTA 6 su PC, Mario Kart, cuffie Pokémon: temi del giorno"
-        },
-        {
-          "punto": "Short italiano",
-          "voto": 3,
-          "motivo": "museo M9 con Super Mario: notizia locale, titolo 'storia nascosta' più forte della fonte"
-        }
-      ],
-      "media": 3.5
-    },
-    {
-      "data": "2026-10-15",
-      "agente": "samaritan-gaming",
-      "lavoro": "uscite 14-15/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "uscite regolari",
-          "voto": 4,
-          "motivo": "4 Short in orario; la partenza notturna è il recupero e non trova niente da rifare (log 23:26)"
-        },
-        {
-          "punto": "dati di resa",
-          "voto": 2,
-          "motivo": "performance.json fermo al 9/10"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-15",
-      "agente": "samaritan-notizie",
-      "lavoro": "2 Short del 14/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "fonti",
-          "voto": 4,
-          "motivo": "ANSA e Adnkronos"
-        },
-        {
-          "punto": "rischio",
-          "voto": 3,
-          "motivo": "due temi politici: restano fuori dal permesso fisso"
-        }
-      ],
-      "media": 3.5
-    },
-    {
-      "data": "2026-10-15",
-      "agente": "redattore",
-      "lavoro": "6 bozze del 14/10",
-      "revisore": "critico",
-      "punti": [
-        {
-          "punto": "fonti",
-          "voto": 3,
-          "motivo": "3 bozze con una sola testata (ammesso per tecnologia/gaming, poco per motori)"
-        },
-        {
-          "punto": "parole proprie",
-          "voto": 3,
-          "motivo": "il Critico segnala frasi quasi identiche alla fonte nella bozza Gemini"
-        },
-        {
-          "punto": "produzione",
-          "voto": 4,
-          "motivo": "redazione ripartita: 6 bozze dopo lo zero del 13/10"
-        }
-      ],
-      "media": 3.3
-    },
-    {
-      "data": "2026-10-15",
-      "agente": "grafico",
-      "lavoro": "controllo prodotti: lavazampe, tappeto olfattivo (+ lettiera, collare)",
-      "revisore": "critico-stanza",
-      "punti": [
-        {
-          "punto": "3+ immagini e alt in italiano",
-          "voto": 3,
-          "motivo": "4 prodotti con 6-9 foto ma alt vuoto: corretto dal Direttore"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-15",
-      "agente": "crescita-zampaviva",
-      "lavoro": "visite del 14/10",
-      "revisore": "analista",
-      "punti": [
-        {
-          "punto": "traffico misurato",
-          "voto": 3,
-          "motivo": "5 visite, 1 da TikTok, 0 da Pinterest; 3 carrelli, 1 checkout, 0 ordini"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-16",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it Y5iRMBL4Mb0 del 15/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 4,
-          "motivo": "GTA 6 a novembre, fonte Everyeye"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-16",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it Y5iRMBL4Mb0 del 15/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "attacco e accuratezza",
-          "voto": 3,
-          "motivo": "\"il lancio è qui\" è impreciso, nessun dato di visione (vidIQ senza crediti)"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-16",
-      "agente": "crescita-zampaviva",
-      "lavoro": "visite del 15/10",
-      "revisore": "analista",
-      "punti": [
-        {
-          "punto": "traffico misurato",
-          "voto": 2,
-          "motivo": "14 visite tutte dirette, 0 carrelli, 0 ordini"
-        }
-      ],
-      "media": 2.0
-    },
-    {
-      "data": "2026-10-16",
-      "agente": "grafico",
-      "lavoro": "controllo coprisedile e zaino",
-      "revisore": "critico",
-      "punti": [
-        {
-          "punto": "almeno 3 foto con alt in italiano",
-          "voto": 2,
-          "motivo": "1 foto ciascuno, alt in italiano"
-        }
-      ],
-      "media": 2.0
-    },
-    {
-      "data": "2026-10-17",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it dHlm4DuesZs del 17/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 4,
-          "motivo": "GTA 6 e grafica del trailer, fonte SpazioGames"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-17",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it dHlm4DuesZs del 17/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "attacco e accuratezza",
-          "voto": 3,
-          "motivo": "non verificabile: video e vidIQ non raggiungibili"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-17",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it _KnBZGCDFRs del 16/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 3,
-          "motivo": "offerta Instant Gaming, più promozione che notizia"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-17",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it kjSxYkGYahM del 17/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 2,
-          "motivo": "evento locale, titolo \"glitch\" fuorviante"
-        }
-      ],
-      "media": 2.0
-    },
-    {
-      "data": "2026-10-17",
-      "agente": "crescita-zampaviva",
-      "lavoro": "visite del 16/10",
-      "revisore": "analista",
-      "punti": [
-        {
-          "punto": "traffico misurato",
-          "voto": 2,
-          "motivo": "4 visite tutte dirette, 0 carrelli, 0 ordini"
-        }
-      ],
-      "media": 2.0
-    },
-    {
-      "data": "2026-10-17",
-      "agente": "grafico",
-      "lavoro": "foto coprisedile e zaino",
-      "revisore": "critico",
-      "punti": [
-        {
-          "punto": "almeno 3 foto con alt in italiano",
-          "voto": 4,
-          "motivo": "5 foto ciascuno, alt generici perché non ho potuto vedere le immagini"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-18",
-      "agente": "crescita-zampaviva",
-      "lavoro": "visite del 17/10",
-      "revisore": "analista",
-      "punti": [
-        {
-          "punto": "traffico misurato",
-          "voto": 1,
-          "motivo": "2 visite, 0 carrelli, 0 ordini; fonte delle visite non disponibile"
-        }
-      ],
-      "media": 1.0
-    },
-    {
-      "data": "2026-10-18",
-      "agente": "redazione",
-      "lavoro": "bozze del 17/10",
-      "revisore": "critico",
-      "punti": [
-        {
-          "punto": "fonti che reggono le affermazioni",
-          "voto": 3,
-          "motivo": "3 bozze, 1 scartata: affermazioni su Rockstar non presenti nella fonte"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-18",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it voIRtB9En_Y del 18/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 4,
-          "motivo": "GTA 6 non esclusiva Xbox Cloud, fonte Everyeye"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-18",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it voIRtB9En_Y del 18/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "attacco e accuratezza",
-          "voto": 3,
-          "motivo": "non verificabile: video e vidIQ non raggiungibili"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-notizie",
-      "lavoro": "Short it Lr8yCw1ZrZA del 19/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 4,
-          "motivo": "rimonta Inter, fonte ANSA"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-notizie",
-      "lavoro": "Short it Lr8yCw1ZrZA del 19/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "attacco e accuratezza",
-          "voto": 3,
-          "motivo": "non verificabile: file del video non raggiungibile da qui"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-notizie",
-      "lavoro": "Short it dVFsufxRRgU del 19/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 4,
-          "motivo": "manovra, fonte Corriere; tema politico"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-notizie",
-      "lavoro": "Short it dVFsufxRRgU del 19/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "attacco e accuratezza",
-          "voto": 3,
-          "motivo": "non verificabile: file del video non raggiungibile da qui"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "grafico",
-      "lavoro": "carosello Tesla Roadster 2028 (4 slide)",
-      "revisore": "grafico",
-      "punti": [
-        {
-          "punto": "regole di design/SISTEMA.md",
-          "voto": 5,
-          "motivo": "leggibile, colori e caratteri giusti, firma, numerazione e fonti al loro posto, nessuna foto"
-        }
-      ],
-      "media": 5.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it W_LyppmTpT8 del 20/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 4,
-          "motivo": "GTA 6 di tendenza, fonte Everyeye; titolo acchiappa-clic"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-gaming",
-      "lavoro": "Short it W_LyppmTpT8 del 20/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "attacco e accuratezza",
-          "voto": 3,
-          "motivo": "non verificabile: file del video non raggiungibile da qui"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-notizie",
-      "lavoro": "Short it ixQJss50GIM del 20/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 3,
-          "motivo": "retroscena da una sola fonte (Libero)"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-notizie",
-      "lavoro": "Short it ixQJss50GIM del 20/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "attacco e accuratezza",
-          "voto": 3,
-          "motivo": "non verificabile: file del video non raggiungibile da qui"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-notizie",
-      "lavoro": "Short it Rtpli3SDjUM del 20/10",
-      "revisore": "revisore-argomenti",
-      "punti": [
-        {
-          "punto": "argomento di tendenza con fonte",
-          "voto": 4,
-          "motivo": "manovra, fonte ANSA; tema politico"
-        }
-      ],
-      "media": 4.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "samaritan-notizie",
-      "lavoro": "Short it Rtpli3SDjUM del 20/10",
-      "revisore": "revisore-video",
-      "punti": [
-        {
-          "punto": "attacco e accuratezza",
-          "voto": 3,
-          "motivo": "non verificabile: file del video non raggiungibile da qui"
-        }
-      ],
-      "media": 3.0
-    },
-    {
-      "data": "2026-10-20",
-      "agente": "redazione",
-      "lavoro": "bozze del 20/10",
-      "revisore": "critico",
-      "punti": [
-        {
-          "punto": "fonti che reggono le affermazioni",
-          "voto": 3,
-          "motivo": "3 bozze, 1 scartata: Android Auto aggiunge affermazioni non presenti nella fonte HDblog"
-        }
-      ],
-      "media": 3.0
+     "punto": "notizia verificabile",
+     "voto": 2,
+     "motivo": "leak non confermato"
     }
-  ]
+   ],
+   "media": 1.5
+  },
+  {
+   "data": "2026-10-13",
+   "agente": "samaritan-gaming",
+   "lavoro": "Uscite del 12/10",
+   "revisore": "revisore-testi",
+   "punti": [
+    {
+     "punto": "lingua giusta per lo slot",
+     "voto": 2,
+     "motivo": "18:00 in inglese invece che in italiano"
+    },
+    {
+     "punto": "voto_revisore in cronologia almeno 6",
+     "voto": 1,
+     "motivo": "il revisore non è ancora attivo (PR #83)"
+    }
+   ],
+   "media": 1.5
+  },
+  {
+   "data": "2026-10-13",
+   "agente": "samaritan-notizie",
+   "lavoro": "Uscite 10-13/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "temi vari",
+     "voto": 2,
+     "motivo": "pensioni ripetute a due giorni"
+    },
+    {
+     "punto": "fonte italiana citata",
+     "voto": 4,
+     "motivo": "temi di attualità reali"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-13",
+   "agente": "samaritan-notizie",
+   "lavoro": "Lavorazione 12/10 13:00",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "video consegnato",
+     "voto": 1,
+     "motivo": "run fallita, nessun file"
+    }
+   ],
+   "media": 1.0
+  },
+  {
+   "data": "2026-10-13",
+   "agente": "redattore",
+   "lavoro": "3 articoli del 12/10",
+   "revisore": "revisore-testi",
+   "punti": [
+    {
+     "punto": "titolo chiaro",
+     "voto": 4,
+     "motivo": "titoli informativi"
+    },
+    {
+     "punto": "carosello completo",
+     "voto": 5,
+     "motivo": "4-6 immagini per articolo"
+    }
+   ],
+   "media": 4.5
+  },
+  {
+   "data": "2026-10-13",
+   "agente": "procacciatore-sponsor",
+   "lavoro": "4 bozze email",
+   "revisore": "revisore-testi",
+   "punti": [
+    {
+     "punto": "dichiarazione sponsor",
+     "voto": 5,
+     "motivo": "presente in tutte"
+    },
+    {
+     "punto": "numeri verificabili",
+     "voto": 3,
+     "motivo": "follower citati senza data: aggiornarli prima dell'invio"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-13",
+   "agente": "analista",
+   "lavoro": "performance.json",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "dati aggiornati",
+     "voto": 1,
+     "motivo": "fermi al 9/10"
+    }
+   ],
+   "media": 1.0
+  },
+  {
+   "data": "2026-10-13",
+   "agente": "videomaker",
+   "lavoro": "Ho cancellato 27 video (lungo + 3 Short)",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "nessun silenzio oltre 1,5 s",
+     "voto": 5,
+     "motivo": "video lungo pulito"
+    },
+    {
+     "punto": "volume tra -16 e -12 LUFS",
+     "voto": 5,
+     "motivo": "da -16,0 a -14,5"
+    },
+    {
+     "punto": "Short senza code mute",
+     "voto": 2,
+     "motivo": "circa 2 secondi muti alla fine di tutti e tre"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "samaritan-gaming",
+   "lavoro": "4 Short del 13/10 (1 IT, 3 EN)",
+   "revisore": "revisore-testi",
+   "punti": [
+    {
+     "punto": "titoli chiari e completi",
+     "voto": 3,
+     "motivo": "\"Zelda: New Ocarina of Time remake footage blows\" è troncato"
+    },
+    {
+     "punto": "didascalia pulita",
+     "voto": 4,
+     "motivo": "didascalie ok, \\n corretto nella coda"
+    }
+   ],
+   "media": 3.5
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "samaritan-gaming",
+   "lavoro": "4 Short del 13/10 (1 IT, 3 EN)",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "notizia vera e recente",
+     "voto": 3,
+     "motivo": "2 su 4 sono voci di leak su GTA 6, 1 è un furto (cronaca)"
+    },
+    {
+     "punto": "adatto al canale",
+     "voto": 4,
+     "motivo": "gaming in tema"
+    }
+   ],
+   "media": 3.5
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "samaritan-gaming",
+   "lavoro": "uscite del 13-14/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "uscito nel suo orario",
+     "voto": 2,
+     "motivo": "la partenza delle 01:49 non ha prodotto video"
+    },
+    {
+     "punto": "retention nella media",
+     "voto": 3,
+     "motivo": "non disponibile: performance.json fermo"
+    }
+   ],
+   "media": 2.5
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "samaritan-notizie",
+   "lavoro": "3 Short del 13/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "due testate per notizia",
+     "voto": 3,
+     "motivo": "non verificabile da qui"
+    },
+    {
+     "punto": "temi non ripetuti",
+     "voto": 3,
+     "motivo": "due Short sulla manovra nello stesso giorno, angoli diversi"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "samaritan-notizie",
+   "lavoro": "uscite del 13-14/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "uscito nel suo orario",
+     "voto": 2,
+     "motivo": "la partenza delle 01:47 del 14/10 non ha prodotto video"
+    }
+   ],
+   "media": 2.0
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "redattore",
+   "lavoro": "redazione del 13/10",
+   "revisore": "critico-stanza",
+   "punti": [
+    {
+     "punto": "bozze prodotte",
+     "voto": 1,
+     "motivo": "0 bozze: tutti i modelli AI ko (503 e 404)"
+    }
+   ],
+   "media": 1.0
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "social",
+   "lavoro": "rilanci caroselli del 13/10",
+   "revisore": "revisore-testi",
+   "punti": [
+    {
+     "punto": "pubblicato come approvato",
+     "voto": 5,
+     "motivo": "Tesla e Game Pass usciti su TikTok, Facebook, Bluesky, Pinterest"
+    },
+    {
+     "punto": "AI dichiarata",
+     "voto": 5,
+     "motivo": "isAigc su TikTok e frase in didascalia"
+    }
+   ],
+   "media": 5.0
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "crescita-zampaviva",
+   "lavoro": "16 Pin del 13/10",
+   "revisore": "analista",
+   "punti": [
+    {
+     "punto": "link con utm",
+     "voto": 5,
+     "motivo": "tutti i 16 con utm_source e utm_campaign"
+    },
+    {
+     "punto": "testo fedele a Shopify",
+     "voto": 5,
+     "motivo": "frasi dalle descrizioni"
+    },
+    {
+     "punto": "misura il giorno dopo",
+     "voto": 3,
+     "motivo": "0 visite da Pinterest finora; 2 Pin non usciti per il limite Metricool"
+    }
+   ],
+   "media": 4.33
+  },
+  {
+   "data": "2026-10-14",
+   "agente": "grafico",
+   "lavoro": "controllo prodotti: amaca, borraccia",
+   "revisore": "critico-stanza",
+   "punti": [
+    {
+     "punto": "3+ immagini e alt in italiano",
+     "voto": 3,
+     "motivo": "amaca 9 foto senza alt; borraccia 10 foto con alt"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-15",
+   "agente": "samaritan-gaming",
+   "lavoro": "4 Short del 14/10 (1 IT, 3 EN)",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "tema forte e attuale",
+     "voto": 4,
+     "motivo": "GTA 6 su PC, Mario Kart, cuffie Pokémon: temi del giorno"
+    },
+    {
+     "punto": "Short italiano",
+     "voto": 3,
+     "motivo": "museo M9 con Super Mario: notizia locale, titolo 'storia nascosta' più forte della fonte"
+    }
+   ],
+   "media": 3.5
+  },
+  {
+   "data": "2026-10-15",
+   "agente": "samaritan-gaming",
+   "lavoro": "uscite 14-15/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "uscite regolari",
+     "voto": 4,
+     "motivo": "4 Short in orario; la partenza notturna è il recupero e non trova niente da rifare (log 23:26)"
+    },
+    {
+     "punto": "dati di resa",
+     "voto": 2,
+     "motivo": "performance.json fermo al 9/10"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-15",
+   "agente": "samaritan-notizie",
+   "lavoro": "2 Short del 14/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "fonti",
+     "voto": 4,
+     "motivo": "ANSA e Adnkronos"
+    },
+    {
+     "punto": "rischio",
+     "voto": 3,
+     "motivo": "due temi politici: restano fuori dal permesso fisso"
+    }
+   ],
+   "media": 3.5
+  },
+  {
+   "data": "2026-10-15",
+   "agente": "redattore",
+   "lavoro": "6 bozze del 14/10",
+   "revisore": "critico",
+   "punti": [
+    {
+     "punto": "fonti",
+     "voto": 3,
+     "motivo": "3 bozze con una sola testata (ammesso per tecnologia/gaming, poco per motori)"
+    },
+    {
+     "punto": "parole proprie",
+     "voto": 3,
+     "motivo": "il Critico segnala frasi quasi identiche alla fonte nella bozza Gemini"
+    },
+    {
+     "punto": "produzione",
+     "voto": 4,
+     "motivo": "redazione ripartita: 6 bozze dopo lo zero del 13/10"
+    }
+   ],
+   "media": 3.3
+  },
+  {
+   "data": "2026-10-15",
+   "agente": "grafico",
+   "lavoro": "controllo prodotti: lavazampe, tappeto olfattivo (+ lettiera, collare)",
+   "revisore": "critico-stanza",
+   "punti": [
+    {
+     "punto": "3+ immagini e alt in italiano",
+     "voto": 3,
+     "motivo": "4 prodotti con 6-9 foto ma alt vuoto: corretto dal Direttore"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-15",
+   "agente": "crescita-zampaviva",
+   "lavoro": "visite del 14/10",
+   "revisore": "analista",
+   "punti": [
+    {
+     "punto": "traffico misurato",
+     "voto": 3,
+     "motivo": "5 visite, 1 da TikTok, 0 da Pinterest; 3 carrelli, 1 checkout, 0 ordini"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-16",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it Y5iRMBL4Mb0 del 15/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 4,
+     "motivo": "GTA 6 a novembre, fonte Everyeye"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-16",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it Y5iRMBL4Mb0 del 15/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "\"il lancio è qui\" è impreciso, nessun dato di visione (vidIQ senza crediti)"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-16",
+   "agente": "crescita-zampaviva",
+   "lavoro": "visite del 15/10",
+   "revisore": "analista",
+   "punti": [
+    {
+     "punto": "traffico misurato",
+     "voto": 2,
+     "motivo": "14 visite tutte dirette, 0 carrelli, 0 ordini"
+    }
+   ],
+   "media": 2.0
+  },
+  {
+   "data": "2026-10-16",
+   "agente": "grafico",
+   "lavoro": "controllo coprisedile e zaino",
+   "revisore": "critico",
+   "punti": [
+    {
+     "punto": "almeno 3 foto con alt in italiano",
+     "voto": 2,
+     "motivo": "1 foto ciascuno, alt in italiano"
+    }
+   ],
+   "media": 2.0
+  },
+  {
+   "data": "2026-10-17",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it dHlm4DuesZs del 17/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 4,
+     "motivo": "GTA 6 e grafica del trailer, fonte SpazioGames"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-17",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it dHlm4DuesZs del 17/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "non verificabile: video e vidIQ non raggiungibili"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-17",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it _KnBZGCDFRs del 16/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 3,
+     "motivo": "offerta Instant Gaming, più promozione che notizia"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-17",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it kjSxYkGYahM del 17/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 2,
+     "motivo": "evento locale, titolo \"glitch\" fuorviante"
+    }
+   ],
+   "media": 2.0
+  },
+  {
+   "data": "2026-10-17",
+   "agente": "crescita-zampaviva",
+   "lavoro": "visite del 16/10",
+   "revisore": "analista",
+   "punti": [
+    {
+     "punto": "traffico misurato",
+     "voto": 2,
+     "motivo": "4 visite tutte dirette, 0 carrelli, 0 ordini"
+    }
+   ],
+   "media": 2.0
+  },
+  {
+   "data": "2026-10-17",
+   "agente": "grafico",
+   "lavoro": "foto coprisedile e zaino",
+   "revisore": "critico",
+   "punti": [
+    {
+     "punto": "almeno 3 foto con alt in italiano",
+     "voto": 4,
+     "motivo": "5 foto ciascuno, alt generici perché non ho potuto vedere le immagini"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-18",
+   "agente": "crescita-zampaviva",
+   "lavoro": "visite del 17/10",
+   "revisore": "analista",
+   "punti": [
+    {
+     "punto": "traffico misurato",
+     "voto": 1,
+     "motivo": "2 visite, 0 carrelli, 0 ordini; fonte delle visite non disponibile"
+    }
+   ],
+   "media": 1.0
+  },
+  {
+   "data": "2026-10-18",
+   "agente": "redazione",
+   "lavoro": "bozze del 17/10",
+   "revisore": "critico",
+   "punti": [
+    {
+     "punto": "fonti che reggono le affermazioni",
+     "voto": 3,
+     "motivo": "3 bozze, 1 scartata: affermazioni su Rockstar non presenti nella fonte"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-18",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it voIRtB9En_Y del 18/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 4,
+     "motivo": "GTA 6 non esclusiva Xbox Cloud, fonte Everyeye"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-18",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it voIRtB9En_Y del 18/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "non verificabile: video e vidIQ non raggiungibili"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-notizie",
+   "lavoro": "Short it Lr8yCw1ZrZA del 19/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 4,
+     "motivo": "rimonta Inter, fonte ANSA"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-notizie",
+   "lavoro": "Short it Lr8yCw1ZrZA del 19/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "non verificabile: file del video non raggiungibile da qui"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-notizie",
+   "lavoro": "Short it dVFsufxRRgU del 19/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 4,
+     "motivo": "manovra, fonte Corriere; tema politico"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-notizie",
+   "lavoro": "Short it dVFsufxRRgU del 19/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "non verificabile: file del video non raggiungibile da qui"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "grafico",
+   "lavoro": "carosello Tesla Roadster 2028 (4 slide)",
+   "revisore": "grafico",
+   "punti": [
+    {
+     "punto": "regole di design/SISTEMA.md",
+     "voto": 5,
+     "motivo": "leggibile, colori e caratteri giusti, firma, numerazione e fonti al loro posto, nessuna foto"
+    }
+   ],
+   "media": 5.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it W_LyppmTpT8 del 20/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 4,
+     "motivo": "GTA 6 di tendenza, fonte Everyeye; titolo acchiappa-clic"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it W_LyppmTpT8 del 20/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "non verificabile: file del video non raggiungibile da qui"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-notizie",
+   "lavoro": "Short it ixQJss50GIM del 20/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 3,
+     "motivo": "retroscena da una sola fonte (Libero)"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-notizie",
+   "lavoro": "Short it ixQJss50GIM del 20/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "non verificabile: file del video non raggiungibile da qui"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-notizie",
+   "lavoro": "Short it Rtpli3SDjUM del 20/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 4,
+     "motivo": "manovra, fonte ANSA; tema politico"
+    }
+   ],
+   "media": 4.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "samaritan-notizie",
+   "lavoro": "Short it Rtpli3SDjUM del 20/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "non verificabile: file del video non raggiungibile da qui"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-20",
+   "agente": "redazione",
+   "lavoro": "bozze del 20/10",
+   "revisore": "critico",
+   "punti": [
+    {
+     "punto": "fonti che reggono le affermazioni",
+     "voto": 3,
+     "motivo": "3 bozze, 1 scartata: Android Auto aggiunge affermazioni non presenti nella fonte HDblog"
+    }
+   ],
+   "media": 3.0
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "samaritan-gaming",
+   "lavoro": "4 Short del 21/10",
+   "revisore": "samaritan-notizie",
+   "punti": [
+    {
+     "punto": "Il titolo è chiaro e non è clickbait ingannevole",
+     "voto": 3,
+     "motivo": "\"PS5: New Patch Sparks GTA 6 Hype\" gonfia una patch minore di sicurezza (MP1st); lo Short inglese delle 21 ha il titolo in italiano"
+    },
+    {
+     "punto": "Il materiale è ufficiale (trailer Steam o dell'editore), mai di altri creator",
+     "voto": 3,
+     "motivo": "non verificabile da qui: i file video non sono scaricabili; le fonti sono testate"
+    },
+    {
+     "punto": "La notizia è vera e recente",
+     "voto": 4,
+     "motivo": "tutte e 4 con fonte del giorno: Everyeye, Mashable, MP1st, IGN"
+    },
+    {
+     "punto": "Il video è uscito nel suo orario",
+     "voto": 5,
+     "motivo": "14:00, 18:00, 20:00 e 21:00 puntuali"
+    },
+    {
+     "punto": "La retention è almeno nella media degli ultimi 30 giorni",
+     "voto": 3,
+     "motivo": "performance.json ha dati fino al 18/10 (ritardo normale di YouTube Analytics): non misurabile"
+    }
+   ],
+   "media": 3.6
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it jSMJqyueqCw del 21/10",
+   "revisore": "revisore-argomenti",
+   "punti": [
+    {
+     "punto": "argomento di tendenza con fonte",
+     "voto": 3,
+     "motivo": "demo gratis di un gioco di nicchia (Rideshare Stimulator), fonte Everyeye citata; interesse moderato, tema non sensibile"
+    }
+   ],
+   "media": 3
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "samaritan-gaming",
+   "lavoro": "Short it jSMJqyueqCw del 21/10",
+   "revisore": "revisore-video",
+   "punti": [
+    {
+     "punto": "attacco e accuratezza",
+     "voto": 3,
+     "motivo": "non verificabile: file del video non raggiungibile da qui; titolo e didascalia coerenti con la fonte"
+    }
+   ],
+   "media": 3
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "redazione",
+   "lavoro": "bozze del 21/10",
+   "revisore": "critico",
+   "punti": [
+    {
+     "punto": "Fonti citate in fondo e coerenti con il testo",
+     "voto": 3,
+     "motivo": "3 bozze, 1 scartata: il pezzo sul jailbreak PS5 ha 3 affermazioni non coperte dalle fonti (mese del firmware, preoccupazione della community, previsione sul 14.20)"
+    },
+    {
+     "punto": "Titolo onesto e sotto i 70 caratteri",
+     "voto": 3,
+     "motivo": "\"Agenti AI che disattivano i controlli...\" è lungo 81 caratteri e riprende il tema del contraddittorio uscito il 20/10"
+    },
+    {
+     "punto": "Tono neutro su politica e cronaca",
+     "voto": 4,
+     "motivo": "nessun tema politico; toni misurati"
+    },
+    {
+     "punto": "Leggibile da telefono: paragrafi brevi",
+     "voto": 4,
+     "motivo": "testi da 130 a 185 parole, paragrafi corti"
+    }
+   ],
+   "media": 3.5
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "scout",
+   "lavoro": "scaletta del 21/10",
+   "revisore": "analista",
+   "punti": [
+    {
+     "punto": "I temi sono di interesse per il pubblico di Davide (tech, AI, gaming, motori, attualità)",
+     "voto": 3,
+     "motivo": "motori, AI e gaming in linea, ma il tema agenti AI/Microsoft era già uscito il 20/10"
+    },
+    {
+     "punto": "Almeno un tema è utile anche a Samaritan o ai social",
+     "voto": 4,
+     "motivo": "il jailbreak PS5 e la patch anti GTA 6 sono finiti anche nello Short delle 20"
+    },
+    {
+     "punto": "Nessun feed RSS in errore lasciato senza segnalazione",
+     "voto": 3,
+     "motivo": "il log mostra solo i limiti di Groq (429, 8000 token al minuto); nessun elenco dei feed in errore"
+    }
+   ],
+   "media": 3.33
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "social",
+   "lavoro": "coda social del 21/10 (Reel e video Facebook GTA 6)",
+   "revisore": "redattore",
+   "punti": [
+    {
+     "punto": "Il carosello riassume l'articolo senza aggiungere fatti",
+     "voto": 4,
+     "motivo": "didascalia uguale a quella TikTok, fonte Everyeye citata"
+    },
+    {
+     "punto": "Le affiliazioni sono dichiarate",
+     "voto": 5,
+     "motivo": "nota AI presente, nessuna affiliazione nel post"
+    }
+   ],
+   "media": 4.5
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "guardiano",
+   "lavoro": "controllo del 21/10",
+   "revisore": "critico-stanza",
+   "punti": [
+    {
+     "punto": "Ha controllato tutto quello che poteva (pochi 'non controllato')",
+     "voto": 4,
+     "motivo": "24 ok, 1 non controllato (token Pinterest non passato al workflow)"
+    },
+    {
+     "punto": "Ogni problema ha il rimedio scritto in parole semplici",
+     "voto": 4,
+     "motivo": "il caso Pinterest spiega che manca la variabile"
+    },
+    {
+     "punto": "Non duplica compiti già aperti",
+     "voto": 5,
+     "motivo": "nessun compito nuovo aperto"
+    },
+    {
+     "punto": "Nessun falso allarme",
+     "voto": 5,
+     "motivo": "0 attenzione, 0 rotto"
+    }
+   ],
+   "media": 4.5
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "trattative",
+   "lavoro": "giro del 22/10 (3 bozze, etichetta)",
+   "revisore": "analista",
+   "punti": [
+    {
+     "punto": "Risponde a quello che il brand ha chiesto davvero",
+     "voto": 4,
+     "motivo": "la risposta all'account manager copre newsletter, asset e nuovo prodotto"
+    },
+    {
+     "punto": "Usa solo i numeri del media kit, nessun prezzo inventato",
+     "voto": 5,
+     "motivo": "nessuna cifra nelle bozze, solo il link al media kit"
+    },
+    {
+     "punto": "Il tono è quello di Davide, breve e cortese",
+     "voto": 4,
+     "motivo": "5-6 righe, chiusura senza pressione"
+    },
+    {
+     "punto": "Nessuna trattativa resta senza risposta o promemoria per più di 7 giorni",
+     "voto": 3,
+     "motivo": "due proposte erano a 9 e 11 giorni senza promemoria: recuperate oggi; l'etichetta Gmail non esisteva"
+    }
+   ],
+   "media": 4
+  },
+  {
+   "data": "2026-10-22",
+   "agente": "vendite",
+   "lavoro": "mossa del 21/10 (servizio clip per streamer)",
+   "revisore": "analista",
+   "punti": [
+    {
+     "punto": "La mossa nasce da un numero vero, citato",
+     "voto": 4,
+     "motivo": "richiesta di Davide (10 € al giorno); 96 canali esaminati, 5 scelti"
+    },
+    {
+     "punto": "Si fa in meno di un'ora o la fa un agente",
+     "voto": 3,
+     "motivo": "pagina e messaggi fatti da Finch, ma la prova di taglia_live tocca a Davide dal suo PC"
+    },
+    {
+     "punto": "Dice quanto può rendere, anche a spanne, e come lo misureremo",
+     "voto": 4,
+     "motivo": "60-100 € al mese per cliente; misura: risposte ai 5 messaggi"
+    },
+    {
+     "punto": "Non ripete una mossa già scartata da Davide",
+     "voto": 5,
+     "motivo": "servizio nuovo, approvato con un OK"
+    }
+   ],
+   "media": 4
+  }
+ ]
 }
