@@ -805,7 +805,7 @@
       "id": "2026-10-22-5",
       "per": "davide",
       "da": "trattative",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "email",
       "volte": 1,
       "origine": "email dell'account manager NordVPN del 21/10",
@@ -813,7 +813,8 @@
       "dettagli": "Il 21/10 l'account manager ha mandato il link di affiliazione e ha chiesto se vuoi la newsletter settimanale dei partner; propone anche il prodotto eSIM Saily. La bozza ringrazia, dice sì alla newsletter, chiede la scheda di Saily e i banner in italiano, e conferma che non faremo campagne a pagamento sulla parola chiave NordVPN (loro regola). Nessuna cifra.",
       "link": "https://mail.google.com/mail/?authuser=davide1988rm@gmail.com#all?compose=thread-f:1879646352901207041%2Bmsg-a:r-8634571834145920551",
       "azione": "invio la bozza a NordVPN",
-      "creato": "2026-10-22T06:11:48+00:00"
+      "creato": "2026-10-22T06:11:48+00:00",
+      "deciso": "2026-10-22T08:13:19.982Z"
     },
     {
       "id": "2026-10-22-6",
