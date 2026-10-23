@@ -245,6 +245,8 @@ def main():
                 "benvenuto", "regole", "annunci", "live-ora", "domande-per-davide",
                 "clip", "chiacchiere", "cerca-squadra")],
             "prompts": [{
+                # Discord vuole un id per ogni domanda: uno snowflake generato qui va bene
+                "id": str((int(time.time() * 1000) - 1420070400000) << 22),
                 "type": 0,
                 "title": "A cosa giochi?",
                 "single_select": False,
@@ -254,7 +256,7 @@ def main():
                     opzione("EA FC", "⚽", "EA FC", "ea-fc"),
                     opzione("Fortnite", "🪂", "Fortnite", "fortnite"),
                     opzione("Rocket League", "🚗", "Rocket League", "rocket-league"),
-                    opzione("Solo le dirette", "🔴"),
+                    opzione("Solo le dirette", "🔴", canale="live-ora"),
                 ],
             }],
         })
