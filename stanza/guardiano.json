@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-10-22T10:11+00:00",
+  "aggiornato": "2026-10-23T10:03+00:00",
   "riassunto": {
-    "ok": 24,
+    "ok": 26,
     "attenzione": 0,
     "rotto": 0,
     "non controllato": 1
@@ -46,7 +46,7 @@
     {
       "nome": "Token del bot della chat Twitch",
       "esito": "ok",
-      "messaggio": "valido, scade tra 57 giorni",
+      "messaggio": "valido, scade tra 56 giorni",
       "rimedio": ""
     },
     {
@@ -62,33 +62,45 @@
       "rimedio": ""
     },
     {
+      "nome": "davidedurazzi-sito · Finch su Discord",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
+      "rimedio": ""
+    },
+    {
+      "nome": "davidedurazzi-sito · Server Discord",
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
+      "rimedio": ""
+    },
+    {
       "nome": "davidedurazzi-sito · Guardiano delle chiavi",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-21: success",
+      "messaggio": "ultima esecuzione del 2026-10-22: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Messaggi privati Instagram",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-21: success",
+      "messaggio": "ultima esecuzione del 2026-10-22: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Aggiorna pagine statiche",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-21: success",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Pubblica bozze approvate",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-22: success",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Redazione del mattino",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-22: success",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
       "rimedio": ""
     },
     {
@@ -106,13 +118,13 @@
     {
       "nome": "samaritan_v2 · Pulizia copie dei video",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-22: success",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan_v2 · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-22: success",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
       "rimedio": ""
     },
     {
@@ -124,13 +136,13 @@
     {
       "nome": "samaritan_v2 · Vocale di Finch",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-22: success",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan-notizie · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-22: success",
+      "messaggio": "ultima esecuzione del 2026-10-23: success",
       "rimedio": ""
     },
     {
