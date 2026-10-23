@@ -1,5 +1,124 @@
 [
   {
+    "slug": "amazon-investe-in-12-reattori-nucleari-per-i-suoi-data-center-20261023",
+    "titolo": "Amazon investe in 12 reattori nucleari per i suoi data center",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-23",
+    "sommario": "Secondo Il Sole 24 Ore, Amazon ha deciso di finanziare dodici piccoli reattori modulari da 960 MW in Indiana, sul sito di una ex centrale a carbone.",
+    "testo": [
+      "Secondo Il Sole 24 Ore, Amazon ha annunciato un investimento per la costruzione di dodici piccoli reattori nucleari modulari (SMR) nello stato dell’Indiana, negli Stati Uniti. I reattori, con una potenza complessiva di 960 megawatt, saranno collocati sul sito di una ex centrale a carbone.",
+      "L’obiettivo dichiarato è fornire energia ai data center dell’azienda, che consumano grandi quantità di elettricità. La scelta di utilizzare SMR suscita interesse perché rappresenta una modalità diversa rispetto alle fonti tradizionali di approvvigionamento.",
+      "Rimane ancora da capire come e quando i reattori saranno operativi, quali autorizzazioni saranno necessarie e quali saranno le valutazioni di sicurezza da parte delle autorità locali. Inoltre, non è chiaro come la comunità dell’Indiana reagirà a questo progetto.",
+      "Il progetto si inserisce in un dibattito più ampio sull’uso del nucleare per sostenere l’infrastruttura digitale, ma per il momento le informazioni disponibili sono limitate ai dati di base forniti da Il Sole 24 Ore."
+    ],
+    "fonti": [
+      {
+        "nome": "Il Sole 24 Ore: Amazon investe in 12 reattori nucleari per alimentare i suoi data center",
+        "url": "https://www.ilsole24ore.com/art/amazon-investe-12-reattori-nucleari-alimentare-suoi-data-center-AJIfcOrB"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
+    "slug": "bioware-chiusa-il-canada-propone-il-salvataggio-la-community-protesta-20261023",
+    "titolo": "BioWare chiusa: il Canada propone il salvataggio, la community protesta",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-23",
+    "sommario": "Dopo la chiusura di BioWare e la cancellazione di Mass Effect, il governo canadese valuta un piano di salvataggio mentre la community lancia la petizione #SaveMassEffect.",
+    "testo": [
+      "Secondo Spaziogames, la chiusura di BioWare ha scatenato una reazione immediata. Il leader del New Democratic Party, Avi Lewis, ha chiesto al governo canadese di intervenire per affidare lo studio ai suoi sviluppatori, proponendo un piano di salvataggio.",
+      "La community si è mobilitata con l'hashtag #SaveMassEffect, raccogliendo migliaia di firme in poche ore. Su IGN Italia, gli sceneggiatori del progetto cancellato hanno dichiarato che stavano creando qualcosa di fantastico, mentre Jason Schreier ha confermato l'autenticità del trailer trapelato di Mass Effect Universe.",
+      "Nonostante la chiusura, IGN Italia conferma che la serie TV di Mass Effect prodotta da Prime Video resta in produzione con il team creativo originale. EA si è difesa sottolineando la propria posizione di leadership nel settore, ma la decisione è arrivata due mesi dopo l'assunzione di 18 miliardi di dollari di debito, come riportato da Gamereactor.",
+      "Resta da capire come evolverà la situazione legale e finanziaria dello studio, dato che le fonti non specificano se la proposta politica canadese sarà accettata o attuata. La community continua a chiedere trasparenza sulle motivazioni della cancellazione."
+    ],
+    "fonti": [
+      {
+        "nome": "Spaziogames: BioWare, arriva dal Canada il piano per salvare lo studio",
+        "url": "https://www.spaziogames.it/notizie/bioware-dal-canada-arriva-una-proposta-per-salvarla"
+      },
+      {
+        "nome": "Spaziogames: Arriva la petizione #SaveMassEffect per salvare la serie",
+        "url": "https://www.spaziogames.it/notizie/mass-effect-la-petizione-savemasseffect-supera-43mila-firme-in-nove-ore"
+      },
+      {
+        "nome": "IGN Italia: Mass Effect: la serie TV di Prime Video resta in produzione nonostante la chiusura di BioWare",
+        "url": "https://it.ign.com/mass-effect-serie-tv/228771/mass-effect-la-serie-tv-di-prime-video-resta-in-produzione-nonostante-la-chiusura-di-bioware"
+      },
+      {
+        "nome": "IGN Italia: Mass Effect: il nuovo gioco cancellato sarebbe stato \"fantastico\", secondo gli ex di BioWare",
+        "url": "https://it.ign.com/mass-effect-next-1/228764/mass-effect-il-nuovo-gioco-cancellato-sarebbe-stato-fantastico-secondo-gli-ex-di-bioware"
+      },
+      {
+        "nome": "IGN Italia: Trapelato il trailer di Mass Effect Universe, il nuovo gioco della serie di BioWare ormai cancellato",
+        "url": "https://it.ign.com/mass-effect-next-1/228781/trapelato-il-trailer-di-mass-effect-universe-il-nuovo-gioco-della-serie-di-bioware-ormai-cancellato"
+      },
+      {
+        "nome": "IGN Italia: EA si difende dopo la chiusura di BioWare: \"Siamo il publisher numero uno nel gaming HD occidentale\"",
+        "url": "https://it.ign.com/mass-effect-next-1/228754/ea-si-difende-dopo-la-chiusura-di-bioware-siamo-il-publisher-numero-uno-nel-gaming-hd-occidentale"
+      },
+      {
+        "nome": "Everyeye: BioWare, la proposta shock di un politico canadese: Il governo aiuti i dipendenti a comprare lo studio",
+        "url": "https://www.everyeye.it/notizie/bioware-proposta-shock-politico-canadese-aiuti-dipendenti-comprare-studio-907555.html"
+      },
+      {
+        "nome": "Everyeye: Mass Effect 5 cancellato: un premiato autore Sci-Fi svela: \"Ciò che stavamo preparando era davvero fantastico\"",
+        "url": "https://www.everyeye.it/notizie/mass-effect-5-cancellato-premiato-autore-sci-fi-svelapreparando-davvero-fantastico-907546.html"
+      },
+      {
+        "nome": "Everyeye: Mass Effect Universe: il trailer leakato dopo la chiusura di BioWare è autentico, Jason Schreier conferma",
+        "url": "https://www.everyeye.it/notizie/mass-effect-universe-trailer-leakato-chiusura-bioware-autentico-jason-schreier-conferma-907504.html"
+      },
+      {
+        "nome": "Gamereactor: EA chiude BioWare e cancella il prossimo Mass Effect, due mesi dopo aver contratto 18 miliardi di dollari di debito",
+        "url": "https://www.gamereactor.it/ea-chiude-bioware-e-cancella-il-prossimo-mass-effect-due-mesi-dopo-aver/"
+      }
+    ],
+    "acquisto": null,
+    "domanda": "Il governo canadese dovrebbe intervenire per salvare BioWare e i relativi posti di lavoro?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "BioWare è uno studio canadese di rilievo, creatore di franchise globali come Mass Effect e Dragon Age; la sua salvaguardia tutela un patrimonio creativo strategico per il Paese.",
+        "La chiusura comporterebbe la perdita di posti di lavoro altamente specializzati; un intervento, ad esempio facilitando l'acquisto dello studio da parte dei dipendenti, aiuterebbe a trattenere i talenti in Canada.",
+        "Un sostegno pubblico rafforzerebbe l'ecosistema videoludico nazionale, segnalando l'impegno del governo nel settore tecnologico e contrastando l'impatto delle difficoltà finanziarie di EA e delle cancellazioni di progetti."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "L'uso di fondi pubblici per salvare un'azienda privata rischia di distorcere il mercato, creando un precedente dannoso e indebolendo la concorrenza nel settore videoludico.",
+        "La decisione di EA, editore di BioWare, scaturisce da scelte finanziarie interne, legate anche al debito contratto per l'acquisizione da 55 miliardi di dollari, e non da una crisi di mercato che giustifichi un aiuto statale.",
+        "Il valore dei brand non dipende solo dallo studio: con produzioni televisive in corso e l'assenza di garanzie di ritorno economico immediato dai progetti cancellati, un intervento governativo appare né necessario né sostenibile."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
+    "slug": "chery-promette-500-km-in-5-minuti-con-ricarica-da-1-44-mw-20261023",
+    "titolo": "Chery promette 500 km in 5 minuti con ricarica da 1,44 MW",
+    "sezione": "motori",
+    "rubrica": "",
+    "data": "2026-10-23",
+    "sommario": "Secondo InsideEVs Italia, la nuova tecnologia Volt‑Dragon di Chery punta a ricaricare 500 km in 5 minuti grazie a un picco di 1,44 MW, ma restano dubbi su compatibilità e prestazioni al freddo.",
+    "testo": [
+      "Secondo InsideEVs Italia, Chery ha presentato il sistema di ricarica Volt‑Dragon, che secondo le dichiarazioni aziendali consentirebbe di aggiungere circa 500 km di autonomia in soli cinque minuti, sfruttando una potenza di picco di 1,44 MW.",
+      "Questa velocità di ricarica rappresenterebbe un salto significativo per gli utenti di veicoli elettrici, riducendo drasticamente i tempi di sosta e potenzialmente eliminando una delle principali barriere all’adozione su larga scala: l’ansia da autonomia.",
+      "Tuttavia, la notizia è accompagnata da incertezze: non è ancora chiaro quali modelli di auto potranno effettivamente utilizzare il sistema, né come si comporterà in condizioni di freddo estremo, fattori critici per l’affidabilità quotidiana.",
+      "Se la tecnologia si dimostrerà praticabile, sarà necessario anche un adeguamento dell’infrastruttura di ricarica, poiché una potenza di 1,44 MW richiede impianti molto più robusti rispetto a quelli attualmente diffusi."
+    ],
+    "fonti": [
+      {
+        "nome": "InsideEVs Italia: Chery Volt-Dragon promette 500 km in 5 minuti con la ricarica da 1,44 MW",
+        "url": "https://insideevs.it/news/812989/chery-volt-dragon-ricarica-minuti/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
     "slug": "google-wallet-e-i-passaporti-digitali-il-nuovo-supporto-per-litalia-20261022",
     "titolo": "Google Wallet e i passaporti digitali: il nuovo supporto per l’Italia",
     "sezione": "tecnologia",
