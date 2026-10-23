@@ -10,6 +10,7 @@ e regole. Non tocca il profilo personale di Davide (vietato da Discord).
 Segreto richiesto: DISCORD_BOT_TOKEN. Il bot deve essere in un solo server.
 """
 
+import base64
 import json
 import os
 import sys
@@ -184,6 +185,13 @@ def main():
     scrivi_se_vuoto("benvenuto", BENVENUTO.format(regole=canali["regole"],
                                                   chiacchiere=canali["chiacchiere"]))
     scrivi_se_vuoto("cerca-squadra", CERCA_SQUADRA)
+
+    # Icona del server: il logo del sito, solo se non ce n'è già una
+    if not server[0].get("icon"):
+        with open("assets/logo-512.png", "rb") as f:
+            icona = "data:image/png;base64," + base64.b64encode(f.read()).decode()
+        prova("icona del server (logo del sito)",
+              lambda: chiama("PATCH", f"/guilds/{gid}", {"icon": icona}))
 
     # Sicurezza e Community
     prova("sicurezza: verifica media, filtro contenuti espliciti, notifiche solo menzioni",
