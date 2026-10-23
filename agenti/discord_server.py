@@ -10,6 +10,7 @@ e regole. Non tocca il profilo personale di Davide (vietato da Discord).
 Segreto richiesto: DISCORD_BOT_TOKEN. Il bot deve essere in un solo server.
 """
 
+import base64
 import json
 import os
 import sys
@@ -185,6 +186,13 @@ def main():
                                                   chiacchiere=canali["chiacchiere"]))
     scrivi_se_vuoto("cerca-squadra", CERCA_SQUADRA)
 
+    # Icona del server: il logo del sito, solo se non ce n'è già una
+    if not server[0].get("icon"):
+        with open("assets/logo-512.png", "rb") as f:
+            icona = "data:image/png;base64," + base64.b64encode(f.read()).decode()
+        prova("icona del server (logo del sito)",
+              lambda: chiama("PATCH", f"/guilds/{gid}", {"icon": icona}))
+
     # Sicurezza e Community
     prova("sicurezza: verifica media, filtro contenuti espliciti, notifiche solo menzioni",
           lambda: chiama("PATCH", f"/guilds/{gid}", {
@@ -245,6 +253,8 @@ def main():
                 "benvenuto", "regole", "annunci", "live-ora", "domande-per-davide",
                 "clip", "chiacchiere", "cerca-squadra")],
             "prompts": [{
+                # Discord vuole un id per ogni domanda: uno snowflake generato qui va bene
+                "id": str((int(time.time() * 1000) - 1420070400000) << 22),
                 "type": 0,
                 "title": "A cosa giochi?",
                 "single_select": False,
@@ -254,7 +264,7 @@ def main():
                     opzione("EA FC", "⚽", "EA FC", "ea-fc"),
                     opzione("Fortnite", "🪂", "Fortnite", "fortnite"),
                     opzione("Rocket League", "🚗", "Rocket League", "rocket-league"),
-                    opzione("Solo le dirette", "🔴"),
+                    opzione("Solo le dirette", "🔴", canale="live-ora"),
                 ],
             }],
         })
