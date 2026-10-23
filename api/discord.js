@@ -7,6 +7,8 @@ const FAQ = require("../agenti/chat_faq.json");
 const FINCH = require("../agenti/finch_discord.json");
 
 const DER_ED25519 = Buffer.from("302a300506032b6570032100", "hex");
+// Chiave PUBBLICA dell'app Discord "Finch" (non è un segreto: serve solo a verificare le firme)
+const CHIAVE_PUBBLICA = process.env.DISCORD_PUBLIC_KEY || "c0d6b672b587fe204ab86a1f4ae0bf0e2a8e7f8ae5467ac46f7ab035814932ac";
 
 async function corpoGrezzo(req) {
   const pezzi = [];
@@ -15,7 +17,7 @@ async function corpoGrezzo(req) {
 }
 
 function firmaValida(req, corpo) {
-  const chiave = process.env.DISCORD_PUBLIC_KEY;
+  const chiave = CHIAVE_PUBBLICA;
   const firma = req.headers["x-signature-ed25519"];
   const ora = req.headers["x-signature-timestamp"];
   if (!chiave || !firma || !ora) return false;
