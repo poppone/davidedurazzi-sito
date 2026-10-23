@@ -6,6 +6,8 @@
  * gli stessi della mappa in /azienda. Lungo i fili corrono i pacchetti di
  * lavoro. La rete gira piano, segue il mouse, al tocco si trascina; passando
  * su un punto si legge chi è, con un clic si apre la mappa completa.
+ * Intorno gira l'anello dei social (design/social.js): icone vere e
+ * cliccabili, collegate al cervello, dove escono i pacchetti pubblicati.
  * Con "riduci movimento" resta ferma. Niente librerie.
  */
 (function () {
@@ -23,6 +25,26 @@
   var nodi = [], fili = [], polvere = [], pacchetti = [];
   var yaw = 0.5, pitch = -0.32, yawMouse = 0, pitchMouse = 0, yawObj = 0, pitchObj = 0;
   var trascina = null, sopra = null, nascondi = 0, inizio = performance.now(), visibile = true, raf = 0;
+  var social = [], scarto = { x: 0, y: 0 };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+
+  /* ---------- l'anello dei social: link veri che girano con la rete ---------- */
+  (function () {
+    if (!window.DD_SOCIAL) return;
+    var voci = window.DD_SOCIAL();
+    if (!voci.length) return;
+    var anello = document.createElement("nav");
+    anello.className = "pl-orbita"; anello.setAttribute("aria-label", "I miei canali");
+    voci.forEach(function (v, i) {
+      var a = document.createElement("a");
+      a.className = "pl-soc pl-soc-" + v[0]; a.href = v[2]; a.target = "_blank"; a.rel = "noopener";
+      a.setAttribute("aria-label", v[1]);
+      a.innerHTML = window.DD_ICONA(v[0]) + "<span>" + esc(v[1]) + "</span>";
+      anello.appendChild(a);
+      social.push({ el: a, fase: i / voci.length * Math.PI * 2, x: 0, y: 0, z: 0 });
+    });
+    sez.appendChild(anello);
+  })();
 
   /* ---------- costruzione della rete ---------- */
   function nodo(o) { o.x = o.x || 0; o.y = o.y || 0; o.z = o.z || 0; nodi.push(o); return o; }
@@ -87,6 +109,8 @@
     cx = largo ? W * .72 : W * .5;
     cy = largo ? H * .48 : H * .5;
     unita = Math.min(largo ? W * .17 : W * .25, H * (largo ? .28 : .3));
+    var s = sez.getBoundingClientRect();
+    scarto.x = r.left - s.left; scarto.y = r.top - s.top;
   }
 
   /* ---------- disegno ---------- */
@@ -113,6 +137,16 @@
       }
       o.p = proietta(o, cyaw, syaw, cpit, spit);
     });
+    // anello dei social: inclinato rispetto all'orbita di Finch, gira al contrario
+    social.forEach(function (so) {
+      var a = so.fase - (FERMO ? 0 : t * .16);
+      so.x = Math.cos(a) * 1.62 * k; so.z = Math.sin(a) * 1.62 * k; so.y = (Math.sin(a) * .78 - .12) * k;
+      so.p = proietta(so, cyaw, syaw, cpit, spit);
+      var prof = Math.max(0, Math.min(1, (so.p.z + 1.8) / 3));
+      so.el.style.transform = "translate(" + (so.p.sx + scarto.x).toFixed(1) + "px," + (so.p.sy + scarto.y).toFixed(1) + "px) translate(-50%,-50%) scale(" + (.62 + so.p.s * .42).toFixed(3) + ")";
+      so.el.style.opacity = (k < .6 ? 0 : .38 + prof * .62).toFixed(3);
+      so.el.style.zIndex = so.p.z > -.2 ? 2 : 0;
+    });
 
     ctx.clearRect(0, 0, W, H);
 
@@ -131,6 +165,21 @@
       if (g) ctx.lineTo(qo.sx, qo.sy); else ctx.moveTo(qo.sx, qo.sy);
     }
     ctx.strokeStyle = "rgba(150,170,255,.10)"; ctx.setLineDash([2, 7]); ctx.lineWidth = 1; ctx.stroke(); ctx.setLineDash([]);
+
+    // anello dei social e i fili che li legano al cervello
+    if (social.length) {
+      ctx.beginPath();
+      for (var gs = 0; gs <= 72; gs++) {
+        var as = gs / 72 * Math.PI * 2, qs = proietta({ x: Math.cos(as) * 1.62 * k, y: (Math.sin(as) * .78 - .12) * k, z: Math.sin(as) * 1.62 * k }, cyaw, syaw, cpit, spit);
+        if (gs) ctx.lineTo(qs.sx, qs.sy); else ctx.moveTo(qs.sx, qs.sy);
+      }
+      ctx.strokeStyle = "rgba(255,138,76,.16)"; ctx.lineWidth = 1; ctx.stroke();
+      social.forEach(function (so) {
+        var c0 = nodi[0].p, al = Math.max(.04, Math.min(.22, (so.p.z + 2) / 9));
+        ctx.strokeStyle = "rgba(255,138,76," + al.toFixed(3) + ")"; ctx.setLineDash([1, 5]);
+        ctx.beginPath(); ctx.moveTo(c0.sx, c0.sy); ctx.lineTo(so.p.sx, so.p.sy); ctx.stroke(); ctx.setLineDash([]);
+      });
+    }
 
     // fili
     fili.forEach(function (f) {
@@ -233,6 +282,8 @@
     var cer = nodi[0];
     var andata = Math.random() < .55;
     pacchetti.push({ via: andata ? [cer, rep, ag] : [ag, rep, cer], i: 0, t: 0, v: .014 + Math.random() * .014, c: andata ? "170,190,255" : "255,170,120" });
+    // ogni tanto un lavoro finito esce dal cervello verso un canale social
+    if (social.length && Math.random() < .3) pacchetti.push({ via: [cer, social[Math.floor(Math.random() * social.length)]], i: 0, t: 0, v: .012 + Math.random() * .01, c: "255,138,76" });
   }
 
   /* ---------- scheda al passaggio ---------- */
@@ -245,7 +296,6 @@
     });
     return meglio;
   }
-  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
   var ultimo = null;
   function aggiornaInfo() {
     if (!info) return;

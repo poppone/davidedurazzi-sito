@@ -98,3 +98,12 @@ Per ogni grafica, un punto per ciascuna di queste cose fatte bene:
 Il Grafico esce dalla prova quando la media dei suoi controlli resta **almeno
 4 per 5 giorni di fila**: a quel punto il Direttore propone a Davide di
 metterlo "attivo".
+
+## Lo studio (home, dal 23/10/2026)
+
+Davide ha scelto su Canva lo stile "streamer professionale" (bozza
+https://www.canva.com/d/3vXvC-Sn0BptFgA). In home `studio.css` si carica dopo
+`plancia.css`: stessi colori e stesse animazioni, ma superfici piene, bordi
+netti, angoli di 6-10px, niente vetro né aloni. Intorno alla rete gira
+l'anello dei social (`social.js` + `rete.js`): icone cliccabili collegate al
+cervello, dove arrivano i pacchetti dei lavori pubblicati.
