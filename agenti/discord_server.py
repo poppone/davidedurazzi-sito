@@ -44,6 +44,7 @@ STRUTTURA = [
         ("chiacchiere", TESTO, {"lenta": 10, "topic": "Parla di quello che vuoi, con rispetto"}),
         ("auto-e-motori", TESTO, {"topic": "Auto, moto e motori"}),
         ("tech-e-ai", TESTO, {"topic": "Tecnologia e intelligenza artificiale"}),
+        ("chiedi-a-finch", TESTO, {"lenta": 30, "topic": "Fai una domanda a Finch, l'assistente AI: risponde entro 10-15 minuti"}),
     ]),
     ("🎮 GIOCHI", [
         ("ea-fc", TESTO, {"topic": "EA SPORTS FC"}),
@@ -83,6 +84,13 @@ REGOLE = (
     "6. Usa il canale giusto per ogni argomento.\n\n"
     "La moderazione automatica blocca spam, link d'invito e parole offensive.\n"
     "Chi non rispetta le regole viene silenziato o allontanato."
+)
+
+CHIEDI_A_FINCH = (
+    "🤖 **Qui risponde Finch, l'assistente AI della community** (non è Davide).\n"
+    "Scrivi la tua domanda e Finch risponde entro 10-15 minuti.\n"
+    "Vuoi una risposta subito? Scrivi `/finch` e la domanda in qualsiasi canale.\n"
+    "Le domande per Davide vanno in <#{domande}>: le legge in diretta."
 )
 
 CERCA_SQUADRA = (
@@ -185,6 +193,19 @@ def main():
     scrivi_se_vuoto("benvenuto", BENVENUTO.format(regole=canali["regole"],
                                                   chiacchiere=canali["chiacchiere"]))
     scrivi_se_vuoto("cerca-squadra", CERCA_SQUADRA)
+    scrivi_se_vuoto("chiedi-a-finch", CHIEDI_A_FINCH.format(domande=canali["domande-per-davide"]))
+
+    # Comando /finch (la risposta la dà api/discord.js sul sito)
+    def comando_finch():
+        app = chiama("GET", "/oauth2/applications/@me")["id"]
+        chiama("PUT", f"/applications/{app}/guilds/{gid}/commands", [{
+            "name": "finch",
+            "description": "Fai una domanda a Finch, l'assistente AI della community",
+            "type": 1,
+            "options": [{"type": 3, "name": "domanda", "description": "La tua domanda",
+                         "required": True, "max_length": 500}],
+        }])
+    prova("comando /finch registrato", comando_finch)
 
     # Icona del server: il logo del sito, solo se non ce n'è già una
     if not server[0].get("icon"):
@@ -251,7 +272,7 @@ def main():
             "mode": 0,
             "default_channel_ids": [canali[n] for n in (
                 "benvenuto", "regole", "annunci", "live-ora", "domande-per-davide",
-                "clip", "chiacchiere", "cerca-squadra")],
+                "clip", "chiacchiere", "cerca-squadra", "chiedi-a-finch")],
             "prompts": [{
                 # Discord vuole un id per ogni domanda: uno snowflake generato qui va bene
                 "id": str((int(time.time() * 1000) - 1420070400000) << 22),

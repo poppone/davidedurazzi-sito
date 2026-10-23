@@ -1,4 +1,6 @@
-agenti
+agenti/*
+!agenti/chat_faq.json
+!agenti/finch_discord.json
 bozze
 social
 .github
