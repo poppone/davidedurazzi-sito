@@ -861,7 +861,7 @@
       "id": "2026-10-23-1",
       "per": "davide",
       "da": "direttore",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "post",
       "volte": 1,
       "origine": "regola 6d",
@@ -869,7 +869,8 @@
       "dettagli": "Google Wallet e passaporti, EA chiude BioWare, Claude Duet (usciti oggi alle 6:23) e Kangoo elettrico, agenti AI senza controlli (usciti il 22/10). Instagram e Facebook sono già usciti da soli. Bluesky: prime 4 slide di ogni carosello e il link all'articolo; Pinterest: un Pin con la prima slide, SOLO nella bacheca Notizie. Un solo compito invece di cinque, per non riempirti il pannello. TikTok foto in attesa del limite Metricool (31/10). Se manca il token di Bluesky o di Pinterest le voci restano in attesa, non è un errore.",
       "link": "https://www.davidedurazzi.it/articoli/ea-chiude-bioware-cancella-mass-effect-400-licenziamenti-e-18-miliardi-20261022.html",
       "azione": "metto in social/coda.json, per ciascuno dei 5 articoli, una voce bluesky (prime 4 slide da raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/<slug>/, titolo e link all'articolo) e una voce pinterest con la slide 1, titolo, sommario e link, board_id 1039979807642687589 (Notizie)",
-      "creato": "2026-10-23T06:03:51+00:00"
+      "creato": "2026-10-23T06:03:51+00:00",
+      "deciso": "2026-10-23T14:10:06.131Z"
     },
     {
       "id": "2026-10-23-2",
