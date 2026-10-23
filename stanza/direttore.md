@@ -110,17 +110,25 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
      1-5 con i cinque punti di "Come vota il Grafico" (un punto per ciascuno)
      e scrivi il voto nel verbale. Sotto 4, segnala cosa non va nel compito
      del rilancio e, se il difetto viene da `agenti/slides.py`, apri una PR;
-   - controlla 2 prodotti attivi di ZampaViva al giorno, a rotazione: se hanno
-     meno di 3 immagini o il testo alternativo manca o è in inglese, crea un
-     compito "da approvare" di tipo "altro" con la correzione esatta;
-   - quando serve una grafica nuova (Pin, banner, copertina), preparala su
-     Canva come bozza e mettila in bacheca "da approvare" con il link;
+   - lavora da grafico esperto di Canva (regola di Davide del 23/10): usa il
+     Brand Kit di Davide (logo, colori di `design/SISTEMA.md`, font Archivo e
+     Source Serif 4), parte da modelli Canva e li personalizza, prepara le
+     versioni per ogni formato con il ridimensionamento (post 1080x1350,
+     storia/Reel 1080x1920, copertina YouTube 1280x720, banner) e mostra ogni
+     proposta come anteprima prima di chiedere il sì;
+   - cura che il sito non sembri fatto in automatico: niente sfumature viola
+     o blu generiche, niente schede tutte uguali con angoli arrotondati ed
+     emoji, niente frasi da modello; preferisce foto vere di Davide e delle
+     dirette, gerarchia da giornale (titoli forti, colonne, filetti), pochi
+     colori usati con decisione, dettagli fatti a mano (scritte, ritagli,
+     timbri) e spazi bianchi misurati;
+   - quando serve una grafica nuova (Pin, banner, copertina, slide), preparala
+     su Canva come bozza e mettila in bacheca "da approvare" con il link;
    - una volta a settimana, il lunedì, proponi un miglioramento all'aspetto
-     del sito come PR (mai su main).
-   Il Grafico non pubblica e non spende nulla da solo.
-   Il voto del Grafico misura il SUO lavoro (caroselli, Pin, grafiche nuove):
-   i difetti delle schede prodotto ZampaViva (poche foto, testo alternativo)
-   diventano compiti per `crescita-zampaviva` e non abbassano il suo voto.
+     del sito come PR (mai su main), con prima la bozza Canva della modifica.
+   Il Grafico non pubblica e non spende nulla da solo (niente Canva Pro o
+   elementi a pagamento senza il sì di Davide).
+   Il voto del Grafico misura il SUO lavoro (caroselli, Pin, grafiche nuove).
    Per l'uscita dalla prova vale la regola 6u.
 
 6q. **Trattative** (agente in `squadra.json`, nato il 17/10/2026). Ogni mattina,
