@@ -5,6 +5,7 @@ const decode = (s) =>
    .replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 
 module.exports = async (req, res) => {
+  if (req.query && req.query.fonte === "benzina") return require("./_benzina")(req, res);
   const id = String((req.query && req.query.channel) || process.env.YOUTUBE_CHANNEL_ID || "");
   if (!/^UC[\w-]{22}$/.test(id)) {
     res.status(400).json({ error: "ID canale YouTube non valido" });
