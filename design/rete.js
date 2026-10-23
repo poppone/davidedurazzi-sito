@@ -111,6 +111,13 @@
     unita = Math.min(largo ? W * .17 : W * .25, H * (largo ? .28 : .3));
     var s = sez.getBoundingClientRect();
     scarto.x = r.left - s.left; scarto.y = r.top - s.top;
+    // con il player in apertura la rete gli gira intorno: centro sul player, rete piu' grande
+    var pl = largo && sez.querySelector(".pl-player");
+    if (pl) {
+      var q = pl.getBoundingClientRect();
+      cx = q.left - r.left + q.width / 2; cy = q.top - r.top + q.height / 2;
+      unita *= 1.22;
+    }
   }
 
   /* ---------- disegno ---------- */

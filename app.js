@@ -164,7 +164,15 @@
       var m = Math.floor(prossima() / 6e4), g = Math.floor(m / 1440), o = Math.floor(m % 1440 / 60), mi = m % 60;
       st.textContent = "Prossima diretta tra " + (g ? g + (g === 1 ? " giorno " : " giorni ") : "") + (g || o ? o + " h " : "") + mi + " min";
     }
-    aggStato(); setInterval(aggStato, 30000);
+    // Il badge del player in apertura ripete lo stato della diretta
+    var pb = $("playerStato");
+    function copiaStato() {
+      if (!pb) return;
+      pb.classList.toggle("live", stato.classList.contains("live"));
+      pb.lastElementChild.textContent = stato.classList.contains("live") ? "LIVE" : st.textContent;
+    }
+    if (pb && "MutationObserver" in window) new MutationObserver(copiaStato).observe(stato, { attributes: true, childList: true, characterData: true, subtree: true });
+    aggStato(); setInterval(aggStato, 30000); copiaStato();
     var pt = $("twitchPlayer");
     if (pt && "MutationObserver" in window) new MutationObserver(function () {
       var on = pt.classList.contains("online");
