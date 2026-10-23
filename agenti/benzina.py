@@ -28,7 +28,7 @@ RAGGIO_KM = 3.0
 URL_IMPIANTI = "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv"
 URL_PREZZI = "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv"
 # Dalle macchine di GitHub il sito del Ministero va in timeout: si passa dalla
-# funzione del sito (api/benzina.js, gira in Europa), che restituisce le stesse
+# funzione del sito (api/benzina.js), che restituisce le stesse
 # righe già filtrate sulla zona.
 URL_SITO = "https://www.davidedurazzi.it/api/benzina"
 CARBURANTI = {"benzina": "Benzina", "diesel": "Gasolio"}

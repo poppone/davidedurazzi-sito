@@ -28,10 +28,7 @@
       "maxDuration": 60
     },
     "api/benzina.js": {
-      "maxDuration": 60,
-      "regions": [
-        "fra1"
-      ]
+      "maxDuration": 60
     }
   },
   "redirects": [

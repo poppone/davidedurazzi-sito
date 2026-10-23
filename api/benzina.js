@@ -1,6 +1,6 @@
 // Funzione serverless Vercel: legge i dati aperti dei carburanti del MIMIT
 // (anagrafica dei distributori e prezzi delle 8) e restituisce solo le righe
-// della zona di Davide, nello stesso formato CSV. Gira in Europa (fra1):
+// della zona di Davide, nello stesso formato CSV. Serve perché
 // dalle macchine di GitHub il sito del Ministero non risponde.
 // La scheda la costruisce agenti/benzina.py.
 const CENTRO = [41.9365, 12.592];
