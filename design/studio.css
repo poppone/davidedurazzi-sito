@@ -43,12 +43,14 @@ body{background:var(--bg)}
   background:var(--pieno);border:1px solid var(--line-forte);font:700 .75rem/1.2 var(--sans);white-space:nowrap;opacity:0;transition:opacity .2s}
 .pl-soc:hover span,.pl-soc:focus-visible span{opacity:1}
 .pl-soc:focus-visible{outline:2px solid #fff;outline-offset:3px}
-.pl-soc-twitch:hover,.pl-soc-twitch:focus-visible{background:#9146FF;border-color:#9146FF}
-.pl-soc-youtube:hover,.pl-soc-youtube:focus-visible{background:#FF0000;border-color:#FF0000}
-.pl-soc-instagram:hover,.pl-soc-instagram:focus-visible{background:#E4405F;border-color:#E4405F}
-.pl-soc-tiktok:hover,.pl-soc-tiktok:focus-visible{background:#111;border-color:#25F4EE}
-.pl-soc-discord:hover,.pl-soc-discord:focus-visible{background:#5865F2;border-color:#5865F2}
-.pl-soc-x:hover,.pl-soc-x:focus-visible{background:#000;border-color:#fff}
+/* Ogni icona con il colore originale del suo social */
+.pl-soc-twitch{background:#9146FF;border-color:#9146FF}
+.pl-soc-youtube{background:#FF0000;border-color:#FF0000}
+.pl-soc-instagram{background:radial-gradient(circle at 30% 107%,#FDF497 0%,#FDF497 5%,#FD5949 45%,#D6249F 60%,#285AEB 90%);border-color:#D6249F}
+.pl-soc-tiktok{background:#000;border-color:#25F4EE}
+.pl-soc-discord{background:#5865F2;border-color:#5865F2}
+.pl-soc-x{background:#000;border-color:#fff}
+.pl-soc:hover,.pl-soc:focus-visible{filter:brightness(1.15)}
 @media (max-width:979px){.pl-soc{width:38px;height:38px}.pl-soc svg{width:17px;height:17px}}
 
 /* Titoli dei canali: barra d'accento al posto del punto luminoso */
