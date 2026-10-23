@@ -891,7 +891,7 @@
       "id": "2026-10-23-3",
       "per": "davide",
       "da": "vendite",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "pr",
       "volte": 1,
       "origine": "mossa vendite del 23/10",
@@ -899,7 +899,8 @@
       "dettagli": "Una riga in fondo alle descrizioni YouTube di Motori in 60 secondi: \"Accessori per l'auto su Amazon (link affiliato)\" con il tag davidedurazzi-21. Stesso schema di Instant Gaming e NordVPN sugli Short gaming. Tutti i test passano (689).",
       "link": "https://github.com/poppone/samaritan-notizie/pull/6",
       "azione": "unisco la PR #6 di samaritan-notizie",
-      "creato": "2026-10-23T06:03:51+00:00"
+      "creato": "2026-10-23T06:03:51+00:00",
+      "deciso": "2026-10-23T14:10:16.072Z"
     },
     {
       "id": "2026-10-23-4",
