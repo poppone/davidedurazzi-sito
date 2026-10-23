@@ -1,7 +1,7 @@
 name: Finch su Discord
 on:
   schedule:
-    - cron: "*/10 * * * *"   # ogni 10 minuti risponde in #chiedi-a-finch
+    - cron: "*/10 * * * *"   # ogni 10 minuti: risposte in #chiedi-a-finch e avviso delle dirette
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,3 +22,10 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Avviso "Davide è in diretta" in #live-ora
+        if: always()
+        run: python agenti/discord_live.py
+        env:
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}

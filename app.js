@@ -126,6 +126,7 @@
   if (safeUrl(S.youtubeUrl)) social.push(["YouTube", S.youtubeUrl]);
   if (S.instagram) social.push(["Instagram", "https://www.instagram.com/" + S.instagram + "/"]);
   if (S.tiktok) social.push(["TikTok", "https://www.tiktok.com/@" + S.tiktok]);
+  if (safeUrl(S.discord)) social.push(["Discord", S.discord]);
   if (S.x) social.push(["X", "https://x.com/" + S.x]);
   if (S.linkedin) social.push(["LinkedIn", "https://www.linkedin.com/in/" + S.linkedin + "/"]);
   if (safeUrl(S.donazioni)) social.push(["Sostienimi", S.donazioni]);

@@ -19,6 +19,8 @@ window.SITE = {
   instagram: "davidedurazzi.it",
   // TikTok: username senza @
   tiktok: "davidedurazzi",
+  // Discord: link d'invito al server della community (lascia "" per nasconderlo)
+  discord: "https://discord.gg/SQyDDTHmkm",
   // X (Twitter): username senza @
   x: "PopponeTV",
 
