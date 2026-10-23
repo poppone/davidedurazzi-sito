@@ -27,12 +27,16 @@ CENTRO = (41.9365, 12.5920)
 RAGGIO_KM = 3.0
 URL_IMPIANTI = "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv"
 URL_PREZZI = "https://www.mimit.gov.it/images/exportCSV/prezzo_alle_8.csv"
+# Dalle macchine di GitHub il sito del Ministero va in timeout: si passa dalla
+# funzione del sito (api/benzina.js, gira in Europa), che restituisce le stesse
+# righe già filtrate sulla zona.
+URL_SITO = "https://www.davidedurazzi.it/api/benzina"
 CARBURANTI = {"benzina": "Benzina", "diesel": "Gasolio"}
 
 
 def scarica(url):
     req = urllib.request.Request(url, headers={"User-Agent": "davidedurazzi.it redazione"})
-    with urllib.request.urlopen(req, timeout=60) as r:
+    with urllib.request.urlopen(req, timeout=90) as r:
         return r.read().decode("utf-8", errors="replace")
 
 
@@ -168,12 +172,19 @@ def main():
     oggi = datetime.date.today()
     CARTELLA.mkdir(parents=True, exist_ok=True)
     storico = json.loads(STORICO.read_text(encoding="utf-8")) if STORICO.exists() else []
-    try:
-        zona = distributori_in_zona(righe(scarica(URL_IMPIANTI)))
-        prezzi = prezzi_in_zona(righe(scarica(URL_PREZZI)), zona, oggi)
-    except Exception as e:  # rete o formato cambiato: la scheda lo dice, non inventa
-        print(f"[Benzina] dati MIMIT non letti: {e}", file=sys.stderr)
-        zona, prezzi = {}, {k: [] for k in CARBURANTI}
+    zona, prezzi = {}, {k: [] for k in CARBURANTI}
+    for fonte in ("sito", "ministero"):
+        try:
+            if fonte == "sito":
+                dati = json.loads(scarica(URL_SITO))
+                imp, prz = dati["impianti"], dati["prezzi"]
+            else:
+                imp, prz = scarica(URL_IMPIANTI), scarica(URL_PREZZI)
+            zona = distributori_in_zona(righe(imp))
+            prezzi = prezzi_in_zona(righe(prz), zona, oggi)
+            break
+        except Exception as e:  # rete o formato cambiato: la scheda lo dice, non inventa
+            print(f"[Benzina] dati MIMIT non letti ({fonte}): {e}", file=sys.stderr)
     testo, medie = scheda(oggi, zona, prezzi, storico)
     (CARTELLA / f"{oggi.isoformat()}.md").write_text(testo, encoding="utf-8")
     if medie:
