@@ -1,4 +1,5 @@
-// Funzione serverless Vercel: legge i dati aperti dei carburanti del MIMIT
+// Dati della benzina (chiamato da api/youtube.js con ?fonte=benzina, perché il
+// piano Vercel ammette al massimo 12 funzioni): legge i dati aperti dei carburanti del MIMIT
 // (anagrafica dei distributori e prezzi delle 8) e restituisce solo le righe
 // della zona di Davide, nello stesso formato CSV. Serve perché
 // dalle macchine di GitHub il sito del Ministero non risponde.

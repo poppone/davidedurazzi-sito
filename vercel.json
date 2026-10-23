@@ -26,9 +26,6 @@
     },
     "api/discord.js": {
       "maxDuration": 60
-    },
-    "api/benzina.js": {
-      "maxDuration": 60
     }
   },
   "redirects": [
