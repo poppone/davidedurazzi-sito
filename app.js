@@ -227,15 +227,45 @@
     }
 
     // Articoli + Contraddittorio
-    var tutti = [], filtro = "tutte";
+    var tutti = [], filtro = "tutte", IN_VETRINA = 6;
+    var MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
+    var archivio = document.createElement("div");
+    archivio.className = "archivio"; archivio.id = "archivio";
+    $("lista").insertAdjacentElement("afterend", archivio);
+    function voce(a) {
+      return '<li data-sez="' + esc(a.sezione || "") + '"><a href="/articoli/' + encodeURIComponent(a.slug) + '"><span class="sez">' +
+        esc(nomeSezione(a.sezione)) + "<br><time>" + esc(data(a.data)) + "</time></span><span><h3>" + esc(a.titolo) +
+        "</h3>" + (a.sommario ? "<p>" + esc(a.sommario) + "</p>" : "") + "</span></a></li>";
+    }
+    // Lunedì della settimana dell'articolo, per raggruppare l'archivio
+    function lunedi(d) {
+      var x = new Date(String(d || "").slice(0, 10) + "T12:00:00");
+      if (isNaN(x)) return null;
+      x.setDate(x.getDate() - (x.getDay() + 6) % 7);
+      return x;
+    }
+    function nomeSettimana(l) {
+      var f = new Date(l); f.setDate(f.getDate() + 6);
+      return "Settimana dal " + l.getDate() + (l.getMonth() === f.getMonth() ? "" : " " + MESI[l.getMonth()]) +
+        " al " + f.getDate() + " " + MESI[f.getMonth()];
+    }
     function disegnaLista() {
       var lista = tutti.filter(function (a) { return filtro === "tutte" || a.sezione === filtro; });
-      $("lista").innerHTML = lista.length ? lista.map(function (a) {
-        return '<li data-sez="' + esc(a.sezione || "") + '"><a href="/articoli/' + encodeURIComponent(a.slug) + '"><span class="sez">' +
-          esc(nomeSezione(a.sezione)) + "<br><time>" + esc(data(a.data)) + "</time></span><span><h3>" + esc(a.titolo) +
-          "</h3>" + (a.sommario ? "<p>" + esc(a.sommario) + "</p>" : "") + "</span></a></li>";
-      }).join("") : '<li class="vuoto">Ancora nessun articolo in questa sezione.</li>';
+      $("lista").innerHTML = lista.length ? lista.slice(0, IN_VETRINA).map(voce).join("")
+        : '<li class="vuoto">Ancora nessun articolo in questa sezione.</li>';
       [].forEach.call($("lista").children, rivela);
+      // Gli altri articoli vanno nell'archivio, una settimana per volta (chiuse: niente scorrimento infinito)
+      var gruppi = [], chiavi = {};
+      lista.slice(IN_VETRINA).forEach(function (a) {
+        var l = lunedi(a.data), k = l ? l.toISOString().slice(0, 10) : "altri";
+        if (!chiavi[k]) { chiavi[k] = { nome: l ? nomeSettimana(l) : "Altri articoli", voci: [] }; gruppi.push(chiavi[k]); }
+        chiavi[k].voci.push(a);
+      });
+      archivio.innerHTML = gruppi.length ? '<h3 class="arch-tit">Archivio</h3>' + gruppi.map(function (g) {
+        return '<details class="settimana"><summary>' + esc(g.nome) + ' <span class="conta">' + g.voci.length +
+          (g.voci.length === 1 ? " articolo" : " articoli") + '</span></summary><ul class="lista">' + g.voci.map(voce).join("") + "</ul></details>";
+      }).join("") : "";
+      [].forEach.call(archivio.querySelectorAll(".lista"), inclina);
     }
     inclina($("lista"));
     [].forEach.call($("lista").children, rivela);
