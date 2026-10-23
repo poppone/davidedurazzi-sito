@@ -536,3 +536,28 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .mp-codice:hover{color:#fff}
 .mp-segno{display:inline-block;width:.75rem;height:.75rem;border-radius:50%}
 @media (prefers-reduced-motion:reduce){.mp-flusso,.mp-gira,.mp-respiro{animation:none}}
+
+/* Archivio articoli: settimane chiuse a fisarmonica */
+.archivio{margin-top:2rem}
+.arch-tit{margin:0 0 .8rem;font:800 1.1rem/1.2 var(--sans);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.settimana{border:1px solid var(--line);border-radius:14px;margin:0 0 .7rem;background:var(--paper)}
+.settimana summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 1.1rem;font-weight:700}
+.settimana summary::-webkit-details-marker{display:none}
+.settimana summary::after{content:"+";font-size:1.3rem;line-height:1;color:var(--muted)}
+.settimana[open] summary::after{content:"\2212"}
+.settimana .conta{margin-left:auto;font-weight:600;font-size:.85rem;color:var(--muted)}
+.settimana .lista{padding:0 1.1rem 1.1rem}
+
+/* Icone social sopra la mappa dell'azienda */
+.mp-social{position:absolute;left:50%;bottom:.8rem;transform:translateX(-50%);display:flex;gap:.45rem;z-index:1;padding:.4rem .55rem;border-radius:999px;background:color-mix(in srgb,#060914 70%,transparent);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px)}
+.mp-soc{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;color:#fff;background:rgba(255,255,255,.08);transition:transform .2s,background .2s,box-shadow .2s}
+.mp-soc svg{width:19px;height:19px;fill:currentColor}
+.mp-soc:hover,.mp-soc:focus-visible{transform:translateY(-3px) scale(1.08);outline:none}
+.mp-soc-twitch:hover,.mp-soc-twitch:focus-visible{background:#9146FF;box-shadow:0 6px 18px -6px #9146FF}
+.mp-soc-youtube:hover,.mp-soc-youtube:focus-visible{background:#FF0000;box-shadow:0 6px 18px -6px #FF0000}
+.mp-soc-instagram:hover,.mp-soc-instagram:focus-visible{background:#E4405F;box-shadow:0 6px 18px -6px #E4405F}
+.mp-soc-tiktok:hover,.mp-soc-tiktok:focus-visible{background:#111;box-shadow:0 6px 18px -6px #25F4EE}
+.mp-soc-discord:hover,.mp-soc-discord:focus-visible{background:#5865F2;box-shadow:0 6px 18px -6px #5865F2}
+.mp-soc-x:hover,.mp-soc-x:focus-visible{background:#000;box-shadow:0 6px 18px -6px #fff}
+@media (max-width:640px){.mp-soc{width:32px;height:32px}.mp-soc svg{width:16px;height:16px}}
+@media (prefers-reduced-motion:reduce){.mp-soc{transition:none}.mp-soc:hover{transform:none}}
