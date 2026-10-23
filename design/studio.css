@@ -1,0 +1,91 @@
+/* Lo studio (bozza Canva "streamer professionale" scelta da Davide il 23/10).
+   Si carica dopo plancia.css solo in home. Stessi colori della plancia e
+   stesse animazioni (rete viva, nome che si compone, comparse, inclinazione),
+   ma l'aspetto da regia televisiva: superfici piene, bordi netti, angoli
+   piccoli, niente aloni e niente vetro sfumato. Intorno alla rete gira
+   l'anello dei social. */
+
+:root{
+  --r-pannello:10px;
+  --r-elemento:6px;
+  --pieno:#0A1022;
+}
+
+/* Fondo: il buio pulito, la griglia resta come trama da studio */
+body{background:var(--bg)}
+
+/* Bottoni: pieni e netti, come i pulsanti di un player */
+.btn{border-radius:6px;background:transparent;box-shadow:none}
+.btn:hover{background:rgba(123,151,255,.1);box-shadow:none}
+.btn.pieno{background:var(--tesi);box-shadow:none}
+.btn.pieno:hover{background:#94ABFF;box-shadow:none}
+.top .sostieni{border-radius:6px}
+.top .sostieni:hover{box-shadow:none}
+.logo img{box-shadow:0 0 0 1px var(--line-forte)}
+
+/* Apertura: titolo da copertina, stato come badge del player */
+.pl-nome{filter:none}
+.stato{border-radius:4px;background:var(--pieno);backdrop-filter:none;font-weight:700;letter-spacing:.01em}
+.stato.live{background:var(--live);border-color:var(--live)}
+.stato.live .dot{background:#fff}
+.pl-hud li{border-radius:6px;background:var(--pieno);backdrop-filter:none}
+.pl-hud a{border-radius:6px;background:var(--pieno)}
+.pl-hud a:hover{box-shadow:none}
+.pl-info{border-radius:6px;backdrop-filter:none;background:var(--pieno)}
+
+/* L'anello dei social che gira con la rete (design/rete.js) */
+.pl-orbita{position:absolute;inset:0;z-index:1;pointer-events:none}
+.pl-soc{position:absolute;left:0;top:0;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;
+  color:#fff;background:var(--pieno);border:1px solid rgba(255,138,76,.55);pointer-events:auto;text-decoration:none;
+  will-change:transform,opacity;transition:background .2s,border-color .2s}
+.pl-soc svg{width:20px;height:20px;fill:currentColor}
+.pl-soc span{position:absolute;top:calc(100% + 6px);left:50%;transform:translateX(-50%);padding:.2rem .5rem;border-radius:4px;
+  background:var(--pieno);border:1px solid var(--line-forte);font:700 .75rem/1.2 var(--sans);white-space:nowrap;opacity:0;transition:opacity .2s}
+.pl-soc:hover span,.pl-soc:focus-visible span{opacity:1}
+.pl-soc:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.pl-soc-twitch:hover,.pl-soc-twitch:focus-visible{background:#9146FF;border-color:#9146FF}
+.pl-soc-youtube:hover,.pl-soc-youtube:focus-visible{background:#FF0000;border-color:#FF0000}
+.pl-soc-instagram:hover,.pl-soc-instagram:focus-visible{background:#E4405F;border-color:#E4405F}
+.pl-soc-tiktok:hover,.pl-soc-tiktok:focus-visible{background:#111;border-color:#25F4EE}
+.pl-soc-discord:hover,.pl-soc-discord:focus-visible{background:#5865F2;border-color:#5865F2}
+.pl-soc-x:hover,.pl-soc-x:focus-visible{background:#000;border-color:#fff}
+@media (max-width:979px){.pl-soc{width:38px;height:38px}.pl-soc svg{width:17px;height:17px}}
+
+/* Titoli dei canali: barra d'accento al posto del punto luminoso */
+.testa::after{width:44px;height:3px;bottom:-2px;border-radius:0;box-shadow:none}
+.testa h2{font-stretch:112%}
+
+/* Pannelli: superficie piena con bordo sottile, nessun vetro */
+.pl-pannello,.duello,.gioco,.app,.nl,.offerte-box,.piazza{
+  border:1px solid var(--line-forte);background:var(--pieno);box-shadow:none}
+.gioco,.app,.nl{background:var(--pieno)}
+.pl-schermo::before,.pl-schermo::after{filter:none;border-radius:0}
+.player,.chat{border-radius:6px}
+.locandina .btn{box-shadow:none}
+
+/* Il Contraddittorio: due colonne con la barra del colore, senza aloni */
+.lato.si{background:rgba(123,151,255,.07)}
+.lato.no{background:rgba(255,138,76,.07)}
+.lato h4{text-shadow:none}
+.vbtn button{border-radius:6px}
+.barra .b.si,.barra .b.no{box-shadow:none}
+
+/* Articoli: righe da palinsesto, la prima in evidenza su superficie piena */
+.filtri button{border-radius:4px;background:transparent}
+.lista a::before{box-shadow:none;height:2px}
+.lista .sez::before{border-radius:1px;width:.7rem;height:.18rem;box-shadow:none}
+#lista>li:first-child a{border-radius:var(--r-pannello);border:1px solid var(--line-forte);background:var(--pieno);box-shadow:inset 3px 0 0 var(--sez)}
+.settimana{border-radius:6px}
+
+/* Ultime puntate: miniature da canale */
+.video .thumb{border-radius:6px}
+.video:hover .thumb{box-shadow:0 0 0 2px var(--tesi)}
+.video .play{border-radius:4px;backdrop-filter:none;background:var(--live);border-color:var(--live);font-weight:700}
+
+/* Moduli e pie' di pagina */
+#formNl input[type=email],#formNl .btn{border-radius:6px}
+.gioco-visual span,.app-demo{border-radius:6px}
+.gioco-visual span:nth-child(5){box-shadow:none}
+footer{background:var(--pieno)}
+
+@media (prefers-reduced-motion:reduce){.pl-soc,.pl-soc span{transition:none}}
