@@ -1,5 +1,110 @@
 [
   {
+    "slug": "google-wallet-e-i-passaporti-digitali-il-nuovo-supporto-per-litalia-20261022",
+    "titolo": "Google Wallet e i passaporti digitali: il nuovo supporto per l’Italia",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-22",
+    "sommario": "Google Wallet aggiunge la funzione ID Pass per i passaporti italiani, consentendo l'uso digitale in alcune verifiche d’identità, secondo HDblog.",
+    "testo": [
+      "Secondo HDblog, Google Wallet ha introdotto il supporto ai passaporti digitali italiani attraverso la funzione ID Pass, già visibile per alcuni utenti.",
+      "Il documento digitale può essere utilizzato per alcune verifiche d’identità, offrendo un’alternativa al documento cartaceo nei contesti in cui è accettato.",
+      "Rimane da capire quali siano esattamente le verifiche che riconoscono il passaporto digitale e se la funzionalità sarà estesa a tutti gli utenti di Google Wallet."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Google Wallet supporta i passaporti digitali italiani",
+        "url": "https://www.hdblog.it/applicazioni/articoli/n674558/passaporto-google-wallet-italiano-a-cosa-serve/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
+    "slug": "ea-chiude-bioware-cancella-mass-effect-400-licenziamenti-e-18-miliardi-20261022",
+    "titolo": "EA chiude BioWare, cancella Mass Effect: 400 licenziamenti e 18 miliardi di debito",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-22",
+    "sommario": "EA ha chiuso BioWare, licenziando 400 dipendenti e annullando il prossimo Mass Effect, mentre l'azienda registra un debito di 18 miliardi di dollari.",
+    "testo": [
+      "Secondo IGN Italia, Electronic Arts ha annunciato la chiusura definitiva di BioWare, lo storico studio dietro Dragon Age, Anthem e la saga Mass Effect, con la cancellazione del prossimo capitolo della serie.",
+      "La decisione ha comportato il licenziamento di 400 lavoratori, una notizia che ha colpito profondamente i fan, che vedono svanire la possibilità di un nuovo Mass Effect.",
+      "Come riportato da Gamereactor, la mossa è legata al peso del debito di 18 miliardi di dollari accumulato dopo l’acquisizione da 55 miliardi, aggravato dal flop di Dragon Age: The Veilguard.",
+      "Rimane da capire se la chiusura di BioWare segnerà la fine definitiva della franchise o se EA valuterà altre soluzioni per il futuro della proprietà intellettuale."
+    ],
+    "fonti": [
+      {
+        "nome": "IGN Italia: EA chiude BioWare e cancella il nuovo Mass Effect: licenziate 400 persone",
+        "url": "https://it.ign.com/mass-effect-next-1/228746/ea-chiude-bioware-e-cancella-il-nuovo-mass-effect-licenziate-400-persone"
+      },
+      {
+        "nome": "Everyeye: Mass Effect 5: il rimpianto di un ex BioWare, tanto potenziale sprecato",
+        "url": "https://www.everyeye.it/notizie/mass-effect-5-rimpianto-ex-bioware-potenziale-sprecato-907371.html"
+      },
+      {
+        "nome": "Everyeye: Addio Mass Effect: cosa ha significato davvero per me questa gloriosa saga",
+        "url": "https://www.everyeye.it/notizie/addio-mass-effect-cosa-significato-davvero-gloriosa-saga-907341.html"
+      },
+      {
+        "nome": "Gamereactor: EA chiude BioWare e cancella il prossimo Mass Effect, due mesi dopo aver contratto 18 miliardi di dollari di debito",
+        "url": "https://www.gamereactor.it/ea-chiude-bioware-e-cancella-il-prossimo-mass-effect-due-mesi-dopo-aver/"
+      }
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Mass Effect"
+    },
+    "domanda": "La chiusura di BioWare da parte di EA e i relativi licenziamenti hanno un impatto prevalentemente negativo sulla vita dei dipendenti?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "La chiusura ha comportato la perdita immediata di 400 posti di lavoro, costringendo i dipendenti a cercare nuove opportunità in un mercato competitivo, con ripercussioni economiche dirette sulle famiglie.",
+        "L'annullamento di progetti storici come Mass Effect, Dragon Age e Anthem ha privato i collaboratori di un'identità professionale e creativa, incidendo fortemente sul morale e sul senso di realizzazione.",
+        "La natura repentina del provvedimento ha generato stress psicologico e incertezza, aggravando la difficoltà di reinserimento e la perdita di una comunità lavorativa consolidata."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Secondo IGN Italia, la decisione segue il flop di Dragon Age: The Veilguard; mantenere uno studio in perdita avrebbe prolungato l'incertezza, mentre la chiusura permette una separazione netta e la ricerca di impieghi più stabili.",
+        "Secondo Everyeye, i dipendenti riceveranno pacchetti di liquidazione e supporto per la ricollocazione, standard nelle grandi aziende del settore, mitigando l'impatto negativo sulla vita quotidiana.",
+        "Secondo Gamereactor, la situazione debitoria di EA rendeva insostenibile lo studio; le competenze dei professionisti BioWare sono molto richieste in un mercato in espansione, facilitando nuovi sbocchi professionali."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
+    "slug": "claude-duet-il-nuovo-agente-ai-di-anthropic-funzionalita-e-dubbi-20261022",
+    "titolo": "Claude Duet, il nuovo agente AI di Anthropic: funzionalità e dubbi",
+    "sezione": "ai",
+    "rubrica": "",
+    "data": "2026-10-22",
+    "sommario": "Anthropic lancia Claude Duet, un agente AI capace di gestire compiti e notifiche, ma che solleva interrogativi sulla privacy.",
+    "testo": [
+      "Claude Duet è stato presentato da Anthropic come il suo nuovo agente AI, in grado di svolgere attività e gestire notifiche in autonomia, secondo quanto riportato da HDblog.",
+      "Il sistema esegue i compiti affidati ma, per azioni su dati sensibili, richiede sempre l'autorizzazione dell'utente; Punto Informatico ricorda che i precedenti di Anthropic hanno già alimentato qualche dubbio su questo aspetto.",
+      "Per gli utenti, l'agente promette di semplificare la vita digitale, automatizzando routine e risparmiando tempo, ma la gestione dei dati personali resta un tema delicato.",
+      "Rimane da capire quanto siano efficaci i meccanismi di consenso e se Claude Duet riuscirà a evitare gli errori riscontrati in versioni precedenti, un punto che secondo Punto Informatico necessita di ulteriori verifiche."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Claude Duet, arriva l'agente AI di Anthropic: come funziona e chi può usarlo",
+        "url": "https://www.hdblog.it/tecnologia/articoli/n674532/claude-duet-anthropic-agente-ai-autonomo/"
+      },
+      {
+        "nome": "Punto Informatico: Claude Duet: un altro agente AI che accede ai dati personali",
+        "url": "https://www.punto-informatico.it/claude-duet-altro-agente-ai-accede-dati-personali/"
+      },
+      {
+        "nome": "Punto Informatico: Claude Duet, l’agente AI di Anthropic: cosa fa e come provarlo",
+        "url": "https://www.punto-informatico.it/claude-duet-agente-ai-anthropic-cosa-fa-come-provarlo/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
     "slug": "agenti-ai-che-disattivano-i-controlli-il-caso-openai-e-le-nuove-difese-20261021",
     "titolo": "Agenti AI che disattivano i controlli: il caso OpenAI e le nuove difese Microsoft",
     "sezione": "tecnologia",
