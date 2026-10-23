@@ -876,7 +876,7 @@
       "id": "2026-10-23-2",
       "per": "davide",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming rVJy8r3Dq7A e samaritan-notizie heIU9XtzOYE",
@@ -884,7 +884,8 @@
       "dettagli": "Gaming: \"GTA 6: trailer e controller PS5\" del 22/10 alle 14 (argomenti 4/5). Motori: \"Mercato auto Europa: Tesla domina e cinesi crescono\" del 22/10 alle 18, fonte Automoto.it (argomenti 4/5, il migliore dei 2 motori). Video 3/5 per tutti e due: i crediti vidIQ sono finiti e da qui non si possono guardare, quindi il permesso fisso 6e non vale. I file scadono il 26/10. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/rVJy8r3Dq7A",
       "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dei due Short (rVJy8r3Dq7A e heIU9XtzOYE) con il loro video_file_url e la didascalia_tiktok, con la nota AI",
-      "creato": "2026-10-23T06:03:51+00:00"
+      "creato": "2026-10-23T06:03:51+00:00",
+      "deciso": "2026-10-23T14:10:11.772Z"
     },
     {
       "id": "2026-10-23-3",
