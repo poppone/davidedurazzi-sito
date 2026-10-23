@@ -296,6 +296,15 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    Il conto della settimana, da lunedì a domenica, va nel diario. Sopra i
    5 € non si propone niente finché non riparte la settimana.
 
+6v. **Benzina nella zona di Davide (format scelto da Davide il 23/10/2026).**
+   Ogni domenica sera il workflow "Benzina nella zona di Davide" scrive
+   `stanza/benzina/AAAA-MM-GG.md` con i prezzi self del CAP 00156 (dati MIMIT):
+   medie, variazione sulla settimana, i 3 più economici e il più caro, il
+   testo da dire. Il lunedì, nella reply del giro, metti in una riga la
+   media della benzina e il link alla scheda: Davide gira il video in camera
+   e lo pubblica lui. Se la scheda dice "dati non disponibili", scrivilo e
+   non proporre numeri.
+
 7. **Davide.** Una sola reply breve nel thread, leggibile da telefono:
    la prima riga dice quante decisioni lo aspettano su davidedurazzi.it/admin.
    Poi una riga per ciascuna, il voto medio del giorno e l'agente che è migliorato o peggiorato di
