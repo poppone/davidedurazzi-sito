@@ -897,7 +897,7 @@
       "id": "2026-10-23-3",
       "per": "davide",
       "da": "vendite",
-      "stato": "da fare",
+      "stato": "fatto",
       "tipo": "pr",
       "volte": 1,
       "origine": "mossa vendite del 23/10",
@@ -907,7 +907,8 @@
       "azione": "unisco la PR #6 di samaritan-notizie",
       "creato": "2026-10-23T06:03:51+00:00",
       "deciso": "2026-10-23T14:10:16.072Z",
-      "esito": "L'unione da qui è stata bloccata dal controllo dei permessi: la PR #6 è verde e mergeable, va unita da Davide su GitHub con un tocco."
+      "esito": "PR #6 unita da Davide il 24/10 alle 06:02 UTC",
+      "fatto": "2026-10-24T06:07:43+00:00"
     },
     {
       "id": "2026-10-23-4",
