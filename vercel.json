@@ -1,5 +1,8 @@
 {
   "cleanUrls": true,
+  "regions": [
+    "fra1"
+  ],
   "headers": [
     {
       "source": "/content/(.*)",
