@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-24T05:08:41+00:00",
+  "aggiornato": "2026-10-24T05:58:20+00:00",
   "stati": [
     "da fare",
     "in corso",
@@ -753,13 +753,15 @@
       "id": "2026-10-22-1",
       "per": "samaritan-gaming",
       "da": "samaritan-notizie",
-      "stato": "da fare",
+      "stato": "fatto",
       "volte": 1,
       "origine": "Short en PdKbEp_vY6I del 21/10",
       "titolo": "Titolo in italiano sullo Short inglese delle 21:00 (Shrek 2 Remastered)",
       "dettagli": "Lo Short delle 21:00 del 21/10 è in inglese (script e didascalia), ma il titolo YouTube è \"Shrek 2 Remastered: Trailer Parodia, uscita a novembre\". Il titolo deve seguire la lingua dell'uscita come il resto del video.",
       "link": "https://youtube.com/shorts/PdKbEp_vY6I",
-      "creato": "2026-10-22T06:11:48+00:00"
+      "creato": "2026-10-22T06:11:48+00:00",
+      "esito": "Non si è ripetuto il 22 e il 23/10: chiuso",
+      "fatto": "2026-10-24T05:58:20+00:00"
     },
     {
       "id": "2026-10-22-2",
@@ -861,7 +863,7 @@
       "id": "2026-10-23-1",
       "per": "davide",
       "da": "direttore",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "post",
       "volte": 1,
       "origine": "regola 6d",
@@ -870,13 +872,15 @@
       "link": "https://www.davidedurazzi.it/articoli/ea-chiude-bioware-cancella-mass-effect-400-licenziamenti-e-18-miliardi-20261022.html",
       "azione": "metto in social/coda.json, per ciascuno dei 5 articoli, una voce bluesky (prime 4 slide da raw.githubusercontent.com/poppone/davidedurazzi-sito/main/ig/<slug>/, titolo e link all'articolo) e una voce pinterest con la slide 1, titolo, sommario e link, board_id 1039979807642687589 (Notizie)",
       "creato": "2026-10-23T06:03:51+00:00",
-      "deciso": "2026-10-23T14:10:06.131Z"
+      "deciso": "2026-10-23T14:10:06.131Z",
+      "esito": "10 voci in social/coda.json (5 Bluesky, 5 Pin bacheca Notizie)",
+      "fatto": "2026-10-24T05:58:20+00:00"
     },
     {
       "id": "2026-10-23-2",
       "per": "davide",
       "da": "revisore-video",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming rVJy8r3Dq7A e samaritan-notizie heIU9XtzOYE",
@@ -885,34 +889,39 @@
       "link": "https://youtube.com/shorts/rVJy8r3Dq7A",
       "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dei due Short (rVJy8r3Dq7A e heIU9XtzOYE) con il loro video_file_url e la didascalia_tiktok, con la nota AI",
       "creato": "2026-10-23T06:03:51+00:00",
-      "deciso": "2026-10-23T14:10:11.772Z"
+      "deciso": "2026-10-23T14:10:11.772Z",
+      "esito": "4 voci in social/coda.json (Reel Instagram e video Facebook per rVJy8r3Dq7A e heIU9XtzOYE)",
+      "fatto": "2026-10-24T05:58:20+00:00"
     },
     {
       "id": "2026-10-23-3",
       "per": "davide",
       "da": "vendite",
-      "stato": "approvato",
+      "stato": "da fare",
       "tipo": "pr",
       "volte": 1,
       "origine": "mossa vendite del 23/10",
-      "titolo": "Link affiliato Amazon (accessori auto) negli Short motori",
+      "titolo": "Unire tu la PR #6 di samaritan-notizie (link Amazon accessori auto)",
       "dettagli": "Una riga in fondo alle descrizioni YouTube di Motori in 60 secondi: \"Accessori per l'auto su Amazon (link affiliato)\" con il tag davidedurazzi-21. Stesso schema di Instant Gaming e NordVPN sugli Short gaming. Tutti i test passano (689).",
       "link": "https://github.com/poppone/samaritan-notizie/pull/6",
       "azione": "unisco la PR #6 di samaritan-notizie",
       "creato": "2026-10-23T06:03:51+00:00",
-      "deciso": "2026-10-23T14:10:16.072Z"
+      "deciso": "2026-10-23T14:10:16.072Z",
+      "esito": "L'unione da qui è stata bloccata dal controllo dei permessi: la PR #6 è verde e mergeable, va unita da Davide su GitHub con un tocco."
     },
     {
       "id": "2026-10-23-4",
       "per": "samaritan-gaming",
       "da": "samaritan-notizie",
-      "stato": "da fare",
+      "stato": "fatto",
       "volte": 1,
       "origine": "4 Short del 22/10",
       "titolo": "Troppi Short sullo stesso gioco: 3 su 4 parlano di GTA 6",
       "dettagli": "Il 22/10 tre uscite su quattro (it 14:00, en GTA 6 economia, en meme coin del trailer) erano su GTA 6. Massimo 2 Short al giorno sullo stesso gioco, anche quando è il tema caldo.",
       "link": "https://youtube.com/shorts/6q6CKuAZxEA",
-      "creato": "2026-10-23T06:04:13+00:00"
+      "creato": "2026-10-23T06:04:13+00:00",
+      "esito": "Il 23/10 un solo Short su GTA 6 su quattro: chiuso",
+      "fatto": "2026-10-24T05:58:20+00:00"
     },
     {
       "id": "2026-10-24-1",
@@ -925,6 +934,32 @@
       "dettagli": "La fonte (GAMINGbible) parla di un accenno del capo di Xbox a un aggiornamento in stile 360, non del ritorno della console. Il titolo deve restare dentro quello che la fonte dice; un pubblico che si sente preso in giro commenta \"fake\".",
       "link": "https://youtube.com/shorts/Hsw82cK6GAM",
       "creato": "2026-10-24T05:08:41+00:00"
+    },
+    {
+      "id": "2026-10-24-2",
+      "per": "samaritan-gaming",
+      "da": "samaritan-notizie",
+      "stato": "da fare",
+      "volte": 1,
+      "origine": "Short en A1ls4upSpm8 del 23/10",
+      "titolo": "Gioco sbagliato nel titolo: Mario Kart 8 Deluxe invece di Mario Kart World",
+      "dettagli": "La fonte (VICE) parla del jailbreak di Switch 2 e delle mod per Mario Kart World; il campo gioco e il titolo dicono Mario Kart 8 Deluxe. Il nome del gioco va preso da quello che dice la fonte. Se torna, va in PR insieme a 2026-10-24-1 (titoli fedeli alla fonte).",
+      "link": "https://youtube.com/shorts/A1ls4upSpm8",
+      "creato": "2026-10-24T05:58:20+00:00"
+    },
+    {
+      "id": "2026-10-24-3",
+      "per": "davide",
+      "da": "revisore-video",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-gaming tbp3qddQcgA e samaritan-notizie 7jAhDToSksQ",
+      "titolo": "Rilanciare 2 Short su Instagram e Facebook: Pokémon in soffitta e Tesla Roadster",
+      "dettagli": "Gaming: \"Pokemon Cards: il milionario della soffitta\" del 23/10 alle 14, fonte AGI (argomenti 4/5). Motori: \"Tesla Roadster: tutto il fumo negli occhi\" del 23/10 alle 14, fonte Motor1.com Italia (il migliore dei 2 motori). Video 3/5: i crediti vidIQ sono finiti, quindi il permesso fisso non vale. I file scadono il 27/10. TikTok fermo fino al 31/10.",
+      "link": "https://youtube.com/shorts/tbp3qddQcgA",
+      "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dei due Short (tbp3qddQcgA e 7jAhDToSksQ) con il loro video_file_url e la didascalia_tiktok, con la nota AI",
+      "creato": "2026-10-24T05:58:20+00:00"
     }
   ]
 }

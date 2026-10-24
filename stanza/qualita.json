@@ -1193,6 +1193,162 @@
         }
       ],
       "media": 4.5
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "samaritan-gaming",
+      "lavoro": "4 Short del 23/10",
+      "revisore": "samaritan-notizie",
+      "punti": [
+        {
+          "punto": "varietà dei temi",
+          "voto": 5,
+          "motivo": "Pokémon, Zelda, Mario Kart, GTA 6: un solo Short su GTA 6, la correzione 2026-10-23-4 ha tenuto"
+        },
+        {
+          "punto": "titolo fedele alla fonte",
+          "voto": 2,
+          "motivo": "en A1ls4upSpm8 dice Mario Kart 8 Deluxe, ma la fonte (VICE) parla di mod per Mario Kart World"
+        },
+        {
+          "punto": "lingua coerente",
+          "voto": 5,
+          "motivo": "i 3 Short inglesi hanno titolo inglese, l'italiano titolo italiano"
+        },
+        {
+          "punto": "fonte citata",
+          "voto": 4,
+          "motivo": "fonte e testata presenti in ogni voce"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it tbp3qddQcgA (Pokémon in soffitta)",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento",
+          "voto": 4,
+          "motivo": "notizia curiosa e popolare (AGI), legata al gaming tramite le carte Pokémon"
+        },
+        {
+          "punto": "titolo",
+          "voto": 4,
+          "motivo": "\"il milionario della soffitta\" resta dentro la fonte"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it tbp3qddQcgA (Pokémon in soffitta)",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "controllo del video",
+          "voto": 3,
+          "motivo": "crediti vidIQ finiti: il video non si può guardare da qui"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "samaritan-notizie",
+      "lavoro": "2 Short motori del 23/10",
+      "revisore": "fact-checker",
+      "punti": [
+        {
+          "punto": "fonte con link",
+          "voto": 5,
+          "motivo": "Motor1.com Italia e Italpress, con link"
+        },
+        {
+          "punto": "tema motori",
+          "voto": 3,
+          "motivo": "Tesla Roadster forte; il libro sull'Alfa Romeo Giulia è una notizia debole per 60 secondi"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "redattore",
+      "lavoro": "bozze del 23/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "fonti",
+          "voto": 4,
+          "motivo": "BioWare con 10 fonti, Amazon e Chery con una testata ciascuna come da regola"
+        },
+        {
+          "punto": "note del Critico",
+          "voto": 4,
+          "motivo": "nessuna nota; una riga \"da verificare\" su BioWare, coperta dalla fonte Spaziogames (43mila firme)"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "scout",
+      "lavoro": "scaletta del 23/10",
+      "revisore": "analista",
+      "punti": [
+        {
+          "punto": "scelta dei temi",
+          "voto": 4,
+          "motivo": "motori, gaming, tecnologia: tre aree diverse, Contraddittorio sul salvataggio di BioWare"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "social",
+      "lavoro": "caroselli e Facebook del 23/10",
+      "revisore": "redattore",
+      "punti": [
+        {
+          "punto": "uscite complete",
+          "voto": 5,
+          "motivo": "3 caroselli Instagram e 3 post Facebook usciti 1 minuto dopo l'approvazione"
+        }
+      ],
+      "media": 5.0
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "grafico",
+      "lavoro": "caroselli del 23/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "leggibilità",
+          "voto": 4,
+          "motivo": "titolo grande e chiaro, rubrica in alto, filetto blu; copertina solo testo, nessuna foto"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-24",
+      "agente": "guardiano",
+      "lavoro": "controllo del 23/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "copertura",
+          "voto": 4,
+          "motivo": "26 ok, 1 non controllato (token Pinterest non passato); il controllo di oggi non è ancora uscito alle 5:53 UTC"
+        }
+      ],
+      "media": 4.0
     }
   ]
 }
