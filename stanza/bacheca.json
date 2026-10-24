@@ -951,7 +951,7 @@
       "id": "2026-10-24-3",
       "per": "davide",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming tbp3qddQcgA e samaritan-notizie 7jAhDToSksQ",
@@ -959,7 +959,8 @@
       "dettagli": "Gaming: \"Pokemon Cards: il milionario della soffitta\" del 23/10 alle 14, fonte AGI (argomenti 4/5). Motori: \"Tesla Roadster: tutto il fumo negli occhi\" del 23/10 alle 14, fonte Motor1.com Italia (il migliore dei 2 motori). Video 3/5: i crediti vidIQ sono finiti, quindi il permesso fisso non vale. I file scadono il 27/10. TikTok fermo fino al 31/10.",
       "link": "https://youtube.com/shorts/tbp3qddQcgA",
       "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dei due Short (tbp3qddQcgA e 7jAhDToSksQ) con il loro video_file_url e la didascalia_tiktok, con la nota AI",
-      "creato": "2026-10-24T05:58:20+00:00"
+      "creato": "2026-10-24T05:58:20+00:00",
+      "deciso": "2026-10-24T06:03:18.834Z"
     }
   ]
 }
