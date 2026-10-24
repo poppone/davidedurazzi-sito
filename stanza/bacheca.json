@@ -951,7 +951,7 @@
       "id": "2026-10-24-3",
       "per": "davide",
       "da": "revisore-video",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming tbp3qddQcgA e samaritan-notizie 7jAhDToSksQ",
@@ -960,7 +960,9 @@
       "link": "https://youtube.com/shorts/tbp3qddQcgA",
       "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dei due Short (tbp3qddQcgA e 7jAhDToSksQ) con il loro video_file_url e la didascalia_tiktok, con la nota AI",
       "creato": "2026-10-24T05:58:20+00:00",
-      "deciso": "2026-10-24T06:03:18.834Z"
+      "deciso": "2026-10-24T06:03:18.834Z",
+      "esito": "4 voci in social/coda.json (Reel Instagram e video Facebook per tbp3qddQcgA e 7jAhDToSksQ)",
+      "fatto": "2026-10-24T06:05:18+00:00"
     }
   ]
 }
