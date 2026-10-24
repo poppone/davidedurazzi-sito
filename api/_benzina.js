@@ -45,6 +45,6 @@ module.exports = async (req, res) => {
       prezzi: prz.slice(0, tp).concat(prezzi).join("\n")
     });
   } catch (e) {
-    res.status(502).json({ error: "Dati MIMIT non raggiungibili" });
+    res.status(502).json({ error: "Dati MIMIT non raggiungibili", dettaglio: String((e && e.cause && e.cause.code) || (e && e.message) || e) });
   }
 };
