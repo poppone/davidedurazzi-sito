@@ -1349,6 +1349,162 @@
         }
       ],
       "media": 4.0
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "samaritan-gaming",
+      "lavoro": "4 Short del 24/10",
+      "revisore": "samaritan-notizie",
+      "punti": [
+        {
+          "punto": "varietà dei temi",
+          "voto": 4,
+          "motivo": "2 su 4 su GTA 6 (PS5 e vinile): al limite della regola, non oltre"
+        },
+        {
+          "punto": "titolo fedele alla fonte",
+          "voto": 4,
+          "motivo": "Cyberpunk e GTA 6 restano dentro le fonti (Xbox Wire, GAMINGbible)"
+        },
+        {
+          "punto": "lingua coerente",
+          "voto": 5,
+          "motivo": "titoli inglesi sugli Short inglesi, italiano sull'italiano"
+        },
+        {
+          "punto": "dati della voce",
+          "voto": 3,
+          "motivo": "campo gioco vuoto sullo Short kZOXnaGC3IE"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it zIxiW6OCPCI (The Apothecary Diaries)",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento",
+          "voto": 4,
+          "motivo": "annuncio con data d'uscita su PS5, Switch 2 e PC (Gametimers)"
+        },
+        {
+          "punto": "titolo",
+          "voto": 4,
+          "motivo": "chiaro e fedele alla fonte"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it zIxiW6OCPCI (The Apothecary Diaries)",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "controllo del video",
+          "voto": 3,
+          "motivo": "crediti vidIQ finiti: il video non si può guardare da qui"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "samaritan-notizie",
+      "lavoro": "2 Short motori del 24/10",
+      "revisore": "fact-checker",
+      "punti": [
+        {
+          "punto": "fonte con link",
+          "voto": 5,
+          "motivo": "Sky Sport ed Everyeye Auto, con link"
+        },
+        {
+          "punto": "titolo fedele alla fonte",
+          "voto": 2,
+          "motivo": "\"Tesla: cancellazione del Cybertruck dopo 7 anni\" toglie il \"in due Paesi\" della fonte e fa pensare a una chiusura mondiale"
+        }
+      ],
+      "media": 3.5
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "redattore",
+      "lavoro": "bozze del 24/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "fonti",
+          "voto": 4,
+          "motivo": "una testata citata per ciascuna, come da regola per tecnologia e gaming"
+        },
+        {
+          "punto": "note del Critico",
+          "voto": 4,
+          "motivo": "nessuna nota sulle 3 bozze"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "scout",
+      "lavoro": "scaletta del 24/10",
+      "revisore": "analista",
+      "punti": [
+        {
+          "punto": "scelta dei temi",
+          "voto": 4,
+          "motivo": "AI, gaming e un Contraddittorio sugli agenti che negoziano"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "social",
+      "lavoro": "caroselli, Facebook e coda del 24/10",
+      "revisore": "redattore",
+      "punti": [
+        {
+          "punto": "uscite complete",
+          "voto": 3,
+          "motivo": "2 caroselli e 8 tra Reel e video Facebook usciti; Muse di Meta perso: l'approvazione di Davide è stata sovrascritta da un'altra run"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "grafico",
+      "lavoro": "caroselli del 24/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "leggibilità",
+          "voto": 4,
+          "motivo": "stesso schema del 23/10: titolo forte, rubrica, filetto; ancora nessuna foto"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-25",
+      "agente": "guardiano",
+      "lavoro": "controllo del 24/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "copertura",
+          "voto": 4,
+          "motivo": "27 ok, 1 non controllato (token Pinterest non passato)"
+        }
+      ],
+      "media": 4.0
     }
   ]
 }

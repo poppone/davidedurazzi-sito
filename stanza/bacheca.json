@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-24T05:58:20+00:00",
+  "aggiornato": "2026-10-25T06:56:22+00:00",
   "stati": [
     "da fare",
     "in corso",
@@ -964,6 +964,44 @@
       "deciso": "2026-10-24T06:03:18.834Z",
       "esito": "4 voci in social/coda.json (Reel Instagram e video Facebook per tbp3qddQcgA e 7jAhDToSksQ)",
       "fatto": "2026-10-24T06:05:18+00:00"
+    },
+    {
+      "id": "2026-10-25-1",
+      "per": "samaritan-notizie",
+      "da": "fact-checker",
+      "stato": "da fare",
+      "volte": 1,
+      "origine": "Short vkDvtBuuqNM del 24/10",
+      "titolo": "Titolo che allarga la fonte: \"Tesla: cancellazione del Cybertruck dopo 7 anni\"",
+      "dettagli": "La fonte (Everyeye Auto) parla di Cybertruck cancellato in due Paesi dopo 7 anni di caparre; il titolo toglie \"in due Paesi\" e fa pensare a una chiusura mondiale. Stesso difetto aperto per il gaming (2026-10-24-1): il titolo deve tenere le condizioni della fonte.",
+      "link": "https://youtube.com/shorts/vkDvtBuuqNM",
+      "creato": "2026-10-25T06:56:22+00:00"
+    },
+    {
+      "id": "2026-10-25-2",
+      "per": "redazione",
+      "da": "direttore",
+      "stato": "da fare",
+      "volte": 1,
+      "origine": "bozza Muse di Meta del 24/10",
+      "titolo": "Un'approvazione di Davide sovrascritta da pubblica.yml",
+      "dettagli": "Davide ha approvato Muse di Meta alle 17:02:25 UTC del 24/10; due run di pubblica.yml partite in quel momento hanno riscritto bozze.json e la bozza è tornata \"approvato\": false. Finch l'ha riapprovata il 25/10 (regola 6n, nessuna nota del Critico). Rimedio: in promuovi.py rileggere bozze.json da origin prima di scrivere, o mettere concurrency al workflow pubblica.yml.",
+      "link": "https://github.com/poppone/davidedurazzi-sito/actions/workflows/pubblica.yml",
+      "creato": "2026-10-25T06:56:22+00:00"
+    },
+    {
+      "id": "2026-10-25-3",
+      "per": "davide",
+      "da": "revisore-video",
+      "stato": "da approvare",
+      "tipo": "video",
+      "volte": 1,
+      "origine": "samaritan-gaming zIxiW6OCPCI e samaritan-notizie fqxzsRWpKjQ",
+      "titolo": "Rilanciare 2 Short su Instagram e Facebook: The Apothecary Diaries e MotoGP Australia",
+      "dettagli": "Gaming: \"The Apothecary Diaries: il nuovo RPG su PS5\" del 24/10 alle 14, fonte Gametimers (argomenti 4/5). Motori: \"MotoGP: Marquez vince Sprint in Australia\" del 24/10 alle 14, fonte Sky Sport (il migliore dei 2 motori). Video 3/5: crediti vidIQ finiti, quindi il permesso fisso non vale. I file scadono il 28/10.",
+      "link": "https://youtube.com/shorts/zIxiW6OCPCI",
+      "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dei due Short (zIxiW6OCPCI e fqxzsRWpKjQ) con il loro video_file_url e la didascalia_tiktok, con la nota AI",
+      "creato": "2026-10-25T06:56:22+00:00"
     }
   ]
 }
