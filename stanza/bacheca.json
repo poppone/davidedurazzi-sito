@@ -993,7 +993,7 @@
       "id": "2026-10-25-3",
       "per": "davide",
       "da": "revisore-video",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming zIxiW6OCPCI e samaritan-notizie fqxzsRWpKjQ",
@@ -1001,7 +1001,8 @@
       "dettagli": "Gaming: \"The Apothecary Diaries: il nuovo RPG su PS5\" del 24/10 alle 14, fonte Gametimers (argomenti 4/5). Motori: \"MotoGP: Marquez vince Sprint in Australia\" del 24/10 alle 14, fonte Sky Sport (il migliore dei 2 motori). Video 3/5: crediti vidIQ finiti, quindi il permesso fisso non vale. I file scadono il 28/10.",
       "link": "https://youtube.com/shorts/zIxiW6OCPCI",
       "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dei due Short (zIxiW6OCPCI e fqxzsRWpKjQ) con il loro video_file_url e la didascalia_tiktok, con la nota AI",
-      "creato": "2026-10-25T06:56:22+00:00"
+      "creato": "2026-10-25T06:56:22+00:00",
+      "deciso": "2026-10-25T07:03:05.320Z"
     }
   ]
 }
