@@ -1,5 +1,44 @@
 [
   {
+    "slug": "muse-di-meta-l-agente-ai-che-legge-contratti-e-negozia-per-te-20261024",
+    "titolo": "Muse di Meta: l'agente AI che legge contratti e negozia per te",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-24",
+    "sommario": "Secondo Tom's Hardware, negli Stati Uniti è già attivo Muse, l'agente AI di Meta capace di leggere contratti, compilare moduli e negoziare al posto dell'utente.",
+    "testo": [
+      "Muse, l'agente AI lanciato da Meta, è stato messo a disposizione di alcuni clienti negli Stati Uniti da poche settimane. Il servizio si propone di gestire la lettura di contratti e termini d'uso, operando direttamente nel browser dell'utente.",
+      "Il funzionamento è semplice: Muse apre il browser, analizza il testo del documento, compila i moduli richiesti e avvia la negoziazione con la controparte, tutto in autonomia.",
+      "Per gli utenti rappresenta un aiuto concreto nella gestione di documenti spesso complessi, riducendo il tempo necessario per comprendere clausole e avviare trattative senza dover ricorrere a un esperto legale.",
+      "Rimane però da capire quanto sia affidabile l'analisi dell'IA, quali siano i limiti tecnici e normativi, e come vengano tutelati i dati personali durante il processo di negoziazione."
+    ],
+    "fonti": [
+      {
+        "nome": "Tom's Hardware: L'agente AI legge contratti e termini d'uso, diventa un superpotere in mano al cliente",
+        "url": "https://www.tomshw.it/business/lagente-ai-legge-contratti-e-termini-duso-diventa-un-superpotere-in-mano-al-cliente"
+      }
+    ],
+    "acquisto": null,
+    "domanda": "Ritieni che l'uso di un agente AI, come Muse di Meta, per leggere e negoziare contratti sia vantaggioso per i consumatori?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "L'AI può analizzare rapidamente contratti lunghi e complessi, consentendo al consumatore di comprendere subito i termini senza perdere ore di lettura",
+        "Grazie alla capacità di individuare clausole svantaggiose, l'agente può suggerire modifiche o negoziare condizioni più favorevoli, aumentando il potere contrattuale del cliente",
+        "Muse di Meta è già operativo negli Stati Uniti da poche settimane, secondo le comunicazioni di Meta, dimostrando che la tecnologia è pronta all'uso pratico e può agire come un vero \"superpotere\" nelle mani dei consumatori"
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Essendo una tecnologia appena lanciata, Muse potrebbe non interpretare correttamente clausole contrattuali complesse, aumentando il rischio di errori a danno del consumatore",
+        "La responsabilità legale in caso di errore dell'AI non è chiara: se l'agente negozia male, il consumatore potrebbe rimanere senza tutela o senza un soggetto a cui rivolgersi per il risarcimento",
+        "L'uso dell'AI richiede la condivisione di contratti e dati personali, esponendo informazioni sensibili a potenziali rischi di privacy o a violazioni di sicurezza"
+      ]
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "gta-6-peekhole-la-parodia-di-onlyfans-e-la-risoluzione-di-un-bug-grafi-20261024",
     "titolo": "GTA 6: Peekhole, la parodia di OnlyFans, e la risoluzione di un bug grafico storico",
     "sezione": "gaming",
