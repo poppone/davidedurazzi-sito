@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-25T09:49+00:00",
+  "aggiornato": "2026-10-26T11:07+00:00",
   "riassunto": {
     "ok": 27,
     "attenzione": 0,
@@ -46,13 +46,13 @@
     {
       "nome": "Token del bot della chat Twitch",
       "esito": "ok",
-      "messaggio": "valido, scade tra 54 giorni",
+      "messaggio": "valido, scade tra 53 giorni",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Benzina nella zona di Davide",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-24: success",
+      "messaggio": "ultima esecuzione del 2026-10-25: success",
       "rimedio": ""
     },
     {
@@ -64,13 +64,13 @@
     {
       "nome": "davidedurazzi-sito · Coda social (Reel e Pin diretti)",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-24: success",
+      "messaggio": "ultima esecuzione del 2026-10-26: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Finch su Discord",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-25: success",
+      "messaggio": "ultima esecuzione del 2026-10-26: success",
       "rimedio": ""
     },
     {
@@ -82,13 +82,13 @@
     {
       "nome": "davidedurazzi-sito · Guardiano delle chiavi",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-24: success",
+      "messaggio": "ultima esecuzione del 2026-10-25: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Messaggi privati Instagram",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-24: success",
+      "messaggio": "ultima esecuzione del 2026-10-25: success",
       "rimedio": ""
     },
     {
@@ -100,13 +100,13 @@
     {
       "nome": "davidedurazzi-sito · Pubblica bozze approvate",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-25: success",
+      "messaggio": "ultima esecuzione del 2026-10-26: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Redazione del mattino",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-24: success",
+      "messaggio": "ultima esecuzione del 2026-10-26: success",
       "rimedio": ""
     },
     {
@@ -124,13 +124,13 @@
     {
       "nome": "samaritan_v2 · Pulizia copie dei video",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-25: success",
+      "messaggio": "ultima esecuzione del 2026-10-26: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan_v2 · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-25: success",
+      "messaggio": "ultima esecuzione del 2026-10-26: success",
       "rimedio": ""
     },
     {
@@ -142,13 +142,13 @@
     {
       "nome": "samaritan_v2 · Vocale di Finch",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-25: success",
+      "messaggio": "ultima esecuzione del 2026-10-26: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan-notizie · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-25: success",
+      "messaggio": "ultima esecuzione del 2026-10-26: success",
       "rimedio": ""
     },
     {
