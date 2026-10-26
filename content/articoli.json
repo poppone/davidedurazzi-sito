@@ -1,5 +1,72 @@
 [
   {
+    "slug": "ea-chiude-bioware-addio-al-nuovo-mass-effect-20261025",
+    "titolo": "EA chiude BioWare: addio al nuovo Mass Effect",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-25",
+    "sommario": "Electronic Arts ha deciso la chiusura di BioWare e la cancellazione del prossimo capitolo della saga di Mass Effect, a due mesi da un'acquisizione miliardaria.",
+    "testo": [
+      "Brutte notizie dal mondo dei videogiochi: Electronic Arts ha scelto di chiudere lo storico studio BioWare. Con questa decisione viene ufficialmente cancellato anche il prossimo capitolo di Mass Effect, un progetto che prometteva di alzare notevolmente l'asticella per l'intero genere.",
+      "Secondo quanto riportato da Gamereactor, la mossa drastica arriva a breve distanza da un'operazione finanziaria da ben cinquantacinque miliardi di dollari che ha reso l'azienda privata, lasciando però sul campo un debito di diciotto miliardi.",
+      "Per i fan della saga e dei giochi di ruolo la perdita è enorme. Come rivelato dall'ex sviluppatore Tony de Waal e riportato da IGN Italia, il team stava lavorando a un titolo con un livello di scelta e una profondità senza precedenti, prendendo ispirazione dai lavori di Larian e CD Projekt Red.",
+      "Adesso restano molti interrogativi sul futuro dei talenti che componevano lo studio e sulle sorti di altri marchi storici legati a BioWare. Una pagina importante della storia videoludica si chiude bruscamente."
+    ],
+    "fonti": [
+      {
+        "nome": "Gamereactor: EA chiude BioWare e cancella il prossimo Mass Effect, due mesi dopo aver contratto 18 miliardi di dollari di debito",
+        "url": "https://www.gamereactor.it/ea-chiude-bioware-e-cancella-il-prossimo-mass-effect-due-mesi-dopo-aver/"
+      },
+      {
+        "nome": "IGN Italia: Il nuovo Mass Effect avrebbe alzato l'asticella: BioWare si ispirava ai giochi Larian e CD Projekt Red",
+        "url": "https://it.ign.com/mass-effect-next-1/228780/il-nuovo-mass-effect-avrebbe-alzato-lasticella-bioware-si-ispirava-ai-giochi-larian-e-cd-projekt-red"
+      }
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Mass Effect"
+    },
+    "pubblicato": true
+  },
+  {
+    "slug": "bugatti-tourbillon-il-no-di-mate-rimac-alla-versione-elettrica-voluta--20261025",
+    "titolo": "Bugatti Tourbillon: il no di Mate Rimac alla versione elettrica voluta da Volkswagen",
+    "sezione": "motori",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-25",
+    "sommario": "Volkswagen avrebbe preferito una Bugatti del tutto a batteria. Secondo indiscrezioni, la ferma opposizione di Mate Rimac ha cambiato i piani per la Tourbillon.",
+    "testo": [
+      "Stando a quanto riportato da HDmotori, il gruppo Volkswagen avrebbe inizialmente preso in considerazione l'idea di realizzare una Bugatti totalmente elettrica. Tuttavia, la ferma contrarietà di Mate Rimac si sarebbe rivelata determinante per bloccare questo piano e portare il progetto della Tourbillon verso una direzione differente.",
+      "Questa decisione rappresenta un passaggio fondamentale per gli appassionati di auto e tecnologia: dimostra come le scelte dei vertici industriali possano ancora privilegiare soluzioni tecniche alternative o tradizionali rispetto al passaggio immediato e completo all'elettrico puro nel settore delle ipercar.",
+      "Resta ora da capire quali saranno i prossimi sviluppi tecnici del marchio e se in futuro la strategia di Bugatti e del gruppo automobilistico aprirà comunque le porte a modelli a zero emissioni o manterrà questa linea voluta da Rimac."
+    ],
+    "fonti": [
+      {
+        "nome": "HDmotori: Bugatti Tourbillon, Volkswagen la voleva elettrica: Mate Rimac ha detto no",
+        "url": "https://www.hdmotori.it/bugatti-elettrica-progetto-hypercar-abortito/"
+      }
+    ],
+    "acquisto": null,
+    "domanda": "È stata corretta la decisione di Rimac di respingere i piani di Volkswagen per una Bugatti totalmente elettrica?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Ha tutelato la tradizione del marchio Bugatti, mantenendo il fascino dei motori termici richiesto da collezionisti e appassionati del segmento di lusso.",
+        "Ha evitato sovrapposizioni tecniche con le hypercar a batteria di Rimac, permettendo a Bugatti di seguire una strada tecnologica autonoma e originale.",
+        "Ha assecondato le reali preferenze dei clienti di questo settore esclusivo, dove un passaggio anticipato e totale all'elettrico rischiava di allontanare gli acquirenti."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Ha frenato il passaggio a zero emissioni di Bugatti, ritardando l'allineamento con la svolta tecnologica sostenibile che sta coinvolgendo l'intera industria automobilistica.",
+        "Ha rinunciato all'opportunità di sfruttare le tecnologie avanzate a batteria per stabilire nuovi record storici di potenza e accelerazione.",
+        "Ha perso l'occasione di rendere Bugatti un punto di riferimento per l'innovazione elettrica nell'alta gamma, posticipando una trasformazione comunque necessaria."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "openai-addestrera-i-futuri-modelli-di-intelligenza-artificiale-senza-a-20261025",
     "titolo": "OpenAI addestrerà i futuri modelli di intelligenza artificiale senza accesso a Internet",
     "sezione": "ai",
