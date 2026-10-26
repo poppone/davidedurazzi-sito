@@ -110,13 +110,23 @@
     document.body.appendChild(n);
   })();
 
+  // Pulsante "Iscriviti" (newsletter) nell'header: su mobile il menu e' nascosto
+  (function () {
+    var w = document.querySelector(".top .wrap");
+    if (!w) return;
+    var a = document.createElement("a"); a.className = "iscriviti";
+    a.href = document.getElementById("newsletter") ? "#newsletter" : "/#newsletter";
+    a.textContent = "Iscriviti";
+    w.appendChild(a);
+  })();
+
   // Pulsante "Sostienimi" ben visibile nell'header
   (function () {
     if (!safeUrl(S.donazioni)) return;
     var w = document.querySelector(".top .wrap");
     if (!w) return;
     var a = document.createElement("a"); a.className = "sostieni"; a.href = S.donazioni;
-    a.target = "_blank"; a.rel = "noopener"; a.innerHTML = "&#9749; Sostienimi";
+    a.target = "_blank"; a.rel = "noopener"; a.setAttribute("aria-label", "Sostienimi"); a.innerHTML = "&#9749;<span> Sostienimi</span>";
     w.appendChild(a);
   })();
 
