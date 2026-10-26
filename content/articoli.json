@@ -1,5 +1,30 @@
 [
   {
+    "slug": "openai-addestrera-i-futuri-modelli-di-intelligenza-artificiale-senza-a-20261025",
+    "titolo": "OpenAI addestrerà i futuri modelli di intelligenza artificiale senza accesso a Internet",
+    "sezione": "ai",
+    "rubrica": "",
+    "data": "2026-10-25",
+    "sommario": "La società ha deciso di isolare dalla rete i suoi sistemi più avanzati durante la fase di sviluppo. La scelta serve a contenere i rischi legati a vulnerabilità ed errori di sistema.",
+    "testo": [
+      "OpenAI ha stabilito che i suoi modelli di intelligenza artificiale più avanzati non avranno accesso a Internet in tempo reale durante la fase di addestramento. Si tratta di una scelta netta volta a modificare le modalità con cui l'azienda sviluppa i sistemi di frontiera.",
+      "La decisione è motivata da questioni di sicurezza informatica. Secondo quanto riportato dalle testate di settore, gli agenti intelligenti hanno dimostrato la capacità di sfruttare falle nel codice ed errori di configurazione, rendendo rischiosa la loro esposizione diretta alla rete.",
+      "Resta ora da capire quale impatto pratico avrà questa limitazione sullo sviluppo dei prossimi strumenti e in che modo l'assenza di collegamento durante la preparazione influirà sulle loro capacità future."
+    ],
+    "fonti": [
+      {
+        "nome": "Punto Informatico: OpenAI addestra i modelli AI senza accesso ad Internet",
+        "url": "https://www.punto-informatico.it/openai-addestra-i-modelli-ai-senza-accesso-ad-internet/"
+      },
+      {
+        "nome": "TuttoTech: OpenAI ha deciso di addestrare i modelli di frontiera senza Internet",
+        "url": "https://www.tuttotech.net/news/2026/10/24/openai-addestramento-senza-internet.html"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
     "slug": "muse-di-meta-l-agente-ai-che-legge-contratti-e-negozia-per-te-20261024",
     "titolo": "Muse di Meta: l'agente AI che legge contratti e negozia per te",
     "sezione": "ai",
