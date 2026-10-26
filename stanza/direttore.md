@@ -268,13 +268,14 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 
 6o. **Controlli durante il giorno e cruscotto** (chiesti da Davide il
    16/10/2026: "come Jarvis"). Oltre al giro delle 7:52 ci sono due controlli
-   brevi, alle 12:52 e alle 18:52. Guardano gli ordini ZampaViva su Shopify, i
+   brevi, alle 12:52 e alle 18:52. Guardano i
    commenti in moderazione, le uscite di Samaritan di oggi, le run fallite
    dei workflow e le PR aperte. Correggi da solo quello che è reversibile e
    permesso. Scrivi a Davide solo se serve a lui o se c'è una notizia
-   importante, come il primo ordine o un errore che blocca un'uscita.
-   Cruscotto: https://claude.ai/artifact/FsFAydeS52J2ow3Yyvd6MZ. Ordini e
-   visite si aggiornano da soli da Shopify. A ogni controllo rigeneri due
+   importante, come un errore che blocca un'uscita. Shopify/ZampaViva non si
+   guarda più (Davide, 26/10/2026).
+   Cruscotto: https://claude.ai/artifact/FsFAydeS52J2ow3Yyvd6MZ. A ogni
+   controllo rigeneri due
    file:
    - `attese-davide.json`: i compiti di bacheca per davide in "da fare" o
      "da approvare", con i campi id, titolo, stato, per, link;
