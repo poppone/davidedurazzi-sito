@@ -1,38 +1,6 @@
 [
   {
-    "approvato": true,
-    "scartare": false,
-    "slug": "chatgpt-e-claude-confrontano-i-prezzi-della-benzina-con-pienofurbo-20261026",
-    "titolo": "ChatGPT e Claude confrontano i prezzi della benzina con PienoFurbo",
-    "sezione": "tecnologia",
-    "rubrica": "",
-    "data": "2026-10-26",
-    "sommario": "Secondo HDblog, il nuovo comparatore PienoFurbo permette a ChatGPT e Claude di indicare dove fare benzina al prezzo più basso in Italia.",
-    "testo": [
-      "Il 26 ottobre 2026, secondo HDblog, è stato lanciato PienoFurbo, un servizio che rende i dati dei prezzi dei carburanti dei distributori italiani disponibili per gli assistenti AI.",
-      "Grazie a questo strumento, ChatGPT e Claude possono rispondere alle richieste degli utenti indicando il distributore più economico nelle vicinanze, semplificando la scelta del luogo dove fare rifornimento.",
-      "Rimane da capire con quale frequenza i dati vengano aggiornati e come gli utenti possano accedere al comparatore al di fuori delle conversazioni con gli assistenti.",
-      "Se il servizio si diffonderà, potrebbe influenzare la concorrenza tra i distributori, spingendo verso prezzi più competitivi."
-    ],
-    "fonti": [
-      {
-        "nome": "HDblog: Fare benzina dove costa meno? Ora puoi chiederlo a ChatGPT e Claude",
-        "url": "https://www.hdblog.it/mercato/articoli/n674886/benzina-prezzi-migliori-chatgpt/"
-      }
-    ],
-    "nota_critico": [
-      "L'articolo indica una data di lancio preciso (26 ottobre 2026) che non è presente nella fonte HDblog; la data non è confermata dal testo fornito.",
-      "Le frasi che ipotizzano la frequenza di aggiornamento dei dati, le modalità di accesso al comparatore al di fuori delle conversazioni con gli assistenti e l'eventuale impatto sulla concorrenza tra distributori non sono riportate nella fonte e costituiscono aggiunte speculative non supportate."
-    ],
-    "domande_live": [
-      "Qual è il prezzo medio della benzina nella tua zona?",
-      "Preferiresti usare un assistente AI per trovare la stazione più economica?",
-      "Quali funzionalità aggiuntive ti aspetti da un comparatore di prezzi carburante?"
-    ],
-    "acquisto": null
-  },
-  {
-    "approvato": true,
+    "approvato": false,
     "scartare": false,
     "slug": "volvo-prepara-un-nuovo-elettrico-compatto-per-il-2027-20261026",
     "titolo": "Volvo prepara un nuovo elettrico compatto per il 2027",
