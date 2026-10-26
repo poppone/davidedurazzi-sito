@@ -993,7 +993,7 @@
       "id": "2026-10-25-3",
       "per": "davide",
       "da": "revisore-video",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "volte": 1,
       "origine": "samaritan-gaming zIxiW6OCPCI e samaritan-notizie fqxzsRWpKjQ",
@@ -1002,7 +1002,20 @@
       "link": "https://youtube.com/shorts/zIxiW6OCPCI",
       "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dei due Short (zIxiW6OCPCI e fqxzsRWpKjQ) con il loro video_file_url e la didascalia_tiktok, con la nota AI",
       "creato": "2026-10-25T06:56:22+00:00",
-      "deciso": "2026-10-25T07:03:05.320Z"
+      "deciso": "2026-10-25T07:03:05.320Z",
+      "esito": "26/10: 4 voci in social/coda.json (Reel Instagram e video Facebook di zIxiW6OCPCI e fqxzsRWpKjQ), con la nota AI."
+    },
+    {
+      "id": "2026-10-26-1",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "video",
+      "titolo": "Rilanciare lo Short \"Nintendo Switch Sport Resort: il trailer che rompe\" su Instagram e Facebook",
+      "dettagli": "Voti sotto 4 (argomenti 3: fonte debole; video 3: crediti vidIQ finiti), quindi niente permesso fisso. Consiglio: scartalo, la fonte è debole. Il motori del 25/10 (Stellantis e hedge fund) è un tema di finanza e non lo propongo.",
+      "link": "https://www.youtube.com/shorts/4qwIWdDA9Tc",
+      "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dello Short 4qwIWdDA9Tc con la didascalia_tiktok e la nota AI",
+      "origine": "Short it 4qwIWdDA9Tc del 25/10"
     }
   ]
 }

@@ -1505,6 +1505,142 @@
         }
       ],
       "media": 4.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "samaritan-gaming",
+      "lavoro": "4 Short del 25/10",
+      "revisore": "samaritan-notizie",
+      "punti": [
+        {
+          "punto": "titolo fedele alla fonte",
+          "voto": 4,
+          "motivo": "i 4 titoli seguono la fonte; 'il trailer che rompe' è solo enfasi"
+        },
+        {
+          "punto": "puntualità",
+          "voto": 4,
+          "motivo": "4 uscite su 4, nessuna run fallita"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it 4qwIWdDA9Tc",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "argomento",
+          "voto": 3,
+          "motivo": "fonte debole (Sortir à Paris) per una notizia Nintendo; tema di nicchia"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it 4qwIWdDA9Tc",
+      "revisore": "revisore-video",
+      "punti": [
+        {
+          "punto": "dati del video",
+          "voto": 3,
+          "motivo": "crediti vidIQ a zero fino al 9/11: nessun dato da guardare"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short motori del 25/10",
+      "revisore": "fact-checker",
+      "punti": [
+        {
+          "punto": "uscite",
+          "voto": 2,
+          "motivo": "1 Short su 2: due run scartate perché il testo aggiungeva fatti al titolo"
+        },
+        {
+          "punto": "fedeltà",
+          "voto": 4,
+          "motivo": "il controllo ha bloccato i dettagli inventati, come previsto"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "redattore",
+      "lavoro": "bozze del 25/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "fonti e fatti",
+          "voto": 4,
+          "motivo": "3 bozze con fonte citata, approvate da Davide e uscite"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "scout",
+      "lavoro": "scaletta del 25/10",
+      "revisore": "analista",
+      "punti": [
+        {
+          "punto": "scaletta",
+          "voto": 4,
+          "motivo": "scaletta del 25/10 presente, 3 temi su gaming, motori e AI"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "social",
+      "lavoro": "caroselli e coda del 25/10",
+      "revisore": "redattore",
+      "punti": [
+        {
+          "punto": "uscite",
+          "voto": 4,
+          "motivo": "3 caroselli usciti stamattina; coda senza errori, Bluesky e Pin aspettano le chiavi"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "grafico",
+      "lavoro": "caroselli del 25/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "slide",
+          "voto": 4,
+          "motivo": "4 slide per articolo, regolari"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-10-26",
+      "agente": "guardiano",
+      "lavoro": "controllo del 25/10",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "copertura",
+          "voto": 4,
+          "motivo": "27 ok, 1 non controllato (token Pinterest non passato)"
+        }
+      ],
+      "media": 4.0
     }
   ]
 }
