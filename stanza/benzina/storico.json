@@ -1,0 +1,11 @@
+[
+  {
+    "data": "2026-10-26",
+    "benzina": 1.998,
+    "diesel": 2.247,
+    "distributori": {
+      "benzina": 17,
+      "diesel": 17
+    }
+  }
+]
