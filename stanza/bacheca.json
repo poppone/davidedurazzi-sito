@@ -1009,13 +1009,14 @@
       "id": "2026-10-26-1",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "titolo": "Rilanciare lo Short \"Nintendo Switch Sport Resort: il trailer che rompe\" su Instagram e Facebook",
       "dettagli": "Voti sotto 4 (argomenti 3: fonte debole; video 3: crediti vidIQ finiti), quindi niente permesso fisso. Consiglio: scartalo, la fonte è debole. Il motori del 25/10 (Stellantis e hedge fund) è un tema di finanza e non lo propongo.",
       "link": "https://www.youtube.com/shorts/4qwIWdDA9Tc",
       "azione": "metto in coda social/coda.json il Reel Instagram e il video Facebook dello Short 4qwIWdDA9Tc con la didascalia_tiktok e la nota AI",
-      "origine": "Short it 4qwIWdDA9Tc del 25/10"
+      "origine": "Short it 4qwIWdDA9Tc del 25/10",
+      "deciso": "2026-10-26T14:00:48.568Z"
     }
   ]
 }
