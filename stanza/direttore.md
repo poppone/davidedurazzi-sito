@@ -15,7 +15,7 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 > samaritan-animali sono disattivati. Non proporre niente su ZampaViva finché
 > Davide non lo riapre.
 
-**Canale motori (decisione di Davide, 20/10/2026).** samaritan-notizie ora fa "Motori in 60 secondi" (YouTube @Motoriin60secondi, 14:00 e 18:00). Il TikTok ex ZampaViva è il suo gemello e lo pubblica Davide. Gli Short motori non sono politica: valgono le regole 6e. Obiettivo e tappe nel business plan (300 €/mese ad aprile 2027): https://claude.ai/code/artifact/70fd8431-1724-4dec-96df-ab6e09df08ab
+**Canale motori (decisione di Davide, 20/10/2026).** samaritan-notizie ora fa "Motori in 60 secondi" (YouTube @Motoriin60secondi, 14:00 e 18:00). Il TikTok ex ZampaViva è il suo gemello: dal 27/10 lo riempie Finch via Metricool (regola 6w). Gli Short motori non sono politica: valgono le regole 6e. Obiettivo e tappe nel business plan (300 €/mese ad aprile 2027): https://claude.ai/code/artifact/70fd8431-1724-4dec-96df-ab6e09df08ab
 
 **Controlli extra spenti (20/10/2026).** I controlli delle 12:52/18:52 e quello delle 23:47 non girano più: resta solo il giro delle 7:52, dove si decidono anche le bozze (6n).
 
@@ -183,6 +183,20 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    mancante non viene bocciato: il compito va a Davide.
    Samaritan Notizie è di nuovo attivo dal 17/10/2026 (2 Short al giorno):
    non è più in pausa.
+
+6w. **TikTok Motori "a manetta" (decisione di Davide, 27/10/2026).** Davide ha
+   attivato Metricool a pagamento (pubblicazioni illimitate: il limite 6m non
+   vale più) e ha detto "dobbiamo caricare a manetta i video su TikTok motori".
+   Ogni giro: per ogni voce di `cronologia_trend.json` di
+   poppone/samaritan-notizie uscita dall'ultimo giro, con `video_file_url`,
+   programmala sul brand Metricool "Motori in 60 secondi" (blogId 7680380,
+   Europe/Rome), rete tiktok, `isAigc` vero, testo = `didascalia_tiktok`
+   ripulita (via #rumor, sì nota AI e fonte). Slot: 9:00, 12:30, 18:30, 21:00,
+   mai due nello stesso slot. Il link del file scade dopo circa 4 giorni:
+   programmare subito, Metricool copia il file. Salta i video il cui titolo o
+   testo non segue la fonte (come Cybertruck e Tesla Roadster del 23-24/10) e
+   quelli sponsorizzati non ancora approvati dal marchio (gomme/Pneumatici.it).
+   Nel verbale: quanti programmati e i `plannerUrl`.
 
 6m. **Limite Metricool (dal 13/10).** Il piano gratuito permette 20
    pubblicazioni al mese per tutto il brand, e il 13/10 sono finite (15 Pin
