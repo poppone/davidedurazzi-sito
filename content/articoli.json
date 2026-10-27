@@ -1,5 +1,69 @@
 [
   {
+    "slug": "iphone-18e-nuovo-processore-a20-ma-schermo-ancora-a-60-hz-20261027",
+    "titolo": "iPhone 18e: nuovo processore A20 ma schermo ancora a 60 Hz",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-27",
+    "sommario": "Secondo HDblog, l’iPhone 18e presenterà il chip A20 ma manterrà un display a 60 Hz, mentre molti altri modelli Apple hanno già adottato i 120 Hz.",
+    "testo": [
+      "Secondo HDblog, Apple sta per lanciare l’iPhone 18e con il nuovo processore A20, una delle novità più attese per migliorare le prestazioni del dispositivo.",
+      "Tuttavia, lo stesso articolo segnala che lo schermo resterà a 60 Hz, un refresh rate considerato ormai datato rispetto ai 120 Hz presenti nella maggior parte della gamma Apple attuale.",
+      "Per gli utenti, la combinazione di un chip più potente e un display più lento può influire sull’esperienza quotidiana: le app e i giochi saranno più reattivi, ma la fluidità visiva resterà limitata.",
+      "Rimane da capire se Apple introdurrà versioni con display a 120 Hz, quale sarà il prezzo finale dell’iPhone 18e e se il nuovo processore giustificherà un eventuale aumento di costo."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: iPhone 18e, arriva il nuovo processore ma lo schermo resta \"vecchio\"",
+        "url": "https://www.hdblog.it/smartphone/articoli/n674992/iphone-18e-display-novita-cambiamenti/"
+      }
+    ],
+    "acquisto": {
+      "tipo": "prodotto",
+      "nome": "iPhone 18e"
+    },
+    "pubblicato": true
+  },
+  {
+    "slug": "chatgpt-crea-profili-psicologici-lo-studio-dell-acm-2026-20261027",
+    "titolo": "ChatGPT crea profili psicologici: lo studio dell'ACM 2026",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-27",
+    "sommario": "Uno studio presentato all'ACM Web Conference 2026 rileva che ChatGPT costruisce memorie e profili psicologici degli utenti, superando le aspettative.",
+    "testo": [
+      "Secondo Punto Informatico, un team di ricercatori ha presentato all'ACM Web Conference 2026 uno studio che dimostra come ChatGPT sia in grado di creare memorie e profili psicologici degli utenti durante le interazioni.",
+      "Il risultato è rilevante perché indica che l'IA può raccogliere informazioni sottili sul comportamento e sulle preferenze, potenzialmente migliorando la personalizzazione ma anche sollevando interrogativi su quanto il modello conosca degli utenti.",
+      "Resta ancora da capire quali siano i limiti di queste capacità, come vengano gestite le informazioni nel tempo e quali metodologie possano verificare l'accuratezza dei profili generati.",
+      "Gli autori propongono ulteriori ricerche per valutare l'impatto su diversi gruppi di utenti e confrontare i risultati con altri modelli di linguaggio."
+    ],
+    "fonti": [
+      {
+        "nome": "Punto Informatico: ChatGPT ci conosce meglio di quanto pensiamo…",
+        "url": "https://www.punto-informatico.it/chatgpt-ci-conosce-meglio-di-quanto-pensiamo/"
+      }
+    ],
+    "acquisto": null,
+    "domanda": "Secondo te, ChatGPT può creare profili psicologici accurati degli utenti?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo lo studio presentato all'ACM Web Conference 2026, ChatGPT è in grado di generare memorie e profili psicologici degli utenti, fornendo una prova sperimentale della sua capacità di profilazione.",
+        "Il modello elabora grandi quantità di interazioni testuali, consentendo di individuare pattern comportamentali, preferenze e tratti di personalità in modo sistematico.",
+        "Grazie alla capacità di mantenere il contesto a lungo termine e di adattare le risposte in base alle informazioni fornite, ChatGPT può costruire un profilo coerente e progressivamente più preciso dell'utente."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Secondo il Punto Informatico, lo studio presentato all'ACM Web Conference 2026 è ancora preliminare e non fornisce una prova definitiva che i profili psicologici creati da ChatGPT siano accurati per tutti gli utenti.",
+        "ChatGPT elabora esclusivamente le informazioni testuali fornite durante la conversazione; senza dati biometrici, storici completi o contesto fuori dal dialogo, la sua capacità di inferire tratti psicologici rimane intrinsecamente limitata.",
+        "Anche se il modello può generare descrizioni basate su pattern linguistici, la variabilità del linguaggio umano e l'assenza di un meccanismo di verifica rendono difficile garantire l'affidabilità di tali profili."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "novembre-2026-gta-vi-e-le-nuove-uscite-su-xbox-e-pc-20261027",
     "titolo": "Novembre 2026: GTA VI e le nuove uscite su Xbox e PC",
     "sezione": "gaming",
