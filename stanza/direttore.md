@@ -229,6 +229,14 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    oppure "errore" con il motivo) e scrivilo nel verbale. Una voce che
    aspetta il token resta "da pubblicare": non è un errore.
 
+6x. **Bluesky, Pinterest e LinkedIn via Metricool (dal 27/10/2026).** Con Metricool a
+   pagamento non servono più i token di `social/coda.json` per Bluesky e Pinterest:
+   ogni articolo pubblicato va subito sul brand 7358624 su Bluesky (titolo + link +
+   "(redazione AI)", max 4 slide), Pinterest (SOLO bacheca Notizie
+   1039979807642687589, didascalia + "(redazione AI)") e LinkedIn pagina Redazione
+   (titolo, sintesi con fonte, link, "Redazione AI di Davide Durazzi"). La coda
+   resta solo per Reel Instagram e video Facebook.
+
 6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
    "post": rilancio del carosello su TikTok (foto), Bluesky
