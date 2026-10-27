@@ -356,6 +356,9 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .acquisto h2{margin:0;font:700 1.1rem var(--sans)}
 .acquisto .btn{max-width:100%;white-space:normal;line-height:1.25}
 .acquisto .nota-aff{margin:0}
+.banner-aff{margin-top:1.5rem;text-align:center}
+.banner-aff img{display:inline-block;max-width:100%;height:auto;border-radius:8px}
+.banner-aff .nota-aff{margin:.4rem 0 0}
 
 /* ===== La mia app (Ricordati) ===== */
 .app{display:grid;gap:1.6rem;align-items:center;padding:clamp(1.2rem,3vw,2rem);border:1px solid rgba(123,151,255,.25);border-radius:18px;background:linear-gradient(135deg,rgba(232,90,22,.14),rgba(47,85,228,.16)),var(--paper)}
