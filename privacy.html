@@ -27,6 +27,7 @@
 
 <h2>Statistiche di visita</h2>
 <p>Per sapere quante persone visitano il sito usiamo Vercel Web Analytics, che non usa cookie e non crea profili: conta solo le pagine viste in forma aggregata e anonima.</p>
+<p>Usiamo anche Metricool, lo strumento con cui gestiamo i social, per contare le visite al sito: ogni pagina carica una piccola immagine invisibile da tracker.metricool.com, che riceve i dati tecnici della richiesta (pagina visitata, provenienza, browser e indirizzo IP) e li usa solo per statistiche aggregate.</p>
 <p>Inoltre un contatore interno conta le visite per pagina e i visitatori unici del giorno. Per distinguere i visitatori usa una sigla anonima e non reversibile (derivata da indirizzo IP e browser, valida un solo giorno): nessun indirizzo IP viene salvato e non c'è alcun cookie.</p>
 <h2>Newsletter</h2>
 <p>Se ti iscrivi alla newsletter salviamo il tuo indirizzo email e la data di iscrizione, solo per inviarti gli aggiornamenti del sito. Puoi chiedere la cancellazione in qualsiasi momento scrivendo all'indirizzo indicato sopra. L'email è conservata su Upstash tramite Vercel ed eventualmente sul servizio di invio Buttondown.</p>
@@ -54,7 +55,7 @@
 <p>Link affiliati: alcuni link del sito (box "Dove comprarlo", pagina Consigli, offerte) sono affiliati. Se compri da lì ricevo una piccola commissione, senza costi in più per te. In qualità di Affiliato Amazon io ricevo un guadagno dagli acquisti idonei. Quando apri un link affiliato, il negozio di destinazione può usare i suoi cookie secondo la propria informativa.</p>
 
 <h2>Cookie e statistiche</h2>
-<p>Il sito non usa cookie propri di profilazione né strumenti di statistica.</p>
+<p>Il sito non usa cookie propri di profilazione. Per le statistiche di visita usiamo gli strumenti descritti sopra (Vercel Web Analytics, contatore interno e Metricool).</p>
 
 <h2>I tuoi diritti</h2>
 <p>Puoi chiedere l'accesso, la correzione o la cancellazione dei tuoi dati, e puoi presentare reclamo al Garante per la protezione dei dati personali.</p>
@@ -69,5 +70,6 @@
 <script src="/app.js"></script>
 <script>if(window.SITE&&SITE.email){var m=document.getElementById("mail");m.innerHTML='<a href="mailto:'+SITE.email+'">'+SITE.email+'</a>';}</script>
 <script defer src="/_vercel/insights/script.js"></script>
+<img src="https://tracker.metricool.com/c3po.jpg?hash=860cf6b36e08b6feb1df51d897103456" alt="" width="1" height="1" aria-hidden="true" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none">
 </body>
 </html>
