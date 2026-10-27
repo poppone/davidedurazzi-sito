@@ -44,6 +44,13 @@ window.SITE = {
     { link: "https://go.pneumatici.it/t/t?a=1746702796&as=2124228764&t=2&tk=1", img: "https://track.adtraction.com/t/t?a=1746702796&as=2124228764&t=1&tk=1&i=1", alt: "Pneumatici.it" }
   ],
 
+  // Banner NordVPN in fondo agli articoli di Tecnologia, Gaming e AI e nei Consigli "Per navigare e giocare online".
+  // "fino" (AAAA-MM-GG) = ultimo giorno in cui il banner si vede: serve per quelli del Black Friday.
+  bannerTech: [
+    { link: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=159138&url_id=858", img: "/assets/banner/nordvpn-728x90.png", alt: "NordVPN: risparmia fino al 78% + 3 mesi extra" },
+    { link: "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=159138&url_id=858", img: "/assets/banner/nordvpn-bf-800x600.jpg", alt: "NordVPN, offerta Black Friday", fino: "2026-12-01" }
+  ],
+
   // Donazioni: link alla tua pagina Ko-fi o PayPal.me (lascia "" per nasconderle)
   donazioni: "https://ko-fi.com/davidedurazzi",
 

@@ -369,15 +369,24 @@
     return '<div class="acquisto"><h2>Dove comprarlo</h2><a class="btn" href="' + esc(url) + '" target="_blank" rel="sponsored noopener">Cerca ' + esc(nome) + " su " + dove + "</a>" +
       '<p class="nota-aff">Link affiliato: se compri da qui ricevo una piccola commissione, a te non costa nulla.</p></div>';
   }
-  // Banner affiliato (config.js > bannerMotori): uno solo, scelto a caso; niente se la lista è vuota
-  function bannerMotori() {
-    var b = (S.bannerMotori || []).filter(function (x) { return /^https:\/\//.test(x.link || "") && /^https:\/\//.test(x.img || ""); });
+  // Banner affiliati (config.js > bannerMotori, bannerTech): uno solo, scelto a caso; niente se la lista è vuota
+  var SEZIONI_TECH = ["tecnologia", "gaming", "ai"];
+  function bannerDa(lista) {
+    var oggi = new Date().toISOString().slice(0, 10);
+    var b = (lista || []).filter(function (x) {
+      return /^https:\/\//.test(x.link || "") && /^(https:\/\/|\/[^\/])/.test(x.img || "") && !(x.fino && x.fino < oggi);
+    });
     if (!b.length) return "";
     var x = b[Math.floor(Math.random() * b.length)];
     return '<div class="banner-aff"><a href="' + esc(x.link) + '" target="_blank" rel="sponsored noopener"><img src="' + esc(x.img) + '" alt="' + esc(x.alt || "Pubblicità") + '" loading="lazy"></a>' +
       '<p class="nota-aff">Pubblicità con link affiliato.</p></div>';
   }
-  window.bannerMotori = bannerMotori;
+  function bannerSezione(sezione) {
+    if (sezione === "motori") return bannerDa(S.bannerMotori);
+    if (SEZIONI_TECH.indexOf(sezione) >= 0) return bannerDa(S.bannerTech);
+    return "";
+  }
+  window.bannerDa = bannerDa;
   function articolo() {
     var slug = document.body.dataset.slug || new URLSearchParams(location.search).get("slug");
     var pb = document.createElement("div"); pb.className = "progress"; document.body.appendChild(pb);
@@ -402,7 +411,7 @@
         '<div class="corpo">' + (a.testo || []).map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") + "</div>" +
         (fonti.length ? '<div class="fonti"><h2>Fonti</h2><ul>' + fonti.map(function (f) {
           return '<li><a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome || f.url) + "</a></li>";
-        }).join("") + "</ul></div>" : "") + acquisto(a) + (a.sezione === "motori" ? bannerMotori() : "") +
+        }).join("") + "</ul></div>" : "") + acquisto(a) + bannerSezione(a.sezione) +
         '<div class="acts" style="margin-top:2rem"><a class="btn pieno" href="/#diretta"><span class="dot" aria-hidden="true"></span>Ne parliamo in diretta</a></div>' +
         '<section class="commenti" id="commenti"><h2>Commenti</h2><div id="listaCommenti"><p class="meta">Caricamento dei commenti.</p></div>' +
         '<form class="form-commento" id="formCommento"><h3>Dì la tua</h3>' +
