@@ -115,12 +115,21 @@ def html_social(cfg) -> str:
                    + f">{n}</a>" for n, u in voci)
 
 
+SEZIONI_TECH = ("tecnologia", "gaming", "ai")
+
+
 def html_banner(cfg, a) -> str:
-    """Banner affiliato in fondo agli articoli Motori (config.js > bannerMotori), scelto in base allo slug."""
-    if a.get("sezione") != "motori":
+    """Banner affiliato in fondo agli articoli (config.js > bannerMotori, bannerTech), scelto in base allo slug.
+
+    Le pagine statiche si rigenerano solo quando cambia qualcosa: i banner con
+    una scadenza ("fino") qui si saltano, li mostra solo il sito dinamico."""
+    sezione = a.get("sezione")
+    chiave = "bannerMotori" if sezione == "motori" else "bannerTech" if sezione in SEZIONI_TECH else ""
+    if not chiave:
         return ""
-    b = [x for x in cfg.get("bannerMotori") or []
-         if str(x.get("link", "")).startswith("https://") and str(x.get("img", "")).startswith("https://")]
+    b = [x for x in cfg.get(chiave) or []
+         if str(x.get("link", "")).startswith("https://") and not x.get("fino")
+         and re.match(r"^(https://|/[^/])", str(x.get("img", "")))]
     if not b:
         return ""
     x = b[sum(map(ord, a.get("slug", ""))) % len(b)]
