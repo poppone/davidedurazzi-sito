@@ -1,5 +1,6 @@
 {
   "cleanUrls": true,
+  "ignoreCommand": "git diff --quiet ${VERCEL_GIT_PREVIOUS_SHA:-HEAD^} HEAD -- . ':(exclude)stanza' ':(exclude)social' ':(exclude)bozze' ':(exclude).github' ':(exclude)agenti/*.py' ':(exclude)agenti/*.md'",
   "regions": [
     "fra1"
   ],
