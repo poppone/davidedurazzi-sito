@@ -73,6 +73,8 @@
       return '<section class="blocco cs-gruppo" id="' + esc(g.id) + '"><div class="testa"><h2>' + esc(g.titolo) + "</h2>" + (g.intro ? "<p>" + esc(g.intro) + "</p>" : "") + '</div><ul class="cs-lista">' + voci + "</ul></section>";
     }).join("");
     document.getElementById("csGruppi").innerHTML = html || '<p class="meta">Nessun consiglio al momento.</p>';
+    var auto = document.getElementById("auto");
+    if (auto && window.bannerMotori) auto.insertAdjacentHTML("beforeend", window.bannerMotori());
   }).catch(function () { document.getElementById("csGruppi").innerHTML = '<p class="meta">Non si è caricato. Ricarica la pagina.</p>'; });
 })();
 </script>

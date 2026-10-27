@@ -38,6 +38,12 @@ window.SITE = {
   instantGaming: "poppone",   // codice igr di Instant Gaming, per i giochi
   amazonTag: "davidedurazzi-21",            // tag Amazon Affiliati (es. "davidedurazzi-21"), per i prodotti tech
 
+  // Banner affiliati in fondo agli articoli Motori e nei Consigli "Per l'auto": uno a caso per pagina (lascia [] per spegnerli)
+  bannerMotori: [
+    { link: "https://go.pneumatici.it/t/t?a=1746703014&as=2124228764&t=2&tk=1", img: "https://track.adtraction.com/t/t?a=1746703014&as=2124228764&t=1&tk=1&i=1", alt: "Pneumatici.it" },
+    { link: "https://go.pneumatici.it/t/t?a=1746702796&as=2124228764&t=2&tk=1", img: "https://track.adtraction.com/t/t?a=1746702796&as=2124228764&t=1&tk=1&i=1", alt: "Pneumatici.it" }
+  ],
+
   // Donazioni: link alla tua pagina Ko-fi o PayPal.me (lascia "" per nasconderle)
   donazioni: "https://ko-fi.com/davidedurazzi",
 

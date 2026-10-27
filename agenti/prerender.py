@@ -115,6 +115,20 @@ def html_social(cfg) -> str:
                    + f">{n}</a>" for n, u in voci)
 
 
+def html_banner(cfg, a) -> str:
+    """Banner affiliato in fondo agli articoli Motori (config.js > bannerMotori), scelto in base allo slug."""
+    if a.get("sezione") != "motori":
+        return ""
+    b = [x for x in cfg.get("bannerMotori") or []
+         if str(x.get("link", "")).startswith("https://") and str(x.get("img", "")).startswith("https://")]
+    if not b:
+        return ""
+    x = b[sum(map(ord, a.get("slug", ""))) % len(b)]
+    return (f'<div class="banner-aff"><a href="{e(x["link"])}" target="_blank" rel="sponsored noopener">'
+            f'<img src="{e(x["img"])}" alt="{e(x.get("alt") or "Pubblicità")}" loading="lazy"></a>'
+            '<p class="nota-aff">Pubblicità con link affiliato.</p></div>')
+
+
 def html_acquisto(cfg, a) -> str:
     """Box "Dove comprarlo" con link affiliato, solo se l'articolo indica un gioco o un prodotto."""
     from urllib.parse import quote_plus
@@ -125,6 +139,9 @@ def html_acquisto(cfg, a) -> str:
     if x.get("tipo") == "gioco" and cfg.get("instantGaming"):
         url = f"https://www.instant-gaming.com/it/ricerca/?query={quote_plus(nome)}&igr={quote_plus(cfg['instantGaming'])}"
         dove = "Instant Gaming"
+    elif x.get("tipo") == "link" and str(x.get("url") or "").startswith("https://"):
+        url = x["url"]
+        dove = e(x.get("dove") or "il sito del negozio")
     elif x.get("tipo") == "prodotto" and cfg.get("amazonTag"):
         url = f"https://www.amazon.it/s?k={quote_plus(nome)}&tag={quote_plus(cfg['amazonTag'])}"
         dove = "Amazon"
@@ -179,7 +196,7 @@ def pagina_articolo(cfg, a, modello: str) -> str:
         f'<a class="back" href="/#articoli">Torna agli articoli</a>'
         f'<p class="meta">{e(nome_sezione(cfg, a.get("sezione")))}, '
         f'<time datetime="{e(a.get("data"))}">{e(data_it(a.get("data")))}</time></p>'
-        f'<h1>{e(a.get("titolo"))}</h1>{som}{duello}<div class="corpo">{corpo}</div>{blocco_fonti}{html_acquisto(cfg, a)}'
+        f'<h1>{e(a.get("titolo"))}</h1>{som}{duello}<div class="corpo">{corpo}</div>{blocco_fonti}{html_acquisto(cfg, a)}{html_banner(cfg, a)}'
         '<div class="acts" style="margin-top:2rem"><a class="btn pieno" href="/#diretta">'
         '<span class="dot" aria-hidden="true"></span>Ne parliamo in diretta</a></div>'
         '<section class="commenti" id="commenti"><h2>Commenti</h2><div id="listaCommenti">'

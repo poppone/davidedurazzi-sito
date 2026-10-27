@@ -1,12 +1,18 @@
 {
   "_nota": "Pagina /consigli (link in bio). Per ogni voce: 'amazon' = testo da cercare su Amazon (usa il tag di config.js), oppure 'url' = link diretto. Gruppi con 'attivo': false non si vedono. Quando hai prodotti tuoi veri, metti nome e modello esatti in 'amazon' e scrivi nel 'perche' perché li usi.",
-  "aggiornato": "2026-10-22",
+  "aggiornato": "2026-10-27",
   "gruppi": [
     {
       "id": "auto",
       "titolo": "Per l'auto",
       "intro": "Le cose che rendono la guida più comoda e più sicura, senza spendere una fortuna.",
       "voci": [
+        {
+          "nome": "Gomme invernali e quattro stagioni",
+          "perche": "Dal 15 novembre scatta l'obbligo su molte strade: qui confronti marche e prezzi e scegli il montaggio vicino a te.",
+          "url": "https://go.pneumatici.it/t/t?a=1714446135&as=2124228764&t=2&tk=1",
+          "dove": "Pneumatici.it"
+        },
         {
           "nome": "Adattatore CarPlay / Android Auto wireless",
           "perche": "Niente più cavo: il telefono si collega da solo appena sali.",
