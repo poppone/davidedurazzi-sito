@@ -363,6 +363,7 @@
     var x = a.acquisto || {}, nome = String(x.nome || "").trim(), url = "", dove = "";
     if (!nome) return "";
     if (x.tipo === "gioco" && S.instantGaming) { url = "https://www.instant-gaming.com/it/ricerca/?query=" + encodeURIComponent(nome) + "&igr=" + encodeURIComponent(S.instantGaming); dove = "Instant Gaming"; }
+    else if (x.tipo === "link" && /^https:\/\//.test(x.url || "")) { url = x.url; dove = String(x.dove || "il sito del negozio"); }
     else if (x.tipo === "prodotto" && S.amazonTag) { url = "https://www.amazon.it/s?k=" + encodeURIComponent(nome) + "&tag=" + encodeURIComponent(S.amazonTag); dove = "Amazon"; }
     else return "";
     return '<div class="acquisto"><h2>Dove comprarlo</h2><a class="btn" href="' + esc(url) + '" target="_blank" rel="sponsored noopener">Cerca ' + esc(nome) + " su " + dove + "</a>" +

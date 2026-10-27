@@ -23,7 +23,7 @@
         "url": "https://www.sicurauto.it/news/codice-della-strada/cambio-gomme-invernali-2026-2027-quando-e-come-farlo/"
       }
     ],
-    "acquisto": null,
+    "acquisto": {"tipo": "link", "nome": "gomme invernali e quattro stagioni", "url": "https://go.pneumatici.it/t/t?a=1714446135&as=2124228764&t=2&tk=1", "dove": "Pneumatici.it"},
     "pubblicato": true
   },
   {
