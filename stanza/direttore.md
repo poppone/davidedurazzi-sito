@@ -191,8 +191,11 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    poppone/samaritan-notizie uscita dall'ultimo giro, con `video_file_url`,
    programmala sul brand Metricool "Motori in 60 secondi" (blogId 7680380,
    Europe/Rome), rete tiktok, `isAigc` vero, testo = `didascalia_tiktok`
-   ripulita (via #rumor, sì nota AI e fonte). Slot: 9:00, 12:30, 18:30, 21:00,
-   mai due nello stesso slot. Il link del file scade dopo circa 4 giorni:
+   ripulita (via #rumor, sì nota AI e fonte). Slot (orari migliori Metricool
+   del 27/10, tutti i giorni): 10:00, 18:00, 12:00, poi 16:00, in quest'ordine;
+   mai due nello stesso slot. Quando Instagram Motori risulta collegato al
+   brand (getBrandSettings, `instagramData`), aggiungi anche la rete instagram
+   come REEL con `isAiGenerated` vero. Il link del file scade dopo circa 4 giorni:
    programmare subito, Metricool copia il file. Salta i video il cui titolo o
    testo non segue la fonte (come Cybertruck e Tesla Roadster del 23-24/10) e
    quelli sponsorizzati non ancora approvati dal marchio (gomme/Pneumatici.it).
