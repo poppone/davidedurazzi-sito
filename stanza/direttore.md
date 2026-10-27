@@ -193,9 +193,13 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    Europe/Rome), rete tiktok, `isAigc` vero, testo = `didascalia_tiktok`
    ripulita (via #rumor, sì nota AI e fonte). Slot (orari migliori Metricool
    del 27/10, tutti i giorni): 10:00, 18:00, 12:00, poi 16:00, in quest'ordine;
-   mai due nello stesso slot. Quando Instagram Motori risulta collegato al
-   brand (getBrandSettings, `instagramData`), aggiungi anche la rete instagram
-   come REEL con `isAiGenerated` vero. Il link del file scade dopo circa 4 giorni:
+   mai due nello stesso slot. Ogni video va su tiktok E instagram
+   (motoriin60secondi, collegato il 27/10) come REEL con `isAiGenerated` vero.
+   Inoltre (sì di Davide 27/10: "manda su insta motori gli articoli inerenti
+   alle auto"): ogni articolo della sezione motori pubblicato sul sito va
+   sull'Instagram Motori come carosello (immagini `ig/<slug>/N.jpg` da
+   raw.githubusercontent, titolo + sommario + "link in bio" + fonte + "Testo e
+   grafica della redazione AI"), alle 16:00, uno al giorno. Il link del file scade dopo circa 4 giorni:
    programmare subito, Metricool copia il file. Salta i video il cui titolo o
    testo non segue la fonte (come Cybertruck e Tesla Roadster del 23-24/10) e
    quelli sponsorizzati non ancora approvati dal marchio (gomme/Pneumatici.it).
