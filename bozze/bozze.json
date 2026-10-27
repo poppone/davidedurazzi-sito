@@ -1,40 +1,6 @@
 [
   {
-    "approvato": true,
-    "scartare": false,
-    "slug": "novembre-2026-gta-vi-e-le-nuove-uscite-su-xbox-e-pc-20261027",
-    "titolo": "Novembre 2026: GTA VI e le nuove uscite su Xbox e PC",
-    "sezione": "gaming",
-    "rubrica": "",
-    "data": "2026-10-27",
-    "sommario": "Secondo Everyeye, novembre 2026 sarà ricco di novità per i giocatori su Xbox e PC, con l'arrivo atteso di GTA VI.",
-    "testo": [
-      "Secondo Everyeye, il mese di novembre 2026 si preannuncia fondamentale per il mondo dei videogiochi su console e personal computer. La testata segnala un calendario denso di titoli in uscita, che coinvolgeranno sia le piattaforme Xbox Series X e S sia il PC.",
-      "L'evento centrale di questo periodo, come riportato dalla fonte, sarà il lancio di GTA VI previsto per il 19 novembre. Questo titolo rappresenta uno dei momenti più attesi dell'anno per la community dei gamer.",
-      "Oltre al grande gioco di Rockstar, Everyeye indica che ci saranno altre novità confermate per il servizio Game Pass. Questo significa che gli abbonati potranno accedere a diversi altri titoli appena usciti, ampliando la scelta disponibile senza costi aggiuntivi.",
-      "Resta da capire come queste uscite impatteranno sulle performance delle console e sulla disponibilità immediata dei giochi, aspetti che verranno monitorati nelle prossime settimane."
-    ],
-    "fonti": [
-      {
-        "nome": "Everyeye: Che giochi escono su Xbox, Game Pass e PC a novembre novembre? Non c'è solo GTA 6!",
-        "url": "https://www.everyeye.it/notizie/giochi-escono-xbox-game-pass-pc-novembre-novembre-non-gta-6-906135.html"
-      }
-    ],
-    "nota_critico": [
-      "L'articolo aggiunge una frase di speculazione sull'impatto delle uscite sulle performance delle console e sulla disponibilità immediata dei giochi, che non è presente nella fonte fornita"
-    ],
-    "domande_live": [
-      "Avete già prenotato GTA VI o preferite aspettare le prime recensioni?",
-      "Qual è il titolo di novembre che state aspettando di più oltre al GTA?",
-      "Giocate più su Xbox o su PC per le nuove uscite?"
-    ],
-    "acquisto": {
-      "tipo": "gioco",
-      "nome": "GTA VI"
-    }
-  },
-  {
-    "approvato": true,
+    "approvato": false,
     "scartare": false,
     "slug": "chatgpt-crea-profili-psicologici-lo-studio-dell-acm-2026-20261027",
     "titolo": "ChatGPT crea profili psicologici: lo studio dell'ACM 2026",

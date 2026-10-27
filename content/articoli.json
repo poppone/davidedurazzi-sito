@@ -1,5 +1,30 @@
 [
   {
+    "slug": "novembre-2026-gta-vi-e-le-nuove-uscite-su-xbox-e-pc-20261027",
+    "titolo": "Novembre 2026: GTA VI e le nuove uscite su Xbox e PC",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-27",
+    "sommario": "Secondo Everyeye, novembre 2026 sarà ricco di novità per i giocatori su Xbox e PC, con l'arrivo atteso di GTA VI.",
+    "testo": [
+      "Secondo Everyeye, il mese di novembre 2026 si preannuncia fondamentale per il mondo dei videogiochi su console e personal computer. La testata segnala un calendario denso di titoli in uscita, che coinvolgeranno sia le piattaforme Xbox Series X e S sia il PC.",
+      "L'evento centrale di questo periodo, come riportato dalla fonte, sarà il lancio di GTA VI previsto per il 19 novembre. Questo titolo rappresenta uno dei momenti più attesi dell'anno per la community dei gamer.",
+      "Oltre al grande gioco di Rockstar, Everyeye indica che ci saranno altre novità confermate per il servizio Game Pass. Questo significa che gli abbonati potranno accedere a diversi altri titoli appena usciti, ampliando la scelta disponibile senza costi aggiuntivi.",
+      "Resta da capire come queste uscite impatteranno sulle performance delle console e sulla disponibilità immediata dei giochi, aspetti che verranno monitorati nelle prossime settimane."
+    ],
+    "fonti": [
+      {
+        "nome": "Everyeye: Che giochi escono su Xbox, Game Pass e PC a novembre novembre? Non c'è solo GTA 6!",
+        "url": "https://www.everyeye.it/notizie/giochi-escono-xbox-game-pass-pc-novembre-novembre-non-gta-6-906135.html"
+      }
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "GTA VI"
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "gomme-invernali-2026-obbligo-dal-15-novembre-cosa-sapere-20261027",
     "titolo": "Gomme invernali 2026: obbligo dal 15 novembre, cosa sapere e cosa si rischia",
     "sezione": "motori",
@@ -23,7 +48,12 @@
         "url": "https://www.sicurauto.it/news/codice-della-strada/cambio-gomme-invernali-2026-2027-quando-e-come-farlo/"
       }
     ],
-    "acquisto": {"tipo": "link", "nome": "gomme invernali e quattro stagioni", "url": "https://go.pneumatici.it/t/t?a=1714446135&as=2124228764&t=2&tk=1", "dove": "Pneumatici.it"},
+    "acquisto": {
+      "tipo": "link",
+      "nome": "gomme invernali e quattro stagioni",
+      "url": "https://go.pneumatici.it/t/t?a=1714446135&as=2124228764&t=2&tk=1",
+      "dove": "Pneumatici.it"
+    },
     "pubblicato": true
   },
   {
