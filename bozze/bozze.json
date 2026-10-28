@@ -1,35 +1,6 @@
 [
   {
-    "approvato": true,
-    "scartare": false,
-    "slug": "zeekr-9x-il-nuovo-suv-di-lusso-elettrico-che-sfida-i-marchi-europei-20261028",
-    "titolo": "Zeekr 9X: il nuovo SUV di lusso elettrico che sfida i marchi europei",
-    "sezione": "motori",
-    "rubrica": "",
-    "data": "2026-10-28",
-    "sommario": "Secondo HDmotori, Zeekr ha mostrato la 9X al Salone di Parigi e la porta in Italia, puntando al segmento del vero lusso contro le ammiraglie europee.",
-    "testo": [
-      "Secondo HDmotori, Zeekr ha presentato la 9X al Salone di Parigi, offrendo un SUV elettrico di alto livello che ora arriva anche in Italia.",
-      "Il modello vuole inserirsi nel segmento del vero lusso, confrontandosi con le ammiraglie rialzate dei marchi europei, e promette una combinazione di eleganza e tecnologia avanzata.",
-      "Per i consumatori, la presenza di un SUV elettrico di lusso di un marchio cinese rappresenta una nuova scelta e potrebbe influenzare le decisioni di acquisto nel mercato premium.",
-      "Rimane però da capire quali saranno i prezzi, le specifiche tecniche definitive e la disponibilità concreta sul territorio italiano, oltre a come si comporterà rispetto ai concorrenti tradizionali."
-    ],
-    "fonti": [
-      {
-        "nome": "HDmotori: Zeekr 9X, tra lusso e tecnologia sfida i grandi SUV europei",
-        "url": "https://www.hdmotori.it/zeekr-9x-suv-prezzo-dimensioni/"
-      }
-    ],
-    "nota_critico": [],
-    "domande_live": [
-      "Cosa ne pensate di un SUV di lusso elettrico cinese che sfida i marchi europei?",
-      "Quali caratteristiche ritenete indispensabili per un SUV di alta gamma?",
-      "Quanto influisce il prezzo nella scelta di un veicolo di lusso elettrico?"
-    ],
-    "acquisto": null
-  },
-  {
-    "approvato": true,
+    "approvato": false,
     "scartare": false,
     "slug": "chatgpt-e-la-salute-il-caso-di-una-donna-che-ha-ridotto-i-farmaci-per--20261028",
     "titolo": "ChatGPT e la salute: il caso di una donna che ha ridotto i farmaci per l'epilessia",
