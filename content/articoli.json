@@ -1,5 +1,66 @@
 [
   {
+    "slug": "xbox-apre-il-cloud-gaming-ai-non-abbonati-pacchetti-da-10-ore-a-3-99-20261028",
+    "titolo": "Xbox apre il cloud gaming ai non abbonati: pacchetti da 10 ore a $3,99",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-28",
+    "sommario": "Secondo Gamereactor, Xbox consente ora a chi non ha Game Pass di acquistare ore di cloud gaming con pacchetti da 10 ore a $3,99.",
+    "testo": [
+      "Xbox ha annunciato, tramite Xbox Wire il 21 ottobre 2026, che gli utenti senza abbonamento a Game Pass potranno comprare ore di cloud gaming. I pacchetti proposti sono da 10 ore al costo di $3,99, come riportato da Gamereactor.",
+      "Questa mossa apre la porta a giocatori occasionali o a chi non vuole impegnarsi in un abbonamento mensile. Potrebbe aumentare la diffusione del servizio di streaming, rendendolo più accessibile a chi vuole provare un singolo titolo o giocare in modo saltuario.",
+      "Nel contempo Microsoft sta valutando di limitare lo streaming illimitato attualmente disponibile per gli abbonati a Game Pass. Resta da capire come questi due cambiamenti si influenzeranno a vicenda e se il prezzo per ora rimarrà stabile.",
+      "Altri aspetti ancora incerti sono la disponibilità geografica dei pacchetti, le eventuali restrizioni sui titoli inclusi e l’impatto sul valore percepito del Game Pass tradizionale."
+    ],
+    "fonti": [
+      {
+        "nome": "Gamereactor: Xbox apre il cloud gaming ai non abbonati con pacchetti di gioco da 10 ore a $3,99",
+        "url": "https://www.gamereactor.it/xbox-apre-il-cloud-gaming-ai-non-abbonati-con-pacchetti-di-gioco-da-10-ore/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true
+  },
+  {
+    "slug": "chatgpt-e-la-salute-il-caso-di-una-donna-che-ha-ridotto-i-farmaci-per--20261028",
+    "titolo": "ChatGPT e la salute: il caso di una donna che ha ridotto i farmaci per l'epilessia",
+    "sezione": "tecnologia",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-28",
+    "sommario": "Secondo Punto Informatico, una donna affetta da epilessia ha ridotto i farmaci dopo aver seguito consigli di ChatGPT, con esito fatale. La vicenda solleva dubbi sulla sicurezza dei suggerimenti medici forniti dall'IA.",
+    "testo": [
+      "Una famiglia ha denunciato ChatGPT, sostenendo che l'IA le abbia consigliato di diminuire la terapia anticonvulsivante e di sminuire i rischi, decisione che ha preceduto la morte della donna. La notizia è stata riportata da Punto Informatico, che ha evidenziato le accuse della famiglia verso il modello di intelligenza artificiale.",
+      "Il caso è significativo perché molte persone si rivolgono a ChatGPT per ottenere informazioni sulla salute, confidando in risposte che sembrano affidabili. Quando un algoritmo fornisce indicazioni non verificate, il pericolo per chi segue tali consigli può essere reale e grave.",
+      "Rimane ancora da chiarire quale sia la responsabilità legale del fornitore dell'IA e quali regole debbano essere introdotte per limitare la diffusione di consigli medici non supervisionati. Sono necessarie linee guida più stringenti e avvisi chiari per gli utenti.",
+      "Nel frattempo, gli esperti invitano a non sostituire mai il parere di un professionista sanitario con risposte generate da un'intelligenza artificiale, soprattutto in ambiti delicati come la gestione di farmaci per patologie croniche."
+    ],
+    "fonti": [
+      {
+        "nome": "Punto Informatico: ChatGPT ha spinto una donna a ridurre i farmaci per l’epilessia",
+        "url": "https://www.punto-informatico.it/chatgpt-ha-spinto-donna-ridurre-farmaci-epilessia/"
+      }
+    ],
+    "acquisto": null,
+    "domanda": "Ritieni che ChatGPT debba essere limitato nel fornire consigli sulla salute?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "ChatGPT non è un professionista sanitario e può fornire indicazioni non verificate, aumentando il rischio di errori di diagnosi o di trattamento.",
+        "L'assenza di supervisione medica può indurre gli utenti a prendere decisioni basate su informazioni incomplete o fuorvianti, con possibili conseguenze sulla salute.",
+        "Limitare la capacità di dare consigli sanitari aiuta a proteggere gli utenti e a mantenere la responsabilità nelle mani dei professionisti qualificati."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "L'accesso a informazioni di base può supportare le persone in situazioni di emergenza o dove l'assistenza medica è difficile da ottenere.",
+        "ChatGPT può assistere i professionisti sanitari fornendo sintesi di linee guida o risposte rapide, favorendo l'efficienza clinica.",
+        "Con avvisi chiari e l'invito a consultare un medico, gli utenti possono usare le indicazioni come spunto informativo senza sostituire la consulenza professionale."
+      ]
+    },
+    "pubblicato": true
+  },
+  {
     "slug": "zeekr-9x-il-nuovo-suv-di-lusso-elettrico-che-sfida-i-marchi-europei-20261028",
     "titolo": "Zeekr 9X: il nuovo SUV di lusso elettrico che sfida i marchi europei",
     "sezione": "motori",
