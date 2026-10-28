@@ -29,7 +29,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "chatgpt-e-la-salute-il-caso-di-una-donna-che-ha-ridotto-i-farmaci-per--20261028",
     "titolo": "ChatGPT e la salute: il caso di una donna che ha ridotto i farmaci per l'epilessia",
