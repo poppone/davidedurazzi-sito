@@ -1,1 +1,120 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "new-york-vieta-ai-chatbot-funzioni-romantiche-per-i-minori-20261029",
+    "titolo": "New York vieta ai chatbot funzioni romantiche per i minori",
+    "sezione": "ai",
+    "rubrica": "",
+    "data": "2026-10-29",
+    "sommario": "Secondo HDblog, la città ha introdotto norme che proibiscono ai bot di simulare relazioni amorose per gli under 18, con multe fino a 25mila dollari.",
+    "testo": [
+      "Secondo HDblog, New York ha approvato nuove regole che vietano ai chatbot di offrire fidanzati virtuali, di nascondere segreti o di presentarsi come esseri umani quando interagiscono con minori.",
+      "La misura punta a proteggere i giovani da possibili dipendenze emotive e dall'isolamento, temi sempre più discussi nell'era dell'intelligenza artificiale.",
+      "Rimane incerta la modalità di controllo: le autorità dovranno monitorare le app, e gli sviluppatori dovranno adeguare i loro prodotti per evitare sanzioni.",
+      "Inoltre, non è chiaro come queste norme influenzeranno le piattaforme internazionali che operano anche negli USA, né quali criteri saranno usati per definire “funzioni romantiche”."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Niente fidanzati virtuali e segreti con l'AI: New York vieta alcune funzioni ai minori",
+        "url": "https://www.hdblog.it/sicurezza/articoli/n675295/minori-chatbot-ai-stretta-new-york-relazioni-abusi/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è il vostro parere sul divieto di relazioni virtuali per i minori?",
+      "Ritenete che le sanzioni proposte siano sufficienti a garantire la sicurezza dei giovani?",
+      "Come dovrebbe essere gestita la trasparenza dei chatbot verso gli utenti minorenni?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "ea-chiude-bioware-e-annulla-mass-effect-la-fine-di-un-era-20261029",
+    "titolo": "EA chiude BioWare e annulla Mass Effect: la fine di un'era",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-29",
+    "sommario": "Electronic Arts ha chiuso BioWare e cancellato il prossimo Mass Effect, suscitando preoccupazione tra i fan dei giochi di ruolo.",
+    "testo": [
+      "Electronic Arts ha annunciato la chiusura di BioWare, lo studio dietro la saga Mass Effect, cancellando il prossimo capitolo della serie. La decisione arriva dopo che EA è diventata privata con un’acquisizione da 55 miliardi di dollari, accumulando un debito di 18 miliardi di dollari, secondo Gamereactor.",
+      "BioWare è stata una delle realtà più influenti nel panorama dei GDR, ispirando studi come CD Projekt RED e Larian Studios. La sua chiusura segna la perdita di una fonte creativa fondamentale per il genere, come evidenziato da Everyeye.",
+      "La cancellazione del nuovo Mass Effect ha anche provocato l’annullamento di un crossover previsto con Battlefield 6, segnalato da GameRant e riportato da Gamereactor. I fan temono per il futuro della loro saga preferita e per le collaborazioni future tra franchise.",
+      "Rimane da capire se EA rivedrà la sua strategia di investimento, se il marchio Mass Effect potrà essere rivitalizzato sotto un nuovo team o se la chiusura di BioWare segna l’inizio di una nuova fase di consolidamento nell’industria videoludica."
+    ],
+    "fonti": [
+      {
+        "nome": "Everyeye: EA e la lunga scia di studi chiusi: da BioWare a Maxis, ecco tutte le vittime illustri",
+        "url": "https://www.everyeye.it/notizie/ea-lunga-scia-studi-chiusi-bioware-maxis-vittime-illustri-907588.html"
+      },
+      {
+        "nome": "Everyeye: BioWare: la regina dei GDR a cui si sono ispirati CD Projekt RED, Larian Studios e non solo",
+        "url": "https://www.everyeye.it/notizie/bioware-regina-gdr-ispirati-cd-projekt-red-larian-studios-non-solo-907584.html"
+      },
+      {
+        "nome": "Gamereactor: Report: il crossover tra Battlefield 6 e Mass Effect cancellato dopo la chiusura di BioWare",
+        "url": "https://www.gamereactor.it/report-il-crossover-tra-battlefield-6-e-mass-effect-cancellato-dopo-la/"
+      },
+      {
+        "nome": "Gamereactor: EA chiude BioWare e cancella il prossimo Mass Effect, due mesi dopo aver contratto 18 miliardi di dollari di debito",
+        "url": "https://www.gamereactor.it/ea-chiude-bioware-e-cancella-il-prossimo-mass-effect-due-mesi-dopo-aver/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è il vostro ricordo più caro di un gioco di BioWare?",
+      "Pensate che EA possa rilanciare Mass Effect con un nuovo studio?",
+      "Quale impatto avrà la chiusura di BioWare sul futuro dei giochi di ruolo?"
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Mass Effect"
+    },
+    "domanda": "La chiusura di BioWare da parte di EA avrà un impatto significativo sull'occupazione nel settore dei videogiochi?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "La chiusura di BioWare si inserisce in una serie di eliminazioni di studi storici da parte di EA, come Bullfrog, Westwood, Pandemic, Maxis e Visceral, indicando un modello aziendale che ha già causato perdite occupazionali in passato.",
+        "Secondo Gamereactor, la cancellazione del prossimo capitolo di Mass Effect e del crossover con Battlefield 6 comporta la dismissione di interi team di sviluppo, con una diretta conseguenza negativa per i dipendenti coinvolti.",
+        "La scomparsa di una realtà chiave nel genere RPG riduce le opportunità di carriera specializzate e può indebolire l'ecosistema di talenti che sostiene anche altri studi, amplificando l'impatto occupazionale oltre i confini dello studio stesso."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Le precedenti chiusure di studi da parte di EA dimostrano che la riorganizzazione del personale è una pratica consolidata, e i dipendenti spesso trovano nuove opportunità all'interno del gruppo o in altre aziende del settore.",
+        "La domanda di talenti per i giochi di ruolo non scompare: studi come Larian Studios e CD Projekt RED, che si ispirano a BioWare, sono in grado di assorbire professionisti con competenze simili, mitigando l'impatto occupazionale.",
+        "La decisione è legata a ragioni finanziarie interne a EA, come debito e ristrutturazione, e non a un calo generale del mercato videoludico, che continua a crescere; quindi la perdita di un singolo studio non determina una diminuzione significativa dei posti di lavoro nel settore."
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "optimus-di-tesla-pronto-a-ricaricare-i-cybercab-20261029",
+    "titolo": "Optimus di Tesla pronto a ricaricare i Cybercab",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-29",
+    "sommario": "Secondo HDblog, i robot Optimus sostituiranno presto i dipendenti nella ricarica dei Cybercab, in attesa delle future piastre di ricarica wireless.",
+    "testo": [
+      "Tesla ha comunicato che il suo robot umanoide Optimus sarà impiegato per ricaricare i veicoli Cybercab, prendendo il posto dei dipendenti che oggi svolgono questa operazione (secondo HDblog).",
+      "Questa evoluzione automatizza un compito ripetitivo, potenzialmente semplificando la gestione quotidiana dei veicoli per gli utenti e riducendo la dipendenza da interventi manuali.",
+      "Rimane ancora da capire quando avverrà l'implementazione su larga scala, quali saranno le prestazioni operative di Optimus e come il robot si integrerà con le piastre di ricarica wireless che sono previste per il futuro."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Tesla: il robot umanoide Optimus ricaricherà i Cybercab",
+        "url": "https://www.hdmotori.it/tesla-optimus-ricarichera-cybercab/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è la vostra opinione sull'uso di robot per ricaricare le auto?",
+      "Quali benefici vi aspettate dall'introduzione di Optimus nella routine di ricarica?",
+      "Quanto tempo dovrebbe passare prima di vedere le piastre di ricarica wireless adottate su larga scala?"
+    ],
+    "acquisto": null
+  }
+]
