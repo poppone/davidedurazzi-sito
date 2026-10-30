@@ -57,13 +57,20 @@ def _da_pubblicare() -> list[dict]:
     ]
 
 
+def titolo_breve(t: str, n: int = 60) -> str:
+    """Titolo da cercare sul sito dopo il link in bio: taglia all'ultima parola intera."""
+    t = " ".join(str(t or "").split())
+    return t if len(t) <= n else t[:n].rsplit(" ", 1)[0].rstrip(" ,:;-") + "\u2026"
+
+
 def didascalia(a: dict) -> str:
     parti = [a["titolo"], a.get("sommario", "")]
     if a.get("domanda"):
         parti.append(f"Il Contraddittorio: {a['domanda']}\nTu da che parte stai? Scrivilo nei commenti.")
     else:
         parti.append("Tu cosa ne pensi? Scrivilo nei commenti.")
-    parti.append(f"Ne parliamo in diretta su Twitch: twitch.tv/{TWITCH}\nArticolo completo e fonti su davidedurazzi.it (link in bio)")
+    parti.append(f"Ne parliamo in diretta su Twitch: twitch.tv/{TWITCH}\n"
+                 f"Articolo completo e fonti: link in bio \u2192 \u201c{titolo_breve(a['titolo'])}\u201d")
     testate = sorted({f["nome"].split(":")[0] for f in a.get("fonti", [])})
     if testate:
         parti.append("Fonti: " + ", ".join(testate))

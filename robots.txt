@@ -6,3 +6,4 @@ Disallow: /obs/
 Disallow: /overlay/
 
 Sitemap: https://www.davidedurazzi.it/sitemap.xml
+Sitemap: https://www.davidedurazzi.it/sitemap-news.xml

@@ -17,6 +17,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
+from coda_social import link_utm  # noqa: E402
 from instagram import ARTICOLI, CARTELLA_IG, GIORNI_MAX, SEZIONI, SITO, _aspetta_online, _leggi  # noqa: E402
 
 RADICE = Path(__file__).resolve().parent.parent
@@ -37,7 +38,8 @@ HASHTAG = {
 
 
 def testo(a: dict, rete: str) -> str:
-    link = f"{SITO}/articoli/{a['slug']}"
+    # LinkedIn: in "commentary" il carattere _ delle UTM è riservato e può troncare il testo, quindi link pulito
+    link = f"{SITO}/articoli/{a['slug']}" if rete == "linkedin" else link_utm(a["slug"], rete)
     parti = [a["titolo"], a.get("sommario", "")]
     if a.get("domanda"):
         parti.append(f"Il Contraddittorio: {a['domanda']}\nVota Sì o No e dì la tua nei commenti sul sito.")
@@ -49,8 +51,8 @@ def testo(a: dict, rete: str) -> str:
 
 
 def testo_x(a: dict) -> str:
-    """Post per X: max 280 caratteri, il link conta sempre 23."""
-    link = f"{SITO}/articoli/{a['slug']}"
+    """Post per X: max 280 caratteri, il link conta sempre 23 (anche con le UTM)."""
+    link = link_utm(a["slug"], "x")
     tag = HASHTAG.get(a.get("sezione"), "#attualità").split()[0]
     fisso = f"\n\n{link}\n{tag}"
     titolo = a["titolo"]
