@@ -23,10 +23,12 @@ Uso: python agenti/coda_social.py pubblica
 """
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import requests
 
@@ -37,6 +39,7 @@ IG_API = "https://graph.instagram.com/" + os.environ.get("IG_API_VERSION", "v25.
 PIN_API = "https://api.pinterest.com/v5"
 BSKY_API = "https://bsky.social/xrpc"
 FB_API = "https://graph.facebook.com/" + os.environ.get("FB_API_VERSION", "v21.0")
+SITO = "https://www.davidedurazzi.it"
 NOTA_AI = "Video realizzato con l'AI: voce sintetica e montaggio automatico."
 TENTATIVI_MAX = 3
 
@@ -52,6 +55,36 @@ def _scrivi(coda: list[dict]) -> None:
 
 def _ora() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def utm(url: str, rete: str, medium: str = "social", campagna: str = "") -> str:
+    """Aggiunge i parametri UTM ai link del sito (solo davidedurazzi.it, mai a quelli esterni)
+    e toglie il .html finale, così il link è quello canonico. I parametri già presenti restano."""
+    parti = urlsplit(url)
+    if parti.netloc.lower() not in ("davidedurazzi.it", "www.davidedurazzi.it"):
+        return url
+    percorso = re.sub(r"\.html$", "", parti.path)
+    params = dict(parse_qsl(parti.query))
+    if not any(k.startswith("utm_") for k in params):
+        params.update(utm_source=rete, utm_medium=medium,
+                      utm_campaign=campagna or percorso.rstrip("/").rsplit("/", 1)[-1] or "sito")
+    return urlunsplit(("https", "www.davidedurazzi.it", percorso, urlencode(params), parti.fragment))
+
+
+def link_utm(slug: str, rete: str, medium: str = "social") -> str:
+    """Link all'articolo per i social: URL canonico (senza .html) + UTM, campagna = slug."""
+    return utm(f"{SITO}/articoli/{slug}", rete, medium, slug)
+
+
+def facet_link(testo: str, rete: str = "bluesky") -> list[dict]:
+    """Bluesky non rende cliccabili i link scritti nel testo: servono i "facet" con le posizioni
+    in byte (UTF-8). Il testo mostra il link pulito, il facet porta quello con le UTM."""
+    facet = []
+    for m in re.finditer(r"https?://[^\s<>\"]+[^\s<>\".,;:!?)]", testo):
+        inizio = len(testo[:m.start()].encode("utf-8"))
+        facet.append({"index": {"byteStart": inizio, "byteEnd": inizio + len(m.group().encode("utf-8"))},
+                      "features": [{"$type": "app.bsky.richtext.facet#link", "uri": utm(m.group(), rete)}]})
+    return facet
 
 
 def didascalia_reel(testo: str) -> str:
@@ -113,8 +146,12 @@ def pubblica_bluesky(voce: dict, password: str, handle: str) -> dict:
         if b.status_code >= 400:
             raise RuntimeError(f"Bluesky immagine: HTTP {b.status_code} {b.text[:200]}")
         immagini.append({"alt": (voce.get("alt") or "")[:300], "image": b.json()["blob"]})
-    record = {"$type": "app.bsky.feed.post", "text": (voce.get("testo") or "")[:300],
+    testo = (voce.get("testo") or "")[:300]
+    record = {"$type": "app.bsky.feed.post", "text": testo,
               "createdAt": _ora().replace("+00:00", "Z"), "langs": ["it"]}
+    facet = facet_link(testo)
+    if facet:
+        record["facets"] = facet
     if immagini:
         record["embed"] = {"$type": "app.bsky.embed.images", "images": immagini}
     r = requests.post(f"{BSKY_API}/com.atproto.repo.createRecord", headers=auth, timeout=30,
@@ -130,7 +167,7 @@ def pubblica_pin(voce: dict, token: str) -> dict:
         "board_id": voce["board_id"],
         "title": (voce.get("titolo") or "")[:100],
         "description": (voce.get("didascalia") or "").replace("\\n", "\n")[:500],
-        "link": voce.get("link"),
+        "link": utm(voce["link"], "pinterest", "pin") if voce.get("link") else voce.get("link"),
         "media_source": {"source_type": "image_url", "url": voce["image_url"]},
     }
     r = requests.post(f"{PIN_API}/pins", json=corpo, timeout=60,
