@@ -2,6 +2,117 @@
   {
     "approvato": false,
     "scartare": false,
+    "slug": "ultraviolette-lancia-x-47-il-crossover-elettrico-piu-efficiente-20261030",
+    "titolo": "Ultraviolette lancia X-47, il crossover elettrico più efficiente",
+    "sezione": "motori",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-30",
+    "sommario": "Secondo HDmotori, la startup indiana Ultraviolette ha presentato la nuova X-47, puntando a massimizzare l’efficienza.",
+    "testo": [
+      "La startup indiana Ultraviolette, con sede a Bangalore, ha svelato la versione aggiornata del suo crossover elettrico X-47, come riportato da HDmotori.",
+      "Il nuovo modello promette di offrire la massima efficienza, un aspetto che può tradursi in costi di ricarica più bassi e autonomia migliorata per gli utenti di veicoli elettrici.",
+      "Rimane però da capire quali saranno le specifiche tecniche definitive, il prezzo di vendita e i tempi di produzione su larga scala, informazioni non ancora confermate dalla casa produttrice.",
+      "Gli osservatori del settore attendono ulteriori dettagli per valutare l’impatto reale di X-47 sul mercato dei crossover elettrici."
+    ],
+    "fonti": [
+      {
+        "nome": "HDmotori: Ultraviolette porta al debutto la nuova X-47: efficienza massima per la Venom",
+        "url": "https://www.hdmotori.it/ultraviolette-nuova-x-47-venom/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è la vostra opinione sull'importanza dell'efficienza nei crossover elettrici?",
+      "Quali caratteristiche ritenete indispensabili in un nuovo veicolo elettrico?",
+      "Quanto influisce il prezzo di un'auto elettrica sulla vostra decisione di acquisto?"
+    ],
+    "acquisto": null,
+    "domanda": "Ritieni che l'adozione della nuova X-47 di Ultraviolette possa migliorare significativamente la qualità della vita quotidiana?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo HDmotori, la X-47 è presentata con “efficienza massima”, il che dovrebbe tradursi in un consumo energetico più basso e, di conseguenza, in costi di ricarica ridotti per gli utenti quotidiani.",
+        "L’elevata efficienza dichiarata dal costruttore promette una maggiore autonomia per un singolo ciclo di ricarica, rendendo più pratico l’uso del veicolo per spostamenti urbani e pendolari senza frequenti soste per ricaricare.",
+        "L’introduzione di un crossover elettrico più efficiente favorirebbe la diffusione della mobilità elettrica, contribuendo a diminuire le emissioni inquinanti nelle città e migliorando la qualità dell’aria per tutti."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Il nuovo X-47 proviene da una startup emergente; la sua diffusione su larga scala richiederà tempo, perciò l’impatto sulla vita quotidiana delle persone sarà limitato nel breve periodo.",
+        "L’efficienza massima proclamata per la versione “Venom” non garantisce necessariamente un risparmio concreto per l’utente, soprattutto se il costo di acquisto e di manutenzione resta elevato rispetto a veicoli tradizionali.",
+        "L’infrastruttura di ricarica in molte aree, soprattutto fuori dai grandi centri urbani, è ancora insufficiente per supportare una flotta di veicoli elettrici come la X-47, riducendo di fatto i vantaggi pratici per gli utenti quotidiani."
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "gta-vi-rockstar-spinge-le-console-al-massimo-e-annuncia-la-colonna-son-20261030",
+    "titolo": "GTA VI: Rockstar spinge le console al massimo e annuncia la colonna sonora",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-30",
+    "sommario": "Rockstar Games ha rivelato che GTA VI arriverà il 19 novembre su PS5 e Xbox Series X/S, spingendo le console al limite, e ha annunciato la data di uscita della colonna sonora originale.",
+    "testo": [
+      "Secondo IGN Italia, Rockstar Games ha confermato che Grand Theft Auto VI uscirà il 19 novembre su PlayStation 5 e Xbox Series X/S, puntando a sfruttare al massimo le capacità delle console di ultima generazione senza compromessi su scala, dettagli e interattività.",
+      "La dirigenza ha descritto l’ambizione del progetto con la frase “Abbiamo costruito una piramide sull’Everest”, sottolineando la pressione e la volontà di offrire un’esperienza senza precedenti ai giocatori, secondo IGN Italia.",
+      "Sempre secondo IGN Italia, la colonna sonora originale di GTA VI sarà disponibile dal 11 dicembre, includendo già un brano inedito che è possibile ascoltare in anteprima.",
+      "Rimane ancora da capire quali saranno le specifiche tecniche esatte, come il frame‑rate target o le nuove meccaniche di gioco, e quali altri brani faranno parte della colonna sonora completa."
+    ],
+    "fonti": [
+      {
+        "nome": "IGN Italia: GTA VI spinge al massimo le console current-gen: niente compromessi su scala, dettagli e interattività",
+        "url": "https://it.ign.com/grand-theft-auto-vi/228921/gta-vi-spinge-al-massimo-le-console-current-gen-niente-compromessi-su-scala-dettagli-e-interattivita"
+      },
+      {
+        "nome": "IGN Italia: GTA VI: la colonna sonora originale ha una data di uscita",
+        "url": "https://it.ign.com/grand-theft-auto-vi/228908/gta-vi-la-colonna-sonora-originale-ha-una-data-di-uscita"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Quale elemento grafico di GTA VI vi sembra più rivoluzionario?",
+      "Che aspettative avete sulla colonna sonora originale del gioco?",
+      "Pensate che le console attuali possano gestire al meglio le ambizioni dichiarate da Rockstar?"
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Grand Theft Auto VI"
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "esim-in-italia-la-nuova-liberta-di-connessione-all-estero-20261030",
+    "titolo": "eSIM in Italia: la nuova libertà di connessione all'estero",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-30",
+    "sommario": "BBVA ha avviato il servizio eSIM in Italia, consentendo di gestire la connessione all’estero direttamente dall’app.",
+    "testo": [
+      "Secondo HDblog, BBVA ha lanciato le eSIM sul territorio italiano; il servizio è già operativo e permette di attivare la connettività per l’estero senza una SIM fisica.",
+      "Questo cambiamento è importante per gli utenti perché elimina la necessità di acquistare e cambiare schede SIM quando si viaggia, rendendo il roaming più rapido e flessibile grazie alla gestione via app.",
+      "Rimane ancora da capire quali saranno i costi effettivi per gli abbonati, la copertura delle reti partner e la compatibilità con tutti i dispositivi presenti sul mercato.",
+      "In futuro, sarà interessante osservare se altri operatori seguiranno l’esempio di BBVA, ampliando l’offerta di eSIM e rendendo la gestione della connettività ancora più semplice per i viaggiatori italiani."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: BBVA lancia le eSIM in Italia: connettività all'estero gestita direttamente dall'app",
+        "url": "https://www.hdblog.it/virtuali/articoli/n675432/bbva-esim-navigare-giga-estero-come-funziona/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è la vostra esperienza con le SIM tradizionali durante i viaggi all'estero?",
+      "Quanto ritenete importante la possibilità di attivare la connessione direttamente dall'app?",
+      "Che aspetti ritenete più critici da chiarire sul nuovo servizio eSIM di BBVA?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
     "slug": "new-york-vieta-ai-chatbot-funzioni-romantiche-per-i-minori-20261029",
     "titolo": "New York vieta ai chatbot funzioni romantiche per i minori",
     "sezione": "ai",
