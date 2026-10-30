@@ -1,9 +1,9 @@
 {
-  "aggiornato": "2026-10-29T11:31+00:00",
+  "aggiornato": "2026-10-30T11:24+00:00",
   "riassunto": {
-    "ok": 27,
+    "ok": 26,
     "attenzione": 0,
-    "rotto": 0,
+    "rotto": 1,
     "non controllato": 1
   },
   "controlli": [
@@ -46,7 +46,7 @@
     {
       "nome": "Token del bot della chat Twitch",
       "esito": "ok",
-      "messaggio": "valido, scade tra 50 giorni",
+      "messaggio": "valido, scade tra 49 giorni",
       "rimedio": ""
     },
     {
@@ -70,7 +70,7 @@
     {
       "nome": "davidedurazzi-sito · Finch su Discord",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-29: success",
+      "messaggio": "ultima esecuzione del 2026-10-30: success",
       "rimedio": ""
     },
     {
@@ -82,19 +82,19 @@
     {
       "nome": "davidedurazzi-sito · Guardiano delle chiavi",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-28: success",
+      "messaggio": "ultima esecuzione del 2026-10-29: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Messaggi privati Instagram",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-28: success",
+      "messaggio": "ultima esecuzione del 2026-10-29: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Aggiorna pagine statiche",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-27: success",
+      "messaggio": "ultima esecuzione del 2026-10-30: success",
       "rimedio": ""
     },
     {
@@ -106,7 +106,7 @@
     {
       "nome": "davidedurazzi-sito · Redazione del mattino",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-29: success",
+      "messaggio": "ultima esecuzione del 2026-10-30: success",
       "rimedio": ""
     },
     {
@@ -124,13 +124,13 @@
     {
       "nome": "samaritan_v2 · Pulizia copie dei video",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-29: success",
+      "messaggio": "ultima esecuzione del 2026-10-30: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan_v2 · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-29: success",
+      "messaggio": "ultima esecuzione del 2026-10-30: success",
       "rimedio": ""
     },
     {
@@ -147,9 +147,9 @@
     },
     {
       "nome": "samaritan-notizie · Samaritan Auto-Poster",
-      "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-29: success",
-      "rimedio": ""
+      "esito": "rotto",
+      "messaggio": "l'ultima esecuzione del 2026-10-30 è fallita",
+      "rimedio": "Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/41038208335"
     },
     {
       "nome": "samaritan-notizie · Test",
