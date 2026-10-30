@@ -32,6 +32,12 @@ def e(s) -> str:
     return html.escape("" if s is None else str(s), quote=True)
 
 
+def e_xml(s) -> str:
+    """Come e(), ma per feed e sitemap: toglie i caratteri di controllo, vietati in XML
+    (uno solo basta a far scartare tutto il feed ai lettori RSS)."""
+    return e(re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f]", "", "" if s is None else str(s)))
+
+
 def url_ok(u) -> bool:
     return bool(re.match(r"^https?://", str(u or "").strip(), re.I))
 
@@ -56,9 +62,10 @@ def data_it(d: str) -> str:
         return str(d or "")
 
 
-def quando(a: dict) -> datetime:
+def quando(a: dict) -> datetime | None:
     """Momento di pubblicazione con il fuso: "pubblicato_il" (lo scrive promuovi.py),
-    altrimenti la sola data alla mezzanotte di Roma."""
+    altrimenti la sola data alla mezzanotte di Roma. None se manca una data valida:
+    meglio nessuna data che l'ora della build, che cambierebbe a ogni giro."""
     try:
         t = datetime.fromisoformat(str(a.get("pubblicato_il")))
         return t if t.tzinfo else t.replace(tzinfo=ROMA)
@@ -67,11 +74,27 @@ def quando(a: dict) -> datetime:
     try:
         return datetime.combine(date.fromisoformat(str(a.get("data"))[:10]), datetime.min.time(), ROMA)
     except ValueError:
-        return datetime.now(ROMA)
+        return None
 
 
 def iso_pub(a: dict) -> str:
-    return quando(a).isoformat(timespec="seconds")
+    q = quando(a)
+    return q.isoformat(timespec="seconds") if q else ""
+
+
+def data_vis(a: dict) -> str:
+    """Data visibile, la stessa di datePublished (Google segnala le date diverse)."""
+    q = quando(a)
+    return data_it(q.astimezone(ROMA).date().isoformat()) if q else ""
+
+
+def html_data(a: dict) -> str:
+    return f'<time datetime="{e(iso_pub(a))}">{e(data_vis(a))}</time>' if quando(a) else ""
+
+
+def sezione_ok(sid) -> bool:
+    """Solo queste sezioni hanno una pagina /sezioni/<id> (vedi main)."""
+    return bool(re.fullmatch(r"[a-z0-9-]+", str(sid or "")))
 
 
 def iso_mod(a: dict) -> str:
@@ -121,7 +144,7 @@ def html_duello(cfg, a, con_link: bool) -> str:
     piede = (f'<div class="piede"><a class="btn" href="{link(a)}">Leggi l’analisi completa</a></div>'
              if con_link else "")
     return (f'<div class="duello"><div class="domanda"><p class="meta">{e(nome_sezione(cfg, a.get("sezione")))}, '
-            f'{e(data_it(a.get("data")))}</p><h3>{e(a.get("domanda") or a.get("titolo"))}</h3></div>'
+            f'{e(data_vis(a))}</p><h3>{e(a.get("domanda") or a.get("titolo"))}</h3></div>'
             f'<div class="lati">{lato("si", a.get("tesi"))}{lato("no", a.get("antitesi"))}</div>{piede}</div>')
 
 
@@ -132,7 +155,7 @@ def html_lista(cfg, articoli) -> str:
     for a in articoli:
         som = f"<p>{e(a['sommario'])}</p>" if a.get("sommario") else ""
         righe.append(f'<li data-sez="{e(a.get("sezione") or "")}"><a href="{link(a)}"><span class="sez">{e(nome_sezione(cfg, a.get("sezione")))}<br>'
-                     f'<time datetime="{e(iso_pub(a))}">{e(data_it(a.get("data")))}</time></span><span><h3>{e(a.get("titolo"))}</h3>{som}</span></a></li>')
+                     f'{html_data(a)}</span><span><h3>{e(a.get("titolo"))}</h3>{som}</span></a></li>')
     return "".join(righe)
 
 
@@ -206,10 +229,12 @@ def html_acquisto(cfg, a) -> str:
 
 def html_leggi_anche(cfg, a, articoli) -> str:
     """Fino a 4 articoli recenti della stessa sezione, con la stessa grafica della home."""
-    altri = [x for x in articoli if x.get("sezione") == a.get("sezione") and x["slug"] != a["slug"]][:4]
+    sid = a.get("sezione") or ""
+    if not sezione_ok(sid):  # senza una sezione valida non c'è la pagina a cui rimandare
+        return ""
+    altri = [x for x in articoli if x.get("sezione") == sid and x["slug"] != a["slug"]][:4]
     if not altri:
         return ""
-    sid = a.get("sezione") or ""
     return ('<section class="leggi-anche"><h2>Leggi anche</h2>'
             f'<ul class="lista">{html_lista(cfg, altri)}</ul>'
             f'<p class="meta"><a href="{link_sezione(sid)}">Tutti gli articoli di {e(nome_sezione(cfg, sid))}</a></p></section>')
@@ -227,7 +252,7 @@ def pagina_articolo(cfg, a, modello: str, articoli=()) -> str:
     ld = {
         "@context": "https://schema.org", "@type": "NewsArticle",
         "headline": a.get("titolo"), "description": descr,
-        "datePublished": iso_pub(a), "dateModified": iso_mod(a),
+        **({"datePublished": iso_pub(a), "dateModified": iso_mod(a)} if quando(a) else {}),
         "inLanguage": "it", "mainEntityOfPage": url,
         "image": [{"@type": "ImageObject", "url": img, "width": img_w, "height": img_h}],
         "articleSection": sezione,
@@ -238,13 +263,15 @@ def pagina_articolo(cfg, a, modello: str, articoli=()) -> str:
                       "logo": {"@type": "ImageObject", "url": f"{SITO}/assets/logo-512.png"}},
         "citation": [f["url"] for f in fonti],
     }
+    # percorso: Home › Sezione › Articolo; senza una sezione valida il livello di mezzo si salta
+    livelli = [("Home", f"{SITO}/")] + ([(sezione, SITO + link_sezione(sid))] if sezione_ok(sid) else [])
+    livelli.append((a.get("titolo"), url))
     briciole = {
         "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITO}/"},
-            {"@type": "ListItem", "position": 2, "name": sezione, "item": SITO + link_sezione(sid)},
-            {"@type": "ListItem", "position": 3, "name": a.get("titolo"), "item": url},
-        ],
+            {"@type": "ListItem", "position": i, "name": n, "item": u} for i, (n, u) in enumerate(livelli, 1)],
     }
+    nav_sez = f' › <a href="{link_sezione(sid)}">{e(sezione)}</a>' if sezione_ok(sid) else ""
+    meta = ", ".join(v for v in (e(sezione), html_data(a)) if v)
     testa = (
         f"<title>{e(a.get('titolo'))} — {e(nome)}</title>\n"
         f'<meta name="description" content="{e(descr)}">\n'
@@ -259,8 +286,8 @@ def pagina_articolo(cfg, a, modello: str, articoli=()) -> str:
         f'<meta property="og:image:width" content="{img_w}">\n'
         f'<meta property="og:image:height" content="{img_h}">\n'
         f'<meta property="og:image:alt" content="{e(a.get("titolo"))}">\n'
-        f'<meta property="article:published_time" content="{e(iso_pub(a))}">\n'
-        f'<meta property="article:modified_time" content="{e(iso_mod(a))}">\n'
+        + (f'<meta property="article:published_time" content="{e(iso_pub(a))}">\n'
+           f'<meta property="article:modified_time" content="{e(iso_mod(a))}">\n' if quando(a) else "") +
         f'<meta property="article:section" content="{e(sezione)}">\n'
         f'<meta name="twitter:card" content="summary_large_image">\n'
         + json_ld(ld) + json_ld(briciole)
@@ -275,10 +302,8 @@ def pagina_articolo(cfg, a, modello: str, articoli=()) -> str:
             for f in fonti) + "</ul></div>")
     articolo = (
         f'<article class="art" id="art" data-statico="1">'
-        f'<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › '
-        f'<a href="{link_sezione(sid)}">{e(sezione)}</a></nav>'
-        f'<p class="meta">{e(sezione)}, '
-        f'<time datetime="{e(iso_pub(a))}">{e(data_it(a.get("data")))}</time></p>'
+        f'<nav class="briciole" aria-label="Percorso"><a href="/">Home</a>{nav_sez}</nav>'
+        f'<p class="meta">{meta}</p>'
         f'<h1>{e(a.get("titolo"))}</h1><p class="meta firma">{FIRMA}</p>'
         f'{som}{duello}<div class="corpo">{corpo}</div>{blocco_fonti}{html_acquisto(cfg, a)}{html_banner(cfg, a)}'
         '<div class="acts" style="margin-top:2rem"><a class="btn pieno" href="/#diretta">'
@@ -332,7 +357,7 @@ def pagina_sezione(cfg, sid: str, articoli, modello: str) -> str:
     )
     corpo = (
         f'<section class="art sezione"><nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › '
-        f'<a href="/#articoli">Articoli</a></nav><h1>{e(sezione)}</h1>'
+        f'{e(sezione)}</nav><h1>{e(sezione)}</h1>'
         f'<ul class="lista">{html_lista(cfg, articoli)}</ul></section>'
     )
     out = modello.replace("<title>Davide Durazzi</title>", testa, 1)
@@ -349,20 +374,21 @@ def feed_rss(cfg, articoli) -> str:
     voci = []
     for a in articoli[:30]:
         url = SITO + link(a)
-        cat = f"<category>{e(nome_sezione(cfg, a.get('sezione')))}</category>" if a.get("sezione") else ""
+        cat = f"<category>{e_xml(nome_sezione(cfg, a.get('sezione')))}</category>" if a.get("sezione") else ""
+        pub = f"<pubDate>{format_datetime(quando(a))}</pubDate>" if quando(a) else ""
         voci.append(
-            f"<item><title>{e(a.get('titolo'))}</title><link>{url}</link>"
-            f'<guid isPermaLink="true">{url}</guid><pubDate>{format_datetime(quando(a))}</pubDate>'
+            f"<item><title>{e_xml(a.get('titolo'))}</title><link>{url}</link>"
+            f'<guid isPermaLink="true">{url}</guid>{pub}'
             f"<dc:creator>Redazione AI</dc:creator>{cat}"
-            f"<description>{e(a.get('sommario') or (a.get('testo') or [''])[0])}</description></item>")
-    ultimo = format_datetime(quando(articoli[0]) if articoli else datetime.now(timezone.utc))
+            f"<description>{e_xml(a.get('sommario') or (a.get('testo') or [''])[0])}</description></item>")
+    ultimo = format_datetime((quando(articoli[0]) if articoli else None) or datetime.now(timezone.utc))
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
-            f"<channel><title>{e(nome)}</title><link>{SITO}/</link>"
-            f"<description>{e(cfg.get('sottotitolo') or 'Tecnologia, AI e Gaming')}: {FIRMA[0].lower() + FIRMA[1:]}.</description>"
+            f"<channel><title>{e_xml(nome)}</title><link>{SITO}/</link>"
+            f"<description>{e_xml(cfg.get('sottotitolo') or 'Tecnologia, AI e Gaming')}: {FIRMA[0].lower() + FIRMA[1:]}.</description>"
             f'<language>it</language><lastBuildDate>{ultimo}</lastBuildDate>'
             f'<atom:link href="{SITO}/feed.xml" rel="self" type="application/rss+xml"/>'
-            f"<image><url>{SITO}/assets/logo-192.png</url><title>{e(nome)}</title><link>{SITO}/</link></image>\n"
+            f"<image><url>{SITO}/assets/logo-192.png</url><title>{e_xml(nome)}</title><link>{SITO}/</link></image>\n"
             + "\n".join(voci) + "\n</channel></rss>\n")
 
 
@@ -371,11 +397,11 @@ def sitemap_news(cfg, articoli) -> str:
     nome = cfg.get("nome") or "Davide Durazzi"
     limite = datetime.now(timezone.utc) - timedelta(hours=48)
     voci = [
-        f"  <url><loc>{SITO}{link(a)}</loc><news:news><news:publication><news:name>{e(nome)}</news:name>"
+        f"  <url><loc>{SITO}{link(a)}</loc><news:news><news:publication><news:name>{e_xml(nome)}</news:name>"
         f"<news:language>it</news:language></news:publication>"
         f"<news:publication_date>{iso_pub(a)}</news:publication_date>"
-        f"<news:title>{e(a.get('titolo'))}</news:title></news:news></url>"
-        for a in articoli if quando(a) >= limite]
+        f"<news:title>{e_xml(a.get('titolo'))}</news:title></news:news></url>"
+        for a in articoli if quando(a) and quando(a) >= limite]
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
             'xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n'
             + "".join(v + "\n" for v in voci) + "</urlset>\n")
@@ -393,8 +419,10 @@ def riempi(testo: str, chiave: str, contenuto: str) -> str:
 def main():
     cfg = leggi_config()
     tutti = json.loads((RADICE / "content" / "articoli.json").read_text(encoding="utf-8"))
+    # ordine per momento di pubblicazione (lo stesso di datePublished); senza data in fondo
+    mai = datetime.min.replace(tzinfo=timezone.utc)
     articoli = sorted((a for a in tutti if a.get("pubblicato") is True and a.get("slug")),
-                      key=lambda a: a.get("data") or "", reverse=True)
+                      key=lambda a: quando(a) or mai, reverse=True)
 
     # 1. pagine articolo
     modello = (RADICE / "articolo.html").read_text(encoding="utf-8")
@@ -437,8 +465,9 @@ def main():
 
     # 3. sitemap, feed e robots
     oggi = datetime.now(timezone.utc).date().isoformat()
-    voci = [f"  <url><loc>{SITO}/</loc><lastmod>{(iso_pub(articoli[0]) if articoli else oggi)}</lastmod></url>"]
-    voci += [f"  <url><loc>{SITO}{link(a)}</loc><lastmod>{e(iso_mod(a))}</lastmod></url>" for a in articoli]
+    voci = [f"  <url><loc>{SITO}/</loc><lastmod>{(iso_pub(articoli[0]) if articoli else "") or oggi}</lastmod></url>"]
+    voci += [f"  <url><loc>{SITO}{link(a)}</loc>" + (f"<lastmod>{e(iso_mod(a))}</lastmod>" if iso_mod(a) else "")
+             + "</url>" for a in articoli]
     voci += [f"  <url><loc>{SITO}{link_sezione(sid)}</loc></url>" for sid in sezioni]
     voci.append(f"  <url><loc>{SITO}/piazza</loc></url>")
     voci.append(f"  <url><loc>{SITO}/media-kit</loc></url>")
