@@ -1,6 +1,8 @@
 """Sposta le bozze approvate nel sito e rimuove quelle da scartare."""
 import json
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 RADICE = Path(__file__).resolve().parent.parent
 BOZZE = RADICE / "bozze" / "bozze.json"
@@ -20,6 +22,8 @@ def main() -> None:
     for b in approvate:
         pulito = {k: v for k, v in b.items() if k not in INTERNI}
         pulito["pubblicato"] = True
+        # ora esatta con il fuso: serve a sitemap-news, feed e dati strutturati (prerender.py)
+        pulito.setdefault("pubblicato_il", datetime.now(ZoneInfo("Europe/Rome")).isoformat(timespec="seconds"))
         if pulito.get("sezione") == "novita":  # vecchia sezione, ora Tecnologia e AI
             pulito["sezione"] = "tecnologia"
         if pulito["slug"] not in slugs:

@@ -3,8 +3,10 @@
 
 Legge content/articoli.json e config.js e scrive:
   - articoli/<slug>.html   una pagina completa per ogni articolo pubblicato
+  - sezioni/<id>.html      l'elenco degli articoli di ogni sezione
   - index.html             riempie i blocchi tra i segnaposto <!--PR:...-->
-  - sitemap.xml, robots.txt
+  - sitemap.xml, sitemap-news.xml (ultime 48 ore), feed.xml (RSS), robots.txt
+  - indexnow-nuovi.txt     gli URL nuovi da segnalare a IndexNow (non va nel repo)
 
 Si lancia dalla radice del repo:  python agenti/prerender.py
 Non serve nessuna libreria esterna. Usa node (se c'è) per leggere config.js.
@@ -13,11 +15,15 @@ import html
 import json
 import re
 import subprocess
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
+from email.utils import format_datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 RADICE = Path(__file__).resolve().parent.parent
 SITO = "https://www.davidedurazzi.it"
+ROMA = ZoneInfo("Europe/Rome")
+FIRMA = "Scritto dalla Redazione AI, verificato e approvato da Davide Durazzi"
 MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio",
         "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 
@@ -50,6 +56,33 @@ def data_it(d: str) -> str:
         return str(d or "")
 
 
+def quando(a: dict) -> datetime:
+    """Momento di pubblicazione con il fuso: "pubblicato_il" (lo scrive promuovi.py),
+    altrimenti la sola data alla mezzanotte di Roma."""
+    try:
+        t = datetime.fromisoformat(str(a.get("pubblicato_il")))
+        return t if t.tzinfo else t.replace(tzinfo=ROMA)
+    except ValueError:
+        pass
+    try:
+        return datetime.combine(date.fromisoformat(str(a.get("data"))[:10]), datetime.min.time(), ROMA)
+    except ValueError:
+        return datetime.now(ROMA)
+
+
+def iso_pub(a: dict) -> str:
+    return quando(a).isoformat(timespec="seconds")
+
+
+def iso_mod(a: dict) -> str:
+    """Ultima modifica: "modificato_il" se c'è, altrimenti la pubblicazione."""
+    try:
+        t = datetime.fromisoformat(str(a.get("modificato_il")))
+        return (t if t.tzinfo else t.replace(tzinfo=ROMA)).isoformat(timespec="seconds")
+    except ValueError:
+        return iso_pub(a)
+
+
 def nome_sezione(cfg: dict, sid: str) -> str:
     for s in cfg.get("sezioni") or []:
         if s.get("id") == sid:
@@ -57,16 +90,26 @@ def nome_sezione(cfg: dict, sid: str) -> str:
     return (sid or "").replace("-", " ").capitalize()
 
 
-def immagine(a: dict) -> str:
+def immagine(a: dict) -> tuple[str, int, int]:
+    """Copertina del carosello (1080x1350, vedi slides.py) o il logo (512x512)."""
     cartella = RADICE / "ig" / a["slug"]
     for nome in ("1.jpg", "1.png"):
         if (cartella / nome).exists():
-            return f"{SITO}/ig/{a['slug']}/{nome}"
-    return f"{SITO}/assets/logo-512.png"
+            return f"{SITO}/ig/{a['slug']}/{nome}", 1080, 1350
+    return f"{SITO}/assets/logo-512.png", 512, 512
 
 
 def link(a: dict) -> str:
     return f"/articoli/{a['slug']}"
+
+
+def link_sezione(sid: str) -> str:
+    return f"/sezioni/{sid}"
+
+
+def json_ld(dati: dict) -> str:
+    return ('<script type="application/ld+json">'
+            + json.dumps(dati, ensure_ascii=False).replace("</", "<\\/") + "</script>")
 
 
 # ---------- frammenti HTML (stessa struttura che disegna app.js) ----------
@@ -89,7 +132,7 @@ def html_lista(cfg, articoli) -> str:
     for a in articoli:
         som = f"<p>{e(a['sommario'])}</p>" if a.get("sommario") else ""
         righe.append(f'<li data-sez="{e(a.get("sezione") or "")}"><a href="{link(a)}"><span class="sez">{e(nome_sezione(cfg, a.get("sezione")))}<br>'
-                     f'<time>{e(data_it(a.get("data")))}</time></span><span><h3>{e(a.get("titolo"))}</h3>{som}</span></a></li>')
+                     f'<time datetime="{e(iso_pub(a))}">{e(data_it(a.get("data")))}</time></span><span><h3>{e(a.get("titolo"))}</h3>{som}</span></a></li>')
     return "".join(righe)
 
 
@@ -161,21 +204,46 @@ def html_acquisto(cfg, a) -> str:
             '<p class="nota-aff">Link affiliato: se compri da qui ricevo una piccola commissione, a te non costa nulla.</p></div>')
 
 
-def pagina_articolo(cfg, a, modello: str) -> str:
+def html_leggi_anche(cfg, a, articoli) -> str:
+    """Fino a 4 articoli recenti della stessa sezione, con la stessa grafica della home."""
+    altri = [x for x in articoli if x.get("sezione") == a.get("sezione") and x["slug"] != a["slug"]][:4]
+    if not altri:
+        return ""
+    sid = a.get("sezione") or ""
+    return ('<section class="leggi-anche"><h2>Leggi anche</h2>'
+            f'<ul class="lista">{html_lista(cfg, altri)}</ul>'
+            f'<p class="meta"><a href="{link_sezione(sid)}">Tutti gli articoli di {e(nome_sezione(cfg, sid))}</a></p></section>')
+
+
+def pagina_articolo(cfg, a, modello: str, articoli=()) -> str:
     nome = cfg.get("nome") or "Davide Durazzi"
     url = SITO + link(a)
     descr = a.get("sommario") or (a.get("testo") or [""])[0]
-    img = immagine(a)
+    img, img_w, img_h = immagine(a)
+    sid = a.get("sezione") or ""
+    sezione = nome_sezione(cfg, sid)
     fonti = [f for f in a.get("fonti") or [] if url_ok(f.get("url"))]
+    davide = {"@type": "Person", "@id": f"{SITO}/#davide", "name": nome, "url": f"{SITO}/"}
     ld = {
         "@context": "https://schema.org", "@type": "NewsArticle",
-        "headline": a.get("titolo"), "description": descr, "datePublished": a.get("data"),
-        "inLanguage": "it", "mainEntityOfPage": url, "image": [img],
-        "articleSection": nome_sezione(cfg, a.get("sezione")),
-        "author": {"@type": "Person", "name": nome, "url": SITO},
+        "headline": a.get("titolo"), "description": descr,
+        "datePublished": iso_pub(a), "dateModified": iso_mod(a),
+        "inLanguage": "it", "mainEntityOfPage": url,
+        "image": [{"@type": "ImageObject", "url": img, "width": img_w, "height": img_h}],
+        "articleSection": sezione,
+        # Trasparenza (AI Act): scrive la Redazione AI, Davide verifica e approva
+        "author": {"@type": "Organization", "name": "Redazione AI", "url": f"{SITO}/azienda"},
+        "editor": davide,
         "publisher": {"@type": "Organization", "name": nome,
                       "logo": {"@type": "ImageObject", "url": f"{SITO}/assets/logo-512.png"}},
         "citation": [f["url"] for f in fonti],
+    }
+    briciole = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITO}/"},
+            {"@type": "ListItem", "position": 2, "name": sezione, "item": SITO + link_sezione(sid)},
+            {"@type": "ListItem", "position": 3, "name": a.get("titolo"), "item": url},
+        ],
     }
     testa = (
         f"<title>{e(a.get('titolo'))} — {e(nome)}</title>\n"
@@ -186,11 +254,16 @@ def pagina_articolo(cfg, a, modello: str) -> str:
         f'<meta property="og:title" content="{e(a.get("titolo"))}">\n'
         f'<meta property="og:description" content="{e(descr)}">\n'
         f'<meta property="og:url" content="{e(url)}">\n'
+        f'<meta property="og:locale" content="it_IT">\n'
         f'<meta property="og:image" content="{e(img)}">\n'
-        f'<meta property="article:published_time" content="{e(a.get("data"))}">\n'
+        f'<meta property="og:image:width" content="{img_w}">\n'
+        f'<meta property="og:image:height" content="{img_h}">\n'
+        f'<meta property="og:image:alt" content="{e(a.get("titolo"))}">\n'
+        f'<meta property="article:published_time" content="{e(iso_pub(a))}">\n'
+        f'<meta property="article:modified_time" content="{e(iso_mod(a))}">\n'
+        f'<meta property="article:section" content="{e(sezione)}">\n'
         f'<meta name="twitter:card" content="summary_large_image">\n'
-        '<script type="application/ld+json">'
-        + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+        + json_ld(ld) + json_ld(briciole)
     )
     som = f'<p class="som">{e(a["sommario"])}</p>' if a.get("sommario") else ""
     duello = html_duello(cfg, a, False) if a.get("tesi") and a.get("antitesi") else ""
@@ -202,12 +275,15 @@ def pagina_articolo(cfg, a, modello: str) -> str:
             for f in fonti) + "</ul></div>")
     articolo = (
         f'<article class="art" id="art" data-statico="1">'
-        f'<a class="back" href="/#articoli">Torna agli articoli</a>'
-        f'<p class="meta">{e(nome_sezione(cfg, a.get("sezione")))}, '
-        f'<time datetime="{e(a.get("data"))}">{e(data_it(a.get("data")))}</time></p>'
-        f'<h1>{e(a.get("titolo"))}</h1>{som}{duello}<div class="corpo">{corpo}</div>{blocco_fonti}{html_acquisto(cfg, a)}{html_banner(cfg, a)}'
+        f'<nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › '
+        f'<a href="{link_sezione(sid)}">{e(sezione)}</a></nav>'
+        f'<p class="meta">{e(sezione)}, '
+        f'<time datetime="{e(iso_pub(a))}">{e(data_it(a.get("data")))}</time></p>'
+        f'<h1>{e(a.get("titolo"))}</h1><p class="meta firma">{FIRMA}</p>'
+        f'{som}{duello}<div class="corpo">{corpo}</div>{blocco_fonti}{html_acquisto(cfg, a)}{html_banner(cfg, a)}'
         '<div class="acts" style="margin-top:2rem"><a class="btn pieno" href="/#diretta">'
         '<span class="dot" aria-hidden="true"></span>Ne parliamo in diretta</a></div>'
+        + html_leggi_anche(cfg, a, articoli) +
         '<section class="commenti" id="commenti"><h2>Commenti</h2><div id="listaCommenti">'
         '<p class="meta">Caricamento dei commenti.</p></div>'
         '<form class="form-commento" id="formCommento"><h3>Dì la tua</h3>'
@@ -225,6 +301,84 @@ def pagina_articolo(cfg, a, modello: str) -> str:
     out = re.sub(r'<nav id="social" aria-label="Social">.*?</nav>',
                  lambda _: f'<nav id="social" aria-label="Social">{html_social(cfg)}</nav>', out, count=1, flags=re.S)
     return out
+
+
+def pagina_sezione(cfg, sid: str, articoli, modello: str) -> str:
+    """Elenco degli articoli di una sezione, sullo stesso modello delle pagine articolo."""
+    nome = cfg.get("nome") or "Davide Durazzi"
+    sezione = nome_sezione(cfg, sid)
+    url = SITO + link_sezione(sid)
+    descr = f"Gli articoli di {sezione} di {nome}: notizie verificate, con le fonti sempre citate."
+    briciole = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITO}/"},
+            {"@type": "ListItem", "position": 2, "name": sezione, "item": url},
+        ],
+    }
+    testa = (
+        f"<title>{e(sezione)} — {e(nome)}</title>\n"
+        f'<meta name="description" content="{e(descr)}">\n'
+        f'<link rel="canonical" href="{e(url)}">\n'
+        f'<meta property="og:type" content="website">\n'
+        f'<meta property="og:site_name" content="{e(nome)}">\n'
+        f'<meta property="og:locale" content="it_IT">\n'
+        f'<meta property="og:title" content="{e(sezione)} — {e(nome)}">\n'
+        f'<meta property="og:description" content="{e(descr)}">\n'
+        f'<meta property="og:url" content="{e(url)}">\n'
+        f'<meta property="og:image" content="{SITO}/assets/logo-512.png">\n'
+        f'<meta property="og:image:width" content="512">\n'
+        f'<meta property="og:image:height" content="512">\n'
+        + json_ld(briciole)
+    )
+    corpo = (
+        f'<section class="art sezione"><nav class="briciole" aria-label="Percorso"><a href="/">Home</a> › '
+        f'<a href="/#articoli">Articoli</a></nav><h1>{e(sezione)}</h1>'
+        f'<ul class="lista">{html_lista(cfg, articoli)}</ul></section>'
+    )
+    out = modello.replace("<title>Davide Durazzi</title>", testa, 1)
+    out = out.replace('<body data-page="articolo">', '<body data-page="sezione">', 1)
+    out = re.sub(r'<article class="art" id="art">.*?</article>', lambda _: corpo, out, count=1, flags=re.S)
+    out = re.sub(r'<nav id="social" aria-label="Social">.*?</nav>',
+                 lambda _: f'<nav id="social" aria-label="Social">{html_social(cfg)}</nav>', out, count=1, flags=re.S)
+    return out
+
+
+def feed_rss(cfg, articoli) -> str:
+    """RSS 2.0 con gli ultimi 30 articoli (lettori di feed, aggregatori, Google News)."""
+    nome = cfg.get("nome") or "Davide Durazzi"
+    voci = []
+    for a in articoli[:30]:
+        url = SITO + link(a)
+        cat = f"<category>{e(nome_sezione(cfg, a.get('sezione')))}</category>" if a.get("sezione") else ""
+        voci.append(
+            f"<item><title>{e(a.get('titolo'))}</title><link>{url}</link>"
+            f'<guid isPermaLink="true">{url}</guid><pubDate>{format_datetime(quando(a))}</pubDate>'
+            f"<dc:creator>Redazione AI</dc:creator>{cat}"
+            f"<description>{e(a.get('sommario') or (a.get('testo') or [''])[0])}</description></item>")
+    ultimo = format_datetime(quando(articoli[0]) if articoli else datetime.now(timezone.utc))
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
+            f"<channel><title>{e(nome)}</title><link>{SITO}/</link>"
+            f"<description>{e(cfg.get('sottotitolo') or 'Tecnologia, AI e Gaming')}: {FIRMA[0].lower() + FIRMA[1:]}.</description>"
+            f'<language>it</language><lastBuildDate>{ultimo}</lastBuildDate>'
+            f'<atom:link href="{SITO}/feed.xml" rel="self" type="application/rss+xml"/>'
+            f"<image><url>{SITO}/assets/logo-192.png</url><title>{e(nome)}</title><link>{SITO}/</link></image>\n"
+            + "\n".join(voci) + "\n</channel></rss>\n")
+
+
+def sitemap_news(cfg, articoli) -> str:
+    """Sitemap per Google News: solo gli articoli delle ultime 48 ore (può restare vuota)."""
+    nome = cfg.get("nome") or "Davide Durazzi"
+    limite = datetime.now(timezone.utc) - timedelta(hours=48)
+    voci = [
+        f"  <url><loc>{SITO}{link(a)}</loc><news:news><news:publication><news:name>{e(nome)}</news:name>"
+        f"<news:language>it</news:language></news:publication>"
+        f"<news:publication_date>{iso_pub(a)}</news:publication_date>"
+        f"<news:title>{e(a.get('titolo'))}</news:title></news:news></url>"
+        for a in articoli if quando(a) >= limite]
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            'xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n'
+            + "".join(v + "\n" for v in voci) + "</urlset>\n")
 
 
 def riempi(testo: str, chiave: str, contenuto: str) -> str:
@@ -246,17 +400,28 @@ def main():
     modello = (RADICE / "articolo.html").read_text(encoding="utf-8")
     cartella = RADICE / "articoli"
     cartella.mkdir(exist_ok=True)
-    validi = set()
+    gia_online = {p.stem for p in cartella.glob("*.html")}
     for a in articoli:
         if not re.fullmatch(r"[a-z0-9-]+", a["slug"]):
             print("slug non valido, salto:", a["slug"])
-            continue
-        validi.add(a["slug"])
-        (cartella / f"{a['slug']}.html").write_text(pagina_articolo(cfg, a, modello), encoding="utf-8")
+    articoli = [a for a in articoli if re.fullmatch(r"[a-z0-9-]+", a["slug"])]
+    validi = {a["slug"] for a in articoli}
+    for a in articoli:
+        (cartella / f"{a['slug']}.html").write_text(pagina_articolo(cfg, a, modello, articoli), encoding="utf-8")
     for vecchio in cartella.glob("*.html"):  # articoli tolti dal sito
         if vecchio.stem not in validi:
             vecchio.unlink()
-    articoli = [a for a in articoli if a["slug"] in validi]
+
+    # 1b. pagine di sezione
+    cartella_sez = RADICE / "sezioni"
+    cartella_sez.mkdir(exist_ok=True)
+    sezioni = sorted({a["sezione"] for a in articoli if re.fullmatch(r"[a-z0-9-]+", a.get("sezione") or "")})
+    for sid in sezioni:
+        (cartella_sez / f"{sid}.html").write_text(
+            pagina_sezione(cfg, sid, [a for a in articoli if a.get("sezione") == sid], modello), encoding="utf-8")
+    for vecchio in cartella_sez.glob("*.html"):
+        if vecchio.stem not in sezioni:
+            vecchio.unlink()
 
     # 2. home già compilata
     home = (RADICE / "index.html").read_text(encoding="utf-8")
@@ -270,10 +435,11 @@ def main():
     home = riempi(home, "social", html_social(cfg))
     (RADICE / "index.html").write_text(home, encoding="utf-8")
 
-    # 3. sitemap e robots
+    # 3. sitemap, feed e robots
     oggi = datetime.now(timezone.utc).date().isoformat()
-    voci = [f"  <url><loc>{SITO}/</loc><lastmod>{(articoli[0].get('data') if articoli else oggi)}</lastmod></url>"]
-    voci += [f"  <url><loc>{SITO}{link(a)}</loc><lastmod>{e(a.get('data') or oggi)}</lastmod></url>" for a in articoli]
+    voci = [f"  <url><loc>{SITO}/</loc><lastmod>{(iso_pub(articoli[0]) if articoli else oggi)}</lastmod></url>"]
+    voci += [f"  <url><loc>{SITO}{link(a)}</loc><lastmod>{e(iso_mod(a))}</lastmod></url>" for a in articoli]
+    voci += [f"  <url><loc>{SITO}{link_sezione(sid)}</loc></url>" for sid in sezioni]
     voci.append(f"  <url><loc>{SITO}/piazza</loc></url>")
     voci.append(f"  <url><loc>{SITO}/media-kit</loc></url>")
     voci.append(f"  <url><loc>{SITO}/azienda</loc></url>")
@@ -286,10 +452,23 @@ def main():
     (RADICE / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "\n".join(voci) + "\n</urlset>\n", encoding="utf-8")
+    (RADICE / "sitemap-news.xml").write_text(sitemap_news(cfg, articoli), encoding="utf-8")
+    (RADICE / "feed.xml").write_text(feed_rss(cfg, articoli), encoding="utf-8")
     (RADICE / "robots.txt").write_text(
         "User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /obs/\nDisallow: /overlay/\n\n"
-        f"Sitemap: {SITO}/sitemap.xml\n", encoding="utf-8")
-    print(f"Pagine statiche generate: {len(articoli)} articoli, home, sitemap.xml, robots.txt")
+        f"Sitemap: {SITO}/sitemap.xml\nSitemap: {SITO}/sitemap-news.xml\n", encoding="utf-8")
+
+    # 4. URL nuovi per IndexNow (li legge agenti/indexnow.py dopo il deploy; il file resta fuori dal repo)
+    nuovi = [a for a in articoli if a["slug"] not in gia_online]
+    lista = RADICE / "indexnow-nuovi.txt"
+    if nuovi:  # prima gli articoli (il primo serve a capire se il deploy è online), poi home e sezioni toccate
+        url = [SITO + link(a) for a in nuovi] + [f"{SITO}/"]
+        url += [SITO + link_sezione(sid) for sid in sezioni if any(a.get("sezione") == sid for a in nuovi)]
+        lista.write_text("\n".join(url) + "\n", encoding="utf-8")
+    elif lista.exists():
+        lista.unlink()
+    print(f"Pagine statiche generate: {len(articoli)} articoli, {len(sezioni)} sezioni, home, "
+          f"sitemap.xml, sitemap-news.xml, feed.xml, robots.txt; {len(nuovi)} URL nuovi")
 
 
 if __name__ == "__main__":

@@ -131,6 +131,14 @@ footer nav{display:flex;flex-wrap:wrap;gap:1.1rem}
 .fonti{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
 .fonti h2{font:700 1.1rem var(--sans);margin:0 0 .6rem}
 .fonti ul{margin:0;padding-left:1.1rem}
+.art .briciole{margin-bottom:1.5rem;color:var(--muted);font-size:.92rem}
+.art .briciole a{color:var(--muted);text-decoration:none}
+.art .briciole a:hover{color:var(--ink)}
+.art .firma{margin:0 0 1.5rem;font-size:.88rem}
+.leggi-anche{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+.leggi-anche h2{font:700 1.1rem var(--sans);margin:0 0 1rem}
+.leggi-anche .meta{margin-top:1rem}
+.art.sezione .lista{margin-top:1.5rem}
 
 /* Commenti */
 .commenti{margin-top:3rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
