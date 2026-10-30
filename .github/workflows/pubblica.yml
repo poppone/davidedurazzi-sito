@@ -27,8 +27,13 @@ jobs:
         run: |
           git config user.name "redazione-ai"
           git config user.email "actions@users.noreply.github.com"
-          for d in bozze content ig articoli index.html sitemap.xml robots.txt; do [ -e "$d" ] && git add "$d"; done
+          for d in bozze content ig articoli sezioni index.html sitemap.xml sitemap-news.xml feed.xml robots.txt f7ebaa62acb750526f03226c97c9a695.txt; do [ -e "$d" ] && git add "$d"; done
           git diff --cached --quiet || (git commit -m "Pubblicati articoli approvati" && git pull --rebase -X theirs && git push)
+      - name: Segnala i nuovi URL a IndexNow
+        # aspetta che il deploy sia online (max ~3 minuti); non blocca mai la pubblicazione
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python agenti/indexnow.py || true
       - name: Pubblica su Instagram
         run: python agenti/instagram.py pubblica
         env:

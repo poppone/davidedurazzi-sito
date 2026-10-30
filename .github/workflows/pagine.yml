@@ -1,5 +1,5 @@
 name: Aggiorna pagine statiche
-# Rigenera pagine articolo, home, sitemap.xml e robots.txt quando cambi a mano
+# Rigenera pagine articolo e sezione, home, sitemap, feed.xml e robots.txt quando cambi a mano
 # articoli, configurazione o modelli delle pagine.
 on:
   push:
@@ -21,5 +21,5 @@ jobs:
         run: |
           git config user.name "redazione-ai"
           git config user.email "actions@users.noreply.github.com"
-          git add -A articoli index.html sitemap.xml robots.txt
+          for d in articoli sezioni index.html sitemap.xml sitemap-news.xml feed.xml robots.txt f7ebaa62acb750526f03226c97c9a695.txt; do [ -e "$d" ] && git add -A "$d"; done
           git diff --cached --quiet || (git commit -m "Pagine statiche aggiornate" && git push)
