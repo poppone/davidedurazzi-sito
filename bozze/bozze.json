@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "ultraviolette-lancia-x-47-il-crossover-elettrico-piu-efficiente-20261030",
     "titolo": "Ultraviolette lancia X-47, il crossover elettrico più efficiente",
@@ -46,7 +46,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "gta-vi-rockstar-spinge-le-console-al-massimo-e-annuncia-la-colonna-son-20261030",
     "titolo": "GTA VI: Rockstar spinge le console al massimo e annuncia la colonna sonora",
@@ -82,7 +82,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "esim-in-italia-la-nuova-liberta-di-connessione-all-estero-20261030",
     "titolo": "eSIM in Italia: la nuova libertà di connessione all'estero",
@@ -111,7 +111,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "new-york-vieta-ai-chatbot-funzioni-romantiche-per-i-minori-20261029",
     "titolo": "New York vieta ai chatbot funzioni romantiche per i minori",
@@ -140,7 +140,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "ea-chiude-bioware-e-annulla-mass-effect-la-fine-di-un-era-20261029",
     "titolo": "EA chiude BioWare e annulla Mass Effect: la fine di un'era",
@@ -201,7 +201,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "optimus-di-tesla-pronto-a-ricaricare-i-cybercab-20261029",
     "titolo": "Optimus di Tesla pronto a ricaricare i Cybercab",
