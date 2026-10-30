@@ -38,7 +38,8 @@ HASHTAG = {
 
 
 def testo(a: dict, rete: str) -> str:
-    link = link_utm(a["slug"], rete)
+    # LinkedIn: in "commentary" il carattere _ delle UTM è riservato e può troncare il testo, quindi link pulito
+    link = f"{SITO}/articoli/{a['slug']}" if rete == "linkedin" else link_utm(a["slug"], rete)
     parti = [a["titolo"], a.get("sommario", "")]
     if a.get("domanda"):
         parti.append(f"Il Contraddittorio: {a['domanda']}\nVota Sì o No e dì la tua nei commenti sul sito.")

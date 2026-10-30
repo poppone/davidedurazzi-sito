@@ -87,6 +87,17 @@ def facet_link(testo: str, rete: str = "bluesky") -> list[dict]:
     return facet
 
 
+def taglia_bluesky(testo: str, n: int = 300) -> str:
+    """Taglia il testo a n caratteri senza spezzare un link: se il taglio cade dentro un URL,
+    il link si toglie intero (un link a metà, reso cliccabile dal facet, porterebbe altrove)."""
+    if len(testo) <= n:
+        return testo
+    for m in re.finditer(r"https?://\S+", testo):
+        if m.start() < n < m.end():
+            return testo[:m.start()].rstrip()
+    return testo[:n]
+
+
 def didascalia_reel(testo: str) -> str:
     """La didascalia dichiara sempre che il video è fatto con l'AI."""
     testo = (testo or "").replace("\\n", "\n").strip()
@@ -146,7 +157,7 @@ def pubblica_bluesky(voce: dict, password: str, handle: str) -> dict:
         if b.status_code >= 400:
             raise RuntimeError(f"Bluesky immagine: HTTP {b.status_code} {b.text[:200]}")
         immagini.append({"alt": (voce.get("alt") or "")[:300], "image": b.json()["blob"]})
-    testo = (voce.get("testo") or "")[:300]
+    testo = taglia_bluesky(voce.get("testo") or "")
     record = {"$type": "app.bsky.feed.post", "text": testo,
               "createdAt": _ora().replace("+00:00", "Z"), "langs": ["it"]}
     facet = facet_link(testo)
