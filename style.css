@@ -62,9 +62,9 @@ section.blocco{padding:clamp(1.8rem,5vw,3.2rem) 0;border-top:2px solid var(--ink
 .player.online .replica{display:none}
 #twitchPlayerApi{position:absolute;inset:0}
 #twitchPlayerApi iframe{width:100%;height:100%}
-.chat{display:none;border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:420px}
+.chat{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line);height:420px}
 .chat iframe{width:100%;height:100%;border:0}
-@media (min-width:980px){.chat{display:block}}
+@media (min-width:980px){.chat{height:auto;min-height:420px}}
 
 /* Il Contraddittorio */
 .duello{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}
@@ -581,3 +581,37 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;back
 .mp-soc:hover,.mp-soc:focus-visible{filter:brightness(1.15)}
 @media (max-width:640px){.mp-soc{width:32px;height:32px}.mp-soc svg{width:16px;height:16px}}
 @media (prefers-reduced-motion:reduce){.mp-soc{transition:none}.mp-soc:hover{transform:none}}
+
+/* ===== Menu del telefono (menu.js) ===== */
+.tasto-menu{display:none}
+@media (max-width:759px){
+  /* Senza JS: le sezioni vanno su una seconda riga scorrevole, sempre visibili */
+  .top .wrap{flex-wrap:wrap;row-gap:0}
+  .top .wrap>nav,.top nav{display:flex;order:10;flex-basis:100%;margin:0;padding-bottom:.4rem}
+  .top .logo{min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .top .iscriviti{margin-left:auto}
+  /* Con JS: tasto Menu e pannello a tendina */
+  .ha-menu .wrap{flex-wrap:nowrap}
+  .ha-menu .tasto-menu{display:inline-flex;align-items:center;gap:.45rem;flex:none;order:9;min-height:40px;padding:.4rem .75rem;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);font:700 .85rem/1 var(--sans);cursor:pointer}
+  .ha-menu:not(:has(.iscriviti)) .tasto-menu{margin-left:auto}
+  .tasto-menu .righe,.tasto-menu .righe::before,.tasto-menu .righe::after{display:block;width:16px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s}
+  .tasto-menu .righe{position:relative}
+  .tasto-menu .righe::before,.tasto-menu .righe::after{content:"";position:absolute;left:0}
+  .tasto-menu .righe::before{top:-5px}.tasto-menu .righe::after{top:5px}
+  .menu-aperto .tasto-menu .righe{background:transparent}
+  .menu-aperto .tasto-menu .righe::before{transform:translateY(5px) rotate(45deg)}
+  .menu-aperto .tasto-menu .righe::after{transform:translateY(-5px) rotate(-45deg)}
+  .ha-menu .wrap>nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;padding:.4rem clamp(1rem,4vw,2.5rem) 1rem;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.45);max-height:calc(100dvh - 4.5rem);overflow-y:auto;visibility:hidden;opacity:0;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility 0s .18s}
+  .menu-aperto .wrap>nav{visibility:visible;opacity:1;transform:none;transition:opacity .18s,transform .18s}
+  .ha-menu nav a{display:flex;align-items:center;min-height:48px;padding:.2rem 0;font-size:1.05rem;color:var(--ink);border-bottom:1px solid var(--line)}
+  .ha-menu nav a:last-child{border-bottom:0}
+  .ha-menu nav a::after{display:none}
+  .top nav a[aria-current=page]{color:var(--tesi)}
+}
+@media (max-width:759px) and (prefers-reduced-motion:reduce){.ha-menu .wrap>nav,.tasto-menu .righe::before,.tasto-menu .righe::after{transition:none}}
+@media (max-width:759px){.top .logo{flex:0 1 auto}}
+@media (max-width:440px){
+  .ha-menu .tasto-menu{padding:.4rem .7rem}.ha-menu .tasto-menu .testo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .top .wrap{gap:.45rem}.top .logo{font-size:.95rem;gap:.45rem}.top .iscriviti{padding:.4rem .65rem}
+}
+@media (max-width:374px){.top .logo{font-size:0;gap:0}}
