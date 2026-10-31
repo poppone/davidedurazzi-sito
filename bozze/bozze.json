@@ -1,1 +1,115 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "android-auto-ritardi-funzioni-e-batteria-cosa-sapere-20261031",
+    "titolo": "Android Auto: ritardi funzioni e batteria, cosa sapere",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-10-31",
+    "sommario": "Secondo HDblog, Google non ha ancora fissato date per video e browser su Android Auto. Inoltre, la connessione wireless può scaricare la batteria del telefono.",
+    "testo": [
+      "Secondo HDblog, al recente Android Dev Summit non sono state annunciate date precise per l'arrivo di video e browser su Android Auto. Questo significa che gli utenti dovranno ancora attendere per vedere queste funzionalità integrate nel sistema.",
+      "L'articolo di HDblog segnala anche un problema comune: Android Auto in modalità wireless può consumare rapidamente la batteria dello smartphone. Per chi usa spesso il sistema, questo aspetto può risultare fastidioso durante i tragitti più lunghi.",
+      "Per gestire meglio i consumi, HDblog suggerisce di intervenire sulle impostazioni del telefono per ridurre l'impatto di Android Auto sulla batteria. Non ci sono ancora dettagli su ottimizzazioni future da parte di Google per risolvere nativamente questo problema.",
+      "Resta da capire se Google fornirà aggiornamenti specifici per migliorare l'efficienza energetica o se le soluzioni rimarranno a carico delle impostazioni utente. Per ora, l'attenzione è concentrata sulla gestione manuale dei consumi e sull'attesa delle nuove funzioni."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Android Auto, Google prende tempo: video e browser non hanno ancora una data",
+        "url": "https://www.hdblog.it/google/articoli/n675524/android-auto-app-video-browser-in-arrivo-google/"
+      },
+      {
+        "nome": "HDblog: Android Auto wireless scarica lo smartphone? Come intervenire",
+        "url": "https://www.hdblog.it/google/articoli/n675160/android-auto-wireless-risparmio-batteria/"
+      }
+    ],
+    "nota_critico": [
+      "L'articolo aggiunge affermazioni non presenti nelle fonti, come la mancanza di dettagli su eventuali ottimizzazioni future da parte di Google e la speculazione su possibili aggiornamenti per migliorare l'efficienza energetica; queste frasi non sono supportate da n1 o n6",
+      "La frase \"Resta da capire se Google fornirà aggiornamenti specifici per migliorare l'efficienza energetica o se le soluzioni rimarranno a carico delle impostazioni utente\" è una supposizione non presente nelle fonti fornite"
+    ],
+    "domande_live": [
+      "Quanto dura la batteria del vostro telefono con Android Auto wireless?",
+      "Avete già provato a disattivare le notifiche per risparmiare batteria?",
+      "Vi aspettavate date precise per video e browser al Dev Summit?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "toyota-e-waymo-avvieranno-i-test-autonomi-della-bz4x-dal-2027-20261031",
+    "titolo": "Toyota e Waymo avvieranno i test autonomi della bZ4X dal 2027",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-10-31",
+    "sommario": "Secondo HDblog, Toyota e Waymo inizieranno i test della bZ4X senza conducente in Giappone nel 2027, con l’intenzione di estendere la tecnologia a livello internazionale.",
+    "testo": [
+      "Secondo HDblog, Toyota e Waymo hanno ampliato la loro collaborazione sulla guida autonoma: dal 2027 saranno avviati i primi test della Toyota bZ4X senza conducente sul territorio giapponese.",
+      "Questo passo segna un importante avanzamento per chi segue le novità di mobilità elettrica e autonoma, perché dimostra che un grande costruttore e un leader della tecnologia di guida autonoma stanno unendo le forze per portare l’autonomia su strada.",
+      "Rimane da capire come i risultati di questi test influenzeranno le future normative, quali saranno le condizioni operative ammesse e quando esattamente la soluzione arriverà nei mercati esteri, aspetti ancora in fase di definizione."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Toyota e Waymo, dal 2027 le bZ4X a guida autonoma sulle strade",
+        "url": "https://www.hdmotori.it/toyota-waymo-2027-bz4x-guida-autonoma/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è la vostra opinione sull’introduzione di veicoli completamente autonomi nelle nostre città?",
+      "Quali criteri ritenete più importanti per valutare la sicurezza di un’auto senza conducente?",
+      "Pensate che l’autonomia possa diventare presto una caratteristica standard nelle auto elettriche?"
+    ],
+    "acquisto": null,
+    "domanda": "Ritieni che l'introduzione di auto a guida autonoma come la bZ4X di Toyota e Waymo dal 2027 possa migliorare la sicurezza stradale?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo la notizia di HDblog, dal 2027 le Toyota bZ4X saranno testate senza conducente in Giappone, il che potrebbe ridurre gli errori umani, principale causa di incidenti.",
+        "I veicoli autonomi sviluppati da Waymo e Toyota impiegano sensori e algoritmi di intelligenza artificiale per monitorare costantemente l’ambiente circostante, potendo reagire più rapidamente di un guidatore umano a situazioni di pericolo improvvise.",
+        "La collaborazione tra Toyota e Waymo prevede una fase di espansione internazionale, consentendo di raccogliere dati su diverse condizioni di traffico e clima e di migliorare progressivamente i sistemi di sicurezza, rendendo le auto a guida autonoma più affidabili rispetto alla guida tradizionale."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Secondo HDblog, i test delle bZ4X senza conducente inizieranno solo nel 2027: la tecnologia è ancora sperimentale e non ha dimostrato affidabilità su larga scala.",
+        "Le auto a guida autonoma possono incontrare difficoltà in situazioni complesse o imprevedibili – ad esempio condizioni meteorologiche avverse o comportamenti erratici di altri utenti della strada – aumentando il rischio di incidenti.",
+        "L’attuale carenza di normative uniformi e di infrastrutture dedicate per veicoli totalmente autonomi può compromettere la sicurezza nelle fasi iniziali di diffusione."
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "fortnite-lancia-la-ministagione-piratesca-cacciatori-di-tesori-20261031",
+    "titolo": "Fortnite lancia la mini‑stagione piratesca “Cacciatori di tesori”",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-10-31",
+    "sommario": "Secondo Everyeye, la nuova mini‑stagione a tema pirati arriverà a novembre, chiudendo il Capitolo 7 di Fortnite.",
+    "testo": [
+      "Secondo Everyeye, Epic Games ha annunciato l’arrivo della mini‑stagione “Cacciatori di tesori”, ambientata nel mondo dei pirati.",
+      "La mini‑stagione dovrebbe iniziare il 1° novembre 2026 alle 9:00, subito dopo una finestra di manutenzione programmata.",
+      "Si colloca nell’ultima fase del Capitolo 7 e introdurrà la ciurma di On, promettendo nuove missioni e ricompense a tema nautico.",
+      "Per i giocatori, la novità è un’occasione di sperimentare contenuti freschi prima della chiusura definitiva del capitolo, ma resta da capire quali saranno le meccaniche precise e come verranno distribuiti gli oggetti esclusivi."
+    ],
+    "fonti": [
+      {
+        "nome": "Everyeye: Fortnite, arriva la mini stagione piratesca: ecco quando potremo giocarci",
+        "url": "https://www.everyeye.it/notizie/fortnite-arriva-mini-stagione-piratesca-quando-potremo-giocarci-908996.html"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Che impressione vi fa il tema piratesco per una mini‑stagione?",
+      "Quali ricompense sperate di trovare nella “Cacciatori di tesori”?",
+      "Pensate che l’arrivo della ciurma di On possa influenzare il meta di gioco?"
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Fortnite"
+    }
+  }
+]
