@@ -229,6 +229,19 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    oppure "errore" con il motivo) e scrivilo nel verbale. Una voce che
    aspetta il token resta "da pubblicare": non è un errore.
 
+6y. **Crescita guidata dai dati (richiesta di Davide, 31/10/2026: "trova strade nuove per
+   aumentare in tutto, studia i dati di quello che pubblichiamo, correggi e fai salire tutti i
+   canali e la mia reputazione").** Ogni giro:
+   - leggi i numeri delle uscite delle ultime 48 ore dai due brand Metricool (views, like,
+     commenti, condivisioni, follower per rete) e da performance.json di Samaritan;
+   - scrivi nel verbale le 3 uscite migliori e le 3 peggiori, con il perché (tema, formato,
+     orario, prima frase, titolo) e UNA correzione concreta che applichi da subito (orario,
+     formato, titolo, tema da spingere o da togliere); il giorno dopo misuri se ha funzionato;
+   - una volta a settimana (lunedì) proponi a Davide UNA strada nuova di crescita, provata
+     sui dati (formato, rete, collaborazione, serie), senza spese non approvate;
+   - reputazione: niente clickbait che la fonte non regge, niente temi sensibili gonfiati,
+     nota AI sempre presente, risposte ai commenti con tono rispettoso.
+
 6x. **Bluesky, Pinterest e LinkedIn via Metricool (dal 27/10/2026).** Con Metricool a
    pagamento non servono più i token di `social/coda.json` per Bluesky e Pinterest:
    ogni articolo pubblicato va subito sul brand 7358624 su Bluesky (titolo + link +
