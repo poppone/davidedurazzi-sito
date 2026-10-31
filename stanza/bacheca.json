@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-10-30",
+  "aggiornato": "2026-10-31",
   "stati": [
     "da fare",
     "in corso",
@@ -1025,9 +1025,9 @@
       "da": "guardiano",
       "stato": "da fare",
       "titolo": "Guardiano: samaritan-notizie · Samaritan Auto-Poster",
-      "dettagli": "l'ultima esecuzione del 2026-10-30 è fallita. Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/41038208335",
+      "dettagli": "l'ultima esecuzione del 2026-10-31 è fallita. Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/41189790870",
       "origine": "controllo del Guardiano delle chiavi",
-      "volte": 2
+      "volte": 3
     }
   ]
 }
