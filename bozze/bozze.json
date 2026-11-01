@@ -1,7 +1,7 @@
 [
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "android-auto-ritardi-funzioni-e-batteria-cosa-sapere-20261031",
     "titolo": "Android Auto: ritardi funzioni e batteria, cosa sapere",
     "sezione": "tecnologia",
@@ -36,7 +36,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "toyota-e-waymo-avvieranno-i-test-autonomi-della-bz4x-dal-2027-20261031",
     "titolo": "Toyota e Waymo avvieranno i test autonomi della bZ4X dal 2027",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "fortnite-lancia-la-ministagione-piratesca-cacciatori-di-tesori-20261031",
     "titolo": "Fortnite lancia la mini‑stagione piratesca “Cacciatori di tesori”",
