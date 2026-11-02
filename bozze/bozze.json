@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "sam-altman-la-ram-sui-pc-e-sprecata-serve-nei-data-center-per-l-ai-20261101",
     "titolo": "Sam Altman: la RAM sui PC è sprecata, serve nei data center per l'AI",
@@ -57,7 +57,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "crisi-volkswagen-stop-temporaneo-allo-sviluppo-della-golf-elettrica-20261101",
     "titolo": "Crisi Volkswagen: stop temporaneo allo sviluppo della Golf elettrica",
@@ -86,7 +86,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "bioware-chiude-i-battenti-addio-al-nuovo-capitolo-di-mass-effect-20261101",
     "titolo": "BioWare chiude i battenti: addio al nuovo capitolo di Mass Effect",
