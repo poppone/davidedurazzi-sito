@@ -204,6 +204,13 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    testo non segue la fonte (come Cybertruck e Tesla Roadster del 23-24/10) e
    quelli sponsorizzati non ancora approvati dal marchio (gomme/Pneumatici.it).
    Nel verbale: quanti programmati e i `plannerUrl`.
+   **Serie "Le gare del weekend" (sì di Davide, 2/11/2026).** La domenica e il
+   lunedì il video su una gara del weekend (MotoGP, F1, altre corse) prende lo
+   slot delle 10:00, prima di ogni altro video. Il testo inizia con "Le gare del
+   weekend:" e chiude con una domanda diretta ("chi vince?", "chi avete visto
+   meglio?"); hashtag #legaredelweekend in più. Se in quei giorni Samaritan
+   Notizie non ha video di gare, scrivilo nel verbale. Misura: like e commenti
+   rispetto alla media degli altri video Motori.
 
 6m. **Limite Metricool (dal 13/10).** Il piano gratuito permette 20
    pubblicazioni al mese per tutto il brand, e il 13/10 sono finite (15 Pin
