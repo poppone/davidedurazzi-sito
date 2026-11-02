@@ -1641,6 +1641,53 @@
         }
       ],
       "media": 4.0
+    },
+    {
+      "data": "2026-11-02",
+      "agente": "samaritan-notizie",
+      "lavoro": "Short 'F1: GP Messico 2026 – Antonelli, Ferrari e Verstappen'",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "fedeltà alla fonte",
+          "voto": 5,
+          "motivo": "titolo e testo seguono le pagelle di OA Sport"
+        },
+        {
+          "punto": "interesse",
+          "voto": 4,
+          "motivo": "gara appena corsa; le gare sono il tema che rende di più su TikTok Motori"
+        }
+      ],
+      "media": 4.5
+    },
+    {
+      "data": "2026-11-02",
+      "agente": "samaritan-notizie",
+      "lavoro": "run del 01/11",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "affidabilità",
+          "voto": 2,
+          "motivo": "3 run fallite (10:31, 11:49, 13:32 UTC), una sola uscita nel giorno"
+        }
+      ],
+      "media": 2.0
+    },
+    {
+      "data": "2026-11-02",
+      "agente": "redazione",
+      "lavoro": "bozze del 01/11",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "fonti",
+          "voto": 4,
+          "motivo": "3 bozze con fonti; BioWare verificata (chiusura confermata da più testate il 22/10) ma la notizia è di 10 giorni fa"
+        }
+      ],
+      "media": 4.0
     }
   ]
 }
