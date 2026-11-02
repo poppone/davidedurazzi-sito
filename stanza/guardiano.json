@@ -1,9 +1,9 @@
 {
-  "aggiornato": "2026-11-01T11:51+00:00",
+  "aggiornato": "2026-11-02T13:30+00:00",
   "riassunto": {
-    "ok": 26,
+    "ok": 27,
     "attenzione": 0,
-    "rotto": 1,
+    "rotto": 0,
     "non controllato": 1
   },
   "controlli": [
@@ -46,13 +46,13 @@
     {
       "nome": "Token del bot della chat Twitch",
       "esito": "ok",
-      "messaggio": "valido, scade tra 47 giorni",
+      "messaggio": "valido, scade tra 46 giorni",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Benzina nella zona di Davide",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-25: success",
+      "messaggio": "ultima esecuzione del 2026-11-01: success",
       "rimedio": ""
     },
     {
@@ -70,7 +70,7 @@
     {
       "nome": "davidedurazzi-sito · Finch su Discord",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-01: success",
+      "messaggio": "ultima esecuzione del 2026-11-02: success",
       "rimedio": ""
     },
     {
@@ -82,13 +82,13 @@
     {
       "nome": "davidedurazzi-sito · Guardiano delle chiavi",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-31: success",
+      "messaggio": "ultima esecuzione del 2026-11-01: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Messaggi privati Instagram",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-31: success",
+      "messaggio": "ultima esecuzione del 2026-11-02: success",
       "rimedio": ""
     },
     {
@@ -100,19 +100,19 @@
     {
       "nome": "davidedurazzi-sito · Pubblica bozze approvate",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-01: success",
+      "messaggio": "ultima esecuzione del 2026-11-02: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Redazione del mattino",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-31: success",
+      "messaggio": "ultima esecuzione del 2026-11-02: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Rinnova token Instagram",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-15: success",
+      "messaggio": "ultima esecuzione del 2026-11-01: success",
       "rimedio": ""
     },
     {
@@ -124,13 +124,13 @@
     {
       "nome": "samaritan_v2 · Pulizia copie dei video",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-01: success",
+      "messaggio": "ultima esecuzione del 2026-11-02: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan_v2 · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-01: success",
+      "messaggio": "ultima esecuzione del 2026-11-02: success",
       "rimedio": ""
     },
     {
@@ -147,9 +147,9 @@
     },
     {
       "nome": "samaritan-notizie · Samaritan Auto-Poster",
-      "esito": "rotto",
-      "messaggio": "l'ultima esecuzione del 2026-11-01 è fallita",
-      "rimedio": "Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/41297831715"
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-11-02: success",
+      "rimedio": ""
     },
     {
       "nome": "samaritan-notizie · Test",
