@@ -1,59 +1,6 @@
 [
   {
-    "approvato": true,
-    "scartare": false,
-    "slug": "gta-6-sondaggio-su-quanto-i-fan-sacrificherebbero-per-giocarci-20261103",
-    "titolo": "GTA 6: sondaggio su quanto i fan sacrificherebbero per giocarci",
-    "sezione": "gaming",
-    "rubrica": "contraddittorio",
-    "data": "2026-11-03",
-    "sommario": "Un sondaggio di Spaziogames misura l'attesa per il nuovo capitolo di Rockstar. I fan dichiarano di essere disposti a grandi rinunce per avere il gioco in anticipo.",
-    "testo": [
-      "Secondo Spaziogames, l'attesa per Grand Theft Auto 6 sta entrando nella fase più intensa. La testata ha pubblicato un sondaggio che prova a quantificare quanto i giocatori sarebbero disposti a sacrificare per mettere le mani sul titolo prima del lancio ufficiale.",
-      "I risultati mostrano un livello di coinvolgimento elevato, con risposte che indicano la volontà di rinunciare ad aspetti personali pur di giocare in anticipo. Questo dato riflette l'interesse della community per l'uscita del nuovo capitolo della saga.",
-      "Intanto, Gamereactor riporta che Rockstar Games ha condiviso 12 nuove immagini del gioco. I dettagli provengono dal numero di novembre 2026 della rivista Edge, che include una dimostrazione estesa curata da Rob Nelson, co-responsabile dello studio.",
-      "Tra i sistemi di gioco mostrati ci sono nuove dinamiche con la polizia e una struttura narrativa che reagisce alle azioni del giocatore. Questi elementi suggeriscono un'evoluzione significativa rispetto ai precedenti episodi della serie."
-    ],
-    "fonti": [
-      {
-        "nome": "Spaziogames: GTA 6, l’hype è folle: c’è chi rinuncerebbe persino al proprio animale",
-        "url": "https://www.spaziogames.it/notizie/gta-6-lhype-e-folle-ce-chi-rinuncerebbe-persino-al-proprio-animale"
-      },
-      {
-        "nome": "Gamereactor: I nuovi sistemi di GTA 6: polizia che ti ricorda e una storia che reagisce",
-        "url": "https://www.gamereactor.it/i-nuovi-sistemi-di-gta-6-polizia-che-ti-ricorda-e-una-storia-che-reagisce/"
-      }
-    ],
-    "nota_critico": [],
-    "domande_live": [
-      "Quanto saresti disposto a sacrificare per giocare a GTA 6 in anticipo?",
-      "Quali sono i sistemi di gioco che ti incuriosiscono di più?",
-      "Cosa aspetti dalla storia e dai personaggi del nuovo capitolo?"
-    ],
-    "acquisto": {
-      "tipo": "gioco",
-      "nome": "Grand Theft Auto 6"
-    },
-    "domanda": "Saresti disposto a rinunciare al tuo animale domestico pur di ottenere GTA 6 in anticipo?",
-    "tesi": {
-      "titolo": "Sì",
-      "punti": [
-        "L'hype intorno a GTA 6 è così forte che, secondo Spaziogames, alcuni dichiarerebbero di rinunciare al proprio animale domestico per ottenerlo in anticipo.",
-        "GTA 6 introdurrà meccaniche nuove, come una polizia che reagisce alle azioni del giocatore e una trama dinamica, come riportato da Gamereactor, rendendo il gioco più immersivo.",
-        "Avere il gioco prima di tutti permette di sperimentare le novità in esclusiva, condividere le impressioni subito e soddisfare il desiderio di essere tra i primi."
-      ]
-    },
-    "antitesi": {
-      "titolo": "No",
-      "punti": [
-        "Il legame con l'animale domestico è una fonte importante di benessere emotivo; rinunciarvi per un videogioco, per quanto atteso, potrebbe compromettere la salute mentale.",
-        "GTA 6 non è ancora disponibile e non esistono conferme su versioni anticipate; cedere un animale per un beneficio incerto rischia di essere inutile.",
-        "Abbandonare un essere vivente per un prodotto di intrattenimento è eticamente discutibile: la responsabilità verso il proprio animale supera l'interesse per il gioco, anche se l'hype è forte."
-      ]
-    }
-  },
-  {
-    "approvato": true,
+    "approvato": false,
     "scartare": false,
     "slug": "l-ai-guida-i-radiotelescopi-di-seti-nella-caccia-agli-alieni-20261103",
     "titolo": "L'AI guida i radiotelescopi di SETI nella caccia agli alieni",
