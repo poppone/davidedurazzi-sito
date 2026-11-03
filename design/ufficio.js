@@ -30,17 +30,17 @@ const bt=$("#box-todo");if(bt)bt.hidden=true;
 $("#agg").textContent="Agenti dalla pagina L'azienda. Note del giorno scritte da Finch"+(DATI.aggiornato?" il "+DATI.aggiornato:"")+". Il fringuello è Finch, il Direttore: un agente AI.";
 $("#legenda").innerHTML=Object.entries(COLORI).map(([n,c])=>`<span><i style="background:${c}"></i>${esc(n)}</span>`).join("")+`<span><i style="background:var(--ok)"></i>Schermo verde: attivo</span><span><i style="background:var(--prova)"></i>Schermo giallo: in prova</span>`;
 
-const scheda=$("#scheda");
+const scheda=$("#scheda");const X='<button class="x" type="button" id="b-x" aria-label="Chiudi">×</button>';
+function apri(){scheda.classList.add("aperta");scheda.setAttribute("aria-hidden","false");$("#sugg").classList.add("via");const x=$("#b-x");if(x)x.onclick=()=>vistaInsieme()}
+function chiudi(){scheda.classList.remove("aperta");scheda.setAttribute("aria-hidden","true")}
 const ETI={attivo:"Attivo",prova:"In prova"};
 function schedaAgente(a){scheda.innerHTML=`<div class="reparto"><i style="background:${COLORI[a.reparto]}"></i>${esc(a.reparto)}</div><h2>${esc(a.nome)}</h2><div><span class="pill ${a.stato}">${ETI[a.stato]||a.stato}</span></div>
  <dl><div><dt>Cosa fa</dt><dd>${esc(a.ruolo)}</dd></div><div><dt>Turno</dt><dd>${esc(a.turno)}</dd></div>
- <div><dt>Oggi</dt><dd class="oggi">${a.oggi?esc(a.oggi):'<span class="vuoto">Nessuna nota nel diario di oggi.</span>'}</dd></div></dl><button class="chiudi" type="button" id="b-chiudi">Torna alla vista d'insieme</button>`;
- $("#b-chiudi").onclick=()=>vistaInsieme()}
+ <div><dt>Oggi</dt><dd class="oggi">${a.oggi?esc(a.oggi):'<span class="vuoto">Nessuna nota nel diario di oggi.</span>'}</dd></div></dl>`+X;apri()}
 function schedaFinch(){const f=DATI.finch;scheda.innerHTML=`<div class="reparto"><i style="background:${COLORI.Direzione}"></i>Direzione</div><h2>${esc(f.nome)}</h2><div><span class="pill capo">Il capo</span></div>
- <dl><div><dt>Cosa fa</dt><dd>${esc(f.ruolo)}</dd></div><div><dt>Turno</dt><dd>${esc(f.turno)}</dd></div><div><dt>Oggi</dt><dd class="oggi">${f.oggi?esc(f.oggi):'<span class="vuoto">Nessuna nota oggi.</span>'}</dd></div></dl>`}
+ <dl><div><dt>Cosa fa</dt><dd>${esc(f.ruolo)}</dd></div><div><dt>Turno</dt><dd>${esc(f.turno)}</dd></div><div><dt>Oggi</dt><dd class="oggi">${f.oggi?esc(f.oggi):'<span class="vuoto">Nessuna nota oggi.</span>'}</dd></div></dl>`+X;apri()}
 function schedaDavide(){const d=DATI.davide,o=oraRoma(),qui=o.h>=4&&o.h<7;scheda.innerHTML=`<div class="reparto"><i style="background:${COLORI.Direzione}"></i>Direzione</div><h2>${esc(d.nome)}</h2><div><span class="pill umano">${qui?"In ufficio adesso":"Fuori ufficio"}</span></div>
- <dl><div><dt>Ruolo</dt><dd>${esc(d.ruolo)}</dd></div><div><dt>Come lavora</dt><dd>${esc(d.compiti)}</dd></div><div><dt>Oggi</dt><dd class="oggi">${d.oggi?esc(d.oggi):'<span class="vuoto">Nessuna nota oggi.</span>'}</dd></div></dl>`}
-schedaFinch();
+ <dl><div><dt>Ruolo</dt><dd>${esc(d.ruolo)}</dd></div><div><dt>Come lavora</dt><dd>${esc(d.compiti)}</dd></div><div><dt>Oggi</dt><dd class="oggi">${d.oggi?esc(d.oggi):'<span class="vuoto">Nessuna nota oggi.</span>'}</dd></div></dl>`+X;apri()}
 
 /* ---------- 3D ---------- */
 if(!window.THREE){document.querySelector(".scena").insertAdjacentHTML("beforeend",'<div class="errore">La scena 3D non si è caricata. Ricarica la pagina.</div>');return}
@@ -140,6 +140,13 @@ function persona(maglia,pelle,capelli){const g=new THREE.Group();
  const gS=capsula(.1,.36,mat.sedia),gD=capsula(.1,.36,mat.sedia);gS.position.set(-.13,.62,-.22);gD.position.set(.13,.62,-.22);gS.rotation.x=gD.rotation.x=-1.45;g.add(gS);g.add(gD);
  return {g,testa,bS,bD,gS,gD,corpo}}
 const agenti=[];
+const ICONE={"Redazione":"✎","Video":"▶","Commerciale":"€","Amministrazione":"✓","Social e community":"♥"};
+const texNuvola={};
+function nuvola(rep){if(texNuvola[rep])return texNuvola[rep];const c=document.createElement("canvas");c.width=256;c.height=256;const g=c.getContext("2d");
+ g.fillStyle="#ffffff";g.beginPath();g.arc(128,110,86,0,Math.PI*2);g.fill();g.beginPath();g.moveTo(96,186);g.lineTo(128,236);g.lineTo(150,180);g.closePath();g.fill();
+ g.fillStyle=COLORI[rep];g.font="700 110px Archivo, system-ui, sans-serif";g.textAlign="center";g.textBaseline="middle";g.fillText(ICONE[rep]||"…",128,116);
+ const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;texNuvola[rep]=t;return t}
+const texZ=(function(){const c=document.createElement("canvas");c.width=128;c.height=128;const g=c.getContext("2d");g.fillStyle="#cfd6ff";g.font="700 90px Archivo, sans-serif";g.textAlign="center";g.textBaseline="middle";g.fillText("z",64,70);const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;return t})();
 DATI.reparti.forEach(rep=>{const z=ZONE[rep.nome];if(!z)return;const [zx,zz,zw,zd]=z;const n=rep.agenti.length;const cols=n>4?4:2,rows=Math.ceil(n/cols);
  const col=new THREE.Color(COLORI[rep.nome]);
  rep.agenti.forEach((a,i)=>{const c=i%cols,r=(i/cols)|0;const nr=r===rows-1?n-r*cols:cols;
@@ -149,6 +156,7 @@ DATI.reparti.forEach(rep=>{const z=ZONE[rep.nome];if(!z)return;const [zx,zz,zw,z
   const p=persona(maglia,mat.pelle[h%5],mat.capelli[(h>>3)%6]);const sede=new THREE.Vector3(x,0,zP+.85);p.g.position.copy(sede);p.g.rotation.y=0;scene.add(p.g);
   const ag={nome:a[0],ruolo:a[1],stato:a[2],turno:a[3],oggi:a[4],reparto:rep.nome,p,d,sede,fase:(h%1000)/159,pos:sede.clone(),dest:null,occupato:!!a[4]};
   ag.et=etichetta(esc(a[0])+(ag.occupato?"":'<span class="z">· in pausa</span>'));
+  const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:ag.occupato?nuvola(rep.nome):texZ,transparent:true,depthWrite:false}));sp.scale.setScalar(0);sp.position.set(x+.45,2.75,zP+.85);scene.add(sp);ag.sp=sp;ag.prossima=1200+(h%4000);
   p.g.traverse(o=>{if(o.isMesh)o.userData.ag=ag});d.g.traverse(o=>{if(o.isMesh)o.userData.ag=ag});clickabili.push(p.g,d.g);agenti.push(ag)})});
 // etichette dei reparti
 const etRep=Object.entries(ZONE).map(([n,[x,z,w,d]])=>({el:etichetta(esc(n),"rep on"),v:new THREE.Vector3(x,2.9,z-d/2+.4)}));
@@ -193,7 +201,7 @@ const anello=new THREE.Mesh(new THREE.TorusGeometry(1.25,.06,10,64),new THREE.Me
 let animCam=null;
 function vaiCamera(target,zoom){animCam={t0:performance.now(),da:controls.target.clone(),a:target.clone(),z0:camera.zoom,z1:zoom}}
 function seleziona(ag){sel=ag;anello.visible=true;anello.position.set(ag.d.g.position.x,.06,ag.d.g.position.z+.4);schedaAgente(ag);vaiCamera(new THREE.Vector3(ag.d.g.position.x,1,ag.d.g.position.z),2.1);coda=[];vola(sopra(ag),()=>{ag.ping=performance.now()})}
-function vistaInsieme(){sel=null;anello.visible=false;schedaFinch();vaiCamera(new THREE.Vector3(0,0,0),1)}
+function vistaInsieme(){sel=null;anello.visible=false;chiudi();vaiCamera(new THREE.Vector3(0,0,0),1)}
 const ray=new THREE.Raycaster(),mouse=new THREE.Vector2();let giu=null;
 function colpisci(e){const r=canvas.getBoundingClientRect();mouse.set(((e.clientX-r.left)/r.width)*2-1,-((e.clientY-r.top)/r.height)*2+1);ray.setFromCamera(mouse,camera);const h=ray.intersectObjects(clickabili,true)[0];return h?h.object.userData.ag:null}
 canvas.addEventListener("pointerdown",e=>{giu={x:e.clientX,y:e.clientY}});
@@ -208,6 +216,7 @@ let salto=0;
 /* ---------- comandi ---------- */
 let caffe=0,notte=false;
 $("#b-giro").onclick=()=>{vistaInsieme();giro()};
+addEventListener("keydown",e=>{if(e.key==="Escape")vistaInsieme()});
 $("#b-caffe").onclick=()=>{caffe=performance.now();agenti.forEach((a,i)=>{const ang=i/agenti.length*Math.PI*2;a.dest=CAFFE.clone().add(new THREE.Vector3(Math.cos(ang)*(2.4+(i%3)*.7),0,Math.sin(ang)*(1.9+(i%3)*.6)))});vola(CAFFE.clone().setY(1.6))};
 $("#b-notte").onclick=e=>{notte=!notte;e.currentTarget.setAttribute("aria-pressed",String(notte));applicaLuce()};
 $("#b-vista").onclick=vistaInsieme;
@@ -237,10 +246,20 @@ function loop(){
    p.bS.rotation.x=Math.sin(t*10)*.6;p.bD.rotation.x=-Math.sin(t*10)*.6;p.gS.rotation.x=-.2+Math.sin(t*10)*.5;p.gD.rotation.x=-.2-Math.sin(t*10)*.5;p.gS.position.y=p.gD.position.y=.5;p.corpo.position.y=1.2;p.testa.position.y=1.86}
   else{ p.g.position.copy(meta);
    if(!a.dest){p.g.rotation.y=0;p.gS.rotation.x=p.gD.rotation.x=-1.45;p.gS.position.y=p.gD.position.y=.62;p.corpo.position.y=1.12;p.testa.position.y=1.78;
-    if(a.occupato&&!ridotto){p.bS.rotation.x=-1.1+Math.sin(t*14+a.fase)*.12;p.bD.rotation.x=-1.1+Math.cos(t*13+a.fase)*.12;p.testa.rotation.x=Math.sin(t*1.3+a.fase)*.05;p.testa.rotation.y=Math.sin(t*.7+a.fase)*.15}
-    else{p.bS.rotation.x=p.bD.rotation.x=-.2;p.testa.rotation.x=.35+Math.sin(t*1.2+a.fase)*.04;p.testa.rotation.y=0}}
+    if(a.occupato&&!ridotto){const batt=Math.sin(t*16+a.fase),batt2=Math.sin(t*16+a.fase+2.1);
+     p.bS.rotation.x=-1.15+batt*.22;p.bD.rotation.x=-1.15+batt2*.22;p.bS.position.y=1.18+Math.max(0,batt)*.05;p.bD.position.y=1.18+Math.max(0,batt2)*.05;
+     const pensa=Math.sin(t*.45+a.fase)>.75;p.testa.rotation.x=pensa?-.25:.12+Math.sin(t*1.6+a.fase)*.06;p.testa.rotation.y=pensa?Math.sin(t*.8)*.4:Math.sin(t*1.1+a.fase)*.12;p.corpo.rotation.x=.12;
+     p.corpo.position.y=1.12+Math.sin(t*2.2+a.fase)*.015}
+    else{p.bS.rotation.x=p.bD.rotation.x=-.2;p.bS.position.y=p.bD.position.y=1.18;p.corpo.rotation.x=0;p.testa.rotation.x=.35+Math.sin(t*1.2+a.fase)*.04;p.testa.rotation.y=0}}
    else{p.g.lookAt(CAFFE.x,0,CAFFE.z);p.bS.rotation.x=p.bD.rotation.x=0;p.gS.rotation.x=p.gD.rotation.x=0;p.testa.rotation.x=Math.sin(t*2+a.fase)*.08}}
   if(a.ping&&now-a.ping<1100){const k=(now-a.ping)/1100;p.testa.position.y+=Math.sin(k*Math.PI)*.25}
+  // nuvoletta: chi lavora la mostra ogni tanto, chi dorme fa le z
+  if(!ridotto&&!a.dest){a.prossima-=dt*1000;
+   if(a.prossima<=0){a.mostra=now;a.prossima=a.occupato?2600+Math.random()*4500:4000+Math.random()*3000}
+   if(a.mostra){const k=(now-a.mostra)/(a.occupato?1600:2200);if(k>=1){a.mostra=0;a.sp.scale.setScalar(0)}
+    else{const sc=a.occupato?(k<.15?k/.15:k>.85?(1-k)/.15:1):1-k*.6;const s=.9*(a.occupato?1:.6)*Math.max(0,sc);a.sp.scale.set(s,s,1);
+     a.sp.position.set(p.g.position.x+.45,2.75+(a.occupato?Math.sin(now/300)*.04:k*.9),p.g.position.z);a.sp.material.opacity=a.occupato?1:1-k}}}
+  else a.sp.scale.setScalar(0);
   // schermo che scorre
   a.d.sm.emissiveIntensity=(notte||oraRoma().h>=19?1.5:.85)+(a.occupato?Math.sin(t*3+a.fase)*.15:-.3);
   const vis=hover===a||sel===a||(a.ping&&now-a.ping<1600);a.et.classList.toggle("on",vis);a.et.classList.toggle("sel",sel===a);

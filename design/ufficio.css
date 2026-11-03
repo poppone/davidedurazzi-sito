@@ -29,7 +29,11 @@
 .uf button:focus-visible{outline:2px solid var(--arancio);outline-offset:2px}
 .uf button[aria-pressed="true"]{background:var(--blu);border-color:var(--blu)}
 .uf .aiuto{margin-left:auto;font:400 12px var(--mono);color:rgba(238,241,255,.7);background:rgba(11,16,34,.55);padding:6px 10px;border-radius:8px}
-.uf .scheda{position:absolute;top:12px;right:12px;width:min(330px,calc(100% - 24px));background:rgba(12,18,40,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px 18px;display:grid;gap:10px;max-height:calc(100% - 80px);overflow:auto}
+.uf .scheda{position:absolute;top:12px;right:12px;width:min(340px,calc(100% - 24px));background:rgba(12,18,40,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px 18px;display:grid;gap:10px;max-height:calc(100% - 80px);overflow:auto;transform:translateX(calc(100% + 24px));opacity:0;pointer-events:none;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s;box-shadow:0 20px 60px -20px rgba(0,0,0,.8)}
+.uf .scheda.aperta{transform:none;opacity:1;pointer-events:auto}
+.uf .scheda .x{position:absolute;top:10px;right:10px;width:30px;height:30px;padding:0;border-radius:50%;font-size:16px;line-height:1;display:grid;place-items:center}
+.uf .suggerimento{position:absolute;top:14px;right:14px;font:400 12px var(--mono);color:rgba(238,241,255,.75);background:rgba(11,16,34,.55);padding:6px 10px;border-radius:8px;pointer-events:none;transition:opacity .3s}
+.uf .suggerimento.via{opacity:0}
 .uf .scheda h2{font-weight:800;font-stretch:112%;font-size:22px;margin:0;line-height:1.15}
 .uf .reparto{font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
 .uf .reparto i{width:10px;height:10px;border-radius:3px;display:inline-block}
@@ -43,11 +47,11 @@
 .uf dd{margin:2px 0 0}
 .uf .oggi{background:rgba(232,90,22,.12);border:1px solid rgba(232,90,22,.35);padding:9px 11px;border-radius:10px}
 .uf .vuoto{color:var(--muted);font-style:italic}
-.uf .chiudi{justify-self:start;font-size:12px;padding:5px 11px}
 @media (max-width:760px){.uf .scena{display:flex;flex-direction:column}
 .uf #ufTela{height:min(62vw,420px)}
 .uf .hud{position:static;padding:10px 12px;order:2}
-.uf .scheda{position:static;width:auto;max-height:none;border-radius:0;border-width:1px 0 0;order:3}
+.uf .scheda{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:70vh;border-radius:18px 18px 0 0;border-width:1px 0 0;transform:translateY(105%);padding-bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:30}
+.uf .suggerimento{display:none}
 .uf .etichette{height:min(62vw,420px);inset:auto 0 auto 0;top:0}
 .uf .aiuto{display:none}
 }
@@ -65,4 +69,6 @@
 .uf .legenda span{display:inline-flex;align-items:center;gap:6px}
 .uf .legenda i{width:10px;height:10px;border-radius:3px}
 .uf footer{color:var(--muted);font-size:12px}
+@media (prefers-reduced-motion:reduce){.uf .scheda{transition:none}
+}
 .uf .errore{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted)}
