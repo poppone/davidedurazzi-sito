@@ -1,5 +1,58 @@
 [
   {
+    "slug": "gta-6-interni-di-nuova-generazione-e-polizia-reattiva-20261102",
+    "titolo": "GTA 6: interni di nuova generazione e polizia reattiva",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-11-03",
+    "sommario": "Rockstar ha mostrato che Grand Theft Auto VI presenterà interni molto più curati e un sistema di polizia che risponde in tempo reale alle azioni del giocatore.",
+    "testo": [
+      "Aaron Garbut, co‑responsabile di Rockstar North, ha dichiarato che gli interni di GTA 6 saranno «di un ordine di grandezza» superiori rispetto ai titoli precedenti, secondo quanto riportato da Spaziogames.",
+      "Rob Nelson, co‑responsabile dello studio, ha illustrato, tramite la rivista Edge di novembre 2026, nuovi sistemi di gioco: una polizia che ricorda le azioni del giocatore e una narrazione che reagisce alle scelte, come evidenziato da Gamereactor.",
+      "Queste novità sono importanti perché promettono un livello di immersione più alto: ambienti più dettagliati e un’interazione più dinamica con le forze dell’ordine possono cambiare il modo in cui i giocatori vivono la città virtuale.",
+      "Rimane ancora da capire come gli interni più complessi influenzeranno le prestazioni tecniche, quali comportamenti specifici adotterà la polizia e in che misura la storia si adatterà alle decisioni del giocatore, aspetti che saranno probabilmente chiariti nei prossimi aggiornamenti di Rockstar."
+    ],
+    "fonti": [
+      {
+        "nome": "Spaziogames: GTA 6, Rockstar svela cosa si nasconde nelle case",
+        "url": "https://www.spaziogames.it/notizie/gta-6-rockstar-svela-cosa-si-nasconde-nelle-case"
+      },
+      {
+        "nome": "Gamereactor: I nuovi sistemi di GTA 6: polizia che ti ricorda e una storia che reagisce",
+        "url": "https://www.gamereactor.it/i-nuovi-sistemi-di-gta-6-polizia-che-ti-ricorda-e-una-storia-che-reagisce/"
+      }
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Grand Theft Auto VI"
+    },
+    "pubblicato": true,
+    "pubblicato_il": "2026-11-03T07:55:46+01:00"
+  },
+  {
+    "slug": "tesla-emergency-drive-away-costi-inattesi-e-polemiche-per-gli-utenti-20261102",
+    "titolo": "Tesla Emergency Drive Away: costi inattesi e polemiche per gli utenti",
+    "sezione": "motori",
+    "rubrica": "",
+    "data": "2026-11-03",
+    "sommario": "Un semplice tocco al pulsante di emergenza può costare fino a 480 € e obbligare il proprietario a un intervento in officina, secondo InsideEVs Italia.",
+    "testo": [
+      "Secondo InsideEVs Italia, un proprietario di una Tesla ha attivato per errore la funzione Emergency Drive Away, premendo il pulsante dedicato. L'evento ha scatenato il blocco del veicolo e ha richiesto un intervento di assistenza obbligatorio, con una spesa di circa 480 € per il cliente.",
+      "La vicenda è significativa perché dimostra come un'azione apparentemente innocua possa generare costi elevati e disagi per gli automobilisti, soprattutto in un contesto dove le auto elettriche sono sempre più diffuse e le funzioni software sono complesse da gestire.",
+      "Rimane ancora da capire quali siano le politiche di Tesla riguardo a questi interventi: se i costi sono sempre a carico del proprietario, se esistono opzioni di rimborso o se la procedura di attivazione può essere semplificata per evitare errori accidentali.",
+      "Inoltre, non è chiaro quanto la casa automobilistica stia valutando modifiche al design del pulsante o alla comunicazione delle conseguenze di un uso improprio, per ridurre il rischio di ulteriori controversie con gli utenti."
+    ],
+    "fonti": [
+      {
+        "nome": "InsideEVs Italia: Attento a quel pulsante! Se lo tocchi rischi di pagare 480 euro",
+        "url": "https://insideevs.it/news/814011/tesla-emergency-drive-away-succede/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true,
+    "pubblicato_il": "2026-11-03T07:55:46+01:00"
+  },
+  {
     "slug": "bioware-chiude-i-battenti-addio-al-nuovo-capitolo-di-mass-effect-20261101",
     "titolo": "BioWare chiude i battenti: addio al nuovo capitolo di Mass Effect",
     "sezione": "gaming",
