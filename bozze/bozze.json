@@ -1,7 +1,7 @@
 [
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "vulnerabilita-di-chatgpt-i-link-condivisi-esponevano-le-chat-private-20261102",
     "titolo": "Vulnerabilità di ChatGPT: i link condivisi esponevano le chat private",
     "sezione": "tecnologia",
@@ -49,7 +49,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "tesla-emergency-drive-away-costi-inattesi-e-polemiche-per-gli-utenti-20261102",
     "titolo": "Tesla Emergency Drive Away: costi inattesi e polemiche per gli utenti",
@@ -78,7 +78,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "gta-6-interni-di-nuova-generazione-e-polizia-reattiva-20261102",
     "titolo": "GTA 6: interni di nuova generazione e polizia reattiva",
