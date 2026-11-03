@@ -1,5 +1,51 @@
 [
   {
+    "slug": "carenza-di-ipad-e-mac-per-la-crisi-dei-chip-cosa-significa-per-i-consu-20261103",
+    "titolo": "Carenza di iPad e Mac per la crisi dei chip: cosa significa per i consumatori",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-11-03",
+    "sommario": "Secondo HDblog, Apple ha confermato difficoltà di approvvigionamento di iPad e Mac durante le festività, legate alla crisi globale dei chip. La scarsità colpisce chi cerca regali o nuovi dispositivi per lavoro e studio.",
+    "testo": [
+      "Secondo HDblog, la casa di Cupertino ha ammesso che le scorte di iPad e Mac sono più ristrette del solito durante il periodo festivo, a causa della crisi dei semiconduttori che ha rallentato la produzione.",
+      "Questo problema interessa direttamente i consumatori: molti cercano iPad per studio o intrattenimento e Mac per lavoro professionale, e la mancanza di disponibilità rende difficile acquistare regali o rinnovare il proprio hardware.",
+      "Rimane da capire quando la produzione di chip tornerà a livelli sufficienti per soddisfare la domanda di Apple, se l’azienda riuscirà a incrementare la produzione dei suoi dispositivi e quali saranno le ripercussioni sui prezzi al dettaglio.",
+      "Nel frattempo, gli esperti suggeriscono di monitorare le offerte, valutare modelli di generazione precedente o considerare alternative di altri brand, finché la situazione non si stabilizza."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: iPad e Mac più difficili da trovare durante le feste? Colpa della crisi dei chip",
+        "url": "https://www.hdblog.it/apple/articoli/n675758/apple-crisi-chip-limiti-ipad-mac-forniture/"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true,
+    "pubblicato_il": "2026-11-03T16:34:03+01:00"
+  },
+  {
+    "slug": "l-ai-guida-i-radiotelescopi-di-seti-nella-caccia-agli-alieni-20261103",
+    "titolo": "L'AI guida i radiotelescopi di SETI nella caccia agli alieni",
+    "sezione": "ai",
+    "rubrica": "",
+    "data": "2026-11-03",
+    "sommario": "Secondo TuttoTech, agenti di intelligenza artificiale stanno ora guidando l'Allen Telescope Array. Il sistema gestisce puntamento e analisi dati in tempo reale, segnando un nuovo capitolo per la ricerca di vita extraterrestre.",
+    "testo": [
+      "Secondo TuttoTech, il SETI Institute e Breakthrough Listen hanno integrato agenti di intelligenza artificiale nell'Allen Telescope Array. Questi sistemi autonomi si occupano ora di puntare il telescopio, pulire i dati e analizzare i segnali in tempo reale, riducendo la necessità di intervento umano costante.",
+      "Questa evoluzione conta per tutti perché dimostra come l'AI possa gestire compiti complessi e ripetitivi, liberando gli scienziati per analisi più profonde. Se l'automazione riesce a monitorare lo spazio più velocemente, aumentano le probabilità di non perdere segnali deboli o transitori provenienti da altre civiltà.",
+      "Un punto di svolta citato dalla fonte è il primo rilevamento di una pulsar firmato dall'intelligenza artificiale. Questo evento suggerisce che i modelli di machine learning sono ormai affidabili abbastanza da identificare fenomeni astronomici reali, non solo rumore di fondo.",
+      "Resta da capire quanto questi agenti possano operare in autonomia totale senza supervisione umana. Inoltre, è necessario verificare se l'AI possa distinguere con certezza assoluta un segnale artificiale alieno da interferenze naturali o terrestri sempre più complesse."
+    ],
+    "fonti": [
+      {
+        "nome": "TuttoTech: SETI, l’AI guida il radiotelescopio: agenti autonomi a caccia di civiltà aliene",
+        "url": "https://www.tuttotech.net/news/2026/11/03/seti-ai-radiotelescopio-agenti-autonomi-civilta-aliene.html"
+      }
+    ],
+    "acquisto": null,
+    "pubblicato": true,
+    "pubblicato_il": "2026-11-03T16:34:03+01:00"
+  },
+  {
     "slug": "gta-6-sondaggio-su-quanto-i-fan-sacrificherebbero-per-giocarci-20261103",
     "titolo": "GTA 6: sondaggio su quanto i fan sacrificherebbero per giocarci",
     "sezione": "gaming",
@@ -44,7 +90,7 @@
       ]
     },
     "pubblicato": true,
-    "pubblicato_il": "2026-11-03T16:32:16+01:00"
+    "pubblicato_il": "2026-11-03T16:34:03+01:00"
   },
   {
     "slug": "gta-6-interni-di-nuova-generazione-e-polizia-reattiva-20261102",
