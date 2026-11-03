@@ -1,6 +1,6 @@
 {
   "_nota": "Pagina /consigli (link in bio). Per ogni voce: 'amazon' = testo da cercare su Amazon (usa il tag di config.js), oppure 'url' = link diretto. Gruppi con 'attivo': false non si vedono. Quando hai prodotti tuoi veri, metti nome e modello esatti in 'amazon' e scrivi nel 'perche' perché li usi.",
-  "aggiornato": "2026-10-27",
+  "aggiornato": "2026-11-03",
   "gruppi": [
     {
       "id": "auto",
@@ -103,13 +103,19 @@
     {
       "id": "online",
       "titolo": "Per navigare e giocare online",
-      "intro": "Una VPN protegge la connessione sul Wi‑Fi pubblico e ti fa scegliere da quale paese collegarti.",
+      "intro": "Una VPN protegge la connessione sul Wi‑Fi pubblico e ti fa scegliere da quale paese collegarti; una eSIM ti tiene connesso all'estero senza cambiare scheda.",
       "voci": [
         {
           "nome": "NordVPN",
           "perche": "VPN per proteggere la connessione sulle reti pubbliche e cambiare regione quando serve. Link di affiliazione: se ti abboni da qui ricevo una commissione, per te il prezzo non cambia.",
           "url": "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=159138&url_id=858",
           "dove": "NordVPN"
+        },
+        {
+          "nome": "Saily (eSIM per viaggiare)",
+          "perche": "Compri i giga per il paese dove vai e li attivi dal telefono, senza SIM fisica e senza costi di roaming. È dello stesso gruppo di NordVPN. Link di affiliazione: se acquisti da qui ricevo una commissione, per te il prezzo non cambia.",
+          "url": "https://go.saily.site/aff_c?offer_id=101&aff_id=17667",
+          "dove": "Saily"
         }
       ]
     }
