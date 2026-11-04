@@ -1,7 +1,7 @@
 name: Guardiano delle chiavi
 on:
   schedule:
-    - cron: "17 5 * * *"   # ogni mattina, prima del giro di Finch delle 7:52
+    - cron: "10 4 * * *"   # 05:10 ora italiana in inverno, prima del giro di Finch delle 5:52
   workflow_dispatch:
 permissions:
   contents: write

@@ -11,7 +11,7 @@ AZ.reparti.forEach(r=>{const nome=RAGGRUPPA[r.nome]||r.nome;let g=reparti.find(x
  r.agenti.forEach(a=>g.agenti.push([a.nome,a.ruolo,STATI[a.stato]||"attivo",a.turno||"",note[a.nome]||""]))});
 const DATI={aggiornato:(UF&&UF.aggiornato)||"",
  davide:{nome:AZ.umano.nome,ruolo:AZ.umano.ruolo,compiti:AZ.umano.compiti,oggi:note["Davide"]||""},
- finch:{nome:"Finch",ruolo:"Il Direttore: coordina gli agenti, approva le bozze seguendo il Critico, tiene il diario",turno:"Ogni giorno alle 7:52",oggi:note["Finch"]||""},
+ finch:{nome:"Finch",ruolo:"Il Direttore: coordina gli agenti, approva le bozze seguendo il Critico, tiene il diario",turno:"Ogni giorno alle 5:52, resoconto a Davide entro le 6",oggi:note["Finch"]||""},
  reparti:reparti.filter(r=>["Redazione","Video","Commerciale","Amministrazione","Social e community"].includes(r.nome)),
  diario:(UF&&UF.diario)||[],todo:[]};
 

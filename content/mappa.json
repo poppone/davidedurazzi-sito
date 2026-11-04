@@ -36,7 +36,7 @@
   },
   "direttore": {
     "nome": "Finch, il Direttore",
-    "cosa": "Ogni mattina alle 7:52 legge cosa ha fatto ogni agente, lo fa votare dai revisori, apre le correzioni e mi porta le decisioni in un posto solo. Mi manda anche un vocale con il riassunto.",
+    "cosa": "Ogni mattina alle 5:52 legge cosa ha fatto ogni agente, lo fa votare dai revisori, apre le correzioni e mi porta le decisioni in un posto solo. Mi manda anche un vocale con il riassunto.",
     "sostituisce": "Un responsabile che controlla il lavoro di tutti e fa da filtro prima che arrivi a me",
     "autonomia": "assistito",
     "revisori": [
