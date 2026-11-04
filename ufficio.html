@@ -18,7 +18,7 @@
 <meta property="og:locale" content="it_IT">
 <meta property="og:url" content="https://www.davidedurazzi.it/ufficio">
 <meta property="og:title" content="L'ufficio degli agenti AI — Davide Durazzi">
-<meta property="og:description" content="Finch e gli agenti AI al lavoro, in pixel art.">
+<meta property="og:description" content="Finch e gli agenti AI al lavoro, in un ufficio 3D animato: consegne, chiacchiere e il giro del mattino.">
 <meta property="og:image" content="https://www.davidedurazzi.it/assets/logo-512.png">
 <meta name="twitter:card" content="summary">
 </head>
@@ -37,7 +37,7 @@
     <div>
       <p class="eyebrow">davidedurazzi.it · redazione AI</p>
       <h1>L'ufficio di <em>Finch</em></h1>
-      <p class="sub">Una squadra di agenti AI, un fringuello che li coordina e un solo umano, che arriva alle 4 del mattino. Tocca un agente per sapere cosa fa.</p>
+      <p class="sub">Uno studio che non spegne mai le luci: agenti AI alle scrivanie, un fringuello che li coordina e un solo umano, che arriva alle 4 del mattino. Guardali passarsi il lavoro da una scrivania all'altra, e tocca un agente per sapere cosa fa.</p>
     </div>
     <div class="orologio"><b id="ora">--:--</b><span id="data">Roma</span></div>
   </header>
@@ -47,11 +47,14 @@
     <div class="etichette" id="etichette"></div>
     <aside class="scheda" id="scheda" aria-live="polite" aria-hidden="true"></aside>
     <div class="suggerimento" id="sugg">Tocca un agente, Finch o la scrivania di Davide</div>
+    <div class="adesso" id="adesso" aria-hidden="true"><i></i><span></span></div>
     <div class="hud" role="toolbar" aria-label="Comandi dell'ufficio">
       <button id="b-giro" type="button">Finch fa il giro</button>
+      <button id="b-consegne" type="button">Passaggio di consegne</button>
       <button id="b-caffe" type="button">Pausa caffè</button>
-      <button id="b-notte" type="button" aria-pressed="false">Modalità notte</button>
+      <button id="b-notte" type="button" aria-pressed="false">Modalità giorno</button>
       <button id="b-vista" type="button">Vista d'insieme</button>
+      <button id="b-musica" type="button" aria-pressed="false">♪ Musica</button>
       <span class="aiuto">Trascina per girare · rotella per zoomare</span>
     </div>
   </div>
@@ -75,6 +78,13 @@
 <script src="/design/social.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script src="/design/musica.js"></script>
 <script src="/design/ufficio.js"></script>
 </body>
 </html>
