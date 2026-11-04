@@ -1688,6 +1688,49 @@
         }
       ],
       "media": 4.0
+    },
+    {
+      "data": "2026-11-04",
+      "agente": "samaritan-motori",
+      "lavoro": "Short del 03/11 (Stellantis in Borsa, MotoGP Qatar, Antonelli campione)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "argomenti",
+          "voto": 4,
+          "motivo": "tre temi di attualità motori, Antonelli è la notizia del giorno"
+        },
+        {
+          "punto": "titoli",
+          "voto": 4,
+          "motivo": "titoli in linea con la fonte, niente clickbait"
+        },
+        {
+          "punto": "numeri",
+          "voto": 4,
+          "motivo": "uscite del 03/11 su TikTok tra 690 e 770 visualizzazioni; Ducati 50 like, Francia 30, Stellantis 6"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-11-04",
+      "agente": "finch",
+      "lavoro": "Reel \"L'ufficio degli agenti\" (03/11 ore 21, 4 reti)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "video",
+          "voto": 3,
+          "motivo": "senza voce (sintesi vocale bloccata), solo musica e didascalie"
+        },
+        {
+          "punto": "numeri",
+          "voto": 3,
+          "motivo": "prime 8 ore: TikTok 151 visualizzazioni e 0 like, Instagram 37 visualizzazioni e 1 like"
+        }
+      ],
+      "media": 3.0
     }
   ]
 }

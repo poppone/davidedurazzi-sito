@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-03",
+  "aggiornato": "2026-11-04T05:02:02Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1028,6 +1028,31 @@
       "dettagli": "l'ultima esecuzione del 2026-11-03 è fallita. Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/41623423159",
       "origine": "controllo del Guardiano delle chiavi",
       "volte": 5
+    },
+    {
+      "id": "2026-11-04-1",
+      "per": "davide",
+      "da": "finch",
+      "stato": "fatto",
+      "tipo": "video",
+      "titolo": "Motori in 60 secondi: i tre video del 04/11 programmati su TikTok e Instagram",
+      "dettagli": "Antonelli campione di F1 alle 10:00, Stellantis in Borsa alle 12:00, MotoGP Qatar alle 18:00. AI dichiarata su entrambe le reti.",
+      "link": "https://app.metricool.com/planner/calendar?blogId=7680380&openWithPostUuid=-4310780521979427902",
+      "origine": "delega social del 27/10",
+      "deciso": "2026-11-04T05:02:02Z",
+      "esito": "Programmati alle 5:55: Antonelli ...-4310780521979427902, Stellantis ...7715364553595109545, MotoGP ...3562239790938671865 (stesso link del planner, cambia l'uuid)."
+    },
+    {
+      "id": "2026-11-04-2",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "titolo": "Spostare redazione e Guardiano prima del giro delle 5:52",
+      "dettagli": "Da oggi Finch gira alle 5:52 (numeri alle 6, come hai chiesto). Redazione (05:00 UTC) e Guardiano (05:17 UTC) partono DOPO: le bozze le decido con un secondo passaggio alle 6:45. Proposta: redazione alle 03:30 UTC e Guardiano alle 04:10 UTC, più la scritta \"alle 7:52\" corretta nella pagina L'ufficio e nella mappa. È una PR: se la unisci, da domani tutto arriva nel giro delle 6.",
+      "azione": "PR sul sito con i due cron spostati e il testo corretto; Davide unisce.",
+      "origine": "richiesta di Davide del 03/11 (\"da oggi li porti alle 6\")",
+      "volte": 1
     }
   ]
 }

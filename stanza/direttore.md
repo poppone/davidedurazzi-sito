@@ -17,7 +17,7 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 
 **Canale motori (decisione di Davide, 20/10/2026).** samaritan-notizie ora fa "Motori in 60 secondi" (YouTube @Motoriin60secondi, 14:00 e 18:00). Il TikTok ex ZampaViva è il suo gemello: dal 27/10 lo riempie Finch via Metricool (regola 6w). Gli Short motori non sono politica: valgono le regole 6e. Obiettivo e tappe nel business plan (300 €/mese ad aprile 2027): https://claude.ai/code/artifact/70fd8431-1724-4dec-96df-ab6e09df08ab
 
-**Controlli extra spenti (20/10/2026).** I controlli delle 12:52/18:52 e quello delle 23:47 non girano più: resta solo il giro delle 7:52, dove si decidono anche le bozze (6n).
+**Controlli extra spenti (20/10/2026).** I controlli delle 12:52/18:52 e quello delle 23:47 non girano più: resta solo il giro del mattino (dal 04/11/2026 alle 5:52, prima 7:52; le bozze 6n si decidono in un secondo passaggio alle 6:45 finché redazione e Guardiano non vengono anticipati).
 
 ## Ogni giorno
 

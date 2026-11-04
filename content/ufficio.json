@@ -1,43 +1,48 @@
 {
- "_nota": "Note pubbliche del giorno per /ufficio. Le aggiorna Finch nel giro del mattino. Chiavi di 'oggi' = nomi degli agenti come in content/azienda.json, più 'Finch' e 'Davide'. Niente soldi, trattative o dati privati.",
- "aggiornato": "3 novembre 2026",
- "oggi": {
-  "Finch": "Giro delle 7:52 fatto: approvate due bozze seguendo il Critico, programmati i video motori del giorno.",
-  "Davide": "Ha mandato in revisione su Google Play la nuova versione di Ricordati.",
-  "Scout": "Ha portato le notizie del 3/11 per tecnologia, motori e gaming.",
-  "Fact-checker": "Ha controllato le 3 notizie candidate.",
-  "Redattore": "3 bozze: Tesla Emergency Drive Away, GTA 6, vulnerabilità di ChatGPT.",
-  "Critico": "Promosse Tesla e GTA 6. Bocciata ChatGPT: due frasi non erano nella fonte.",
-  "Samaritan · Motori": "Tre Short in uscita: Ducati alle 10, Francia alle 12, Stellantis alle 18.",
-  "Social": "Caroselli Instagram per gli articoli su Tesla e GTA 6.",
-  "Guardiano delle chiavi": "Controllo del mattino: un workflow da sistemare segnalato a Davide.",
-  "Chat delle dirette": "Stasera è martedì: pronto per la diretta."
- },
- "diario": [
-  [
-   "05:00",
-   "Redazione",
-   "3 bozze pronte per il giro di Finch."
-  ],
-  [
-   "07:52",
-   "Finch",
-   "Approvate Tesla e GTA 6, scartata ChatGPT."
-  ],
-  [
-   "10:00",
-   "Samaritan · Motori",
-   "Esce lo Short sulla Ducati Desmo250 EDS."
-  ],
-  [
-   "12:00",
-   "Samaritan · Motori",
-   "Esce lo Short sulle immatricolazioni in Francia."
-  ],
-  [
-   "18:00",
-   "Samaritan · Motori",
-   "Esce lo Short su Stellantis."
+  "_nota": "Note pubbliche del giorno per /ufficio. Le aggiorna Finch nel giro del mattino. Chiavi di 'oggi' = nomi degli agenti come in content/azienda.json, più 'Finch' e 'Davide'. Niente soldi, trattative o dati privati.",
+  "aggiornato": "4 novembre 2026",
+  "oggi": {
+    "Finch": "Primo giro delle 5:52: numeri del reel dell'ufficio, programmati i video motori, mail controllate. Le bozze della redazione arrivano alle 6:45.",
+    "Davide": "Ha chiesto il resoconto alle 6 e messo online il video che racconta l'ufficio.",
+    "Scout": "Porta le notizie del 4/11 appena parte la redazione.",
+    "Fact-checker": "In attesa delle notizie candidate del mattino.",
+    "Redattore": "Le 3 bozze di oggi arrivano verso le 6:30.",
+    "Critico": "Ieri ha promosso Tesla e GTA 6; oggi aspetta le nuove bozze.",
+    "Samaritan · Motori": "Tre Short in uscita: Antonelli campione alle 10, Stellantis in Borsa alle 12, MotoGP Qatar alle 18.",
+    "Social": "Il reel \"L'ufficio degli agenti\" è uscito ieri alle 21 su Instagram, TikTok, YouTube e Facebook.",
+    "Guardiano delle chiavi": "Controllo del mattino alle 6:17: ieri tutto ok tranne Pinterest, non controllato.",
+    "Chat delle dirette": "Ieri sera in chat per la diretta del martedì."
+  },
+  "diario": [
+    [
+      "05:52",
+      "Finch",
+      "Primo giro anticipato: numeri, video motori, mail."
+    ],
+    [
+      "06:00",
+      "Redazione",
+      "Partono Scout, Fact-checker, Redattore e Critico."
+    ],
+    [
+      "06:45",
+      "Finch",
+      "Decide le bozze del giorno seguendo il Critico."
+    ],
+    [
+      "10:00",
+      "Samaritan · Motori",
+      "Esce lo Short su Antonelli campione di F1."
+    ],
+    [
+      "12:00",
+      "Samaritan · Motori",
+      "Esce lo Short su Stellantis in Borsa."
+    ],
+    [
+      "18:00",
+      "Samaritan · Motori",
+      "Esce lo Short sulla MotoGP in Qatar."
+    ]
   ]
- ]
 }
