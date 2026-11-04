@@ -1,4 +1,4 @@
-/* Menu del telefono: sotto i 760px le sezioni dell'header stanno in un pannello che si apre col tasto "Menu". */
+/* Menu a tendina: le sezioni dell'header stanno in un pannello che si apre col tasto "Menu", su telefono e su PC. */
 (function () {
   var header = document.querySelector("header.top");
   var nav = header && header.querySelector("nav");
@@ -26,7 +26,6 @@
   nav.addEventListener("click", function (e) { if (e.target.closest("a")) chiudi(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") chiudi(); });
   document.addEventListener("click", function (e) { if (!header.contains(e.target)) chiudi(); });
-  matchMedia("(min-width:760px)").addEventListener("change", function (m) { if (m.matches) chiudi(); });
 
   // Segna la pagina in cui ci si trova
   var qui = location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
