@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "nissan-pixo-la-nuova-city-car-elettrica-da-19-990-euro-20261104",
     "titolo": "Nissan Pixo: la nuova city car elettrica da 19.990 euro",
@@ -28,7 +28,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "google-niente-motore-di-ricerca-scolastico-senza-intelligenza-artifici-20261104",
     "titolo": "Google: niente motore di ricerca scolastico senza intelligenza artificiale",
@@ -79,7 +79,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "gta-6-peso-record-mappa-fisica-e-nuovi-dettagli-di-gioco-20261104",
     "titolo": "GTA 6: peso record, mappa fisica e nuovi dettagli di gioco",
     "sezione": "gaming",
