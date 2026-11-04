@@ -59,7 +59,7 @@
 .uf .hud{position:static;padding:10px 12px;order:2}
 .uf .scheda{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:70vh;border-radius:18px 18px 0 0;border-width:1px 0 0;transform:translateY(105%);padding-bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:30}
 .uf .suggerimento{display:none}
-.uf .adesso{top:10px;left:10px;max-width:calc(100% - 20px);font-size:12px}
+.uf .adesso{top:auto;bottom:10px;left:10px;max-width:calc(100% - 20px);font-size:12px;transform:translateY(6px)}.uf .adesso.on{transform:none}
 .uf .etichette{height:min(62vw,420px);inset:auto 0 auto 0;top:0}
 .uf .aiuto{display:none}
 }

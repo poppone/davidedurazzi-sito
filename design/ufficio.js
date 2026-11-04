@@ -44,7 +44,7 @@ function schedaDavide(){const d=DATI.davide,o=oraRoma(),qui=o.h>=4&&o.h<7;scheda
  <dl><div><dt>Ruolo</dt><dd>${esc(d.ruolo)}</dd></div><div><dt>Come lavora</dt><dd>${esc(d.compiti)}</dd></div><div><dt>Oggi</dt><dd class="oggi">${d.oggi?esc(d.oggi):'<span class="vuoto">Nessuna nota oggi.</span>'}</dd></div></dl>`+X;apri()}
 // didascalia "adesso": racconta cosa sta succedendo nella scena
 const adesso=$("#adesso");let adessoChi=null;
-function racconta(t,chi){if(!adesso)return;if(!t){if(chi&&adessoChi&&adessoChi!==chi)return;adessoChi=null;adesso.classList.remove("on");return}adessoChi=chi||null;adesso.querySelector("span").textContent=t;adesso.classList.add("on")}
+function racconta(t,chi){if(!adesso)return;if(t&&chi==="giro"&&adessoChi&&adessoChi!=="giro")return;if(!t){if(chi&&adessoChi&&adessoChi!==chi)return;adessoChi=null;adesso.classList.remove("on");return}adessoChi=chi||null;adesso.querySelector("span").textContent=t;adesso.classList.add("on")}
 
 /* ---------- 3D ---------- */
 if(!window.THREE){document.querySelector(".scena").insertAdjacentHTML("beforeend",'<div class="errore">La scena 3D non si è caricata. Ricarica la pagina.</div>');return}
@@ -329,10 +329,10 @@ let salto=0;
 
 /* ---------- comandi ---------- */
 let caffe=0,notte=false;
-$("#b-giro").onclick=()=>{vistaInsieme();giro()};
+$("#b-giro").onclick=()=>{if(caffe)return;vistaInsieme();giro()};
 const bCons=$("#b-consegne");if(bCons)bCons.onclick=()=>{chiudi();sel=null;anello.visible=false;catena()};
 addEventListener("keydown",e=>{if(e.key==="Escape")vistaInsieme()});
-$("#b-caffe").onclick=()=>{if(caffe)return;caffe=performance.now();racconta("Pausa caffè: due chiacchiere in piedi","caffe");
+$("#b-caffe").onclick=()=>{if(caffe)return;caffe=performance.now();coda=[];sosta=0;racconta("","giro");racconta("Pausa caffè: due chiacchiere in piedi","caffe");
  const liberi=agenti.filter(a=>!a.impegnato).sort(()=>Math.random()-.5);const gruppi=[];for(let i=0;i<liberi.length;i+=3)gruppi.push(liberi.slice(i,i+3));
  if(gruppi.length>1&&gruppi[gruppi.length-1].length===1){gruppi[gruppi.length-2].push(gruppi.pop()[0])}
  gruppi.forEach((g,gi)=>{const ang=gi/gruppi.length*Math.PI*2+.4;const centro=CAFFE.clone().add(new THREE.Vector3(Math.cos(ang)*5.2,0,Math.sin(ang)*3.9));
