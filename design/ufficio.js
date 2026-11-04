@@ -335,9 +335,9 @@ addEventListener("keydown",e=>{if(e.key==="Escape")vistaInsieme()});
 $("#b-caffe").onclick=()=>{if(caffe)return;caffe=performance.now();racconta("Pausa caffè: due chiacchiere in piedi","caffe");
  const liberi=agenti.filter(a=>!a.impegnato).sort(()=>Math.random()-.5);const gruppi=[];for(let i=0;i<liberi.length;i+=3)gruppi.push(liberi.slice(i,i+3));
  if(gruppi.length>1&&gruppi[gruppi.length-1].length===1){gruppi[gruppi.length-2].push(gruppi.pop()[0])}
- gruppi.forEach((g,gi)=>{const ang=gi/gruppi.length*Math.PI*2+.4;const centro=CAFFE.clone().add(new THREE.Vector3(Math.cos(ang)*3.6,0,Math.sin(ang)*2.9));
-  g.forEach((a,i)=>{const b=i/g.length*Math.PI*2+gi;a.dest=centro.clone().add(new THREE.Vector3(Math.cos(b)*.85,0,Math.sin(b)*.85));a.faccia=centro;a.gruppo=g;a.impegnato=1;a.prossimaChiacchiera=performance.now()+2500+Math.random()*2000})});
- vola(CAFFE.clone().setY(1.75))};
+ gruppi.forEach((g,gi)=>{const ang=gi/gruppi.length*Math.PI*2+.4;const centro=CAFFE.clone().add(new THREE.Vector3(Math.cos(ang)*5.2,0,Math.sin(ang)*3.9));
+  g.forEach((a,i)=>{const b=i/g.length*Math.PI*2+gi;a.dest=centro.clone().add(new THREE.Vector3(Math.cos(b)*1.0,0,Math.sin(b)*1.0));a.faccia=centro;a.gruppo=g;a.impegnato=1;a.prossimaChiacchiera=performance.now()+2500+Math.random()*2000})});
+ chiudi();sel=null;anello.visible=false;vaiCamera(CAFFE.clone().setY(1),1.6);vola(CAFFE.clone().setY(1.75))};
 $("#b-notte").onclick=e=>{notte=!notte;e.currentTarget.setAttribute("aria-pressed",String(notte));applicaLuce()};
 $("#b-vista").onclick=vistaInsieme;
 
@@ -371,7 +371,7 @@ function loop(){
  if(!ridotto&&now>prossimaInterazione){prossimaInterazione=now+7000+Math.random()*7000;interazioneCasuale()}
  // pausa caffè: gruppi che chiacchierano, poi tutti a posto
  const pausa=caffe&&now-caffe<13000;
- if(caffe&&!pausa){caffe=0;agenti.forEach(a=>{a.dest=null;a.faccia=null;a.gruppo=null;a.impegnato=0;a.p.tazza.visible=false});racconta("","caffe");vola(PERCH)}
+ if(caffe&&!pausa){caffe=0;agenti.forEach(a=>{a.dest=null;a.faccia=null;a.gruppo=null;a.impegnato=0;a.p.tazza.visible=false});racconta("","caffe");vaiCamera(new THREE.Vector3(0,0,0),ZOOM0);vola(PERCH)}
  const finchVola=!!volo;
  agenti.forEach(a=>{const p=a.p;const meta=a.dest||a.sede;const dist=a.pos.distanceTo(meta);const inPiedi=dist>.05||!!a.dest;
   let rotDest=a.rotY;
@@ -417,7 +417,7 @@ function loop(){
   else a.sp.scale.setScalar(0);
   // schermo
   a.d.sm.emissiveIntensity=(sera?1.9:1.25)+(a.occupato?Math.sin(t*3+a.fase)*.12:-.45);
-  const vis=hover===a||sel===a||(a.ping&&now-a.ping<1600)||a.impegnato;a.et.classList.toggle("on",vis);a.et.classList.toggle("sel",sel===a);
+  const vis=hover===a||sel===a||(a.ping&&now-a.ping<1600)||(a.impegnato&&!caffe);a.et.classList.toggle("on",vis);a.et.classList.toggle("sel",sel===a);
   if(vis)proietta(a.et,v.set(a.p.g.position.x,2.55+(inPiedi?.1:0),a.p.g.position.z),0)});
  // Davide: presente solo dalle 4 alle 7
  const h=oraRoma().h;davide.g.visible=h>=4&&h<7;davide.bS.rotation.x=-1.1+Math.sin(t*12)*.1;davide.bD.rotation.x=-1.1+Math.sin(t*12+2)*.1;
