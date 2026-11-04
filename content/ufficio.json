@@ -2,11 +2,11 @@
   "_nota": "Note pubbliche del giorno per /ufficio. Le aggiorna Finch nel giro del mattino. Chiavi di 'oggi' = nomi degli agenti come in content/azienda.json, più 'Finch' e 'Davide'. Niente soldi, trattative o dati privati.",
   "aggiornato": "4 novembre 2026",
   "oggi": {
-    "Finch": "Primo giro delle 5:52: numeri del reel dell'ufficio, programmati i video motori, mail controllate. Le bozze della redazione arrivano alle 6:45.",
+    "Finch": "Giro delle 5:52 fatto: numeri, video motori, mail. Le bozze della redazione arrivano nel pomeriggio: GitHub fa partire il lavoro degli agenti con ore di ritardo.",
     "Davide": "Ha chiesto il resoconto alle 6 e messo online il video che racconta l'ufficio.",
-    "Scout": "Porta le notizie del 4/11 appena parte la redazione.",
+    "Scout": "Porta le notizie del 4/11 appena GitHub fa partire la redazione.",
     "Fact-checker": "In attesa delle notizie candidate del mattino.",
-    "Redattore": "Le 3 bozze di oggi arrivano verso le 6:30.",
+    "Redattore": "Le 3 bozze di oggi arrivano nel pomeriggio.",
     "Critico": "Ieri ha promosso Tesla e GTA 6; oggi aspetta le nuove bozze.",
     "Samaritan · Motori": "Tre Short in uscita: Antonelli campione alle 10, Stellantis in Borsa alle 12, MotoGP Qatar alle 18.",
     "Social": "Il reel \"L'ufficio degli agenti\" è uscito ieri alle 21 su Instagram, TikTok, YouTube e Facebook.",
@@ -20,16 +20,6 @@
       "Primo giro anticipato: numeri, video motori, mail."
     ],
     [
-      "06:00",
-      "Redazione",
-      "Partono Scout, Fact-checker, Redattore e Critico."
-    ],
-    [
-      "06:45",
-      "Finch",
-      "Decide le bozze del giorno seguendo il Critico."
-    ],
-    [
       "10:00",
       "Samaritan · Motori",
       "Esce lo Short su Antonelli campione di F1."
@@ -38,6 +28,11 @@
       "12:00",
       "Samaritan · Motori",
       "Esce lo Short su Stellantis in Borsa."
+    ],
+    [
+      "15:30",
+      "Finch",
+      "Decide le bozze del giorno seguendo il Critico."
     ],
     [
       "18:00",
