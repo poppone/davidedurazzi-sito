@@ -2,7 +2,7 @@ name: Redazione del mattino
 
 on:
   schedule:
-    - cron: "0 5 * * *"   # 07:00 ora italiana (06:00 in inverno)
+    - cron: "30 3 * * *"   # 04:30 ora italiana in inverno, prima del giro di Finch delle 5:52
   workflow_dispatch:       # avvio manuale dal tab Actions
     inputs:
       aree:
