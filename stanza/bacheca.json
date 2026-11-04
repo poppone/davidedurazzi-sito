@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-04T05:02:02Z",
+  "aggiornato": "2026-11-04T05:05:06Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1046,13 +1046,16 @@
       "id": "2026-11-04-2",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "fatto",
       "tipo": "pr",
       "titolo": "Spostare redazione e Guardiano prima del giro delle 5:52",
       "dettagli": "Da oggi Finch gira alle 5:52 (numeri alle 6, come hai chiesto). Redazione (05:00 UTC) e Guardiano (05:17 UTC) partono DOPO: le bozze le decido con un secondo passaggio alle 6:45. Proposta: redazione alle 03:30 UTC e Guardiano alle 04:10 UTC, più la scritta \"alle 7:52\" corretta nella pagina L'ufficio e nella mappa. È una PR: se la unisci, da domani tutto arriva nel giro delle 6.",
       "azione": "PR sul sito con i due cron spostati e il testo corretto; Davide unisce.",
       "origine": "richiesta di Davide del 03/11 (\"da oggi li porti alle 6\")",
-      "volte": 1
+      "volte": 1,
+      "deciso": "2026-11-04T05:05:06Z",
+      "link": "https://github.com/poppone/davidedurazzi-sito/pull/51",
+      "esito": "PR #51 unita da Davide il 04/11 alle 6:04: da domani redazione alle 4:30 e Guardiano alle 5:10, tutto pronto per il giro delle 5:52."
     }
   ]
 }
