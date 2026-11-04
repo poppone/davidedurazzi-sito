@@ -59,7 +59,7 @@
 .uf .hud{position:static;padding:10px 12px;order:2}
 .uf .scheda{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:70vh;border-radius:18px 18px 0 0;border-width:1px 0 0;transform:translateY(105%);padding-bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:30}
 .uf .suggerimento{display:none}
-.uf .adesso{top:auto;bottom:10px;left:10px;max-width:calc(100% - 20px);font-size:12px;transform:translateY(6px)}.uf .adesso.on{transform:none}
+.uf .adesso{top:calc(min(62vw,420px) - 46px);bottom:auto;left:10px;max-width:calc(100% - 20px);font-size:12px;transform:translateY(6px)}.uf .adesso.on{transform:none}
 .uf .etichette{height:min(62vw,420px);inset:auto 0 auto 0;top:0}
 .uf .aiuto{display:none}
 }
@@ -79,4 +79,12 @@
 .uf footer{color:var(--muted);font-size:12px}
 @media (prefers-reduced-motion:reduce){.uf .scheda{transition:none}.uf .adesso i{animation:none}
 }
+/* intro: la scena entra da sola, i comandi compaiono dopo */
+.uf .scena .hud,.uf .scena .etichette,.uf .scena .suggerimento,.uf .scena .adesso,.uf .scena .legenda{transition:opacity .8s ease}
+.uf .scena.intro .hud,.uf .scena.intro .etichette,.uf .scena.intro .suggerimento{opacity:0}
+.uf .scena.intro::before{content:"";position:absolute;inset:0;background:#070b18;animation:uf-apri 1.4s ease-out forwards;pointer-events:none;z-index:2}
+@keyframes uf-apri{from{opacity:1}to{opacity:0}}
+.uf .scena.pronta .hud{animation:uf-sali .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes uf-sali{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.uf .scena.intro::before,.uf .scena.pronta .hud{animation:none}}
 .uf .errore{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted)}
