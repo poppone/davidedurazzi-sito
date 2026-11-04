@@ -34,6 +34,13 @@
 .uf .scheda .x{position:absolute;top:10px;right:10px;width:30px;height:30px;padding:0;border-radius:50%;font-size:16px;line-height:1;display:grid;place-items:center}
 .uf .suggerimento{position:absolute;top:14px;right:14px;font:400 12px var(--mono);color:rgba(238,241,255,.75);background:rgba(11,16,34,.55);padding:6px 10px;border-radius:8px;pointer-events:none;transition:opacity .3s}
 .uf .suggerimento.via{opacity:0}
+.uf .adesso{position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:9px;max-width:min(62%,460px);font:500 13px var(--display);color:var(--paper);background:rgba(11,16,34,.72);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:7px 12px 7px 10px;border-radius:999px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s;pointer-events:none}
+.uf .adesso.on{opacity:1;transform:none}
+.uf .adesso i{width:8px;height:8px;border-radius:50%;background:var(--arancio);box-shadow:0 0 0 0 rgba(232,90,22,.6);animation:uf-pulsa 1.6s ease-out infinite;flex:none}
+.uf .adesso span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@keyframes uf-pulsa{0%{box-shadow:0 0 0 0 rgba(232,90,22,.6)}100%{box-shadow:0 0 0 9px rgba(232,90,22,0)}}
+.uf .scena::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 40%,transparent 60%,rgba(5,8,20,.45) 100%)}
+.uf .etichette,.uf .scheda,.uf .suggerimento,.uf .adesso,.uf .hud{z-index:1}
 .uf .scheda h2{font-weight:800;font-stretch:112%;font-size:22px;margin:0;line-height:1.15}
 .uf .reparto{font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px}
 .uf .reparto i{width:10px;height:10px;border-radius:3px;display:inline-block}
@@ -52,6 +59,7 @@
 .uf .hud{position:static;padding:10px 12px;order:2}
 .uf .scheda{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:70vh;border-radius:18px 18px 0 0;border-width:1px 0 0;transform:translateY(105%);padding-bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:30}
 .uf .suggerimento{display:none}
+.uf .adesso{top:10px;left:10px;max-width:calc(100% - 20px);font-size:12px}
 .uf .etichette{height:min(62vw,420px);inset:auto 0 auto 0;top:0}
 .uf .aiuto{display:none}
 }
@@ -69,6 +77,6 @@
 .uf .legenda span{display:inline-flex;align-items:center;gap:6px}
 .uf .legenda i{width:10px;height:10px;border-radius:3px}
 .uf footer{color:var(--muted);font-size:12px}
-@media (prefers-reduced-motion:reduce){.uf .scheda{transition:none}
+@media (prefers-reduced-motion:reduce){.uf .scheda{transition:none}.uf .adesso i{animation:none}
 }
 .uf .errore{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted)}
