@@ -388,6 +388,13 @@ $("#b-caffe").onclick=()=>{if(caffe)return;caffe=performance.now();controls.auto
 const bNotte=$("#b-notte");bNotte.textContent="Modalità giorno";
 bNotte.onclick=e=>{giorno=!giorno;e.currentTarget.setAttribute("aria-pressed",String(giorno));applicaLuce()};
 $("#b-vista").onclick=vistaInsieme;
+// musica di sottofondo: parte solo su richiesta (i browser non fanno partire l'audio da soli)
+const bMus=$("#b-musica");
+function musicaUI(){if(!bMus)return;const on=window.ufMusica&&window.ufMusica.attiva;bMus.setAttribute("aria-pressed",String(!!on));bMus.textContent=on?"♪ Musica: accesa":"♪ Musica"}
+if(bMus){if(!window.ufMusica)bMus.hidden=true;else{bMus.onclick=()=>{window.ufMusica.toggle();try{localStorage.setItem("uf-musica",window.ufMusica.attiva?"1":"0")}catch(e){}musicaUI()};
+ let vuole=false;try{vuole=localStorage.getItem("uf-musica")==="1"}catch(e){}
+ if(vuole){const primo=()=>{if(!window.ufMusica.attiva)window.ufMusica.accendi();musicaUI();removeEventListener("pointerdown",primo);removeEventListener("keydown",primo)};addEventListener("pointerdown",primo);addEventListener("keydown",primo)}
+ addEventListener("pagehide",()=>{if(window.ufMusica.attiva)window.ufMusica.spegni()})}}
 
 /* ---------- luce: di notte (predefinita) o di giorno ---------- */
 let sera=true;
