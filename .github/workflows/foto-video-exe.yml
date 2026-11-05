@@ -1,0 +1,40 @@
+name: Foto → Video (exe Windows)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dipendenze
+        run: pip install pillow numpy imageio-ffmpeg pyinstaller
+      - name: Prova dello script
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory prova | Out-Null
+          python -c "from PIL import Image; [Image.new('RGB',(950,713),(30+i*60,80,200)).save(f'prova/{i:02d}.jpg') for i in range(3)]"
+          python strumenti/foto_video.py prova "Prova" "sottotitolo"
+          if (!(Test-Path prova/video.mp4)) { throw "video di prova non creato" }
+      - name: Compila exe
+        run: pyinstaller --onefile --windowed --name FotoVideo --collect-all imageio_ffmpeg strumenti/foto_video.py
+      - name: Prova dell'exe
+        shell: pwsh
+        run: |
+          Remove-Item prova/video.mp4
+          Start-Process -FilePath .\dist\FotoVideo.exe -ArgumentList 'prova','"Prova"','"sottotitolo"' -Wait
+          if (!(Test-Path prova/video.mp4)) { throw "l'exe non ha creato il video" }
+          Copy-Item strumenti/LEGGIMI.md dist/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: FotoVideo
+          path: |
+            dist/FotoVideo.exe
+            dist/LEGGIMI.md
