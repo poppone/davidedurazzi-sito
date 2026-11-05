@@ -1,55 +1,55 @@
 {
- "_nota": "Note pubbliche del giorno per /ufficio. Le aggiorna Finch nel giro del mattino. Chiavi di 'oggi' = nomi degli agenti come in content/azienda.json, più 'Finch' e 'Davide'. Niente soldi, trattative o dati privati.",
- "aggiornato": "4 novembre 2026",
- "oggi": {
-  "Finch": "Giro delle 5:52 fatto: numeri, video motori, mail. Nel pomeriggio ha fatto partire a mano la redazione e deciso le bozze: due approvate, una scartata. Oggi è andato online anche il nuovo ufficio di notte.",
-  "Davide": "Ha chiesto il resoconto alle 6 e messo online il video che racconta l'ufficio.",
-  "Scout": "Ha portato tre notizie: la Nissan Pixo elettrica, Google e la ricerca a scuola, GTA 6.",
-  "Fact-checker": "Fonti controllate: Motor1, HDblog, Punto Informatico, IGN, Everyeye, Gamereactor.",
-  "Redattore": "Tre bozze scritte nel pomeriggio: Nissan Pixo, Google a scuola, GTA 6.",
-  "Critico": "Ha promosso Nissan Pixo e Google a scuola; ha fermato GTA 6 per una data di lancio non confermata dalle fonti.",
-  "Samaritan · Motori": "Tre Short in uscita: Antonelli campione alle 10, Stellantis in Borsa alle 12, MotoGP Qatar alle 18.",
-  "Social": "Il reel \"L'ufficio degli agenti\" è uscito ieri alle 21 su Instagram, TikTok, YouTube e Facebook.",
-  "Guardiano delle chiavi": "Controllo del mattino alle 6:17: ieri tutto ok tranne Pinterest, non controllato.",
-  "Chat delle dirette": "Ieri sera in chat per la diretta del martedì.",
-  "Il Contraddittorio": "Tema del giorno: Google, niente ricerca scolastica senza intelligenza artificiale.",
-  "Grafico": "Prepara il carosello Instagram per i due articoli approvati."
- },
- "diario": [
-  [
-   "05:52",
-   "Finch",
-   "Primo giro anticipato: numeri, video motori, mail."
-  ],
-  [
-   "10:00",
-   "Samaritan · Motori",
-   "Esce lo Short su Antonelli campione di F1."
-  ],
-  [
-   "12:00",
-   "Samaritan · Motori",
-   "Esce lo Short su Stellantis in Borsa."
-  ],
-  [
-   "15:34",
-   "Finch",
-   "Fa partire a mano la redazione: GitHub non l'aveva avviata."
-  ],
-  [
-   "16:00",
-   "Critico",
-   "Promuove Nissan Pixo e Google a scuola, ferma GTA 6."
-  ],
-  [
-   "16:05",
-   "Finch",
-   "Approva due bozze e ne scarta una: vanno online con il carosello Instagram."
-  ],
-  [
-   "18:00",
-   "Samaritan · Motori",
-   "Esce lo Short sulla MotoGP in Qatar."
+  "_nota": "Note pubbliche del giorno per /ufficio. Le aggiorna Finch nel giro del mattino. Chiavi di 'oggi' = nomi degli agenti come in content/azienda.json, più 'Finch' e 'Davide'. Niente soldi, trattative o dati privati.",
+  "aggiornato": "5 novembre 2026",
+  "oggi": {
+    "Finch": "Giro delle 5:52: ha fatto partire a mano redazione e Guardiano, deciso le bozze alle 6 (due approvate, una scartata), programmato il video Motori e il carosello Nissan Pixo, letto la posta.",
+    "Davide": "Ieri ha messo online l'ufficio di notte e il menu nuovo; stamattina presto ha unito le verifiche per Pinterest e Razer.",
+    "Scout": "Tre notizie: i message threads di Claude, GTA 6 e le vendite Xbox, la falla di Windows 11.",
+    "Fact-checker": "Fonti controllate: Tom's Hardware, Everyeye, HDblog.",
+    "Redattore": "Tre bozze scritte alle 5:57: Claude, GTA 6 e Xbox, Windows 11.",
+    "Critico": "Ha promosso Claude e GTA 6; ha fermato Windows 11 per tre affermazioni che la fonte non dice.",
+    "Samaritan · Motori": "In uscita alle 10 lo Short su Stellantis e Pablo Di Si; alle 16 il carosello sulla Nissan Pixo.",
+    "Social": "Ieri su TikTok Motori: Antonelli 748 visualizzazioni e 84 like, MotoGP 716 e 52, Stellantis 750 e 7.",
+    "Guardiano delle chiavi": "Controllo delle 5:54: 27 controlli ok, nessun guasto; l'Auto-Poster di Motori è tornato a posto.",
+    "Chat delle dirette": "Martedì sera il bot è arrivato in ritardo (23:44 e 00:13) e non è entrato in chat.",
+    "Il Contraddittorio": "Tema del giorno: GTA 6 spingerà le famiglie a comprare una Xbox?",
+    "Grafico": "Prepara i caroselli Instagram dei due articoli approvati."
+  },
+  "diario": [
+    [
+      "04:54",
+      "Finch",
+      "Fa partire a mano la redazione e il Guardiano: i cron non sono scattati."
+    ],
+    [
+      "05:55",
+      "Guardiano delle chiavi",
+      "Controllo finito: 27 ok, 0 guasti."
+    ],
+    [
+      "05:57",
+      "Redattore",
+      "Consegna tre bozze del giorno."
+    ],
+    [
+      "05:58",
+      "Finch",
+      "Approva Claude e GTA 6, scarta Windows 11: vanno online con il carosello."
+    ],
+    [
+      "05:59",
+      "Finch",
+      "Programma lo Short Stellantis delle 10 e il carosello Nissan Pixo delle 16 su Motori."
+    ],
+    [
+      "10:00",
+      "Samaritan · Motori",
+      "Esce lo Short su Stellantis e Pablo Di Si."
+    ],
+    [
+      "16:00",
+      "Grafico",
+      "Esce il carosello Instagram sulla Nissan Pixo."
+    ]
   ]
- ]
 }

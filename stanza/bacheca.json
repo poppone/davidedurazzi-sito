@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-04T05:05:06Z",
+  "aggiornato": "2026-11-05T05:05:00Z",
   "stati": [
     "da fare",
     "in corso",
@@ -768,10 +768,10 @@
       "per": "chat-dirette",
       "da": "direttore",
       "stato": "da fare",
-      "volte": 1,
+      "volte": 2,
       "origine": "chat-dirette, martedì 20/10",
       "titolo": "Il bot non è partito martedì 20/10: run arrivate alle 23:58 e alle 00:44",
-      "dettagli": "Il cron è alle 18:55 UTC, ma GitHub ha avviato le due run con 3 ore di ritardo e lo script le ha scartate (\"fuori dalla finestra\", che va dalle 20:40 alle 22:00). Rimedio: anticipare il cron (per esempio 17:30 e 18:15 UTC) e allargare la finestra a 2 ore prima della diretta, oppure avviare il workflow a mano dal dock OBS quando parte la diretta. Nessuna domanda registrata quella sera.",
+      "dettagli": "Il cron è alle 18:55 UTC, ma GitHub ha avviato le due run con 3 ore di ritardo e lo script le ha scartate (\"fuori dalla finestra\", che va dalle 20:40 alle 22:00). Rimedio: anticipare il cron (per esempio 17:30 e 18:15 UTC) e allargare la finestra a 2 ore prima della diretta, oppure avviare il workflow a mano dal dock OBS quando parte la diretta. Nessuna domanda registrata quella sera. Ricaduto anche martedì 03/11: run alle 23:44 e alle 00:13 UTC, nessun file in stanza/chat per il 03/11.",
       "link": "https://github.com/poppone/davidedurazzi-sito/actions/workflows/chat-dirette.yml",
       "creato": "2026-10-22T06:11:48+00:00"
     },
@@ -1023,11 +1023,13 @@
       "id": "2026-10-27-g1",
       "per": "davide",
       "da": "guardiano",
-      "stato": "da fare",
+      "stato": "fatto",
       "titolo": "Guardiano: samaritan-notizie · Samaritan Auto-Poster",
       "dettagli": "l'ultima esecuzione del 2026-11-03 è fallita. Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/41623423159",
       "origine": "controllo del Guardiano delle chiavi",
-      "volte": 5
+      "volte": 5,
+      "esito": "Controllo del Guardiano del 05/11 alle 4:54 UTC: Samaritan Auto-Poster di samaritan-notizie di nuovo ok (27 controlli ok, 0 rotti). Chiuso da Finch.",
+      "deciso": "2026-11-05T05:05:00Z"
     },
     {
       "id": "2026-11-04-1",
@@ -1056,6 +1058,81 @@
       "deciso": "2026-11-04T05:05:06Z",
       "link": "https://github.com/poppone/davidedurazzi-sito/pull/51",
       "esito": "PR #51 unita da Davide il 04/11 alle 6:04: da domani redazione alle 4:30 e Guardiano alle 5:10, tutto pronto per il giro delle 5:52."
+    },
+    {
+      "id": "2026-11-05-1",
+      "per": "davide",
+      "da": "finch",
+      "stato": "fatto",
+      "tipo": "video",
+      "titolo": "Motori in 60 secondi: video Stellantis alle 10 e carosello Nissan Pixo alle 16 programmati",
+      "dettagli": "Stellantis nomina Pablo Di Si COO Nord America: TikTok + Reel Instagram alle 10:00 con AI dichiarata. Carosello Instagram dell'articolo Nissan Pixo (4 slide) alle 16:00 sull'account Motori.",
+      "link": "https://app.metricool.com/planner/calendar?blogId=7680380&openWithPostUuid=-7085003855158295920",
+      "origine": "delega social del 27/10, regola 6w",
+      "deciso": "2026-11-05T05:05:00Z",
+      "esito": "Programmati alle 5:59: Stellantis uuid -7085003855158295920, carosello Nissan Pixo uuid 3664914386926128811."
+    },
+    {
+      "id": "2026-11-05-2",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "video",
+      "titolo": "Pubblicare il video \"Allarme Qatar: paura MotoGP e calma tiratori\" su Motori?",
+      "dettagli": "Video di samaritan-notizie del 04/11 (fonte Gazzetta dello Sport). Il tema è un allarme di sicurezza in Qatar, cioè cronaca più che motori: per la regola su politica e cronaca non lo pubblico da solo. Se dici sì, esce oggi alle 18:00 su TikTok e Instagram Motori con la nota AI e senza l'hashtag #rumor.",
+      "link": "https://8ggiyctagekoppcx.public.blob.vercel-storage.com/notizie/qngp_I9k2J4-fGVZrlY1VVPhJ2sFuuvKSRUWv9XdeQ.mp4",
+      "azione": "programmo su Metricool (Motori in 60 secondi) il video qngp_I9k2J4 alle 18:00 su TikTok e Reel Instagram, AI dichiarata, didascalia dalla cronologia senza #rumor",
+      "origine": "cronologia samaritan-notizie del 04/11",
+      "volte": 1
+    },
+    {
+      "id": "2026-11-05-3",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "video",
+      "titolo": "Rilanciare lo Short \"GTA 6 su PC: teorie sulla data\" su Instagram e Facebook?",
+      "dettagli": "Voto 2,5/5 (argomenti 2: solo ipotesi, nessuna data ufficiale), quindi niente permesso fisso. Consiglio: scartalo.",
+      "link": "https://www.youtube.com/shorts/Y2e8hF-tXqI",
+      "azione": "programmo su Metricool (Davide Durazzi) il Reel Instagram e il video Facebook dello Short Y2e8hF-tXqI con la didascalia_tiktok e la nota AI",
+      "origine": "Short it Y2e8hF-tXqI del 04/11",
+      "volte": 1
+    },
+    {
+      "id": "2026-11-05-4",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "titolo": "Spostare i cron di redazione e Guardiano fuori dall'ora piena",
+      "dettagli": "Anche con il nuovo orario (03:30 e 04:10 UTC, PR #51) GitHub non ha fatto partire nessuna delle due run né il 04/11 né oggi: le ho avviate a mano alle 4:54 UTC. GitHub salta spesso i cron ai minuti tondi. Proposta: redazione alle 03:37 UTC e Guardiano alle 04:17 UTC; intanto l'avvio manuale di riserva resta nel mio giro.",
+      "azione": "apro una PR sul sito con i due cron spostati a 03:37 e 04:17 UTC; Davide unisce",
+      "origine": "run mancate del 04/11 e 05/11",
+      "volte": 1
+    },
+    {
+      "id": "2026-11-05-5",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "post",
+      "titolo": "Rilanciare i due articoli del 05/11 su Bluesky, Pinterest e TikTok foto?",
+      "dettagli": "Articoli approvati oggi: \"Claude: tempi di risposta più rapidi, ma i costi restano elevati\" (AI) e \"GTA 6 non riesce a rilanciare le vendite di Xbox Series X|S\" (gaming, Il Contraddittorio). Pinterest solo nella bacheca \"Notizie davidedurazzi.it\".",
+      "azione": "programmo su Metricool (Davide Durazzi) per ciascun articolo un post Bluesky con link, un Pin nella bacheca Notizie davidedurazzi.it (1039979807642687589) con la prima slide del carosello e un post foto TikTok con le slide, AI dichiarata",
+      "origine": "regole 6d e 6x",
+      "volte": 1
+    },
+    {
+      "id": "2026-11-05-6",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "email",
+      "titolo": "Clip per streamer: preparare le bozze per altri 4 streamer dopo il primo messaggio a StrayDogTV",
+      "dettagli": "Hai scritto tu ieri a StrayDogTV (\"Ho preparato 4 clip dalle tue live, gratis\"). Mossa Vendite di oggi: stesso messaggio adattato per altri 4 streamer piccoli italiani, come bozze Gmail senza invio. Le clip le taglio con Samaritan in modalità prova.",
+      "azione": "preparo 4 bozze Gmail (non inviate) con il messaggio adattato e la lista degli streamer in /mnt/project-files/finch/clip-streamer/",
+      "origine": "regola 6c e piano clip per altri streamer del 21/10",
+      "volte": 1
     }
   ]
 }

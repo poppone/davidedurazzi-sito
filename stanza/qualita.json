@@ -1731,6 +1731,92 @@
         }
       ],
       "media": 3.0
+    },
+    {
+      "data": "2026-11-05",
+      "agente": "redazione",
+      "lavoro": "Bozze del 05/11 (Claude message threads, GTA 6 e Xbox, Windows 11)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "argomenti",
+          "voto": 4,
+          "motivo": "tre temi di tecnologia, AI e gaming, tutti del giorno"
+        },
+        {
+          "punto": "fonti",
+          "voto": 3,
+          "motivo": "una sola testata per bozza (Tom's Hardware, Everyeye, HDblog): regolare per queste aree, ma sottile"
+        },
+        {
+          "punto": "critico",
+          "voto": 4,
+          "motivo": "ha fermato Windows 11 per tre affermazioni non presenti nella fonte HDblog"
+        }
+      ],
+      "media": 3.67
+    },
+    {
+      "data": "2026-11-05",
+      "agente": "samaritan-motori",
+      "lavoro": "Short del 04/11 (Antonelli campione, Stellantis in Borsa, MotoGP Qatar)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "argomenti",
+          "voto": 4,
+          "motivo": "tre notizie motori del giorno, Antonelli è la più forte"
+        },
+        {
+          "punto": "titoli",
+          "voto": 4,
+          "motivo": "titoli fedeli alla fonte"
+        },
+        {
+          "punto": "numeri",
+          "voto": 4,
+          "motivo": "TikTok 04/11: Antonelli 748 visualizzazioni e 84 like, MotoGP 716/52, Stellantis 750/7"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-11-05",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short italiano del 04/11 \"GTA 6 su PC: teorie sulla data\"",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "argomenti",
+          "voto": 2,
+          "motivo": "solo teorie senza data ufficiale: la fonte stessa (Everyeye) parla di ipotesi"
+        },
+        {
+          "punto": "titolo",
+          "voto": 3,
+          "motivo": "il titolo dice \"teorie\", quindi non inganna, ma promette poco"
+        }
+      ],
+      "media": 2.5
+    },
+    {
+      "data": "2026-11-05",
+      "agente": "finch",
+      "lavoro": "Giro del 04/11: due PR unite (ufficio di notte, menu su PC), bozze decise nel pomeriggio",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "lavoro",
+          "voto": 4,
+          "motivo": "ufficio di notte e menu online lo stesso giorno, bozze decise con la 6n"
+        },
+        {
+          "punto": "puntualità",
+          "voto": 3,
+          "motivo": "la redazione non è partita da sola: avvio a mano alle 14:34 UTC, bozze online solo alle 16"
+        }
+      ],
+      "media": 3.5
     }
   ]
 }
