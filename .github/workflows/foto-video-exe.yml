@@ -2,6 +2,9 @@ name: Foto → Video (exe Windows)
 
 on:
   workflow_dispatch:
+  push:
+    branches: [finch/foto-video]
+    paths: [strumenti/**, .github/workflows/foto-video-exe.yml]
 
 permissions:
   contents: read
