@@ -1,7 +1,7 @@
 name: Guardiano delle chiavi
 on:
   schedule:
-    - cron: "10 4 * * *"   # 05:10 ora italiana in inverno, prima del giro di Finch delle 5:52
+    - cron: "17 4 * * *"   # 05:17 ora italiana in inverno (minuto non tondo: GitHub salta spesso i cron all'ora piena), prima del giro di Finch delle 5:52
   workflow_dispatch:
 permissions:
   contents: write
