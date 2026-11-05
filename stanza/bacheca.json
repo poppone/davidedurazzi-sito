@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-05T05:30:00Z",
+  "aggiornato": "2026-11-05T05:28:00Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1108,7 +1108,7 @@
       "id": "2026-11-05-4",
       "per": "davide",
       "da": "finch",
-      "stato": "in revisione",
+      "stato": "fatto",
       "tipo": "pr",
       "titolo": "Spostare i cron di redazione e Guardiano fuori dall'ora piena",
       "dettagli": "Anche con il nuovo orario (03:30 e 04:10 UTC, PR #51) GitHub non ha fatto partire nessuna delle due run né il 04/11 né oggi: le ho avviate a mano alle 4:54 UTC. GitHub salta spesso i cron ai minuti tondi. Proposta: redazione alle 03:37 UTC e Guardiano alle 04:17 UTC; intanto l'avvio manuale di riserva resta nel mio giro.",
@@ -1116,7 +1116,7 @@
       "origine": "run mancate del 04/11 e 05/11",
       "volte": 1,
       "deciso": "2026-11-05T05:12:23.333Z",
-      "esito": "PR #56 aperta alle 6:23 con i cron a 03:37 e 04:17 UTC: la unisce Davide.",
+      "esito": "PR #56 unita da Davide il 05/11 alle 6:26: da domani redazione alle 4:37 e Guardiano alle 5:17 (ora italiana).",
       "eseguito": "2026-11-05T05:30:00Z",
       "link": "https://github.com/poppone/davidedurazzi-sito/pull/56"
     },
