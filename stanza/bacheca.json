@@ -1117,13 +1117,14 @@
       "id": "2026-11-05-5",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "post",
       "titolo": "Rilanciare i due articoli del 05/11 su Bluesky, Pinterest e TikTok foto?",
       "dettagli": "Articoli approvati oggi: \"Claude: tempi di risposta più rapidi, ma i costi restano elevati\" (AI) e \"GTA 6 non riesce a rilanciare le vendite di Xbox Series X|S\" (gaming, Il Contraddittorio). Pinterest solo nella bacheca \"Notizie davidedurazzi.it\".",
       "azione": "programmo su Metricool (Davide Durazzi) per ciascun articolo un post Bluesky con link, un Pin nella bacheca Notizie davidedurazzi.it (1039979807642687589) con la prima slide del carosello e un post foto TikTok con le slide, AI dichiarata",
       "origine": "regole 6d e 6x",
-      "volte": 1
+      "volte": 1,
+      "deciso": "2026-11-05T05:12:32.205Z"
     },
     {
       "id": "2026-11-05-6",
