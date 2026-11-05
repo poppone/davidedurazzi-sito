@@ -1130,13 +1130,14 @@
       "id": "2026-11-05-6",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "email",
       "titolo": "Clip per streamer: preparare le bozze per altri 4 streamer dopo il primo messaggio a StrayDogTV",
       "dettagli": "Hai scritto tu ieri a StrayDogTV (\"Ho preparato 4 clip dalle tue live, gratis\"). Mossa Vendite di oggi: stesso messaggio adattato per altri 4 streamer piccoli italiani, come bozze Gmail senza invio. Le clip le taglio con Samaritan in modalità prova.",
       "azione": "preparo 4 bozze Gmail (non inviate) con il messaggio adattato e la lista degli streamer in /mnt/project-files/finch/clip-streamer/",
       "origine": "regola 6c e piano clip per altri streamer del 21/10",
-      "volte": 1
+      "volte": 1,
+      "deciso": "2026-11-05T05:12:47.300Z"
     }
   ]
 }
