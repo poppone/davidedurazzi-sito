@@ -1,9 +1,9 @@
 {
-  "aggiornato": "2026-11-03T12:48+00:00",
+  "aggiornato": "2026-11-05T04:54+00:00",
   "riassunto": {
-    "ok": 26,
+    "ok": 27,
     "attenzione": 0,
-    "rotto": 1,
+    "rotto": 0,
     "non controllato": 1
   },
   "controlli": [
@@ -46,7 +46,7 @@
     {
       "nome": "Token del bot della chat Twitch",
       "esito": "ok",
-      "messaggio": "valido, scade tra 45 giorni",
+      "messaggio": "valido, scade tra 43 giorni",
       "rimedio": ""
     },
     {
@@ -58,7 +58,7 @@
     {
       "nome": "davidedurazzi-sito · Chat delle dirette",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-27: success",
+      "messaggio": "ultima esecuzione del 2026-11-04: success",
       "rimedio": ""
     },
     {
@@ -70,7 +70,7 @@
     {
       "nome": "davidedurazzi-sito · Finch su Discord",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-03: success",
+      "messaggio": "ultima esecuzione del 2026-11-05: success",
       "rimedio": ""
     },
     {
@@ -82,31 +82,31 @@
     {
       "nome": "davidedurazzi-sito · Guardiano delle chiavi",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-02: success",
+      "messaggio": "ultima esecuzione del 2026-11-03: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Messaggi privati Instagram",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-02: success",
+      "messaggio": "ultima esecuzione del 2026-11-05: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Aggiorna pagine statiche",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-10-30: success",
+      "messaggio": "ultima esecuzione del 2026-11-05: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Pubblica bozze approvate",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-03: success",
+      "messaggio": "ultima esecuzione del 2026-11-04: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Redazione del mattino",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-03: success",
+      "messaggio": "ultima esecuzione del 2026-11-04: success",
       "rimedio": ""
     },
     {
@@ -124,13 +124,13 @@
     {
       "nome": "samaritan_v2 · Pulizia copie dei video",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-03: success",
+      "messaggio": "ultima esecuzione del 2026-11-04: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan_v2 · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-03: success",
+      "messaggio": "ultima esecuzione del 2026-11-05: success",
       "rimedio": ""
     },
     {
@@ -147,9 +147,9 @@
     },
     {
       "nome": "samaritan-notizie · Samaritan Auto-Poster",
-      "esito": "rotto",
-      "messaggio": "l'ultima esecuzione del 2026-11-03 è fallita",
-      "rimedio": "Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/41623423159"
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-11-05: success",
+      "rimedio": ""
     },
     {
       "nome": "samaritan-notizie · Test",
