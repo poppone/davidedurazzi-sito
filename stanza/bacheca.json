@@ -1076,14 +1076,15 @@
       "id": "2026-11-05-2",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "titolo": "Pubblicare il video \"Allarme Qatar: paura MotoGP e calma tiratori\" su Motori?",
       "dettagli": "Video di samaritan-notizie del 04/11 (fonte Gazzetta dello Sport). Il tema è un allarme di sicurezza in Qatar, cioè cronaca più che motori: per la regola su politica e cronaca non lo pubblico da solo. Se dici sì, esce oggi alle 18:00 su TikTok e Instagram Motori con la nota AI e senza l'hashtag #rumor.",
       "link": "https://8ggiyctagekoppcx.public.blob.vercel-storage.com/notizie/qngp_I9k2J4-fGVZrlY1VVPhJ2sFuuvKSRUWv9XdeQ.mp4",
       "azione": "programmo su Metricool (Motori in 60 secondi) il video qngp_I9k2J4 alle 18:00 su TikTok e Reel Instagram, AI dichiarata, didascalia dalla cronologia senza #rumor",
       "origine": "cronologia samaritan-notizie del 04/11",
-      "volte": 1
+      "volte": 1,
+      "deciso": "2026-11-05T05:11:34.103Z"
     },
     {
       "id": "2026-11-05-3",
