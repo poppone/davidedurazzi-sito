@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "claude-tempi-di-risposta-piu-rapidi-ma-i-costi-restano-elevati-20261105",
     "titolo": "Claude: tempi di risposta più rapidi, ma i costi restano elevati",
@@ -29,7 +29,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "gta-6-non-riesce-a-rilanciare-le-vendite-di-xbox-series-x-s-20261105",
     "titolo": "GTA 6 non riesce a rilanciare le vendite di Xbox Series X|S",
@@ -79,7 +79,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "windows-11-una-falla-grave-che-microsoft-fatica-a-risolvere-20261105",
     "titolo": "Windows 11: una falla grave che Microsoft fatica a risolvere",
     "sezione": "tecnologia",
