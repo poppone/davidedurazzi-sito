@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-05T05:05:00Z",
+  "aggiornato": "2026-11-05T05:30:00Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1076,68 +1076,80 @@
       "id": "2026-11-05-2",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "titolo": "Pubblicare il video \"Allarme Qatar: paura MotoGP e calma tiratori\" su Motori?",
       "dettagli": "Video di samaritan-notizie del 04/11 (fonte Gazzetta dello Sport). Il tema è un allarme di sicurezza in Qatar, cioè cronaca più che motori: per la regola su politica e cronaca non lo pubblico da solo. Se dici sì, esce oggi alle 18:00 su TikTok e Instagram Motori con la nota AI e senza l'hashtag #rumor.",
-      "link": "https://8ggiyctagekoppcx.public.blob.vercel-storage.com/notizie/qngp_I9k2J4-fGVZrlY1VVPhJ2sFuuvKSRUWv9XdeQ.mp4",
+      "link": "https://app.metricool.com/planner/calendar?blogId=7680380&openWithPostUuid=-6123747853353663556",
       "azione": "programmo su Metricool (Motori in 60 secondi) il video qngp_I9k2J4 alle 18:00 su TikTok e Reel Instagram, AI dichiarata, didascalia dalla cronologia senza #rumor",
       "origine": "cronologia samaritan-notizie del 04/11",
       "volte": 1,
-      "deciso": "2026-11-05T05:11:34.103Z"
+      "deciso": "2026-11-05T05:11:34.103Z",
+      "esito": "Programmato alle 6:22: TikTok + Reel Instagram Motori alle 18:00, AI dichiarata, senza #rumor (uuid -6123747853353663556).",
+      "eseguito": "2026-11-05T05:30:00Z"
     },
     {
       "id": "2026-11-05-3",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "titolo": "Rilanciare lo Short \"GTA 6 su PC: teorie sulla data\" su Instagram e Facebook?",
       "dettagli": "Voto 2,5/5 (argomenti 2: solo ipotesi, nessuna data ufficiale), quindi niente permesso fisso. Consiglio: scartalo.",
-      "link": "https://www.youtube.com/shorts/Y2e8hF-tXqI",
+      "link": "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=-2786907167929972472",
       "azione": "programmo su Metricool (Davide Durazzi) il Reel Instagram e il video Facebook dello Short Y2e8hF-tXqI con la didascalia_tiktok e la nota AI",
       "origine": "Short it Y2e8hF-tXqI del 04/11",
       "volte": 1,
-      "deciso": "2026-11-05T05:12:00.091Z"
+      "deciso": "2026-11-05T05:12:00.091Z",
+      "esito": "Programmato alle 6:22: Reel Instagram + Reel Facebook (Davide Durazzi) alle 12:00, AI dichiarata (uuid -2786907167929972472).",
+      "eseguito": "2026-11-05T05:30:00Z"
     },
     {
       "id": "2026-11-05-4",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "in revisione",
       "tipo": "pr",
       "titolo": "Spostare i cron di redazione e Guardiano fuori dall'ora piena",
       "dettagli": "Anche con il nuovo orario (03:30 e 04:10 UTC, PR #51) GitHub non ha fatto partire nessuna delle due run né il 04/11 né oggi: le ho avviate a mano alle 4:54 UTC. GitHub salta spesso i cron ai minuti tondi. Proposta: redazione alle 03:37 UTC e Guardiano alle 04:17 UTC; intanto l'avvio manuale di riserva resta nel mio giro.",
       "azione": "apro una PR sul sito con i due cron spostati a 03:37 e 04:17 UTC; Davide unisce",
       "origine": "run mancate del 04/11 e 05/11",
       "volte": 1,
-      "deciso": "2026-11-05T05:12:23.333Z"
+      "deciso": "2026-11-05T05:12:23.333Z",
+      "esito": "PR #56 aperta alle 6:23 con i cron a 03:37 e 04:17 UTC: la unisce Davide.",
+      "eseguito": "2026-11-05T05:30:00Z",
+      "link": "https://github.com/poppone/davidedurazzi-sito/pull/56"
     },
     {
       "id": "2026-11-05-5",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "post",
       "titolo": "Rilanciare i due articoli del 05/11 su Bluesky, Pinterest e TikTok foto?",
       "dettagli": "Articoli approvati oggi: \"Claude: tempi di risposta più rapidi, ma i costi restano elevati\" (AI) e \"GTA 6 non riesce a rilanciare le vendite di Xbox Series X|S\" (gaming, Il Contraddittorio). Pinterest solo nella bacheca \"Notizie davidedurazzi.it\".",
       "azione": "programmo su Metricool (Davide Durazzi) per ciascun articolo un post Bluesky con link, un Pin nella bacheca Notizie davidedurazzi.it (1039979807642687589) con la prima slide del carosello e un post foto TikTok con le slide, AI dichiarata",
       "origine": "regole 6d e 6x",
       "volte": 1,
-      "deciso": "2026-11-05T05:12:32.205Z"
+      "deciso": "2026-11-05T05:12:32.205Z",
+      "esito": "Programmati alle 6:24-6:25 su Davide Durazzi: Claude → Bluesky 11:00 (uuid 6671554003405718394), Pin Notizie 11:05 (2945700820377422822), TikTok foto 13:00 (417615538595187532); GTA 6/Xbox → Bluesky 15:00 (-4325462802733249429), Pin 15:05 (2785270771594708166), TikTok foto 17:00 (2246013185538607052). AI dichiarata.",
+      "eseguito": "2026-11-05T05:30:00Z",
+      "link": "https://app.metricool.com/planner/calendar?blogId=7358624"
     },
     {
       "id": "2026-11-05-6",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "email",
       "titolo": "Clip per streamer: preparare le bozze per altri 4 streamer dopo il primo messaggio a StrayDogTV",
       "dettagli": "Hai scritto tu ieri a StrayDogTV (\"Ho preparato 4 clip dalle tue live, gratis\"). Mossa Vendite di oggi: stesso messaggio adattato per altri 4 streamer piccoli italiani, come bozze Gmail senza invio. Le clip le taglio con Samaritan in modalità prova.",
       "azione": "preparo 4 bozze Gmail (non inviate) con il messaggio adattato e la lista degli streamer in /mnt/project-files/finch/clip-streamer/",
       "origine": "regola 6c e piano clip per altri streamer del 21/10",
       "volte": 1,
-      "deciso": "2026-11-05T05:12:47.300Z"
+      "deciso": "2026-11-05T05:12:47.300Z",
+      "esito": "4 bozze Gmail create alle 6:23 (Saki_Croft, Haytano, Gabriel Antonini, alexdieci), non inviate. Scheda in /mnt/project-files/finch/clip-streamer/bozze-2026-11-05.md. Prima di mandarle: tagliare le clip in prova.",
+      "eseguito": "2026-11-05T05:30:00Z"
     }
   ]
 }
