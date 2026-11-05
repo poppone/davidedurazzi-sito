@@ -1090,14 +1090,15 @@
       "id": "2026-11-05-3",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "video",
       "titolo": "Rilanciare lo Short \"GTA 6 su PC: teorie sulla data\" su Instagram e Facebook?",
       "dettagli": "Voto 2,5/5 (argomenti 2: solo ipotesi, nessuna data ufficiale), quindi niente permesso fisso. Consiglio: scartalo.",
       "link": "https://www.youtube.com/shorts/Y2e8hF-tXqI",
       "azione": "programmo su Metricool (Davide Durazzi) il Reel Instagram e il video Facebook dello Short Y2e8hF-tXqI con la didascalia_tiktok e la nota AI",
       "origine": "Short it Y2e8hF-tXqI del 04/11",
-      "volte": 1
+      "volte": 1,
+      "deciso": "2026-11-05T05:12:00.091Z"
     },
     {
       "id": "2026-11-05-4",
