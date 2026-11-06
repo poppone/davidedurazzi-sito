@@ -1229,6 +1229,19 @@
       "azione": "programmato su Metricool brand Motori in 60 secondi",
       "esito": "uuid -7556542430179013604 (video, 10:00) e -2129100473213172546 (carosello, 16:00)",
       "eseguito": "2026-11-06T05:03:00Z"
+    },
+    {
+      "id": "2026-11-06-6",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "titolo": "PR #16 samaritan-notizie: anti-invenzioni meno rigido sulle parafrasi, JSON riparato, salto del video con avviso",
+      "dettagli": "Chiesta da Davide il 06/11 alle 6:04. Caso Brembo passa, fatti inventati restano scartati; 885 test verdi (12 nuovi). Verificato: 4/11 uscite 2 su 4, 5/11 1 su 4; la riserva recupera una sola uscita per notte e parte 4-5 ore dopo il cron.",
+      "link": "https://github.com/poppone/samaritan-notizie/pull/16",
+      "origine": "run #183-#186 di samaritan-notizie",
+      "volte": 1,
+      "azione": "La unisci tu quando il workflow di test è verde; io tolgo la bozza e aggiorno il compito."
     }
   ]
 }
