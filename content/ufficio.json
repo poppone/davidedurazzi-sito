@@ -1,16 +1,16 @@
 {
   "_nota": "Note pubbliche del giorno per /ufficio. Le aggiorna Finch nel giro del mattino. Chiavi di 'oggi' = nomi degli agenti come in content/azienda.json, più 'Finch' e 'Davide'. Niente soldi, trattative o dati privati.",
-  "aggiornato": "5 novembre 2026",
+  "aggiornato": "2026-11-06T05:10:00Z",
   "oggi": {
-    "Finch": "Giro delle 5:52: ha fatto partire a mano redazione e Guardiano, deciso le bozze alle 6 (due approvate, una scartata), programmato il video Motori e il carosello Nissan Pixo, letto la posta.",
+    "Finch": "Giro delle 5:52: ha fatto partire a mano redazione e Guardiano (i cron nuovi non sono scattati), approvato le tre bozze seguendo il Critico, programmato il video F1 e il carosello Xpeng sui canali Motori, trovato l'errore LinkedIn.",
     "Davide": "Ieri ha messo online l'ufficio di notte e il menu nuovo; stamattina presto ha unito le verifiche per Pinterest e Razer.",
-    "Scout": "Tre notizie: i message threads di Claude, GTA 6 e le vendite Xbox, la falla di Windows 11.",
-    "Fact-checker": "Fonti controllate: Tom's Hardware, Everyeye, HDblog.",
-    "Redattore": "Tre bozze scritte alle 5:57: Claude, GTA 6 e Xbox, Windows 11.",
-    "Critico": "Ha promosso Claude e GTA 6; ha fermato Windows 11 per tre affermazioni che la fonte non dice.",
+    "Scout": "Tre notizie: Xpeng L03 in Europa, i nuovi sistemi di GTA 6, iPhone Duo primo su Amazon a ottobre.",
+    "Fact-checker": "Fonti controllate: Motor1 Italia e InsideEVs Italia, Gamereactor, HDblog.",
+    "Redattore": "Tre bozze scritte alle 5:57: Xpeng L03, GTA 6 e la polizia che reagisce, iPhone Duo.",
+    "Critico": "Nessuna nota: tutte e tre le bozze seguono le fonti.",
     "Samaritan · Motori": "In uscita alle 10 lo Short su Stellantis e Pablo Di Si; alle 16 il carosello sulla Nissan Pixo.",
     "Social": "Ieri su TikTok Motori: Antonelli 748 visualizzazioni e 84 like, MotoGP 716 e 52, Stellantis 750 e 7.",
-    "Guardiano delle chiavi": "Controllo delle 5:54: 27 controlli ok, nessun guasto; l'Auto-Poster di Motori è tornato a posto.",
+    "Guardiano delle chiavi": "26 controlli ok, 1 non controllato, 1 rotto: l'Auto-Poster di Motori ha scartato tutti gli script della notizia Mirafiori.",
     "Chat delle dirette": "Martedì sera il bot è arrivato in ritardo (23:44 e 00:13) e non è entrato in chat.",
     "Il Contraddittorio": "Tema del giorno: GTA 6 spingerà le famiglie a comprare una Xbox?",
     "Grafico": "Prepara i caroselli Instagram dei due articoli approvati."
@@ -19,37 +19,32 @@
     [
       "04:54",
       "Finch",
-      "Fa partire a mano la redazione e il Guardiano: i cron non sono scattati."
+      "Fa partire a mano la redazione e il Guardiano: i cron nuovi (03:37 e 04:17 UTC) non sono scattati."
     ],
     [
-      "05:55",
-      "Guardiano delle chiavi",
-      "Controllo finito: 27 ok, 0 guasti."
+      "04:57",
+      "Redazione",
+      "Tre bozze pronte: Xpeng L03, GTA 6, iPhone Duo. Il Critico non segnala nulla."
     ],
     [
-      "05:57",
-      "Redattore",
-      "Consegna tre bozze del giorno."
-    ],
-    [
-      "05:58",
+      "04:59",
       "Finch",
-      "Approva Claude e GTA 6, scarta Windows 11: vanno online con il carosello."
+      "Approva le tre bozze: partono sito, caroselli Instagram e Facebook."
     ],
     [
-      "05:59",
+      "05:02",
+      "Social",
+      "Tre articoli online, su Instagram e Facebook. LinkedIn rifiuta tutto: la variabile LI_ORG_ID è un link, non un numero."
+    ],
+    [
+      "05:03",
       "Finch",
-      "Programma lo Short Stellantis delle 10 e il carosello Nissan Pixo delle 16 su Motori."
+      "Programma F1 GP Brasile alle 10:00 e il carosello Xpeng alle 16:00 sui canali Motori."
     ],
     [
-      "10:00",
-      "Samaritan · Motori",
-      "Esce lo Short su Stellantis e Pablo Di Si."
-    ],
-    [
-      "16:00",
-      "Grafico",
-      "Esce il carosello Instagram sulla Nissan Pixo."
+      "05:10",
+      "Finch",
+      "Verbale scritto, quattro cose aspettano Davide nel pannello."
     ]
   ]
 }

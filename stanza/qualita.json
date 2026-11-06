@@ -1817,6 +1817,238 @@
         }
       ],
       "media": 3.5
+    },
+    {
+      "data": "2026-11-06",
+      "agente": "samaritan-motori",
+      "lavoro": "Video 05/11 'Formula 1, GP Brasile 2026: orari TV8 e Sky' (0vnUNPK19-g) e 'Allarme Qatar' (770 visualizzazioni, 9 like)",
+      "revisore": "fact-checker",
+      "punti": [
+        {
+          "punto": "Ogni notizia è riportata da almeno due testate",
+          "voto": 3,
+          "motivo": "una sola fonte citata (Fanpage); gli orari TV sono verificabili ovunque"
+        },
+        {
+          "punto": "Nessuna opinione presentata come fatto",
+          "voto": 5,
+          "motivo": "solo orari e programma del weekend"
+        },
+        {
+          "punto": "Il titolo corrisponde al contenuto",
+          "voto": 5,
+          "motivo": "titolo e script coincidono"
+        },
+        {
+          "punto": "Il video è uscito nel suo orario",
+          "voto": 2,
+          "motivo": "un solo video il 05/11 (slot 12:00); le run delle 11:00, 13:11 e 14:44 UTC sono fallite"
+        }
+      ],
+      "media": 3.75
+    },
+    {
+      "data": "2026-11-06",
+      "agente": "samaritan-notizie",
+      "lavoro": "Run Auto-Poster del 05/11 (3 fallite) e 06/11 01:00 UTC (fallita): tutti gli script scartati dal Brain",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Ogni notizia è riportata da almeno due testate",
+          "voto": 3,
+          "motivo": "notizia Stellantis-Mirafiori reale, una fonte"
+        },
+        {
+          "punto": "Nessuna opinione presentata come fatto",
+          "voto": 4,
+          "motivo": "il Brain ha scartato correttamente 'regime' e i dettagli inventati"
+        },
+        {
+          "punto": "Il titolo corrisponde al contenuto",
+          "voto": 3,
+          "motivo": "nessun video prodotto"
+        },
+        {
+          "punto": "Il video è uscito nel suo orario",
+          "voto": 1,
+          "motivo": "4 run fallite su 6 in 24 ore: 'Tutti i tentativi sono stati scartati', il controllo 'dettagli che il titolo non dice' boccia ogni script della notizia Mirafiori"
+        }
+      ],
+      "media": 2.75
+    },
+    {
+      "data": "2026-11-06",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short IT 05/11 'The Legend of Zelda: Ocarina of Time: 7 tracce extra' (5c0-pKgtMPg)",
+      "revisore": "samaritan-notizie",
+      "punti": [
+        {
+          "punto": "Il titolo è chiaro e non è clickbait ingannevole",
+          "voto": 4,
+          "motivo": "dice esattamente la notizia"
+        },
+        {
+          "punto": "Il materiale è ufficiale (trailer Steam o dell'editore), mai di altri creator",
+          "voto": 3,
+          "motivo": "materiale Nintendo Music non verificabile dal log"
+        },
+        {
+          "punto": "La notizia è vera e recente",
+          "voto": 4,
+          "motivo": "Nintendo Music ha aggiunto le tracce il 04-05/11, fonte Pokémon Millennium"
+        },
+        {
+          "punto": "Il video è uscito nel suo orario",
+          "voto": 4,
+          "motivo": "14:00 rispettato"
+        },
+        {
+          "punto": "La retention è almeno nella media degli ultimi 30 giorni",
+          "voto": 3,
+          "motivo": "dati YouTube fermi al 02/11 (dati_fino_al): non disponibile"
+        }
+      ],
+      "media": 3.6
+    },
+    {
+      "data": "2026-11-06",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short IT 05/11 Zelda, argomento",
+      "revisore": "revisore-argomenti",
+      "punti": [
+        {
+          "punto": "Interesse per il pubblico gaming italiano",
+          "voto": 3,
+          "motivo": "nicchia: sette tracce musicali, nessun gancio di gioco"
+        },
+        {
+          "punto": "Tempismo",
+          "voto": 4,
+          "motivo": "notizia del giorno"
+        },
+        {
+          "punto": "Potenziale social",
+          "voto": 2,
+          "motivo": "le notizie di nicchia del 05/11 sono rimaste sotto 300 visualizzazioni su TikTok"
+        }
+      ],
+      "media": 3.0
+    },
+    {
+      "data": "2026-11-06",
+      "agente": "redazione",
+      "lavoro": "Bozze del 06/11: Xpeng L03, GTA 6 polizia, iPhone Duo",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Fonti citate in fondo e coerenti con il testo",
+          "voto": 4,
+          "motivo": "Motor1+InsideEVs per motori; una testata per gaming e tecnologia, come da regola"
+        },
+        {
+          "punto": "Titolo onesto e sotto i 70 caratteri",
+          "voto": 3,
+          "motivo": "il titolo Xpeng supera i 70 caratteri (72)"
+        },
+        {
+          "punto": "Tono neutro su politica e cronaca",
+          "voto": 5,
+          "motivo": "nessun tema sensibile"
+        },
+        {
+          "punto": "Leggibile da telefono: paragrafi brevi",
+          "voto": 4,
+          "motivo": "3-5 paragrafi brevi, chiusura con la domanda aperta"
+        }
+      ],
+      "media": 4.0
+    },
+    {
+      "data": "2026-11-06",
+      "agente": "grafico",
+      "lavoro": "Caroselli del 05/11 (Claude, GTA 6/Xbox)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Testo leggibile da telefono, mai tagliato o sopra il viso",
+          "voto": 5,
+          "motivo": "titoli grandi, nessun taglio"
+        },
+        {
+          "punto": "Rispetta design/SISTEMA.md",
+          "voto": 4,
+          "motivo": "Archivo + Source Serif, filetto blu/arancio per sezione; solo testo, nessuna foto"
+        },
+        {
+          "punto": "Logo e banner coerenti",
+          "voto": 4,
+          "motivo": "logo tondo in alto a sinistra leggibile"
+        },
+        {
+          "punto": "Nessuna immagine senza diritti",
+          "voto": 5,
+          "motivo": "nessuna immagine esterna"
+        },
+        {
+          "punto": "Le grafiche nuove restano bozze",
+          "voto": 5,
+          "motivo": "nessuna grafica nuova"
+        }
+      ],
+      "media": 4.6
+    },
+    {
+      "data": "2026-11-06",
+      "agente": "guardiano",
+      "lavoro": "Controllo del 06/11 (avviato a mano alle 4:54 UTC)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Ha controllato tutto quello che poteva",
+          "voto": 4,
+          "motivo": "26 ok, 1 non controllato (Pinterest, come sempre)"
+        },
+        {
+          "punto": "Ogni problema ha il rimedio scritto",
+          "voto": 4,
+          "motivo": "Auto-Poster notizie rotto: rimanda al log, senza dire la causa"
+        },
+        {
+          "punto": "Non duplica compiti già aperti",
+          "voto": 5,
+          "motivo": "un solo compito nuovo (g1)"
+        },
+        {
+          "punto": "Nessun falso allarme",
+          "voto": 5,
+          "motivo": "il guasto è reale"
+        }
+      ],
+      "media": 4.5
+    },
+    {
+      "data": "2026-11-06",
+      "agente": "finch",
+      "lavoro": "Giro del 05/11 e compiti approvati",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Cron e avvii: la redazione è partita",
+          "voto": 4,
+          "motivo": "avvio manuale funzionante, cron ancora da capire"
+        },
+        {
+          "punto": "Un solo messaggio a Davide per il giro",
+          "voto": 3,
+          "motivo": "molti messaggi nel pomeriggio, ma richiesti da Davide (video S3, exe)"
+        },
+        {
+          "punto": "Decisioni eseguite come scritto",
+          "voto": 4,
+          "motivo": "5 compiti approvati eseguiti; email streamer non inviate per qualità clip"
+        }
+      ],
+      "media": 3.67
     }
   ]
 }
