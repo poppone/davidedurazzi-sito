@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-06",
+  "aggiornato": "2026-11-06T06:20:00+01:00",
   "stati": [
     "da fare",
     "in corso",
@@ -1240,6 +1240,19 @@
       "dettagli": "Chiesta da Davide il 06/11 alle 6:04. Caso Brembo passa, fatti inventati restano scartati; 885 test verdi (12 nuovi). Verificato: 4/11 uscite 2 su 4, 5/11 1 su 4; la riserva recupera una sola uscita per notte e parte 4-5 ore dopo il cron.",
       "link": "https://github.com/poppone/samaritan-notizie/pull/16",
       "origine": "run #183-#186 di samaritan-notizie",
+      "volte": 1,
+      "azione": "La unisci tu quando il workflow di test è verde; io tolgo la bozza e aggiorno il compito."
+    },
+    {
+      "id": "2026-11-06-7",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "titolo": "PR #124 samaritan_v2: taglia_live con controllo GPU all'avvio, momenti scelti meglio, riascolto audio delle clip, zoom senza facecam",
+      "dettagli": "Chiesta da Davide il 06/11 alle 6:42. GPU obbligatoria (CPU solo con WHISPER_DISPOSITIVO=cpu), cuBLAS/cuDNN via os.add_dll_directory (DLL copiate spostate in lavoro\\_dll_copiate_in_ctranslate2, cancellabili). Picchi chat senza sub/cheer/bot, primi 10 minuti saltati, ascolta.py scrive ascolto.md. Prova Haytano VOD 2920506058: nessuna clip da 4/5, 3 da 3 in Drive prova-clip-streamer/haytano/. Dopo l'unione rifaccio il VOD del 03/11.",
+      "link": "https://github.com/poppone/samaritan_v2/pull/124",
+      "origine": "prova clip 05/11, messaggio di Davide 06/11 6:42",
       "volte": 1,
       "azione": "La unisci tu quando il workflow di test è verde; io tolgo la bozza e aggiorno il compito."
     }
