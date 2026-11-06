@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-05T06:02:00Z",
+  "aggiornato": "2026-11-06",
   "stati": [
     "da fare",
     "in corso",
@@ -1150,6 +1150,16 @@
       "deciso": "2026-11-05T05:12:47.300Z",
       "esito": "4 bozze Gmail create alle 6:23 (Saki_Croft, Haytano, Gabriel Antonini, alexdieci), non inviate. Scheda in /mnt/project-files/finch/clip-streamer/bozze-2026-11-05.md. Prima di mandarle: tagliare le clip in prova. Clip di prova tagliate sul PC di Davide alle 6:35-7:00: nessuno streamer arriva a 2 clip da 4/5 (saki_croft VOD solo abbonati; haytano 4 clip, migliore 4/5; alexdieci e antoninigabriel migliore 3/5). Davide aveva autorizzato l'invio delle email opportune: NESSUNA inviata. Clip in Drive Videomaker/prova-clip-streamer/<login>/.",
       "eseguito": "2026-11-05T05:30:00Z"
+    },
+    {
+      "id": "2026-11-06-g1",
+      "per": "davide",
+      "da": "guardiano",
+      "stato": "da fare",
+      "titolo": "Guardiano: samaritan-notizie · Samaritan Auto-Poster",
+      "dettagli": "l'ultima esecuzione del 2026-11-06 è fallita. Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/42140839228",
+      "origine": "controllo del Guardiano delle chiavi",
+      "volte": 1
     }
   ]
 }
