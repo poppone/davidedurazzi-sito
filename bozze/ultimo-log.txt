@@ -1,34 +1,30 @@
-[fonti] 247 notizie raccolte, per area: {'tecnologia': 56, 'gaming': 60, 'motori': 36}
-[palinsesto] oggi: ['ai', 'gaming']
+[fonti] 240 notizie raccolte, per area: {'tecnologia': 48, 'gaming': 60, 'motori': 37}
+[palinsesto] oggi: ['motori', 'gaming']
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5274, Requested 6554. Please try again in 28.709999999s. Need more tokens? Upgrade to Dev Tier today at https
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 4181, Requested 6554. Please try again in 20.5125s. Need more tokens? Upgrade to Dev Tier today at https://co
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 3702, Requested 6569. Please try again in 17.032499999s. Need more tokens? Upgrade to Dev Tier today at https
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 2622, Requested 6976. Please try again in 11.985s. Need more tokens? Upgrade to Dev Tier today at https://con
 [palinsesto] ripiego su 'tecnologia'
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6837, Requested 1598. Please try again in 3.2625s. Need more tokens? Upgrade to Dev Tier today at https://con
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7292, Requested 1288. Please try again in 4.35s. Need more tokens? Upgrade to Dev Tier today at https://conso
-[critico] riscrivo 'Claude riduce il tempo di risposta, ma i costi restano elevati'
+[critico] riscrivo 'Xpeng L03: il nuovo SUV ibrido con prezzi, allestimenti e batterie diverse in Europa e Cina'
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7389, Requested 1281. Please try again in 5.025s. Need more tokens? Upgrade to Dev Tier today at https://cons
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6312, Requested 2111. Please try again in 3.1725s. Need more tokens? Upgrade to Dev Tier today at https://con
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7657, Requested 1163. Please try again in 6.149999999s. Need more tokens? Upgrade to Dev Tier today at https:
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6577, Requested 2126. Please try again in 5.2725s. Need more tokens? Upgrade to Dev Tier today at https://con
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6456, Requested 2152. Please try again in 4.56s. Need more tokens? Upgrade to Dev Tier today at https://conso
+[llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6464, Requested 1783. Please try again in 1.8525s. Need more tokens? Upgrade to Dev Tier today at https://con
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7653, Requested 908. Please try again in 4.2075s. Need more tokens? Upgrade to Dev Tier today at https://cons
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6718, Requested 1835. Please try again in 4.1475s. Need more tokens? Upgrade to Dev Tier today at https://con
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7465, Requested 1430. Please try again in 6.7125s. Need more tokens? Upgrade to Dev Tier today at https://con
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6534, Requested 1883. Please try again in 3.1275s. Need more tokens? Upgrade to Dev Tier today at https://con
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7261, Requested 1374. Please try again in 4.7625s. Need more tokens? Upgrade to Dev Tier today at https://con
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6184, Requested 2030. Please try again in 1.605s. Need more tokens? Upgrade to Dev Tier today at https://cons
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7038, Requested 1980. Please try again in 7.635s. Need more tokens? Upgrade to Dev Tier today at https://cons
+[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5962, Requested 2137. Please try again in 742.5ms. Need more tokens? Upgrade to Dev Tier today at https://con
 [llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[critico] riscrivo 'Windows 11: una grave falla che Microsoft fatica a risolvere'
-[llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq modelli disponibili: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-[llm] groq openai/gpt-oss-120b: HTTP 429 {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2sea5gjeknv2hc6vzyf67dw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7129, Requested 1311. Please try again in 3.3s. Need more tokens? Upgrade to Dev Tier today at https://consol
 Fatto: 3 bozze pronte da approvare.
