@@ -1,1 +1,115 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "playstation-plus-nuovi-vantaggi-suscitano-polemica-tra-gli-abbonati-20261107",
+    "titolo": "PlayStation Plus: nuovi vantaggi suscitano polemica tra gli abbonati",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-11-07",
+    "sommario": "Sony ha introdotto nuovi benefici per il servizio, ma le prove gratuite hanno scatenato critiche.",
+    "testo": [
+      "Secondo HDblog, Sony ha annunciato una serie di nuovi vantaggi per gli abbonati a PlayStation Plus, includendo periodi di prova gratuiti per alcuni contenuti.",
+      "La novità è stata accolta con entusiasmo da chi cerca più valore, ma molti abbonati hanno espresso disappunto per la gestione delle prove gratuite, ritenendole poco chiare o ingannevoli.",
+      "La polemica è rapidamente emersa sui forum e sui social, dove gli utenti chiedono maggiore trasparenza e condizioni più favorevoli per le prove.",
+      "Per ora, Sony non ha fornito ulteriori chiarimenti, lasciando aperta la questione su come evolverà il servizio e se le critiche porteranno a modifiche.",
+      "Resta da vedere se la risposta della community influenzerà le future politiche di PlayStation Plus e se i benefici introdotti riusciranno a mantenere gli abbonati soddisfatti."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: PlayStation Plus, Sony annuncia nuovi vantaggi, ma è subito polemica",
+        "url": "https://www.hdblog.it/sony/articoli/n676243/sony-playstation-plus-nuovi-vantaggi-polemiche/"
+      }
+    ],
+    "nota_critico": [
+      "Affermazione \"la novità è stata accolta con entusiasmo da chi cerca più valore\" non è presente nella fonte",
+      "Affermazione \"molti abbonati hanno espresso disappunto per la gestione delle prove gratuite, ritenendole poco chiare o ingannevoli\" non è specificata nella fonte (la fonte menziona solo polemica)",
+      "Riferimento a \"forum e social\" dove gli utenti chiedono maggiore trasparenza non è presente nella fonte",
+      "Dichiarazione che \"Sony non ha fornito ulteriori chiarimenti\" non è supportata dalla fonte",
+      "Affermazioni speculative su come la risposta della community influenzerà le future politiche non sono riportate nella fonte"
+    ],
+    "domande_live": [
+      "Qual è la vostra opinione sui periodi di prova gratuiti di PlayStation Plus?",
+      "Che tipo di vantaggi vi aspettate da un abbonamento premium?",
+      "Ritenete che Sony debba modificare le condizioni delle prove per evitare polemiche?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "openai-lancia-gpt-6-cyber-81-falle-in-firefox-e-quasi-1-000-exploit-li-20261107",
+    "titolo": "OpenAI lancia GPT-6 Cyber: 81 falle in Firefox e quasi 1.000 exploit Linux",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-11-07",
+    "sommario": "Secondo Il Sole 24 Ore, il nuovo modello GPT-6 Cyber di OpenAI ha individuato numerose vulnerabilità in Firefox e Linux, segnando un nuovo passo nell'uso dell'IA per la sicurezza.",
+    "testo": [
+      "OpenAI ha presentato GPT-6 Cyber, una versione avanzata del suo modello di intelligenza artificiale, capace di analizzare codice e rilevare vulnerabilità. Secondo Il Sole 24 Ore, il sistema ha scoperto 81 falle nel browser Firefox e quasi mille exploit nel sistema operativo Linux.",
+      "Queste scoperte sono rilevanti perché mettono in luce potenziali punti deboli di software ampiamente utilizzati da milioni di utenti. Un’identificazione precoce permette a sviluppatori e amministratori di intervenire prima che i difetti vengano sfruttati da attori maligni.",
+      "Rimane ancora da capire come OpenAI intenda collaborare con i fornitori di software per la correzione delle vulnerabilità e quali saranno le linee guida per l’uso responsabile di un’IA così potente nella ricerca di exploit. Inoltre, la comunità si interroga su possibili rischi di diffusione di queste informazioni se non gestite correttamente."
+    ],
+    "fonti": [
+      {
+        "nome": "Il Sole 24 Ore: OpenAI lancia GPT-6 Cyber: scopre 81 falle in Firefox e quasi mille exploit Linux",
+        "url": "https://www.ilsole24ore.com/art/openai-lancia-gpt-6-cyber-scopre-81-falle-firefox-e-quasi-mille-exploit-linux-AJPc9G7B"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Qual è la vostra opinione sull’impiego dell’IA per scoprire vulnerabilità informatiche?",
+      "Pensate che le aziende debbano affidarsi a strumenti come GPT-6 Cyber per la sicurezza dei loro prodotti?",
+      "Quali misure dovrebbe adottare la comunità tech per evitare abusi di queste scoperte?"
+    ],
+    "acquisto": null,
+    "domanda": "Ritieni che l'utilizzo di GPT-6 Cyber per individuare vulnerabilità in Firefox e Linux possa migliorare la sicurezza dei tuoi dispositivi?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo Il Sole 24 Ore, GPT‑6 Cyber ha già identificato 81 vulnerabilità in Firefox e quasi mille exploit su Linux, dimostrando una capacità di analisi superiore a quella umana tradizionale",
+        "L’intelligenza artificiale può analizzare grandi quantità di codice in tempi brevi, scoprendo falle che altrimenti rimarrebbero nascoste e consentendo una correzione tempestiva",
+        "L’impiego di GPT‑6 Cyber alleggerisce il lavoro degli esperti di sicurezza, permettendo loro di concentrarsi su attività di mitigazione e risposta, migliorando la protezione complessiva dei dispositivi"
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Anche se GPT‑6 Cyber ha individuato 81 falle in Firefox e quasi mille exploit per Linux, l’AI può generare falsi positivi: le vulnerabilità segnalate potrebbero non essere realmente sfruttabili, sprecando tempo e risorse nella verifica",
+        "Le informazioni prodotte da GPT‑6 Cyber potrebbero finire nelle mani di attori malevoli, facilitando la diffusione di exploit prima che gli sviluppatori possano correggerle",
+        "Le vulnerabilità più complesse richiedono una comprensione profonda del contesto software e delle architetture di sistema, cosa che un modello generico come GPT‑6 Cyber non può replicare pienamente, lasciando scoperti problemi che necessitano di analisi umane specializzate"
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "gta-6-polizia-reattiva-e-storia-che-si-adatta-al-giocatore-20261107",
+    "titolo": "GTA 6: polizia reattiva e storia che si adatta al giocatore",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-11-07",
+    "sommario": "Rockstar ha svelato nuovi sistemi di gioco per GTA 6, tra cui una polizia che ricorda le tue azioni e una narrazione che reagisce alle scelte, secondo Gamereactor.",
+    "testo": [
+      "Rockstar Games ha condiviso dodici immagini inedite di Grand Theft Auto 6 e, come riportato da Gamereactor, ha illustrato una serie di meccaniche finora sconosciute, tratte dal numero di novembre 2026 della rivista Edge.",
+      "Uno dei sistemi più discussi è la polizia reattiva: gli agenti ricordano le azioni del giocatore, perseguendolo in modo più persistente e adattando il loro comportamento alle precedenti infrazioni.",
+      "Un altro elemento chiave è una storia dinamica: la trama si modifica in risposta alle decisioni del giocatore, con missioni e dialoghi che cambiano a seconda delle scelte compiute durante il gioco.",
+      "Queste novità promettono un’esperienza più immersiva e personalizzata, ma resta da capire come saranno bilanciate in pratica, quali limiti avranno e come influenzeranno il ritmo complessivo del gioco."
+    ],
+    "fonti": [
+      {
+        "nome": "Gamereactor: I nuovi sistemi di GTA 6: polizia che ti ricorda e una storia che reagisce",
+        "url": "https://www.gamereactor.it/i-nuovi-sistemi-di-gta-6-polizia-che-ti-ricorda-e-una-storia-che-reagisce/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Come vi immaginate una polizia che ricorda le vostre azioni in GTA 6?",
+      "Quale impatto credete abbia una narrazione che reagisce alle scelte sul gameplay?",
+      "Quali altre innovazioni vi aspettate da GTA 6?"
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Grand Theft Auto VI"
+    }
+  }
+]
