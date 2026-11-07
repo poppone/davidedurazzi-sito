@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-07T12:34:59Z",
+  "aggiornato": "2026-11-07T12:39:06Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1386,6 +1386,19 @@
       "titolo": "Lo Scout di Motori non ha preso da solo il record BYD 503 km/h",
       "dettagli": "Davide 07/11 13:33: 'queste cose il procacciatore di news le deve fare da solo'. Causa: nessuna ricerca copriva record di velocità e hypercar, BYD/Yangwang non erano nomi grossi. Rimedio nella PR #17 samaritan-notizie (commit sul ramo finch/motori-gare): ricerca dedicata, parole calde km/h/record mondiale/virale, marchi hypercar. Il video del 07/11 l'ho lanciato a mano (primo tentativo saltato: tema troppo lungo, non trovava l'articolo).",
       "link": "https://github.com/poppone/samaritan-notizie/pull/17",
+      "origine": "richiesta di Davide 07/11",
+      "volte": 1
+    },
+    {
+      "id": "2026-11-07-11",
+      "per": "davide",
+      "da": "finch",
+      "stato": "fatto",
+      "tipo": "post",
+      "titolo": "Motori: Short 'Yangwang U9 Xtreme: nuovo record mondiale' (503 km/h) uscito su YouTube, TikTok e Instagram",
+      "dettagli": "Chiesto da Davide alle 13:25. YouTube https://youtube.com/shorts/jMgAnMfv89M (13:37), TikTok + Reel Instagram Motori alle 13:46 via Metricool, AI dichiarata. Fonte Automoto.it 6/11.",
+      "link": "https://youtube.com/shorts/jMgAnMfv89M",
+      "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7680380&openWithPostUuid=5366106663990804735",
       "origine": "richiesta di Davide 07/11",
       "volte": 1
     }
