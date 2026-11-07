@@ -1306,13 +1306,14 @@
       "id": "2026-11-07-4",
       "per": "davide",
       "da": "vendite",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "altro",
       "titolo": "Scheda per la call con l'agenzia creator (10 o 12 novembre)",
       "dettagli": "Hai proposto tu stamattina due date per la call. Mossa Vendite di oggi: preparo una scheda di una pagina con i numeri aggiornati per rete, il video che ha reso di più, i tre formati che puoi offrire (video in auto, Short AI dichiarato, carosello) e uno spazio per i prezzi che decidi tu. Niente cifre finché non le scrivi tu.",
       "origine": "thread Gmail etichettato Trattative",
       "volte": 1,
-      "azione": "Scrivo la scheda in /mnt/project-files/finch/affiliazioni/ e te la metto qui nel thread il giorno prima della call."
+      "azione": "Scrivo la scheda in /mnt/project-files/finch/affiliazioni/ e te la metto qui nel thread il giorno prima della call.",
+      "deciso": "2026-11-07T11:02:29.526Z"
     },
     {
       "id": "2026-11-07-5",
