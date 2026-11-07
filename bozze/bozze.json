@@ -1,34 +1,5 @@
 [
   {
-    "approvato": true,
-    "scartare": false,
-    "slug": "google-lancia-find-hub-avvisi-per-oggetti-smarriti-20261107",
-    "titolo": "Google lancia Find Hub: avvisi per oggetti smarriti",
-    "sezione": "tecnologia",
-    "rubrica": "",
-    "data": "2026-11-07",
-    "sommario": "Google ha presentato Find Hub, una nuova funzione che invia avvisi per oggetti dimenticati, in vista del lancio del Pixel Tag.",
-    "testo": [
-      "Secondo HDblog, Google ha annunciato Find Hub, un servizio pensato per avvisare l'utente quando dimentica un oggetto nelle vicinanze, in modo simile a quello offerto da Apple con la sua funzione Dov'è.",
-      "La novità conta perché permette di ridurre le dimenticanze quotidiane, dal portafoglio alle chiavi, sfruttando la rete di dispositivi Pixel e il prossimo Pixel Tag per localizzare gli oggetti persi.",
-      "Il progetto è ancora in fase di pre‑lancio: resta da capire come verrà integrato con gli altri servizi Google, quali saranno le impostazioni di privacy e quando sarà disponibile per tutti gli utenti.",
-      "Secondo HDblog, l'arrivo di Pixel Tag sarà il punto di svolta per rendere Find Hub operativo su larga scala, ma i dettagli su costi, compatibilità e eventuali limitazioni non sono ancora chiari."
-    ],
-    "fonti": [
-      {
-        "nome": "HDblog: Google Find Hub come Apple Dov'è: arrivano gli avvisi per oggetti dimenticati",
-        "url": "https://www.hdblog.it/smartphone/articoli/n676210/google-find-hub-avvisi-tag-dimenticati/"
-      }
-    ],
-    "nota_critico": [],
-    "domande_live": [
-      "Quali oggetti dimenticate più spesso nella vita di tutti i giorni?",
-      "Ritenete utili gli avvisi automatici per gli oggetti smarriti o preferite gestirli manualmente?",
-      "Che funzionalità aggiuntive vorreste vedere in Find Hub per renderlo più efficace?"
-    ],
-    "acquisto": null
-  },
-  {
     "approvato": false,
     "scartare": false,
     "slug": "gpt-6-cyber-di-openai-scopre-81-falle-in-firefox-e-quasi-mille-exploit-20261107",
