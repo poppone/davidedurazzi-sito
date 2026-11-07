@@ -1,5 +1,70 @@
 [
   {
+    "slug": "gta-6-polizia-reattiva-e-storia-che-si-adatta-al-giocatore-20261107",
+    "titolo": "GTA 6: polizia reattiva e storia che si adatta al giocatore",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-11-07",
+    "sommario": "Rockstar ha svelato nuovi sistemi di gioco per GTA 6, tra cui una polizia che ricorda le tue azioni e una narrazione che reagisce alle scelte, secondo Gamereactor.",
+    "testo": [
+      "Rockstar Games ha condiviso dodici immagini inedite di Grand Theft Auto 6 e, come riportato da Gamereactor, ha illustrato una serie di meccaniche finora sconosciute, tratte dal numero di novembre 2026 della rivista Edge.",
+      "Uno dei sistemi più discussi è la polizia reattiva: gli agenti ricordano le azioni del giocatore, perseguendolo in modo più persistente e adattando il loro comportamento alle precedenti infrazioni.",
+      "Un altro elemento chiave è una storia dinamica: la trama si modifica in risposta alle decisioni del giocatore, con missioni e dialoghi che cambiano a seconda delle scelte compiute durante il gioco.",
+      "Queste novità promettono un’esperienza più immersiva e personalizzata, ma resta da capire come saranno bilanciate in pratica, quali limiti avranno e come influenzeranno il ritmo complessivo del gioco."
+    ],
+    "fonti": [
+      {
+        "nome": "Gamereactor: I nuovi sistemi di GTA 6: polizia che ti ricorda e una storia che reagisce",
+        "url": "https://www.gamereactor.it/i-nuovi-sistemi-di-gta-6-polizia-che-ti-ricorda-e-una-storia-che-reagisce/"
+      }
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Grand Theft Auto VI"
+    },
+    "pubblicato": true,
+    "pubblicato_il": "2026-11-07T06:04:10+01:00"
+  },
+  {
+    "slug": "openai-lancia-gpt-6-cyber-81-falle-in-firefox-e-quasi-1-000-exploit-li-20261107",
+    "titolo": "OpenAI lancia GPT-6 Cyber: 81 falle in Firefox e quasi 1.000 exploit Linux",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-11-07",
+    "sommario": "Secondo Il Sole 24 Ore, il nuovo modello GPT-6 Cyber di OpenAI ha individuato numerose vulnerabilità in Firefox e Linux, segnando un nuovo passo nell'uso dell'IA per la sicurezza.",
+    "testo": [
+      "OpenAI ha presentato GPT-6 Cyber, una versione avanzata del suo modello di intelligenza artificiale, capace di analizzare codice e rilevare vulnerabilità. Secondo Il Sole 24 Ore, il sistema ha scoperto 81 falle nel browser Firefox e quasi mille exploit nel sistema operativo Linux.",
+      "Queste scoperte sono rilevanti perché mettono in luce potenziali punti deboli di software ampiamente utilizzati da milioni di utenti. Un’identificazione precoce permette a sviluppatori e amministratori di intervenire prima che i difetti vengano sfruttati da attori maligni.",
+      "Rimane ancora da capire come OpenAI intenda collaborare con i fornitori di software per la correzione delle vulnerabilità e quali saranno le linee guida per l’uso responsabile di un’IA così potente nella ricerca di exploit. Inoltre, la comunità si interroga su possibili rischi di diffusione di queste informazioni se non gestite correttamente."
+    ],
+    "fonti": [
+      {
+        "nome": "Il Sole 24 Ore: OpenAI lancia GPT-6 Cyber: scopre 81 falle in Firefox e quasi mille exploit Linux",
+        "url": "https://www.ilsole24ore.com/art/openai-lancia-gpt-6-cyber-scopre-81-falle-firefox-e-quasi-mille-exploit-linux-AJPc9G7B"
+      }
+    ],
+    "acquisto": null,
+    "domanda": "Ritieni che l'utilizzo di GPT-6 Cyber per individuare vulnerabilità in Firefox e Linux possa migliorare la sicurezza dei tuoi dispositivi?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo Il Sole 24 Ore, GPT‑6 Cyber ha già identificato 81 vulnerabilità in Firefox e quasi mille exploit su Linux, dimostrando una capacità di analisi superiore a quella umana tradizionale",
+        "L’intelligenza artificiale può analizzare grandi quantità di codice in tempi brevi, scoprendo falle che altrimenti rimarrebbero nascoste e consentendo una correzione tempestiva",
+        "L’impiego di GPT‑6 Cyber alleggerisce il lavoro degli esperti di sicurezza, permettendo loro di concentrarsi su attività di mitigazione e risposta, migliorando la protezione complessiva dei dispositivi"
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Anche se GPT‑6 Cyber ha individuato 81 falle in Firefox e quasi mille exploit per Linux, l’AI può generare falsi positivi: le vulnerabilità segnalate potrebbero non essere realmente sfruttabili, sprecando tempo e risorse nella verifica",
+        "Le informazioni prodotte da GPT‑6 Cyber potrebbero finire nelle mani di attori malevoli, facilitando la diffusione di exploit prima che gli sviluppatori possano correggerle",
+        "Le vulnerabilità più complesse richiedono una comprensione profonda del contesto software e delle architetture di sistema, cosa che un modello generico come GPT‑6 Cyber non può replicare pienamente, lasciando scoperti problemi che necessitano di analisi umane specializzate"
+      ]
+    },
+    "pubblicato": true,
+    "pubblicato_il": "2026-11-07T06:04:10+01:00"
+  },
+  {
     "slug": "honda-alpha-il-nuovo-suv-elettrico-prodotto-in-india-20261106",
     "titolo": "Honda Alpha: il nuovo SUV elettrico prodotto in India",
     "sezione": "motori",
