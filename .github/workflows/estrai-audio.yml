@@ -1,0 +1,26 @@
+name: Estrai audio narrazione (temporaneo)
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL mp4 da cui estrarre la voce'
+        required: true
+permissions:
+  contents: write
+jobs:
+  estrai:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get install -y -q ffmpeg >/dev/null
+          curl -sSL -o sorgente.mp4 "${{ inputs.url }}"
+          mkdir -p lavoro
+          ffmpeg -v error -y -i sorgente.mp4 -vn -c:a copy lavoro/narrazione.m4a
+          ffmpeg -v error -y -i sorgente.mp4 -vf "fps=1,scale=270:-1" lavoro/frame_%03d.jpg
+          ls -la lavoro
+          git config user.name finch-bot
+          git config user.email actions@github.com
+          git add lavoro
+          git commit -m "Audio narrazione estratto"
+          git push origin HEAD:${GITHUB_REF_NAME}
