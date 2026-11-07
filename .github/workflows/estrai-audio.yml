@@ -1,10 +1,10 @@
 name: Estrai audio narrazione (temporaneo)
 on:
-  workflow_dispatch:
-    inputs:
-      url:
-        description: 'URL mp4 da cui estrarre la voce'
-        required: true
+  push:
+    branches: [finch/byd-audio]
+    paths-ignore: [lavoro/**]
+env:
+  URL_SORGENTE: https://8ggiyctagekoppcx.public.blob.vercel-storage.com/notizie/jMgAnMfv89M-tydIofHJgw8FvCHMmNdHpCLFks7qY6.mp4
 permissions:
   contents: write
 jobs:
@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           sudo apt-get install -y -q ffmpeg >/dev/null
-          curl -sSL -o sorgente.mp4 "${{ inputs.url }}"
+          curl -sSL -o sorgente.mp4 "$URL_SORGENTE"
           mkdir -p lavoro
           ffmpeg -v error -y -i sorgente.mp4 -vn -c:a copy lavoro/narrazione.m4a
           ffmpeg -v error -y -i sorgente.mp4 -vf "fps=1,scale=270:-1" lavoro/frame_%03d.jpg
