@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-07T17:50:51Z",
+  "aggiornato": "2026-11-07T17:51:44Z",
   "stati": [
     "da fare",
     "in corso",
@@ -969,13 +969,14 @@
       "id": "2026-10-25-1",
       "per": "samaritan-notizie",
       "da": "fact-checker",
-      "stato": "da fare",
+      "stato": "fatto",
       "volte": 2,
       "origine": "Short vkDvtBuuqNM del 24/10",
       "titolo": "Titolo che allarga la fonte: \"Tesla: cancellazione del Cybertruck dopo 7 anni\"",
       "dettagli": "La fonte (Everyeye Auto) parla di Cybertruck cancellato in due Paesi dopo 7 anni di caparre; il titolo toglie \"in due Paesi\" e fa pensare a una chiusura mondiale. Stesso difetto aperto per il gaming (2026-10-24-1): il titolo deve tenere le condizioni della fonte. | 06/11: 'MotoGP Qatar: Marquez e Bezzecchi fuori pista' mentre OA Sport dice che fanno il vuoto; script 'hanno abbandonato la sessione'. Volte 2: va corretto alla fonte con una PR sul titolo, dopo l'unione della PR #16 per non sovrapporre le modifiche a brain.py.",
       "link": "https://youtube.com/shorts/vkDvtBuuqNM",
-      "creato": "2026-10-25T06:56:22+00:00"
+      "creato": "2026-10-25T06:56:22+00:00",
+      "esito": "PR #16 unita da Davide il 07/11 alle 18:47."
     },
     {
       "id": "2026-10-25-2",
@@ -1239,7 +1240,7 @@
       "id": "2026-11-06-6",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "pr",
       "titolo": "PR #16 samaritan-notizie: anti-invenzioni meno rigido sulle parafrasi, JSON riparato, salto del video con avviso",
       "dettagli": "Chiesta da Davide il 06/11 alle 6:04. Caso Brembo passa, fatti inventati restano scartati; 885 test verdi (12 nuovi). Verificato: 4/11 uscite 2 su 4, 5/11 1 su 4; la riserva recupera una sola uscita per notte e parte 4-5 ore dopo il cron.",
@@ -1247,7 +1248,8 @@
       "origine": "run #183-#186 di samaritan-notizie",
       "volte": 1,
       "azione": "La unisci tu quando il workflow di test è verde; io tolgo la bozza e aggiorno il compito.",
-      "deciso": "2026-11-07T11:02:16.943Z"
+      "deciso": "2026-11-07T11:02:16.943Z",
+      "esito": "PR #16 unita da Davide il 07/11 alle 18:47."
     },
     {
       "id": "2026-11-06-7",
@@ -1342,7 +1344,7 @@
       "id": "2026-11-07-7",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "pr",
       "titolo": "Samaritan gaming: due Short al giorno in italiano (14:00 e 20:00), via l'inglese",
       "dettagli": "Chiesto da Davide il 07/11 ('aggiusta il tiro dei reel su YouTube'). Dati: 64 Short in inglese, mediana 56 visualizzazioni e 9 iscritti; 24 in italiano, mediana 211. Lo slot delle 14 è l'unico in crescita, quello delle 20 ha ritenzione 70%. PR #125 samaritan_v2, test verdi (1049), in bozza: la unisci tu. Misura: dopo 14 giorni confronto della mediana giornaliera con ottobre.",
@@ -1350,13 +1352,14 @@
       "origine": "analisi performance.json 07/11",
       "volte": 1,
       "azione": "Unisci la PR #125; dal giorno dopo escono 2 Short italiani invece di 4.",
-      "deciso": "2026-11-07T11:02:33.461Z"
+      "deciso": "2026-11-07T11:02:33.461Z",
+      "esito": "PR unita da Davide il 07/11 alle 18:47; da domani si misura per 14 giorni."
     },
     {
       "id": "2026-11-07-8",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "pr",
       "titolo": "Motori in 60 secondi: tre uscite (12, 14, 18), più gare e niente notizie aziendali",
       "dettagli": "Chiesto da Davide il 07/11. Lo slot delle 16:00 è il peggiore del canale; le notizie societarie restano sotto le 50 visualizzazioni, le gare e i piloti crescono. PR #17 samaritan-notizie, solo canale.json, test verdi (873), in bozza: la unisci tu. Misura: dopo 14 giorni confronto della mediana giornaliera con ottobre.",
@@ -1364,7 +1367,8 @@
       "origine": "analisi performance.json 07/11",
       "volte": 1,
       "azione": "Unisci la PR #17; dal giorno dopo 3 Short motori invece di 4, più gare.",
-      "deciso": "2026-11-07T11:02:37.545Z"
+      "deciso": "2026-11-07T11:02:37.545Z",
+      "esito": "PR unita da Davide il 07/11 alle 18:47; da domani si misura per 14 giorni."
     },
     {
       "id": "2026-11-07-9",
