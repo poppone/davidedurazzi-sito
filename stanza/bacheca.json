@@ -1356,14 +1356,15 @@
       "id": "2026-11-07-8",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "pr",
       "titolo": "Motori in 60 secondi: tre uscite (12, 14, 18), più gare e niente notizie aziendali",
       "dettagli": "Chiesto da Davide il 07/11. Lo slot delle 16:00 è il peggiore del canale; le notizie societarie restano sotto le 50 visualizzazioni, le gare e i piloti crescono. PR #17 samaritan-notizie, solo canale.json, test verdi (873), in bozza: la unisci tu. Misura: dopo 14 giorni confronto della mediana giornaliera con ottobre.",
       "link": "https://github.com/poppone/samaritan-notizie/pull/17",
       "origine": "analisi performance.json 07/11",
       "volte": 1,
-      "azione": "Unisci la PR #17; dal giorno dopo 3 Short motori invece di 4, più gare."
+      "azione": "Unisci la PR #17; dal giorno dopo 3 Short motori invece di 4, più gare.",
+      "deciso": "2026-11-07T11:02:37.545Z"
     },
     {
       "id": "2026-11-07-9",
