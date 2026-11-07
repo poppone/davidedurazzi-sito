@@ -1,6 +1,6 @@
 {
   "_nota": "Pagina /consigli (link in bio). Per ogni voce: 'amazon' = testo da cercare su Amazon (usa il tag di config.js), oppure 'url' = link diretto. Gruppi con 'attivo': false non si vedono. Quando hai prodotti tuoi veri, metti nome e modello esatti in 'amazon' e scrivi nel 'perche' perché li usi.",
-  "aggiornato": "2026-11-03",
+  "aggiornato": "2026-11-07",
   "gruppi": [
     {
       "id": "auto",
@@ -87,6 +87,12 @@
           "perche": "Chiavi digitali PC e console scontate, consegna immediata.",
           "url": "https://www.instant-gaming.com/it/?igr=poppone",
           "dove": "Instant Gaming"
+        },
+        {
+          "nome": "Periferiche Razer",
+          "perche": "Mouse, tastiere e cuffie da gaming sul sito ufficiale Razer. Link di affiliazione: se acquisti da qui ricevo una commissione, per te il prezzo non cambia.",
+          "url": "https://razer.a9yw.net/c/8122182/642901/10229",
+          "dove": "Razer"
         },
         {
           "nome": "Cuffie gaming",
