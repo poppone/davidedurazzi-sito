@@ -1,1 +1,139 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "google-lancia-find-hub-avvisi-per-oggetti-smarriti-20261107",
+    "titolo": "Google lancia Find Hub: avvisi per oggetti smarriti",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-11-07",
+    "sommario": "Google ha presentato Find Hub, una nuova funzione che invia avvisi per oggetti dimenticati, in vista del lancio del Pixel Tag.",
+    "testo": [
+      "Secondo HDblog, Google ha annunciato Find Hub, un servizio pensato per avvisare l'utente quando dimentica un oggetto nelle vicinanze, in modo simile a quello offerto da Apple con la sua funzione Dov'è.",
+      "La novità conta perché permette di ridurre le dimenticanze quotidiane, dal portafoglio alle chiavi, sfruttando la rete di dispositivi Pixel e il prossimo Pixel Tag per localizzare gli oggetti persi.",
+      "Il progetto è ancora in fase di pre‑lancio: resta da capire come verrà integrato con gli altri servizi Google, quali saranno le impostazioni di privacy e quando sarà disponibile per tutti gli utenti.",
+      "Secondo HDblog, l'arrivo di Pixel Tag sarà il punto di svolta per rendere Find Hub operativo su larga scala, ma i dettagli su costi, compatibilità e eventuali limitazioni non sono ancora chiari."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: Google Find Hub come Apple Dov'è: arrivano gli avvisi per oggetti dimenticati",
+        "url": "https://www.hdblog.it/smartphone/articoli/n676210/google-find-hub-avvisi-tag-dimenticati/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Quali oggetti dimenticate più spesso nella vita di tutti i giorni?",
+      "Ritenete utili gli avvisi automatici per gli oggetti smarriti o preferite gestirli manualmente?",
+      "Che funzionalità aggiuntive vorreste vedere in Find Hub per renderlo più efficace?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "gpt-6-cyber-di-openai-scopre-81-falle-in-firefox-e-quasi-mille-exploit-20261107",
+    "titolo": "GPT-6 Cyber di OpenAI scopre 81 falle in Firefox e quasi mille exploit Linux",
+    "sezione": "ai",
+    "rubrica": "contraddittorio",
+    "data": "2026-11-07",
+    "sommario": "OpenAI ha lanciato GPT-6 Cyber, un'IA in grado di individuare vulnerabilità informatiche. Secondo Il Sole 24 Ore, ha già identificato 81 falle in Firefox e quasi mille exploit su Linux.",
+    "testo": [
+      "OpenAI ha presentato GPT-6 Cyber, la nuova versione del suo modello dedicata alla sicurezza informatica. Il sistema è stato messo alla prova su due dei software più diffusi, Firefox e Linux, rilevando un numero consistente di problemi.",
+      "Secondo Il Sole 24 Ore, l'IA ha scoperto 81 vulnerabilità nel browser Firefox e quasi mille exploit che interessano il kernel e i componenti di Linux. Questi risultati mostrano quanto possa essere efficace un approccio automatizzato nella ricerca di falle.",
+      "Per gli utenti, la notizia è rilevante perché le vulnerabilità individuate possono essere sfruttate da attori malevoli, mettendo a rischio dati personali e operatività dei dispositivi. Aggiornare tempestivamente i software diventa quindi fondamentale per ridurre il rischio.",
+      "Rimane da capire con quale metodo preciso GPT-6 Cyber individui le debolezze e come OpenAI intenda collaborare con i fornitori per la correzione. Sarà importante monitorare i prossimi sviluppi e le eventuali patch rilasciate in risposta a queste scoperte."
+    ],
+    "fonti": [
+      {
+        "nome": "Il Sole 24 Ore: OpenAI lancia GPT-6 Cyber: scopre 81 falle in Firefox e quasi mille exploit Linux",
+        "url": "https://www.ilsole24ore.com/art/openai-lancia-gpt-6-cyber-scopre-81-falle-firefox-e-quasi-mille-exploit-linux-AJPc9G7B"
+      }
+    ],
+    "nota_critico": [
+      "Affermazioni non presenti nella fonte: \"Il sistema è stato messo alla prova su due dei software più diffusi, Firefox e Linux\"; \"Rimane da capire con quale metodo preciso GPT-6 Cyber individui le debolezze e come OpenAI intenda collaborare con i fornitori per la correzione\"; commenti interpretativi come \"Questi risultati mostrano quanto possa essere efficace un approccio automatizzato nella ricerca di falle\" e \"per gli utenti, la notizia è rilevante\" non sono supportati dal titolo della notizia fornita"
+    ],
+    "domande_live": [
+      "Qual è la vostra esperienza con gli aggiornamenti di sicurezza dei browser?",
+      "Ritenete affidabili le intelligenze artificiali nella scoperta di vulnerabilità?",
+      "Che misure adottate per proteggere il vostro sistema operativo da exploit?"
+    ],
+    "acquisto": null,
+    "domanda": "Ritieni che l'uso di GPT-6 Cyber per individuare vulnerabilità possa migliorare la sicurezza dei dispositivi che usi quotidianamente?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo le notizie, GPT-6 Cyber ha individuato 81 falle in Firefox, dimostrando capacità concrete di rilevare vulnerabilità in software diffusi",
+        "Il modello ha segnalato quasi mille exploit per Linux, evidenziando la sua efficacia nell’analizzare sistemi complessi",
+        "L’automazione offerta da GPT-6 Cyber può accelerare la scoperta di bug, riducendo i tempi di risposta e potenzialmente migliorando la protezione dei dispositivi quotidiani"
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Come riportato da Il Sole 24 Ore, la stessa potenza di GPT-6 Cyber può essere sfruttata da malintenzionati, aumentando il rischio di attacchi anziché migliorare la sicurezza",
+        "Affidarsi eccessivamente a un’IA per la rilevazione delle vulnerabilità potrebbe ridurre l’attenzione degli esperti umani, con il rischio di trascurare analisi contestuali specifiche per i dispositivi di uso comune",
+        "Le vulnerabilità individuate riguardano principalmente software complessi e server, poco pertinenti ai dispositivi domestici; inoltre l’IA può generare falsi positivi, costringendo gli utenti a intervenire su problemi inesistenti"
+      ]
+    }
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "gta-6-lattesa-si-intensifica-novita-e-ritardi-in-vista-20261107",
+    "titolo": "GTA 6: l’attesa si intensifica, novità e ritardi in vista",
+    "sezione": "gaming",
+    "rubrica": "",
+    "data": "2026-11-07",
+    "sommario": "Il nuovo capitolo di Grand Theft Auto è quasi pronto: si avvicina la fase di download, i fan organizzano iniziative spettacolari e Rockstar svela sistemi di gioco inediti, mentre i ritardi continuano a far parlare.",
+    "testo": [
+      "Secondo Spaziogames, GTA 6 è ormai vicino al debutto e l’attesa sta entrando nella fase più concreta: quella del download, per cui è consigliabile verificare spazio e impostazioni prima del lancio (n67).",
+      "Take‑Two Interactive ha difeso i due rinvii del titolo, sostenendo che più tempo permette a Rockstar di evitare problemi simili a quelli di Cyberpunk 2077, e ha ribadito l’importanza di un lancio senza intoppi (n102).",
+      "I fan non smettono di creare hype: un pilota americano ha tracciato il logo di GTA 6 nei cieli dell’Arkansas con il suo Cessna, mentre un altro acrobata ha volato per otto ore per realizzare un murales aereo, dimostrando quanto l’attesa sia difficile da sopportare (n78; n98). Inoltre, per il lancio è previsto l’evento “A Night In Vice City” il 18 novembre, con le divise speciali dei Miami Heat “Vice City Heat” in collaborazione con Nike e Travis Scott (n96).",
+      "Rockstar ha mostrato 12 nuove immagini che rivelano sistemi di gioco finora inediti, come una polizia che ricorda il giocatore e una trama che reagisce alle sue azioni (n108). Dopo il lancio, l’azienda rimuoverà i video spoiler per tutelare la scoperta della storia (n90). Restano ancora da capire la data esatta di uscita, i dettagli tecnici dei nuovi sistemi e come evolverà la narrazione del gioco."
+    ],
+    "fonti": [
+      {
+        "nome": "Spaziogames: GTA 6, l’uscita è alle porte: come prepararsi al lancio",
+        "url": "https://www.spaziogames.it/notizie/gta-6-il-pre-load-e-alle-porte-come-prepararsi-al-download"
+      },
+      {
+        "nome": "IGN Italia: GTA VI disegnato nei cieli: l'incredibile impresa acrobatica di un pilota americano",
+        "url": "https://it.ign.com/grand-theft-auto-vi/229079/gta-vi-disegnato-nei-cieli-lincredibile-impresa-acrobatica-di-un-pilota-americano"
+      },
+      {
+        "nome": "Everyeye: GTA 6 in NBA: le divise dei Miami Vice City Heat sono favolose!",
+        "url": "https://www.everyeye.it/notizie/gta-6-divise-vice-city-heat-favolose-910271.html"
+      },
+      {
+        "nome": "Everyeye: Un pilota ha disegnato GTA 6 nel cielo con il suo aereo",
+        "url": "https://www.everyeye.it/notizie/pilota-disegnato-gta-6-cielo-aereo-910257.html"
+      },
+      {
+        "nome": "Everyeye: GTA 6: Take-Two difende i due rinvii e lancia una stoccata a Cyberpunk 2077 di CD Projekt",
+        "url": "https://www.everyeye.it/notizie/gta-6-take-two-difende-due-rinvii-lancia-stoccata-cyberpunk-2077-cd-projekt-910247.html"
+      },
+      {
+        "nome": "Gamereactor: I nuovi sistemi di GTA 6: polizia che ti ricorda e una storia che reagisce",
+        "url": "https://www.gamereactor.it/i-nuovi-sistemi-di-gta-6-polizia-che-ti-ricorda-e-una-storia-che-reagisce/"
+      },
+      {
+        "nome": "IGN Italia: Rockstar Games rimuoverà i video spoiler sul finale di GTA VI dopo il lancio del gioco",
+        "url": "https://it.ign.com/grand-theft-auto-vi/229043/rockstar-games-rimuovera-i-video-spoiler-sul-finale-di-gta-vi-dopo-il-lancio-del-gioco"
+      }
+    ],
+    "nota_critico": [
+      "Data errata: l'articolo afferma che l'evento 'A Night In Vice City' si terrà il 18 novembre, ma la fonte [n98] indica che l'attesa è fino al 19 novembre (data di lancio), mentre la fonte [n96] specifica che le divise sono in vendita solo il 18 novembre a Miami. L'articolo confonde la data di vendita delle divise con la data dell'evento o del lancio, creando ambiguità o errore fattuale sulla tempistica dell'evento principale.",
+      "Attribuzione imprecisa: l'articolo afferma che 'Rockstar ha mostrato 12 nuove immagini', ma la fonte [n108] specifica che i dettagli sono tratti dal numero di novembre 2026 della rivista Edge, incentrato su una dimostrazione di Rob Nelson. Sebbene Rockstar abbia condiviso le immagini, il contesto editoriale è legato alla rivista Edge, il che rende la formulazione 'Rockstar ha mostrato' potenzialmente fuorviante se non specificato che si tratta di materiale pubblicato tramite la rivista.",
+      "Tono/speculazione: la frase 'Restano ancora da capire la data esatta di uscita' è contraddittoria rispetto alle fonti che menzionano date specifiche (18/19 novembre) e all'articolo stesso che parla di 'fase di download' imminente. Le fonti suggeriscono che la data sia nota (19 novembre secondo n98), quindi affermare che resta da capire è incoerente con le informazioni fornite."
+    ],
+    "domande_live": [
+      "Qual è la vostra aspettativa sul nuovo sistema di polizia che ricorda i giocatori?",
+      "Quale elemento di Vice City vi entusiasma di più per il lancio?",
+      "Quanto pensate che i ritardi possano influenzare l’esperienza di gioco?"
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Grand Theft Auto VI"
+    }
+  }
+]
