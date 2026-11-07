@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-07T17:51:44Z",
+  "aggiornato": "2026-11-07T17:51:58Z",
   "stati": [
     "da fare",
     "in corso",
@@ -969,14 +969,13 @@
       "id": "2026-10-25-1",
       "per": "samaritan-notizie",
       "da": "fact-checker",
-      "stato": "fatto",
+      "stato": "da fare",
       "volte": 2,
       "origine": "Short vkDvtBuuqNM del 24/10",
       "titolo": "Titolo che allarga la fonte: \"Tesla: cancellazione del Cybertruck dopo 7 anni\"",
-      "dettagli": "La fonte (Everyeye Auto) parla di Cybertruck cancellato in due Paesi dopo 7 anni di caparre; il titolo toglie \"in due Paesi\" e fa pensare a una chiusura mondiale. Stesso difetto aperto per il gaming (2026-10-24-1): il titolo deve tenere le condizioni della fonte. | 06/11: 'MotoGP Qatar: Marquez e Bezzecchi fuori pista' mentre OA Sport dice che fanno il vuoto; script 'hanno abbandonato la sessione'. Volte 2: va corretto alla fonte con una PR sul titolo, dopo l'unione della PR #16 per non sovrapporre le modifiche a brain.py.",
+      "dettagli": "La fonte (Everyeye Auto) parla di Cybertruck cancellato in due Paesi dopo 7 anni di caparre; il titolo toglie \"in due Paesi\" e fa pensare a una chiusura mondiale. Stesso difetto aperto per il gaming (2026-10-24-1): il titolo deve tenere le condizioni della fonte. | 06/11: 'MotoGP Qatar: Marquez e Bezzecchi fuori pista' mentre OA Sport dice che fanno il vuoto; script 'hanno abbandonato la sessione'. Volte 2: va corretto alla fonte con una PR sul titolo, dopo l'unione della PR #16 per non sovrapporre le modifiche a brain.py. (07/11: la #16 è unita, ora tocca alla PR sul titolo.)",
       "link": "https://youtube.com/shorts/vkDvtBuuqNM",
-      "creato": "2026-10-25T06:56:22+00:00",
-      "esito": "PR #16 unita da Davide il 07/11 alle 18:47."
+      "creato": "2026-10-25T06:56:22+00:00"
     },
     {
       "id": "2026-10-25-2",
