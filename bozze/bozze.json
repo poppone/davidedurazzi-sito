@@ -1,7 +1,7 @@
 [
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "playstation-plus-nuovi-vantaggi-suscitano-polemica-tra-gli-abbonati-20261107",
     "titolo": "PlayStation Plus: nuovi vantaggi suscitano polemica tra gli abbonati",
     "sezione": "tecnologia",
@@ -36,7 +36,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "openai-lancia-gpt-6-cyber-81-falle-in-firefox-e-quasi-1-000-exploit-li-20261107",
     "titolo": "OpenAI lancia GPT-6 Cyber: 81 falle in Firefox e quasi 1.000 exploit Linux",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "gta-6-polizia-reattiva-e-storia-che-si-adatta-al-giocatore-20261107",
     "titolo": "GTA 6: polizia reattiva e storia che si adatta al giocatore",
