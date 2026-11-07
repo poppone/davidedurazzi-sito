@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-06",
+  "aggiornato": "2026-11-07T05:15:00Z",
   "stati": [
     "da fare",
     "in corso",
@@ -970,10 +970,10 @@
       "per": "samaritan-notizie",
       "da": "fact-checker",
       "stato": "da fare",
-      "volte": 1,
+      "volte": 2,
       "origine": "Short vkDvtBuuqNM del 24/10",
       "titolo": "Titolo che allarga la fonte: \"Tesla: cancellazione del Cybertruck dopo 7 anni\"",
-      "dettagli": "La fonte (Everyeye Auto) parla di Cybertruck cancellato in due Paesi dopo 7 anni di caparre; il titolo toglie \"in due Paesi\" e fa pensare a una chiusura mondiale. Stesso difetto aperto per il gaming (2026-10-24-1): il titolo deve tenere le condizioni della fonte.",
+      "dettagli": "La fonte (Everyeye Auto) parla di Cybertruck cancellato in due Paesi dopo 7 anni di caparre; il titolo toglie \"in due Paesi\" e fa pensare a una chiusura mondiale. Stesso difetto aperto per il gaming (2026-10-24-1): il titolo deve tenere le condizioni della fonte. | 06/11: 'MotoGP Qatar: Marquez e Bezzecchi fuori pista' mentre OA Sport dice che fanno il vuoto; script 'hanno abbandonato la sessione'. Volte 2: va corretto alla fonte con una PR sul titolo, dopo l'unione della PR #16 per non sovrapporre le modifiche a brain.py.",
       "link": "https://youtube.com/shorts/vkDvtBuuqNM",
       "creato": "2026-10-25T06:56:22+00:00"
     },
@@ -1165,7 +1165,7 @@
       "id": "2026-11-06-1",
       "per": "davide",
       "da": "revisore-argomenti",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "titolo": "Rilanciare lo Short \"The Legend of Zelda: Ocarina of Time: 7 tracce extra\" su Instagram e Facebook?",
       "dettagli": "Short italiano di Samaritan gaming del 05/11 (14:00). Voti della stanza: argomenti 3/5 (notizia vera, Nintendo Music aggiunge sette tracce, ma tema di nicchia e fonte secondaria Pokémon Millennium), video 3/5 (retention non ancora disponibile). Sotto il 4 richiesto dal permesso fisso, quindi la decisione è tua. Consiglio: scartare, il pubblico TikTok/Instagram non ha premiato le notizie di nicchia (Claude 250 visualizzazioni, Ufficio 269).",
@@ -1173,13 +1173,15 @@
       "origine": "samaritan_v2 cronologia_trend 2026-11-05 5c0-pKgtMPg",
       "volte": 1,
       "azione": "Reel Instagram e video Facebook sull'account Davide Durazzi alle 12:00 di domani con la didascalia TikTok e la nota AI (coda social + Metricool).",
-      "deciso": "2026-11-06T05:06:35.744Z"
+      "deciso": "2026-11-06T05:06:35.744Z",
+      "esito": "Eseguito il 07/11 alle 6:59 UTC (con un giorno di ritardo): Reel Instagram + Reel Facebook alle 12:00 del 07/11, AI dichiarata.",
+      "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=1305798248368260147"
     },
     {
       "id": "2026-11-06-2",
       "per": "davide",
       "da": "social",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "post",
       "titolo": "Rilanciare gli articoli di oggi (Xpeng L03, GTA 6 polizia, iPhone Duo) su Bluesky, Pinterest e TikTok?",
       "dettagli": "Tre articoli approvati stamattina (nessuna nota del Critico): \"Xpeng L03 in Europa: prezzi, allestimenti e batteria diversa dalla Cina\" (motori, Motor1 + InsideEVs), \"GTA 6: nuovi sistemi di gioco e la polizia che reagisce\" (gaming, Il Contraddittorio, Gamereactor), \"iPhone Duo guida le vendite di ottobre su Amazon\" (tecnologia, HDblog). Caroselli in ig/<slug>/. Il carosello Xpeng va anche sull'Instagram Motori alle 16:00 (regola 6w, già previsto).",
@@ -1187,7 +1189,9 @@
       "origine": "bozze del 2026-11-06",
       "volte": 1,
       "azione": "Programmo su Metricool (brand Davide Durazzi, AI dichiarata): Xpeng alle 11:00 Bluesky, 11:05 Pin nella bacheca Notizie, 13:00 TikTok foto; GTA 6 alle 15:00, 15:05 e 17:00; iPhone Duo alle 19:00, 19:05 e 20:00. Massimo 4 slide su Bluesky.",
-      "deciso": "2026-11-06T05:06:41.339Z"
+      "deciso": "2026-11-06T05:06:41.339Z",
+      "esito": "Eseguito il 07/11 (con un giorno di ritardo), stessi orari: Xpeng 11:00 Bluesky, 11:05 Pin, 13:00 TikTok; GTA 6 15:00/15:05/17:00; iPhone Duo 19:00/19:05/20:00.",
+      "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7358624"
     },
     {
       "id": "2026-11-06-3",
@@ -1209,7 +1213,7 @@
       "stato": "da fare",
       "tipo": "altro",
       "titolo": "LinkedIn: la variabile LI_ORG_ID contiene un link invece del numero della pagina",
-      "dettagli": "Da ieri pubblica.yml prova a pubblicare gli articoli sulla pagina LinkedIn Redazione, ma LinkedIn risponde HTTP 400 'Invalid Urn Format' perché la variabile del repo LI_ORG_ID vale 'https://www.lin...' invece del solo numero. Oggi 14 articoli saltati su LinkedIn (Instagram e Facebook ok). Il numero è nell'indirizzo di amministrazione della pagina: linkedin.com/company/<numero>/admin.",
+      "dettagli": "Da ieri pubblica.yml prova a pubblicare gli articoli sulla pagina LinkedIn Redazione, ma LinkedIn risponde HTTP 400 'Invalid Urn Format' perché la variabile del repo LI_ORG_ID vale 'https://www.lin...' invece del solo numero. Oggi 14 articoli saltati su LinkedIn (Instagram e Facebook ok). Il numero è nell'indirizzo di amministrazione della pagina: linkedin.com/company/<numero>/admin. Il numero giusto è nel link stesso: 146701526 (linkedin.com/company/146701526). Finch non può cambiare le variabili del repo da qui (proxy GitHub).",
       "link": "https://github.com/poppone/davidedurazzi-sito/settings/variables/actions",
       "origine": "log pubblica.yml run del 06/11 05:01 UTC",
       "volte": 1,
@@ -1247,14 +1251,87 @@
       "id": "2026-11-06-7",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "fatto",
       "tipo": "pr",
       "titolo": "PR #124 samaritan_v2: taglia_live con controllo GPU all'avvio, momenti scelti meglio, riascolto audio delle clip, zoom senza facecam",
       "dettagli": "Chiesta da Davide il 06/11 alle 6:42. GPU obbligatoria (CPU solo con WHISPER_DISPOSITIVO=cpu), cuBLAS/cuDNN via os.add_dll_directory (DLL copiate spostate in lavoro\\_dll_copiate_in_ctranslate2, cancellabili). Picchi chat senza sub/cheer/bot, primi 10 minuti saltati, ascolta.py scrive ascolto.md. Prova Haytano VOD 2920506058: nessuna clip da 4/5, 3 da 3 in Drive prova-clip-streamer/haytano/. Dopo l'unione rifaccio il VOD del 03/11.",
       "link": "https://github.com/poppone/samaritan_v2/pull/124",
       "origine": "prova clip 05/11, messaggio di Davide 06/11 6:42",
       "volte": 1,
-      "azione": "La unisci tu quando il workflow di test è verde; io tolgo la bozza e aggiorno il compito."
+      "azione": "La unisci tu quando il workflow di test è verde; io tolgo la bozza e aggiorno il compito.",
+      "esito": "PR #124 unita da Davide il 06/11."
+    },
+    {
+      "id": "2026-11-07-1",
+      "per": "davide",
+      "da": "revisore-argomenti",
+      "stato": "da approvare",
+      "tipo": "video",
+      "titolo": "Rilanciare lo Short \"GTA 6: i preordini superano 7,7 milioni\" su TikTok, Instagram e Facebook?",
+      "dettagli": "Short italiano di Samaritan gaming del 06/11 (14:00). Voti: argomenti 4/5 (numero vero, Multiplayer.it, tema che rende: il carosello GTA 6/Xbox è stato il migliore della settimana tra i contenuti AI), video 3/5 (retention non disponibile). Consiglio: pubblicare.",
+      "link": "https://www.youtube.com/shorts/w915G7Tg_jY",
+      "origine": "samaritan_v2 cronologia_trend 2026-11-06 w915G7Tg_jY",
+      "volte": 1,
+      "azione": "TikTok @davidedurazzi (isAigc) + Reel Instagram + Reel Facebook alle 12:00 di domani con la didascalia TikTok e la nota AI."
+    },
+    {
+      "id": "2026-11-07-2",
+      "per": "finch",
+      "da": "critico-stanza",
+      "stato": "fatto",
+      "tipo": "altro",
+      "titolo": "Compiti approvati da Davide eseguiti con un giorno di ritardo",
+      "dettagli": "Zelda e rilancio articoli approvati il 06/11 alle 6:06, eseguiti il 07/11. Rimedio da oggi: Finch rilegge bacheca.json ('approvato') all'inizio del giro e di nuovo prima della reply; se Davide approva dopo la reply, li esegue nel giro successivo e lo scrive nel verbale.",
+      "origine": "giro del 06/11",
+      "volte": 1
+    },
+    {
+      "id": "2026-11-07-3",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "titolo": "Togliere il cron a redazione.yml e guardiano.yml: li avvia Finch alle 4:54 UTC",
+      "dettagli": "Dal 3/11 il cron di GitHub non parte in orario: il 6/11 è scattato con 8 ore di ritardo (11:27 e 12:10 UTC) dopo l'avvio manuale di Finch, quindi due redazioni nello stesso giorno e bozze doppie. Proposta: via il blocco schedule dai due workflow, resta workflow_dispatch; Finch li avvia ogni mattina come fa già.",
+      "link": "https://github.com/poppone/davidedurazzi-sito/actions/workflows/redazione.yml",
+      "origine": "run 42210379421 e 42215659418",
+      "volte": 1,
+      "azione": "Apro la PR con la modifica ai due workflow (solo il blocco schedule), la unisci tu."
+    },
+    {
+      "id": "2026-11-07-4",
+      "per": "davide",
+      "da": "vendite",
+      "stato": "da approvare",
+      "tipo": "altro",
+      "titolo": "Scheda per la call con l'agenzia creator (10 o 12 novembre)",
+      "dettagli": "Hai proposto tu stamattina due date per la call. Mossa Vendite di oggi: preparo una scheda di una pagina con i numeri aggiornati per rete, il video che ha reso di più, i tre formati che puoi offrire (video in auto, Short AI dichiarato, carosello) e uno spazio per i prezzi che decidi tu. Niente cifre finché non le scrivi tu.",
+      "origine": "thread Gmail etichettato Trattative",
+      "volte": 1,
+      "azione": "Scrivo la scheda in /mnt/project-files/finch/affiliazioni/ e te la metto qui nel thread il giorno prima della call."
+    },
+    {
+      "id": "2026-11-07-5",
+      "per": "davide",
+      "da": "finch",
+      "stato": "fatto",
+      "tipo": "post",
+      "titolo": "Motori in 60 secondi: programmati F1 Antonelli FP2 (10:00) e carosello Honda Alpha (16:00)",
+      "dettagli": "TikTok + Reel Instagram Motori, AI dichiarata. Saltato 'MotoGP Qatar: Marquez e Bezzecchi fuori pista' perché il titolo ribalta la fonte. Oggi è sabato: la serie 'Le gare del weekend' parte domani.",
+      "link": "https://app.metricool.com/planner/calendar?blogId=7680380&openWithPostUuid=-1790447720636267918",
+      "origine": "cronologia_trend samaritan-notizie 2026-11-06",
+      "volte": 1,
+      "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7680380&openWithPostUuid=-8626075072778909465"
+    },
+    {
+      "id": "2026-11-07-6",
+      "per": "redazione",
+      "da": "critico-stanza",
+      "stato": "da fare",
+      "titolo": "Lo Scout ripropone una notizia già pubblicata",
+      "dettagli": "07/11: bozza 'GTA 6: polizia reattiva e storia che si adatta al giocatore' con la stessa fonte Gamereactor dell'articolo del 06/11 'GTA 6: nuovi sistemi di gioco e la polizia che reagisce'. Scartata da Finch. Rimedio: in agenti/main.py lo Scout deve escludere fonti (url) e titoli già presenti in content/articoli.json degli ultimi 14 giorni. Se torna, PR.",
+      "origine": "bozze del 2026-11-07",
+      "volte": 1
     }
   ]
 }

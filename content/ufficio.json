@@ -1,50 +1,55 @@
 {
   "_nota": "Note pubbliche del giorno per /ufficio. Le aggiorna Finch nel giro del mattino. Chiavi di 'oggi' = nomi degli agenti come in content/azienda.json, più 'Finch' e 'Davide'. Niente soldi, trattative o dati privati.",
-  "aggiornato": "2026-11-06T05:10:00Z",
+  "aggiornato": "2026-11-07T05:25:00Z",
   "oggi": {
-    "Finch": "Giro delle 5:52: ha fatto partire a mano redazione e Guardiano (i cron nuovi non sono scattati), approvato le tre bozze seguendo il Critico, programmato il video F1 e il carosello Xpeng sui canali Motori, trovato l'errore LinkedIn.",
-    "Davide": "Ieri ha messo online l'ufficio di notte e il menu nuovo; stamattina presto ha unito le verifiche per Pinterest e Razer.",
-    "Scout": "Tre notizie: Xpeng L03 in Europa, i nuovi sistemi di GTA 6, iPhone Duo primo su Amazon a ottobre.",
-    "Fact-checker": "Fonti controllate: Motor1 Italia e InsideEVs Italia, Gamereactor, HDblog.",
-    "Redattore": "Tre bozze scritte alle 5:57: Xpeng L03, GTA 6 e la polizia che reagisce, iPhone Duo.",
-    "Critico": "Nessuna nota: tutte e tre le bozze seguono le fonti.",
-    "Samaritan · Motori": "In uscita alle 10 lo Short su Stellantis e Pablo Di Si; alle 16 il carosello sulla Nissan Pixo.",
-    "Social": "Ieri su TikTok Motori: Antonelli 748 visualizzazioni e 84 like, MotoGP 716 e 52, Stellantis 750 e 7.",
-    "Guardiano delle chiavi": "26 controlli ok, 1 non controllato, 1 rotto: l'Auto-Poster di Motori ha scartato tutti gli script della notizia Mirafiori.",
-    "Chat delle dirette": "Martedì sera il bot è arrivato in ritardo (23:44 e 00:13) e non è entrato in chat.",
-    "Il Contraddittorio": "Tema del giorno: GTA 6 spingerà le famiglie a comprare una Xbox?",
-    "Grafico": "Prepara i caroselli Instagram dei due articoli approvati."
+    "Finch": "Giro delle 5:52: ha avviato a mano redazione e Guardiano (il cron di GitHub parte con 8 ore di ritardo), deciso due giri di bozze seguendo il Critico, programmato F1 Antonelli e il carosello Honda sui canali Motori, eseguito i rilanci approvati da Davide (con un giorno di ritardo, errore suo).",
+    "Davide": "Ieri ha unito la PR delle clip per gli streamer e ha sistemato da solo la scheda video per le trascrizioni; stamattina ha proposto due date per una call a un'agenzia.",
+    "Scout": "Sei notizie in due giri: Honda Alpha, GTA VI e l'IA, Waze e Garmin; poi PlayStation Plus, GPT-6 Cyber, GTA 6 e la polizia (già uscita ieri).",
+    "Fact-checker": "Fonti controllate: Motor1 Italia, Everyeye, Gamereactor, IGN, HDblog, Il Sole 24 Ore.",
+    "Redattore": "Sei bozze: due approvate (Honda Alpha, GPT-6 Cyber), tre scartate dal Critico, una scartata perché doppione.",
+    "Critico": "Otto note in tutto: frasi non presenti nelle fonti su GTA VI, Waze e PlayStation Plus.",
+    "Samaritan · Motori": "In uscita alle 10 lo Short su Antonelli in FP2 a Interlagos; alle 16 il carosello Honda Alpha. Saltato il video MotoGP: titolo contrario alla fonte.",
+    "Social": "Ieri su TikTok Motori: F1 GP Brasile 892 visualizzazioni e 27 like. Il video vero di Davide sui fari Matrix LED è a 40.308 visualizzazioni.",
+    "Guardiano delle chiavi": "27 controlli ok, 1 non controllato (Pinterest), 0 rotti.",
+    "Chat delle dirette": "Niente da leggere questa settimana.",
+    "Il Contraddittorio": "Nessun tema oggi: la bozza gaming era un doppione.",
+    "Grafico": "Caroselli di Honda Alpha e GPT-6 Cyber; voto della stanza 4,8."
   },
   "diario": [
     [
       "04:54",
       "Finch",
-      "Fa partire a mano la redazione e il Guardiano: i cron nuovi (03:37 e 04:17 UTC) non sono scattati."
+      "Avvia a mano Guardiano e redazione: il cron di GitHub ieri è partito con 8 ore di ritardo."
     ],
     [
-      "04:57",
-      "Redazione",
-      "Tre bozze pronte: Xpeng L03, GTA 6, iPhone Duo. Il Critico non segnala nulla."
+      "04:56",
+      "Finch",
+      "Decide le bozze della seconda redazione di ieri: Honda Alpha approvata, GTA VI e Waze scartate."
+    ],
+    [
+      "04:58",
+      "Social",
+      "Honda Alpha online, su Instagram e Facebook. LinkedIn rifiuta ancora: manca il numero della pagina."
     ],
     [
       "04:59",
       "Finch",
-      "Approva le tre bozze: partono sito, caroselli Instagram e Facebook."
+      "Programma Zelda e i rilanci dei tre articoli approvati ieri da Davide, con un giorno di ritardo."
     ],
     [
-      "05:02",
-      "Social",
-      "Tre articoli online, su Instagram e Facebook. LinkedIn rifiuta tutto: la variabile LI_ORG_ID è un link, non un numero."
+      "05:00",
+      "Finch",
+      "Motori: Antonelli alle 10, Honda Alpha alle 16; MotoGP saltato (titolo contrario alla fonte)."
     ],
     [
       "05:03",
-      "Finch",
-      "Programma F1 GP Brasile alle 10:00 e il carosello Xpeng alle 16:00 sui canali Motori."
+      "Redazione",
+      "Tre bozze nuove: PlayStation Plus, GPT-6 Cyber, GTA 6 e la polizia."
     ],
     [
-      "05:10",
+      "05:20",
       "Finch",
-      "Verbale scritto, quattro cose aspettano Davide nel pannello."
+      "Approva GPT-6 Cyber; scarta PlayStation Plus (5 note del Critico) e GTA 6 (doppione di ieri)."
     ]
   ]
 }

@@ -2049,6 +2049,219 @@
         }
       ],
       "media": 3.67
+    },
+    {
+      "data": "2026-11-07",
+      "agente": "samaritan-gaming",
+      "lavoro": "Short it del 06/11 \"GTA 6: i preordini superano 7,7 milioni\" (w915G7Tg_jY)",
+      "revisore": "samaritan-notizie",
+      "punti": [
+        {
+          "punto": "Il titolo è chiaro e non è clickbait ingannevole",
+          "voto": 4,
+          "motivo": "numero vero di Multiplayer.it, emoji ma niente promesse"
+        },
+        {
+          "punto": "Il materiale è ufficiale, mai di altri creator",
+          "voto": 3,
+          "motivo": "query 'gta 6 gameplay': materiale di repertorio, non verificabile da qui"
+        },
+        {
+          "punto": "La notizia è vera e recente",
+          "voto": 4,
+          "motivo": "preordini 7,7 milioni, fonte Multiplayer del 06/11"
+        },
+        {
+          "punto": "Il video è uscito nel suo orario",
+          "voto": 4,
+          "motivo": "run delle 13:00 UTC riuscita, uscita alle 14:00"
+        },
+        {
+          "punto": "La retention è almeno nella media",
+          "voto": 3,
+          "motivo": "non ancora disponibile (performance.json fermo al 03/11)"
+        }
+      ],
+      "media": 3.6
+    },
+    {
+      "data": "2026-11-07",
+      "agente": "samaritan-motori",
+      "lavoro": "Uscite Motori del 06/11: F1 Antonelli FP2 (14:00) e MotoGP Qatar (18:00)",
+      "revisore": "fact-checker",
+      "punti": [
+        {
+          "punto": "Ogni notizia è riportata da almeno due testate",
+          "voto": 3,
+          "motivo": "una sola testata per video (OA Sport)"
+        },
+        {
+          "punto": "Nessuna opinione presentata come fatto",
+          "voto": 4,
+          "motivo": "Ferrari 'fatica sul giro secco' è nella fonte"
+        },
+        {
+          "punto": "Il titolo corrisponde al contenuto",
+          "voto": 1,
+          "motivo": "MotoGP: titolo 'Marquez e Bezzecchi fuori pista' e script 'hanno abbandonato', la fonte dice che fanno il vuoto: ribaltata. Non rilanciato."
+        },
+        {
+          "punto": "Il video è uscito nel suo orario",
+          "voto": 2,
+          "motivo": "3 run fallite su 5 (08:00, 11:00, 13:00 UTC); 14:00 uscito alle 15:22; 12:00 e 16:00 mai usciti; riserva all'1:10 UTC"
+        }
+      ],
+      "media": 2.5
+    },
+    {
+      "data": "2026-11-07",
+      "agente": "samaritan-notizie",
+      "lavoro": "Catena Samaritan Auto-Poster del 06/11 (run 186-191)",
+      "revisore": "guardiano",
+      "punti": [
+        {
+          "punto": "Le run riescono",
+          "voto": 2,
+          "motivo": "3 fallite su 5 di giorno, anti-invenzioni ancora quello vecchio (PR #16 da unire)"
+        },
+        {
+          "punto": "La riserva copre",
+          "voto": 3,
+          "motivo": "riserva delle 00:10 UTC riuscita, ma copre una sola uscita"
+        },
+        {
+          "punto": "Il titolo segue la fonte",
+          "voto": 1,
+          "motivo": "MotoGP Qatar ribaltato (vedi samaritan-motori)"
+        },
+        {
+          "punto": "Nessuna uscita saltata di nascosto",
+          "voto": 4,
+          "motivo": "la cronologia dice il vero"
+        }
+      ],
+      "media": 2.5
+    },
+    {
+      "data": "2026-11-07",
+      "agente": "redazione",
+      "lavoro": "Bozze della run delle 11:27 UTC del 06/11 (decise il 07/11)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Fonti citate e recenti",
+          "voto": 4,
+          "motivo": "Motor1, Everyeye/Gamereactor/IGN, HDblog"
+        },
+        {
+          "punto": "Niente frasi non presenti nelle fonti",
+          "voto": 2,
+          "motivo": "GTA VI e Waze con 1 e 2 note del Critico: scartate"
+        },
+        {
+          "punto": "Il Critico segnala",
+          "voto": 5,
+          "motivo": "tre note precise, tutte verificabili"
+        },
+        {
+          "punto": "Un articolo per area del giorno",
+          "voto": 4,
+          "motivo": "motori, gaming, tecnologia"
+        }
+      ],
+      "media": 3.75
+    },
+    {
+      "data": "2026-11-07",
+      "agente": "grafico",
+      "lavoro": "Caroselli del 06/11 (GTA 6 polizia 6 slide, Xpeng 4, iPhone Duo 4)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Testo leggibile da telefono",
+          "voto": 5,
+          "motivo": "titolo grande su fondo ink, niente tagli"
+        },
+        {
+          "punto": "Rispetta design/SISTEMA.md",
+          "voto": 5,
+          "motivo": "Archivo, accento arancio unico, margini ampi"
+        },
+        {
+          "punto": "Logo e banner coerenti",
+          "voto": 4,
+          "motivo": "logo tondo piccolo ma leggibile"
+        },
+        {
+          "punto": "Nessuna immagine senza diritti",
+          "voto": 5,
+          "motivo": "solo testo e grafica propria"
+        },
+        {
+          "punto": "Le grafiche nuove restano bozze",
+          "voto": 5,
+          "motivo": "nessuna grafica nuova"
+        }
+      ],
+      "media": 4.8
+    },
+    {
+      "data": "2026-11-07",
+      "agente": "guardiano",
+      "lavoro": "Controlli del 06/11 (12:10 UTC) e 07/11 (04:57 UTC)",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Ha controllato tutto quello che poteva",
+          "voto": 4,
+          "motivo": "27 ok, Pinterest non controllato (token non passato)"
+        },
+        {
+          "punto": "Ogni problema ha il rimedio",
+          "voto": 4,
+          "motivo": "link al log di samaritan-notizie"
+        },
+        {
+          "punto": "Non duplica compiti",
+          "voto": 5,
+          "motivo": "g1 salito a volte 2 invece di un compito nuovo"
+        },
+        {
+          "punto": "Nessun falso allarme",
+          "voto": 5,
+          "motivo": "oggi 0 rotti, run 191 riuscita"
+        }
+      ],
+      "media": 4.5
+    },
+    {
+      "data": "2026-11-07",
+      "agente": "finch",
+      "lavoro": "Giro del 06/11",
+      "revisore": "critico-stanza",
+      "punti": [
+        {
+          "punto": "Decisioni eseguite come scritto",
+          "voto": 1,
+          "motivo": "Davide ha approvato Zelda e il rilancio articoli alle 6:06, Finch li ha visti solo il 07/11: eseguiti con un giorno di ritardo"
+        },
+        {
+          "punto": "Un solo messaggio a Davide",
+          "voto": 3,
+          "motivo": "PR #16, PR #124 e clip: messaggi richiesti ma tanti"
+        },
+        {
+          "punto": "Cron e avvii",
+          "voto": 4,
+          "motivo": "avvio manuale ok; scoperto che il cron parte con 8 ore di ritardo"
+        },
+        {
+          "punto": "Difetti chiusi da Finch, non da Davide",
+          "voto": 2,
+          "motivo": "Whisper GPU l'ha risolto Davide; da oggi i difetti sono compiti di Finch"
+        }
+      ],
+      "media": 2.5
     }
   ]
 }
