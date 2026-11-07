@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-07T05:15:00Z",
+  "aggiornato": "2026-11-07T09:53:31Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1332,6 +1332,32 @@
       "dettagli": "07/11: bozza 'GTA 6: polizia reattiva e storia che si adatta al giocatore' con la stessa fonte Gamereactor dell'articolo del 06/11 'GTA 6: nuovi sistemi di gioco e la polizia che reagisce'. Scartata da Finch. Rimedio: in agenti/main.py lo Scout deve escludere fonti (url) e titoli già presenti in content/articoli.json degli ultimi 14 giorni. Se torna, PR.",
       "origine": "bozze del 2026-11-07",
       "volte": 1
+    },
+    {
+      "id": "2026-11-07-7",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "titolo": "Samaritan gaming: due Short al giorno in italiano (14:00 e 20:00), via l'inglese",
+      "dettagli": "Chiesto da Davide il 07/11 ('aggiusta il tiro dei reel su YouTube'). Dati: 64 Short in inglese, mediana 56 visualizzazioni e 9 iscritti; 24 in italiano, mediana 211. Lo slot delle 14 è l'unico in crescita, quello delle 20 ha ritenzione 70%. PR #125 samaritan_v2, test verdi (1049), in bozza: la unisci tu. Misura: dopo 14 giorni confronto della mediana giornaliera con ottobre.",
+      "link": "https://github.com/poppone/samaritan_v2/pull/125",
+      "origine": "analisi performance.json 07/11",
+      "volte": 1,
+      "azione": "Unisci la PR #125; dal giorno dopo escono 2 Short italiani invece di 4."
+    },
+    {
+      "id": "2026-11-07-8",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da approvare",
+      "tipo": "pr",
+      "titolo": "Motori in 60 secondi: tre uscite (12, 14, 18), più gare e niente notizie aziendali",
+      "dettagli": "Chiesto da Davide il 07/11. Lo slot delle 16:00 è il peggiore del canale; le notizie societarie restano sotto le 50 visualizzazioni, le gare e i piloti crescono. PR #17 samaritan-notizie, solo canale.json, test verdi (873), in bozza: la unisci tu. Misura: dopo 14 giorni confronto della mediana giornaliera con ottobre.",
+      "link": "https://github.com/poppone/samaritan-notizie/pull/17",
+      "origine": "analisi performance.json 07/11",
+      "volte": 1,
+      "azione": "Unisci la PR #17; dal giorno dopo 3 Short motori invece di 4, più gare."
     }
   ]
 }
