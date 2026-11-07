@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-07T09:53:31Z",
+  "aggiornato": "2026-11-07T09:56:05Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1358,6 +1358,17 @@
       "origine": "analisi performance.json 07/11",
       "volte": 1,
       "azione": "Unisci la PR #17; dal giorno dopo 3 Short motori invece di 4, più gare."
+    },
+    {
+      "id": "2026-11-07-9",
+      "per": "finch",
+      "da": "critico-stanza",
+      "stato": "fatto",
+      "tipo": "altro",
+      "titolo": "La PR #124 (controllo GPU) era passata con la CI rossa",
+      "dettagli": "I due test del controllo GPU importavano numpy, che in CI non c'è: il check 'test' di samaritan_v2 era rosso dal 06/11 e la PR è stata unita lo stesso. Rimedio: fix nella PR #125 (commit 996ec25, _silenzio_di_prova sostituibile nei test). Regola: prima di dire a Davide che una PR è pronta, controllare che il check della CI sia verde, non solo i test in locale.",
+      "origine": "CI PR #125 del 07/11",
+      "volte": 1
     }
   ]
 }
