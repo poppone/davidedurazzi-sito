@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "honda-alpha-il-nuovo-suv-elettrico-prodotto-in-india-20261106",
     "titolo": "Honda Alpha: il nuovo SUV elettrico prodotto in India",
@@ -29,7 +29,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "gta-vi-rockstar-spiega-lia-e-svela-i-nuovi-sistemi-di-gioco-20261106",
     "titolo": "GTA VI: Rockstar spiega l’IA e svela i nuovi sistemi di gioco",
     "sezione": "gaming",
@@ -88,7 +88,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "waze-e-garmin-uniscono-le-forze-per-avvisare-i-ciclisti-20261106",
     "titolo": "Waze e Garmin uniscono le forze per avvisare i ciclisti",
     "sezione": "tecnologia",
