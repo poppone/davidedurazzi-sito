@@ -1342,14 +1342,15 @@
       "id": "2026-11-07-7",
       "per": "davide",
       "da": "finch",
-      "stato": "da approvare",
+      "stato": "approvato",
       "tipo": "pr",
       "titolo": "Samaritan gaming: due Short al giorno in italiano (14:00 e 20:00), via l'inglese",
       "dettagli": "Chiesto da Davide il 07/11 ('aggiusta il tiro dei reel su YouTube'). Dati: 64 Short in inglese, mediana 56 visualizzazioni e 9 iscritti; 24 in italiano, mediana 211. Lo slot delle 14 è l'unico in crescita, quello delle 20 ha ritenzione 70%. PR #125 samaritan_v2, test verdi (1049), in bozza: la unisci tu. Misura: dopo 14 giorni confronto della mediana giornaliera con ottobre.",
       "link": "https://github.com/poppone/samaritan_v2/pull/125",
       "origine": "analisi performance.json 07/11",
       "volte": 1,
-      "azione": "Unisci la PR #125; dal giorno dopo escono 2 Short italiani invece di 4."
+      "azione": "Unisci la PR #125; dal giorno dopo escono 2 Short italiani invece di 4.",
+      "deciso": "2026-11-07T11:02:33.461Z"
     },
     {
       "id": "2026-11-07-8",
