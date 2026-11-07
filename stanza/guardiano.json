@@ -1,9 +1,9 @@
 {
-  "aggiornato": "2026-11-07T04:57+00:00",
+  "aggiornato": "2026-11-07T11:07+00:00",
   "riassunto": {
     "ok": 27,
     "attenzione": 0,
-    "rotto": 0,
+    "rotto": 1,
     "non controllato": 1
   },
   "controlli": [
@@ -82,7 +82,7 @@
     {
       "nome": "davidedurazzi-sito · Guardiano delle chiavi",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-06: success",
+      "messaggio": "ultima esecuzione del 2026-11-07: success",
       "rimedio": ""
     },
     {
@@ -100,13 +100,13 @@
     {
       "nome": "davidedurazzi-sito · Pubblica bozze approvate",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-06: success",
+      "messaggio": "ultima esecuzione del 2026-11-07: success",
       "rimedio": ""
     },
     {
       "nome": "davidedurazzi-sito · Redazione del mattino",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-06: success",
+      "messaggio": "ultima esecuzione del 2026-11-07: success",
       "rimedio": ""
     },
     {
@@ -124,7 +124,7 @@
     {
       "nome": "samaritan_v2 · Pulizia copie dei video",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-06: success",
+      "messaggio": "ultima esecuzione del 2026-11-07: success",
       "rimedio": ""
     },
     {
@@ -146,10 +146,16 @@
       "rimedio": ""
     },
     {
-      "nome": "samaritan-notizie · Samaritan Auto-Poster",
+      "nome": "samaritan-notizie · Riassunto del sabato",
       "esito": "ok",
       "messaggio": "ultima esecuzione del 2026-11-07: success",
       "rimedio": ""
+    },
+    {
+      "nome": "samaritan-notizie · Samaritan Auto-Poster",
+      "esito": "rotto",
+      "messaggio": "l'ultima esecuzione del 2026-11-07 è fallita",
+      "rimedio": "Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/42363306091"
     },
     {
       "nome": "samaritan-notizie · Test",
