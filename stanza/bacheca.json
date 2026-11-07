@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-07",
+  "aggiornato": "2026-11-07T12:34:59Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1375,6 +1375,18 @@
       "titolo": "La PR #124 (controllo GPU) era passata con la CI rossa",
       "dettagli": "I due test del controllo GPU importavano numpy, che in CI non c'è: il check 'test' di samaritan_v2 era rosso dal 06/11 e la PR è stata unita lo stesso. Rimedio: fix nella PR #125 (commit 996ec25, _silenzio_di_prova sostituibile nei test). Regola: prima di dire a Davide che una PR è pronta, controllare che il check della CI sia verde, non solo i test in locale.",
       "origine": "CI PR #125 del 07/11",
+      "volte": 1
+    },
+    {
+      "id": "2026-11-07-10",
+      "per": "finch",
+      "da": "critico-stanza",
+      "stato": "fatto",
+      "tipo": "altro",
+      "titolo": "Lo Scout di Motori non ha preso da solo il record BYD 503 km/h",
+      "dettagli": "Davide 07/11 13:33: 'queste cose il procacciatore di news le deve fare da solo'. Causa: nessuna ricerca copriva record di velocità e hypercar, BYD/Yangwang non erano nomi grossi. Rimedio nella PR #17 samaritan-notizie (commit sul ramo finch/motori-gare): ricerca dedicata, parole calde km/h/record mondiale/virale, marchi hypercar. Il video del 07/11 l'ho lanciato a mano (primo tentativo saltato: tema troppo lungo, non trovava l'articolo).",
+      "link": "https://github.com/poppone/samaritan-notizie/pull/17",
+      "origine": "richiesta di Davide 07/11",
       "volte": 1
     }
   ]
