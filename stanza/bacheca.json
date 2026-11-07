@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-07T12:39:06Z",
+  "aggiornato": "2026-11-07T17:50:51Z",
   "stati": [
     "da fare",
     "in corso",
@@ -1396,11 +1396,24 @@
       "stato": "fatto",
       "tipo": "post",
       "titolo": "Motori: Short 'Yangwang U9 Xtreme: nuovo record mondiale' (503 km/h) uscito su YouTube, TikTok e Instagram",
-      "dettagli": "Chiesto da Davide alle 13:25. YouTube https://youtube.com/shorts/jMgAnMfv89M (13:37), TikTok + Reel Instagram Motori alle 13:46 via Metricool, AI dichiarata. Fonte Automoto.it 6/11.",
+      "dettagli": "Chiesto da Davide alle 13:25. YouTube https://youtube.com/shorts/jMgAnMfv89M (13:37), TikTok + Reel Instagram Motori alle 13:46 via Metricool, AI dichiarata. Fonte Automoto.it 6/11. Alle 18:40 Davide ha chiesto la versione con le riprese vere del record: rimontata (video Supercar Blondie/BYD mandato da lui, voce dello Short, titolo e sottotitoli) e programmata alle 19:00 su YouTube, TikTok e Instagram Motori. File: social/video/byd-503-2026-11-07.mp4. Davide toglie il vecchio Short jMgAnMfv89M.",
       "link": "https://youtube.com/shorts/jMgAnMfv89M",
       "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7680380&openWithPostUuid=5366106663990804735",
       "origine": "richiesta di Davide 07/11",
       "volte": 1
+    },
+    {
+      "id": "2026-11-07-12",
+      "per": "davide",
+      "da": "finch",
+      "stato": "da fare",
+      "tipo": "altro",
+      "titolo": "Togliere il vecchio Short BYD (immagini di repertorio) da YouTube Motori",
+      "dettagli": "https://youtube.com/shorts/jMgAnMfv89M: sostituito alle 19:00 dalla versione con le riprese del record. Da YouTube Studio: elimina o metti privato. Finch non ha le credenziali YouTube di Motori (stanno nei segreti di samaritan-notizie).",
+      "link": "https://youtube.com/shorts/jMgAnMfv89M",
+      "origine": "richiesta di Davide 07/11 18:40",
+      "volte": 1,
+      "azione": "Elimina il vecchio Short da YouTube Studio."
     }
   ]
 }
