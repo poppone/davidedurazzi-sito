@@ -1268,7 +1268,7 @@
       "id": "2026-11-07-1",
       "per": "davide",
       "da": "revisore-argomenti",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "video",
       "titolo": "Rilanciare lo Short \"GTA 6: i preordini superano 7,7 milioni\" su TikTok, Instagram e Facebook?",
       "dettagli": "Short italiano di Samaritan gaming del 06/11 (14:00). Voti: argomenti 4/5 (numero vero, Multiplayer.it, tema che rende: il carosello GTA 6/Xbox è stato il migliore della settimana tra i contenuti AI), video 3/5 (retention non disponibile). Consiglio: pubblicare.",
@@ -1276,7 +1276,8 @@
       "origine": "samaritan_v2 cronologia_trend 2026-11-06 w915G7Tg_jY",
       "volte": 1,
       "azione": "TikTok @davidedurazzi (isAigc) + Reel Instagram + Reel Facebook alle 12:00 di domani con la didascalia TikTok e la nota AI.",
-      "deciso": "2026-11-07T11:02:21.345Z"
+      "deciso": "2026-11-07T11:02:21.345Z",
+      "esito": "Programmato 08/11 13:30 su TikTok, IG e FB (Metricool)"
     },
     {
       "id": "2026-11-07-2",
@@ -1301,20 +1302,22 @@
       "origine": "run 42210379421 e 42215659418",
       "volte": 1,
       "azione": "Apro la PR con la modifica ai due workflow (solo il blocco schedule), la unisci tu.",
-      "deciso": "2026-11-07T11:02:25.390Z"
+      "deciso": "2026-11-07T11:02:25.390Z",
+      "esito": "PR #58 aperta in bozza: la unisce Davide"
     },
     {
       "id": "2026-11-07-4",
       "per": "davide",
       "da": "vendite",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "altro",
       "titolo": "Scheda per la call con l'agenzia creator (10 o 12 novembre)",
       "dettagli": "Hai proposto tu stamattina due date per la call. Mossa Vendite di oggi: preparo una scheda di una pagina con i numeri aggiornati per rete, il video che ha reso di più, i tre formati che puoi offrire (video in auto, Short AI dichiarato, carosello) e uno spazio per i prezzi che decidi tu. Niente cifre finché non le scrivi tu.",
       "origine": "thread Gmail etichettato Trattative",
       "volte": 1,
       "azione": "Scrivo la scheda in /mnt/project-files/finch/affiliazioni/ e te la metto qui nel thread il giorno prima della call.",
-      "deciso": "2026-11-07T11:02:29.526Z"
+      "deciso": "2026-11-07T11:02:29.526Z",
+      "esito": "Scheda in /mnt/project-files/finch/affiliazioni/scheda-call-agenzia.md"
     },
     {
       "id": "2026-11-07-5",
