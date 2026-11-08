@@ -1,9 +1,9 @@
 {
-  "aggiornato": "2026-11-07T11:07+00:00",
+  "aggiornato": "2026-11-08T11:19+00:00",
   "riassunto": {
-    "ok": 27,
+    "ok": 28,
     "attenzione": 0,
-    "rotto": 1,
+    "rotto": 0,
     "non controllato": 1
   },
   "controlli": [
@@ -46,7 +46,7 @@
     {
       "nome": "Token del bot della chat Twitch",
       "esito": "ok",
-      "messaggio": "valido, scade tra 41 giorni",
+      "messaggio": "valido, scade tra 40 giorni",
       "rimedio": ""
     },
     {
@@ -70,7 +70,7 @@
     {
       "nome": "davidedurazzi-sito · Finch su Discord",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-07: success",
+      "messaggio": "ultima esecuzione del 2026-11-08: success",
       "rimedio": ""
     },
     {
@@ -88,7 +88,7 @@
     {
       "nome": "davidedurazzi-sito · Messaggi privati Instagram",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-07: success",
+      "messaggio": "ultima esecuzione del 2026-11-08: success",
       "rimedio": ""
     },
     {
@@ -124,13 +124,13 @@
     {
       "nome": "samaritan_v2 · Pulizia copie dei video",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-07: success",
+      "messaggio": "ultima esecuzione del 2026-11-08: success",
       "rimedio": ""
     },
     {
       "nome": "samaritan_v2 · Samaritan Auto-Poster",
       "esito": "ok",
-      "messaggio": "ultima esecuzione del 2026-11-07: success",
+      "messaggio": "ultima esecuzione del 2026-11-08: success",
       "rimedio": ""
     },
     {
@@ -153,9 +153,9 @@
     },
     {
       "nome": "samaritan-notizie · Samaritan Auto-Poster",
-      "esito": "rotto",
-      "messaggio": "l'ultima esecuzione del 2026-11-07 è fallita",
-      "rimedio": "Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/42363306091"
+      "esito": "ok",
+      "messaggio": "ultima esecuzione del 2026-11-08: success",
+      "rimedio": ""
     },
     {
       "nome": "samaritan-notizie · Test",
