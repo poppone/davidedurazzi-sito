@@ -1,5 +1,47 @@
 [
   {
+    "slug": "il-ritorno-del-bollino-playstation-exclusive-20261108",
+    "titolo": "Il ritorno del bollino PlayStation Exclusive",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-11-08",
+    "sommario": "Sony avrebbe deciso di ripescare il celebre marchio per le esclusive, puntando forte sulla sua console e sui giochi in solitaria.",
+    "testo": [
+      "Secondo quanto riportato da Everyeye, il bollino che certifica le esclusive per la console di casa Sony sarebbe tornato ufficialmente in campo. La mossa segnerebbe un cambio di rotta importante rispetto agli ultimi anni.",
+      "Sempre secondo la testata, l'azienda nipponica avrebbe deciso di puntare di nuovo in modo netto sul proprio ecosistema, mettendo da parte la recente apertura verso il mondo dei computer e concentrandosi sui titoli pensati per un singolo giocatore.",
+      "La testata sottolinea inoltre che questa scelta arriverebbe dopo un periodo di tentativi che, a quanto pare, non avrebbero dato i frutti sperati sul fronte della distribuzione al di fuori della console."
+    ],
+    "fonti": [
+      {
+        "nome": "Everyeye: Il bollino PlayStation Exclusive è ufficialmente tornato",
+        "url": "https://www.everyeye.it/notizie/bollino-playstation-exclusive-ufficialmente-tornato-910379.html"
+      }
+    ],
+    "acquisto": {
+      "tipo": "prodotto",
+      "nome": "PS5"
+    },
+    "domanda": "Pensi che il ritorno delle esclusive e l'abbandono dei giochi su PC rendano PS5 una scelta migliore?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Sony ha deciso di rilanciare il marchio delle esclusive, mettendo fine all'apertura verso il PC.",
+        "La mossa rafforza l'ecosistema di PS5 e valorizza l'hardware della console.",
+        "C'è una rinnovata centralità dei titoli per giocatore singolo per la piattaforma."
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "La strategia segna l'addio all'apertura verso il personal computer dopo vari tentativi, secondo quanto riportato da Everyeye.",
+        "La focalizzazione sulle esperienze in solitaria limita la varietà di piattaforme di fruizione.",
+        "La chiusura verso il mondo PC riduce le opzioni per chi preferisce giocare su computer."
+      ]
+    },
+    "pubblicato": true,
+    "pubblicato_il": "2026-11-08T13:00:21+01:00"
+  },
+  {
     "slug": "gta-6-lattesa-si-intensifica-novita-e-ritardi-in-vista-20261107",
     "titolo": "GTA 6: l’attesa si intensifica, novità e ritardi in vista",
     "sezione": "gaming",
