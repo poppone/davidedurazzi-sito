@@ -1294,7 +1294,7 @@
       "id": "2026-11-07-3",
       "per": "davide",
       "da": "finch",
-      "stato": "approvato",
+      "stato": "fatto",
       "tipo": "pr",
       "titolo": "Togliere il cron a redazione.yml e guardiano.yml: li avvia Finch alle 4:54 UTC",
       "dettagli": "Dal 3/11 il cron di GitHub non parte in orario: il 6/11 è scattato con 8 ore di ritardo (11:27 e 12:10 UTC) dopo l'avvio manuale di Finch, quindi due redazioni nello stesso giorno e bozze doppie. Proposta: via il blocco schedule dai due workflow, resta workflow_dispatch; Finch li avvia ogni mattina come fa già.",
@@ -1303,7 +1303,7 @@
       "volte": 1,
       "azione": "Apro la PR con la modifica ai due workflow (solo il blocco schedule), la unisci tu.",
       "deciso": "2026-11-07T11:02:25.390Z",
-      "esito": "PR #58 aperta in bozza: la unisce Davide"
+      "esito": "PR #58 unita da Davide l'08/11"
     },
     {
       "id": "2026-11-07-4",
