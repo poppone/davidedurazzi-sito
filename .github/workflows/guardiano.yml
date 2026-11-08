@@ -1,7 +1,7 @@
 name: Guardiano delle chiavi
 on:
-  schedule:
-    - cron: "17 4 * * *"   # 05:17 ora italiana in inverno (minuto non tondo: GitHub salta spesso i cron all'ora piena), prima del giro di Finch delle 5:52
+  # Niente cron (decisione di Davide del 7/11/2026): partiva con ore di ritardo.
+  # Lo avvia Finch ogni mattina insieme alla redazione.
   workflow_dispatch:
 permissions:
   contents: write

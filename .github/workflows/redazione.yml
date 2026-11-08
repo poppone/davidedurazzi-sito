@@ -1,8 +1,9 @@
 name: Redazione del mattino
 
 on:
-  schedule:
-    - cron: "37 3 * * *"   # 04:37 ora italiana in inverno (minuto non tondo: GitHub salta spesso i cron all'ora piena), prima del giro di Finch delle 5:52
+  # Niente cron (decisione di Davide del 7/11/2026): dal 3/11 il cron di GitHub
+  # partiva con ore di ritardo e si sommava all'avvio di Finch, con bozze doppie.
+  # La redazione la avvia Finch ogni mattina (o Davide dal tab Actions).
   workflow_dispatch:       # avvio manuale dal tab Actions
     inputs:
       aree:
