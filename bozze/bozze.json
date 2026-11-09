@@ -1,1 +1,115 @@
-[]
+[
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "nhtsa-e-i-richiami-auto-la-svolta-degli-aggiornamenti-over-the-air-20261109",
+    "titolo": "NHTSA e i richiami auto: la svolta degli aggiornamenti Over-The-Air",
+    "sezione": "tecnologia",
+    "rubrica": "",
+    "data": "2026-11-09",
+    "sommario": "Secondo HDblog, l'agenzia americana NHTSA vuole usare gli aggiornamenti OTA per rendere più efficaci i richiami auto, superando la scarsa adesione alle riparazioni in officina.",
+    "testo": [
+      "L'agenzia statunitense NHTSA ha annunciato di puntare sugli aggiornamenti Over-The-Air (OTA) come strumento principale per i richiami automobilistici, riconoscendo l'efficacia dei correttivi software trasmessi via Wi‑Fi.",
+      "Questo approccio è importante per i conducenti perché consente di risolvere problemi di sicurezza senza dover recarsi fisicamente in un'officina, riducendo tempi di inattività e costi.",
+      "Gli aggiornamenti OTA possono aumentare la percentuale di adempimento dei richiami, garantendo interventi più rapidi e limitando i rischi legati a difetti non corretti.",
+      "Rimane da capire quali modelli di veicoli saranno coperti, come verrà gestita la sicurezza dei dati trasmessi e quali regole normative accompagneranno questa nuova modalità di richiamo."
+    ],
+    "fonti": [
+      {
+        "nome": "HDblog: La rivoluzione dei richiami auto: la NHTSA punta sugli aggiornamenti Over-The-Air",
+        "url": "https://www.hdmotori.it/richiami-auto-nhtsa-aggiornamenti-over-the-air/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Credete che gli aggiornamenti OTA possano sostituire completamente le visite in officina?",
+      "Quali timori avete riguardo alla sicurezza dei software auto aggiornati via internet?",
+      "Quali tipi di problemi di sicurezza vi piacerebbe vedere risolti più rapidamente con gli OTA?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "ricarica-a-300-kw-senza-rete-dedicata-ecco-come-funziona-il-sistema-al-20261109",
+    "titolo": "Ricarica a 300 kW senza rete dedicata: ecco come funziona il sistema Allye",
+    "sezione": "motori",
+    "rubrica": "",
+    "data": "2026-11-09",
+    "sommario": "Secondo InsideEVs Italia, il sistema Allye MEV permette di ricaricare le auto elettriche a 300 kW accumulando energia lentamente per poi rilasciarla rapidamente, senza bisogno di una rete specifica.",
+    "testo": [
+      "Secondo InsideEVs Italia, è stato presentato un sistema chiamato Allye MEV che consente di ricaricare i veicoli elettrici a una potenza di 300 kW. La particolarità di questa tecnologia è che non richiede l'installazione di una rete elettrica dedicata da 300 kW per funzionare.",
+      "Il meccanismo di funzionamento, come riportato dalla testata, prevede che il sistema accumuli elettricità in modo graduale. Successivamente, questa energia viene rilasciata in modo rapido direttamente ai veicoli in fase di ricarica.",
+      "Le prime consegne di questo sistema sono attese per il 2027, secondo quanto indicato da InsideEVs Italia. Questo approccio potrebbe offrire un'alternativa alle infrastrutture di ricarica tradizionali che necessitano di collegamenti di alimentazione molto potenti e costosi da realizzare.",
+      "Per ora, i dettagli tecnici specifici sulle prestazioni reali e sulle modalità di integrazione con le reti esistenti non sono stati approfonditi nella fonte fornita. Si attendono ulteriori aggiornamenti per comprendere meglio l'impatto pratico di questa soluzione sul mercato."
+    ],
+    "fonti": [
+      {
+        "nome": "InsideEVs Italia: Ricaricare a 300 kW senza una rete da 300 kW: ecco come",
+        "url": "https://insideevs.it/news/814687/allye-mev-ricarica-fino-400/"
+      }
+    ],
+    "nota_critico": [],
+    "domande_live": [
+      "Avete mai provato a ricaricare un'auto elettrica in una stazione con potenza limitata? Come è stata l'esperienza?",
+      "Cosa ne pensate dell'idea di accumulare energia per poi rilasciarla rapidamente: vi sembra una soluzione pratica?",
+      "Secondo voi, questa tecnologia potrebbe rendere più accessibili le stazioni di ricarica ultra-rapida in aree urbane?"
+    ],
+    "acquisto": null
+  },
+  {
+    "approvato": false,
+    "scartare": false,
+    "slug": "gta-6-amazon-annulla-preorder-fisici-a-due-settimane-dal-lancio-20261109",
+    "titolo": "GTA 6: Amazon annulla preorder fisici a due settimane dal lancio",
+    "sezione": "gaming",
+    "rubrica": "contraddittorio",
+    "data": "2026-11-09",
+    "sommario": "Amazon Italia ha cancellato alcuni preorder fisici di GTA 6 senza preavviso, mentre Rockstar ha appena svelato nuovi screenshot a due settimane dal lancio previsto per il 19 novembre.",
+    "testo": [
+      "Secondo Spaziogames, Amazon Italia ha iniziato a cancellare alcuni preorder della versione fisica di Grand Theft Auto VI a pochi giorni dal debutto del gioco, senza fornire alcuna spiegazione né preavviso ai clienti.",
+      "La notizia arriva mentre, secondo Gamereactor, Rockstar Games ha pubblicato quasi 40 nuovi screenshot del titolo, confermando che il lancio è fissato per il 19 novembre, a soli due settimane di distanza.",
+      "Per i fan che avevano prenotato la copia cartacea, le cancellazioni improvvise generano incertezza su come ricevere il prodotto e se potranno comunque ottenere l'edizione desiderata.",
+      "Rimane da capire quali siano le ragioni dietro le cancellazioni di Amazon, quanti ordini siano stati interessati e quali soluzioni verranno offerte ai clienti colpiti."
+    ],
+    "fonti": [
+      {
+        "nome": "Spaziogames: GTA 6, Amazon annulla alcuni preorder: cosa succede?",
+        "url": "https://www.spaziogames.it/notizie/gta-6-amazon-annulla-alcuni-preorder-a-pochi-giorni-dal-lancio"
+      },
+      {
+        "nome": "Gamereactor: Rockstar pubblica quasi 40 nuovi screenshot di GTA 6 a due settimane dal lancio del 19 novembre",
+        "url": "https://www.gamereactor.it/rockstar-pubblica-quasi-40-nuovi-screenshot-di-gta-6-a-due-settimane-dal/"
+      }
+    ],
+    "nota_critico": [
+      "L'articolo aggiunge che Amazon non ha fornito alcuna spiegazione oltre al mancato preavviso, ma la fonte Spaziogames menziona solo l'annullamento senza preavviso, non la mancanza di spiegazioni."
+    ],
+    "domande_live": [
+      "Per chi ha già prenotato GTA 6 su Amazon, quali sono le vostre preoccupazioni principali?",
+      "Ritenete che Rockstar debba intervenire per chiarire la situazione con i preorder?",
+      "Quale impatto pensate abbia questa cancellazione sulla fiducia dei consumatori verso le piattaforme di vendita online?"
+    ],
+    "acquisto": {
+      "tipo": "gioco",
+      "nome": "Grand Theft Auto VI"
+    },
+    "domanda": "Ritieni giusto che Amazon annulli i preorder di GTA 6 a due settimane dal lancio, nonostante i possibili problemi per i consumatori?",
+    "tesi": {
+      "titolo": "Sì",
+      "punti": [
+        "Secondo alcuni esperti, Amazon dovrebbe garantire la disponibilità dei prodotti prenotati; annullare gli ordini quando non può assicurare la consegna evita di promettere qualcosa che non può mantenere",
+        "La cancellazione anticipata ridurrebbe il rischio che i consumatori ricevano il gioco in ritardo o con problemi, proteggendoli da un’esperienza d’acquisto deludente a poche settimane dal lancio",
+        "Rimuovendo i preorder non garantiti, Amazon indirizza gli acquirenti verso i canali ufficiali di Rockstar o altri rivenditori più affidabili, dove è più probabile trovare stock confermati e supporto post‑vendita"
+      ]
+    },
+    "antitesi": {
+      "titolo": "No",
+      "punti": [
+        "Amazon ha annullato dei preorder di GTA 6 a pochi giorni dal lancio senza preavviso, creando disagi e incertezza per i clienti che avevano già pagato, come riportato da Spaziogames",
+        "Annullare gli ordini poco prima della data di uscita viola il principio di buona fede contrattuale: il preorder è una prenotazione confermata e il consumatore si aspetta di ricevere il gioco nel giorno stabilito, minando la fiducia verso il marketplace",
+        "Il comportamento di Amazon può penalizzare la concorrenza leale: i rivenditori che mantengono i preorder offrono ai consumatori la garanzia di ricevere il prodotto, mentre l’annullamento improvviso può spostare la domanda verso canali meno trasparenti o costringere i giocatori a cercare alternative last‑minute, con possibili costi aggiuntivi"
+      ]
+    }
+  }
+]
