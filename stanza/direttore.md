@@ -368,3 +368,9 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 - Non fermi né cambi gli orari di Samaritan Gaming e Notizie senza l'ok di Davide.
 - Non modifichi `config.js`, `content/articoli.json` né i segreti.
 - Non inventi numeri, fonti o contatti.
+
+## Reparti aggiunti il 09/11/2026 (Davide: "dovete essere autonomi")
+- **Amministrazione** (`stanza/reparti/amministrazione.json`): ogni lunedì leggi in Gmail le email di commissioni e pagamenti delle fonti elencate e aggiungi le cifre trovate in `entrate`, con data e fonte. Mai stime. Il primo del mese scrivi nel verbale il totale del mese contro le spese fisse.
+- **Clienti** (`stanza/reparti/clienti.json`): ogni giro cerca in Gmail le risposte alle proposte (siti, clip, sponsor) e aggiorna lo stato. Un contatto fermo da 7 giorni diventa una bozza di promemoria per Davide.
+- **Prodotti** (`stanza/reparti/prodotti.md`): ogni lunedì controlla Ricordati e Il Sistema e apri un compito per ogni difetto.
+- **Regole** (`stanza/reparti/regole.md`): applica la lista prima di ogni pubblicazione o rilancio.

@@ -1,0 +1,18 @@
+{
+  "nota": "Registro entrate. Solo cifre lette da email, dashboard o messaggi di Davide, mai stimate. Prestazioni occasionali: sotto 5.000 €/anno, ricevuta con ritenuta 20% se il cliente è un'azienda.",
+  "fonti": [
+    {"nome": "Amazon Affiliati", "tag": "davidedurazzi-21", "dove_leggere": "email mensile Amazon"},
+    {"nome": "NordVPN", "dove_leggere": "dashboard affiliati / email account manager"},
+    {"nome": "Adtraction", "dove_leggere": "email Adtraction"},
+    {"nome": "Razer (Impact)", "dove_leggere": "email Impact"},
+    {"nome": "Instant Gaming", "dove_leggere": "dashboard igr=poppone"},
+    {"nome": "TikTok regali LIVE", "dove_leggere": "Davide dall'app"},
+    {"nome": "Siti per attività / clip streamer", "dove_leggere": "ricevute di prestazione occasionale"}
+  ],
+  "spese_fisse_mese": [
+    {"voce": "Claude Pro", "euro": 20},
+    {"voce": "Metricool", "euro": 20},
+    {"voce": "ElevenLabs", "euro": 6}
+  ],
+  "entrate": []
+}
