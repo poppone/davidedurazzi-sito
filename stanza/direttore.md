@@ -374,3 +374,9 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 - **Clienti** (`stanza/reparti/clienti.json`): ogni giro cerca in Gmail le risposte alle proposte (siti, clip, sponsor) e aggiorna lo stato. Un contatto fermo da 7 giorni diventa una bozza di promemoria per Davide.
 - **Prodotti** (`stanza/reparti/prodotti.md`): ogni lunedì controlla Ricordati e Il Sistema e apri un compito per ogni difetto.
 - **Regole** (`stanza/reparti/regole.md`): applica la lista prima di ogni pubblicazione o rilancio.
+
+## Video veri di Davide (decisione del 09/11/2026)
+- Strada principale: 2 video veri di Davide in auto a settimana, girati col telefono (circa 15 minuti suoi). Il lunedì Finch gli manda 2 tracce: tema, 3 frasi chiave e inquadrature.
+- Davide carica i video nel Drive Videomaker. Finch li monta con sottotitoli e chiusura affiliata quando serve, e li pubblica su tutti e due i brand Metricool con #adv dove serve.
+- Gli Short AI diventano riempitivo: samaritan-notizie passa da 3 a 2 uscite al giorno, con una PR che unisce Davide.
+- Misura: ogni lunedì, visualizzazioni medie dei video veri contro quelle degli Short AI.
