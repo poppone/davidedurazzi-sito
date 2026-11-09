@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "nhtsa-e-i-richiami-auto-la-svolta-degli-aggiornamenti-over-the-air-20261109",
     "titolo": "NHTSA e i richiami auto: la svolta degli aggiornamenti Over-The-Air",
@@ -29,7 +29,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "ricarica-a-300-kw-senza-rete-dedicata-ecco-come-funziona-il-sistema-al-20261109",
     "titolo": "Ricarica a 300 kW senza rete dedicata: ecco come funziona il sistema Allye",
@@ -59,7 +59,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "gta-6-amazon-annulla-preorder-fisici-a-due-settimane-dal-lancio-20261109",
     "titolo": "GTA 6: Amazon annulla preorder fisici a due settimane dal lancio",
     "sezione": "gaming",
