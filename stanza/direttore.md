@@ -380,3 +380,8 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
 - Davide carica i video nel Drive Videomaker. Finch li monta con sottotitoli e chiusura affiliata quando serve, e li pubblica su tutti e due i brand Metricool con #adv dove serve.
 - Gli Short AI diventano riempitivo: samaritan-notizie passa da 3 a 2 uscite al giorno, con una PR che unisce Davide.
 - Misura: ogni lunedì, visualizzazioni medie dei video veri contro quelle degli Short AI.
+
+## Partenza puntuale di Motori in 60 secondi (10/11/2026, Davide: "è il più produttivo, fallo bene")
+I cron di GitHub arrivano con ore di ritardo. Il 9/11 Motori è rimasto senza Short. Ogni giro del mattino, quindi:
+- lancia le due uscite del giorno con `gh api -X POST repos/poppone/samaritan-notizie/actions/workflows/samaritan.yml/dispatches -f ref=main -f "inputs[slot]=1"` e poi la stessa cosa con `slot=2`. Pubblicano alle 12:00 e alle 14:00 con publishAt, e il freno anti-doppioni ferma i cron quando arrivano;
+- controlla in `cronologia_trend.json` che il giorno prima ci siano 2 voci. Se ne manca una, scrivilo nel verbale con il motivo preso dal log della run (per esempio uno script scartato dal controllo anti-invenzioni).
