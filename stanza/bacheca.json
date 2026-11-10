@@ -1155,11 +1155,12 @@
       "id": "2026-11-06-g1",
       "per": "davide",
       "da": "guardiano",
-      "stato": "da fare",
+      "stato": "fatto",
       "titolo": "Guardiano: samaritan-notizie · Samaritan Auto-Poster",
       "dettagli": "l'ultima esecuzione del 2026-11-08 è fallita. Apri il log: https://github.com/poppone/samaritan-notizie/actions/runs/42537181728",
       "origine": "controllo del Guardiano delle chiavi",
-      "volte": 4
+      "volte": 4,
+      "chiuso": "2026-11-10: il Guardiano di oggi dà samaritan-notizie Auto-Poster ok (28 ok, 0 rotti)."
     },
     {
       "id": "2026-11-06-1",
@@ -1432,6 +1433,16 @@
       "dettagli": "La sessione Remote Control avviata alle 18:41 ha montato e programmato una sua versione su Metricool prima di essere fermata (18:51); Finch in cloud ne ha programmata un'altra (18:50). Causa: ho avviato la sessione sul PC e poi ho fatto il lavoro anch'io senza controllare il planner Metricool prima di programmare. Regola: prima di programmare un post, leggere getScheduledPosts del brand per quel giorno; mai due esecutori sullo stesso compito; se fermo una sessione, controllare cosa ha già fatto. Davide sceglie quale versione tenere (2026-11-07-12).",
       "origine": "planner Metricool 07/11 19:09",
       "volte": 1
+    },
+    {
+      "id": "2026-11-10-1",
+      "per": "social",
+      "da": "finch",
+      "stato": "fatto",
+      "tipo": "video",
+      "titolo": "Short \"GTA 6 pesa oltre 200 GB\" su TikTok @davidedurazzi alle 18:00 (permesso 6e)",
+      "link": "https://youtube.com/shorts/7PXar1Y9fgY",
+      "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=7814209064829864059"
     }
   ]
 }
