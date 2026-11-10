@@ -1,6 +1,6 @@
 [
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "grand-theft-auto-6-ultime-novita-e-conto-alla-rovescia-per-il-lancio-20261110",
     "titolo": "Grand Theft Auto 6: ultime novità e conto alla rovescia per il lancio",
@@ -58,7 +58,7 @@
   },
   {
     "approvato": false,
-    "scartare": false,
+    "scartare": true,
     "slug": "grok-bot-puo-fare-telefonate-l-ai-di-spacexsi-chiama-al-tuo-posto-20261110",
     "titolo": "Grok Bot può fare telefonate: l'AI di SpaceXSI chiama al tuo posto",
     "sezione": "ai",
@@ -88,7 +88,7 @@
     "acquisto": null
   },
   {
-    "approvato": false,
+    "approvato": true,
     "scartare": false,
     "slug": "zoox-lancia-i-robotaxi-in-europa-e-asia-test-dal-2027-20261110",
     "titolo": "Zoox lancia i robotaxi in Europa e Asia: test dal 2027",
