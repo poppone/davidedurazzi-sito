@@ -2,34 +2,6 @@
   "modalita": "bozze",
   "in_attesa_nel_pannello": 0,
   "giorni": {
-    "2026-10-25": {
-      "ignora": 0,
-      "inviati": 0,
-      "nuovi": 0,
-      "personale": 0,
-      "pratica": 0
-    },
-    "2026-10-26": {
-      "ignora": 0,
-      "inviati": 0,
-      "nuovi": 0,
-      "personale": 0,
-      "pratica": 0
-    },
-    "2026-10-27": {
-      "ignora": 0,
-      "inviati": 0,
-      "nuovi": 0,
-      "personale": 0,
-      "pratica": 0
-    },
-    "2026-10-28": {
-      "ignora": 0,
-      "inviati": 0,
-      "nuovi": 0,
-      "personale": 0,
-      "pratica": 0
-    },
     "2026-10-29": {
       "ignora": 0,
       "inviati": 0,
@@ -38,11 +10,11 @@
       "pratica": 0
     },
     "2026-10-30": {
-      "inviati": 0,
       "nuovi": 0,
       "personale": 0,
       "pratica": 0,
-      "ignora": 0
+      "ignora": 0,
+      "inviati": 0
     },
     "2026-10-31": {
       "ignora": 0,
@@ -66,39 +38,67 @@
       "pratica": 0
     },
     "2026-11-03": {
+      "ignora": 0,
+      "inviati": 0,
       "nuovi": 0,
+      "personale": 0,
+      "pratica": 0
+    },
+    "2026-11-04": {
       "personale": 0,
       "pratica": 0,
       "ignora": 0,
-      "inviati": 0
-    },
-    "2026-11-04": {
-      "ignora": 0,
       "inviati": 0,
-      "nuovi": 0,
-      "personale": 0,
-      "pratica": 0
+      "nuovi": 0
     },
     "2026-11-05": {
+      "personale": 0,
+      "pratica": 0,
       "ignora": 0,
       "inviati": 0,
-      "nuovi": 0,
-      "personale": 0,
-      "pratica": 0
+      "nuovi": 0
     },
     "2026-11-06": {
+      "pratica": 0,
+      "ignora": 0,
+      "inviati": 0,
+      "nuovi": 0,
+      "personale": 0
+    },
+    "2026-11-07": {
       "ignora": 0,
       "inviati": 0,
       "nuovi": 0,
       "personale": 0,
       "pratica": 0
     },
-    "2026-11-07": {
+    "2026-11-08": {
+      "personale": 0,
+      "pratica": 0,
+      "ignora": 0,
+      "inviati": 0,
+      "nuovi": 0
+    },
+    "2026-11-09": {
       "inviati": 0,
       "nuovi": 0,
       "personale": 0,
       "pratica": 0,
       "ignora": 0
+    },
+    "2026-11-10": {
+      "pratica": 0,
+      "ignora": 0,
+      "inviati": 0,
+      "nuovi": 0,
+      "personale": 0
+    },
+    "2026-11-11": {
+      "ignora": 0,
+      "inviati": 0,
+      "nuovi": 0,
+      "personale": 0,
+      "pratica": 0
     }
   }
 }
