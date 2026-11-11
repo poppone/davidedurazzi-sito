@@ -59,6 +59,16 @@ main,footer,.ticker,.pl-apertura .wrap{position:relative;z-index:1}
 .kit-entra{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rit,0s)}
 .kit-entra.kit-dentro{opacity:1;transform:none}
 
+/* ---------- Titoli che salgono da sotto una tendina ---------- */
+.kit-tendina{clip-path:inset(0 0 100% 0);transform:translateY(.45em)}
+.kit-tendina.kit-su{animation:kit-tendina .9s cubic-bezier(.16,1,.3,1) both}
+@keyframes kit-tendina{from{clip-path:inset(0 0 100% 0);transform:translateY(.45em)}to{clip-path:inset(-20% -5% -20% -5%);transform:none}}
+
+/* ---------- Luce che segue il mouse sulle schede ---------- */
+.kit-luce{background-image:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(123,151,255,.13),transparent 60%)}
+.mk-num{transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s}
+.mk-num:hover{transform:translateY(-4px);border-color:rgba(123,151,255,.55)}
+
 @media (max-width:719px){
   .kit-forme i:nth-child(n+7){display:none}
   .kit-fascia li{font-size:.78rem;letter-spacing:.16em}
@@ -67,4 +77,6 @@ main,footer,.ticker,.pl-apertura .wrap{position:relative;z-index:1}
 @media (prefers-reduced-motion:reduce){
   .kit-forme i,.kit-fascia-tr{animation:none}
   .kit-entra{opacity:1;transform:none;transition:none}
+  .kit-tendina{clip-path:none;transform:none}
+  .mk-num,.mk-num:hover{transition:none;transform:none}
 }
