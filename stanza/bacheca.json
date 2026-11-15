@@ -1443,6 +1443,16 @@
       "titolo": "Short \"GTA 6 pesa oltre 200 GB\" su TikTok @davidedurazzi alle 18:00 (permesso 6e)",
       "link": "https://youtube.com/shorts/7PXar1Y9fgY",
       "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7358624&openWithPostUuid=7814209064829864059"
+    },
+    {
+      "id": "2026-11-15-1",
+      "per": "samaritan-notizie",
+      "da": "revisore-video",
+      "stato": "da fare",
+      "titolo": "Uscita Motori del 14/11 scoperta: tutti e 6 gli script scartati",
+      "dettagli": "Run 43628948328 (recupero dell'uscita delle 12:00): 6 tentativi su gpt-oss-120b e 20b scartati perché aggiungevano date o frasi non presenti nel titolo, oppure il titolo non nominava 'Formula 1'. Il filtro ha fatto bene a fermarli, ma la riserva non aveva un video pronto. Il 14/11 è uscito 1 Short su 2. Finch: se si ripete (volte >= 2), il prompt deve passare al modello il sommario dell'articolo come fonte ammessa, così le date vere non contano come inventate.",
+      "origine": "Motori 14/11, run 43628948328",
+      "volte": 1
     }
   ]
 }
