@@ -1,22 +1,22 @@
 {
   "_nota": "Numeri del media kit. Aggiorna i valori a mano; un canale con valore null non viene mostrato. In cima la pagina mostra da sola la somma dei follower. Le statistiche del sito arrivano da /api/mediakit.",
-  "aggiornato": "2026-11-04",
+  "aggiornato": "2026-11-17",
   "canali": [
     {
       "id": "tiktok",
       "nome": "TikTok",
       "url": "https://www.tiktok.com/@davidedurazzi",
-      "valore": 9952,
+      "valore": 9992,
       "etichetta": "follower",
-      "extra": "Video più visto: oltre 300.000 visualizzazioni"
+      "extra": "Circa 415.000 visualizzazioni negli ultimi 30 giorni. Video più visto: oltre 300.000"
     },
     {
       "id": "youtube",
       "nome": "YouTube",
       "url": "https://www.youtube.com/@davidedurazzioff",
-      "valore": 812,
+      "valore": 826,
       "etichetta": "iscritti",
-      "extra": "30.675 visualizzazioni e 123 video pubblicati negli ultimi 30 giorni"
+      "extra": "Oltre 27.500 visualizzazioni e 109 video pubblicati nelle ultime 4 settimane"
     },
     {
       "id": "instagram",
@@ -24,7 +24,7 @@
       "url": "https://www.instagram.com/davidedurazzi.it/",
       "valore": 698,
       "etichetta": "follower",
-      "extra": "Profilo verificato Meta"
+      "extra": "Profilo verificato Meta · oltre 33.000 visualizzazioni in 30 giorni"
     },
     {
       "id": "facebook",
@@ -46,7 +46,7 @@
       "id": "twitch",
       "nome": "Twitch",
       "url": "https://www.twitch.tv/DavideDurazzi",
-      "valore": 58,
+      "valore": 57,
       "etichetta": "follower",
       "extra": "Diretta ogni martedì alle 21:30"
     },
