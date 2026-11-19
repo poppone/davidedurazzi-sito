@@ -228,7 +228,7 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    | Cosa | Dove va |
    |---|---|
    | Short votato >= 4/5 (6e) | coda: `instagram_reel` + `facebook_video`; Metricool: TikTok |
-   | Articolo approvato (6d) | Instagram e Facebook escono già da soli con `pubblica.yml`; coda: `bluesky` (max 4 slide) + `pinterest` SOLO bacheca Notizie (1039979807642687589); Metricool: TikTok foto |
+   | Articolo approvato (6d) | Instagram e Facebook escono già da soli con `pubblica.yml`; coda: `bluesky` (max 4 slide) + `pinterest` SOLO bacheca Notizie (1039979807642687589); NIENTE TikTok foto (vedi 6d) |
    | Pin ZampaViva approvato (6g) | coda: `pinterest` (bacheca ZampaViva) |
    Valgono le stesse regole di approvazione: in coda vanno solo i Reel coperti
    dal permesso fisso 6e (didascalia con la nota AI) e i post che Davide ha
@@ -257,9 +257,17 @@ poppone/davidedurazzi-sito: sono le regole e la squadra.
    (titolo, sintesi con fonte, link, "Redazione AI di Davide Durazzi"). La coda
    resta solo per Reel Instagram e video Facebook.
 
-6d. **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
+6d. **Social su Metricool.** **Stop slide IA su TikTok (sì di Davide, 18/11/2026):**
+   i caroselli fatti con l'IA su TikTok restano sulle 300 visualizzazioni, mentre i
+   video veri di Davide arrivano a 30.000-50.000. Su TikTok (brand davidedurazzi)
+   niente più caroselli di articoli: solo video. Didascalie di tutti i video (anche
+   Motori): niente "Scopri perché", "Cosa ne pensi?", "Che ne pensi?", "Commenta la
+   tua opinione", "Qual è il tuo parere"; chiudere con una domanda concreta sul
+   fatto (es. "Ce la fa già sabato?"), senza #rumor. Regole della skill
+   social-e-sponsor.
+   **Social su Metricool.** Per ogni articolo pubblicato nelle ultime 24 ore
    con il carosello in `ig/<slug>/`, prepara un compito "da approvare" di tipo
-   "post": rilancio del carosello su TikTok (foto), Bluesky
+   "post": rilancio del carosello su Bluesky
    (davidedurazzi.bsky.social, massimo 4 immagini) e Pinterest (davide1988rm:
    un Pin con la prima immagine e il link all'articolo sul sito, SOLO nella
    bacheca "Notizie davidedurazzi.it", boardId 1039979807642687589), con le immagini
