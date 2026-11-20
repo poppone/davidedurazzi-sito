@@ -1,6 +1,6 @@
 {
   "_nota": "Numeri del media kit. Aggiorna i valori a mano; un canale con valore null non viene mostrato. In cima la pagina mostra da sola la somma dei follower. Le statistiche del sito arrivano da /api/mediakit.",
-  "aggiornato": "2026-11-18",
+  "aggiornato": "2026-11-20",
   "canali": [
     {
       "id": "tiktok",
@@ -30,9 +30,9 @@
       "id": "facebook",
       "nome": "Facebook",
       "url": "https://www.facebook.com/davidedurazzi.it",
-      "valore": 514,
+      "valore": 571,
       "etichetta": "follower",
-      "extra": ""
+      "extra": "Profilo (514) e pagina (57) insieme"
     },
     {
       "id": "linkedin",
