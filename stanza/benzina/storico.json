@@ -16,5 +16,14 @@
       "benzina": 19,
       "diesel": 19
     }
+  },
+  {
+    "data": "2026-11-22",
+    "benzina": 1.943,
+    "diesel": 2.198,
+    "distributori": {
+      "benzina": 19,
+      "diesel": 19
+    }
   }
 ]
